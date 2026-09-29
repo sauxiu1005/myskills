@@ -1,0 +1,33 @@
+display-name-zh: 品牌字效迁移编辑器
+version: 0.1.6
+tag-en: "Commercial Ad / Post-production"
+tag-cn: "商业广告 / 后期处理"
+summary-en: "Transfer brand font effects from one image to another."
+summary-cn: "识别并迁移品牌字效"
+desc-en: "Brand font-effect transfer. Identifies logo lettering, bubble fonts, handwriting, decorative type, and brand custom fonts from a reference image, produces a font-identification report with commercial-free alternative suggestions, then transfers either the glyph shapes or the full font effect including stroke, gradient, highlight, and outer glow onto specified text in a target image while preserving position, size, and layout."
+desc-cn: "品牌字效迁移。从参考图识别 Logo 字/泡泡字/手写字/装饰字/品牌定制字体，输出字体识别报告与商用免费替代建议，并将字形或完整字效（描边/渐变/高光/外发光）迁移替换到目标图的指定文字上，同时保留目标图的其他画面元素不变。"
+complete-tags-en:
+  - "Commercial Ad / Post-production"
+complete-tags-cn:
+  - "商业广告 / 后期处理"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+cover: "https://cdn.hailuoai.com/hailuo-video-web/public_assets/47709c0b-6ad0-4dd8-b192-f10da918b96b.mp4"
+structured-info:
+  zh-CN:
+    summary: 识别参考图中的品牌字体与字效，并将指定字形效果准确迁移到目标画面而不破坏原构图。
+    best-for:
+      - 品牌字效
+      - 字体识别
+      - 图像编辑
+    how-to-use: 提供字效参考图和目标图，先确认需要替换的文字、字体方向与保留区域。
+    outputs: 字体识别报告、替代建议、字效迁移提示词与编辑结果。
+  en-US:
+    summary: Identify brand typography and effects in a reference, then transfer the selected treatment onto a target image without disturbing its composition.
+    best-for:
+      - Brand Type Effects
+      - Font Analysis
+      - Image Editing
+    how-to-use: Provide a type-effect reference and target image, then confirm the text replacement, font direction, and protected areas.
+    outputs: A font analysis, replacement suggestions, transfer instructions, and the edited image.
