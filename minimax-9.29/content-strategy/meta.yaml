@@ -1,0 +1,34 @@
+display-name-zh: 内容策略
+version: 0.3.2
+tag-en: "Advertising / Idea & Concept"
+tag-cn: "广告营销 / 创意构思"
+complete-tags-en:
+  - "Commercial Ad / Intent Brainstorming"
+  - "E-Commerce / Intent Brainstorming"
+complete-tags-cn:
+  - "商业广告 / 意图脑爆"
+  - "电商 / 意图脑爆"
+summary-en: "Content strategist that decides what to write via searchable/shareable framework, buyer-stage mapping, and 4-factor scoring."
+summary-cn: "内容策略师帮你选题：搜索传播分类、购买阶段、四维打分。"
+desc-en: "Content Strategy helps decide what content to produce, not just write it. Gathers business, customer research, current state, and competitive context, then applies the searchable vs shareable framework across use-case, hub/spoke, thought-leadership, data-driven, and case-study types. Maps ideas to awareness / consideration / decision / implementation stages, scores by customer impact (40%) + content-market fit (30%) + search potential (20%) + resources (10%), and outputs content pillars, priority topics, and a topic cluster map."
+desc-cn: "Content Strategy 帮用户决定要做什么内容，而不只是写。搜集商业背景、客户研究、现状与竞品格局，把 searchable vs shareable 框架应用到 use-case、hub/spoke、思想领导力、数据驱动、案例研究等类型上。把 idea 映射到 awareness / consideration / decision / implementation 四个购买阶段，按客户影响 (40%) + 内容市场契合 (30%) + 搜索潜力 (20%) + 资源 (10%) 打分，输出内容支柱、优先话题与话题簇地图。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 将商业背景、客户研究与竞品信息转化为可搜索、可传播并能推动购买的内容策略。
+    best-for:
+      - 内容选题
+      - 购买阶段
+      - 增长策略
+    how-to-use: 提供业务目标、受众、研究资料和竞品背景，先确定内容任务与目标购买阶段。
+    outputs: 选题矩阵、内容支柱、优先级评分、渠道策略与执行文档。
+  en-US:
+    summary: Turn business context, audience research, and competitive inputs into a content strategy designed for discovery, sharing, and purchase progression.
+    best-for:
+      - Content Planning
+      - Buying Stages
+      - Growth Strategy
+    how-to-use: Provide business goals, audience context, research, and competitors, then define the content job and buying stage.
+    outputs: A topic matrix, content pillars, priority scores, channel strategy, and execution document.

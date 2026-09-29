@@ -1,0 +1,12 @@
+property,description
+position_x,X轴位移 (-1.0~1.0)
+position_y,Y轴位移 (-1.0~1.0)
+rotation,旋转角度 (0~360)
+scale_x,X轴缩放
+scale_y,Y轴缩放
+uniform_scale,等比缩放
+alpha,透明度 (0.0~1.0)
+saturation,饱和度
+contrast,对比度
+brightness,亮度
+volume,音量 (0.0~1.0)

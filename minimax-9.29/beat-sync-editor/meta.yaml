@@ -1,0 +1,16 @@
+display-name-zh: 音乐卡点
+version: 0.2.11
+tag-en: "Music Video / Post-Production"
+tag-cn: "音乐视频 / 后期制作"
+complete-tags-en:
+  - "Sound & Music / Post-production"
+complete-tags-cn:
+  - "音频音乐 / 后期处理"
+summary-en: "Auto beat-sync edit by emotion and cuts"
+summary-cn: "按情绪与节拍自动卡点剪辑"
+desc-en: "For music-driven beat-sync video editing that automatically aligns visual cuts to musical rhythm. Takes a music source such as URL, local file or AI generation plus video clips, images or mixed material as input. Produces a beat-aligned final cut via emotion analysis, smart trimming, beat detection, timeline generation, asset matching and FFmpeg compositing. Supports multiple music genres and visual transition styles."
+desc-cn: "适用于音乐驱动的卡点视频剪辑,自动将视觉切换与音乐节奏对齐。输入音乐(URL、本地文件或 AI 生成)加上视频片段、图片或混合素材,输出与音乐完美对齐的卡点视频成片。完整流程包含情绪张力分析、智能裁剪、节拍检测、卡点时间轴生成、素材智能匹配与 FFmpeg 合成,支持多种音乐风格与视觉转场效果。"
+cover: ""
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official

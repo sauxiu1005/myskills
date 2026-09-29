@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mix Preview</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d;
+    --text: #e6edf3; --text-secondary: #8b949e; --accent: #58a6ff;
+    --success: #3fb950; --danger: #f85149;
+    --voice-color: #d2a8ff; --nature-color: #3fb950;
+    --music-color: #f0883e; --mixed-color: #58a6ff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    padding: 24px; max-width: 720px; margin: 0 auto;
+  }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  .subtitle { color: var(--text-secondary); margin-bottom: 24px; font-size: 13px; }
+
+  /* Hero player */
+  .hero {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 24px; margin-bottom: 24px;
+    border-left: 3px solid var(--mixed-color);
+  }
+  .hero-label {
+    display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+  }
+  .hero-icon {
+    width: 32px; height: 32px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; background: rgba(88,166,255,0.15); color: var(--mixed-color);
+  }
+  .hero-title { font-size: 17px; font-weight: 600; }
+  .hero audio { width: 100%; height: 40px; border-radius: 8px; }
+  .hero-meta {
+    display: flex; gap: 16px; margin-top: 10px; font-size: 12px; color: var(--text-secondary);
+  }
+
+  /* Adjustment section */
+  .section-title {
+    font-size: 14px; font-weight: 600; margin-bottom: 12px;
+    color: var(--text-secondary); letter-spacing: 0.5px;
+  }
+
+  .adj-grid { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+
+  .adj-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; overflow: hidden; transition: border-color 0.15s;
+  }
+  .adj-card.active { border-color: var(--accent); }
+
+  .adj-header {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 16px; cursor: pointer; user-select: none;
+  }
+  .adj-header:hover { background: rgba(255,255,255,0.02); }
+
+  .adj-check {
+    width: 20px; height: 20px; border-radius: 6px;
+    border: 2px solid var(--border); display: flex;
+    align-items: center; justify-content: center;
+    flex-shrink: 0; transition: all 0.15s; font-size: 12px;
+  }
+  .adj-card.active .adj-check {
+    background: var(--accent); border-color: var(--accent); color: #fff;
+  }
+
+  .adj-label { font-size: 14px; flex: 1; }
+  .adj-tag {
+    font-size: 11px; padding: 2px 8px; border-radius: 10px;
+    background: rgba(255,255,255,0.06); color: var(--text-secondary);
+  }
+
+  .adj-body {
+    display: none; padding: 0 16px 14px 46px;
+  }
+  .adj-card.active .adj-body { display: block; }
+
+  /* Choice pills inside adj */
+  .choice-row {
+    display: flex; gap: 8px; margin-bottom: 8px;
+  }
+  .choice-pill {
+    flex: 1; padding: 8px 12px; border: 1px solid var(--border);
+    border-radius: 8px; background: var(--bg); color: var(--text-secondary);
+    font-size: 13px; cursor: pointer; text-align: center;
+    transition: all 0.15s; user-select: none;
+  }
+  .choice-pill:hover { border-color: var(--accent); color: var(--text); }
+  .choice-pill.selected {
+    border-color: var(--accent); background: rgba(88,166,255,0.12);
+    color: var(--accent); font-weight: 600;
+  }
+
+  .adj-hint {
+    font-size: 12px; color: var(--text-secondary); margin-bottom: 8px; line-height: 1.5;
+  }
+
+  textarea {
+    width: 100%; min-height: 48px; background: var(--bg);
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 10px; color: var(--text); font-size: 13px;
+    font-family: inherit; resize: vertical; outline: none;
+  }
+  textarea:focus { border-color: var(--accent); }
+  textarea::placeholder { color: var(--text-secondary); }
+
+  /* Reference tracks */
+  .ref-section { margin-bottom: 24px; }
+  .ref-toggle {
+    font-size: 13px; color: var(--text-secondary); cursor: pointer;
+    padding: 8px 0; user-select: none; display: flex; align-items: center; gap: 6px;
+  }
+  .ref-toggle:hover { color: var(--text); }
+  .ref-arrow { font-size: 10px; transition: transform 0.15s; }
+  .ref-arrow.open { transform: rotate(90deg); }
+  .ref-body { display: none; padding-top: 8px; }
+  .ref-body.open { display: block; }
+  .ref-track {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 12px 14px; margin-bottom: 8px;
+  }
+  .ref-track-label {
+    font-size: 12px; color: var(--text-secondary); margin-bottom: 6px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .ref-dot {
+    width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+  }
+  .ref-track audio { width: 100%; height: 32px; }
+  .ref-params {
+    display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px;
+  }
+  .ref-param {
+    font-size: 11px; background: var(--bg); padding: 3px 8px;
+    border-radius: 6px; color: var(--text-secondary);
+  }
+
+  /* Actions */
+  .actions { display: flex; gap: 12px; }
+  .btn {
+    flex: 1; padding: 14px 20px; border: none; border-radius: 10px;
+    font-size: 15px; font-weight: 600; cursor: pointer;
+    font-family: inherit; transition: opacity 0.15s;
+  }
+  .btn:hover { opacity: 0.85; }
+  .btn:active { opacity: 0.7; }
+  .btn-success { background: var(--success); color: #fff; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn-count {
+    font-size: 12px; font-weight: 400; opacity: 0.8; margin-left: 4px;
+  }
+
+  .success-msg { text-align: center; padding: 60px 20px; }
+  .success-msg h2 { font-size: 20px; margin-bottom: 8px; }
+  .success-msg p { color: var(--text-secondary); font-size: 14px; }
+
+  @media (max-width: 600px) {
+    body { padding: 16px; }
+    .actions { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<div id="hero"></div>
+<div id="adj"></div>
+
+<script>
+const PREVIEW_TYPE = null;  /* __PREVIEW_TYPE__ */
+const PREVIEW_DATA = null;  /* __PREVIEW_DATA__ */
+
+const data = typeof PREVIEW_DATA === 'string' ? JSON.parse(PREVIEW_DATA) : PREVIEW_DATA;
+
+/* ── i18n strings ── */
+const STRINGS = {
+  en: {
+    subtitle_asmr: 'ASMR',
+    subtitle_meditation: 'Guided Meditation',
+    subtitle_story: 'Bedtime Story',
+    listen_hint: 'Listen first, then check items below for adjustments',
+    hero_title: 'Final Mix',
+    voice_label: 'Voice',
+    speed_label: 'Speed',
+    has_music: 'Has BGM',
+    no_music: 'No BGM',
+    section_adj: 'What needs adjustment?',
+    adj_voice_speed_label: 'Voice speed issue',
+    adj_voice_speed_tag: 'Voice',
+    adj_voice_speed_hint: 'Current speed {speed}x.',
+    adj_voice_speed_options: ['Too fast', 'Too slow'],
+    adj_voice_tone_label: 'Change voice',
+    adj_voice_tone_tag: 'Voice',
+    adj_voice_tone_hint: 'Current voice: {voiceId}. Describe what you want.',
+    adj_voice_tone_placeholder: 'e.g.: deeper / softer / male / no breathy',
+    adj_voice_volume_label: 'Voice volume issue',
+    adj_voice_volume_tag: 'Voice',
+    adj_voice_volume_hint: 'Current gain {gain}x.',
+    adj_voice_volume_options: ['Too loud', 'Too quiet'],
+    adj_nature_volume_label: 'Background sound volume',
+    adj_nature_volume_tag: 'Ambient',
+    adj_nature_volume_hint: 'Current {natureCategory} volume {natureVol}x.',
+    adj_nature_volume_options: ['Too loud', 'Too quiet'],
+    adj_nature_swap_label: 'Change ambient sound',
+    adj_nature_swap_tag: 'Ambient',
+    adj_nature_swap_hint: 'Currently using "{natureCategory}". You can switch to another ambient sound.',
+    adj_nature_swap_placeholder: 'e.g.: switch to rain / ocean / creek',
+    adj_music_volume_label: 'Music volume issue',
+    adj_music_volume_tag: 'Music',
+    adj_music_volume_hint: 'Current music volume {musicVol}x.',
+    adj_music_volume_options: ['Too loud', 'Too quiet'],
+    adj_music_style_label: 'Music style issue',
+    adj_music_style_tag: 'Music',
+    adj_music_style_hint: 'Describe the music feel you want; it will be regenerated.',
+    adj_music_style_placeholder: 'e.g.: too lively / more ethereal / no piano',
+    adj_music_toggle_label_has: 'Remove BGM',
+    adj_music_toggle_label_no: 'Add BGM',
+    adj_music_toggle_tag: 'Music',
+    adj_music_toggle_hint_has: 'Remove background music, keep only voice and ambient sound.',
+    adj_music_toggle_hint_no: 'Add a background music track to this project.',
+    adj_voice_pause_label: 'Pause/breathing feels off',
+    adj_voice_pause_tag: 'Rhythm',
+    adj_voice_pause_hint: 'Controls the overall duration of all pauses (between sentences, paragraphs, breathing gaps).',
+    adj_voice_pause_options: ['Longer pauses', 'Shorter pauses'],
+    adj_other_label: 'Other issues',
+    adj_other_tag: 'Other',
+    adj_other_hint: 'Describe any issue not covered above.',
+    adj_other_placeholder: 'e.g.: fade out too fast / too long / noise somewhere',
+    ref_toggle: 'Reference tracks (expand to compare individual tracks)',
+    ref_voice: 'Voice',
+    ref_bgm: 'BGM',
+    ref_speed: 'Speed',
+    ref_gain: 'Gain',
+    ref_delay: 'Delay',
+    ref_volume: 'Volume',
+    btn_export: 'Satisfied, export',
+    btn_submit: 'Submit changes',
+    btn_count_suffix: ' items',
+    success_export_title: 'Export confirmed',
+    success_export_desc: 'Exporting final audio...',
+    success_adjust_title: 'Feedback submitted',
+    success_adjust_desc: 'Regenerating based on your feedback...',
+    confirm_hint: 'Check to confirm this change',
+    submit_error: 'Submission failed, please retry',
+    feedback_satisfied: 'Satisfied, ready to export',
+    feedback_checked_no_choice: '(checked, no direction selected)',
+    feedback_checked_no_detail: '(checked, no detail provided)',
+    feedback_needs_adjustment: 'Needs adjustment',
+  },
+  zh: {
+    subtitle_asmr: 'ASMR',
+    subtitle_meditation: '引导冥想',
+    subtitle_story: '睡前故事',
+    listen_hint: '先听成品，不满意的地方勾选下方对应项',
+    hero_title: '混合成品',
+    voice_label: '音色',
+    speed_label: '语速',
+    has_music: '有背景音乐',
+    no_music: '无背景音乐',
+    section_adj: '哪里需要调整？',
+    adj_voice_speed_label: '语速不合适',
+    adj_voice_speed_tag: '语音',
+    adj_voice_speed_hint: '当前语速 {speed}x。',
+    adj_voice_speed_options: ['太快了', '太慢了'],
+    adj_voice_tone_label: '想换音色',
+    adj_voice_tone_tag: '语音',
+    adj_voice_tone_hint: '当前音色：{voiceId}。描述你想要的感觉即可。',
+    adj_voice_tone_placeholder: '例如：更低沉 / 更温柔 / 男声 / 不要气声',
+    adj_voice_volume_label: '人声音量不对',
+    adj_voice_volume_tag: '语音',
+    adj_voice_volume_hint: '当前增益 {gain}x。',
+    adj_voice_volume_options: ['人声太大', '人声太小'],
+    adj_nature_volume_label: '背景声音量不对',
+    adj_nature_volume_tag: '环境音',
+    adj_nature_volume_hint: '当前 {natureCategory} 音量 {natureVol}x。',
+    adj_nature_volume_options: ['太大', '太小'],
+    adj_nature_swap_label: '想换背景声音',
+    adj_nature_swap_tag: '环境音',
+    adj_nature_swap_hint: '当前使用的是「{natureCategory}」。可以换成其他自然声音。',
+    adj_nature_swap_placeholder: '例如：换成雨声 / 海浪 / 小溪',
+    adj_music_volume_label: '音乐音量不对',
+    adj_music_volume_tag: '音乐',
+    adj_music_volume_hint: '当前音乐音量 {musicVol}x。',
+    adj_music_volume_options: ['太大', '太小'],
+    adj_music_style_label: '音乐风格不对',
+    adj_music_style_tag: '音乐',
+    adj_music_style_hint: '描述你想要的音乐感觉，会重新生成。',
+    adj_music_style_placeholder: '例如：太活泼了 / 想要更空灵 / 不要钢琴',
+    adj_music_toggle_label_has: '不想要背景音乐',
+    adj_music_toggle_label_no: '想加背景音乐',
+    adj_music_toggle_tag: '音乐',
+    adj_music_toggle_hint_has: '去掉背景音乐，只保留语音和环境音。',
+    adj_music_toggle_hint_no: '为这个项目加一段背景音乐。',
+    adj_voice_pause_label: '停顿气口感觉不对',
+    adj_voice_pause_tag: '节奏',
+    adj_voice_pause_hint: '指脚本中所有停顿（句间、段落、呼吸留白）的整体时长。',
+    adj_voice_pause_options: ['延长气口', '缩短气口'],
+    adj_other_label: '其他问题',
+    adj_other_tag: '自由',
+    adj_other_hint: '描述任何上面没覆盖到的问题。',
+    adj_other_placeholder: '例如：结尾淡出太快 / 整体太长了 / 某处有杂音',
+    ref_toggle: '分轨参考（可展开对比单独轨道）',
+    ref_voice: '语音',
+    ref_bgm: '背景音乐',
+    ref_speed: '语速',
+    ref_gain: '增益',
+    ref_delay: '延迟',
+    ref_volume: '音量',
+    btn_export: '满意，直接导出',
+    btn_submit: '提交调整',
+    btn_count_suffix: '项',
+    success_export_title: '已确认导出',
+    success_export_desc: '正在导出最终音频…',
+    success_adjust_title: '调整意见已提交',
+    success_adjust_desc: '正在根据你的反馈重新生成…',
+    confirm_hint: '勾选即表示确认此调整',
+    submit_error: '提交失败，请重试',
+    feedback_satisfied: '满意，可以导出',
+    feedback_checked_no_choice: '（已勾选，未选择方向）',
+    feedback_checked_no_detail: '（已勾选，未填写详情）',
+    feedback_needs_adjustment: '需要调整',
+  },
+};
+
+const locale = (data && data.locale) || 'en';
+const S = STRINGS[locale];
+
+document.documentElement.lang = locale === 'zh' ? 'zh-CN' : 'en';
+
+/* Build ADJUSTMENTS from i18n strings */
+function buildAdjustments() {
+  return [
+    {
+      id: 'voice_speed', label: S.adj_voice_speed_label, tag: S.adj_voice_speed_tag,
+      tagColor: '#d2a8ff',
+      hint: S.adj_voice_speed_hint,
+      type: 'choice', options: S.adj_voice_speed_options,
+    },
+    {
+      id: 'voice_tone', label: S.adj_voice_tone_label, tag: S.adj_voice_tone_tag,
+      tagColor: '#d2a8ff',
+      hint: S.adj_voice_tone_hint,
+      type: 'text', placeholder: S.adj_voice_tone_placeholder,
+    },
+    {
+      id: 'voice_volume', label: S.adj_voice_volume_label, tag: S.adj_voice_volume_tag,
+      tagColor: '#d2a8ff',
+      hint: S.adj_voice_volume_hint,
+      type: 'choice', options: S.adj_voice_volume_options,
+    },
+    {
+      id: 'nature_volume', label: S.adj_nature_volume_label, tag: S.adj_nature_volume_tag,
+      tagColor: '#3fb950',
+      hint: S.adj_nature_volume_hint,
+      type: 'choice', options: S.adj_nature_volume_options,
+      hidden: () => !data.nature,
+    },
+    {
+      id: 'nature_swap', label: S.adj_nature_swap_label, tag: S.adj_nature_swap_tag,
+      tagColor: '#3fb950',
+      hint: S.adj_nature_swap_hint,
+      type: 'text', placeholder: S.adj_nature_swap_placeholder,
+      hidden: () => !data.nature,
+    },
+    {
+      id: 'music_volume', label: S.adj_music_volume_label, tag: S.adj_music_volume_tag,
+      tagColor: '#f0883e',
+      hint: S.adj_music_volume_hint,
+      type: 'choice', options: S.adj_music_volume_options,
+      hidden: () => !data.music,
+    },
+    {
+      id: 'music_style', label: S.adj_music_style_label, tag: S.adj_music_style_tag,
+      tagColor: '#f0883e',
+      hint: S.adj_music_style_hint,
+      type: 'text', placeholder: S.adj_music_style_placeholder,
+      hidden: () => !data.music,
+    },
+    {
+      id: 'music_toggle',
+      label: data.music ? S.adj_music_toggle_label_has : S.adj_music_toggle_label_no,
+      tag: S.adj_music_toggle_tag,
+      tagColor: '#f0883e',
+      hint: data.music ? S.adj_music_toggle_hint_has : S.adj_music_toggle_hint_no,
+      type: 'confirm',
+    },
+    {
+      id: 'voice_pause', label: S.adj_voice_pause_label, tag: S.adj_voice_pause_tag,
+      tagColor: '#58a6ff',
+      hint: S.adj_voice_pause_hint,
+      type: 'choice', options: S.adj_voice_pause_options,
+    },
+    {
+      id: 'other', label: S.adj_other_label, tag: S.adj_other_tag,
+      tagColor: '#8b949e',
+      hint: S.adj_other_hint,
+      type: 'text', placeholder: S.adj_other_placeholder,
+    },
+  ];
+}
+
+const ADJUSTMENTS = buildAdjustments();
+
+const state = {
+  active: {},   // id -> true/false
+  values: {},   // id -> slider value or text value
+  refOpen: false,
+};
+
+/* Init values */
+ADJUSTMENTS.forEach(a => {
+  state.active[a.id] = false;
+  if (a.type === 'choice') state.values[a.id] = null;  // no option selected yet
+  else if (a.type === 'text') state.values[a.id] = '';
+  else if (a.type === 'confirm') state.values[a.id] = false;
+});
+
+function esc(text) {
+  const d = document.createElement('div');
+  d.textContent = text;
+  return d.innerHTML;
+}
+
+function fillHint(hint) {
+  return hint
+    .replace('{speed}', data.voice.speed)
+    .replace('{voiceId}', data.voice.voiceId)
+    .replace('{gain}', data.voice.gain)
+    .replace('{natureCategory}', data.nature ? data.nature.category : '')
+    .replace('{natureVol}', data.nature ? data.nature.volume : '')
+    .replace('{musicVol}', data.music ? data.music.volume : '')
+    .replace('{delay}', data.voiceDelay);
+}
+
+function activeCount() {
+  return Object.values(state.active).filter(Boolean).length;
+}
+
+function render() {
+  renderHero();
+  renderAdj();
+}
+
+function renderHero() {
+  const typeName = data.contentType === 'asmr' ? S.subtitle_asmr
+    : data.contentType === 'meditation' ? S.subtitle_meditation
+    : S.subtitle_story;
+  document.getElementById('hero').innerHTML = `
+    <h1>${esc(data.projectName)}</h1>
+    <p class="subtitle">${typeName} | ${S.listen_hint}</p>
+    <div class="hero">
+      <div class="hero-label">
+        <div class="hero-icon">&#9654;</div>
+        <span class="hero-title">${S.hero_title}</span>
+      </div>
+      <audio controls preload="metadata" src="${data.mixed.audioUrl}"></audio>
+      <div class="hero-meta">
+        <span>${S.voice_label} ${esc(data.voice.voiceId)}</span>
+        <span>${S.speed_label} ${data.voice.speed}x</span>
+        ${data.nature ? `<span>${esc(data.nature.category)}</span>` : ''}
+        ${data.music ? `<span>${S.has_music}</span>` : `<span>${S.no_music}</span>`}
+      </div>
+    </div>
+  `;
+}
+
+function renderAdj() {
+  const visibleAdj = ADJUSTMENTS.filter(a => !a.hidden || !a.hidden());
+  let html = `
+    <div class="section-title">${S.section_adj}</div>
+    <div class="adj-grid">
+  `;
+
+  visibleAdj.forEach(a => {
+    const isActive = state.active[a.id];
+    html += `
+      <div class="adj-card ${isActive ? 'active' : ''}" data-id="${a.id}">
+        <div class="adj-header" onclick="toggleAdj('${a.id}')">
+          <div class="adj-check">${isActive ? '✓' : ''}</div>
+          <span class="adj-label">${a.label}</span>
+          <span class="adj-tag" style="color:${a.tagColor};border:1px solid ${a.tagColor}33;background:${a.tagColor}11">${a.tag}</span>
+        </div>
+        <div class="adj-body">
+          <div class="adj-hint">${fillHint(a.hint)}</div>
+    `;
+
+    if (a.type === 'choice') {
+      html += `<div class="choice-row">`;
+      a.options.forEach(opt => {
+        const selected = state.values[a.id] === opt ? 'selected' : '';
+        html += `<div class="choice-pill ${selected}" onclick="onChoice('${a.id}','${opt}')">${opt}</div>`;
+      });
+      html += `</div>`;
+    } else if (a.type === 'text') {
+      html += `
+          <textarea placeholder="${a.placeholder || ''}"
+                    oninput="state.values['${a.id}']=this.value">${esc(state.values[a.id])}</textarea>
+      `;
+    } else if (a.type === 'confirm') {
+      html += `<div class="adj-hint" style="color:var(--accent)">${S.confirm_hint}</div>`;
+    }
+
+    html += `</div></div>`;
+  });
+
+  html += `</div>`;
+
+  /* Reference tracks (collapsed) */
+  html += `
+    <div class="ref-section">
+      <div class="ref-toggle" onclick="toggleRef()">
+        <span class="ref-arrow ${state.refOpen ? 'open' : ''}">▶</span>
+        ${S.ref_toggle}
+      </div>
+      <div class="ref-body ${state.refOpen ? 'open' : ''}">
+        <div class="ref-track">
+          <div class="ref-track-label"><div class="ref-dot" style="background:var(--voice-color)"></div>${S.ref_voice}</div>
+          <audio controls preload="none" src="${data.voice.audioUrl}"></audio>
+          <div class="ref-params">
+            <span class="ref-param">${esc(data.voice.voiceId)}</span>
+            <span class="ref-param">${S.ref_speed} ${data.voice.speed}x</span>
+            <span class="ref-param">${S.ref_gain} ${data.voice.gain}x</span>
+            <span class="ref-param">${S.ref_delay} ${data.voiceDelay}s</span>
+          </div>
+        </div>
+  `;
+  if (data.nature) {
+    html += `
+        <div class="ref-track">
+          <div class="ref-track-label"><div class="ref-dot" style="background:var(--nature-color)"></div>${esc(data.nature.category)}</div>
+          <audio controls preload="none" src="${data.nature.audioUrl}"></audio>
+          <div class="ref-params"><span class="ref-param">${S.ref_volume} ${data.nature.volume}x</span></div>
+        </div>
+    `;
+  }
+  if (data.music) {
+    html += `
+        <div class="ref-track">
+          <div class="ref-track-label"><div class="ref-dot" style="background:var(--music-color)"></div>${S.ref_bgm}</div>
+          <audio controls preload="none" src="${data.music.audioUrl}"></audio>
+          <div class="ref-params"><span class="ref-param">${S.ref_volume} ${data.music.volume}x</span></div>
+        </div>
+    `;
+  }
+  html += `</div></div>`;
+
+  /* Action buttons */
+  const n = activeCount();
+  html += `
+    <div class="actions">
+      <button class="btn btn-success" id="btn-lgtm" onclick="submitFeedback(true)">${S.btn_export}</button>
+      <button class="btn btn-primary" id="btn-submit" onclick="submitFeedback(false)" ${n === 0 ? 'disabled' : ''}>
+        ${S.btn_submit}<span class="btn-count">${n > 0 ? '(' + n + S.btn_count_suffix + ')' : ''}</span>
+      </button>
+    </div>
+  `;
+
+  document.getElementById('adj').innerHTML = html;
+}
+
+function toggleAdj(id) {
+  state.active[id] = !state.active[id];
+  renderAdj();
+}
+
+function onChoice(id, opt) {
+  state.values[id] = state.values[id] === opt ? null : opt;  // toggle
+  renderAdj();
+}
+
+function toggleRef() {
+  state.refOpen = !state.refOpen;
+  const arrow = document.querySelector('.ref-arrow');
+  const body = document.querySelector('.ref-body');
+  arrow.classList.toggle('open');
+  body.classList.toggle('open');
+}
+
+function collectFeedback(isLGTM) {
+  const lines = [];
+  const settings = { overall_satisfied: isLGTM };
+
+  if (isLGTM) {
+    return { feedback: S.feedback_satisfied, settings };
+  }
+
+  ADJUSTMENTS.forEach(a => {
+    if (!state.active[a.id]) return;
+    if (a.hidden && a.hidden()) return;
+
+    if (a.type === 'choice') {
+      const chosen = state.values[a.id];
+      settings[a.id] = chosen;
+      lines.push(`- **${a.label}**：${chosen || S.feedback_checked_no_choice}`);
+    } else if (a.type === 'text') {
+      const text = (state.values[a.id] || '').trim();
+      settings[a.id] = text;
+      lines.push(`- **${a.label}**：${text || S.feedback_checked_no_detail}`);
+    } else if (a.type === 'confirm') {
+      settings[a.id] = true;
+      lines.push(`- **${a.label}**`);
+    }
+  });
+
+  return {
+    feedback: lines.length > 0 ? lines.join('\n') : S.feedback_needs_adjustment,
+    settings,
+  };
+}
+
+async function submitFeedback(isLGTM) {
+  const btnLgtm = document.getElementById('btn-lgtm');
+  const btnSubmit = document.getElementById('btn-submit');
+  btnLgtm.disabled = true;
+  btnSubmit.disabled = true;
+
+  const { feedback, settings } = collectFeedback(isLGTM);
+
+  try {
+    const res = await fetch('/feedback', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ feedback, settings })
+    });
+    const result = await res.json();
+    if (result.ok) {
+      document.getElementById('hero').innerHTML = `
+        <div class="success-msg">
+          <h2>${isLGTM ? S.success_export_title : S.success_adjust_title}</h2>
+          <p>${isLGTM ? S.success_export_desc : S.success_adjust_desc}</p>
+        </div>
+      `;
+      document.getElementById('adj').innerHTML = '';
+    }
+  } catch (e) {
+    btnLgtm.disabled = false;
+    btnSubmit.disabled = false;
+    alert(S.submit_error);
+  }
+}
+
+render();
+</script>
+</body>
+</html>
