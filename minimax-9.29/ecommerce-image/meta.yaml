@@ -1,0 +1,33 @@
+display-name-zh: 电商商品图
+version: 0.1.12
+tag-en: "E-Commerce / Image Generation"
+tag-cn: "电商 / 图像生成"
+complete-tags-en:
+  - "E-Commerce / Creative Generation"
+complete-tags-cn:
+  - "电商 / 创作生成"
+summary-en: "Generate platform-compliant product image set from raw photo"
+summary-cn: "从实拍图生成平台合规的电商组图"
+desc-en: "For producing platform-compliant e-commerce image sets when a real product photo is on hand. Takes a raw studio or phone shot of the product as input. Produces a coherent set of hero, white-background, lifestyle, on-model, macro detail, multi-angle, SKU swatch and PDP images for Amazon, Shopify, TikTok Shop, Taobao, Tmall and similar e-commerce platforms with automatic background and lighting optimization."
+desc-cn: "适用于已有商品实拍照、需要批量上架或制作详情页的电商场景。输入商品原始实拍图(棚拍或手机随拍),输出主图、白底图、场景图、模特图、微距细节、多角度展示、SKU 色卡、详情页配图等成套商品图。自动优化背景与光线,适配 Amazon、Shopify、TikTok Shop、淘宝、天猫等主流电商平台规格。"
+cover: "https://cdn.hailuoai.com/hailuo-video-web/public_assets/e134212f-b5db-4c45-a519-066b2ae7e62d.mp4"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 将商品实拍图整理为适配平台上架与详情页使用的主图、场景图和细节组图。
+    best-for:
+      - 商品实拍
+      - 详情页组图
+      - 上架素材
+    how-to-use: 提供商品原始照片、平台和目标买家，先确认商品事实、图片任务与拍摄策略。
+    outputs: 拍摄计划、主图白底图、场景与模特图、细节图及平台适配组图。
+  en-US:
+    summary: Turn product photos into platform-ready hero, lifestyle, and detail image sets for listings and product pages.
+    best-for:
+      - Product Photos
+      - Listing Sets
+      - Marketplace Assets
+    how-to-use: Provide the original product photos, marketplace, and target shopper, then confirm product facts, image jobs, and shot strategy.
+    outputs: A shoot plan, hero and white-background images, lifestyle and model images, details, and platform variants.

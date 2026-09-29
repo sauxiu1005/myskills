@@ -1,0 +1,37 @@
+display-name-zh: 复刻视频
+version: 1.2.3
+name: video-recreation
+content-locale: zh-CN
+source: community
+author-en: meimei
+author-cn: meimei
+tag-en: Professional Film / Creative Generation
+tag-cn: 专业影视 / 创作生成
+complete-tags-en:
+  - Professional Film / Creative Generation
+  - Creative & Experimental / Creative Generation
+complete-tags-cn:
+  - 专业影视 / 创作生成
+  - 创意实验 / 创作生成
+structured-info:
+  zh-CN:
+    summary: 在国内客户端按实际可用能力重制视频，保留动作关系并自然适配指定替换元素。
+    best-for:
+      - 视频复刻
+      - 元素替换
+      - 逐镜拆解
+    how-to-use: 上传视频或分析素材，说明保留与替换目标、所需交付，并决定原视频是否作为生成输入。
+    outputs: 按需提供拆解报告、自然语言提示词，或经授权制作的视频成片。
+  en-US:
+    summary: Recreate videos with capabilities available in the domestic client, preserving action relationships while naturally adapting requested replacements.
+    best-for:
+      - Video recreation
+      - Element replacement
+      - Shot analysis
+    how-to-use: Upload a video or analysis material, describe what to preserve or replace and the desired deliverable, and decide whether generation may use the source video.
+    outputs: Analysis reports, natural-language prompts, or authorized finished videos, as requested.
+showcase:
+  - https://minimax-public-cdn.oss-cn-wulanchabu.aliyuncs.com/creator-plan/265154656925237250/video-recreation/showcase-1789889946081.mp4
+summary-en: Recreate videos with capabilities available in the domestic client, preserving action relationships while naturally adapting requested replacements.
+summary-cn: 在国内客户端按实际可用能力重制视频，保留动作关系并自然适配指定替换元素。
+cover-object-key: creator-plan/265154656925237250/video-recreation/cover-1789889945229.png

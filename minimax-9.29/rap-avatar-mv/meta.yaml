@@ -1,0 +1,17 @@
+display-name-zh: 格莱美说唱MV速成
+version: 0.1.7
+tag-en: "Music Video / Video Generation"
+tag-cn: "音乐视频 / 视频生成"
+complete-tags-en:
+  - "Sound & Music / Creative Generation"
+complete-tags-cn:
+  - "音频音乐 / 创作生成"
+summary-en: "Zero-experience recreation of Jack Rabbit's signature 'Grammy' MV."
+summary-cn: "零基础复刻杰克小兔同款“格莱美”MV"
+desc-en: "Turn a theme or keyword into a short rap hook, ask the user to choose a male or female voice, generate an eight-second vocal rap clip, then show a photo-upload reminder card. The user uploads a photo through chat attachments, and the workflow uses MiniMax-H3 to create two eight-second 2K rap MV videos with two truly random visual styles, then muxes the original rap clip as the final soundtrack."
+desc-cn: "根据用户输入的一句话或关键词生成短 rap 钩子，先让用户选择男声或女声，再生成 8 秒说唱音频。音频完成后提示上传人物照片，使用 MiniMax-H3 生成两个 8 秒 2K 说唱 MV 视频，随机抽取两套不同风格，并将原始说唱音频混流为最终音轨。"
+author-en: "Jack Rabbit"
+author-cn: "杰克小兔"
+source: official
+cover: "https://cdn.hailuoai.com/hailuo-video-web/public_assets/69fcd314-f0b7-4e11-8e3f-d2bd3bb94dbc.gif"
+cover-en: "https://cdn.hailuoai.video/open-hailuo-video-web/public_assets/72c90334-b342-49f1-acb4-4401c928edba.gif"

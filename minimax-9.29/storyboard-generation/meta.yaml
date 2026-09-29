@@ -1,0 +1,17 @@
+display-name-zh: 分镜板生成
+version: 0.3.1
+tag-en: "Visual Production / Video Generation"
+tag-cn: "视觉创作 / 视频生成"
+complete-tags-en:
+  - "Short Drama / Creative Generation"
+  - "Animation / Creative Generation"
+complete-tags-cn:
+  - "短剧漫剧 / 创作生成"
+  - "动画 / 创作生成"
+summary-en: "Generate presentation slides and multi-panel film storyboards with strict layout containment, timeline bars, and director-style camera overlays."
+summary-cn: "生成演示幻灯片与电影分镜，边界严格、含时间线与机位叠加。"
+desc-en: "Storyboard Generation gives image models the rules they need to render presentation slides and multi-panel film storyboards without cropping, layout drift, or illegible text. Covers aspect ratio and resolution choices, explicit row/column layout definitions, reference-style adherence, gradient timeline bars, structured JSON prompts for director-style camera-movement overlays, and empty placeholder panels for structural re-use. Keeps lighting, typography, and environmental context consistent across panels."
+desc-cn: "分镜板生成 skill 给图像模型提供渲染演示幻灯片和多面板电影分镜板所需的规则，避免裁剪、布局漂移和文字模糊。涵盖分辨率与画面比例选择、行列布局显式声明、参考风格对齐、渐变时间线条、导演风格机位运动叠加所需的结构化 JSON prompt，以及做结构占位的空面板。跨面板保持光线、字体、环境一致。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>原声音乐画廊</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d;
+    --text: #e6edf3; --text-secondary: #8b949e; --accent: #58a6ff;
+    --comedy: #3fb950; --romantic: #d2a8ff; --warm: #f0883e;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, sans-serif; padding: 24px; padding-bottom: 80px; }
+  h1 { font-size: 24px; margin-bottom: 8px; }
+  .subtitle { color: var(--text-secondary); margin-bottom: 32px; }
+
+  .section { margin-bottom: 40px; }
+  .section-title {
+    font-size: 18px; font-weight: 600; margin-bottom: 16px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--border);
+  }
+
+  .audio-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; margin-bottom: 12px;
+    position: relative;
+  }
+  .audio-card:hover { border-color: var(--accent); }
+  .audio-name { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+  .audio-type {
+    display: inline-block; font-size: 11px; padding: 2px 8px;
+    border-radius: 10px; margin-bottom: 12px;
+  }
+  .audio-type.character { background: rgba(210,168,255,0.2); color: var(--romantic); }
+  .audio-type.op { background: rgba(240,136,62,0.2); color: var(--warm); }
+  .audio-type.ed { background: rgba(88,166,255,0.2); color: var(--accent); }
+  .audio-type.bgm { background: rgba(63,185,80,0.2); color: var(--comedy); }
+
+  .audio-player {
+    width: 100%; margin-top: 8px;
+  }
+  audio { width: 100%; height: 40px; border-radius: 8px; }
+  audio::-webkit-media-controls-panel { background: var(--bg); }
+
+  .cite-btn {
+    position: absolute; top: 12px; right: 12px;
+    background: var(--border); border: none; color: var(--text-secondary);
+    width: 28px; height: 28px; border-radius: 6px; cursor: pointer;
+    font-size: 14px; display: flex; align-items: center; justify-content: center;
+  }
+  .cite-btn:hover { background: var(--accent); color: var(--bg); }
+
+  .feedback-bar {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: var(--surface); border-top: 1px solid var(--border);
+    padding: 12px 24px; display: flex; gap: 12px; align-items: center; z-index: 100;
+  }
+  .feedback-bar textarea {
+    flex: 1; background: var(--bg); border: 1px solid var(--border);
+    color: var(--text); border-radius: 8px; padding: 10px 14px;
+    font-size: 14px; resize: none; height: 44px; line-height: 24px; font-family: inherit;
+  }
+  .feedback-bar textarea:focus { outline: none; border-color: var(--accent); }
+  .feedback-bar button {
+    background: var(--accent); color: var(--bg); border: none;
+    padding: 10px 20px; border-radius: 8px; font-weight: 600;
+    cursor: pointer; font-size: 14px; white-space: nowrap;
+  }
+  .feedback-bar button.lgtm { background: var(--comedy); }
+  .feedback-bar button:hover { opacity: 0.9; }
+
+  .empty-state {
+    text-align: center; padding: 60px 20px; color: var(--text-secondary);
+  }
+  .empty-state svg { width: 48px; height: 48px; margin-bottom: 16px; opacity: 0.3; }
+</style>
+</head>
+<body>
+<script>
+const PREVIEW_DATA = null;  /* __PREVIEW_DATA__ */
+</script>
+
+<div id="app"></div>
+
+<div class="feedback-bar">
+  <textarea id="feedbackText" placeholder="输入修改建议… 点击 @ 引用特定曲目"></textarea>
+  <button class="lgtm" onclick="submitFeedback('LGTM')">LGTM</button>
+  <button onclick="submitFeedback()">提交建议</button>
+</div>
+
+<script>
+const data = JSON.parse(PREVIEW_DATA);
+
+function renderAudioCard(item, type, typeLabel) {
+  const citeRef = `@${typeLabel}/${item.name}`;
+  return `
+    <div class="audio-card">
+      <button class="cite-btn" title="引用" onclick="cite('${citeRef}')">@</button>
+      <div class="audio-name">${item.name}</div>
+      <span class="audio-type ${type}">${typeLabel}</span>
+      <div class="audio-player">
+        <audio controls preload="metadata" src="${item.audio_url}"></audio>
+      </div>
+    </div>
+  `;
+}
+
+function render() {
+  let html = `<h1>${data.title || '原声音乐'} — 音频画廊</h1>`;
+  html += `<div class="subtitle">试听所有生成的音乐，确认满意后提交</div>`;
+
+  let hasContent = false;
+
+  if (data.opening) {
+    hasContent = true;
+    html += `<div class="section"><div class="section-title">片头曲 (OP)</div>`;
+    html += renderAudioCard(data.opening, 'op', 'OP');
+    html += '</div>';
+  }
+
+  if (data.character_themes && data.character_themes.length) {
+    hasContent = true;
+    html += `<div class="section"><div class="section-title">角色主题曲</div>`;
+    data.character_themes.forEach(t => { html += renderAudioCard(t, 'character', '角色曲'); });
+    html += '</div>';
+  }
+
+  if (data.ending) {
+    hasContent = true;
+    html += `<div class="section"><div class="section-title">片尾曲 (ED)</div>`;
+    html += renderAudioCard(data.ending, 'ed', 'ED');
+    html += '</div>';
+  }
+
+  if (data.bgm && data.bgm.length) {
+    hasContent = true;
+    html += `<div class="section"><div class="section-title">场景配乐 (BGM)</div>`;
+    data.bgm.forEach(t => { html += renderAudioCard(t, 'bgm', 'BGM'); });
+    html += '</div>';
+  }
+
+  if (!hasContent) {
+    html += `<div class="empty-state">
+      <div style="font-size:48px;opacity:0.3;">🎵</div>
+      <p>暂无已完成的音频文件</p>
+    </div>`;
+  }
+
+  document.getElementById('app').innerHTML = html;
+}
+
+function cite(ref) {
+  const ta = document.getElementById('feedbackText');
+  ta.value += (ta.value ? ' ' : '') + ref;
+  ta.focus();
+}
+
+async function submitFeedback(override) {
+  const text = override || document.getElementById('feedbackText').value.trim();
+  if (!text) return;
+  try {
+    const res = await fetch('/feedback', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ feedback: text }),
+    });
+    const d = await res.json();
+    if (d.ok) {
+      document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-size:20px;color:#3fb950;">已提交，窗口即将关闭</div>';
+    }
+  } catch (e) {
+    alert('提交失败: ' + e.message);
+  }
+}
+
+render();
+</script>
+</body>
+</html>

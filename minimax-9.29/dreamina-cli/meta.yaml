@@ -1,0 +1,28 @@
+display-name-zh: 即梦创作
+version: 0.1.2
+tag-en: "Creative & Experimental / Creative Generation"
+tag-cn: "创意实验 / 创作生成"
+complete-tags-en:
+  - "Creative & Experimental / Creative Generation"
+complete-tags-cn:
+  - "创意实验 / 创作生成"
+summary-en: "Create images and videos with your Jimeng account. Automatically prepare the client, track tasks and deliver results to the canvas."
+summary-cn: "使用自己的即梦账号创作图片和视频，自动准备客户端、追踪任务并交付到画布。"
+desc-en: "Create or edit images and videos with your Jimeng account, including Seedance 2.0 or 2.5 video requests. Describe the goal and provide references; the workflow prepares the client, checks capabilities, fills missing settings, saves receipts and tracks progress. Finished media receive descriptive names and reach the canvas once, followed by the remaining credit balance. Images and audio default to built-in services unless Jimeng is explicitly selected; unsupported audio requests are explained. Before video submission, choose standard queueing or membership acceleration with additional credits. Interrupted work resumes from the original receipt without duplicate generation. Login, membership, credits and initial web confirmation remain subject to Jimeng requirements."
+desc-cn: "使用即梦账号生成或编辑图片与视频，也支持指定 Seedance 2.0 或 2.5 的视频需求。描述目标并提供参考素材后，自动准备客户端、查询能力并补齐参数、保存回执并追踪任务，将成片按内容命名后交付画布，最后报告剩余积分。图片和音频默认使用内置服务，明确选择即梦才接管；不支持的音频请求会说明限制。视频提交前询问普通排队或会员加速，中断后复用原任务，避免重复生成。登录、会员、积分和首次网页确认仍受即梦要求约束。"
+author-en: "MiniMax Hub"
+author-cn: "海螺Hub"
+source: official
+cover: "https://cdn.hailuoai.com/hailuo-video-web/public_assets/d4417fad-9453-493d-bddb-1de25299e6a4.png"
+cover-en: ""
+structured-info:
+  zh-CN:
+    summary: "使用自己的即梦账号创作图片和视频，自动准备客户端、追踪任务并交付到画布。"
+    best-for: ["即梦创作", "参考素材生成", "任务恢复"]
+    how-to-use: "选择即梦并描述需求，按需附上素材；需要登录时在即梦页面授权。"
+    outputs: "即梦图片或视频及画布资产；任务恢复记录保存在后台。"
+  en-US:
+    summary: "Create images and videos with your Jimeng account. Automatically prepare the client, track tasks and deliver results to the canvas."
+    best-for: ["Jimeng creation", "Reference-guided generation", "Task recovery"]
+    how-to-use: "Choose Jimeng, describe the result and attach references as needed. Authorize on the Jimeng page when login is required."
+    outputs: "Jimeng images or videos and canvas assets; recovery records stay internal."

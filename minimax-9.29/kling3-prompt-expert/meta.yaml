@@ -1,0 +1,19 @@
+display-name-zh: 可灵3提示词专家
+version: 0.3.1
+tag-en: "Visual Production / Video Generation"
+tag-cn: "视觉创作 / 视频生成"
+complete-tags-en:
+  - "Short Drama / Planning"
+  - "Animation / Planning"
+  - "Commercial Ad / Planning"
+complete-tags-cn:
+  - "短剧漫剧 / 计划制定"
+  - "动画 / 计划制定"
+  - "商业广告 / 计划制定"
+summary-en: "kling3-prompt-expert: production-ready Kling 3.0 video prompts using the canonical 9-field formula."
+summary-cn: "可灵3视频提示词专家，9字段公式+角色场景锁定。"
+desc-en: "kling3-prompt-expert produces production-ready Kling 3.0 video prompts using the canonical 9-field formula: Subject, SubjectDescription, Movement, Scene, SceneDescription, Camera, Lighting, Atmosphere, Negative. Enforces hard rules — one start image, aspect ratio 16:9 / 9:16 / 1:1, one clear action per shot, no shortcut references. Ships locked character and environment specs for the Crococopter and Swa & Danny universes so recurring shots cut together visually."
+desc-cn: "可灵3提示词专家（kling3-prompt-expert）用 Kling 3.0 官方 9 字段公式（Subject、SubjectDescription、Movement、Scene、SceneDescription、Camera、Lighting、Atmosphere、Negative）产出可直接投产的视频 prompt。强制执行硬规则：最多一张起始图、画幅只在 16:9 / 9:16 / 1:1、每镜一个清晰动作、不允许引用式省略。内建 Crococopter 和 Swa & Danny 世界观的角色/场景锁定规格，让重复镜头在视觉上剪得起来。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official

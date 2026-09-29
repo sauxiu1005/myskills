@@ -1,0 +1,16 @@
+display-name-zh: 人像拼图
+version: 0.5.12
+tag-en: "Visual Production / Image Generation"
+tag-cn: "视觉创作 / 图像生成"
+complete-tags-en:
+  - "Short Drama / Creative Generation"
+complete-tags-cn:
+  - "短剧漫剧 / 创作生成"
+summary-en: "Split reference face to pass moderation"
+summary-cn: "拆分参考人脸以通过审核"
+desc-en: "For preparing portrait references for downstream AI generation while keeping character identity consistent through feature decomposition. Takes one portrait photo as input. Produces two variants: a faceless version with features erased for scene integration and a puzzle version with extracted features for identity reference. Pipeline includes analysis, generation, quality check and compositing stages."
+desc-cn: "适用于 AI 生图前对人像做预处理,通过五官分解技术保留角色一致性同时通过审核。输入一张人像照片,输出两个变体——去脸版(消去五官用于场景融合)与拼图版(提取五官用于身份参考)。完整流程包含人像上传、面部特征分析、双变体生成、质量校验、合成输出五个阶段,确保处理结果的可用性。"
+cover: ""
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official

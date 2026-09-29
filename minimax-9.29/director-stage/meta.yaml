@@ -1,0 +1,32 @@
+display-name-zh: 导演台
+version: 0.1.0
+tag-en: Professional Film / Planning
+tag-cn: 专业影视 / 计划制定
+complete-tags-en:
+  - Professional Film / Planning
+complete-tags-cn:
+  - 专业影视 / 计划制定
+summary-en: Turn scene briefs and references into editable 3D staging, camera rehearsals and visually inspected shot references for preproduction.
+summary-cn: 将场景简报与参考素材转为可编辑的三维摆位、机位排练与经过视觉检查的镜头参考，用于前期预演。
+desc-en: For creators rehearsing scenes in Director Stage, this workflow turns a scene brief, shot list, reference image or existing scene into editable previsualization. It establishes the intended scene and dramatic beat, arranges characters and props, plans motivated camera moves and performance timing, then inspects rendered views and representative timeline moments. Complex foreground objects progress from a part layout through verified blockout to refinement, while supporting props stay simple. Delivery includes the editable staging, requested camera and action timing, inspected shot references and any remaining mismatches. It supports spatial planning and camera rehearsal, not flat storyboard generation, Blender project production, final rendering or finished films.
+desc-cn: 面向在导演台中排练场景的创作者，接收场景简报、镜头表、参考图或已有场景。先确定目标场景与戏剧节点，再安排角色和道具，设计有叙事目的的运镜与表演时序，随后检查渲染画面和代表性时间点。复杂前景物件经过部件布局、白模验证再细化，配景保持简洁。最终交付可编辑的场面调度、所需机位与动作时序、经过看图检查的镜头参考及剩余问题。适用于空间规划和机位预演，不用于平面分镜生图、Blender 工程制作、最终渲染或完整成片。
+structured-info:
+  zh-CN:
+    summary: 将场景简报与镜头参考转化为可编辑的三维场面调度，并交付经过画面检查的机位预演。
+    best-for:
+      - 场面调度
+      - 机位预演
+      - 动作排练
+    how-to-use: 提供场景简报、镜头表、参考图或已有场景，先确认戏剧节点与目标镜头。
+    outputs: 可编辑场景、机位与动作时序、镜头参考及剩余问题清单。
+  en-US:
+    summary: Turn scene briefs and shot references into editable 3D staging with visually inspected camera rehearsals.
+    best-for:
+      - Scene Blocking
+      - Camera Rehearsal
+      - Action Timing
+    how-to-use: Provide a scene brief, shot list, reference image, or existing scene, then confirm the dramatic beat and target shot.
+    outputs: Editable staging, camera and action timing, inspected shot references, and a remaining-issues list.
+author-en: MiniMax Hub
+author-cn: 海螺Hub
+source: official

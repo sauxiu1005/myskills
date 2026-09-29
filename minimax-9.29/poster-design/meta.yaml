@@ -1,0 +1,35 @@
+display-name-zh: 海报设计
+version: 1.0.15
+tag-en: "Visual Production / Image Generation"
+tag-cn: "视觉创作 / 图像生成"
+complete-tags-en:
+  - "Commercial Ad / Creative Generation"
+  - "E-Commerce / Creative Generation"
+complete-tags-cn:
+  - "商业广告 / 创作生成"
+  - "电商 / 创作生成"
+summary-en: "Static poster designer covering 12 subtypes"
+summary-cn: "覆盖12子类的静态海报设计"
+desc-en: "For static poster design across 12 subtypes including Xiaohongshu cover, WeChat header, vertical story, film poster, music festival poster, magazine cover, book cover, album cover, ad banner, promo poster and Weibo banner formats. Takes design requirements and content brief as input. Produces a finished static poster evaluated and refined through a 5-module 19-item weighted rubric scoring system."
+desc-cn: "适用于静态海报设计,覆盖 12 种子类型:小红书封面、公众号头图、Story 竖屏海报、电影海报、音乐节海报、杂志封面、书籍封面、专辑封面、广告横幅 banner、促销海报、微博 banner 等。输入设计需求与内容简报,输出成品静态海报。通过 5 模块 19 项加权评分体系进行质量评估与迭代打磨,确保设计产出的专业水准。"
+cover: "https://cdn.hailuoai.com/hailuo-video-web/public_assets/723b3a9c-86b0-4d92-ba0b-1332bc9ba8bb.mp4"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 根据传播目标和视觉品类设计信息层级清晰、主体突出且适合发布的静态海报。
+    best-for:
+      - 静态海报
+      - 视觉排版
+      - 品牌传播
+    how-to-use: 提供主题、文案、素材和投放场景，先选择海报类型、画幅与核心传播任务。
+    outputs: 创意方向、构图方案、主视觉海报、排版版本与发布尺寸建议。
+  en-US:
+    summary: Design a publishable static poster with clear hierarchy and a strong subject from the communication goal and visual category.
+    best-for:
+      - Static Posters
+      - Visual Layout
+      - Brand Communication
+    how-to-use: Provide the theme, copy, assets, and publishing context, then choose the poster type, framing, and communication job.
+    outputs: Creative directions, composition plans, a hero poster, layout variants, and publishing-size guidance.

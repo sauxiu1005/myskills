@@ -1,0 +1,33 @@
+display-name-zh: 影视风格选择器
+version: 0.3.11
+tag-en: "Visual Production / Idea & Concept"
+tag-cn: "视觉创作 / 创意构思"
+complete-tags-en:
+  - "Short Drama / Intent Brainstorming"
+complete-tags-cn:
+  - "短剧漫剧 / 意图脑爆"
+summary-en: "Pick genre and master, get reference shots"
+summary-cn: "选定影视类别与导演获取参考图"
+desc-en: "For locking a visual style direction before AI image or video generation by referencing established cinematic aesthetics. Takes a genre interest or director and film reference target as input. Produces a curated set of style references collected from Film-Grab, Pinterest, Cosmos and similar visual databases plus an AI prompt template ready for direct generation. Essential for maintaining visual consistency across production."
+desc-cn: "适用于 AI 生图或生视频前确定视觉风格、找参考图、对标导演或电影镜头美学的场景,是保持制作视觉一致性的关键步骤。输入感兴趣的影视类别或导演、影片对标方向,输出该风格下的代表性参考图(自动从 Film-Grab、Pinterest、Cosmos 等视觉数据库采集)及可直接用于生成的 AI Prompt 模板。"
+cover: ""
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 从影视类别和导演参考中收敛目标风格，整理可验证的视觉依据并输出可执行的提示模板。
+    best-for:
+      - 影视风格
+      - 导演参考
+      - 提示模板
+    how-to-use: 提供风格偏好、影片名称或创作目标，先选择影视类别并确认参考范围。
+    outputs: 风格候选、导演与作品参考、视觉特征总结、检索链接与提示模板。
+  en-US:
+    summary: Narrow a target film style from genre and director references, document visual evidence, and produce an executable prompt template.
+    best-for:
+      - Film Styles
+      - Director References
+      - Prompt Templates
+    how-to-use: Provide a style preference, film title, or creative goal, then choose a film category and confirm the reference scope.
+    outputs: Style candidates, director and work references, visual traits, search links, and a prompt template.

@@ -1,0 +1,32 @@
+display-name-zh: 体育播客大纲
+version: 0.3.2
+tag-en: "Audio Content / Post-Production"
+tag-cn: "音频内容 / 后期制作"
+complete-tags-en:
+  - "Sound & Music / Post-production"
+complete-tags-cn:
+  - "音频音乐 / 后期处理"
+summary-en: "Draft structured sports podcast episode outlines with segment timing, debate topics, hot takes, ad breaks, and guest interview prep."
+summary-cn: "起草体育播客大纲，含时间轴、辩论点、观点、广告位、嘉宾问题。"
+desc-en: "Sports Podcast Outline generates ready-to-record episode outlines as an expert sports podcast producer. Produces segment-level timing, debate points and hot takes with a clear angle, listener question integration, natural ad break placement, show flow optimization, and guest interview prep including opening questions and follow-up angles. Copy-paste templates the host can record straight against, grounded in current games, players, and storylines."
+desc-cn: "体育播客大纲以资深体育播客制作人身份,产出可直接开录的节目大纲。包含段级时间轴、立场明确的辩论点与犀利观点、听众问题嵌入方式、自然过渡的广告位安排、节目节奏优化,以及嘉宾访谈的开场问题与追问角度。模板可直接复制使用,主持人对着大纲即可开录,内容锚定近期赛事、球员、故事线,拒绝空话套话。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 将体育话题与嘉宾信息编排为带时间轴、辩论点、观点、广告位和采访问题的播客大纲。
+    best-for:
+      - 体育播客
+      - 节目大纲
+      - 嘉宾采访
+    how-to-use: 提供比赛或话题、节目时长和嘉宾信息，先确认听众、立场张力与广告安排。
+    outputs: 分段时间轴、辩论问题、热点观点、广告位、听众问题与采访提纲。
+  en-US:
+    summary: Turn a sports topic and guest context into a timed podcast outline with debates, hot takes, ad breaks, and interview questions.
+    best-for:
+      - Sports Podcasts
+      - Episode Outlines
+      - Guest Interviews
+    how-to-use: Provide the game or topic, show duration, and guest context, then confirm audience, debate tension, and ad placement.
+    outputs: A timed segment plan, debate questions, hot takes, ad breaks, listener questions, and interview outline.

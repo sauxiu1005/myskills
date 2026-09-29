@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MV Creator</title>
+<style>
+  :root {
+    --bg: #0f0f0f;
+    --card: #1a1a1a;
+    --border: #2a2a2a;
+    --text: #e0e0e0;
+    --text-dim: #888;
+    --accent: #6c9bff;
+    --tag-prelude: #e8a44a;
+    --tag-interlude: #a47de8;
+    --tag-outro: #e85a6e;
+    --green: #4ade80;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg); color: var(--text);
+    line-height: 1.6; padding: 2rem 2rem 10rem;
+    max-width: 860px; margin: 0 auto;
+  }
+
+  .header { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+  .header h1 { font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .header .meta { font-size: 0.85rem; color: var(--text-dim); }
+  .header .meta span { margin-right: 1.5rem; }
+
+  .timeline { position: relative; padding-left: 3rem; }
+  .timeline::before {
+    content: ''; position: absolute; left: 0.6rem; top: 0; bottom: 0;
+    width: 2px; background: var(--border);
+  }
+  .segment {
+    position: relative; margin-bottom: 1rem; padding: 0.8rem 1.2rem;
+    background: var(--card); border-radius: 8px; border: 1px solid var(--border);
+    transition: border-color 0.2s;
+  }
+  .segment:hover { border-color: var(--accent); }
+  .segment.selected { border-color: var(--accent); background: #1e2a3a; }
+  .segment .cite-btn {
+    position: absolute; top: 0.5rem; right: 0.5rem;
+    width: 26px; height: 26px; border-radius: 4px;
+    background: var(--border); border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.15s;
+    color: var(--text-dim); font-size: 0.75rem;
+  }
+  .segment:hover .cite-btn { opacity: 1; }
+  .segment .cite-btn:hover { background: var(--accent); color: #fff; }
+  .segment::before {
+    content: ''; position: absolute; left: -2.65rem; top: 1.1rem;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent); border: 2px solid var(--bg);
+  }
+  .segment.instrumental::before { background: var(--tag-interlude); }
+
+  .timecode {
+    font-size: 0.8rem; font-family: "SF Mono", "Fira Code", monospace;
+    color: var(--accent); margin-bottom: 0.3rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .duration {
+    font-size: 0.7rem; color: var(--text-dim); background: var(--border);
+    padding: 0.1rem 0.4rem; border-radius: 3px;
+  }
+  .tag {
+    display: inline-block; font-size: 0.7rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    padding: 0.15rem 0.5rem; border-radius: 3px; margin-left: 0.5rem;
+  }
+  .tag-prelude  { background: rgba(232,164,74,0.15); color: var(--tag-prelude); }
+  .tag-interlude { background: rgba(164,125,232,0.15); color: var(--tag-interlude); }
+  .tag-outro    { background: rgba(232,90,110,0.15); color: var(--tag-outro); }
+
+  .lyrics { font-size: 0.95rem; line-height: 1.8; }
+  .lyrics .line { padding: 0.1rem 0; }
+  .no-lyrics { font-size: 0.85rem; color: var(--text-dim); font-style: italic; }
+
+  .stats {
+    display: flex; gap: 1.5rem; margin-top: 2rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--text-dim);
+  }
+  .stats .stat-value { font-size: 1.1rem; font-weight: 600; color: var(--text); }
+
+  .drop-zone {
+    border: 2px dashed var(--border); border-radius: 12px;
+    padding: 4rem 2rem; text-align: center; color: var(--text-dim);
+    cursor: pointer; transition: border-color 0.2s;
+  }
+  .drop-zone:hover { border-color: var(--accent); }
+  .drop-zone p { margin: 0.5rem 0; }
+
+  /* ===== 底部反馈区（固定） ===== */
+  .feedback {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+    background: #161616; border-top: 1px solid var(--border);
+    padding: 0.8rem 1.5rem;
+    display: flex; align-items: flex-start; gap: 0.8rem;
+    max-width: 100%;
+  }
+  .feedback textarea {
+    flex: 1; height: 56px; resize: none;
+    background: var(--card); color: var(--text); border: 1px solid var(--border);
+    border-radius: 6px; padding: 0.5rem 0.8rem; font-size: 0.9rem;
+    font-family: inherit; line-height: 1.4;
+  }
+  .feedback textarea:focus { outline: none; border-color: var(--accent); }
+  .feedback textarea::placeholder { color: #555; }
+  .feedback .btn { align-self: stretch; white-space: nowrap; }
+  .btn {
+    padding: 0.5rem 1.2rem; border-radius: 6px; font-size: 0.85rem;
+    border: none; cursor: pointer; font-weight: 500; transition: all 0.15s;
+  }
+  .btn:hover { opacity: 0.85; }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-confirm { background: var(--green); color: #000; }
+
+  /* ===== 完成页 ===== */
+  .done-screen {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 60vh; text-align: center;
+  }
+  .done-icon { font-size: 3rem; margin-bottom: 1rem; }
+  .done-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .done-sub { font-size: 0.9rem; color: var(--text-dim); }
+</style>
+</head>
+<body>
+
+<div id="app"></div>
+
+<script>
+const PREVIEW_LANG = null;  /* __PREVIEW_LANG__ */
+const LANG = PREVIEW_LANG || (navigator.language.startsWith('zh') ? 'zh' : 'en');
+const I18N = {
+  zh: {
+    lyricTitle: '歌词拆解',
+    audio: '音频：',
+    totalDuration: '总时长：',
+    prelude: '前奏',
+    interlude: '间奏',
+    outro: '尾奏',
+    totalSegments: '总段数',
+    lyricSegments: '歌词段',
+    instrumentalSegments: '纯音乐段',
+    confirmNext: '已确认，Hub 将继续下一步',
+    feedbackSubmitted: '建议已提交，Hub 将自动处理',
+    serverDisconnected: '服务器已断开，建议已复制到剪贴板，请粘贴回 Hub',
+    pageClosing: '页面将自动关闭...',
+    canClose: '可以关闭此页面了',
+    unrecognizedType: '无法识别数据类型',
+    noValidData: '未找到有效数据',
+    feedbackPlaceholder: '点击上方段落添加时间码，输入修改建议...',
+    confirmBtn: '确认，进入下一步',
+    submitBtn: '提交建议',
+    dropMd: '拖拽 .md 文件到此处',
+    orClick: '或点击选择文件',
+    citeBtnTitle: '引用此段',
+  },
+  en: {
+    lyricTitle: 'Lyrics Breakdown',
+    audio: 'Audio: ',
+    totalDuration: 'Duration: ',
+    prelude: 'Prelude',
+    interlude: 'Interlude',
+    outro: 'Outro',
+    totalSegments: 'Total',
+    lyricSegments: 'Vocal',
+    instrumentalSegments: 'Instrumental',
+    confirmNext: 'Confirmed. Hub will proceed to next step.',
+    feedbackSubmitted: 'Feedback submitted. Hub will process it.',
+    serverDisconnected: 'Server disconnected. Feedback copied to clipboard — paste it back in Hub.',
+    pageClosing: 'Page will close automatically...',
+    canClose: 'You can close this page now.',
+    unrecognizedType: 'Unrecognized data type',
+    noValidData: 'No valid data found',
+    feedbackPlaceholder: 'Click segments above to add timecodes, type your feedback...',
+    confirmBtn: 'Confirm & proceed',
+    submitBtn: 'Submit feedback',
+    dropMd: 'Drop .md file here',
+    orClick: 'or click to select file',
+    citeBtnTitle: 'Cite this segment',
+  }
+};
+const t = (key) => (I18N[LANG] || I18N.en)[key] || key;
+document.documentElement.lang = LANG === 'zh' ? 'zh-CN' : 'en';
+
+const RENDERERS = {};
+const TAG_COLORS = { prelude:'tag-prelude', interlude:'tag-interlude', outro:'tag-outro' };
+function getTagLabel(tag) { return t(tag); }
+
+function parseTime(s) { const [m, sec] = s.split(':').map(Number); return m * 60 + sec; }
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+function parseLyricMd(text) {
+  const lines = text.split('\n');
+  const info = { title: '', audio: '' };
+  let inBlock = false, segments = [], currentTag = null;
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!inBlock) {
+      if (line.startsWith('歌曲：') || line.startsWith('歌曲:')) info.title = line.slice(3).trim();
+      else if (line.startsWith('Song：') || line.startsWith('Song:')) info.title = line.slice(5).trim();
+      else if (line.startsWith('音频：') || line.startsWith('音频:')) info.audio = line.slice(3).trim();
+      else if (line.startsWith('Audio：') || line.startsWith('Audio:')) info.audio = line.slice(6).trim();
+      else if (line === '```') inBlock = true;
+      continue;
+    }
+    if (line === '```') break;
+    if (!line) continue;
+    const tm = line.match(/^\[(prelude|interlude|outro)\]$/);
+    if (tm) { currentTag = tm[1]; continue; }
+    const tt = line.match(/^(\d{1,2}:\d{2})\s*-\s*(\d{1,2}:\d{2})$/);
+    if (tt) {
+      segments.push({ start:tt[1], end:tt[2], startSec:parseTime(tt[1]), endSec:parseTime(tt[2]), tag:currentTag, lines:[] });
+      currentTag = null; continue;
+    }
+    if (segments.length) segments[segments.length-1].lines.push(line);
+  }
+  return { info, segments };
+}
+
+RENDERERS.lyric = function(raw) {
+  const { info, segments } = parseLyricMd(raw);
+  if (!segments.length) return null;
+  const totalSec = segments[segments.length-1].endSec - segments[0].startSec;
+  let h = '';
+  h += '<div class="header">';
+  h += `<h1>${esc(info.title || t('lyricTitle'))}</h1>`;
+  h += '<div class="meta">';
+  if (info.audio) h += `<span>${t('audio')}${esc(info.audio)}</span>`;
+  h += `<span>${t('totalDuration')}${Math.floor(totalSec/60)}:${String(Math.floor(totalSec%60)).padStart(2,'0')}</span>`;
+  h += '</div></div>';
+  h += '<div class="timeline">';
+  for (const seg of segments) {
+    const dur = seg.endSec - seg.startSec, isInst = !!seg.tag;
+    const timeLabel = `${seg.start} - ${seg.end}`;
+    h += `<div class="segment${isInst?' instrumental':''}" data-time="${esc(timeLabel)}">`;
+    h += `<button class="cite-btn" title="${t('citeBtnTitle')}">@</button>`;
+    h += '<div class="timecode">';
+    h += `${esc(seg.start)} - ${esc(seg.end)}<span class="duration">${dur}s</span>`;
+    if (seg.tag) h += `<span class="tag ${TAG_COLORS[seg.tag]}">${getTagLabel(seg.tag)}</span>`;
+    h += '</div>';
+    if (seg.lines.length) {
+      h += '<div class="lyrics">';
+      for (const l of seg.lines) h += `<div class="line">${esc(l)}</div>`;
+      h += '</div>';
+    } else if (isInst) h += '<div class="no-lyrics">&#9835; &#9835; &#9835;</div>';
+    h += '</div>';
+  }
+  h += '</div>';
+  const lyricN = segments.filter(s => !s.tag).length, instN = segments.filter(s => s.tag).length;
+  h += '<div class="stats">';
+  h += `<div><div class="stat-value">${segments.length}</div>${t('totalSegments')}</div>`;
+  h += `<div><div class="stat-value">${lyricN}</div>${t('lyricSegments')}</div>`;
+  h += `<div><div class="stat-value">${instN}</div>${t('instrumentalSegments')}</div>`;
+  h += '</div>';
+  return h;
+};
+
+/* ===== 提交反馈 ===== */
+async function postFeedback(text) {
+  document.querySelectorAll('.btn').forEach(b => b.disabled = true);
+  try {
+    const res = await fetch('/feedback', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ feedback: text }),
+    });
+    if (!res.ok) throw new Error();
+    showDone(text === 'LGTM'
+      ? t('confirmNext')
+      : t('feedbackSubmitted'));
+  } catch {
+    // 服务器不可用时回退到复制
+    try { await navigator.clipboard.writeText(text); } catch {}
+    showDone(t('serverDisconnected'));
+  }
+}
+
+function showDone(msg) {
+  document.getElementById('app').innerHTML = `
+    <div class="done-screen">
+      <div class="done-icon">&#10003;</div>
+      <div class="done-title">${esc(msg)}</div>
+      <div class="done-sub">${esc(t('pageClosing'))}</div>
+    </div>`;
+  setTimeout(() => {
+    window.close();
+    // window.close() 可能被浏览器阻止，2 秒后更新提示
+    setTimeout(() => {
+      const sub = document.querySelector('.done-sub');
+      if (sub) sub.textContent = t('canClose');
+    }, 2000);
+  }, 800);
+}
+
+/* ===== 渲染入口 ===== */
+function renderAuto(raw) {
+  const type = PREVIEW_TYPE || detectType(raw);
+  const renderer = RENDERERS[type];
+  if (!renderer) { alert(t('unrecognizedType')); return; }
+  const html = renderer(raw);
+  if (!html) { alert(t('noValidData')); return; }
+
+  // 内容 + 底部反馈区
+  document.getElementById('app').innerHTML = html + `
+    <div class="feedback" id="feedbackBar">
+      <textarea id="feedbackText" placeholder="${t('feedbackPlaceholder')}"></textarea>
+      <button class="btn btn-confirm" id="actionBtn">${t('confirmBtn')}</button>
+    </div>`;
+
+  const actionBtn = document.getElementById('actionBtn');
+  const feedbackText = document.getElementById('feedbackText');
+
+  // 按钮文案随输入状态切换
+  feedbackText.addEventListener('input', () => {
+    const hasText = feedbackText.value.trim().length > 0;
+    actionBtn.textContent = hasText ? t('submitBtn') : t('confirmBtn');
+    actionBtn.className = 'btn ' + (hasText ? 'btn-primary' : 'btn-confirm');
+  });
+
+  actionBtn.addEventListener('click', () => {
+    const text = feedbackText.value.trim();
+    postFeedback(text || 'LGTM');
+  });
+
+  // 点击引用按钮 → 时间码插入反馈框
+  document.querySelectorAll('.segment[data-time] .cite-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const seg = btn.closest('.segment');
+      const ta = feedbackText;
+      const time = seg.dataset.time;
+      const prefix = `[${time}] `;
+      seg.classList.add('selected');
+      setTimeout(() => seg.classList.remove('selected'), 600);
+      // 插入到光标位置或末尾
+      const pos = ta.selectionStart ?? ta.value.length;
+      const before = ta.value.slice(0, pos);
+      const after = ta.value.slice(pos);
+      const needNewline = before.length > 0 && !before.endsWith('\n');
+      ta.value = before + (needNewline ? '\n' : '') + prefix + after;
+      const cursorPos = before.length + (needNewline ? 1 : 0) + prefix.length;
+      ta.focus();
+      ta.setSelectionRange(cursorPos, cursorPos);
+      ta.scrollTop = ta.scrollHeight;
+      ta.dispatchEvent(new Event('input'));
+    });
+  });
+}
+
+function detectType(raw) {
+  if (/^(歌曲|Song)[：:]/m.test(raw) && /^\d{1,2}:\d{2}\s*-/m.test(raw)) return 'lyric';
+  return 'unknown';
+}
+
+/* ===== 拖拽回退 ===== */
+function showDropZone() {
+  document.getElementById('app').innerHTML = `
+    <div class="drop-zone" id="dropZone">
+      <p style="font-size:2rem">&#128196;</p>
+      <p>${t('dropMd')}</p>
+      <p style="font-size:0.8rem;color:var(--text-dim)">${t('orClick')}</p>
+      <input type="file" id="fileInput" accept=".md" style="display:none">
+    </div>`;
+  const zone = document.getElementById('dropZone'), input = document.getElementById('fileInput');
+  zone.addEventListener('click', () => input.click());
+  zone.addEventListener('dragover', e => { e.preventDefault(); zone.style.borderColor='var(--accent)'; });
+  zone.addEventListener('dragleave', () => { zone.style.borderColor='var(--border)'; });
+  zone.addEventListener('drop', e => {
+    e.preventDefault(); zone.style.borderColor='var(--border)';
+    if (e.dataTransfer.files.length) { const r = new FileReader(); r.onload = ev => renderAuto(ev.target.result); r.readAsText(e.dataTransfer.files[0]); }
+  });
+  input.addEventListener('change', () => { if (input.files.length) { const r = new FileReader(); r.onload = ev => renderAuto(ev.target.result); r.readAsText(input.files[0]); } });
+}
+
+/* ===== 入口 ===== */
+const PREVIEW_TYPE = null;  /* __PREVIEW_TYPE__ */
+const PREVIEW_DATA = null;  /* __PREVIEW_DATA__ */
+if (PREVIEW_DATA) renderAuto(PREVIEW_DATA);
+else showDropZone();
+</script>
+</body>
+</html>

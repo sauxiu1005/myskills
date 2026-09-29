@@ -1,0 +1,44 @@
+display-name-zh: 数字产品宣传片生成
+version: 1.0.2
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Full Production
+complete-tags-cn:
+- 商业广告 / 成片制作
+summary-en: Turns verified product sources into reviewable cinematic promos with accurate
+  UI storytelling, purposeful motion, rhythmic editing, and sound design.
+summary-cn: 基于已验证的产品素材制作可审阅的电影感宣传片，准确呈现界面、运镜、节奏与声音。
+desc-en: Turn a real product page, frontend project, screenshots, or recording into
+  a reviewable product promo. Verify UI facts, plan shots, motion, text, rhythm, and
+  sound, then generate and check fidelity. Best for launches and demos, not generic
+  editing or invented claims.
+desc-cn: 将真实产品页面、前端项目、截图或录屏转成可审阅的产品宣传片，先核验界面事实，再规划镜头、运镜、文字、节奏和声音，确认后生成并检查还原度与导出质量。适合发布片和功能演示，不用于通用剪辑或虚构产品声明。
+cover: https://cdn.hailuoai.com/pre/2026-08-14-21/video/1786713897391782105-1786713897381.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-08-14-21/video/1786713897391782105-1786713897381.mp4
+showcase:
+- https://cdn.hailuoai.com/hub-skill-market/showcase/2026-09-08/digital-product-promo-generator-01-20260908-1788854461283.mp4
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 把真实产品页面、前端项目或界面参考转成准确呈现功能、运镜、节奏和声音的产品宣传片。
+    best-for:
+    - 产品演示
+    - 界面动效
+    - 发布短片
+    how-to-use: 提供网页、截图、录屏或前端项目及品牌资料，先确认功能重点、受众和交付规格。
+    outputs: 产品事实表、镜头与运镜方案、界面资产、声音设计及宣传片成片。
+  en-US:
+    summary: Turn a real product page, frontend project, or interface reference into
+      a product film that accurately presents features, camera movement, rhythm, and
+      sound.
+    best-for:
+    - Product Demos
+    - UI Motion
+    - Launch Films
+    how-to-use: Provide a webpage, screenshots, recording, or frontend project with
+      brand context, then confirm the feature focus, audience, and delivery spec.
+    outputs: A product fact sheet, shot and camera plan, interface assets, sound design,
+      and finished promo.

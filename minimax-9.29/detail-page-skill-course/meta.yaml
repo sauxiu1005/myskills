@@ -1,0 +1,17 @@
+display-name-zh: 技能课详情页
+version: 0.1.7
+tag-en: "E-Commerce / Image Generation"
+tag-cn: "电商 / 图像生成"
+complete-tags-en:
+  - "Education / Creative Generation"
+complete-tags-cn:
+  - "教育 / 创作生成"
+summary-en: "Design 6-funnel detail pages for skill-teaching courses"
+summary-cn: "设计 6 层漏斗的技能教学课程详情页"
+desc-en: "For designing e-commerce detail pages for skill-teaching online courses — test prep, coding, design, writing, fitness, language and similar. Takes the course name, target-learner pain scenarios, methodology, curriculum outline and instructor credentials. Produces a 6-layer persuasion funnel image set — hook, scene pain, solution, curriculum, instructor proof, service guarantee — with a 5-tier typography hierarchy, unified brand visuals and skill-visualization elements."
+desc-cn: "为技能教学类在线课程设计电商详情页（备考、编程、设计、写作、健身、语言等）。输入课程名称、目标学员痛点场景、方法论、课纲和讲师资质，产出 6 层说服漏斗图组（钩子、场景痛点、解决方案、课程大纲、讲师背书、服务保障），包含 5 级排版层级和统一品牌视觉。"
+cover: "https://cdn.hailuoai.com/hailuo-video-web/public_assets/245c38e0-b69d-476c-ab72-98ac25eaf568.jpeg"
+cover-en: "https://cdn.hailuoai.video/open-hailuo-video-web/public_assets/549c9911-c65a-4630-89d9-b04a45472cdc.png"
+author-en: "AshleyLi"
+author-cn: "AshleyLi"
+source: community

@@ -1,0 +1,33 @@
+display-name-zh: 微短剧剧集编剧
+version: 0.1.6
+tag-en: "Short Drama / Intent Brainstorming"
+tag-cn: "短剧漫剧 / 意图脑爆"
+summary-en: "Create full short-drama scripts from concept to episode export."
+summary-cn: "一键短剧全流程剧本"
+desc-en: "Full-process short-drama scriptwriting. Covers topic selection, target audience, character relations, pacing hooks, paywall beats, episode outlines, single-episode drafts, and complete export, generating a 50 to 100 episode short-drama package. Supports vertical-screen domestic dramas and overseas ReelShort or DramaBox, spanning god-of-war, baby-genius, comeback, sweet-love, and revenge genres. Produces text scripts only, does not generate video."
+desc-cn: "微短剧全流程剧本创作。从选题、目标受众、人物关系、爽点节奏、付费卡点、分集大纲到单集剧本与完整导出，系统生成 50-100 集短剧方案与剧本；支持竖屏与出海 ReelShort/DramaBox，涵盖战神/萌宝/逆袭/甜宠/复仇等类型。产出为纯文字剧本，不生成视频。"
+complete-tags-en:
+  - "Short Drama / Intent Brainstorming"
+complete-tags-cn:
+  - "短剧漫剧 / 意图脑爆"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+cover: "https://cdn.hailuoai.com/hailuo-video-web/public_assets/a79c12c9-d43e-4219-a8ce-a43ececcc340.mp4"
+structured-info:
+  zh-CN:
+    summary: 将短剧创意发展为可持续推进的剧集世界、人物弧线与分集剧本，保持长期叙事连贯。
+    best-for:
+      - 剧集开发
+      - 人物弧线
+      - 分集剧本
+    how-to-use: 提供题材、受众和核心人物，先确认剧集规模、主线冲突与单集节奏。
+    outputs: 剧集定位、世界观与人物弧线、分集大纲、场次脚本与连续性记录。
+  en-US:
+    summary: Develop a short-drama concept into a sustainable series world, character arcs, and episode scripts with long-form continuity.
+    best-for:
+      - Series Development
+      - Character Arcs
+      - Episode Scripts
+    how-to-use: Provide the genre, audience, and core characters, then confirm series scale, central conflict, and episode rhythm.
+    outputs: Series positioning, world and character arcs, episode outlines, scene scripts, and continuity records.

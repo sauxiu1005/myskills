@@ -1,0 +1,35 @@
+display-name-zh: 分镜板
+version: 1.0.13
+tag-en: "Visual Production / Image Generation"
+tag-cn: "视觉创作 / 图像生成"
+complete-tags-en:
+  - "Short Drama / Planning"
+  - "Animation / Planning"
+complete-tags-cn:
+  - "短剧漫剧 / 计划制定"
+  - "动画 / 计划制定"
+summary-en: "Turn script into N-grid storyboards"
+summary-cn: "把剧本拆为N宫格分镜故事板"
+desc-en: "For storyboard generation from script or story description with flexible grid layout options. Takes a script document such as docx or txt or a free-text story description as input. Produces a shot-by-shot breakdown table with detailed camera and action directions plus N-grid storyboard images in 2x2, 3x3, 4x4 and 5x5 layouts with customizable per-cell aspect ratios defaulting to 16:9 widescreen format."
+desc-cn: "适用于将剧本或故事描述拆解为分镜的场景,提供灵活的宫格布局选项。输入剧本文档(docx 或 txt 格式)或自由文字故事描述,输出逐镜头分镜拆解表(含详细的镜头与动作指示)与 N 宫格故事板图。支持 2x2、3x3、4x4、5x5 四种布局,每格画面比例可自定义,默认采用 16:9 宽银幕格式。"
+cover: ""
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 将剧本或故事拆成镜头表和分镜提示，生成便于审阅的N宫格故事板以预演叙事和构图。
+    best-for:
+      - 故事板
+      - 镜头表
+      - 分镜预演
+    how-to-use: 提供剧本、故事或文字梗概，先确认镜头密度、参考图和N宫格布局。
+    outputs: 镜头拆解、分镜提示词、N宫格故事板图与镜头说明。
+  en-US:
+    summary: Break a script or story into a shot list and storyboard prompts, then create an N-grid board for narrative and composition review.
+    best-for:
+      - Storyboards
+      - Shot Lists
+      - Previsualization
+    how-to-use: Provide the script, story, or synopsis, then confirm shot density, references, and the N-grid layout.
+    outputs: Shot breakdown, storyboard prompts, an N-grid storyboard image, and shot notes.

@@ -1,0 +1,15 @@
+display-name-zh: UGC 广告
+version: 0.3.1
+tag-en: "Advertising / Idea & Concept"
+tag-cn: "广告营销 / 创意构思"
+complete-tags-en:
+  - "E-Commerce / Creative Generation"
+complete-tags-cn:
+  - "电商 / 创作生成"
+summary-en: "Full pipeline for producing a realistic AI UGC ad: script, creator face, and 15-second vertical video."
+summary-cn: "AI UGC 广告全流程：脚本 + creator 面孔 + 15 秒竖版视频。"
+desc-en: "UGC Ad Production runs an end-to-end pipeline for a realistic AI-generated UGC ad. Step 1 writes a timestamped shooting script with voiceover, cuts, and creator mannerisms. Step 2 face-mixes multiple references into a 4K non-existent creator holding the product. Step 3 renders a 15-second vertical 9:16 Kling 3.0 multi-shot video from the creator image plus script prompt. Bakes in virality principles like hook mirroring, before/after loop, and urgency CTA."
+desc-cn: "UGC 广告生产跑一条端到端流水线做拟真 AI UGC 广告。Step 1 出一份带时间戳的分镜脚本，含旁白、切镜和 creator 小动作。Step 2 把多张参考面孔 face-mix 成一个手持商品的 4K 虚构 creator。Step 3 从 creator 图 + 脚本 prompt 渲染 15 秒 9:16 竖版 Kling 3.0 多镜头视频。全流程埋入 hook 镜像、before/after 循环、紧迫感 CTA 等爆款原则。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official

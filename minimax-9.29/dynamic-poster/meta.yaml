@@ -1,0 +1,33 @@
+display-name-zh: 动态海报
+version: 0.5.15
+tag-en: "Advertising / Video Generation"
+tag-cn: "广告营销 / 视频生成"
+complete-tags-en:
+  - "Commercial Ad / Creative Generation"
+complete-tags-cn:
+  - "商业广告 / 创作生成"
+summary-en: "Surreal dynamic posters from product art"
+summary-cn: "用产品素材生成超现实动态海报"
+desc-en: "For social-media motion posters and event teasers requiring surreal visual impact. Takes brand assets such as logo, product photos and color palette as input. Produces short surreal-style video posters featuring impossible juxtapositions shot with photographic realism for social media campaigns and promotional use. Supports vertical and square aspect ratios optimized for Douyin, Instagram Stories and WeChat Moments."
+desc-cn: '适用于社媒动态海报、活动预告、品牌运营素材的制作,支持竖版和方形两种画幅比例。输入 logo、产品图、品牌色系等品牌资产,输出超现实风格的短视频海报,以“不可能的并置”概念配合写实摄影质感呈现产品。适配抖音、Instagram Stories、微信朋友圈等主流社交平台规格,自动匹配最优画面构图与运动节奏。'
+cover: ""
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 将Logo、产品和品牌色转化为每帧可独立阅读、具有超现实并置感的动态海报短片。
+    best-for:
+      - 动态海报
+      - 超现实广告
+      - 社媒素材
+    how-to-use: 提供产品图、Logo和品牌色，先选择画幅、视觉概念与需要保留的品牌锚点。
+    outputs: 创意方向、静态海报画面、运动设计、动态海报视频与平台适配版本。
+  en-US:
+    summary: Turn logos, products, and brand colors into a surreal motion poster whose every frame reads as a standalone graphic.
+    best-for:
+      - Motion Posters
+      - Surreal Ads
+      - Social Assets
+    how-to-use: Provide product images, the logo, and brand colors, then choose the framing, concept, and protected brand anchors.
+    outputs: Creative directions, poster frames, motion design, a motion-poster video, and platform variants.

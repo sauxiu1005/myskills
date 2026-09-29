@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MV Creator</title>
+<style>
+  :root {
+    --bg: #0f0f0f; --card: #1a1a1a; --border: #2a2a2a;
+    --text: #e0e0e0; --text-dim: #888;
+    --accent: #f0c040; --green: #4ade80; --blue: #60a5fa; --red: #f87171;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg); color: var(--text);
+    line-height: 1.6; padding: 2rem 2rem 14rem;
+    max-width: 1400px; margin: 0 auto;
+  }
+
+  .header { margin-bottom: 2.5rem; text-align: center; }
+  .header h1 { font-size: 1.6rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .header .sub { font-size: 0.85rem; color: var(--text-dim); }
+
+  /* --- 角色卡片 --- */
+  .character-card {
+    margin-bottom: 3rem; padding: 1.5rem;
+    border: 2px solid var(--border); border-radius: 12px; background: var(--card);
+  }
+  .char-header {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 1.2rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border);
+  }
+  .char-header h2 { font-size: 1.3rem; font-weight: 600; color: var(--accent); }
+  .char-at-btn {
+    padding: 2px 10px; border-radius: 4px; font-size: 0.75rem;
+    cursor: pointer; border: 1px solid #444; background: #222; color: var(--text-dim);
+    transition: all 0.15s; flex-shrink: 0;
+  }
+  .char-at-btn:hover { background: #333; color: var(--accent); border-color: var(--accent); }
+  .char-selected-label {
+    margin-left: auto; font-size: 0.75rem; padding: 3px 10px; border-radius: 4px;
+    background: rgba(74,222,128,0.15); color: var(--green);
+  }
+
+  .char-info { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+  @media (max-width: 768px) { .char-info { grid-template-columns: 1fr; } }
+  .info-block h3 { font-size: 0.85rem; color: var(--blue); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  .info-block ul { list-style: none; padding: 0; }
+  .info-block li { font-size: 0.85rem; color: var(--text-dim); padding: 2px 0; }
+  .info-block li::before { content: "·"; color: #555; margin-right: 8px; }
+  .info-block p { font-size: 0.85rem; color: var(--text-dim); white-space: pre-line; }
+
+  .prompt-block { margin-bottom: 1.5rem; padding: 1rem; background: #111; border-radius: 8px; border: 1px solid #222; }
+  .prompt-block h3 { font-size: 0.85rem; color: var(--blue); margin-bottom: 0.5rem; }
+  .prompt-text { font-family: "JetBrains Mono", "Fira Code", monospace; font-size: 0.8rem; color: #ccc; line-height: 1.5; white-space: pre-wrap; word-break: break-word; }
+  .prompt-meta { margin-top: 0.5rem; font-size: 0.75rem; color: #666; }
+  .prompt-meta span { margin-right: 1.5rem; }
+
+  /* --- 候选图 --- */
+  .candidates-section h3 { font-size: 0.95rem; color: var(--text); margin-bottom: 0.8rem; }
+  .candidates-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+  .candidate-item {
+    position: relative; border: 3px solid var(--border); border-radius: 10px;
+    overflow: hidden; cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+  }
+  .candidate-item:hover { border-color: #555; transform: translateY(-2px); }
+  .candidate-item.selected {
+    border-color: var(--green);
+    box-shadow: 0 0 0 1px var(--green), 0 0 16px rgba(74,222,128,0.15);
+  }
+  .candidate-item img { width: 100%; height: auto; display: block; }
+  .candidate-label {
+    position: absolute; top: 8px; left: 8px;
+    background: rgba(0,0,0,0.75); backdrop-filter: blur(4px);
+    padding: 3px 10px; border-radius: 4px; font-size: 0.75rem; color: #ddd;
+  }
+  .candidate-desc { padding: 8px 12px; font-size: 0.8rem; color: var(--text-dim); background: rgba(0,0,0,0.4);
+    display: flex; align-items: center; justify-content: space-between; }
+  .candidate-desc .desc-text { flex: 1; }
+  .at-btn {
+    padding: 2px 8px; border-radius: 3px; font-size: 0.7rem;
+    cursor: pointer; border: 1px solid #555; background: transparent; color: #777;
+    transition: all 0.15s; flex-shrink: 0; margin-left: 8px;
+  }
+  .at-btn:hover { background: #333; color: var(--accent); border-color: var(--accent); }
+  .selected-badge {
+    position: absolute; top: 8px; right: 8px;
+    background: var(--green); color: #111; padding: 3px 10px; border-radius: 4px;
+    font-size: 0.7rem; font-weight: 600; display: none;
+  }
+  .candidate-item.selected .selected-badge { display: block; }
+
+  /* --- 底部提交区 --- */
+  .submit-area {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: rgba(15,15,15,0.95); backdrop-filter: blur(8px);
+    border-top: 1px solid var(--border); padding: 1rem 2rem;
+  }
+  .submit-row { max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+  .feedback-row { display: flex; align-items: flex-start; gap: 12px; }
+  .feedback-textarea {
+    flex: 1; min-height: 48px; max-height: 120px; padding: 8px 12px; resize: vertical;
+    background: #222; border: 1px solid #444; border-radius: 6px;
+    color: var(--text); font-size: 0.85rem; font-family: inherit;
+  }
+  .feedback-textarea::placeholder { color: #555; }
+  .feedback-textarea:focus { outline: none; border-color: var(--accent); }
+  .upload-at-btn {
+    padding: 6px 14px; background: #222; border: 1px solid #444; border-radius: 5px;
+    color: var(--text-dim); cursor: pointer; font-size: 0.8rem; white-space: nowrap;
+    flex-shrink: 0; align-self: center;
+  }
+  .upload-at-btn:hover { background: #333; }
+
+  .submit-top { display: flex; align-items: center; gap: 12px; }
+  .submit-info { font-size: 0.85rem; color: var(--text-dim); }
+  .submit-info .count { color: var(--green); font-weight: 600; }
+  .btn-group { display: flex; gap: 10px; }
+  .submit-btn {
+    padding: 8px 24px; background: var(--accent); color: #1a1a1a; border: none;
+    border-radius: 8px; font-size: 0.9rem; font-weight: 600; cursor: pointer;
+  }
+  .submit-btn:hover { background: #e0b030; }
+  .submit-btn:disabled { background: #555; color: #999; cursor: not-allowed; }
+  #status-msg { font-size: 0.85rem; color: var(--green); margin-left: 8px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>角色设计预览</h1>
+  <p class="sub">点击候选图直接选定 · 点击候选图的 @ 引用到反馈框提交修改意见</p>
+</div>
+
+<div id="characters-container"></div>
+
+<div class="submit-area">
+  <div class="submit-row">
+    <div class="feedback-row">
+      <textarea class="feedback-textarea" id="feedback-input"
+                placeholder="修改建议（选填）：点击候选图的 @ 引用，或上传参考图引用&#10;如「@traveller/candidate_02.jpg 表情再沧桑一些，参考 @uploaded/ref.jpg 的风格」&#10;留空 = 无修改意见，直接使用当前选定图"></textarea>
+      <input type="file" id="ref-file" accept="image/*" style="display:none"
+             onchange="handleRefUpload(this)">
+      <button class="upload-at-btn" onclick="document.getElementById('ref-file').click()" title="上传图片并插入引用">上传参考图 @</button>
+    </div>
+    <div class="submit-top">
+      <span class="submit-info">已选 <span class="count" id="selected-count">0</span> / <span id="total-count">0</span> 个角色</span>
+      <button class="submit-btn" id="submit-btn" onclick="submitAll()">提交</button>
+      <span id="status-msg"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+const PREVIEW_LANG = null;  /* __PREVIEW_LANG__ */
+const LANG = PREVIEW_LANG || (navigator.language.startsWith('zh') ? 'zh' : 'en');
+const I18N = {
+  zh: {
+    pageTitle: '角色设计预览',
+    pageSub: '点击候选图直接选定 · 点击候选图的 @ 引用到反馈框提交修改意见',
+    appearance: '外貌特征',
+    personality: '性格气质',
+    signatureItems: '标志物件',
+    imageSettings: '生图设定',
+    candidatesTitle: '候选图（点击选择）',
+    selectedBadge: '已选定',
+    selectedPrefix: '已选：',
+    model: '模型：',
+    reference: '参考图：',
+    feedbackPlaceholder: '修改建议（选填）：点击候选图的 @ 引用，或上传参考图引用\n如「@traveller/candidate_02.jpg 表情再沧桑一些，参考 @uploaded/ref.jpg 的风格」\n留空 = 无修改意见，直接使用当前选定图',
+    uploadRefBtn: '上传参考图 @',
+    uploadTitle: '上传图片并插入引用',
+    selectedCount: '已选',
+    ofCount: '/',
+    characters: '个角色',
+    submitBtn: '提交',
+    submitFailed: '提交失败，请重试',
+    confirmNext: '已提交，Hub 将继续下一步',
+    pageClosing: '页面将自动关闭...',
+    canClose: '可以关闭此页面了',
+    citeChar: '引用角色到反馈框',
+    citeCand: '引用到反馈框',
+    selectPrefix: '选图：',
+    feedbackPrefix: '修改建议：',
+  },
+  en: {
+    pageTitle: 'Character Design Preview',
+    pageSub: 'Click candidate to select · Click @ to cite in feedback box',
+    appearance: 'Appearance',
+    personality: 'Personality',
+    signatureItems: 'Signature Items',
+    imageSettings: 'Image Settings',
+    candidatesTitle: 'Candidates (click to select)',
+    selectedBadge: 'Selected',
+    selectedPrefix: 'Selected: ',
+    model: 'Model: ',
+    reference: 'Reference: ',
+    feedbackPlaceholder: 'Feedback (optional): Click @ on candidates to cite, or upload reference images\ne.g. "@traveller/candidate_02.jpg make expression more weathered, ref @uploaded/ref.jpg style"\nLeave empty = no changes, use current selections',
+    uploadRefBtn: 'Upload Ref @',
+    uploadTitle: 'Upload image and insert reference',
+    selectedCount: 'Selected',
+    ofCount: ' / ',
+    characters: ' characters',
+    submitBtn: 'Submit',
+    submitFailed: 'Submit failed, please retry',
+    confirmNext: 'Submitted. Hub will proceed to next step.',
+    pageClosing: 'Page will close automatically...',
+    canClose: 'You can close this page now.',
+    citeChar: 'Cite character in feedback',
+    citeCand: 'Cite in feedback',
+    selectPrefix: 'Select: ',
+    feedbackPrefix: 'Feedback: ',
+  }
+};
+const t = (key) => (I18N[LANG] || I18N.en)[key] || key;
+document.documentElement.lang = LANG === 'zh' ? 'zh-CN' : 'en';
+
+const PREVIEW_TYPE = null;  /* __PREVIEW_TYPE__ */
+const PREVIEW_DATA = null;  /* __PREVIEW_DATA__ */
+
+const selections = {};
+let totalCharacters = 0;
+
+function init() {
+  document.title = 'MV Creator - ' + t('pageTitle');
+  document.querySelector('.header h1').textContent = t('pageTitle');
+  document.querySelector('.header .sub').textContent = t('pageSub');
+  document.getElementById('feedback-input').placeholder = t('feedbackPlaceholder');
+  document.querySelector('.upload-at-btn').textContent = t('uploadRefBtn');
+  document.querySelector('.upload-at-btn').title = t('uploadTitle');
+  document.getElementById('submit-btn').textContent = t('submitBtn');
+
+  const data = typeof PREVIEW_DATA === 'string' ? JSON.parse(PREVIEW_DATA) : PREVIEW_DATA;
+  if (!data || !data.characters) return;
+
+  const container = document.getElementById('characters-container');
+  const characters = data.characters;
+  totalCharacters = characters.length;
+  document.getElementById('total-count').textContent = totalCharacters;
+
+  // i18n submit info
+  const infoSpan = document.querySelector('.submit-info');
+  infoSpan.innerHTML = '';
+  infoSpan.append(t('selectedCount') + ' ');
+  const countSpan = document.createElement('span');
+  countSpan.className = 'count';
+  countSpan.id = 'selected-count';
+  countSpan.textContent = '0';
+  infoSpan.appendChild(countSpan);
+  infoSpan.append(t('ofCount'));
+  const totalSpan = document.createElement('span');
+  totalSpan.id = 'total-count';
+  totalSpan.textContent = totalCharacters;
+  infoSpan.appendChild(totalSpan);
+  infoSpan.append(t('characters'));
+
+  characters.forEach((char, ci) => {
+    // 从 design.md 的选定图信息中恢复已有选定，否则默认第一张
+    let defaultIdx = 0;
+    if (char.selected && char.candidates) {
+      const match = char.selected.match(/候选图\s*(\d+)|candidate[_\s]*(\d+)/i);
+      if (match) {
+        const num = parseInt(match[1] || match[2]);
+        if (num >= 1 && num <= char.candidates.length) {
+          defaultIdx = num - 1;
+        }
+      }
+    }
+    if (char.candidates && char.candidates.length > 0) {
+      selections[String(ci)] = defaultIdx;
+    }
+
+    const card = document.createElement('div');
+    card.className = 'character-card';
+
+    let html = '';
+
+    // 头部：角色名 + @ 按钮 + 选定标签
+    html += `<div class="char-header">
+      <h2>${esc(char.title)}</h2>
+      <button class="char-at-btn" onclick="atChar(${ci})" title="${t('citeChar')}">@</button>
+      <span class="char-selected-label" id="char-sel-${ci}"></span>
+    </div>`;
+
+    // 信息区
+    html += `<div class="char-info">`;
+    if (char.appearance && char.appearance.length) {
+      html += `<div class="info-block"><h3>${t('appearance')}</h3><ul>`;
+      char.appearance.forEach(item => { html += `<li>${esc(item)}</li>`; });
+      html += `</ul></div>`;
+    }
+    if (char.personality) {
+      html += `<div class="info-block"><h3>${t('personality')}</h3><p>${esc(char.personality)}</p></div>`;
+    }
+    if (char.items && char.items.length) {
+      html += `<div class="info-block"><h3>${t('signatureItems')}</h3><ul>`;
+      char.items.forEach(item => { html += `<li>${esc(item)}</li>`; });
+      html += `</ul></div>`;
+    }
+    html += `</div>`;
+
+    // 生图设定
+    if (char.prompt_settings) {
+      const ps = char.prompt_settings;
+      html += `<div class="prompt-block"><h3>${t('imageSettings')}</h3>`;
+      html += `<div class="prompt-text">${esc(ps.prompt || '')}</div>`;
+      html += `<div class="prompt-meta">`;
+      if (ps.model) html += `<span>${t('model')}${esc(ps.model)}</span>`;
+      if (ps.reference) html += `<span>${t('reference')}${esc(ps.reference)}</span>`;
+      html += `</div></div>`;
+    }
+
+    // 候选图
+    html += `<div class="candidates-section"><h3>${t('candidatesTitle')}</h3><div class="candidates-grid">`;
+    if (char.candidates) {
+      const initIdx = selections[String(ci)] || 0;
+      char.candidates.forEach((cand, idx) => {
+        html += `
+          <div class="candidate-item${idx === initIdx ? ' selected' : ''}" id="cand-${ci}-${idx}"
+               onclick="selectCandidate(${ci}, ${idx})">
+            <span class="candidate-label">${esc(cand.label)}</span>
+            <span class="selected-badge">${t('selectedBadge')}</span>
+            <img src="${cand.url}" alt="${esc(cand.label)}" loading="lazy">
+            <div class="candidate-desc">
+              <span class="desc-text">${esc(cand.description || '')}</span>
+              <button class="at-btn" onclick="event.stopPropagation(); atCand(${ci}, ${idx})" title="${t('citeCand')}">@</button>
+            </div>
+          </div>`;
+      });
+    }
+    html += `</div></div>`;
+
+    card.innerHTML = html;
+    container.appendChild(card);
+  });
+
+  updateStatus();
+}
+
+function esc(s) {
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+function selectCandidate(ci, idx) {
+  selections[String(ci)] = idx;
+  document.querySelectorAll(`[id^="cand-${ci}-"]`).forEach(el => {
+    el.classList.toggle('selected', parseInt(el.id.split('-')[2]) === idx);
+  });
+  updateStatus();
+}
+
+function atChar(ci) {
+  const data = typeof PREVIEW_DATA === 'string' ? JSON.parse(PREVIEW_DATA) : PREVIEW_DATA;
+  const char = data.characters[ci];
+  const textarea = document.getElementById('feedback-input');
+  const val = textarea.value;
+  const insert = `@${char.dir_name} `;
+  const pos = textarea.selectionStart || val.length;
+  textarea.value = val.slice(0, pos) + insert + val.slice(pos);
+  textarea.focus();
+  textarea.selectionStart = textarea.selectionEnd = pos + insert.length;
+}
+
+function atCand(ci, idx) {
+  const data = typeof PREVIEW_DATA === 'string' ? JSON.parse(PREVIEW_DATA) : PREVIEW_DATA;
+  const char = data.characters[ci];
+  const cand = char.candidates[idx];
+  const textarea = document.getElementById('feedback-input');
+  const val = textarea.value;
+  const insert = `@${char.dir_name}/${cand.filename} `;
+  const pos = textarea.selectionStart || val.length;
+  textarea.value = val.slice(0, pos) + insert + val.slice(pos);
+  textarea.focus();
+  textarea.selectionStart = textarea.selectionEnd = pos + insert.length;
+}
+
+function updateStatus() {
+  document.getElementById('selected-count').textContent = Object.keys(selections).length;
+  const data = typeof PREVIEW_DATA === 'string' ? JSON.parse(PREVIEW_DATA) : PREVIEW_DATA;
+  data.characters.forEach((char, ci) => {
+    const el = document.getElementById(`char-sel-${ci}`);
+    const idx = selections[String(ci)];
+    el.textContent = idx !== undefined ? `${t('selectedPrefix')}${char.candidates[idx].label}` : '';
+  });
+}
+
+async function handleRefUpload(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = async () => {
+    const base64 = reader.result.split(',')[1];
+    try {
+      const resp = await fetch('/upload', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ data: base64, filename: file.name })
+      });
+      const result = await resp.json();
+      if (result.ok) {
+        // 插入 @路径 到反馈框
+        const textarea = document.getElementById('feedback-input');
+        const val = textarea.value;
+        const insert = `@${result.path} `;
+        const pos = textarea.selectionStart || val.length;
+        textarea.value = val.slice(0, pos) + insert + val.slice(pos);
+        textarea.focus();
+        textarea.selectionStart = textarea.selectionEnd = pos + insert.length;
+      }
+    } catch (err) { console.error('Upload failed:', err); }
+  };
+  reader.readAsDataURL(file);
+  input.value = '';
+}
+
+async function submitAll() {
+  const data = typeof PREVIEW_DATA === 'string' ? JSON.parse(PREVIEW_DATA) : PREVIEW_DATA;
+  const chars = data.characters;
+  const feedbackText = document.getElementById('feedback-input').value.trim();
+  let feedback = '';
+
+  // 选图结果（始终包含）
+  for (const [ci, idx] of Object.entries(selections)) {
+    const char = chars[parseInt(ci)];
+    const cand = char.candidates[idx];
+    feedback += `${t('selectPrefix')}${char.dir_name} → ${cand.filename}\n`;
+  }
+
+  // 修改建议（含 @ 引用和上传参考图引用）
+  if (feedbackText) {
+    feedback += `\n${t('feedbackPrefix')}${feedbackText}\n`;
+  }
+
+  // 无建议 = LGTM + 选图
+  if (!feedbackText) {
+    feedback = 'LGTM\n' + feedback;
+  }
+
+  await doSubmit(feedback.trim());
+}
+
+async function doSubmit(feedback) {
+  try {
+    const resp = await fetch('/feedback', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ feedback })
+    });
+    const result = await resp.json();
+    if (result.ok) {
+      showDone(t('confirmNext'));
+    }
+  } catch (err) {
+    document.getElementById('status-msg').textContent = t('submitFailed');
+  }
+}
+
+init();
+function showDone(msg) {
+  document.body.innerHTML = `
+    <div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0f0f0f;">
+      <div style="text-align:center;color:#e0e0e0;font-family:-apple-system,sans-serif;">
+        <div style="font-size:3rem;color:#4ade80;margin-bottom:1rem;">&#10003;</div>
+        <div style="font-size:1.2rem;font-weight:600;margin-bottom:0.5rem;">${msg}</div>
+        <div class="done-sub" style="font-size:0.85rem;color:#888;">${t('pageClosing')}</div>
+      </div>
+    </div>`;
+  setTimeout(() => {
+    window.close();
+    setTimeout(() => {
+      const sub = document.querySelector('.done-sub');
+      if (sub) sub.textContent = t('canClose');
+    }, 2000);
+  }, 800);
+}
+
+</script>
+</body>
+</html>

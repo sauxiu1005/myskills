@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MV Creator</title>
+<style>
+  :root {
+    --bg: #0f0f0f;
+    --card: #1a1a1a;
+    --border: #2a2a2a;
+    --text: #e0e0e0;
+    --text-dim: #888;
+    --accent: #f0c040;
+    --accent-dim: #a08020;
+    --green: #4ade80;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg); color: var(--text);
+    line-height: 1.6; padding: 2rem 2rem 6rem;
+    max-width: 1200px; margin: 0 auto;
+  }
+
+  .header { margin-bottom: 2.5rem; text-align: center; }
+  .header h1 { font-size: 1.6rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .header .sub { font-size: 0.85rem; color: var(--text-dim); }
+
+  /* --- 风格分区 --- */
+  .style-section {
+    margin-bottom: 2.5rem; padding: 1.5rem;
+    border: 2px solid var(--border); border-radius: 12px;
+    background: var(--card); cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .style-section:hover { border-color: #444; }
+  .style-section.selected {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent), 0 0 20px rgba(240,192,64,0.1);
+  }
+  .style-section.selected .style-radio { background: var(--accent); border-color: var(--accent); }
+  .style-section.selected .style-radio::after { content: ''; display: block; width: 8px; height: 8px; background: #1a1a1a; border-radius: 50%; }
+
+  .style-top { display: flex; align-items: center; gap: 14px; margin-bottom: 1rem; }
+  .style-radio {
+    width: 20px; height: 20px; border-radius: 50%;
+    border: 2px solid #555; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s;
+  }
+  .style-name { font-size: 1.2rem; font-weight: 600; color: var(--accent); }
+  .style-desc { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 0.8rem; }
+
+  .style-tags { margin-bottom: 1rem; }
+  .style-tags span {
+    display: inline-block; background: #222; border: 1px solid #333;
+    border-radius: 4px; padding: 2px 10px; margin: 3px 3px 3px 0;
+    font-size: 0.75rem; color: #aaa;
+  }
+
+  .image-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+  .image-grid img {
+    width: 100%; height: auto; border-radius: 6px; display: block;
+    transition: transform 0.2s;
+  }
+  .image-grid img:hover { transform: scale(1.03); }
+
+  .model-rec { margin-top: 0.8rem; font-size: 0.75rem; color: #666; }
+
+  /* --- 自定义区 --- */
+  .custom-section {
+    margin-bottom: 2.5rem; padding: 1.5rem;
+    border: 2px solid var(--border); border-radius: 12px;
+    background: var(--card);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .custom-section:hover { border-color: #444; }
+  .custom-section.has-content { border-color: var(--green); }
+  .custom-section.selected {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent), 0 0 20px rgba(240,192,64,0.1);
+  }
+  .custom-section .style-top { display: flex; align-items: center; gap: 14px; margin-bottom: 1rem; }
+  .custom-section .style-radio {
+    width: 20px; height: 20px; border-radius: 50%;
+    border: 2px solid #555; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s;
+  }
+  .custom-section.selected .style-radio { background: var(--accent); border-color: var(--accent); }
+  .custom-section.selected .style-radio::after { content: ''; display: block; width: 8px; height: 8px; background: #1a1a1a; border-radius: 50%; }
+  .custom-hint { font-size: 0.8rem; color: #666; margin-bottom: 1.2rem; }
+
+  .custom-row { display: flex; gap: 1.5rem; align-items: flex-start; }
+  .custom-text-col { flex: 1; min-width: 0; }
+  .custom-upload-col { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; }
+
+  .custom-text-col textarea {
+    width: 100%; min-height: 120px; padding: 12px; resize: vertical;
+    background: #111; border: 1px solid #333; border-radius: 8px;
+    color: var(--text); font-size: 0.9rem; line-height: 1.6;
+    font-family: inherit;
+  }
+  .custom-text-col textarea:focus { outline: none; border-color: var(--accent); }
+  .custom-text-col textarea::placeholder { color: #555; }
+
+  .upload-area {
+    width: 200px; min-height: 140px; padding: 1rem;
+    border: 2px dashed #333; border-radius: 8px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    cursor: pointer; transition: border-color 0.2s;
+  }
+  .upload-area:hover { border-color: #555; }
+  .upload-area.has-image { border-style: solid; border-color: var(--green); }
+  .upload-area .upload-icon { font-size: 1.6rem; color: #555; margin-bottom: 0.4rem; }
+  .upload-area .upload-label { font-size: 0.75rem; color: #666; text-align: center; }
+  .upload-btn {
+    margin-top: 8px; padding: 6px 16px; background: #222; border: 1px solid #444;
+    border-radius: 6px; color: var(--text); cursor: pointer; font-size: 0.8rem;
+  }
+  .upload-btn:hover { background: #333; }
+  #upload-preview {
+    margin-top: 0.6rem; display: none; text-align: center;
+  }
+  #upload-preview img {
+    max-width: 196px; max-height: 140px; border-radius: 6px;
+  }
+  #upload-preview .remove-btn {
+    margin-top: 6px; padding: 3px 12px; background: #331111;
+    border: 1px solid #663333; border-radius: 4px;
+    color: #ff6666; cursor: pointer; font-size: 0.75rem;
+  }
+
+  /* --- 提交区 --- */
+  .submit-area {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: rgba(15,15,15,0.95); backdrop-filter: blur(8px);
+    border-top: 1px solid var(--border); padding: 1rem 2rem;
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+  }
+  .submit-area .selected-label { font-size: 0.9rem; color: var(--text-dim); }
+  .submit-area .selected-name { color: var(--accent); font-weight: 600; }
+  .submit-btn {
+    padding: 10px 32px; background: var(--accent); color: #1a1a1a;
+    border: none; border-radius: 8px; font-size: 1rem; font-weight: 600;
+    cursor: pointer; transition: background 0.2s;
+  }
+  .submit-btn:hover { background: #e0b030; }
+  .submit-btn:disabled { background: #555; color: #999; cursor: not-allowed; }
+
+  #status-msg { font-size: 0.85rem; color: var(--green); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>美术风格选择</h1>
+  <p class="sub">选择一种内置风格，或自定义风格描述 / 上传参考图</p>
+</div>
+
+<div id="presets-container"></div>
+
+<div class="custom-section" id="custom-section" onclick="onCustomSectionClick(event)">
+  <div class="style-top">
+    <div class="style-radio"></div>
+    <span class="style-name">自定义风格</span>
+  </div>
+  <p class="custom-hint">输入风格描述文字、上传参考图，或两者兼用</p>
+  <div class="custom-row">
+    <div class="custom-text-col">
+      <textarea id="custom-text" placeholder="描述你想要的美术风格，例如：&#10;赛博朋克霓虹风，高饱和紫蓝色调，暗夜城市背景，&#10;强烈明暗对比，发光粒子和全息投影元素…" oninput="onCustomInput()"></textarea>
+    </div>
+    <div class="custom-upload-col">
+      <div class="upload-area" id="upload-area" onclick="document.getElementById('file-input').click()">
+        <div class="upload-icon">+</div>
+        <div class="upload-label"><span id="upload-label-text">上传参考图</span><br><span class="upload-formats" style="font-size:0.65rem;color:#555">PNG / JPG / WebP</span></div>
+      </div>
+      <input type="file" id="file-input" accept="image/*" style="display:none">
+      <div id="upload-preview">
+        <img id="upload-img" alt="uploaded">
+        <br>
+        <button class="remove-btn" onclick="removeUpload(event)">移除</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="submit-area">
+  <span class="selected-label"><span id="selected-label-text">已选：</span><span class="selected-name" id="selected-display">未选择</span></span>
+  <button class="submit-btn" id="submit-btn" disabled onclick="submitChoice()">提交选择</button>
+  <span id="status-msg"></span>
+</div>
+
+<script>
+const PREVIEW_TYPE = null;  /* __PREVIEW_TYPE__ */
+const PREVIEW_DATA = null;  /* __PREVIEW_DATA__ */
+
+const PREVIEW_LANG = null;  /* __PREVIEW_LANG__ */
+const LANG = PREVIEW_LANG || (navigator.language.startsWith('zh') ? 'zh' : 'en');
+const I18N = {
+  zh: {
+    pageTitle: '美术风格选择',
+    pageSub: '选择一种内置风格，或自定义风格描述 / 上传参考图',
+    customStyle: '自定义风格',
+    customHint: '输入风格描述文字、上传参考图，或两者兼用',
+    customPlaceholder: '描述你想要的美术风格，例如：\n赛博朋克霓虹风，高饱和紫蓝色调，暗夜城市背景，\n强烈明暗对比，发光粒子和全息投影元素…',
+    uploadRef: '上传参考图',
+    uploadLabel: '上传参考图',
+    uploadFormats: 'PNG / JPG / WebP',
+    removeBtn: '移除',
+    selectedLabel: '已选：',
+    notSelected: '未选择',
+    submitBtn: '提交选择',
+    recommendModel: '推荐生图模型：',
+    enterDesc: '请输入风格描述或上传参考图',
+    submitFailed: '提交失败，请重试',
+    confirmNext: '已提交，Hub 将继续下一步',
+    pageClosing: '页面将自动关闭...',
+    canClose: '可以关闭此页面了',
+    feedbackStyleCustom: '风格：自定义',
+    feedbackDesc: '描述：',
+    feedbackRef: '参考图：',
+    feedbackStyle: '风格：',
+  },
+  en: {
+    pageTitle: 'Art Style Selection',
+    pageSub: 'Choose a built-in style, or customize with description / reference image',
+    customStyle: 'Custom Style',
+    customHint: 'Enter a style description, upload a reference image, or both',
+    customPlaceholder: 'Describe the art style you want, e.g.:\nCyberpunk neon, high saturation purple-blue tones, dark city backdrop,\nstrong contrast, glowing particles and holographic elements…',
+    uploadRef: 'Upload Reference',
+    uploadLabel: 'Upload Reference',
+    uploadFormats: 'PNG / JPG / WebP',
+    removeBtn: 'Remove',
+    selectedLabel: 'Selected: ',
+    notSelected: 'None',
+    submitBtn: 'Submit Selection',
+    recommendModel: 'Recommended model: ',
+    enterDesc: 'Please enter a style description or upload a reference image',
+    submitFailed: 'Submit failed, please retry',
+    confirmNext: 'Submitted. Hub will proceed to next step.',
+    pageClosing: 'Page will close automatically...',
+    canClose: 'You can close this page now.',
+    feedbackStyleCustom: 'Style: Custom',
+    feedbackDesc: 'Description: ',
+    feedbackRef: 'Reference: ',
+    feedbackStyle: 'Style: ',
+  }
+};
+const t = (key) => (I18N[LANG] || I18N.en)[key] || key;
+document.documentElement.lang = LANG === 'zh' ? 'zh-CN' : 'en';
+
+let selectedStyle = null;
+let uploadedPath = null;
+let customText = '';
+
+function init() {
+  // i18n static text
+  document.querySelector('.header h1').textContent = t('pageTitle');
+  document.querySelector('.header .sub').textContent = t('pageSub');
+  document.querySelector('#custom-section .style-name').textContent = t('customStyle');
+  document.querySelector('.custom-hint').textContent = t('customHint');
+  document.getElementById('custom-text').placeholder = t('customPlaceholder');
+  document.querySelector('.upload-label').innerHTML = t('uploadLabel') + '<br><span style="font-size:0.65rem;color:#555">' + t('uploadFormats') + '</span>';
+  document.querySelector('.remove-btn').textContent = t('removeBtn');
+  document.getElementById('selected-display').textContent = t('notSelected');
+  document.getElementById('selected-label-text').textContent = t('selectedLabel');
+  document.getElementById('submit-btn').textContent = t('submitBtn');
+  document.title = 'MV Creator - ' + t('pageTitle');
+
+  const data = typeof PREVIEW_DATA === 'string' ? JSON.parse(PREVIEW_DATA) : PREVIEW_DATA;
+  if (!data || !data.presets) return;
+
+  const container = document.getElementById('presets-container');
+  const ids = Object.keys(data.presets);
+
+  ids.forEach((id, idx) => {
+    const p = data.presets[id];
+    const label = String.fromCharCode(65 + idx); // A, B, C...
+    const section = document.createElement('div');
+    section.className = 'style-section';
+    section.dataset.styleId = id;
+    section.onclick = () => selectStyle(id);
+
+    let imagesHtml = '';
+    p.images.forEach(img => {
+      imagesHtml += `<img src="${img.url}" alt="${img.filename}" loading="lazy">`;
+    });
+
+    let tagsHtml = '';
+    p.tags.forEach(tag => { tagsHtml += `<span>${tag}</span>`; });
+
+    section.innerHTML = `
+      <div class="style-top">
+        <div class="style-radio"></div>
+        <span class="style-name">${label}. ${p.name}</span>
+      </div>
+      <div class="style-desc">${p.description}</div>
+      <div class="style-tags">${tagsHtml}</div>
+      <div class="image-grid">${imagesHtml}</div>
+      <div class="model-rec">${t('recommendModel')}${p.recommend}</div>
+    `;
+    container.appendChild(section);
+  });
+
+  // 已有用户上传
+  if (data.user_refs && data.user_refs.length > 0) {
+    showUploadedImage(data.user_refs[0].url);
+  }
+}
+
+function selectStyle(id) {
+  selectedStyle = id;
+  document.querySelectorAll('.style-section').forEach(el => {
+    el.classList.toggle('selected', el.dataset.styleId === id);
+  });
+  document.getElementById('custom-section').classList.remove('selected');
+  const data = typeof PREVIEW_DATA === 'string' ? JSON.parse(PREVIEW_DATA) : PREVIEW_DATA;
+  const p = data.presets[id];
+  document.getElementById('selected-display').textContent = p ? p.name : id;
+  document.getElementById('submit-btn').disabled = false;
+}
+
+function selectCustomStyle() {
+  selectedStyle = '__custom__';
+  document.querySelectorAll('.style-section').forEach(el => {
+    el.classList.remove('selected');
+  });
+  document.getElementById('custom-section').classList.add('selected');
+  document.getElementById('selected-display').textContent = t('customStyle');
+  document.getElementById('submit-btn').disabled = false;
+}
+
+function hasCustomContent() {
+  return !!(uploadedPath || customText.trim());
+}
+
+function onCustomInput() {
+  customText = document.getElementById('custom-text').value;
+  if (selectedStyle !== '__custom__' && hasCustomContent()) {
+    selectCustomStyle();
+  }
+}
+
+function showUploadedImage(url) {
+  const preview = document.getElementById('upload-preview');
+  const img = document.getElementById('upload-img');
+  const area = document.getElementById('upload-area');
+  img.src = url;
+  preview.style.display = 'block';
+  area.classList.add('has-image');
+}
+
+function removeUpload(e) {
+  if (e) e.stopPropagation();
+  uploadedPath = null;
+  document.getElementById('upload-preview').style.display = 'none';
+  document.getElementById('upload-area').classList.remove('has-image');
+  document.getElementById('file-input').value = '';
+}
+
+document.getElementById('file-input').addEventListener('change', async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = async () => {
+    const base64 = reader.result.split(',')[1];
+    try {
+      const resp = await fetch('/upload', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ data: base64, filename: file.name })
+      });
+      const result = await resp.json();
+      if (result.ok) {
+        uploadedPath = result.path;
+        showUploadedImage(result.url);
+        selectCustomStyle();
+      }
+    } catch (err) {
+      console.error('Upload failed:', err);
+    }
+  };
+  reader.readAsDataURL(file);
+});
+
+function onCustomSectionClick(e) {
+  if (e.target.closest('button') || e.target.closest('input') || e.target.closest('textarea') || e.target.closest('.upload-area')) return;
+  selectCustomStyle();
+}
+
+async function submitChoice() {
+  if (!selectedStyle) return;
+
+  if (selectedStyle === '__custom__' && !hasCustomContent()) {
+    document.getElementById('status-msg').textContent = t('enterDesc');
+    return;
+  }
+
+  let feedback;
+  if (selectedStyle === '__custom__') {
+    const parts = [t('feedbackStyleCustom')];
+    if (customText.trim()) {
+      parts.push(`${t('feedbackDesc')}${customText.trim()}`);
+    }
+    if (uploadedPath) {
+      parts.push(`${t('feedbackRef')}${uploadedPath}`);
+    }
+    feedback = parts.join('\n');
+  } else {
+    const data = typeof PREVIEW_DATA === 'string' ? JSON.parse(PREVIEW_DATA) : PREVIEW_DATA;
+    const p = data.presets[selectedStyle];
+    feedback = `${t('feedbackStyle')}${selectedStyle} (${p ? p.name : ''})`;
+    if (uploadedPath) {
+      feedback += `\n${t('feedbackRef')}${uploadedPath}`;
+    }
+    if (customText.trim()) {
+      feedback += `\n${t('feedbackDesc')}${customText.trim()}`;
+    }
+  }
+
+  try {
+    const resp = await fetch('/feedback', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ feedback })
+    });
+    const result = await resp.json();
+    if (result.ok) {
+      showDone(t('confirmNext'));
+    }
+  } catch (err) {
+    document.getElementById('status-msg').textContent = t('submitFailed');
+  }
+}
+
+init();
+function showDone(msg) {
+  document.body.innerHTML = `
+    <div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0f0f0f;">
+      <div style="text-align:center;color:#e0e0e0;font-family:-apple-system,sans-serif;">
+        <div style="font-size:3rem;color:#4ade80;margin-bottom:1rem;">&#10003;</div>
+        <div style="font-size:1.2rem;font-weight:600;margin-bottom:0.5rem;">${msg}</div>
+        <div class="done-sub" style="font-size:0.85rem;color:#888;">${t('pageClosing')}</div>
+      </div>
+    </div>`;
+  setTimeout(() => {
+    window.close();
+    setTimeout(() => {
+      const sub = document.querySelector('.done-sub');
+      if (sub) sub.textContent = t('canClose');
+    }, 2000);
+  }, 800);
+}
+
+</script>
+</body>
+</html>
