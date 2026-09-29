@@ -1,0 +1,30 @@
+# NOTE: 内部参考结构，最终输出给用户时必须合并为单行纯文本字符串，严禁附带任何解释、标题或负面提示词独立区块。
+
+# Template: 动作 / 悬疑 / 战争
+
+[提示词结构]
+电影海报，动作惊悚风格，主体为 [Subject]，[Action/State]。背景中，[Environment/Event]。
+
+[色彩分级]
+rich teal-orange color grading（浓郁青橙色调），暖色高光搭配深邃冷色阴影，selective desaturation（选择性去饱和）。
+
+[光影结构]
+dramatic chiaroscuro（戏剧性明暗对比），单一主光源形成硬阴影与2档曝光差，neon lights reflecting on wet surfaces（霓虹灯在湿润表面上的反射），fire glow（火光）。
+
+[构图张力]
+dynamic composition（动态构图），low angle shot（低角度仰拍），foreground 清晰与 midground 大气透视，negative space（留白）中充满 rising smoke（升腾的烟雾）。
+
+[材质纹理]
+subtle film grain（细微胶片颗粒），anamorphic lens flare（变形宽银幕镜头光晕），边缘轻微 chromatic aberration（色差），floating embers with realistic glow falloff（漂浮的火星与真实的辉光衰减）。
+
+[氛围关键词]
+haunting beauty（令人难忘的美感），desperate solitude（绝望的孤独），impending cataclysm（大灾变前夕）。
+
+[质量修饰词]
+8k resolution, masterpiece, ultra-detailed, cinematic photography.
+
+[负面提示词]
+(low quality, worst quality:1.4), text, watermark, signature, blurry, static, peaceful, flat lighting, plastic texture.
+
+[参数]
+--ar 2:3 --v 6.0 --stylize 300

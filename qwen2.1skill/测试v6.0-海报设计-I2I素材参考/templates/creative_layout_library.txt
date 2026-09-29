@@ -1,0 +1,38 @@
+# NOTE: Creative Layout Library for Qwen-Image-2.1 i2i composition.
+# Creative posters must select 1 paradigm.
+
+# Paradigm 1 - Typography as Shape
+Template: A giant character "[字]" at the center, composed of dozens of small text fragments, forming a "text within text" effect.
+
+# Paradigm 2 - Dense Editorial
+Template: Multi-layer dense text, main title, subtitle, small text blocks, tags, handwritten notes, extreme size variation, text interwoven with color blocks, lines, and icons.
+
+# Paradigm 3 - Circular Arc
+Template: Text wrapping around the central subject in arcs, some clockwise, some counter-clockwise, forming symmetrical or staggered circular structures.
+
+# Paradigm 4 - Asymmetrical Grid
+Template: Frame divided into irregular rectangular zones, text and images misaligned filling different cells, some zones empty.
+
+# Paradigm 5 - Text Through Subject
+Template: The main title partially occluded by the subject, part of the text behind, part in front, forming front-back interleaving depth.
+
+# Paradigm 6 - Huge + Tiny
+Template: One giant character occupying 30%+ of the frame, surrounded by a ring of extremely small text, forming strong size contrast.
+
+# Paradigm 7 - Vertical + Horizontal Mix
+Template: Left side vertical Chinese title, right side horizontal English subtitle, perpendicular directions, staggered stacking.
+
+# Paradigm 8 - Circular Crosshair
+Template: A crosshair or concentric circle at the center, text distributed along four directions, partly outside, partly inside the reticle.
+
+# Paradigm 9 - Newspaper Headline
+Template: Upper half ultra-bold headline, lower half dense multi-column small text, mimicking newspaper column structure with dividers and icons.
+
+# Paradigm 10 - Ticket Voucher
+Template: The frame mimics a vintage movie ticket or concert ticket, perforated edges, dashed dividers, serial numbers, seat numbers, barcode.
+
+# Paradigm 11 - Journal Collage
+Template: Frame mimics a journal page, polaroid photos, handwritten notes, washi tape, sticky notes, stamps, text scattered naturally.
+
+# Paradigm 12 - Glitch Offset
+Template: Text with horizontal tearing offset, RGB channel separation, partial pixelation, digital signal failure aesthetic.
