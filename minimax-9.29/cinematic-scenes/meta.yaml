@@ -1,0 +1,15 @@
+display-name-zh: 电影场景生成
+version: 0.3.1
+tag-en: "Visual Production / Video Generation"
+tag-cn: "视觉创作 / 视频生成"
+complete-tags-en:
+  - "Short Drama / Post-production"
+complete-tags-cn:
+  - "短剧漫剧 / 后期处理"
+summary-en: "Generate premium cinematic angle and insert-shot coverage from a reference image with 35mm-film aesthetics and motivated lighting."
+summary-cn: "从一张参考图生成电影感机位与插入，胶片美学、动机光。"
+desc-en: "Cinematic Scenes turns a single reference frame into a full parallel batch of alternative angles and insert shots under a professional cinematographer + master gaffer system role. Enforces 35mm/70mm film aesthetics, ARRI Alexa optics, Kodak Vision3 color science, motivated lighting, and layered atmospheric depth. Offers standard coverage for continuity and extreme coverage with Dutch angles, chiaroscuro, and macro probe lenses. Includes a mandatory pre-generation survey and concurrent batch submission with workspace-aware limits."
+desc-cn: "电影场景 skill 把单张参考图扩展成一批并行生成的替代机位与插入镜头，运行在专业电影摄影师加首席灯光师系统角色下。强制 35mm/70mm 胶片美学、ARRI Alexa 光学、Kodak Vision3 色彩、动机光设计以及分层大气景深。提供标准连贯覆盖，也支持带荷兰角、明暗对比与微距探头镜头的极端覆盖。含强制生成前偏好确认与并发批量提交，并遵守 workspace 并发上限。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official

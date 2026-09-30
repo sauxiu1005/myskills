@@ -1,0 +1,40 @@
+# NOTE: 内部参考结构，最终输出给用户时必须合并为单行纯文本字符串。
+# 合成规则：参考图仅用于锚定角色/物品身份，背景和排版由文字指令生成。
+# v4.6 更新：必须选择排版范式 + 坐标锚定 + 文字-视觉绑定 + 层级反转 + 文字姿态。
+
+# Template: 影视剧定档海报多参考图合成指令
+
+[合成声明]
+Compose a [剧集类型] poster featuring the characters from <image1>, <image2>, ... in a newly generated scene.
+
+[参考图角色分配]
+Use <image1> as the character reference for [角色名1].
+Use <image2> as the character reference for [角色名2].
+[如有物品参考] Use <image3> as the reference for [物品名].
+
+[场景与画面合成指令]
+[场景生成] Generate a [背景描述]。
+[角色布局] Place the character from <image1> in the [位置]，[姿态描述]。
+Place the character from <image2> in the [位置]，[姿态描述]。
+
+[保持约束]
+Preserve the exact facial features, hair textures, and recognizable identities from <image1> and <image2>.
+
+[排版范式与自由度]
+排版范式：[从15种中选择一种，如"标题基座式"、"对角线切割式"、"日期巨字式"]
+层级反转：[选择至少一项，如"位置反转：出品信息放在顶部"、"大小反转：日期字号大于标题"]
+坐标锚定：
+- 主标题：基线对齐画面从顶部往下[XX%]处的水平线，[左/中/右]对齐
+- 档期日期：[XX%]处
+- 出演信息：[XX%]处
+文字-视觉绑定：[选择一种，如"地平线锚定"、"轮廓跟随"、"遮挡交叠"]
+文字动态姿态：[选择一种，如"垂直竖排"、"倾斜排列"、"弧形排列"]
+
+[文字内容与坐标]
+主标题（第X层级）：文案为 [用户提供或AI智能生成]，位置坐标 [XX%]，绑定方式 [XX]，姿态 [XX]，字体 [XX]。
+档期日期（第X层级）：文案为 [用户提供或AI智能生成]，位置坐标 [XX%]，字体 [XX]。
+主演信息（第X层级）：文案为 [用户提供或AI智能生成]，位置坐标 [XX%]，字体 [XX]。
+出品信息（第X层级）：文案为 [用户提供或AI智能生成]，位置坐标 [XX%]，字体 [XX]。
+
+[输出参数]
+--ar 9:16

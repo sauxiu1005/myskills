@@ -1,0 +1,30 @@
+# NOTE: 内部参考结构，最终输出给用户时必须合并为单行纯文本字符串，严禁附带任何解释、标题或负面提示词独立区块。
+
+# Template: 科幻 / 赛博朋克
+
+[提示词结构]
+电影海报，赛博朋克风格，主体为 [Subject]，身穿 [Clothing]。
+
+[色彩分级]
+rich teal-orange color grading（浓郁青橙色调），neon blue and magenta accents（霓虹蓝与洋红色点缀），selective desaturation with complementary palette（互补色选择性去饱和）。
+
+[光影结构]
+neon blue and magenta lighting（霓虹蓝与洋红光），dramatic chiaroscuro（戏剧性明暗对比），anamorphic lens flare（变形宽银幕镜头光晕），volumetric fog with light scattering（带有光散射的体积雾）。
+
+[构图张力]
+cyberpunk cityscape at night（夜间赛博城市景观），towering skyscrapers（高耸入云的摩天大楼），reflections on wet asphalt（湿润沥青路面上的反射），depth layering with foreground sharp and background atmospheric（景深分层：前景清晰，背景大气）。
+
+[材质纹理]
+subtle film grain（细微胶片颗粒），slight chromatic aberration（轻微色差），realistic glow falloff on neon elements（霓虹元素上真实的辉光衰减），anisotropic reflections（各向异性反射）。
+
+[氛围关键词]
+Blade Runner style（银翼杀手风格），haunting beauty（令人难忘的美感），futuristic otherworldliness（未来异世界感）。
+
+[质量修饰词]
+8k resolution, masterpiece, ultra-detailed, photorealistic, Octane Render.
+
+[负面提示词]
+(low quality, worst quality:1.4), text, watermark, signature, blurry, natural lighting, daylight, flat lighting.
+
+[参数]
+--ar 2:3 --v 6.0 --stylize 250

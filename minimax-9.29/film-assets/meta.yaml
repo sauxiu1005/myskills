@@ -1,0 +1,35 @@
+display-name-zh: 影视资产
+version: 0.4.12
+tag-en: "Visual Production / Image Generation"
+tag-cn: "视觉创作 / 图像生成"
+complete-tags-en:
+  - "Short Drama / Creative Generation"
+  - "Animation / Creative Generation"
+complete-tags-cn:
+  - "短剧漫剧 / 创作生成"
+  - "动画 / 创作生成"
+summary-en: "Bulk multi-view asset sheets generation"
+summary-cn: "批量生成多视角资产参考图"
+desc-en: "For batch generation of pre-production reference assets covering characters, props and environments. Takes a target asset description such as character, prop or scene as input. Produces character cards with three, four and eight-view turnarounds, expression sheets, pose sheets, prop multi-view sheets and scene concept art with lighting, season and weather variants. Automatically determines optimal aspect ratio and layout composition."
+desc-cn: "适用于影视前期批量生产参考资产,覆盖角色、道具与环境三大类别。输入目标资产(角色、道具或场景)描述,输出角色三视图、四视图、八视图转身图、表情包合集、姿势组图、道具多视图展示图、场景概念图(含光影变体、季节变体、天气变体)。自动判断最优画幅比例与排版构图方式。"
+cover: ""
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 批量制作角色、道具与环境的多视角影视资产，为后续分镜、动画和连续性提供统一参考。
+    best-for:
+      - 角色资产
+      - 道具多视角
+      - 场景概念
+    how-to-use: 提供资产描述或参考图，先选择角色、道具或环境模块及需要的视图类型。
+    outputs: 角色转身图、表情与姿势组、道具多视图、场景概念及变体参考图。
+  en-US:
+    summary: Batch-produce multi-view character, prop, and environment assets that provide consistent references for storyboards and production.
+    best-for:
+      - Character Assets
+      - Prop Turnarounds
+      - Scene Concepts
+    how-to-use: Provide asset descriptions or references, then select the character, prop, or environment module and required views.
+    outputs: Character turnarounds, expression and pose sets, prop views, scene concepts, and variation references.

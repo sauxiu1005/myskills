@@ -1,0 +1,32 @@
+display-name-zh: 视频转录
+version: 0.2.2
+tag-en: "Audio Content / Post-Production"
+tag-cn: "音频内容 / 后期制作"
+complete-tags-en:
+  - "Education / Post-production"
+complete-tags-cn:
+  - "教育 / 后期处理"
+summary-en: "Turn uploaded video or audio into timestamped Markdown transcripts, subtitle sources, summaries, and quote banks."
+summary-cn: "将音视频转为带时间戳逐字稿。"
+desc-en: "Video Transcript converts uploaded video or audio into readable transcripts. It first extracts and normalizes audio with ffmpeg, uses the built-in ASR subtitle generator as the primary path, and treats local Whisper as an optional fallback for offline or failed-ASR cases. It can produce timestamped Markdown, subtitle sources, key-point summaries, and reusable quote banks for videos, podcasts, interviews, and meetings."
+desc-cn: "视频转录把上传的视频或音频整理成可阅读的逐字稿。默认先用 ffmpeg 快速抽取并标准化音频，再调用内置 ASR 生成字幕源；只有在主 ASR 失败、结果无效或用户明确要求本地离线时，才把 Whisper 作为兜底方案。适合视频字幕、播客转录、访谈整理、会议记录、关键观点和金句提取。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 将上传的音视频整理为带时间戳的可读逐字稿，并可提取字幕、重点、金句和结构化笔记。
+    best-for:
+      - 音视频转录
+      - 时间戳字幕
+      - 访谈整理
+    how-to-use: 提供视频或音频文件，先确认语言、输出格式与是否需要重点和金句提取。
+    outputs: 清理后的逐字稿、字幕文件、时间戳重点、金句列表与结构化笔记。
+  en-US:
+    summary: Turn uploaded video or audio into a readable timestamped transcript with optional subtitles, key points, quotes, and structured notes.
+    best-for:
+      - Media Transcription
+      - Timestamped Captions
+      - Interview Notes
+    how-to-use: Provide the video or audio, then confirm language, output format, and whether to extract highlights and quotes.
+    outputs: A cleaned transcript, subtitle file, timestamped highlights, quote list, and structured notes.

@@ -1,0 +1,32 @@
+display-name-zh: 广告创意
+version: 0.3.3
+tag-en: "Advertising / Idea & Concept"
+tag-cn: "广告营销 / 创意构思"
+complete-tags-en:
+  - "Commercial Ad / Planning"
+complete-tags-cn:
+  - "商业广告 / 计划制定"
+summary-en: "Generate, scale, and iterate paid ad copy across Google, Meta, LinkedIn, TikTok, X — angle-organized variations validated against platform limits."
+summary-cn: "跨 Google/Meta/LinkedIn/TikTok/X 大规模生成、迭代广告文案，按角度组织并校验字符上限。"
+desc-en: "Ad Creative is a performance-marketer skill that generates and iterates ad copy at scale for Google Ads RSA, Meta, LinkedIn, TikTok, and Twitter/X. Supports two modes: from-scratch generation with 8 angle categories, and data-driven iteration that analyzes winners, retires losers, and doubles down on winning themes. Every variation is validated against per-platform character limits, delivered organized by angle with counts or bulk CSV for direct upload. Includes a batch generation waves workflow for 100+ variations per cycle."
+desc-cn: "广告创意 skill 是一套面向表现广告的 copy 生成工具，覆盖 Google Ads RSA、Meta、LinkedIn、TikTok、Twitter/X 五个主流平台。支持两种模式：基于 8 类角度的从零生成，和基于投放数据的迭代（识别赢家 pattern、下线输家、加码赢家）。每一条变体都按平台字符上限校验，按角度分组交付，附字符数或可直接上传的批量 CSV。内含分波次批量工作流，一轮产出 100+ 变体。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 围绕投放目标批量构建多平台广告文案并按渠道规范校验，便于持续测试与迭代。
+    best-for:
+      - 效果广告
+      - 多平台文案
+      - 批量测试
+    how-to-use: 提供产品、受众、平台与投放目标，先确定创意角度和生成或迭代路线。
+    outputs: 分角度广告文案、平台校验结果、批量交付表与迭代建议。
+  en-US:
+    summary: Build multi-platform ad copy around campaign goals, validate it against channel rules, and support continuous testing and iteration.
+    best-for:
+      - Performance Ads
+      - Multi-platform Copy
+      - Batch Testing
+    how-to-use: Provide the product, audience, channels, and campaign goal, then choose a creative-angle or iteration route.
+    outputs: Angle-organized ad copy, channel validation results, bulk delivery sheets, and iteration recommendations.

@@ -1,0 +1,29 @@
+{
+  "skill_name": "CinematicPosterPromptMaster",
+  "version": "2.0.0",
+  "output_type": "text_only",
+  "output_format": "single_line_structured_prompt",
+  "output_language": "zh-CN",
+  "keep_technical_terms_in_english": true,
+  "include_explanations": false,
+  "include_negative_prompt_block": false,
+  "merge_negative_prompt_into_main": true,
+  "poster_structural_requirements": {
+    "include_typography_section": true,
+    "include_layer_order_section": true,
+    "enforce_region_layout": true
+  },
+  "typography_presets": {
+    "main_title": "淡冰蓝色飘逸书法艺术大字，半透明，居中，压在天空和人物头顶之上，字号最大",
+    "credits": "竖排白色细宋体文字，排版工整",
+    "date_and_logos": "巨大白色加粗字体居中，底部横向排布视频平台LOGO",
+    "footer_credits": "极小白色小字居中，出品公司信息"
+  },
+  "layer_order_rules": "背景天空荒漠路面 → 主体道具 → 人物 → 所有文字LOGO图层叠加在最上层，文字不扭曲变形",
+  "default_negative_prompt": "low quality, blurry, extra limbs, bad anatomy, watermark, signature, deformed, ugly, dull colors, flat lighting, plastic texture, text distortion, gibberish text, messy typography",
+  "default_aspect_ratios": {
+    "tv_drama_poster": "9:16",
+    "movie_poster": "2:3",
+    "game_poster": "16:9"
+  }
+}

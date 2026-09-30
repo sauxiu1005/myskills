@@ -1,0 +1,32 @@
+display-name-zh: 播客营销
+version: 0.3.2
+tag-en: "Advertising / Idea & Concept"
+tag-cn: "广告营销 / 创意构思"
+complete-tags-en:
+  - "Commercial Ad / Intent Brainstorming"
+complete-tags-cn:
+  - "商业广告 / 意图脑爆"
+summary-en: "End-to-end podcast planning, production, and marketing playbook covering strategy, guest outreach, SEO show notes, growth, and monetization."
+summary-cn: "播客全流程：策略、嘉宾外联、SEO shownote、增长与变现。"
+desc-en: "Podcast Marketing is an end-to-end playbook for running a podcast as a marketing channel. Covers concept and format selection (interview vs solo), episode timing, audio quality baseline, guest sourcing and outreach templates, SEO-optimized show note structure, launch and growth strategies with per-episode promotion checklists, and monetization tiers from host-read ads and sponsorships to premium content and consulting. Outputs full strategy documents, outreach copy, and repurposing plans."
+desc-cn: "Podcast Marketing 是把播客当营销渠道运营的端到端 playbook。覆盖概念与形式选择（访谈 vs 独白）、单集时间线、音频质量基线、嘉宾寻找与外联模板、SEO 优化的 shownote 结构、启动与增长策略（含单集推广 checklist），以及从 host-read 广告、赞助到付费内容和咨询的变现层级。产出完整策略文档、外联文案和内容复用计划。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 将播客定位、听众与资源整理为覆盖内容、嘉宾、SEO、增长和变现的可执行营销策略。
+    best-for:
+      - 播客增长
+      - 嘉宾外联
+      - SEO营销
+    how-to-use: 提供节目定位、听众、更新频率和资源约束，先确认增长目标与营销范围。
+    outputs: 播客策略文档、选题与嘉宾计划、shownote方向、增长动作与变现建议。
+  en-US:
+    summary: Turn a podcast’s positioning, audience, and resources into an executable strategy covering content, guests, SEO, growth, and monetization.
+    best-for:
+      - Podcast Growth
+      - Guest Outreach
+      - SEO Marketing
+    how-to-use: Provide the show positioning, audience, cadence, and resource constraints, then confirm the growth goal and marketing scope.
+    outputs: A podcast strategy, topic and guest plans, show-note direction, growth actions, and monetization ideas.

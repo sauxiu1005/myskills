@@ -1,0 +1,43 @@
+display-name-zh: 口播视频B-roll规划器
+version: 1.0.3
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+complete-tags-en:
+- Professional Film / Full Production
+complete-tags-cn:
+- 专业影视 / 成片制作
+summary-en: Turns transcript-led narration into reviewable B-roll plans and approval-gated
+  video shots for knowledge and talking-head edits.
+summary-cn: 把口播逐字稿转成可审片的 B-roll 方案，并在确认后生成镜头。
+desc-en: Turn a transcript, voiceover, data narration, or talking-head script into
+  a semantic B-roll plan. Route each section to A-roll, reused evidence, text packaging,
+  or visual B-roll, flag missing assets, and generate only approved shots. Best for
+  knowledge and transcript-led edits.
+desc-cn: 把逐字稿、配音稿、数据讲稿或口播脚本按语义拆成可审片的 B-roll 方案。流程判断保留 A-roll、复用素材、文字包装或纯视觉副镜头，标出缺失素材，确认后只生成批准镜头。适合知识视频和逐字稿剪辑，不用于纯字幕导出或简单剪切。
+cover: https://cdn.hailuoai.com/pre/2026-08-14-21/video/1786713893768400104-1786713893760.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-08-14-21/video/1786713893768400104-1786713893760.mp4
+showcase:
+- https://cdn.hailuoai.com/hub-skill-market/showcase/2026-09-08/transcript-broll-planner-01-20260908-1788854461283.mp4
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 将口播逐字稿按语义拆成可审阅的B-roll镜头方案，并在确认后生成对应的视频素材。
+    best-for:
+    - B-roll规划
+    - 口播视频
+    - 语义剪辑
+    how-to-use: 提供逐字稿、旁白或数据叙述，先按语义分段并确认镜头路线与缺失素材。
+    outputs: 语义分段表、B-roll镜头计划、素材清单、已批准提示词与视频素材。
+  en-US:
+    summary: Turn a transcript or narration into a reviewable semantic B-roll plan
+      and generate the approved supporting video assets.
+    best-for:
+    - B-roll Planning
+    - Talking-head Video
+    - Semantic Editing
+    how-to-use: Provide the transcript, voiceover, or data-rich narration, then segment
+      it by meaning and confirm the shot route and missing assets.
+    outputs: A semantic segmentation table, B-roll plan, asset list, approved prompts,
+      and video assets.

@@ -1,0 +1,13 @@
+【主提示词 / Main Prompt】
+A cinematic movie poster, a handsome young man in modern black loose tactical clothing holding an assault rifle, standing confidently. Beside him is a majestic mythical warrior wearing intricate silver and gold dragon armor, with dragon horns, holding a golden spear. In the background, a colossal Eastern dragon made of flowing ink and mist swirls through the sky. Chinese ink wash painting style blended with hyper-realistic 3D rendering. Mountains and splashing water below. Black, white, and gold color palette. Dramatic cinematic lighting, volumetric fog, epic composition, low angle shot, sharp focus, 8k resolution, masterpiece, ultra-detailed, Unreal Engine 5, Octane Render. --ar 16:9 --v 6.0 --style raw
+
+【负面提示词 / Negative Prompt】
+(low quality, worst quality:1.4), text, watermark, signature, blurry, deformed, bad anatomy, dull colors, cartoon, anime.
+
+【中文解析 / Analysis】
+- 主体：现代战术男 + 银金龙甲战神（形成现代与古典的强烈碰撞）
+- 背景：水墨巨龙与云雾（增加史诗感与宏大叙事）
+- 风格：水墨国风 + 超写实3D（参考图的核心视觉）
+- 光影：电影级光影、体积雾（增强氛围感）
+- 镜头：低角度、广角（凸显人物的高大与巨龙的压迫感）
+- 参数：16:9（适合游戏或电影横版海报），V6模型，Raw风格（减少AI过度修饰，保留真实感）

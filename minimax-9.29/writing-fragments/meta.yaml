@@ -1,0 +1,32 @@
+display-name-zh: 写作碎片
+version: 0.3.2
+tag-en: "Platform Tooling"
+tag-cn: "平台工具"
+complete-tags-en:
+  - "Creative & Experimental / Intent Brainstorming"
+complete-tags-cn:
+  - "创意实验 / 意图脑爆"
+summary-en: "Grill the user for heterogeneous writing fragments and append them to a single markdown file as raw material for a future article."
+summary-cn: "拷问式访谈挖出写作碎片,追加到 markdown 文件作为成文原料。"
+desc-en: "Writing Fragments runs a relentless interview session that mines the user for fragments — sharp sentences, claims, vignettes, half-thoughts, quotes, observations. Each nugget is appended to a single markdown file separated by horizontal rules, with a working title H1 at the top and no imposed structure, tags, or outline. Re-reads the file before every write to preserve user edits. The novelist's diary as a model for writing raw material."
+desc-cn: "写作碎片跑一场拷问式访谈,持续追问用户的写作话题,把冒出来的犀利句子、观点、场景、半成形想法、引言、观察全部挖成 fragments,追加到同一个 markdown 文件,碎片之间用水平线分隔,顶部只放一个工作标题 H1,不加大纲、tag、结构。每次写入前都重新读文件以保留用户手动编辑。对标小说家日记的原料积累方式,让想法在被结构约束之前先自由展开。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 通过追问把未成形的观察、句子和观点挖成写作碎片，持续追加到同一份无结构素材文档。
+    best-for:
+      - 写作访谈
+      - 灵感采集
+      - 碎片积累
+    how-to-use: 提供写作主题或模糊念头，先确定保存标题并从第一条可用碎片开始追问。
+    outputs: 持续追加的碎片文档、犀利句子、观察记录与未整理的写作素材。
+  en-US:
+    summary: Use probing questions to turn unfinished observations, lines, and ideas into fragments saved in one unstructured writing document.
+    best-for:
+      - Writing Interviews
+      - Idea Capture
+      - Fragment Collection
+    how-to-use: Provide a writing topic or vague thought, then set the working title and begin from the first usable fragment.
+    outputs: A continuously appended fragment document, sharp lines, observations, and unstructured writing material.

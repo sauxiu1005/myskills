@@ -1,0 +1,17 @@
+display-name-zh: 产品摄影Brief
+version: 0.3.1
+tag-en: "Visual Production / Video Generation"
+tag-cn: "视觉创作 / 视频生成"
+complete-tags-en:
+  - "Commercial Ad / Creative Generation"
+  - "E-Commerce / Creative Generation"
+complete-tags-cn:
+  - "商业广告 / 创作生成"
+  - "电商 / 创作生成"
+summary-en: "Generate production-ready product photography briefs with model routing, aspect ratios, and copy-pasteable prompts."
+summary-cn: "生成投产级产品摄影 brief，含模型路由、画幅与可粘贴 prompt。"
+desc-en: "Product Photography Brief plans 4-6 cohesive e-commerce shots from a product name, description, or URL. Routes each shot to the optimal image model (nano_banana_pro for hero/macro, imagegen_2_0 for legible packaging text, soul_v2 for lifestyle, cinematic_studio_2_5 for editorial), maps platform-specific aspect ratios, injects lens/lighting specs, and adds universal + shot-specific negative prompt banks so briefs are ready to hand to production."
+desc-cn: "产品摄影 Brief 根据产品名、描述或链接，规划 4-6 张成套的电商拍摄计划。为每张镜头路由到最合适的图像模型（nano_banana_pro 拍主图/微距、imagegen_2_0 处理清晰包装文字、soul_v2 做生活方式、cinematic_studio_2_5 走编辑广告），按平台匹配画幅，注入镜头/打光参数，附通用与镜头专属的负向 prompt 银行，让 brief 可以直接交付投产。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official

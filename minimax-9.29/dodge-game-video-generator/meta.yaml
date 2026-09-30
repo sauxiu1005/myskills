@@ -1,0 +1,16 @@
+display-name-zh: 躲避游戏视频生成器
+version: 1.0.0
+tag-en: Creative Generation
+tag-cn: 创作生成
+complete-tags-en:
+  - Creative & Experimental / Creative Generation
+complete-tags-cn:
+  - 创意实验 / 创作生成
+summary-en: Turn a photo into a hand-drawn dodge reaction game video
+summary-cn: 从单张角色照片提取主体特征，生成四向躲闪关键帧与十秒手绘反应游戏视频。
+desc-en: Generate a playful reaction-game package from one uploaded photo. The Skill extracts a chibi subject brief, creates four consistent 4:3 crayon-style keyframes for up, down, left, and right dodges, then produces a fixed-camera 10-second H3 video with synchronized hand-drawn arrows, palm-and-arm attacks, paper texture, and clear game feedback for short-form social content.
+desc-cn: 面向希望把人物、动物、角色或物体照片制作成可爱反应小游戏视频的创作者。用户上传单张主体照片后，Skill 会提取身份特征与造型要点，统一规划蜡笔和彩铅手绘风格，批量生成上、下、左、右四张四比三关键帧，再制作十秒固定镜头视频，确保箭头高亮、带手臂手掌的攻击方向与角色躲闪动作严格同步。最终交付纸张颗粒感的短游戏视频，适合社交平台趣味内容，不用于复杂关卡、多人角色或真实交互式游戏开发。
+cover: "https://cdn.hailuoai.com/pre/2026-08-13-19/video/1786620869075492487-1786620869067.mp4"
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured

@@ -1,0 +1,15 @@
+display-name-zh: 电影运动语言
+version: 0.3.1
+tag-en: "Visual Production / Video Generation"
+tag-cn: "视觉创作 / 视频生成"
+complete-tags-en:
+  - "Short Drama / Creative Generation"
+complete-tags-cn:
+  - "短剧漫剧 / 创作生成"
+summary-en: "Five-pillar prompt vocabulary for high-precision cinematic video: camera contracts, motion physics anchors, spatial zoning, lens sequences, negative space."
+summary-cn: "电影视频 prompt 的五支柱词汇：相机、物理、空间、序列、负空间。"
+desc-en: "Cinematic Motion Language provides a structured five-pillar prompt vocabulary that replaces vague adjectives with hard rules the model actually understands. Camera Contract locks the camera as a rule, Motion Physics Anchor uses physical analogies plus time-anchored measurements, Spatial Zoning names frame regions with explicit rules, Lens Behavior Sequence describes focus as trigger-shift-state-return-repeat cause and effect, and Negative Space treats emptiness as intentional composition. Includes a full prompt template, key vocabulary reference across five categories, and a worked dervish-shot example."
+desc-cn: "电影运动语言提供一套结构化的五支柱 prompt 词汇,把模糊形容词换成模型真正理解的硬规则。相机契约把相机行为定死,运动物理锚点用物理类比 + 时间锚定测量,空间分区给画面区域命名并附明确规则,镜头行为序列把对焦写成 trigger-shift-state-return-repeat 的因果事件,负空间把留白当作刻意构图重量。含完整 prompt 模板、五类关键词汇参考、以及旋转托钵僧镜头的完整示例。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official

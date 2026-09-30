@@ -1,0 +1,18 @@
+display-name-zh: 图片涂抹编辑
+version: 1.0.13
+tag-en: "Visual Production / Image Generation"
+tag-cn: "视觉创作 / 图像生成"
+complete-tags-en:
+  - "Commercial Ad / Creative Generation"
+  - "E-Commerce / Creative Generation"
+complete-tags-cn:
+  - "商业广告 / 创作生成"
+  - "电商 / 创作生成"
+summary-en: "Paint regions on image to mark edits"
+summary-cn: "涂抹标记图片区域进行重绘"
+desc-en: "For region-targeted local image editing via paint masking with precise area control. Takes a source image, a painted mask region marking what to change, an edit description and an optional product reference image as input. Produces a locally edited new image with seamless blending. Suited to object replacement, detail change, product placement and targeted visual modifications while preserving the rest of the image."
+desc-cn: "适用于在图片上涂抹标记要改的区域,做局部重绘的场景,提供精确的区域控制能力。输入原图、涂抹标出的编辑区域、修改描述、可选产品参考图,输出无缝融合的局部编辑后新图。适合替换物体、改变细节、把产品植入到指定位置、定向视觉修改等场景,同时完整保留图片中未编辑区域的原始内容。"
+cover: ""
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official

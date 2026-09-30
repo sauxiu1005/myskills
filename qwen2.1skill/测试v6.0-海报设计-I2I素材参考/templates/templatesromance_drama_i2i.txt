@@ -1,0 +1,38 @@
+# NOTE: 内部参考结构，最终输出给用户时必须合并为单行纯文本字符串。
+# 合成规则：参考图仅用于锚定角色/物品身份，背景和排版由文字指令生成。
+# v4.6 更新：必须选择排版范式 + 坐标锚定 + 文字-视觉绑定 + 层级反转 + 文字姿态。
+
+# Template: 爱情 / 文艺 / 剧情 i2i 合成指令
+
+[合成声明]
+Compose a romance drama poster featuring the characters from <image1> and <image2> in a newly generated golden-hour scene.
+
+[参考图角色分配]
+Use <image1> as the character reference for the male lead.
+Use <image2> as the character reference for the female lead.
+
+[场景与画面合成指令]
+[场景生成] Generate a golden-hour train station platform with an old green train, floating dust particles, a distant glowing lamp, and a gentle breeze moving the fabric.
+[角色布局] Place the character from <image1> and the character from <image2> facing each other with foreheads nearly touching. Have the character from <image1> gently brush the hair of the character from <image2> with one hand. Have the character from <image2> lightly grip the corner of <image1>'s clothing with both hands, with eyes deeply meeting and lips slightly parted.
+
+[保持约束]
+Preserve the exact facial features, hair textures, and recognizable identities from <image1> and <image2>.
+
+[排版范式与自由度]
+排版范式：[从15种中选择一种。爱情题材推荐"标题基座式"、"左侧竖排式"、"标题隐形式"]
+层级反转：[选择至少一项。爱情题材推荐"透明度反转：标题半透明融入背景"或"位置反转：出品信息放在画面顶部"]
+坐标锚定：
+- 主标题：基线对齐画面从顶部往下[XX%]处的水平线，[左/中/右]对齐
+- 档期日期：[XX%]处
+- 出演信息：[XX%]处
+文字-视觉绑定：[选择一种。爱情题材推荐"留白嵌入：标题嵌入天空云层留白处"或"地平线锚定：标题与站台地平线平行"]
+文字动态姿态：[选择一种。爱情题材推荐"弧形排列"或"垂直竖排"]
+
+[文字内容与坐标]
+主标题：[用户提供或AI智能生成]，位置坐标 [XX%]，绑定方式 [XX]，姿态 [XX]，字体 [如"优雅细衬线字体"]。
+档期日期：[用户提供或AI智能生成]，位置坐标 [XX%]，字体 [XX]。
+出演信息：[用户提供或AI智能生成]，位置坐标 [XX%]，字体 [XX]。
+出品信息：[用户提供或AI智能生成]，位置坐标 [XX%]，字体 [XX]。
+
+[输出参数]
+--ar 2:3

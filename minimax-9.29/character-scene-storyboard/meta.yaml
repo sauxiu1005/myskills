@@ -1,0 +1,35 @@
+display-name-zh: 角色场景分镜板
+version: 1.4.14
+tag-en: "Visual Production / Image Generation"
+tag-cn: "视觉创作 / 图像生成"
+complete-tags-en:
+  - "Short Drama / Planning"
+  - "Animation / Planning"
+complete-tags-cn:
+  - "短剧漫剧 / 计划制定"
+  - "动画 / 计划制定"
+summary-en: "Comprehensive design sheet from refs and script"
+summary-cn: "由参考图与剧本生成综合设定图"
+desc-en: "For pre-production comprehensive design sheets combining character, scene and storyboard in one design-sheet image. Takes 1-4 character reference images plus a script or scene description as input. Produces a single design-document image with character sheets including turnaround and expression views, main scene concept art and a default 12-panel storyboard grid. Supports six visual styles for flexible art direction."
+desc-cn: "适用于影视前期制作中将角色、场景、分镜整合到一张图上的综合设定文档。输入 1 至 4 张角色参考图与剧本或场景描述,输出单张专业设计文档图,包含角色三视图加立绘加表情集、主场景概念图、默认 12 格分镜故事板。提供 6 种视觉风格供灵活选择,满足不同美术方向的前期制作需求。"
+cover: "https://cdn.hailuoai.com/hailuo-video-web/public_assets/2324a97f-1b40-4f41-b0ee-30d7d459da57.mp4"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 将角色参考与剧本整合为一张可审阅的角色、场景和分镜综合设计图，服务影视前期决策。
+    best-for:
+      - 角色设定
+      - 场景概念
+      - 综合分镜
+    how-to-use: 提供角色参考图与剧本或场景描述，先确认视觉风格和综合设计图的工作重点。
+    outputs: 角色多视角与表情、场景概念、分镜格及综合设计文档图。
+  en-US:
+    summary: Combine character references and a script into one reviewable design sheet for character, scene, and storyboard pre-production decisions.
+    best-for:
+      - Character Design
+      - Scene Concepts
+      - Storyboard Sheets
+    how-to-use: Provide character references and a script or scene description, then confirm the visual style and sheet priorities.
+    outputs: Character views and expressions, a scene concept, storyboard panels, and a consolidated design sheet.

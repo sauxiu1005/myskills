@@ -1,0 +1,37 @@
+display-name-zh: 视频拆解分析师
+version: 0.2.6
+tag-en: "Short Drama / Intent Brainstorming"
+tag-cn: "短剧漫剧 / 意图脑爆"
+summary-en: "Deconstruct AI videos with dense keyframes and Seedance prompts."
+summary-cn: "高密度拆解AI视频"
+desc-en: "Deep AI-video deconstruction with replica prompts. Reads video metadata and builds a canvas evidence chain from dense keyframes, outputs a structured Markdown deconstruction report, and reverse-engineers Seedance 2.0 Chinese timestamp storyboard prompts under the rule of preferably fifteen seconds or less per clip and as few prompts as possible. Aimed at reference analysis, not general editing or subtitle work."
+desc-cn: "AI 视频深度拆解与复刻提示词。读取视频元信息 + 高密度关键帧建立画布证据链，输出结构化 Markdown 拆解报告，并按“每条尽量≤15 秒、提示词数量尽量少”反推 Seedance 2.0 中文时间戳分镜复刻提示词；面向参考分析，不做普通剪辑/字幕。"
+complete-tags-en:
+  - "Short Drama / Intent Brainstorming"
+  - "Commercial Ad / Intent Brainstorming"
+  - "Animation / Intent Brainstorming"
+complete-tags-cn:
+  - "短剧漫剧 / 意图脑爆"
+  - "商业广告 / 意图脑爆"
+  - "动画 / 意图脑爆"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+cover: "https://cdn.hailuoai.com/hailuo-video-web/public_assets/c810a994-05ab-4b38-b793-59c10e04590d.mp4"
+structured-info:
+  zh-CN:
+    summary: 通过元信息与高密度关键帧建立视频证据链，深度拆解AI视频并反推可执行的时间戳复刻提示词。
+    best-for:
+      - AI视频拆解
+      - 关键帧证据
+      - 复刻提示词
+    how-to-use: 提供视频、截图或文字描述，先读取可见证据并确认拆解深度与复刻目标。
+    outputs: 结构化拆解报告、镜头证据链、时间戳分镜、复刻提示词与分析结论。
+  en-US:
+    summary: Build an evidence chain from metadata and dense keyframes to deeply deconstruct AI video and derive executable timestamped recreation prompts.
+    best-for:
+      - AI Video Analysis
+      - Keyframe Evidence
+      - Recreation Prompts
+    how-to-use: Provide the video, screenshots, or description, then read visible evidence and confirm analysis depth and recreation goal.
+    outputs: A structured deconstruction report, shot evidence chain, timestamped storyboard, recreation prompts, and findings.

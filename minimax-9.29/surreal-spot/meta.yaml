@@ -1,0 +1,33 @@
+display-name-zh: 超现实广告
+version: 0.6.18
+tag-en: "Advertising / Video Generation"
+tag-cn: "广告营销 / 视频生成"
+complete-tags-en:
+  - "Commercial Ad / Planning"
+complete-tags-cn:
+  - "商业广告 / 计划制定"
+summary-en: "Generate surreal TVC concept videos"
+summary-cn: "生成超现实TVC概念视频"
+desc-en: "For TVC-grade surreal concept advertising shorts with impossible juxtaposition aesthetics. Takes a product photo and creative direction as input. Produces a scene breakdown, 9-panel storyboard and final motion video using cinematic lensing and lo-fi visual treatments including VHS, 16mm and Super8 film grain styles. Ideal for e-commerce creative shorts and brand concept advertising where visual novelty and artistic expression are priorities."
+desc-cn: '适用于电商创意短片、TVC 概念广告等超现实视觉概念视频的制作,追求“不可能的并置”美学风格。输入产品图与创意方向,输出场景拆解、9 宫格分镜与最终动态视频,采用电影级镜头语言与 VHS、16mm、Super8 等低保真视觉媒介。特别适合需要强烈视觉冲击力与艺术表达的品牌广告场景,从概念构思到成片输出全流程覆盖。'
+cover: ""
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 将产品与不可能的视觉并置发展为逐帧可读、具有TVC质感的超现实概念广告视频。
+    best-for:
+      - 超现实TVC
+      - 产品概念
+      - 视觉奇观
+    how-to-use: 提供产品素材、品牌目标和可选参考，先确认超现实概念、画幅与产品保护规则。
+    outputs: 广告概念、关键画面、镜头与运动方案、声音方向及概念广告成片。
+  en-US:
+    summary: Develop a product and impossible visual juxtaposition into a TVC-grade surreal concept spot whose every frame reads clearly.
+    best-for:
+      - Surreal TVCs
+      - Product Concepts
+      - Visual Spectacle
+    how-to-use: Provide product assets, brand goals, and optional references, then confirm the surreal concept, framing, and product-protection rules.
+    outputs: A commercial concept, keyframes, shot and motion direction, sound direction, and finished concept spot.

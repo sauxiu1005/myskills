@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MV Creator</title>
+<style>
+  :root {
+    --bg: #0f0f0f;
+    --card: #1a1a1a;
+    --border: #2a2a2a;
+    --text: #e0e0e0;
+    --text-dim: #888;
+    --accent: #d4a040;
+    --accent-dim: rgba(212,160,64,0.15);
+    --lyric-border: #6c9bff;
+    --lyric-bg: #1a1e28;
+    --green: #4ade80;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg); color: var(--text);
+    line-height: 1.6; padding: 2rem 2rem 10rem;
+    max-width: 900px; margin: 0 auto;
+  }
+
+  .header { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+  .header h1 { font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--accent); }
+  .header .meta { font-size: 0.85rem; color: var(--text-dim); }
+  .header .meta span { margin-right: 1.5rem; }
+
+  .timeline { position: relative; padding-left: 3rem; }
+  .timeline::before {
+    content: ''; position: absolute; left: 0.6rem; top: 0; bottom: 0;
+    width: 2px; background: linear-gradient(180deg, var(--accent), var(--border), var(--accent));
+    opacity: 0.4;
+  }
+
+  .scene {
+    position: relative; margin-bottom: 1.5rem;
+    background: var(--card); border-radius: 10px; border: 1px solid var(--border);
+    overflow: hidden; transition: border-color 0.2s;
+  }
+  .scene:hover { border-color: var(--accent); }
+  .scene.selected { border-color: var(--accent); background: #1e1a14; }
+  .scene .cite-btn {
+    position: absolute; top: 0.8rem; right: 0.8rem;
+    width: 26px; height: 26px; border-radius: 4px;
+    background: var(--border); border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.15s;
+    color: var(--text-dim); font-size: 0.75rem;
+  }
+  .scene:hover .cite-btn { opacity: 1; }
+  .scene .cite-btn:hover { background: var(--accent); color: #fff; }
+  .scene::before {
+    content: ''; position: absolute; left: -2.65rem; top: 1.3rem;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent); border: 2px solid var(--bg);
+  }
+  .scene.instrumental::before { opacity: 0.5; }
+
+  .scene-header {
+    padding: 0.8rem 1.2rem;
+    background: #1e1e1e; border-bottom: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 0.5rem;
+  }
+  .scene-title { font-size: 1.05rem; color: var(--accent); font-weight: 600; }
+  .scene-time-group { display: flex; gap: 0.4rem; align-items: center; }
+  .scene-time {
+    font-size: 0.8rem; color: var(--text-dim);
+    background: var(--border); padding: 0.15rem 0.6rem; border-radius: 12px;
+    font-family: "SF Mono", "Fira Code", monospace;
+  }
+  .scene-duration {
+    font-size: 0.75rem; color: var(--accent);
+    background: var(--accent-dim); padding: 0.15rem 0.5rem; border-radius: 12px;
+    font-family: "SF Mono", "Fira Code", monospace; font-weight: 600;
+  }
+  .scene-body { padding: 1rem 1.2rem; }
+
+  .scene-lyrics {
+    background: var(--lyric-bg); border-left: 3px solid var(--lyric-border);
+    padding: 0.6rem 1rem; margin-bottom: 0.8rem;
+    border-radius: 0 6px 6px 0;
+    font-style: italic; color: #8ab4e8; font-size: 0.85rem; line-height: 1.7;
+  }
+
+  .scene-desc { margin-bottom: 0.8rem; line-height: 1.8; font-size: 0.93rem; }
+
+  .scene-meta {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    padding-top: 0.6rem; border-top: 1px solid #222;
+    font-size: 0.82rem;
+  }
+  .scene-meta-item { display: flex; gap: 0.4rem; }
+  .scene-meta-label { color: var(--accent); font-weight: 500; white-space: nowrap; }
+  .scene-meta-value { color: var(--text-dim); }
+
+  .stats {
+    display: flex; gap: 1.5rem; margin-top: 2rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--text-dim);
+  }
+  .stats .stat-value { font-size: 1.1rem; font-weight: 600; color: var(--text); }
+
+  /* ===== 底部反馈区 ===== */
+  .feedback {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+    background: #161616; border-top: 1px solid var(--border);
+    padding: 0.8rem 1.5rem;
+    display: flex; align-items: flex-start; gap: 0.8rem;
+  }
+  .feedback textarea {
+    flex: 1; height: 56px; resize: none;
+    background: var(--card); color: var(--text); border: 1px solid var(--border);
+    border-radius: 6px; padding: 0.5rem 0.8rem; font-size: 0.9rem;
+    font-family: inherit; line-height: 1.4;
+  }
+  .feedback textarea:focus { outline: none; border-color: var(--accent); }
+  .feedback textarea::placeholder { color: #555; }
+  .feedback .btn { align-self: stretch; white-space: nowrap; }
+  .btn {
+    padding: 0.5rem 1.2rem; border-radius: 6px; font-size: 0.85rem;
+    border: none; cursor: pointer; font-weight: 500; transition: all 0.15s;
+  }
+  .btn:hover { opacity: 0.85; }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-confirm { background: var(--green); color: #000; }
+
+  .done-screen {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 60vh; text-align: center;
+  }
+  .done-icon { font-size: 3rem; margin-bottom: 1rem; }
+  .done-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .done-sub { font-size: 0.9rem; color: var(--text-dim); }
+</style>
+</head>
+<body>
+
+<div id="app"></div>
+
+<script>
+const PREVIEW_LANG = null;  /* __PREVIEW_LANG__ */
+const LANG = PREVIEW_LANG || (navigator.language.startsWith('zh') ? 'zh' : 'en');
+const I18N = {
+  zh: {
+    scriptTitle: 'MV 脚本',
+    scenes: ' 幕',
+    totalScenes: '总幕数',
+    lyricScenes: '歌词幕',
+    visualScenes: '纯画面幕',
+    visual: '视觉：',
+    props: '物件：',
+    transition: '转场：',
+    confirmNext: '已确认，Hub 将继续下一步',
+    feedbackSubmitted: '建议已提交，Hub 将自动处理',
+    serverDisconnected: '服务器已断开，建议已复制到剪贴板，请粘贴回 Hub',
+    pageClosing: '页面将自动关闭...',
+    canClose: '可以关闭此页面了',
+    noValidScript: '未找到有效脚本数据',
+    feedbackPlaceholder: '点击上方场景添加引用，输入修改建议...',
+    confirmBtn: '确认，进入下一步',
+    submitBtn: '提交建议',
+    citeBtnTitle: '引用此幕',
+  },
+  en: {
+    scriptTitle: 'MV Script',
+    scenes: ' scenes',
+    totalScenes: 'Total Scenes',
+    lyricScenes: 'Vocal Scenes',
+    visualScenes: 'Visual-only',
+    visual: 'Visual: ',
+    props: 'Props: ',
+    transition: 'Transition: ',
+    confirmNext: 'Confirmed. Hub will proceed to next step.',
+    feedbackSubmitted: 'Feedback submitted. Hub will process it.',
+    serverDisconnected: 'Server disconnected. Feedback copied to clipboard — paste it back in Hub.',
+    pageClosing: 'Page will close automatically...',
+    canClose: 'You can close this page now.',
+    noValidScript: 'No valid script data found',
+    feedbackPlaceholder: 'Click scenes above to add references, type your feedback...',
+    confirmBtn: 'Confirm & proceed',
+    submitBtn: 'Submit feedback',
+    citeBtnTitle: 'Cite this scene',
+  }
+};
+const t = (key) => (I18N[LANG] || I18N.en)[key] || key;
+document.documentElement.lang = LANG === 'zh' ? 'zh-CN' : 'en';
+
+const RENDERERS = {};
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+function parseScriptMd(text) {
+  const lines = text.split('\n');
+  const info = { title: '', song: '' };
+  const scenes = [];
+  let current = null;
+  let fieldKey = null; // 'desc' | 'props' | 'style' | 'transition'
+
+  for (const raw of lines) {
+    const line = raw.trim();
+
+    // 标题行
+    if (line.startsWith('# ')) {
+      info.title = line.replace(/^#\s+/, '').replace(/^(?:MV 脚本|MV Script)\s*[—-]\s*/, '');
+      continue;
+    }
+    if (/^(?:歌曲|Song)[：:]/.test(line)) { info.song = line.replace(/^(?:歌曲|Song)[：:]\s*/, ''); continue; }
+    if (line === '---') { fieldKey = null; continue; }
+
+    // 幕标题
+    const sceneMatch = line.match(/^##\s+(.+)$/);
+    if (sceneMatch) {
+      if (current) scenes.push(current);
+      current = { title: sceneMatch[1], time: '', timeLabel: '', lyrics: [], desc: [], props: '', style: '', transition: '' };
+      fieldKey = null;
+      continue;
+    }
+
+    if (!current) continue;
+
+    // 时间码行
+    const timeMatch = line.match(/^\*\s*(\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2})\s*(?:\((.+?)\))?\s*$/);
+    if (timeMatch) {
+      current.time = timeMatch[1];
+      current.timeLabel = timeMatch[2] || '';
+      continue;
+    }
+
+    // 歌词引用行
+    if (line.startsWith('>')) {
+      current.lyrics.push(line.replace(/^>\s*/, '').replace(/\s*\/\s*/g, ' / '));
+      continue;
+    }
+
+    // 字段标记
+    if (line.startsWith('**场景描述：**') || line.startsWith('**场景描述:**') || line.startsWith('**Scene Description：**') || line.startsWith('**Scene Description:**')) {
+      fieldKey = 'desc';
+      const rest = line.replace(/^\*\*(?:场景描述|Scene Description)[：:]\*\*\s*/, '');
+      if (rest) current.desc.push(rest);
+      continue;
+    }
+    if (line.startsWith('**视觉风格：**') || line.startsWith('**视觉风格:**') || line.startsWith('**Visual Style：**') || line.startsWith('**Visual Style:**')) {
+      fieldKey = 'style';
+      current.style = line.replace(/^\*\*(?:视觉风格|Visual Style)[：:]\*\*\s*/, '');
+      continue;
+    }
+    if (line.startsWith('**关键物件：**') || line.startsWith('**关键物件:**') || line.startsWith('**Key Props：**') || line.startsWith('**Key Props:**')) {
+      fieldKey = 'props';
+      current.props = line.replace(/^\*\*(?:关键物件|Key Props)[：:]\*\*\s*/, '');
+      continue;
+    }
+    if (line.startsWith('**转场：**') || line.startsWith('**转场:**') || line.startsWith('**Transition：**') || line.startsWith('**Transition:**')) {
+      fieldKey = 'transition';
+      current.transition = line.replace(/^\*\*(?:转场|Transition)[：:]\*\*\s*/, '');
+      continue;
+    }
+
+    // 内容续行
+    if (fieldKey === 'desc' && line) current.desc.push(line);
+  }
+  if (current) scenes.push(current);
+  return { info, scenes };
+}
+
+RENDERERS.script = function(raw) {
+  const { info, scenes } = parseScriptMd(raw);
+  if (!scenes.length) return null;
+
+  let h = '';
+  h += '<div class="header">';
+  h += `<h1>${esc(info.title || t('scriptTitle'))}</h1>`;
+  h += '<div class="meta">';
+  if (info.song) h += `<span>${esc(info.song)}</span>`;
+  h += `<span>${scenes.length}${t('scenes')}</span>`;
+  h += '</div></div>';
+
+  h += '<div class="timeline">';
+  for (const sc of scenes) {
+    const isInst = !sc.lyrics.length && !sc.desc.some(d => d.length > 0);
+    h += `<div class="scene${isInst ? ' instrumental' : ''}" data-time="${esc(sc.time)}">`;
+    h += `<button class="cite-btn" title="${t('citeBtnTitle')}">@</button>`;
+    h += '<div class="scene-header">';
+    h += `<span class="scene-title">${esc(sc.title)}</span>`;
+    if (sc.time) {
+      h += '<div class="scene-time-group">';
+      h += `<span class="scene-time">${esc(sc.time)}</span>`;
+      if (sc.timeLabel) h += `<span class="scene-duration">${esc(sc.timeLabel)}</span>`;
+      h += '</div>';
+    }
+    h += '</div>';
+    h += '<div class="scene-body">';
+
+    if (sc.lyrics.length) {
+      h += '<div class="scene-lyrics">';
+      for (const l of sc.lyrics) h += `${esc(l)}<br>`;
+      h += '</div>';
+    }
+
+    if (sc.desc.length) {
+      h += '<div class="scene-desc">';
+      h += sc.desc.map(d => esc(d)).join('<br>');
+      h += '</div>';
+    }
+
+    if (sc.style || sc.props || sc.transition) {
+      h += '<div class="scene-meta">';
+      if (sc.style) h += `<div class="scene-meta-item"><span class="scene-meta-label">${t('visual')}</span><span class="scene-meta-value">${esc(sc.style)}</span></div>`;
+      if (sc.props) h += `<div class="scene-meta-item"><span class="scene-meta-label">${t('props')}</span><span class="scene-meta-value">${esc(sc.props)}</span></div>`;
+      if (sc.transition) h += `<div class="scene-meta-item"><span class="scene-meta-label">${t('transition')}</span><span class="scene-meta-value">${esc(sc.transition)}</span></div>`;
+      h += '</div>';
+    }
+
+    h += '</div></div>';
+  }
+  h += '</div>';
+
+  h += '<div class="stats">';
+  h += `<div><div class="stat-value">${scenes.length}</div>${t('totalScenes')}</div>`;
+  const withLyrics = scenes.filter(s => s.lyrics.length > 0).length;
+  h += `<div><div class="stat-value">${withLyrics}</div>${t('lyricScenes')}</div>`;
+  h += `<div><div class="stat-value">${scenes.length - withLyrics}</div>${t('visualScenes')}</div>`;
+  h += '</div>';
+
+  return h;
+};
+
+/* ===== 提交反馈 ===== */
+async function postFeedback(text) {
+  document.querySelectorAll('.btn').forEach(b => b.disabled = true);
+  try {
+    const res = await fetch('/feedback', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ feedback: text }),
+    });
+    if (!res.ok) throw new Error();
+    showDone(text === 'LGTM'
+      ? t('confirmNext')
+      : t('feedbackSubmitted'));
+  } catch {
+    try { await navigator.clipboard.writeText(text); } catch {}
+    showDone(t('serverDisconnected'));
+  }
+}
+
+function showDone(msg) {
+  document.getElementById('app').innerHTML = `
+    <div class="done-screen">
+      <div class="done-icon">&#10003;</div>
+      <div class="done-title">${esc(msg)}</div>
+      <div class="done-sub">${esc(t('pageClosing'))}</div>
+    </div>`;
+  setTimeout(() => {
+    window.close();
+    setTimeout(() => {
+      const sub = document.querySelector('.done-sub');
+      if (sub) sub.textContent = t('canClose');
+    }, 2000);
+  }, 800);
+}
+
+/* ===== 渲染入口 ===== */
+function renderContent(raw) {
+  const html = RENDERERS.script(raw);
+  if (!html) { alert(t('noValidScript')); return; }
+
+  document.getElementById('app').innerHTML = html + `
+    <div class="feedback" id="feedbackBar">
+      <textarea id="feedbackText" placeholder="${t('feedbackPlaceholder')}"></textarea>
+      <button class="btn btn-confirm" id="actionBtn">${t('confirmBtn')}</button>
+    </div>`;
+
+  const actionBtn = document.getElementById('actionBtn');
+  const feedbackText = document.getElementById('feedbackText');
+
+  feedbackText.addEventListener('input', () => {
+    const hasText = feedbackText.value.trim().length > 0;
+    actionBtn.textContent = hasText ? t('submitBtn') : t('confirmBtn');
+    actionBtn.className = 'btn ' + (hasText ? 'btn-primary' : 'btn-confirm');
+  });
+
+  actionBtn.addEventListener('click', () => {
+    const text = feedbackText.value.trim();
+    postFeedback(text || 'LGTM');
+  });
+
+  document.querySelectorAll('.scene[data-time] .cite-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const scene = btn.closest('.scene');
+      const ta = feedbackText;
+      const time = scene.dataset.time;
+      const title = scene.querySelector('.scene-title')?.textContent || '';
+      const prefix = `[${time} ${title}] `;
+      scene.classList.add('selected');
+      setTimeout(() => scene.classList.remove('selected'), 600);
+      const pos = ta.selectionStart ?? ta.value.length;
+      const before = ta.value.slice(0, pos);
+      const after = ta.value.slice(pos);
+      const needNewline = before.length > 0 && !before.endsWith('\n');
+      ta.value = before + (needNewline ? '\n' : '') + prefix + after;
+      const cursorPos = before.length + (needNewline ? 1 : 0) + prefix.length;
+      ta.focus();
+      ta.setSelectionRange(cursorPos, cursorPos);
+      ta.scrollTop = ta.scrollHeight;
+      ta.dispatchEvent(new Event('input'));
+    });
+  });
+}
+
+/* ===== 入口 ===== */
+const PREVIEW_TYPE = null;  /* __PREVIEW_TYPE__ */
+const PREVIEW_DATA = null;  /* __PREVIEW_DATA__ */
+if (PREVIEW_DATA) renderContent(PREVIEW_DATA);
+</script>
+</body>
+</html>

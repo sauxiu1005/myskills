@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>原声蓝图审阅</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d;
+    --text: #e6edf3; --text-secondary: #8b949e; --accent: #58a6ff;
+    --warm: #f0883e; --cool: #58a6ff; --tense: #f85149;
+    --romantic: #d2a8ff; --comedy: #3fb950; --epic: #bc8cff;
+    --sad: #79c0ff; --action: #ff7b72;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, sans-serif; padding: 24px; }
+  h1 { font-size: 24px; margin-bottom: 8px; }
+  .subtitle { color: var(--text-secondary); margin-bottom: 32px; }
+
+  .section { margin-bottom: 40px; }
+  .section-title {
+    font-size: 18px; font-weight: 600; margin-bottom: 16px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .section-badge {
+    font-size: 12px; padding: 2px 8px; border-radius: 12px;
+    background: var(--accent); color: var(--bg); font-weight: 600;
+  }
+
+  .track-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; margin-bottom: 12px;
+    position: relative; transition: border-color 0.2s;
+  }
+  .track-card:hover { border-color: var(--accent); }
+  .track-name { font-size: 16px; font-weight: 600; margin-bottom: 12px; }
+
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .tag {
+    font-size: 11px; padding: 3px 10px; border-radius: 10px;
+    background: rgba(88, 166, 255, 0.15); color: var(--accent);
+  }
+  .tag.instrument { background: rgba(63, 185, 80, 0.15); color: var(--comedy); }
+  .tag.vocal { background: rgba(210, 168, 255, 0.15); color: var(--romantic); }
+
+  .field { margin-bottom: 8px; font-size: 14px; line-height: 1.6; }
+  .field-label { color: var(--text-secondary); font-weight: 500; }
+  .field-value { color: var(--text); }
+
+  .rationale {
+    margin-top: 12px; padding: 10px 14px; border-radius: 8px;
+    background: rgba(88, 166, 255, 0.06); border-left: 3px solid var(--accent);
+    font-size: 13px; color: var(--text-secondary); line-height: 1.5;
+  }
+
+  .cite-btn {
+    position: absolute; top: 12px; right: 12px;
+    background: var(--border); border: none; color: var(--text-secondary);
+    width: 28px; height: 28px; border-radius: 6px; cursor: pointer;
+    font-size: 14px; display: flex; align-items: center; justify-content: center;
+  }
+  .cite-btn:hover { background: var(--accent); color: var(--bg); }
+
+  .emotion-indicator {
+    display: inline-block; font-size: 12px; padding: 2px 8px;
+    border-radius: 10px; margin-left: 8px;
+  }
+  .emotion-indicator.tense { background: rgba(248,81,73,0.2); color: var(--tense); }
+  .emotion-indicator.romantic { background: rgba(210,168,255,0.2); color: var(--romantic); }
+  .emotion-indicator.comedy { background: rgba(63,185,80,0.2); color: var(--comedy); }
+  .emotion-indicator.epic { background: rgba(188,140,255,0.2); color: var(--epic); }
+  .emotion-indicator.sad { background: rgba(121,192,255,0.2); color: var(--sad); }
+  .emotion-indicator.action { background: rgba(255,123,114,0.2); color: var(--action); }
+  .emotion-indicator.warm { background: rgba(240,136,62,0.2); color: var(--warm); }
+
+  /* Feedback bar */
+  .feedback-bar {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: var(--surface); border-top: 1px solid var(--border);
+    padding: 12px 24px; display: flex; gap: 12px; align-items: center;
+    z-index: 100;
+  }
+  .feedback-bar textarea {
+    flex: 1; background: var(--bg); border: 1px solid var(--border);
+    color: var(--text); border-radius: 8px; padding: 10px 14px;
+    font-size: 14px; resize: none; height: 44px; line-height: 24px;
+    font-family: inherit;
+  }
+  .feedback-bar textarea:focus { outline: none; border-color: var(--accent); }
+  .feedback-bar button {
+    background: var(--accent); color: var(--bg); border: none;
+    padding: 10px 20px; border-radius: 8px; font-weight: 600;
+    cursor: pointer; font-size: 14px; white-space: nowrap;
+  }
+  .feedback-bar button:hover { opacity: 0.9; }
+  .feedback-bar button.lgtm {
+    background: var(--comedy); color: var(--bg);
+  }
+  body { padding-bottom: 80px; }
+</style>
+</head>
+<body>
+<script>
+const PREVIEW_DATA = null;  /* __PREVIEW_DATA__ */
+</script>
+
+<div id="app"></div>
+
+<div class="feedback-bar">
+  <textarea id="feedbackText" placeholder="输入修改建议… 点击卡片右上角 @ 可引用特定曲目"></textarea>
+  <button class="lgtm" onclick="submitFeedback('LGTM')">LGTM</button>
+  <button onclick="submitFeedback()">提交建议</button>
+</div>
+
+<script>
+const data = JSON.parse(PREVIEW_DATA);
+
+const emotionMap = {
+  '紧张': 'tense', '权谋': 'tense', '悬疑': 'tense',
+  '浪漫': 'romantic', '心动': 'romantic', '深情': 'romantic',
+  '喜剧': 'comedy', '搞笑': 'comedy', '欢快': 'comedy',
+  '史诗': 'epic', '宏大': 'epic', '壮烈': 'epic',
+  '悲伤': 'sad', '不舍': 'sad', '忧伤': 'sad', '绝望': 'sad',
+  '打斗': 'action', '激烈': 'action', '爆发': 'action',
+  '温暖': 'warm', '温情': 'warm', '重逢': 'warm',
+  '震惊': 'tense', '背叛': 'tense', '牺牲': 'epic',
+  '惊艳': 'romantic', '抉择': 'tense', '坚定': 'warm',
+  '遗憾': 'sad', '释然': 'warm',
+};
+
+function getEmotionClass(text) {
+  if (!text) return 'warm';
+  for (const [keyword, cls] of Object.entries(emotionMap)) {
+    if (text.includes(keyword)) return cls;
+  }
+  return 'warm';
+}
+
+function renderTags(styleTags, instruments, vocalStyle) {
+  let html = '<div class="tag-row">';
+  if (styleTags) {
+    styleTags.split(',').forEach(t => {
+      html += `<span class="tag">${t.trim()}</span>`;
+    });
+  }
+  if (instruments) {
+    instruments.split('、').slice(0, 4).forEach(t => {
+      html += `<span class="tag instrument">${t.trim()}</span>`;
+    });
+  }
+  if (vocalStyle) {
+    html += `<span class="tag vocal">${vocalStyle.split(',')[0].trim()}</span>`;
+  }
+  html += '</div>';
+  return html;
+}
+
+function renderTrackCard(track, category) {
+  const citeRef = `@${category}/${track.name}`;
+  let html = `<div class="track-card">`;
+  html += `<button class="cite-btn" title="引用" onclick="cite('${citeRef}')">@</button>`;
+  html += `<div class="track-name">${track.name}`;
+  if (track.emotion_type) {
+    const cls = getEmotionClass(track.emotion_type);
+    html += `<span class="emotion-indicator ${cls}">${track.emotion_type}</span>`;
+  }
+  html += `</div>`;
+  html += renderTags(track.style_tags, track.instruments, track.vocal_style);
+
+  const fields = [
+    ['情感基调', track.emotion],
+    ['人声风格', track.vocal_style],
+    ['歌词方向', track.lyrics_direction],
+    ['节奏', track.tempo],
+    ['Hook 策略', track.hook_strategy],
+    ['场景描述', track.scene_description],
+    ['时长预估', track.duration_estimate],
+  ];
+  fields.forEach(([label, value]) => {
+    if (value) {
+      html += `<div class="field"><span class="field-label">${label}：</span><span class="field-value">${value}</span></div>`;
+    }
+  });
+
+  if (track.rationale) {
+    html += `<div class="rationale">${track.rationale}</div>`;
+  }
+  html += '</div>';
+  return html;
+}
+
+function render() {
+  let html = `<h1>${data.title || '原声音乐蓝图'}</h1>`;
+  html += `<div class="subtitle">审阅所有计划曲目的音乐方向，确认后进入生成阶段</div>`;
+
+  if (data.character_themes && data.character_themes.length) {
+    html += `<div class="section"><div class="section-title">角色主题曲 <span class="section-badge">${data.character_themes.length} 首</span></div>`;
+    data.character_themes.forEach(t => { html += renderTrackCard(t, '角色曲'); });
+    html += '</div>';
+  }
+
+  if (data.opening) {
+    html += `<div class="section"><div class="section-title">片头曲 (OP)</div>`;
+    html += renderTrackCard(data.opening, 'OP');
+    html += '</div>';
+  }
+
+  if (data.ending) {
+    html += `<div class="section"><div class="section-title">片尾曲 (ED)</div>`;
+    html += renderTrackCard(data.ending, 'ED');
+    html += '</div>';
+  }
+
+  if (data.bgm && data.bgm.length) {
+    html += `<div class="section"><div class="section-title">场景配乐 <span class="section-badge">${data.bgm.length} 首</span></div>`;
+    data.bgm.forEach(t => { html += renderTrackCard(t, 'BGM'); });
+    html += '</div>';
+  }
+
+  document.getElementById('app').innerHTML = html;
+}
+
+function cite(ref) {
+  const ta = document.getElementById('feedbackText');
+  ta.value += (ta.value ? ' ' : '') + ref;
+  ta.focus();
+}
+
+async function submitFeedback(override) {
+  const text = override || document.getElementById('feedbackText').value.trim();
+  if (!text) return;
+  try {
+    const res = await fetch('/feedback', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ feedback: text }),
+    });
+    const data = await res.json();
+    if (data.ok) {
+      document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-size:20px;color:#3fb950;">已提交，窗口即将关闭</div>';
+    }
+  } catch (e) {
+    alert('提交失败: ' + e.message);
+  }
+}
+
+render();
+</script>
+</body>
+</html>

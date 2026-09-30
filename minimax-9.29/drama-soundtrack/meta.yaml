@@ -1,0 +1,33 @@
+display-name-zh: 影视配乐
+version: 0.1.16
+tag-en: "Audio Content / Audio Generation"
+tag-cn: "音频内容 / 音频生成"
+complete-tags-en:
+  - "Sound & Music / Creative Generation"
+complete-tags-cn:
+  - "音频音乐 / 创作生成"
+summary-en: "Compose character themes and scene BGM"
+summary-cn: "创作角色主题曲与场景配乐"
+desc-en: "For composing a complete original soundtrack package for film, TV and short drama productions. Takes a script and character bios as input, optionally imported from short-drama-screenwriter skill or supplied externally. Produces character theme songs, opening and ending themes and key-scene BGM tracks, all derived from deep plot analysis. Each composition reflects character arcs and narrative tension for authentic dramatic scoring."
+desc-cn: "适用于为电视剧、电影、短剧创作完整原声音乐套件的场景,提供专业级影视配乐方案。输入剧本与人物小传(可从 short-drama-screenwriter 技能导入或外部直接提供),输出角色主题曲、片头曲、片尾曲与关键场景 BGM 配乐。所有音乐基于剧情深度分析创作,每首作品反映角色弧线与叙事张力,实现真实感的戏剧配乐效果。"
+cover: ""
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 从剧本和人物弧线出发设计角色主题、片头片尾与场景配乐，形成服务叙事的影视原声套件。
+    best-for:
+      - 影视配乐
+      - 角色主题
+      - 场景音乐
+    how-to-use: 提供剧本、人物小传和音乐偏好，先确认剧情重点、角色关系与配乐范围。
+    outputs: 剧情音乐分析、角色主题、片头片尾曲、场景BGM与配乐说明。
+  en-US:
+    summary: Design character themes, opening and closing music, and scene cues from the script and character arcs as a narrative soundtrack package.
+    best-for:
+      - Film Scoring
+      - Character Themes
+      - Scene Music
+    how-to-use: Provide the script, character notes, and music preferences, then confirm story priorities, relationships, and scoring scope.
+    outputs: A music analysis, character themes, opening and closing tracks, scene cues, and scoring notes.

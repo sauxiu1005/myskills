@@ -1,0 +1,35 @@
+display-name-zh: 光影工作室
+version: 1.0.19
+tag-en: "Visual Production / Image Generation"
+tag-cn: "视觉创作 / 图像生成"
+complete-tags-en:
+  - "Commercial Ad / Creative Generation"
+  - "E-Commerce / Creative Generation"
+complete-tags-cn:
+  - "商业广告 / 创作生成"
+  - "电商 / 创作生成"
+summary-en: "Smart relight with direction, intensity and color"
+summary-cn: "智能调整光线方向、强度与色彩"
+desc-en: "For repainting lighting on an existing image with precise directional and color control. Takes one source image plus lighting controls via a 3D light-sphere panel including direction, intensity and color temperature, plus background mode and ambient effect choices as input. Produces a relit image with 20 style presets, 25 ambient effects and up to 3 free-edit lights configurable by type, angle and color temp or HEX."
+desc-cn: "适用于已有图片的重新打光,提供精确的光线方向与色彩控制。输入一张原图,通过 3D 灯光球面板控制光线方向、强度与色温,选择背景模式与氛围特效,输出重新照亮后的新图。提供 20 种风格预设、25 种氛围特效,支持自由编辑最多 3 盏灯源,每盏可配置灯光类型、入射角度与色温值或十六进制色值。"
+cover: ""
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 分析源图的光线与主体关系，重新设计光向、强度和色彩，使画面获得明确的视觉氛围。
+    best-for:
+      - 光线重塑
+      - 商业修图
+      - 色彩氛围
+    how-to-use: 提供源图和目标光感，先确认主体保护范围、光线方向与需要强化的材质。
+    outputs: 光线分析、布光方案、重光提示词与调整后的图像。
+  en-US:
+    summary: Analyze the source lighting and subject relationships, then redesign direction, intensity, and color for a deliberate visual atmosphere.
+    best-for:
+      - Relighting
+      - Commercial Retouching
+      - Color Mood
+    how-to-use: Provide the source image and target lighting, then confirm protected subjects, light direction, and materials to emphasize.
+    outputs: Lighting analysis, a lighting plan, relighting prompts, and the adjusted image.

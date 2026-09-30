@@ -1,0 +1,32 @@
+display-name-zh: 配音导演
+version: 0.3.2
+tag-en: "Audio Content / Post-Production"
+tag-cn: "音频内容 / 后期制作"
+complete-tags-en:
+  - "Short Drama / Planning"
+complete-tags-cn:
+  - "短剧漫剧 / 计划制定"
+summary-en: "Direct voice talent from brief and speakable script through casting, live-session, and pickup feedback — intention-based, not inflection-based."
+summary-cn: "配音导演全流程：brief、脚本、选角、现场、补录反馈——讲意图不讲抑扬。"
+desc-en: "Voiceover Direction covers the full workflow of directing voice talent: writing a specific VO brief with sound-alike and anti-references, rewriting scripts to be speakable (15-word sentences, contractions, breathing room, phonetic spellings), casting by acoustic and performance qualities, running the live session with intention-based cues rather than inflection commands, and giving structured pickup feedback that names timestamp, issue, desired change, and story reason. Includes templates, checklists, and worked SaaS-explainer and redirect examples."
+desc-cn: "配音导演 skill 覆盖导演配音演员的完整流程：写有 sound-alike 和 anti-reference 的具体 VO brief；把脚本改到好念（15 词短句、连读、呼吸空间、音标标注复杂词）；按声学与表演特质选角；用「意图」而非「抑扬」命令来跑现场 session；给带时间戳、当前问题、期望改动和故事原因的结构化补录反馈。附模板、checklist 以及 SaaS 解说和现场掰回的实战示例。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 将品牌目标和脚本转化为可执行的配音简报、可朗读文本、选角标准、现场指导与补录反馈。
+    best-for:
+      - 配音指导
+      - 声音选角
+      - 补录反馈
+    how-to-use: 提供项目、脚本、品牌和受众背景，先确认声音意图、听众关系与交付场景。
+    outputs: 配音简报、可朗读脚本、试音标准、现场提示与带时间戳补录反馈。
+  en-US:
+    summary: Turn brand goals and a script into an actionable voiceover brief, speakable copy, casting criteria, live direction, and pickup feedback.
+    best-for:
+      - Voice Direction
+      - Voice Casting
+      - Pickup Notes
+    how-to-use: Provide the project, script, brand, and audience context, then confirm vocal intent, listener relationship, and delivery context.
+    outputs: A voiceover brief, speakability-checked script, audition criteria, live cues, and timestamped pickup notes.

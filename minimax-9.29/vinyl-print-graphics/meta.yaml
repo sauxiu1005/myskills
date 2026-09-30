@@ -1,0 +1,15 @@
+display-name-zh: 刻绘丝印图
+version: 0.3.1
+tag-en: "Visual Production / Image Generation"
+tag-cn: "视觉创作 / 图像生成"
+complete-tags-en:
+  - "E-Commerce / Creative Generation"
+complete-tags-cn:
+  - "电商 / 创作生成"
+summary-en: "Generate flat vector-style graphics that survive vinyl plotter cutting, HTV, and manual silkscreen printing."
+summary-cn: "生成扁平矢量风图形，直接进 vinyl plotter、HTV 和手工丝网印刷不散架。"
+desc-en: "Vinyl Print Graphics produces flat, high-contrast artwork engineered for physical execution on Cricut, Silhouette, vinyl plotters, HTV, CNC laser cutters, and manual silkscreen presses. Includes model routing rules (Imagen for typography and geometry, edit models for organic linework), a four-pillar prompt scaffold, and constraint blocks that eliminate gradients, halftones, floating specks, and fabric mockups. A pitfalls table maps each common failure mode to a prompt-level fix so the output survives cutting and weeding."
+desc-cn: "Vinyl Print Graphics 产出扁平高对比图形，能直接在 Cricut、Silhouette、vinyl plotter、HTV、CNC 激光切割机和手工丝网印上执行。含模型路由规则（字体几何走 Imagen 类，有机线条走编辑类）、四支柱 prompt 骨架，以及禁渐变/禁半调/禁浮尘/禁 T 恤 mockup 的约束块。附带陷阱对照表，把每种常见失败映射到 prompt 级修复方式，保证图形切完能顺利 weeding。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official

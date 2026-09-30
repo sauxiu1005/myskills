@@ -1,0 +1,38 @@
+# NOTE: Visual Effects Library for Qwen-Image-2.1 i2i composition.
+# Creative posters must select 1-2 effects.
+
+# Effect 1 - Breaking Frame
+Template: The subject bursts out from a torn paper/frame/screen, rough torn edges, flying paper scraps, 3D pop-out.
+
+# Effect 2 - Torn Paper
+Template: Layered torn paper surfaces, rough torn edges revealing different colored paper underneath, paper fibers curling up.
+
+# Effect 3 - Collage
+Template: Multiple magazine cutouts, vintage photos, colored paper, and tape layered together, edges overlapping, tape marks visible.
+
+# Effect 4 - Double Exposure
+Template: The silhouette of the subject is overlaid with another scene/pattern, semi-transparent blend, dreamy double image.
+
+# Effect 5 - Newspaper Cutout
+Template: Background composed of black-and-white newspaper fragments, torn headlines, visible newspaper fibers, subject embedded within.
+
+# Effect 6 - Oversized Number
+Template: A giant numeral as the visual anchor occupying most of the frame, subject positioned in front of or behind it, metallic or neon glow finish.
+
+# Effect 7 - Circular Typography
+Template: Subject at center, text wrapping 360 degrees around it in a circular or semi-circular arc, text direction rotating with the curve.
+
+# Effect 8 - Grid Infographic
+Template: Thin-line grid divisions, small codes, barcodes, data charts, geometric shapes, subject interwoven between the grid.
+
+# Effect 9 - Crosshair Target
+Template: A giant crosshair or concentric circle pattern behind the subject, cross lines passing through, precise thin lines.
+
+# Effect 10 - High Contrast Blocks
+Template: Large solid color blocks dividing the background into geometric zones, sharp contrasts (red vs white, black vs yellow), subject embedded in one zone.
+
+# Effect 11 - Film Burn
+Template: Film edge burns, light leaks, scratches, warm yellow or vintage teal tones, strong grain, cinematic film frame feel.
+
+# Effect 12 - Noise Grain
+Template: Heavy noise grain, multi-print vintage poster feel, slight color misregistration at edges, grayish vintage tone.

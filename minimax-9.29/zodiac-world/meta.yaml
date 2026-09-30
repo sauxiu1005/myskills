@@ -1,0 +1,18 @@
+display-name-zh: 12生肖英语
+version: 0.1.8
+tag-en: "Visual Production / Video Generation"
+tag-cn: "视觉创作 / 视频生成"
+complete-tags-en:
+  - "Education / Creative Generation"
+  - "Creative & Experimental / Creative Generation"
+complete-tags-cn:
+  - "教育 / 创作生成"
+  - "创意实验 / 创作生成"
+summary-en: "Build 12-zodiac English IP episodes with story-song videos"
+summary-cn: "打造 12 生肖英语启蒙 IP 剧集（故事+儿歌视频）"
+desc-en: 'For producing preschool English-learning IP episodes set in a 12-zodiac forest village. Takes a chapter topic, focus animal character and a target English expression like "May I come in?". Produces a two-layer deliverable per chapter: a 1000-1200-word story script with locked per-character voice styles, plus a 30-60-second video plan with beat-by-beat scene blocks, dialogue lines and a custom closing song lyric.'
+desc-cn: '用于制作以“12 生肖森林村庄”为世界观的儿童英语启蒙 IP 剧集。输入：每章主题、当集焦点动物角色、以及一句核心英语表达。输出：每章双层交付物：一份 1000–1200 字、锁定每个角色英语口吻的小说剧本，外加一份 30–60秒的视频方案。'
+cover: "https://cdn.hailuoai.com/hailuo-video-web/public_assets/763c7afe-9ee2-42fc-9381-d689974b9279.mp4"
+author-en: "Sumac"
+author-cn: "Sumac"
+source: community

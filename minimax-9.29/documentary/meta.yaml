@@ -1,0 +1,16 @@
+display-name-zh: 纪录片
+version: 0.1.16
+tag-en: "Documentary / Video Generation"
+tag-cn: "纪录片 / 视频生成"
+complete-tags-en:
+  - "Education / Planning"
+complete-tags-cn:
+  - "教育 / 计划制定"
+summary-en: "Generate narrated documentary videos"
+summary-cn: "生成带旁白的纪录片视频"
+desc-en: "For long-form narrative video including documentaries and explainers from topic to finished production. Takes a topic or theme such as a one-minute video about subject X as input. Produces a finished narrated video covering the full pipeline of analysis, planning, storyboard design, image generation, voiceover recording, video clip generation and final compositing into a cohesive documentary narrative."
+desc-cn: '适用于纪录片、科普片等较长叙事类视频的生成,从选题到成片全流程覆盖。输入主题(如“做一个 X 主题的一分钟视频”),输出完整旁白纪录片成片。完整流程涵盖主题分析与策划、分镜脚本编写、画面图片生成、旁白配音录制、视频片段生成、后期合成剪辑,最终输出连贯完整的纪录片叙事作品。'
+cover: ""
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official

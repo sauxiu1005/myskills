@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>国风动画舞剑 - 空镜选择</title>
+<style>
+  :root {
+    --bg: #0f0f0f;
+    --card: #1a1a1a;
+    --border: #2a2a2a;
+    --text: #e0e0e0;
+    --text-dim: #888;
+    --accent: #f0c040;
+    --accent-dim: #a08020;
+    --green: #4ade80;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg); color: var(--text);
+    line-height: 1.6; padding: 2rem 2rem 6rem;
+    max-width: 1400px; margin: 0 auto;
+  }
+
+  .header { margin-bottom: 2.5rem; text-align: center; }
+  .header h1 { font-size: 1.6rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .header .sub { font-size: 0.85rem; color: var(--text-dim); }
+  .header .hint { font-size: 0.8rem; color: #666; margin-top: 0.3rem; }
+
+  /* --- 场景分区 --- */
+  .scene-section {
+    margin-bottom: 2.5rem; padding: 1.5rem;
+    border: 1px solid var(--border); border-radius: 12px;
+    background: var(--card);
+  }
+  .scene-title {
+    font-size: 1.1rem; font-weight: 600; color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .image-card {
+    position: relative; cursor: pointer;
+    border: 2px solid transparent; border-radius: 8px;
+    overflow: hidden; transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .image-card:hover { border-color: #444; }
+  .image-card.selected {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent), 0 0 16px rgba(240,192,64,0.15);
+  }
+  .image-card img {
+    width: 100%; height: auto; display: block;
+    transition: transform 0.2s;
+  }
+  .image-card:hover img { transform: scale(1.02); }
+
+  .check-badge {
+    position: absolute; top: 8px; right: 8px;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: rgba(0,0,0,0.5); border: 2px solid #555;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s;
+  }
+  .image-card.selected .check-badge {
+    background: var(--accent); border-color: var(--accent);
+  }
+  .check-badge::after {
+    content: ''; display: none;
+    width: 6px; height: 12px;
+    border: solid #1a1a1a; border-width: 0 2.5px 2.5px 0;
+    transform: rotate(45deg); margin-top: -2px;
+  }
+  .image-card.selected .check-badge::after { display: block; }
+
+  .image-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4px 8px; background: rgba(0,0,0,0.6);
+    font-size: 0.75rem; color: #ccc; text-align: center;
+  }
+
+  /* --- AI 生成区 --- */
+  .ai-section {
+    margin-bottom: 2.5rem; padding: 1.5rem;
+    border: 1px solid var(--border); border-radius: 12px;
+    background: var(--card);
+  }
+  .ai-section-title {
+    font-size: 1.1rem; font-weight: 600; color: var(--green);
+    margin-bottom: 0.3rem;
+  }
+  .ai-section-hint {
+    font-size: 0.8rem; color: var(--text-dim); margin-bottom: 1rem;
+  }
+  .ai-slots { display: flex; flex-direction: column; gap: 12px; }
+  .ai-slot {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .ai-slot-label {
+    font-size: 0.85rem; color: var(--accent); font-weight: 600;
+    white-space: nowrap;
+  }
+  .ai-slot input {
+    flex: 1; padding: 10px 14px;
+    background: #111; border: 1px solid #333; border-radius: 6px;
+    color: var(--text); font-size: 0.9rem; outline: none;
+    transition: border-color 0.2s;
+  }
+  .ai-slot input:focus { border-color: var(--accent); }
+  .ai-slot input::placeholder { color: #555; }
+
+  /* --- 提交区 --- */
+  .submit-area {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: rgba(15,15,15,0.95); backdrop-filter: blur(8px);
+    border-top: 1px solid var(--border); padding: 1rem 2rem;
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+  }
+  .counter {
+    font-size: 0.9rem; color: var(--text-dim);
+  }
+  .counter .num { color: var(--accent); font-weight: 600; }
+  .submit-btn {
+    padding: 10px 32px; background: var(--accent); color: #1a1a1a;
+    border: none; border-radius: 8px; font-size: 1rem; font-weight: 600;
+    cursor: pointer; transition: background 0.2s;
+  }
+  .submit-btn:hover { background: #e0b030; }
+  .submit-btn:disabled { background: #555; color: #999; cursor: not-allowed; }
+  #status-msg { font-size: 0.85rem; color: var(--green); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>空镜场景选择</h1>
+  <p class="sub">共需 2 张空镜图，可从模板选取，也可交给 AI 生成</p>
+  <p class="hint">模板可选 0~2 张，未选满的部分由 AI 根据描述自动生成</p>
+</div>
+
+<div id="scenes-container"></div>
+
+<div class="ai-section" id="ai-section">
+  <div class="ai-section-title">AI 生成空镜</div>
+  <div class="ai-section-hint">描述你想要的场景（可选，留空则由 AI 自由发挥）</div>
+  <div class="ai-slots" id="ai-slots"></div>
+</div>
+
+<div class="submit-area">
+  <span class="counter">模板 <span class="num" id="count-display">0</span> 张 + AI <span class="num" id="ai-count-display">2</span> 张</span>
+  <button class="submit-btn" id="submit-btn" onclick="submitChoice()">确认选择</button>
+  <span id="status-msg"></span>
+</div>
+
+<script>
+const PREVIEW_LANG = null;  /* __PREVIEW_LANG__ */
+const LANG = PREVIEW_LANG || (navigator.language.startsWith('zh') ? 'zh' : 'en');
+const I18N = {
+  zh: {
+    pageTitle: '空镜场景选择',
+    pageSub: '共需 2 张空镜图，可从模板选取，也可交给 AI 生成',
+    pageHint: '模板可选 0~2 张，未选满的部分由 AI 根据描述自动生成',
+    aiSectionTitle: 'AI 生成空镜',
+    aiSectionHint: '描述你想要的场景（可选，留空则由 AI 自由发挥）',
+    aiSlotLabel: '空镜',
+    aiPlaceholder: '例：月下竹林、雪中古桥、山顶云海…',
+    templateLabel: '模板',
+    templateUnit: '张',
+    aiLabel: 'AI',
+    confirmBtn: '确认选择',
+    submitFailed: '提交失败，请重试',
+    confirmNext: '已提交，Hub 将继续下一步',
+    pageClosing: '页面将自动关闭...',
+    canClose: '可以关闭此页面了',
+    feedbackTemplate: '模板',
+    feedbackAi: 'AI生成',
+    feedbackFreeplay: '（自由发挥）',
+  },
+  en: {
+    pageTitle: 'Scene Selection',
+    pageSub: '2 scene images needed — pick from templates or let AI generate',
+    pageHint: 'Select 0-2 templates; remaining slots will be AI-generated from your description',
+    aiSectionTitle: 'AI Generated Scenes',
+    aiSectionHint: 'Describe the scene you want (optional, leave empty for AI to improvise)',
+    aiSlotLabel: 'Scene',
+    aiPlaceholder: 'e.g. moonlit bamboo forest, snowy ancient bridge, mountain peak above clouds…',
+    templateLabel: 'Templates',
+    templateUnit: '',
+    aiLabel: 'AI',
+    confirmBtn: 'Confirm Selection',
+    submitFailed: 'Submit failed, please retry',
+    confirmNext: 'Submitted. Hub will proceed to next step.',
+    pageClosing: 'Page will close automatically...',
+    canClose: 'You can close this page now.',
+    feedbackTemplate: 'Template',
+    feedbackAi: 'AI Generate',
+    feedbackFreeplay: '(improvise)',
+  }
+};
+const t = (key) => (I18N[LANG] || I18N.en)[key] || key;
+document.documentElement.lang = LANG === 'zh' ? 'zh-CN' : 'en';
+
+const PREVIEW_DATA = null;  /* __PREVIEW_DATA__ */
+const PRESELECT = [];  /* __PRESELECT__ */
+
+const TOTAL = 2;
+let selected = [];
+
+function init() {
+  const data = typeof PREVIEW_DATA === 'string' ? JSON.parse(PREVIEW_DATA) : PREVIEW_DATA;
+  if (!data || !data.scenes) return;
+
+  // i18n: update static HTML text
+  document.querySelector('.header h1').textContent = t('pageTitle');
+  document.querySelector('.header .sub').textContent = t('pageSub');
+  document.querySelector('.header .hint').textContent = t('pageHint');
+  document.querySelector('.ai-section-title').textContent = t('aiSectionTitle');
+  document.querySelector('.ai-section-hint').textContent = t('aiSectionHint');
+  document.getElementById('submit-btn').textContent = t('confirmBtn');
+
+  const container = document.getElementById('scenes-container');
+
+  Object.keys(data.scenes).forEach(sceneId => {
+    const scene = data.scenes[sceneId];
+    const section = document.createElement('div');
+    section.className = 'scene-section';
+
+    let imagesHtml = '';
+    scene.images.forEach(img => {
+      imagesHtml += `
+        <div class="image-card" data-path="${img.path}" onclick="toggleSelect(this)">
+          <img src="${img.url}" alt="${img.filename}" loading="lazy">
+          <div class="check-badge"></div>
+          <div class="image-label">${img.filename}</div>
+        </div>`;
+    });
+
+    section.innerHTML = `
+      <div class="scene-title">${scene.name}</div>
+      <div class="image-grid">${imagesHtml}</div>
+    `;
+    container.appendChild(section);
+  });
+
+  updateAiSlots();
+
+  // 恢复上一轮的选择
+  if (PRESELECT && PRESELECT.length > 0) {
+    document.querySelectorAll('.image-card').forEach(card => {
+      if (PRESELECT.includes(card.dataset.path) && selected.length < TOTAL) {
+        selected.push(card.dataset.path);
+        card.classList.add('selected');
+      }
+    });
+    updateAiSlots();
+  }
+}
+
+function toggleSelect(card) {
+  const path = card.dataset.path;
+  const idx = selected.indexOf(path);
+
+  if (idx > -1) {
+    selected.splice(idx, 1);
+    card.classList.remove('selected');
+  } else {
+    if (selected.length >= TOTAL) return;
+    selected.push(path);
+    card.classList.add('selected');
+  }
+
+  updateAiSlots();
+}
+
+function updateAiSlots() {
+  const aiCount = TOTAL - selected.length;
+  document.getElementById('count-display').textContent = selected.length;
+  document.getElementById('ai-count-display').textContent = aiCount;
+
+  const slotsEl = document.getElementById('ai-slots');
+  const sectionEl = document.getElementById('ai-section');
+
+  if (aiCount <= 0) {
+    sectionEl.style.display = 'none';
+    return;
+  }
+  sectionEl.style.display = '';
+
+  // 保留已输入的值
+  const existing = [];
+  slotsEl.querySelectorAll('input').forEach(inp => existing.push(inp.value));
+
+  slotsEl.innerHTML = '';
+  for (let i = 0; i < aiCount; i++) {
+    const slot = document.createElement('div');
+    slot.className = 'ai-slot';
+    slot.innerHTML = `
+      <span class="ai-slot-label">${t('aiSlotLabel')} ${selected.length + i + 1}</span>
+      <input type="text" id="ai-desc-${i}" placeholder="${t('aiPlaceholder')}" value="${existing[i] || ''}">
+    `;
+    slotsEl.appendChild(slot);
+  }
+
+  // Update counter text
+  const counterEl = document.querySelector('.counter');
+  const unitStr = t('templateUnit') ? ' ' + t('templateUnit') : '';
+  counterEl.innerHTML = `${t('templateLabel')} <span class="num" id="count-display">${selected.length}</span>${unitStr} + ${t('aiLabel')} <span class="num" id="ai-count-display">${aiCount}</span>${unitStr}`;
+}
+
+async function submitChoice() {
+  const aiCount = TOTAL - selected.length;
+  const aiDescs = [];
+  for (let i = 0; i < aiCount; i++) {
+    const inp = document.getElementById(`ai-desc-${i}`);
+    aiDescs.push(inp ? inp.value.trim() : '');
+  }
+
+  const lines = [];
+  const colon = LANG === 'zh' ? '\uFF1A' : ': ';
+  selected.forEach((p, i) => lines.push(`${t('feedbackTemplate')}${i + 1}${colon}${p}`));
+  aiDescs.forEach((d, i) => lines.push(`${t('feedbackAi')}${i + 1}${colon}${d || t('feedbackFreeplay')}`));
+  const feedback = lines.join('\n');
+
+  try {
+    const resp = await fetch('/feedback', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ feedback })
+    });
+    const result = await resp.json();
+    if (result.ok) {
+      showDone(t('confirmNext'));
+    }
+  } catch (err) {
+    document.getElementById('status-msg').textContent = t('submitFailed');
+  }
+}
+
+init();
+function showDone(msg) {
+  document.body.innerHTML = `
+    <div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0f0f0f;">
+      <div style="text-align:center;color:#e0e0e0;font-family:-apple-system,sans-serif;">
+        <div style="font-size:3rem;color:#4ade80;margin-bottom:1rem;">&#10003;</div>
+        <div style="font-size:1.2rem;font-weight:600;margin-bottom:0.5rem;">${msg}</div>
+        <div class="done-sub" style="font-size:0.85rem;color:#888;">${t('pageClosing')}</div>
+      </div>
+    </div>`;
+  setTimeout(() => {
+    window.close();
+    setTimeout(() => {
+      const sub = document.querySelector('.done-sub');
+      if (sub) sub.textContent = t('canClose');
+    }, 2000);
+  }, 800);
+}
+
+</script>
+</body>
+</html>
