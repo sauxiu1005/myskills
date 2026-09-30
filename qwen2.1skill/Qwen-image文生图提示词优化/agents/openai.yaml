@@ -1,4 +1,0 @@
-interface:
-  display_name: "文生图提示词扩写（基于 Qwen Image 2.1）"
-  short_description: "将简短文生图需求扩写为详细英文画面描述，并输出构图比例与标准 JSON"
-  default_prompt: "使用 $image-prompt-t2i，把以下画面想法扩写成绘图提示词并输出 JSON：一只在雨中弹吉他的柯基。"
