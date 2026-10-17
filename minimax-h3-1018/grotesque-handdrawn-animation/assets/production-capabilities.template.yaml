@@ -1,0 +1,20 @@
+# 可选；只记录任务实际使用的能力，已有工具记录可直接引用。
+schema_version: 5
+image:
+  tool: null # 用户选择优先，核验风格参考能力
+  choice_basis: default
+  style_reference_source: assets/style-reference.png
+  style_reference_used: null # 填实际上传素材ID或输入位置
+  selected_model: null
+  reference_roles: []
+  reference_limits: null
+  supported_image_resolutions: [] # 当前工具已有说明/UI中的实际选项
+  output_settings: null
+video:
+  model_and_input_mode: null
+  supported_durations: []
+  maximum_segment_seconds: null # 以实时能力为准；编排建议不超过15秒
+  output_settings: null
+  audio_route: null
+assembly_and_export_route: null
+actual_limitations: []

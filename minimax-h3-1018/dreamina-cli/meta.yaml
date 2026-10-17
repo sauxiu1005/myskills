@@ -1,0 +1,28 @@
+display-name-zh: 即梦创作
+version: 0.1.3
+tag-en: "Creative & Experimental / Creative Generation"
+tag-cn: "创意实验 / 创作生成"
+complete-tags-en:
+  - "Creative & Experimental / Creative Generation"
+complete-tags-cn:
+  - "创意实验 / 创作生成"
+summary-en: "Spend credits in your own Jimeng account to turn text requests and reference media into images or videos delivered directly to the current canvas."
+summary-cn: "使用自己即梦账号中的积分，将文字需求和参考素材生成图片或视频，并直接交付到当前画布。"
+desc-en: "Generate or edit images and videos from text requests or reference media using credits in your own Jimeng account, and receive the results directly on the current canvas. For creators who want to use their Jimeng balance in this workspace, the workflow guides login when needed, checks generation capabilities, tracks queues and progress, resumes interrupted tasks, names delivered media and reports remaining credits. Before video submission, it explains standard queueing, membership acceleration and additional credits. Use it only when explicitly requesting your own Jimeng account or credits; brand or model names such as Jimeng, SD or Seedance alone stay with built-in services. Availability depends on Jimeng membership, credits and model capabilities."
+desc-cn: "使用自己的即梦账号积分，把文字需求或参考素材生成、编辑为图片和视频，并直接交付到当前画布。适合希望在画布中使用即梦余额完成创作的用户：按需引导登录、核对生成能力、追踪排队与进度，中断后恢复原任务，完成后为素材命名并报告剩余积分。视频提交前说明普通排队或会员加速及额外积分。仅在用户明确要求使用自己的即梦账号或积分时启用；仅提到即梦、SD／Seedance 等名称仍走内置能力。使用受即梦会员、积分和模型能力限制。"
+author-en: "MiniMax Hub"
+author-cn: "海螺Hub"
+source: official
+cover: "https://cdn.hailuoai.com/hailuo-video-web/public_assets/d4417fad-9453-493d-bddb-1de25299e6a4.png"
+cover-en: ""
+structured-info:
+  zh-CN:
+    summary: "把自己即梦账号里的积分用于图片和视频创作，直接在当前画布接收结果并查看剩余积分。"
+    best-for: ["即梦积分创作", "参考素材生成", "任务恢复"]
+    how-to-use: "说明要用自己的即梦账号或积分，描述目标并附参考素材，按需登录授权。"
+    outputs: "按内容命名的图片或视频画布资产，以及生成后的即梦积分余额。"
+  en-US:
+    summary: "Use credits in your own Jimeng account for image and video creation, receive results directly on the current canvas and see your remaining balance."
+    best-for: ["Creation with Jimeng credits", "Reference-guided generation", "Task recovery"]
+    how-to-use: "Ask to use your own Jimeng account or its credits, describe the result, attach references and authorize login if needed."
+    outputs: "Descriptively named image or video canvas assets and the remaining Jimeng credit balance after generation."

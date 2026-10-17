@@ -1,0 +1,32 @@
+display-name-zh: 影视片头序列
+version: 1.0.4
+tag-en: "Professional Film / Full Production"
+tag-cn: "专业影视 / 成片制作"
+complete-tags-en:
+  - "Professional Film / Full Production"
+complete-tags-cn:
+  - "专业影视 / 成片制作"
+summary-en: "Create film or series opening title sequences and 15-second concept teasers ending on the title reveal"
+summary-cn: "制作电影或剧集片头标题序列与十五秒影视概念预告，以片名或卡司落板收束"
+desc-en: "Use when the user wants an opening title sequence, opening credits, a cast sequence, or a concept teaser of up to 15 seconds for a film or series. The user may provide a title, cast names, a story premise, stills, or posters, or just a film idea. Not for full trailers over 15 seconds or made of multiple clips, end-credit rolls, or complete narrative shorts."
+desc-cn: "当用户想制作电影或剧集的片头、开场字幕、演职员表序列、卡司介绍，或一条 15 秒以内的概念预告时使用。用户可能提供片名、演员名单、故事设定、剧照或海报，也可能只有一个影片创意。不用于超过 15 秒或多段拼接的完整预告片、片尾字幕滚动或完整剧情短片。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 把影视设定、片名与准确署名编排成叙事连贯的电影片头或概念预告，并以文字落板收束。
+    best-for:
+      - 影视片头
+      - 概念预告
+      - 片名字效
+    how-to-use: 提供片名、卡司、剧照或故事设定，先确认片头范围、文字内容和视觉方向。
+    outputs: 影片视觉方案、镜头与转场设计、文字系统、音乐及完整片头成片。
+  en-US:
+    summary: Turn film context, titles, and verified credits into a coherent cinematic title sequence or concept teaser that resolves on-screen.
+    best-for:
+      - Title Sequences
+      - Concept Teasers
+      - Title Design
+    how-to-use: Provide the title, credits, stills, or story setting, then confirm scope, exact text, and visual direction.
+    outputs: A film treatment, shot and transition design, typography system, music, and finished title sequence.

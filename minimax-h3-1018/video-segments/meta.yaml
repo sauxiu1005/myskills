@@ -1,0 +1,41 @@
+display-name-zh: 视频分镜
+version: 0.3.1
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Planning
+- Short Drama / Planning
+complete-tags-cn:
+- 专业影视 / 计划制定
+- 短剧漫剧 / 计划制定
+summary-en: Plan a storyboard outline from a confirmed script, story or concept, with shot tables organized
+  by generation unit and transitions between segments.
+summary-cn: 根据已确认的剧本、故事或创意规划视频分镜大纲，按生成单元组织分镜表并处理段落之间的衔接。
+desc-en: Plan storyboards for videos generated in segments. Start from a confirmed script, story or concept;
+  estimate timing from dialogue, plan each unit within the selected model's duration, and list day or night,
+  location, shot number, shot size and angle, and plot. Handle transitions between separately generated
+  segments with story-motivated reactions, prop close-ups or wide views. Deliver a storyboard outline for
+  confirmation; segment prompts, composition, script writing, reference images and visual packaging are not
+  included.
+desc-cn: 面向需要分段生成的视频分镜规划。基于已确认的剧本、故事或创意，按对白估算时长，按所选模型的单次时长规划生成单元，列出日夜、地点、镜号、景别角度与剧情；分别生成的段落之间用有剧情依据的反应、道具特写或场景全景衔接。交付分镜大纲供用户确认，不负责片段提示词、作曲、剧本正文、参考图或视觉包装。
+author-en: MiniMax Hub
+author-cn: MiniMax Hub
+source: official
+structured-info:
+  zh-CN:
+    summary: 根据已确认的剧本、故事或创意规划视频分镜大纲，按生成单元组织分镜表并处理段落之间的衔接。
+    best-for:
+    - 剧情分镜
+    - 短片分镜
+    how-to-use: 提供已确认的剧本、故事或创意，以及画幅与所选视频模型，确认分镜大纲后再进入后续制作。
+    outputs: 按生成单元组织的分镜表，含日夜、地点、镜号、景别角度与剧情。
+  en-US:
+    summary: Plan a storyboard outline from a confirmed script, story or concept, with shot tables organized
+      by generation unit.
+    best-for:
+    - Narrative Storyboards
+    - Short Film Storyboards
+    how-to-use: Provide a confirmed script, story or concept with the aspect ratio and selected video model,
+      then approve the storyboard outline.
+    outputs: Shot tables organized by generation unit, with day or night, location, shot number, shot size and
+      angle, and plot.

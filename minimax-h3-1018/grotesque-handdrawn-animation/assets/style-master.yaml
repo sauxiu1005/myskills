@@ -1,0 +1,26 @@
+schema_version: 2
+style_id: GH-01
+master_id: GH-01-MASTER
+master_revision: 2
+reference_name: S0
+file: style-reference.png
+sha256: 8de165573ff31430d4cef3687ac7a79815498fd4fe4783d720f251c618cd1e2c
+status: selected_generated_master
+origin: MJ_text_to_image
+source_image_input: none
+retired_master_revision: 1
+retired_master_reason: Original screenshot retired at user request.
+clean_master_generated: true
+contains_play_overlay: false
+scope: skill_wide
+project_replacement_allowed: false
+selected_variant: B3
+selection_basis: assistant_visual_review_for_user_requested_generated_reference_update
+generation_record: generated-reference-record.json
+review_examples:
+- style-example-group.png
+- style-example-environment.png
+review_examples_usage: visual_review_only_not_generation_input
+# 下两项仅是发布母版时的历史记录，不是项目生产放行条件。
+style_binding_verified: false
+motion_calibration_passed: false

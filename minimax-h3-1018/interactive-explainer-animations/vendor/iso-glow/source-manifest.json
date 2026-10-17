@@ -1,0 +1,12 @@
+{
+  "source": "https://iso-glow.vercel.app/iso-glow.tar.gz",
+  "homepage": "https://isoglow.dev/",
+  "retrieved": "2026-10-15",
+  "archiveSha256": "9fbf83bbe96df0e1a4f24694be6401d6a733d861610ff8974ac65af7409b4e08",
+  "upstreamVersion": "unversioned snapshot",
+  "files": {
+    "LICENSE": "1a1281a84e233c0501448f641943d1a3e6c07aa7dfcfd07ea59f212f0608426a",
+    "assets/gallery-3d.html": "f8a98a5dcdb05e67d2ccbf1712133dc66cfe54459fe1742b2ed4c9a34ec398b3",
+    "assets/examples/lens-camera-3d.js": "66632f67734b35ddabaa6adf0b2ff8dd1d0d8a09c290b82f2579c6b241cd27c7"
+  }
+}

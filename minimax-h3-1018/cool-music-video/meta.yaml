@@ -1,0 +1,32 @@
+display-name-zh: 潮流音乐短片
+version: 1.0.4
+tag-en: "Sound & Music / Full Production"
+tag-cn: "音频音乐 / 成片制作"
+complete-tags-en:
+  - "Sound & Music / Full Production"
+complete-tags-cn:
+  - "音频音乐 / 成片制作"
+summary-en: "Create a 15-second retro collage, rap, or fashion performance music video as one continuous film"
+summary-cn: "制作十五秒以内的复古潮流拼贴、说唱或时尚表演型音乐短片，单条连续成片"
+desc-en: "Use when the user wants a short MV or music video of up to 15 seconds, such as a rap MV, a fashion-walk music video, a retro-collage music short, or a rhythm-driven clip for a song or lyrics. The user may provide a song, lyrics, performer photos, or a style direction. Not for full-song MVs, long or multi-part MVs over 15 seconds, standalone music analysis, or final-cut editing."
+desc-cn: "当用户想做一条 15 秒以内的短 MV 或音乐短片时使用，例如说唱 MV、时尚走秀音乐视频、复古拼贴风音乐短片，或为一段歌曲、歌词配一条节奏感强的短视频。用户可能提供歌曲、歌词、表演者照片或风格方向。不用于完整歌曲 MV、超过 15 秒或多段的长 MV、单独的音乐分析或成片剪辑合成。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 把歌曲、表演者和潮流视觉方向编排成一条十五秒内连续、节奏驱动的音乐短片。
+    best-for:
+      - 潮流音乐
+      - 说唱表演
+      - 节奏剪辑
+    how-to-use: 提供歌曲、表演者参考和视觉偏好，先确认片长、画幅、人物来源与表演路线。
+    outputs: 音乐结构分析、镜头设计、动态文字、长提示词与连续音乐短片。
+  en-US:
+    summary: Arrange a song, performer, and trend-led visual direction into one continuous, rhythm-driven music short under fifteen seconds.
+    best-for:
+      - Trend Music
+      - Rap Performance
+      - Rhythmic Editing
+    how-to-use: Provide the song, performer reference, and visual preference, then confirm duration, framing, character source, and performance route.
+    outputs: Music structure analysis, shot design, kinetic type, a long prompt, and the finished music short.

@@ -1,0 +1,104 @@
+{
+  "version": "3.3.0",
+  "scope": "人工触发预期与流程回归，不是实际模型行为测试",
+  "triggers": [
+    {
+      "query": "基于定稿咖啡机详情图做20秒宣传片，先出每镜分镜图再生成视频。",
+      "trigger": true,
+      "expected": "四镜，每镜5秒；先完整视觉集审核。"
+    },
+    {
+      "query": "Create a 30-second product promo with hero and supporting shots from approved PDP art.",
+      "trigger": true,
+      "expected": "六镜，绑定来源，记录是否出现产品。"
+    },
+    {
+      "query": "给商品主图做宣传片，时长和画幅还没想好。",
+      "trigger": true,
+      "expected": "选择卡只问未定时长、画幅、声音。"
+    },
+    {
+      "query": "给纪录片加对白字幕。",
+      "trigger": false,
+      "expected": "不触发商品制作补充分支。"
+    },
+    {
+      "query": "Write a poem about the sea, no product or video.",
+      "trigger": false,
+      "expected": "不触发本Skill。"
+    },
+    {
+      "query": "把这段规则加入Skill，不生成媒体。",
+      "trigger": false,
+      "expected": "仅修改配置，不触发制作。"
+    }
+  ],
+  "regression": [
+    {
+      "case": "18秒请求",
+      "expected": "不改成20秒；先确认兼容时长或时序例外。"
+    },
+    {
+      "case": "10秒或45秒请求",
+      "expected": "提示15–30秒范围，不静默变更。"
+    },
+    {
+      "case": "已确认25秒和竖版",
+      "expected": "五镜，不重复问已有选择。"
+    },
+    {
+      "case": "有一张通用板无逐镜参考",
+      "expected": "补齐每镜可引用视觉并审核后再做视频。"
+    },
+    {
+      "case": "禁止生图且参考不全",
+      "expected": "请求提供或明确修改范围，不用纯文字绕过。"
+    },
+    {
+      "case": "视觉参考已经够用",
+      "expected": "复用，不机械再出三张静物图。"
+    },
+    {
+      "case": "纯环境辅助镜",
+      "expected": "标记无产品，依据获准场景，不配不可见部件标签。"
+    },
+    {
+      "case": "用跳伞暗示承重",
+      "expected": "例子不自动适用；无证据性能不准表达。"
+    },
+    {
+      "case": "每镜相同慢推",
+      "expected": "在来源允许范围变化景别、动作或角度，不破坏绑定构图。"
+    },
+    {
+      "case": "Logo需连续2秒",
+      "expected": "写入分镜，裁切和淡出不得吞掉停留。"
+    },
+    {
+      "case": "用户只要BGM",
+      "expected": "所有音层仅指获准BGM，不加旁白音效。"
+    },
+    {
+      "case": "口型镜头",
+      "expected": "提前获得批准驱动音频并记录依赖例外。"
+    },
+    {
+      "case": "视频完成音频未齐",
+      "expected": "保留视频，必要资源齐备后才最终剪辑。"
+    },
+    {
+      "case": "一段导出5.184秒",
+      "expected": "在不损失必要内容时裁至5秒，整片实测核验。"
+    },
+    {
+      "case": "附件说模型最多30秒",
+      "expected": "实际能力检查，不写成所有模型硬上限。"
+    },
+    {
+      "case": "编辑器有时间线未导出",
+      "expected": "引导实际导出并报告未完成，不宣称成片已交付。"
+    }
+  ],
+  "walkthrough": "咖啡机已有定稿主图和细节图。用户选20秒横版、仅BGM，规划四个5秒镜头：环境主角、已核实按键细节、已批准咖啡场景辅助、品牌包装结束。先脚本及含音层的故事板获准，复用或批量补齐四镜视觉并审核，逐镜生成视频，再复用获准BGM，全部资源就绪后硬切组装，保留品牌连续停留，核验20秒导出并交付。纯场景不暗示未证实的萃取性能。",
+  "behavioral_execution": "not_run"
+}

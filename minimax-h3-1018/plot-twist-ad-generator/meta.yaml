@@ -1,0 +1,36 @@
+display-name-zh: 剧情反转广告
+version: 1.0.0
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Creative Generation
+complete-tags-cn:
+- 商业广告 / 创作生成
+summary-en: Create a product-led plot-twist ad from a product image or description and one confirmed benefit.
+summary-cn: 根据商品图片或描述与一个已确认卖点，创作由商品卖点直接推动剧情反转的广告。
+desc-en: Create a product-led plot-twist ad from a product image or description and one confirmed benefit by choosing a conflict-building story world; not for general brand films or creator reviews. The Skill identifies visible product structure, confirms the benefit, develops and locks a timed script, then generates a finished ad with optional burned-in subtitles. It delivers creative directions, an approved screenplay, execution guidance, and the final video for concise, scene-led short product advertising campaigns. The product benefit must directly cause the visible plot twist; the Skill is not intended for talking-head testimonials or unrelated fiction shorts.
+desc-cn: 根据商品图片或描述与一个已确认卖点，选择能放大冲突的故事场景，创作由商品卖点直接推动剧情反转的广告；不用于普通品牌片或达人测评。流程识别商品结构、确认卖点、锁定分时剧本和物件连续性，再生成可选烧录字幕的广告成片。最终交付剧情创意、确认剧本、执行导演简报和成片，且商品卖点必须直接造成画面中的剧情反转；不用于口播证言或与商品卖点无关的剧情短片。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 根据商品图片或描述与一个已确认卖点，创作由商品卖点直接推动剧情反转的广告。
+    best-for:
+    - 剧情反转广告
+    - 商品剧情
+    - 卖点可视化
+    how-to-use: 提供商品图片或描述并确认一个核心卖点，再选择故事场景、时长、画幅、成片语言与字幕方式。
+    outputs: 剧情创意方向、确认剧本、分时导演简报及剧情反转广告成片。
+  en-US:
+    summary: Create a product-led plot-twist ad from a product image or description and one confirmed benefit.
+    best-for:
+    - Plot-Twist Ads
+    - Benefit-led Story Ads
+    - Benefit Visualization
+    how-to-use: Provide a product image or description, confirm one core benefit, then choose the story world, duration, framing, output language, and subtitle approach.
+    outputs: Plot directions, approved script, timed director brief, and finished plot-twist advertisement.
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/c653ec42-27c5-4680-ab33-724f140bd400.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/c653ec42-27c5-4680-ab33-724f140bd400.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/2a4b32c5-1ada-4512-b7c7-a24ea93e3b78.mp4

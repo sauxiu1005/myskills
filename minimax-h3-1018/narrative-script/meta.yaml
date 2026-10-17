@@ -1,0 +1,37 @@
+display-name-zh: 叙事剧本
+version: 0.1.1
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Planning
+complete-tags-cn:
+- 专业影视 / 计划制定
+summary-en: Develop story outlines and character relationships from a premise, then write scene-level
+  scripts with visible action and verbatim dialogue within the confirmed scope.
+summary-cn: 根据故事设定梳理大纲与人物关系，在确认创作范围后撰写含可见动作与逐字对白的场景级剧本。
+desc-en: Develop a story premise into a narrative script. Propose a title, core story, major turns, and
+  ending direction from the available information. After user approval, expand character relationships,
+  visible action, and verbatim dialogue, shaping plot phases, character arcs, and scene-level conflict. Keep
+  the output within the confirmed episode count and duration.
+desc-cn: 把故事设定发展为可执行的叙事剧本。根据已有信息提出剧名、故事核心、主要转折和结局方向，待用户确认后展开人物关系、场景动作与逐字对白。按情节阶段、人物弧光与场景冲突组织内容；输出范围以已确认的集数和时长为准。
+author-en: MiniMax Hub
+author-cn: MiniMax Hub
+source: official
+structured-info:
+  zh-CN:
+    summary: 根据故事设定梳理大纲与人物关系，在确认创作范围后撰写含可见动作与逐字对白的场景级剧本。
+    best-for:
+    - 故事创作
+    - 剧本写作
+    how-to-use: 提供故事设定、目标受众与篇幅要求，先确认大纲，再按约定范围展开剧本。
+    outputs: 故事大纲、人物关系和包含可见动作及逐字对白的场景级剧本。
+  en-US:
+    summary: Develop story outlines and character relationships from a premise, then write scene-level
+      scripts with visible action and verbatim dialogue within the confirmed scope.
+    best-for:
+    - Story Writing
+    - Script Writing
+    how-to-use: Provide the premise, target audience, and length requirements, then approve the outline
+      before expanding the script.
+    outputs: A story outline, character relationships, and scene-level scripts with visible action and
+      verbatim dialogue.

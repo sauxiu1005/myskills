@@ -1,0 +1,32 @@
+display-name-zh: 品牌广告
+version: 1.1.6
+tag-en: "Commercial Ad / Full Production"
+tag-cn: "商业广告 / 成片制作"
+complete-tags-en:
+  - "Commercial Ad / Full Production"
+complete-tags-cn:
+  - "商业广告 / 成片制作"
+summary-en: "Create a polished brand or product showcase from a brief and existing assets, reusing completed work and preparing only missing visual inputs."
+summary-cn: "从短需求和已有素材制作品牌与产品展示片，复用已完成创作，只补缺失视觉输入，保留详细音画设计。"
+desc-en: "Use when the user wants an official brand ad or product showcase film, such as a brand film, product launch short, product hero video, or homepage brand visual. The request may be a single sentence or come with product images, a logo, a script, or a storyboard. Not for creator reviews, talking-head selling, unboxing, first-person POV, narrative TVCs, or multi-film campaign planning."
+desc-cn: "当用户想制作一条官方品牌广告或产品展示片时使用，例如品牌宣传片、新品发布短片、产品主角展示或首页品牌视觉。用户可能只给一句需求，也可能附带产品图、Logo、脚本或故事板。不用于达人测评、口播带货、开箱、第一人称 POV、剧情 TVC 或系列广告策划。"
+author-en: "MiniMax Hub"
+author-cn: "MiniMax Hub"
+source: official
+structured-info:
+  zh-CN:
+    summary: 沿用已有脚本与图片，只补必要视觉缺口，制作有完整音画设计的单条品牌展示广告。
+    best-for:
+      - 首页广告案例
+      - 产品主角展示
+      - 品牌视觉短片
+    how-to-use: 提供需求与已有素材；沿用故事板、主视觉和结尾画面，从尚未完成的部分继续。
+    outputs: 适用创意说明、完整音画提示词、必要补充图片及实际广告成片。
+  en-US:
+    summary: Continue from supplied scripts and images, fill necessary visual gaps, and deliver one brand showcase with detailed audiovisual direction.
+    best-for:
+      - Homepage Ad Cases
+      - Product Showcases
+      - Brand Visual Films
+    how-to-use: Provide the request and existing assets; reuse storyboards, key visuals and closing images, continuing from unfinished work.
+    outputs: Applicable creative notes, complete audiovisual prompts, necessary supplemental images and the actual film.

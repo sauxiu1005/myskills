@@ -1,0 +1,38 @@
+display-name-zh: 史前动画生成
+version: 1.0.0
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+- Animation / Creative Generation
+complete-tags-cn:
+- 动画 / 创作生成
+summary-en: Topics, jokes or scripts become action-led prehistoric hand-drawn comedy shorts with consistent characters, accompanied by a complete story, storyboard and finished video.
+summary-cn: 将主题、段子或脚本转化为角色连贯、动作驱动的史前手绘幽默短片，交付故事、分镜和成片。
+desc-en: Designed for creators of comedy shorts, fables and playful explainers, this skill turns a topic, joke or script into a prehistoric hand-drawn animation. Its earthy two-dimensional style uses oversized heads, small bodies and expressive faces, while physical actions, camera movement and brief English dialogue carry the story. Provide your idea and choose duration, resolution and aspect ratio for this video to receive a complete story, exact dialogue and timed storyboard. After you confirm the proposal, character references and video are produced, delivering a playable animated short without default captions or on-screen titles. It suits fictional satire and lighthearted storytelling, not archaeological reconstruction, realistic documentaries or videos in other visual styles.
+desc-cn: 面向幽默短片、寓言和趣味讲解创作者，将一句主题、段子文案或现成脚本转化为史前二维手绘动画。画面采用土色手绘、大头小躯干与夸张表情，依靠角色动作、镜头变化和简短英文对白推进故事。提供创意并选择本次时长、分辨率和画幅，即可获得完整故事、逐字台词和时间分镜；确认方案后制作角色参考与视频，交付可播放的动画短片。成片默认无字幕和画面标题。适合虚构讽刺与轻松叙事，不用于考古复原、写实纪录片或其他画风的视频。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 把主题、段子或脚本变成角色动作与夸张表情驱动的史前手绘幽默短片，保持人物和道具关系一致。
+    best-for:
+    - 幽默短片
+    - 寓言讽刺
+    - 趣味讲解
+    how-to-use: 提供主题或脚本，确认时长、画幅和清晰度，审阅故事方案后开始制作。
+    outputs: 完整故事、逐字对白、时间分镜、角色参考及史前手绘动画视频。
+  en-US:
+    summary: Turn topics, jokes or scripts into prehistoric hand-drawn comedy driven by physical action and expressive faces, with consistent characters and props.
+    best-for:
+    - Comedy Shorts
+    - Satirical Fables
+    - Playful Explainers
+    how-to-use: Provide a topic or script, confirm duration, framing and quality, then approve the story proposal.
+    outputs: Complete story, exact dialogue, timed storyboard, character references and prehistoric animation video.
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/dc162756-8296-4318-a3c8-bac0e58cb469.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/dc162756-8296-4318-a3c8-bac0e58cb469.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/fcfe1c67-7ef3-4599-8ff5-4739d18b7c18.mp4
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/ec291df4-71cc-49f7-8688-c5349ea861a2.mp4
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/0ef8bb32-5936-4de3-b8ac-c291d8683379.mp4

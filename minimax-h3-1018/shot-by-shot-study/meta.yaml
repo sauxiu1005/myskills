@@ -1,0 +1,36 @@
+display-name-zh: 镜头拉片
+version: 1.0.0
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+complete-tags-en:
+- Creative & Experimental / Post-production
+complete-tags-cn:
+- 创意实验 / 后期处理
+summary-en: Turn existing videos into traceable shot data and synchronized study MP4s, then optionally create interactive HTML reports after user confirmation.
+summary-cn: 把已有视频整理为逐镜数据与同步学习视频，完成后由用户选择是否追加交互报告。
+desc-en: Built for editors, filmmakers, researchers and educators studying existing videos. Provide an accessible source and optionally specify an analysis range. The Skill verifies media facts, reviews shot boundaries, extracts real keyframes and annotates framing, camera motion, action, pacing and confidence. It organizes a canvas summary and quality records, then exports and verifies a synchronized study MP4 with source timecode and original audio. After video delivery, a choice card asks whether to create an HTML report with click-to-seek, highlighting and automatic shot-list following. Confirmation starts production using existing data; declining completes the task without HTML. Best for reference study, edit review and teaching, not footage generation, film recreation or unrelated editing.
+desc-cn: 面向剪辑师、影视研究者与教学用户，将已有视频整理成可追溯的逐镜学习资料。用户提供原片，可指定分析区间；先核验素材、复核切点、提取真实关键帧，标注景别、运镜、动作、节奏和置信度，再导出保留原声、叠加时间码与镜头说明的同步学习视频。视频验收交付后显示选项卡，用户确认需要才复用现有数据制作支持点击跳转、自动高亮和滚动的交互报告；拒绝则正常结束。适合参考研究、剪辑复盘和拉片教学，不用于生成画面、复刻影片或无关剪辑。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 以真实关键帧和镜头台账支撑同步拉片学习，并提供可选的交互浏览报告。
+    best-for:
+    - 参考片研究
+    - 剪辑复盘
+    - 拉片教学
+    how-to-use: 提供视频与分析范围，先完成同步拉片视频，再选择是否追加交互报告。
+    outputs: 逐镜台账、真实关键帧、画布摘要、质量记录、同步学习 MP4，以及确认后追加的交互 HTML 素材包。
+  en-US:
+    summary: Study synchronized shot breakdowns grounded in real keyframes and timing ledgers, with an optional interactive browsing report.
+    best-for:
+    - Reference Study
+    - Edit Review
+    - Film Teaching
+    how-to-use: Provide a video and analysis range, complete the synchronized study video, then choose whether to add an interactive report.
+    outputs: Shot ledger, real keyframes, canvas summary, quality records, synchronized study MP4, and an interactive HTML bundle added after confirmation.
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/f1a3669d-6558-4c65-969a-d24c2a759048.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/f1a3669d-6558-4c65-969a-d24c2a759048.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/1d1ce8e2-7eef-4ee7-bbeb-1aa370eb177e.mp4

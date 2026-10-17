@@ -1,0 +1,39 @@
+display-name-zh: 场景参考图
+version: 0.1.0
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Creative Generation
+- Short Drama / Creative Generation
+complete-tags-cn:
+- 专业影视 / 创作生成
+- 短剧漫剧 / 创作生成
+summary-en: Build reusable spatial references from setting descriptions and shooting directions, preserving
+  landmarks, furnishings, and lighting relationships across later shots.
+summary-cn: 根据场景设定与拍摄方向建立可复用的空间参考，统一地标陈设和光源关系，支持后续镜头保持场景一致。
+desc-en: Establish spatial references for recurring locations. From setting descriptions, existing images,
+  and shooting directions, define entrances, landmarks, furnishings, and light positions. Generate wide
+  or multi-view references as needed, preserving physical positions, scale, and materials across camera
+  changes. Reuse sufficient references; a one-off transition can be described directly in its shot prompt.
+desc-cn: 为跨镜头复用的地点建立空间依据。根据场景设定、已有参考和拍摄方向，明确出入口、地标、固定陈设与光源的位置关系，按实际需要生成全景或多视图参考。切换机位时保持物体位置、尺度和材质一致；已有参考足够时直接复用，一次性过场可在镜头提示词中描述。
+author-en: MiniMax Hub
+author-cn: MiniMax Hub
+source: official
+structured-info:
+  zh-CN:
+    summary: 根据场景设定与拍摄方向建立可复用的空间参考，统一地标陈设和光源关系，支持后续镜头保持场景一致。
+    best-for:
+    - 场景设定
+    - 多机位参考
+    how-to-use: 提供地点设定、已有参考与拍摄方向，明确固定陈设和光源位置后生成所需视图。
+    outputs: 覆盖所需拍摄方向的场景参考图及可复用的空间关系描述。
+  en-US:
+    summary: Build reusable spatial references from setting descriptions and shooting directions, preserving
+      landmarks, furnishings, and lighting relationships across later shots.
+    best-for:
+    - Scene Design
+    - Multi-camera References
+    how-to-use: Provide the setting, existing references, and shooting directions, then establish fixed
+      furnishings and light positions.
+    outputs: Scene references covering required shooting directions and reusable descriptions of spatial
+      relationships.

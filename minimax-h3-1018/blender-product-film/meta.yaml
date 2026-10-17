@@ -1,0 +1,36 @@
+display-name-zh: Blender 产品广告
+version: 1.0.0
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Full Production
+complete-tags-cn:
+- 商业广告 / 成片制作
+summary-en: Builds an editable product master in Blender from images, text, drawings, or 3D files, then produces a Blender ad base, keyframes, and a finished video.
+summary-cn: 从产品图片、文字、图纸或三维文件建立可编辑母模型，并完成 Blender 广告底片、关键帧与最终视频成片。
+desc-en: For product designers and advertisers who need a complete, editable 3D product film rather than a concept image. Users may provide photographs, drawings, manuals, written specifications, logos, or optional 3D files. The workflow separates evidence from assumptions, builds or repairs a Blender product master, validates its structure, creates a shot plan, adds only shot-required assets, and produces camera, feature, text, and lighting animation. After preview review, it renders the Blender motion film, creates four advertising keyframes, and uses those frames with the motion reference for an H3-enhanced final. Deliverables include videos, keyframes, editable Blender projects, scripts, shot records, and assumption reports. It does not treat inferred dimensions as engineering measurements.
+desc-cn: 面向需要可编辑三维产品广告的设计师与广告创作者，接收产品图片、文字规格、图纸、说明书、品牌标识或三维文件。先区分证据、推断和缺失信息，建立或修复产品母模型，验证结构后规划分镜并补齐必要资产，再制作运镜、功能演示、灯光和文字包装。预览确认后渲染广告底片与四张关键帧，结合运动参考生成最终视频。交付成片、关键帧、可编辑工程、脚本、分镜和假设报告。不把推测尺寸当作工程测量，不以概念图替代实际建模；最终增强不可用时明确交付已完成部分。
+structured-info:
+  zh-CN:
+    summary: 从产品资料建立可编辑母模型，完成 Blender 广告底片、关键帧与最终视频成片。
+    best-for:
+    - 实体产品广告
+    - 3D 产品展示
+    - 结构功能演示
+    how-to-use: 提供产品图片、文字、图纸、说明书、Logo 或三维文件，确认广告时长、画幅与功能重点后开始制作。
+    outputs: 产品母模型、Blender 广告底片、广告关键帧、最终视频、可编辑工程与制作记录。
+  en-US:
+    summary: Build an editable product master from product materials, then deliver a Blender ad base, keyframes, and finished video.
+    best-for:
+    - Product Commercials
+    - 3D Product Showcase
+    - Feature Demonstrations
+    how-to-use: Provide product images, text, drawings, manuals, logos, or 3D files, then confirm duration, framing, and feature priorities.
+    outputs: Product master, Blender ad base, advertising keyframes, finished video, editable project, and production records.
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/6185bfe8-bc26-4160-8601-1eae5194ef2f.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/6185bfe8-bc26-4160-8601-1eae5194ef2f.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/7b6ffc97-c4cd-41b5-9483-e2b33e6bed79.mp4

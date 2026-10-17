@@ -1,0 +1,36 @@
+display-name-zh: 电商视觉设计
+version: 1.0.0
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Creative Generation
+complete-tags-cn:
+- 商业广告 / 创作生成
+summary-en: Create evidence-based e-commerce artwork, deliver editable sources after approval, and optionally make a short promotional video.
+summary-cn: 基于商品事实完成主图与详情图，用户定稿后交付分层源文件，并可按需制作宣传视频。
+desc-en: Help merchants and designers turn product facts into evidence-based e-commerce visuals. Given packaging, specifications, audience, platform and references, the workflow builds an evidence ledger, extracts purchase reasons, plans page modules, and creates main and detail artwork with copy and typography. Users review the finished canvas work before any Photoshop reconstruction. Only explicitly approved versions unlock layered source production and delivery with previews. Promotional videos are optional. The workflow never invents product claims, certificates or sales, treats style approval as final artwork approval, replaces legal review, or hides unavailable production and delivery capabilities. It also keeps approved artwork, source evidence, and delivery decisions traceable throughout the project.
+desc-cn: 面向商家与设计师，将商品资料转成有据可查的电商视觉成品。用户提供包装、参数、人群、平台和参考图后，先建立证据账本、提炼购买理由、规划页面，再在画布完成含文案与排版的主图和详情图。画布阶段完成审阅与美化；仅在用户最终确认具体成品版本后，才进入Photoshop重建分层、核对成品并交付可访问的源文件和预览。宣传视频按需制作。不编造功效、认证或销量，不把风格确认当成品定稿，也不替代法律审核或掩盖工具与交付限制。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/0a703e33-9c5b-459e-a6eb-17148be689e0.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/0a703e33-9c5b-459e-a6eb-17148be689e0.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/4dcbd558-5f99-470d-b8c4-b4f60aa2a84c.mp4
+structured-info:
+  zh-CN:
+    summary: 从商品事实出发，规划并制作可审核的电商主图、详情图与可选宣传视频。
+    best-for:
+    - 商品主图
+    - 平台素材
+    - 分层源文件
+    how-to-use: 提供商品资料、平台和参考图，先审核画布成品，确认具体版本后再制作分层源文件。
+    outputs: 电商视觉成品、预览图、分层源文件及可选宣传视频。
+  en-US:
+    summary: Plan and produce reviewable e-commerce main images, detail pages and optional promotional videos from product facts.
+    best-for:
+    - Product listings and PDPs
+    - Platform-ready artwork
+    - Layered source delivery
+    how-to-use: Provide product facts, platform and references, review the canvas artwork, then approve exact versions before layered source production.
+    outputs: Finished e-commerce visuals, previews, layered sources and an optional promo video.

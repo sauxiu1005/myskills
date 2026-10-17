@@ -1,0 +1,36 @@
+display-name-zh: RPG 游戏剧情短片
+version: 1.0.0
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Creative Generation
+complete-tags-cn:
+- 专业影视 / 创作生成
+summary-en: Turn ideas or references into thirty-second game-narrative films with complete HUD, purposeful cuts, and verified character and spatial continuity.
+summary-cn: 根据创意或参考制作带完整游戏界面的三十秒剧情短片，按内容切镜并核验人物与空间衔接。
+desc-en: For game-story creators, turn ideas or references into a thirty-second landscape combat, parkour or open-world film. Confirm live-action or realistic 3D visuals, story, quality and interface approach, then prepare character, environment and prop references. Plan shots around visible actions and spatial relationships. Inspect each adopted segment's actual ending before designing the next opening, preserving the full game HUD and causally justified interface changes. The live-action route includes a representative pilot for approval. Assemble the film with native sound and report continuity and interface checks. This creates linear story videos, not playable games, and does not guarantee a first result without spatial or text errors.
+desc-cn: 面向游戏剧情短片创作者，将创意或参考转化为三十秒横屏战斗、跑酷或开放世界故事。先确认真人摄影或写实三维风格、剧情、画质与界面方案，再准备角色、场景和道具参考，按动作需要规划镜头与空间关系。逐段核对实际结尾后安排后续开场，保留完整游戏界面及有因果的状态变化，真人路线先验收代表性样片。最终合成带原声的剧情短片，并报告连续性与界面检查结果。不开发可玩游戏，不承诺首次生成没有空间或文字误差。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 将战斗、跑酷或开放世界创意制作成带完整游戏界面的剧情短片，保持镜头之间的人物动作与空间连贯。
+    best-for:
+    - 游戏剧情
+    - 战斗跑酷
+    - 写实短片
+    how-to-use: 提供故事或参考，选择真人或三维风格，确认剧情、素材和界面方案后制作。
+    outputs: 角色场景参考、镜头与界面方案，以及带原声的三十秒剧情短片。
+  en-US:
+    summary: Turn combat, parkour or open-world ideas into game-story films with a complete HUD and coherent character actions and space across shots.
+    best-for:
+    - Game Stories
+    - Combat and Parkour
+    - Realistic Films
+    how-to-use: Provide a story or references, select live action or 3D, then approve assets and the HUD plan.
+    outputs: Character and environment references, shot and HUD plans, and a thirty-second film with native sound.
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/da14fbe4-02ae-4f63-9022-500a9df8be21.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/da14fbe4-02ae-4f63-9022-500a9df8be21.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/690e93be-4ed9-4419-be65-48a597771559.mp4

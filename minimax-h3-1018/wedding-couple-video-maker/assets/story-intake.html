@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>婚礼故事采集卡</title>
+
+<style>
+:root{
+  --paper:#F2F2F4; --panel:#FFFFFF; --ink:#1E2333; --ink-2:#5B6275; --ink-3:#8A90A3;
+  --line:#D9DBE3; --line-2:#EBECF1;
+  --lamp:#C4892C; --lamp-ink:#8A5E14; --lamp-soft:#F7ECD8;
+  --focus:#3B5A85; --shadow:0 1px 2px rgba(30,35,51,.06),0 8px 24px rgba(30,35,51,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15181F; --panel:#1D2129; --ink:#ECEDF1; --ink-2:#A6ABBA; --ink-3:#737A8E;
+    --line:#2F3442; --line-2:#262A36;
+    --lamp:#D9A24A; --lamp-ink:#EAC275; --lamp-soft:#2B2517;
+    --focus:#8FB0E0; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15181F; --panel:#1D2129; --ink:#ECEDF1; --ink-2:#A6ABBA; --ink-3:#737A8E;
+  --line:#2F3442; --line-2:#262A36;
+  --lamp:#D9A24A; --lamp-ink:#EAC275; --lamp-soft:#2B2517;
+  --focus:#8FB0E0; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Noto Serif SC","Songti SC","STSong","SimSun",serif;font-weight:600;margin:0;text-wrap:balance}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
+button{font:inherit;color:inherit}
+
+.bar{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--line)}
+.bar-in{max-width:1080px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.bar h1{font-size:17px;letter-spacing:.02em}
+.bar .sp{flex:1}
+.prog{display:inline-flex;align-items:center;gap:10px;padding:5px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink-2);background:var(--panel)}
+.prog .track{width:72px;height:6px;border-radius:3px;background:var(--line-2);overflow:hidden}
+.prog .fill{height:100%;width:0;background:var(--lamp);transition:width .2s}
+.prog.done{border-color:var(--lamp);color:var(--lamp-ink);background:var(--lamp-soft)}
+.btn{padding:6px 12px;border:1px solid var(--line);border-radius:8px;background:var(--panel);cursor:pointer;font-size:13px}
+.btn:hover{border-color:var(--ink-3)}
+.btn.primary{background:var(--lamp);border-color:var(--lamp);color:#1E2333;font-weight:500}
+.btn.primary:hover{filter:brightness(.95)}
+.btn:disabled{opacity:.55;cursor:default}
+.btn:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+
+.wrap{max-width:1080px;margin:0 auto;padding:32px 24px 96px;display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+@media (min-width:1000px){.wrap{grid-template-columns:minmax(0,640px) 360px;align-items:start}}
+.intro h2{font-size:28px;line-height:1.3;margin-bottom:10px}
+.intro p{margin:0;color:var(--ink-2);max-width:36em}
+.intro .rule{display:flex;gap:18px;margin-top:14px;font-size:13px;color:var(--ink-2);flex-wrap:wrap}
+.intro .rule b{color:var(--ink);font-weight:500}
+
+section{padding:28px 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0;padding-top:0}
+.eyebrow{display:flex;align-items:baseline;gap:12px;font-size:12px;letter-spacing:.08em;color:var(--ink-3)}
+.eyebrow .tc{color:var(--lamp-ink);letter-spacing:.02em}
+section h2{font-size:24px;margin-top:6px}
+section h2 small{font-family:"Noto Sans SC","PingFang SC",sans-serif;font-weight:400;font-size:15px;color:var(--ink-2);margin-left:10px}
+.why{margin:8px 0 0;color:var(--ink-2);font-size:13.5px;max-width:36em}
+
+.q{margin-top:22px}
+.q-h{display:flex;align-items:baseline;gap:8px;margin-bottom:10px}
+.q-n{font-size:12px;color:var(--ink-3);min-width:1.6em}
+.q-t{font-weight:500}
+.q-k{font-size:12px;padding:1px 8px;border-radius:999px;color:var(--ink-3);background:var(--line-2)}
+.q-k.rec{color:var(--lamp-ink);background:var(--lamp-soft)}
+.q-sub{font-size:13px;color:var(--ink-2);margin:-6px 0 10px 2.2em}
+.hint{font-size:12.5px;color:var(--ink-3);margin:8px 0 0 2.2em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-left:2.2em}
+.chip{position:relative}
+.chip input[type=radio]{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.chip label{display:inline-block;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:var(--panel);cursor:pointer;font-size:14px;line-height:1.35;transition:border-color .12s,background .12s}
+.chip label:hover{border-color:var(--ink-3)}
+.chip input:checked+label{border-color:var(--lamp);background:var(--lamp-soft);color:var(--lamp-ink);font-weight:500}
+.chip input:focus-visible+label{outline:2px solid var(--focus);outline-offset:2px}
+.chip.other{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.chip.other input[type=text]{width:240px;display:none;padding:6px 10px;font-size:13.5px}
+.chip.other input:checked~input[type=text]{display:block}
+.sub{margin:12px 0 0 2.2em;padding:12px 14px;border:1px dashed var(--line);border-radius:8px}
+.sub .q-h{margin-bottom:8px}
+.sub .chips{margin-left:0}
+input[type=text],textarea{width:100%;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);font:inherit;font-size:14px}
+input[type=text]::placeholder,textarea::placeholder{color:var(--ink-3)}
+textarea{min-height:64px;resize:vertical}
+.row{display:grid;gap:10px;margin-left:2.2em}
+.row.two{grid-template-columns:1fr 1fr}
+.field{display:grid;gap:4px}
+.field label{font-size:12.5px;color:var(--ink-2)}
+.checks{display:grid;gap:8px;margin-left:2.2em}
+.check{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center}
+.check label{display:flex;gap:8px;align-items:center;font-size:14px;cursor:pointer}
+.check input[type=checkbox]{width:16px;height:16px;accent-color:var(--lamp);margin:0}
+.check input[type=text]{padding:6px 10px;font-size:13.5px}
+
+/* 照片 */
+.photos{margin-left:2.2em;display:grid;gap:12px}
+.drop{display:flex;align-items:center;gap:14px;padding:12px 14px;border:1px dashed var(--line);border-radius:8px;background:var(--panel)}
+.drop input[type=file]{position:absolute;opacity:0;width:1px;height:1px}
+.drop .pick{padding:7px 12px;border:1px solid var(--line);border-radius:8px;background:var(--paper);cursor:pointer;font-size:13.5px;white-space:nowrap}
+.drop .pick:hover{border-color:var(--ink-3)}
+.drop .txt{font-size:13px;color:var(--ink-2);flex:1}
+.drop .txt b{color:var(--ink);font-weight:500}
+.thumbs{display:flex;gap:10px;flex-wrap:wrap}
+.thumb{position:relative;width:96px;height:96px;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:var(--line-2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb button{position:absolute;top:4px;right:4px;width:22px;height:22px;border:0;border-radius:50%;background:rgba(30,35,51,.75);color:#fff;font-size:13px;line-height:22px;cursor:pointer;padding:0}
+.thumb .tag{position:absolute;left:0;right:0;bottom:0;background:rgba(30,35,51,.65);color:#fff;font-size:11px;padding:2px 6px}
+
+.card{position:sticky;top:64px;background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+.card-h{padding:14px 16px 12px;border-bottom:1px solid var(--line-2)}
+.card-h h3{font-size:16px}
+.card-h p{margin:4px 0 0;font-size:12.5px;color:var(--ink-2)}
+.acts{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.act{font-size:11.5px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--ink-3);background:var(--paper)}
+.act.on{border-color:var(--lamp);color:var(--lamp-ink);background:var(--lamp-soft)}
+.card-b{padding:14px 16px;font-size:12.5px;line-height:1.75;white-space:pre-wrap;word-break:break-all}
+.card-b .m{color:var(--ink-3)}
+.card-b .u{color:var(--lamp-ink);background:var(--lamp-soft);padding:0 4px;border-radius:3px}
+.card-f{padding:12px 16px;border-top:1px solid var(--line-2);display:grid;gap:10px}
+.card-f .btns{display:flex;gap:8px;flex-wrap:wrap}
+.card-f .tip{font-size:12px;color:var(--ink-3)}
+.card-f .state{font-size:12.5px;color:var(--lamp-ink)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(8px);background:var(--ink);color:var(--paper);padding:8px 14px;border-radius:8px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .15s,transform .15s;z-index:20;max-width:90vw}
+.toast.show{opacity:1;transform:translateX(-50%)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:600px){.row.two{grid-template-columns:1fr}.bar-in{padding:10px 16px}.wrap{padding:24px 16px 80px}.intro h2{font-size:24px}.chip.other input[type=text]{width:100%}.drop{flex-direction:column;align-items:stretch}}
+@media (max-width:600px){input[type=text],textarea{font-size:16px}.bar .prog{order:3;width:100%;justify-content:center}}
+html[lang="en"] .card-b{word-break:normal;overflow-wrap:anywhere}
+#langToggle{text-decoration:none;color:var(--ink)}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="bar-in">
+  <h1>婚礼故事采集卡</h1>
+  <span class="sp"></span>
+  <a class="btn" id="langToggle" href="?lang=en" aria-label="Switch language">English</a>
+  <span class="prog" id="prog"><span class="track"><span class="fill" id="fill"></span></span><span id="progt">必答 0 / 18</span></span>
+  <button class="btn" id="btnClear" type="button">清空</button>
+</div></div>
+
+<div class="wrap">
+<main>
+  <div class="intro"><p>填好后点「复制故事卡」，通过微信等方式发回制作方。推荐电脑填写，手机也可以。下面的例子只是填写提示，请只写你们的真实经历；没有、记不清或不想呈现的，选「其他」并说明，细节栏也可如实填写。</p><p>文字草稿仅保存在当前浏览器；不收集手机号，不向后台提交。照片原图请在聊天中另发。</p></div>
+  <section id="s0">
+    <div class="eyebrow"><span>基本信息</span></div>
+    <h2>先认识一下<small>全部必答</small></h2>
+
+    <div class="q">
+      <div class="q-h"><span class="q-n">1</span><span class="q-t">视频尺寸</span></div>
+      <div class="chips" id="ratio"></div>
+    </div>
+    <div class="q">
+      <div class="q-h"><span class="q-n">2</span><span class="q-t">两人在视频里怎么称呼</span></div>
+      <div class="row two">
+        <div class="field"><label for="groom">新郎</label><input type="text" id="groom" placeholder="例：阿远"></div>
+        <div class="field"><label for="bride">新娘</label><input type="text" id="bride" placeholder="例：小雨"></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="q-h"><span class="q-n">3</span><span class="q-t">照片</span></div>
+      <div class="row"><p class="why">请把两人清晰的正脸合照或各自单人照，通过微信等方式另发给制作方。刚认识时、婚纱或试妆的照片也可以补充。此处不上传照片。</p></div>
+      <div class="hint">自拍是广角近距离，脸会比真人略宽，生成的画面会照着画。能再给一张别人拍的合照更好。</div>
+    </div>
+    <div class="q">
+      <div class="q-h"><span class="q-n">4</span><span class="q-t">在哪个环节播放</span></div>
+      <div class="q-sub">决定结尾旁白怎么落、配乐快慢：暖场留一步给仪式，仪式中直接落到誓言，宴会开场更轻快、可以带一句给来宾。</div>
+      <div class="chips" id="occasion"></div>
+    </div>
+    <div class="q">
+      <div class="q-h"><span class="q-n">5</span><span class="q-t">时长</span></div>
+      <div class="q-sub">先选希望的片长，五幕按故事轻重分配；具体镜头根据后续旁白的实际节奏安排。</div>
+      <div class="chips" id="duration"></div>
+    </div>
+    <div class="q">
+      <div class="q-h"><span class="q-n">6</span><span class="q-t">画风</span></div>
+      <div class="chips" id="style"></div>
+      <div class="sub" id="styleSub" hidden>
+        <div class="q-h"><span class="q-t">这个画风里，两个人怎么出现</span></div>
+        <div class="chips" id="styleMode"></div>
+        <div class="hint" style="margin-left:0">"真人出镜"：脸和身材按照片来，环境和质感是动画；"纯动画"：两人也画成动画形象；画风选了"其他"且是写实的，选"写实真人"。这一项直接决定生图提示词怎么写。</div>
+      </div>
+    </div>
+  </section>
+
+  <div id="acts"></div>
+
+  <section id="s6">
+    <div class="eyebrow"><span>加减项</span></div>
+    <h2>想加的，不想要的<small>选填，建议填</small></h2>
+    <p class="why">这里的东西会直接变成画面里的道具、地点和旁白里的一句话，是片子最像"你们"的部分。</p>
+    <div class="q">
+      <div class="q-h"><span class="q-n">19</span><span class="q-t">想放进去的东西</span><span class="q-k rec">建议填</span></div>
+      <div class="checks" id="adds"></div>
+    </div>
+    <div class="q">
+      <div class="q-h"><span class="q-n">20</span><span class="q-t">不想出现的东西</span><span class="q-k rec">建议填</span></div>
+      <div class="row"><textarea id="avoid" placeholder="例：不出现前任、不出现酒"></textarea></div>
+    </div>
+    <div class="q">
+      <div class="q-h"><span class="q-n">21</span><span class="q-t">五幕里有没有想换掉的一幕，换成什么</span><span class="q-k">选填</span></div>
+      <div class="row"><input type="text" id="swap" placeholder="例：第四幕换成和爸妈一起过年" ></div>
+    </div>
+  </section>
+  <section id="s7">
+    <div class="eyebrow"><span>音乐</span></div>
+    <h2>配乐<small>选填，只收不带歌词的纯音乐</small></h2>
+    <div class="q">
+      <div class="q-h"><span class="q-n">22</span><span class="q-t">有没有想用的纯音乐</span></div>
+      <div class="chips" id="music"></div>
+      <div class="hint">带歌词的歌和旁白会打架，所以只收纯音乐。没有合适的，制作方用音乐模型按片子情绪定制一首。</div>
+    </div>
+  </section>
+  <section id="s8">
+    <div class="eyebrow"><span>备注</span></div>
+    <h2>还有什么想法<small>必答，任何想法都写这里</small></h2>
+    <div class="q">
+      <div class="q-h"><span class="q-n">23</span><span class="q-t">注意点、参考、想法</span></div>
+      <div class="q-sub">想要的画面质感、参考的电影或照片、特别在意的地方、怕出错的地方，都写。写得越具体，片子越像你们想的那样。</div>
+      <div class="row"><textarea id="notes" placeholder="例：画面想要日系电影那种朦胧、精致的质感；旁白别太煽情；他不喜欢正面特写"></textarea></div>
+    </div>
+  </section>
+</main>
+
+<aside>
+  <div class="card">
+    <div class="card-h">
+      <h3>故事卡</h3>
+      <p>答一题，改一行。填完后复制，通过微信发回制作方。</p>
+      <div class="acts" id="actChips"></div>
+    </div>
+    <div class="card-b mono" id="cardBody"></div>
+    <div class="card-f">
+      <div class="btns">
+        <button class="btn primary" id="btnCopy" type="button">复制故事卡</button>
+      </div>
+      <textarea id="copyFallback" aria-label="完整故事卡，可长按全选复制" readonly hidden></textarea>
+      <div class="tip" id="submitTip">复制后把故事卡和原图一起发给制作方。</div>
+    </div>
+  </div>
+</aside>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+const SPEC = {
+  ratio:[['宽屏 16:9（默认，现场大屏）','宽屏 16:9'],['窄屏 9:16（手机竖屏）','窄屏 9:16']],
+  occasion:['仪式前暖场','仪式中','宴会开场'],
+  duration:[['90 秒（默认）','90 秒'],['180 秒','180 秒']],
+  style:[['写实电影感','写实电影感'],['水彩绘本','水彩绘本'],['纸艺折纸','纸艺折纸'],['黏土定格','黏土定格'],['可爱 3D 动画','可爱 3D 动画']],
+  styleMode:[['真人出镜，环境和画风是动画','真人出镜+动画环境'],['纯动画，两人也画成动画形象','纯动画'],['写实真人，不是动画','写实真人']],
+  acts:[
+    {id:'a1',n:'第一幕',name:'相识',ask:'你们是怎么认识的',qPick:7,
+     opts:['校园同学','同事','朋友介绍','网络认识','旅行或活动偶遇','青梅竹马'],
+     fill:{q:8,ask:'第一次见面在哪、什么季节、谁先注意到谁？',ph:'例：大二图书馆门口的林荫道，秋天，他先注意到她'},
+     extra:{q:9,ask:'那天有没有一个你到现在还记得的小东西（一本书、一杯饮料、一句话）？',ph:'例：她抱着两本书'}},
+    {id:'a2',n:'第二幕',name:'相知',ask:'是怎么慢慢走近的',qPick:10,
+     opts:['雨天共伞','一起自习或加班','一起吃饭','深夜打电话','一起旅行','生病照顾','一起做饭'],
+     fill:{q:11,ask:'对方做过的一件让你心动的小事。',ph:'例：下雨天他的伞永远偏向她，自己右肩总是湿的'}},
+    {id:'a3',n:'第三幕',name:'确认',ask:'怎么在一起的，表白或求婚',qPick:12,
+     opts:['毕业时决定一起走','表白','求婚','异地重逢','决定同行（搬家、换城市）'],
+     fill:{q:13,ask:'在哪、谁开的口、说了什么？',ph:'例：毕业那天教学楼前，他说以后的路一起走'}},
+    {id:'a4',n:'第四幕',name:'相伴',ask:'一起生活的日子',qPick:14,
+     opts:['家中翻相册','布置第一个家','养宠物','一起做饭','异地坚持','共同事业','一起熬过一件难事'],
+     fill:{q:15,ask:'日常里最"你们"的一个画面。',ph:'例：周末傍晚窝在沙发翻老照片，笑到茶都凉了'}},
+    {id:'a5',n:'第五幕',name:'承诺',ask:'婚礼当天，片子怎么收尾',qPick:17,
+     venue:{q:16,opts:['户外草坪或花园','室内宴会厅','中式庭院','教堂','海边','旅行婚礼']},
+     opts:['牵手走远','回眸相笑','拥抱','交换戒指（只拍手，最稳）'],
+     fill:{q:18,ask:'想对对方说的一句话，会做结尾旁白。',ph:'例：这次，我就在你身边'}}
+  ],
+  adds:[['pet','宠物，名字','例：柯基「豆豆」'],['place','一个有意义的地方','例：学校后门的奶茶店'],['thing','一件有意义的物品','例：第一次约会的电影票'],['song','一首歌','例：他们大学时常听的那首'],['phrase','一句你们常说的话','例：走啦，回家']]
+};
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+const LANG = new URL(location.href).searchParams.get('lang')==='en' ? 'en' : 'zh';
+const EN = {
+  "婚礼故事采集卡": "Wedding Story Card",
+  "清空": "Clear",
+  "基本信息": "The basics",
+  "先认识一下": "A little about you",
+  "全部必答": "Required",
+  "填好后点「复制故事卡」，通过微信等方式发回制作方。推荐电脑填写，手机也可以。下面的例子只是填写提示，请只写你们的真实经历；没有、记不清或不想呈现的，选「其他」并说明，细节栏也可如实填写。": "Fill this in, choose Copy story card, and send the text to your creator through your usual messaging app. A computer is recommended; a phone works too. Examples are only prompts: use your real experiences. Choose Other if something did not happen, you do not remember, or you prefer to leave it out; say the same in the detail field.",
+  "文字草稿仅保存在当前浏览器；不收集手机号，不向后台提交。照片原图请在聊天中另发。": "Your text draft stays in this browser. No phone number is collected and nothing is submitted to a server. Send original photos separately in your conversation.",
+  "视频尺寸": "Aspect ratio",
+  "两人在视频里怎么称呼": "What names should we use in the film?",
+  "新郎": "Groom",
+  "新娘": "Bride",
+  "例：阿远": "e.g. Alex",
+  "例：小雨": "e.g. Emma",
+  "照片": "Photos",
+  "请把两人清晰的正脸合照或各自单人照，通过微信等方式另发给制作方。刚认识时、婚纱或试妆的照片也可以补充。此处不上传照片。": "Send clear, front-facing photos of you together or individually to your creator in your existing conversation. Early relationship photos and wedding outfit or makeup photos can help too. There is no photo upload here.",
+  "自拍是广角近距离，脸会比真人略宽，生成的画面会照着画。能再给一张别人拍的合照更好。": "Close-up wide-angle selfies can distort faces. A clear photo taken by someone else is a useful additional reference.",
+  "在哪个环节播放": "When will the film be shown?",
+  "决定结尾旁白怎么落、配乐快慢：暖场留一步给仪式，仪式中直接落到誓言，宴会开场更轻快、可以带一句给来宾。": "This shapes the ending and musical pace: an introduction can lead into the ceremony, a ceremony film can lead into vows, and a reception opening can feel lighter and welcome guests.",
+  "时长": "Duration",
+  "先选希望的片长，五幕按故事轻重分配；具体镜头根据后续旁白的实际节奏安排。": "Choose your preferred length. The five acts will reflect your story; individual shots will follow the actual narration timing.",
+  "画风": "Visual style",
+  "这个画风里，两个人怎么出现": "How should the two of you look in this style?",
+  "\"真人出镜\"：脸和身材按照片来，环境和质感是动画；\"纯动画\"：两人也画成动画形象；画风选了\"其他\"且是写实的，选\"写实真人\"。这一项直接决定生图提示词怎么写。": "Real people in a stylized setting keeps your likeness from the photos. Fully animated characters stylizes both of you too. Choose Photorealistic people if your Other style is realistic. This choice guides the image prompts.",
+  "加减项": "Include or leave out",
+  "想加的，不想要的": "What matters to you",
+  "选填，建议填": "Optional, recommended",
+  "这里的东西会直接变成画面里的道具、地点和旁白里的一句话，是片子最像\"你们\"的部分。": "These details can become meaningful objects, places or lines in the film—the parts that make it feel like your story.",
+  "想放进去的东西": "Things to include",
+  "建议填": "Recommended",
+  "不想出现的东西": "Things to leave out",
+  "例：不出现前任、不出现酒": "e.g. No former partners or alcohol",
+  "五幕里有没有想换掉的一幕，换成什么": "Would you replace any of the five acts? With what?",
+  "选填": "Optional",
+  "例：第四幕换成和爸妈一起过年": "e.g. Replace act four with celebrating New Year with our parents",
+  "音乐": "Music",
+  "配乐": "Background music",
+  "选填，只收不带歌词的纯音乐": "Optional; instrumental music only",
+  "有没有想用的纯音乐": "Do you have an instrumental track in mind?",
+  "带歌词的歌和旁白会打架，所以只收纯音乐。没有合适的，制作方用音乐模型按片子情绪定制一首。": "Lyrics can compete with narration, so this card asks for instrumental music. If you have no track in mind, your creator can generate music that follows the story.",
+  "备注": "Notes",
+  "还有什么想法": "Anything else?",
+  "必答，任何想法都写这里": "Required; write None if there is nothing else",
+  "注意点、参考、想法": "Ideas, references and things to watch for",
+  "想要的画面质感、参考的电影或照片、特别在意的地方、怕出错的地方，都写。写得越具体，片子越像你们想的那样。": "Tell us about the look you want, film or photo references, important details and anything you worry might go wrong. Specific notes help the film match your wishes.",
+  "例：画面想要日系电影那种朦胧、精致的质感；旁白别太煽情；他不喜欢正面特写": "e.g. Soft, refined cinematic images; understated narration; avoid front-facing close-ups of him",
+  "故事卡": "Your story card",
+  "答一题，改一行。填完后复制，通过微信发回制作方。": "Your card updates as you answer. When finished, copy it and send it to your creator.",
+  "复制故事卡": "Copy story card",
+  "完整故事卡，可长按全选复制": "Complete story card; select all and copy",
+  "复制后把故事卡和原图一起发给制作方。": "Send the copied card to your creator, with original photos as separate attachments.",
+  "宽屏 16:9（默认，现场大屏）": "Landscape 16:9 (default, venue screen)",
+  "宽屏 16:9": "Landscape 16:9",
+  "窄屏 9:16（手机竖屏）": "Portrait 9:16 (phone screen)",
+  "窄屏 9:16": "Portrait 9:16",
+  "仪式前暖场": "Before the ceremony",
+  "仪式中": "During the ceremony",
+  "宴会开场": "Reception opening",
+  "90 秒（默认）": "90 seconds (default)",
+  "90 秒": "90 seconds",
+  "180 秒": "180 seconds",
+  "写实电影感": "Cinematic realism",
+  "水彩绘本": "Watercolor storybook",
+  "纸艺折纸": "Paper craft / origami",
+  "黏土定格": "Clay stop-motion",
+  "可爱 3D 动画": "Playful 3D animation",
+  "真人出镜，环境和画风是动画": "Real people in a stylized setting",
+  "真人出镜+动画环境": "Real people + stylized setting",
+  "纯动画，两人也画成动画形象": "Both people fully animated",
+  "纯动画": "Fully animated characters",
+  "写实真人，不是动画": "Photorealistic people, not animation",
+  "写实真人": "Photorealistic people",
+  "第一幕": "Act 1",
+  "第二幕": "Act 2",
+  "第三幕": "Act 3",
+  "第四幕": "Act 4",
+  "第五幕": "Act 5",
+  "相识": "Meeting",
+  "相知": "Growing closer",
+  "确认": "Choosing each other",
+  "相伴": "Life together",
+  "承诺": "Commitment",
+  "你们是怎么认识的": "How did you meet?",
+  "是怎么慢慢走近的": "How did you grow closer?",
+  "怎么在一起的，表白或求婚": "How did you become a couple or get engaged?",
+  "一起生活的日子": "Your everyday life together",
+  "婚礼当天，片子怎么收尾": "How should the wedding film end?",
+  "校园同学": "School or university",
+  "同事": "At work",
+  "朋友介绍": "Through friends",
+  "网络认识": "Online",
+  "旅行或活动偶遇": "A trip or event",
+  "青梅竹马": "Childhood friends",
+  "第一次见面在哪、什么季节、谁先注意到谁？": "Where and when did you first meet? Who noticed whom first?",
+  "例：大二图书馆门口的林荫道，秋天，他先注意到她": "e.g. Outside the university library in autumn; he noticed her first",
+  "那天有没有一个你到现在还记得的小东西（一本书、一杯饮料、一句话）？": "Is there a small detail you still remember—a book, a drink or something someone said?",
+  "例：她抱着两本书": "e.g. She was carrying two books",
+  "雨天共伞": "Sharing an umbrella",
+  "一起自习或加班": "Studying or working late together",
+  "一起吃饭": "Sharing meals",
+  "深夜打电话": "Late-night phone calls",
+  "一起旅行": "Traveling together",
+  "生病照顾": "Caring for someone who was ill",
+  "一起做饭": "Cooking together",
+  "对方做过的一件让你心动的小事。": "One small thing they did that moved you.",
+  "例：下雨天他的伞永远偏向她，自己右肩总是湿的": "e.g. He tilted the umbrella toward her and let his own shoulder get wet",
+  "毕业时决定一起走": "Choosing a future together at graduation",
+  "表白": "Expressing your feelings",
+  "求婚": "A proposal",
+  "异地重逢": "Reuniting after time apart",
+  "决定同行（搬家、换城市）": "Moving or changing cities together",
+  "在哪、谁开的口、说了什么？": "Where were you, who spoke first, and what was said?",
+  "例：毕业那天教学楼前，他说以后的路一起走": "e.g. On graduation day, he said he wanted to share the road ahead",
+  "家中翻相册": "Looking through photos at home",
+  "布置第一个家": "Making your first home",
+  "养宠物": "Life with a pet",
+  "异地坚持": "Making long distance work",
+  "共同事业": "Working on something together",
+  "一起熬过一件难事": "Getting through a difficult time",
+  "日常里最\"你们\"的一个画面。": "An everyday moment that feels especially like the two of you.",
+  "例：周末傍晚窝在沙发翻老照片，笑到茶都凉了": "e.g. Looking through old photos on the sofa and laughing until the tea went cold",
+  "户外草坪或花园": "Lawn or garden",
+  "室内宴会厅": "Indoor reception hall",
+  "中式庭院": "Chinese courtyard",
+  "教堂": "Church",
+  "海边": "By the sea",
+  "旅行婚礼": "Destination wedding",
+  "牵手走远": "Walking away hand in hand",
+  "回眸相笑": "Turning to smile at each other",
+  "拥抱": "An embrace",
+  "交换戒指（只拍手，最稳）": "Exchanging rings (hands only for simpler framing)",
+  "想对对方说的一句话，会做结尾旁白。": "One thing you would like to say to your partner, for the closing narration.",
+  "例：这次，我就在你身边": "e.g. This time, I am right beside you",
+  "宠物，名字": "Pet and name",
+  "宠物": "Pet",
+  "例：柯基「豆豆」": "e.g. Our corgi, Bean",
+  "一个有意义的地方": "A meaningful place",
+  "例：学校后门的奶茶店": "e.g. The tea shop behind our school",
+  "一件有意义的物品": "A meaningful object",
+  "例：第一次约会的电影票": "e.g. Our first-date cinema ticket",
+  "一首歌": "A song",
+  "例：他们大学时常听的那首": "e.g. The song we used to play at university",
+  "一句你们常说的话": "Something you often say",
+  "例：走啦，回家": "e.g. Come on, let us go home",
+  "其他": "Other",
+  "其他，请填写": "Other, please describe",
+  "自己写一个": "Describe your own answer",
+  "自己写": "Describe your own answer",
+  "例：1:1 方形": "e.g. Square 1:1",
+  "例：敬酒环节": "e.g. During the toasts",
+  "例：120 秒": "e.g. 120 seconds",
+  "例：岩井俊二《花与爱丽丝》那种质感": "e.g. The soft cinematic look of Hana and Alice",
+  "我有想用的纯音乐": "I have an instrumental track in mind",
+  "曲名 / 作者 / 链接，不带歌词": "Title / artist / link; no lyrics",
+  "曲名": "Track title",
+  "交给制作方定制": "Let the creator choose or make the music",
+  "制作方定制": "Music by the creator",
+  "婚礼在哪办": "Where will the wedding take place?",
+  "决定这一幕画在什么地方、什么光线。": "This guides the setting and light for the ending.",
+  "结尾动作": "Ending action",
+  "选一个": "Choose one",
+  "填一个": "Add a detail",
+  "加一个": "One more detail",
+  "写一个场景": "Describe a moment",
+  "例：民宿院子": "e.g. The garden at a guesthouse",
+  "未填": "Missing",
+  "称呼": "Names",
+  "播放环节": "Playback occasion",
+  "尺寸": "Aspect ratio",
+  "场合": "Occasion",
+  "画风里两人怎么出现": "How the two people appear",
+  "场景": "scene",
+  "结尾一句": "Closing line",
+  "细节": "detail",
+  "场地": "venue",
+  "加": "Extra",
+  "加项": "Include",
+  "禁忌": "Leave out",
+  "换幕": "Replace an act",
+  "自带纯音乐": "Your instrumental track",
+  "（曲名待补）": " (title still needed)",
+  "旁白：第三人称讲述（固定）": "Narration: third-person storytelling (fixed)",
+  "照片：原图通过聊天另发，不包含在复制文字中": "Photos: original files sent separately in the conversation; not included in copied text",
+  "无，可以复制": "None; ready to copy",
+  "必答": "Required",
+  "可以复制": "Ready to copy",
+  "当前浏览器不能保存草稿，请填好后及时复制，照片原图另发。": "This browser cannot save a draft. Please copy your answers before leaving; send original photos separately.",
+  "请补充：": "Please complete: ",
+  "。没有或记不清可如实填写。": ". You may say that something did not happen or you do not remember.",
+  "已复制，把故事卡和原图通过微信发回制作方": "Copied. Send the text to your creator and attach original photos separately.",
+  "请长按文字全选复制，电脑也可按 Ctrl / ⌘ + C": "Select all the text and copy it. On a computer, use Ctrl / Command + C.",
+  "清空本机这份填写草稿？": "Clear this draft from this browser?",
+  "已清空": "Draft cleared"
+};
+const tr = text => LANG==='en' ? (EN[text] ?? text) : text;
+const comma=LANG==='en'?', ':'、';
+function translateStatic(){
+ document.documentElement.lang=LANG==='en'?'en':'zh-CN';document.title=tr(document.title);
+ if(LANG==='en'){
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;
+  while(n=walker.nextNode()){if(n.parentElement.closest('script,style,#cardBody,#langToggle'))continue;const key=n.textContent.trim();if(EN[key])n.textContent=n.textContent.replace(key,EN[key]);}
+  document.querySelectorAll('[placeholder],[aria-label]').forEach(el=>{for(const a of ['placeholder','aria-label'])if(el.hasAttribute(a))el.setAttribute(a,tr(el.getAttribute(a)));});
+ }
+ const link=$('#langToggle');link.textContent=LANG==='en'?'中文':'English';const url=new URL(location.href);url.searchParams.set('lang',LANG==='en'?'zh':'en');link.href=url.href;
+}
+
+function chips(host, name, opts, otherPh){
+  const h = typeof host==='string' ? $(host) : host;
+  let html = opts.map((o,i)=>{ const [label,val] = Array.isArray(o)?o:[o,o];
+    return `<span class="chip"><input type="radio" name="${name}" id="${name}_${i}" value="${esc(val)}"><label for="${name}_${i}">${esc(label)}</label></span>`; }).join('');
+  html += `<span class="chip other"><input type="radio" name="${name}" id="${name}_x" value="其他"><label for="${name}_x">其他</label><input type="text" id="${name}_other" placeholder="${esc(otherPh||'自己写一个')}" aria-label="其他，请填写"></span>`;
+  h.innerHTML = html;
+}
+chips('#ratio','ratio',SPEC.ratio,'例：1:1 方形');
+chips('#occasion','occasion',SPEC.occasion,'例：敬酒环节');
+chips('#duration','duration',SPEC.duration,'例：120 秒');
+chips('#style','style',SPEC.style,'例：岩井俊二《花与爱丽丝》那种质感');
+chips('#styleMode','styleMode',SPEC.styleMode,'自己写');
+$('#music').innerHTML = `<span class="chip other"><input type="radio" name="music" id="music_own" value="自带"><label for="music_own">我有想用的纯音乐</label><input type="text" id="music_own_t" placeholder="曲名 / 作者 / 链接，不带歌词" aria-label="曲名"></span><span class="chip"><input type="radio" name="music" id="music_us" value="制作方定制"><label for="music_us">交给制作方定制</label></span>`;
+
+$('#acts').innerHTML = SPEC.acts.map(a=>`
+<section id="${a.id}">
+  <div class="eyebrow"><span>${a.n}</span></div>
+  <h2>${a.name}<small>${a.ask}</small></h2>
+  ${a.venue?`<div class="q">
+    <div class="q-h"><span class="q-n">${a.venue.q}</span><span class="q-t">婚礼在哪办</span></div>
+    <div class="q-sub">决定这一幕画在什么地方、什么光线。</div>
+    <div class="chips" id="${a.id}_venue_chips"></div>
+  </div>`:''}
+  <div class="q">
+    <div class="q-h"><span class="q-n">${a.qPick}</span><span class="q-t">${a.venue?'结尾动作':'选一个'}</span></div>
+    <div class="chips" id="${a.id}_chips"></div>
+  </div>
+  <div class="q">
+    <div class="q-h"><span class="q-n">${a.fill.q}</span><span class="q-t">填一个</span></div>
+    <div class="q-sub">${esc(a.fill.ask)}</div>
+    <div class="row"><input type="text" id="${a.id}_fill" placeholder="${esc(a.fill.ph)}"></div>
+  </div>
+  ${a.extra?`<div class="q">
+    <div class="q-h"><span class="q-n">${a.extra.q}</span><span class="q-t">加一个</span><span class="q-k">选填</span></div>
+    <div class="q-sub">${esc(a.extra.ask)}</div>
+    <div class="row"><input type="text" id="${a.id}_extra" placeholder="${esc(a.extra.ph)}"></div>
+  </div>`:''}
+</section>`).join('');
+SPEC.acts.forEach(a=>{ chips('#'+a.id+'_chips', a.id+'_pick', a.opts, '写一个场景'); if(a.venue) chips('#'+a.id+'_venue_chips', a.id+'_venue', a.venue.opts, '例：民宿院子'); });
+$('#adds').innerHTML = SPEC.adds.map(([k,label,ph])=>`
+<div class="check"><label><input type="checkbox" id="add_${k}">${esc(label)}</label><input type="text" id="add_${k}_t" placeholder="${esc(ph)}" aria-label="${esc(label)}"></div>`).join('');
+$('#actChips').innerHTML = SPEC.acts.map(a=>`<span class="act" id="ac_${a.id}">${a.name}</span>`).join('');
+
+const v = id => { const el = document.getElementById(id); return el ? (el.type==='checkbox' ? el.checked : el.value.trim()) : ''; };
+const radio = name => { const r = document.querySelector(`input[name="${name}"]:checked`); return r ? r.value : ''; };
+function pick(name){ const r = radio(name); if(r==='其他'){ const t = v(name+'_other'); return t ? tr('其他')+': '+t : ''; } return tr(r); }
+const needMode = () => { const r = radio('style'); return !!r && r!=='写实电影感'; };
+
+function build(){
+  $('#styleSub').hidden=!needMode();
+  const U='<span class="u">'+tr('未填')+'</span>', need=[],html=[],text=[];
+  const L=(h,t)=>{html.push(h);text.push(t);};
+  const cell=(val,label)=>{if(val)return [esc(val),val];need.push(tr(label));return [U,tr('未填')];};
+  const rows=[['称呼',v('groom')&&v('bride')?v('groom')+' / '+v('bride'):''],['尺寸',pick('ratio')],['场合',pick('occasion')],['时长',pick('duration')]];
+  let sty=pick('style');
+  if(sty&&needMode()){const mode=pick('styleMode');if(!mode)need.push(tr('画风里两人怎么出现'));sty+=' · '+(mode||tr('未填'));}
+  rows.push(['画风',sty]);
+  const parts=rows.map(([label,value])=>{const [h,t]=cell(value,label);return [tr(label)+'：'+h,tr(label)+'：'+t];});
+  L(parts.map(x=>x[0]).join('　　'),parts.map(x=>x[1]).join('　　'));
+  L(tr('照片：原图通过聊天另发，不包含在复制文字中'),tr('照片：原图通过聊天另发，不包含在复制文字中'));
+  SPEC.acts.forEach(a=>{
+    const p=pick(a.id+'_pick'),f=v(a.id+'_fill');
+    const prefix=tr(a.n)+(LANG==='en'?' ':'');
+    const [pH,pT]=cell(p,prefix+tr(a.venue?'结尾动作':'场景'));
+    const [fH,fT]=cell(f,prefix+tr(a.venue?'结尾一句':'细节'));
+    let h=tr(a.n)+' '+tr(a.name)+'：',t=h;
+    if(a.venue){const [vH,vT]=cell(pick(a.id+'_venue'),prefix+tr('场地'));h+=vH+' ｜ '+pH+' ｜ '+tr('结尾一句')+'：'+fH;t+=vT+' ｜ '+pT+' ｜ '+tr('结尾一句')+'：'+fT;}
+    else{h+=pH+' ｜ '+fH;t+=pT+' ｜ '+fT;if(a.extra){const x=v(a.id+'_extra');h+=' ｜ '+tr('加')+'：'+(x?esc(x):'<span class="m">—</span>');t+=' ｜ '+tr('加')+'：'+(x||'—');}}
+    document.getElementById('ac_'+a.id).classList.toggle('on',!!p&&!!f&&(!a.venue||!!pick(a.id+'_venue')));L(h,t);
+  });
+  const adds=SPEC.adds.filter(([k])=>v('add_'+k)||v('add_'+k+'_t')).map(([k,label])=>{const value=v('add_'+k+'_t');return tr(label.replace('，名字',''))+(value?'「'+value+'」':'');}).join(comma);
+  const extras=[['加项',adds],['禁忌',v('avoid')],['换幕',v('swap')]];
+  L(extras.map(([label,value])=>tr(label)+'：'+(value?esc(value):'<span class="m">—</span>')).join('　　'),extras.map(([label,value])=>tr(label)+'：'+(value||'—')).join('　　'));
+  const mu=radio('music'),muT=mu==='自带'?tr('自带纯音乐')+(v('music_own_t')?'「'+v('music_own_t')+'」':tr('（曲名待补）')):tr('制作方定制');
+  L(tr('音乐')+'：'+esc(muT),tr('音乐')+'：'+muT);
+  const [nH,nT]=cell(v('notes'),'备注');L(tr('备注')+'：'+nH,tr('备注')+'：'+nT);
+  L('<span class="m">'+tr('旁白：第三人称讲述（固定）')+'</span>',tr('旁白：第三人称讲述（固定）'));
+  L(tr('未填')+'：'+(need.length?'<span class="u">'+esc(need.join(comma))+'</span>':tr('无，可以复制')),tr('未填')+'：'+(need.length?need.join(comma):tr('无，可以复制')));
+  $('#cardBody').innerHTML=html.join('\n');build.text=text.join('\n');build.need=need;
+  const total=17+(needMode()?1:0),n=Math.max(0,total-need.length);
+  $('#fill').style.width=(n/total*100)+'%';$('#progt').textContent=tr('必答')+' '+n+' / '+total+(need.length===0?' · '+tr('可以复制'):'');
+  $('#prog').classList.toggle('done',need.length===0);
+}
+
+/* 本地文字草稿；不含照片或联系方式，不连接后台 */
+const KEY='wedding-intake-copy-v1';
+function fields(){ const o={}; document.querySelectorAll('main input,main textarea').forEach(el=>{ if(!el.id) return; o[el.id]= (el.type==='checkbox'||el.type==='radio') ? el.checked : el.value; }); return o; }
+function save(){ try{ localStorage.setItem(KEY,JSON.stringify(fields())); }catch(e){ $('#submitTip').textContent=tr('当前浏览器不能保存草稿，请填好后及时复制，照片原图另发。'); } }
+function load(){ try{ const o=JSON.parse(localStorage.getItem(KEY)||'null'); if(!o)return false; Object.keys(o).forEach(id=>{ const el=document.getElementById(id);if(!el)return;if(el.type==='checkbox'||el.type==='radio')el.checked=!!o[id];else el.value=o[id]; });return true; }catch(e){return false;} }
+function reset(){ document.querySelectorAll('input,textarea').forEach(el=>{if(el.type==='checkbox'||el.type==='radio')el.checked=false;else el.value='';});setRadio('ratio','宽屏 16:9');setRadio('duration','90 秒');$('#copyFallback').hidden=true; }
+function setRadio(name,val){ const r=document.querySelector(`input[name="${name}"][value="${val}"]`); if(r) r.checked=true; }
+let tt; function toast(m){ const t=$('#toast'); t.textContent=m; t.classList.add('show'); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove('show'),2400); }
+async function copyCard(){
+  build();
+  if(build.need.length){ toast(tr('请补充：')+build.need.join(comma)+tr('。没有或记不清可如实填写。')); return; }
+  const t=build.text;
+  try{ await navigator.clipboard.writeText(t);toast(tr('已复制，把故事卡和原图通过微信发回制作方')); }
+  catch(e){ const el=$('#copyFallback');el.value=t;el.hidden=false;el.focus();el.select();el.setSelectionRange(0,t.length);toast(tr('请长按文字全选复制，电脑也可按 Ctrl / ⌘ + C')); }
+}
+document.addEventListener('input', e=>{if(e.target.id==='copyFallback')return;$('#copyFallback').hidden=true;build();save();});
+document.addEventListener('change', ()=>{build();save();});
+$('#btnCopy').addEventListener('click',copyCard);
+$('#btnClear').addEventListener('click',()=>{if(!confirm(tr('清空本机这份填写草稿？')))return;reset();try{localStorage.removeItem(KEY);}catch(e){}build();toast(tr('已清空'));});
+translateStatic();
+if(!load())reset();
+build();
+})();
+</script>
+</body>
+</html>

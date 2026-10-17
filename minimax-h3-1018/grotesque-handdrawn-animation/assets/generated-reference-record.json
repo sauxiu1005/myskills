@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-10",
+  "provider": "Midjourney",
+  "model": "Midjourney 8.2",
+  "platform": "MiniMax Design",
+  "workflow": "text_to_image",
+  "reference_images": [],
+  "request_settings": {
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "stylize": 100,
+    "chaos": 0,
+    "weird": 0
+  },
+  "job_id": null,
+  "job_id_note": "Not returned in visible Design result",
+  "seed": null,
+  "request_count": 3,
+  "variants_per_request": 4,
+  "selected_images": [
+    {
+      "id": "B3",
+      "file": "style-reference.png",
+      "role": "active_style_master",
+      "sha256": "8de165573ff31430d4cef3687ac7a79815498fd4fe4783d720f251c618cd1e2c",
+      "dimensions": [
+        1456,
+        816
+      ],
+      "original_result_name": "GH-01候选-B-四分之三近景-3.png",
+      "prompt": "Three-quarter close portrait of a lanky orange-skinned adult in a teal suit holding a small glass. Long angular nose, simplified eyes, reserved closed-mouth smile. Plain teal background. 2D grotesque hand-drawn illustration, flat matte color shapes, deep teal and peacock blue contrasted with coral orange and vermilion, sparse cream and yellow accents, asymmetrical stylized characters with elongated noses and simplified eyes, fine irregular ink contours, directional colored-pencil hatching and delicate etched scratch lines, subtle mottled paper grain, layered theatrical space, restrained painterly shading and graphic light-dark separation No text, UI, play icon, watermark, bus, smoking, photorealism, 3D, glossy surfaces, vector art, impasto or watercolor.",
+      "review": "visually_reviewed",
+      "identity_consistency": "not_validated"
+    },
+    {
+      "id": "A3",
+      "file": "style-example-group.png",
+      "role": "review_only",
+      "sha256": "d7e95e90d92a59ff9beb78914ec763a2349f60849699c6b5fb31cab0054e30d6",
+      "dimensions": [
+        1456,
+        816
+      ],
+      "original_result_name": "GH-01候选-A-餐馆窗边-3.png",
+      "prompt": "Three stylized adults seated at a small restaurant window, medium shot. Central lanky orange-skinned adult in a teal suit, long angular nose, reserved closed-mouth smile. Original characters and scene. 2D grotesque hand-drawn illustration, flat matte color shapes, deep teal and peacock blue contrasted with coral orange and vermilion, sparse cream and yellow accents, asymmetrical stylized characters with elongated noses and simplified eyes, fine irregular ink contours, directional colored-pencil hatching and delicate etched scratch lines, subtle mottled paper grain, layered theatrical space, restrained painterly shading and graphic light-dark separation No text, UI, play icon, watermark, bus, smoking, photorealism, 3D, glossy surfaces, vector art, impasto or watercolor.",
+      "review": "visually_reviewed",
+      "identity_consistency": "not_validated"
+    },
+    {
+      "id": "C4",
+      "file": "style-example-environment.png",
+      "role": "review_only",
+      "sha256": "4227d8b9c4c65186e7c6510e5435ba145ed2a0f4b7fbbcdfd99f6a7bfab984a4",
+      "dimensions": [
+        1456,
+        816
+      ],
+      "original_result_name": "GH-01候选-C-餐馆入口全身-4.png",
+      "prompt": "Full-body view of a lanky orange-skinned adult in a teal suit at a small restaurant entrance. Long angular nose, long limbs, clear silhouette, warm side light, layered interior space. 2D grotesque hand-drawn illustration, flat matte color shapes, deep teal and peacock blue contrasted with coral orange and vermilion, sparse cream and yellow accents, asymmetrical stylized characters with elongated noses and simplified eyes, fine irregular ink contours, directional colored-pencil hatching and delicate etched scratch lines, subtle mottled paper grain, layered theatrical space, restrained painterly shading and graphic light-dark separation No text, UI, play icon, watermark, bus, smoking, photorealism, 3D, glossy surfaces, vector art, impasto or watercolor.",
+      "review": "visually_reviewed",
+      "identity_consistency": "not_validated"
+    }
+  ],
+  "review_notes": [
+    "No original screenshot was passed to generation.",
+    "A1 rejected as master: signature-like mark at lower right.",
+    "B3 selected for legible fine contour/hatching, matte grain, blue-orange palette and clean portrait.",
+    "A3 and C4 are human review examples only; never alternate or mix them into S0.",
+    "These independently generated images are different identities; no character or motion calibration has passed."
+  ],
+  "tool_capability_limit": "MJ style/identity reference binding in Design remains unverified; text-to-image success does not establish reference support."
+}

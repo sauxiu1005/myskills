@@ -1,0 +1,36 @@
+display-name-zh: 奢华中式场景视频
+version: 1.0.0
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Creative Generation
+complete-tags-cn:
+- 专业影视 / 创作生成
+summary-en: Develop Chinese celestial worlds from themes and references, confirm character, prop and scene anchors, then create films, game trailers or concept boards with quality reports.
+summary-cn: 根据主题与参考设计中式仙宫世界，确认角色、道具和场景锚点后生成影视片、游戏宣传片或概念设计板，并交付质量报告。
+desc-en: For filmmakers, game trailer teams and concept artists developing tranquil Chinese celestial worlds from themes, characters and scene references. Choose a film, game trailer or concept direction, confirm framing and visual medium, then develop worldbuilding variations and character, prop and environment anchors. Approved assets guide video shots while preserving identity, spatial relationships and restrained movement. Concept work instead delivers environment and interaction boards. Outputs include films or design boards, reference assets and quality reports; detected issues are reported without automatic regeneration. Film mode emphasizes atmosphere, trailers emphasize world and character reveals, and concept mode explores design options. This workflow excludes advertising claims, modern science fiction, fast combat and generic palace aerials.
+desc-cn: 面向影视创作者、游戏宣传团队和概念设计师，将主题、人物与场景参考转化为宁静而宏大的中式仙宫世界。先选择影视片、游戏宣传片或概念设计方向，确认画幅与视觉媒介，再设计世界观变体及角色、道具、场景锚点。确认资产后结合多模态参考生成镜头，保留人物身份、空间关系与克制动作；概念方向交付环境和互动设计板。最终提供视频或设计板、参考资产与质量报告，发现问题仅记录，不自动重做。不处理广告卖点、现代科幻、快速打斗或普通宫殿航拍。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 以角色与环境锚点建立中式仙宫世界，制作保持空间连续性的影视镜头、游戏宣传片或概念设计板。
+    best-for:
+    - 仙宫影视
+    - 游戏宣传
+    - 概念设计
+    how-to-use: 提供主题、角色或场景参考，选择制作方向并确认画幅与视觉媒介后开始。
+    outputs: 影视视频或概念设计板、角色场景参考资产及质量报告。
+  en-US:
+    summary: Build Chinese celestial worlds with character and environment anchors for coherent film shots, game trailers or concept design boards.
+    best-for:
+    - Celestial Films
+    - Game Trailers
+    - Concept Design
+    how-to-use: Provide a theme, character or scene reference, then confirm the production direction, framing and visual medium.
+    outputs: Film or concept boards, character and environment reference assets, and quality reports.
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/949c4c63-82e8-4e97-885d-9020f3f1e131.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/949c4c63-82e8-4e97-885d-9020f3f1e131.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/fde2c821-8d93-457e-bdc8-6ee9caa06baf.mp4

@@ -1,0 +1,37 @@
+display-name-zh: 婚礼故事视频定制
+version: 1.0.0
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Creative Generation
+complete-tags-cn:
+- 专业影视 / 创作生成
+summary-en: Turns couple stories and photographs into reviewed wedding films through a fourteen-step process with external image generation and guided editing.
+summary-cn: 基于新人故事与照片，逐步完成文案、旁白、外部配图、视频及配乐字幕，交付经确认的婚礼纪念影片。
+desc-en: For wedding video creators, this skill turns a couple’s confirmed experiences and photographs into a personal story film. Users provide a completed story card, original images, production preferences, and feedback at the required review points. The fourteen-step process organizes verified facts, prepares a writing package, confirms the script, auditions voices, produces narration, plans shots, supplies external image prompts, receives video clips, and develops music and the final edit. Deliverables include a subtitled film, subtitle file, editable timing plan, material mapping, and review records. Image generation remains manual in an external conversation, and the workflow does not invent personal experiences or replace couple approval.
+desc-cn: 面向婚礼视频制作方，将新人确认的经历与照片整理成专属纪念影片。用户提供故事采集卡、原始照片、制作偏好与阶段反馈；流程依次核对事实、准备写作包、确认文案、试听音色、制作旁白与分镜，再提供外部生图词、接收视频素材、编排配乐并完成混音剪辑。最终交付带字幕成片、字幕文件、可修改时间表、素材映射和检查记录。适合需要逐步审核的新单与续做；图片须由用户在外部生成，不编造新人经历，也不以制作方满意代替新人确认。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 把新人确认的真实故事与照片转化为分阶段审核的婚礼纪念影片，保留文案与素材来源。
+    best-for:
+    - 婚礼纪念
+    - 爱情故事
+    - 新人影像
+    how-to-use: 提供新人故事卡和原始照片，确认文案、声音与视觉方向后逐步制作纪念影片。
+    outputs: 带字幕纪念影片、字幕文件、可编辑时间表及素材映射记录。
+  en-US:
+    summary: Turn verified couple stories and photographs into a wedding film with staged reviews and traceable writing and source materials.
+    best-for:
+    - Wedding Films
+    - Couple Stories
+    - Personal Memories
+    how-to-use: Provide the story card and original photos, then approve the script, voice and visual direction in stages.
+    outputs: Subtitled wedding film, subtitle file, editable timing plan, and source mapping records.
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/e8ca5b57-df5a-40a9-8b9d-e4a7be28b796.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/e8ca5b57-df5a-40a9-8b9d-e4a7be28b796.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/9420aaf8-9dc9-45af-879a-ab4c40d41ac3.mp4
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/2185448b-fa24-4ea6-ad41-c8c3c842f848.mp4

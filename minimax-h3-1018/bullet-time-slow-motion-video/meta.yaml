@@ -1,0 +1,36 @@
+display-name-zh: 子弹时间慢速视频
+version: 1.0.0
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Creative Generation
+complete-tags-cn:
+- 专业影视 / 创作生成
+summary-en: Create a continuity-locked bullet-time short from a script or idea, with orbital freeze shots, separated audio, and a reviewed final cut.
+summary-cn: 从剧本或灵感出发制作连续统一的子弹时间短片，完成环绕冻结镜头、独立音频与审阅后的成片。
+desc-en: For creators making narrative shorts around bullet-time, extreme slow motion, or a time-freeze action beat. Inputs may include an idea, script, storyboard, character and scene references, footage, and authorized voice material. The workflow guides story and style selection, locks a production specification, parses traceable shots, builds character, scene and prop references, and binds stable voices before generating connected shots with the approved model. It then creates independent music and narration layers and assembles a reviewed final cut. It is strongest for continuity-sensitive cinematic shorts and does not handle unrelated one-off clips, silent tests, or unauthorized voice imitation.
+desc-cn: 面向希望制作子弹时间、极端慢动作或时间冻结动作短片的创作者，输入可以是灵感、剧本、分镜、角色与场景参考图、现成视频及授权音色素材。流程先引导故事与视觉风格选择，锁定制作规格，逐场逐镜解析并建立可追溯故事板，再制作角色三视图、场景四宫格和关键道具，绑定稳定角色音色，按确认的模型生成连续镜头，独立制作BGM与旁白并完成审阅后的成片合成。它适合重视角色、场景和声音连续性的叙事短片，不处理无关的简单片段、静音一次性测试或未经授权的音色模仿。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/b9becbb0-564c-4fb5-9ba9-28c3e6e02283.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/b9becbb0-564c-4fb5-9ba9-28c3e6e02283.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/4d8384e5-2ccf-4e76-9930-015bdeb5533f.mp4
+structured-info:
+  zh-CN:
+    summary: 从角色、场景和关键动作锚点出发，制作连续统一的子弹时间叙事短片。
+    best-for:
+    - 子弹时间叙事
+    - 慢动作动作片
+    - 连续性短片
+    how-to-use: 提供灵感或剧本，确认风格、角色场景锚点和制作规格后生成并审阅成片。
+    outputs: 分镜、参考资产、独立音频层与审阅后的完整短片。
+  en-US:
+    summary: Create a continuity-locked bullet-time narrative short from approved story, character, scene and action anchors.
+    best-for:
+    - Bullet-time narratives
+    - Slow-motion action films
+    - Continuity shorts
+    how-to-use: Provide an idea or script, approve the style, anchors and production specification, then generate and review the cut.
+    outputs: Storyboard, reference assets, independent audio layers and a reviewed complete short.

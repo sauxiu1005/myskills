@@ -1,0 +1,33 @@
+# 可选项目备忘；已有画布/日志包含这些信息时不重复填写。
+schema_version: 8
+skill_version: 1.0.0
+project_title: null
+current_stage: story
+requested_deliverable: final_film
+specifications:
+  duration: null
+  aspect_ratio: null
+  image_tool: null # 沿用用户明确选择并核验能力
+  image_tool_choice_basis: default
+  image_style_reference: assets/style-reference.png
+  image_resolution: null # 首次生图前由用户选择，全项目沿用
+  image_resolution_user_choice_basis: null
+  image_resolution_choice: null
+  video_model: null # 推荐 H3 的多参考与原生声音，用户选择优先
+  video_input_mode: all_purpose_reference
+  video_resolution: null
+  audio_plan: null
+authorized_scope_and_budget: null
+user_requested_checkpoints: []
+story_document: null
+character_cards: []
+scene_cards: []
+text_shot_table_and_video_prompts: null
+video_reference_materials: [] # 实际 CH/SC/必要道具素材与视频输入用途
+segments: [] # 每项：编号、全片时间窗、所用素材、任务、输出；有问题时写修正
+segment_handoffs: [] # 可并入segments/已有日志，不重复填表
+# 连续后段记录：from/to_segment、前段版本/剪辑出点、抽帧时间与图片ID、结束状态、
+# 后段开镜、实际全能参考输入位置；结尾图不得绑定首帧/起始帧控制字段。
+final_film: null
+remaining_work: []
+blocking_issues: []

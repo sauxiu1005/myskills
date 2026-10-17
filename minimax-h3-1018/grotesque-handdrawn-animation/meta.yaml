@@ -1,0 +1,37 @@
+display-name-zh: 怪诞手绘风动画短片
+version: 1.0.0
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+- Animation / Creative Generation
+complete-tags-cn:
+- 动画 / 创作生成
+summary-en: Turn stories into grotesque 2D animated films with blue-orange contrast, exaggerated characters and hatched paper textures, including scripts, assets and text storyboards.
+summary-cn: 将故事转化为蓝橙撞色、夸张人物与排线纸感的二维怪诞动画，完成剧本、资产、文字分镜与成片。
+desc-en: For custom stories and satirical shorts, create grotesque 2D animation with blue-orange contrast, fine hatching and paper texture. Develop the story and screenplay, use the bundled style reference for character and empty-environment images, then write a text shot plan covering acting, cuts, sound and spatial relationships. Produce video segments within currently supported lengths. Continuous follow-on segments use the preceding actual ending state as a reference while establishing their own opening composition. Assemble and inspect the complete film. Deliver the screenplay, character and scene cards, text storyboard and finished film; stop at text or assets when requested. This workflow excludes 3D or live-action imagery and does not generate per-shot opening frames.
+desc-cn: 面向自定义故事与讽喻短片创作者，将创意制作成蓝橙撞色、细密排线与纸感肌理的二维怪诞动画。先编写故事和剧本，结合包内风格图准备角色与无人场景参考，再完成文字镜头表，安排表演、切镜、声音和空间关系。依据实际支持时长制作视频片段，连续后段参考前段真实末态但独立设计开镜，最后合成并检查完整作品。交付剧本、角色场景卡、文字分镜与成片；仅需文本或资产时按范围停止。不用于三维或真人写实，也不额外生成逐镜首帧。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 用蓝橙撞色、夸张角色和排线纸感塑造怪诞故事，从剧本与角色场景设计持续完成镜头编排和动画成片。
+    best-for:
+    - 怪诞动画
+    - 讽喻故事
+    - 手绘短片
+    how-to-use: 提供故事创意并确认时长与画幅，选择图片清晰度后制作角色、场景和视频。
+    outputs: 故事剧本、角色与场景参考卡、文字镜头表及完整二维动画短片。
+  en-US:
+    summary: Shape grotesque stories with blue-orange contrast, exaggerated characters and hatched paper textures, progressing from scripts and assets to a finished animated film.
+    best-for:
+    - Grotesque Animation
+    - Satirical Stories
+    - Hand-drawn Shorts
+    how-to-use: Provide a story, confirm duration and framing, then choose image quality before asset and video production.
+    outputs: Screenplay, character and environment reference cards, text shot plan, and complete 2D animated film.
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/1fdd4ab9-da9c-426b-9623-4dd454470069.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/1fdd4ab9-da9c-426b-9623-4dd454470069.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/b27486f1-dad9-4f48-ab52-94d1e86de459.mp4
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/c1800af6-9bfb-47f7-a8af-df0a96979edd.mp4

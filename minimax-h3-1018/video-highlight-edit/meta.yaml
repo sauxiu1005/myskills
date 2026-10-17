@@ -1,0 +1,36 @@
+display-name-zh: 视频高光剪辑
+version: 1.0.0
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Post-production
+complete-tags-cn:
+- 商业广告 / 后期处理
+summary-en: Extract a complete theme and evidence chain from tutorials, interviews, or demos, then recut a self-contained highlight.
+summary-cn: 从教程、访谈或产品演示原片提炼完整主题与证据链，重组为节奏明快且可独立理解的精华成片。
+desc-en: For creators condensing tutorials, interviews, or product demonstrations into concise highlights. First review the source and extract a theme card with the core question, conclusion, evidence chain, and publishing context, then plan the recut around complete meaning units rather than an arbitrary time slice. Design preserves necessary context, builds multi-shot pacing around real demonstrations, and checks the export. It delivers a no-added-caption MP4, retained-content summary, source ranges, and quality notes; authorized captions produce a separate requested-language version. It does not generate replacement evidence, verify source claims, or handle caption-only cleanup. The result stays grounded in the source and remains ready for review or publishing.
+desc-cn: 面向希望将教程、访谈或产品演示原片做成精华视频的创作者。先审阅原片建立主题提炼卡，概括问题、结论、证据链和发布场景，再总结精剪方向，之后询问时长。Design筛选信息单元，保留上下文，以Demo为主体组织多镜头节奏并检查成片。默认保留原声，先交付未新增字幕MP4、内容摘要、原片时间段和质检说明；获授权时按用户要求的语言制作字幕版并保留两版。不生成替代证据、不核实原片说法、不处理纯字幕清理。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 把长视频中的关键解释、真实操作与结果组织成可独立理解的精华短片。
+    best-for:
+    - 教程精剪
+    - 产品演示
+    - 访谈精华
+    how-to-use: 上传原视频，先查看主题提炼和发布场景，再提供目标时长与受众、画幅和声音要求。
+    outputs: 未新增字幕精华MP4、内容摘要、原片时间段及质检说明。
+  en-US:
+    summary: Build a self-contained highlight cut around the source video's key explanations, real actions and outcomes.
+    best-for:
+    - Tutorial recuts
+    - Product demos
+    - Interview highlights
+    how-to-use: Upload a source video, review the extracted theme and publishing context, then provide duration and audience, framing or audio requirements.
+    outputs: A no-added-caption highlight MP4, retained-content summary, source ranges and quality notes.
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/10a37de1-48a5-4e25-bfa1-a2a48a60c6dd.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/10a37de1-48a5-4e25-bfa1-a2a48a60c6dd.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/e102047c-faa0-4aea-a835-4546ae4d51b7.mp4

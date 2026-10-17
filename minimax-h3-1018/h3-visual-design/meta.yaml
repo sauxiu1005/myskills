@@ -1,0 +1,32 @@
+display-name-zh: 动态视觉设计
+version: 1.0.4
+tag-en: "Creative & Experimental / Creative Generation"
+tag-cn: "创意实验 / 创作生成"
+complete-tags-en:
+  - "Creative & Experimental / Creative Generation"
+complete-tags-cn:
+  - "创意实验 / 创作生成"
+summary-en: "Single-technique motion design covering kinetic typography, subject tracking graphics, and hand-drawn live-action fusion"
+summary-cn: "面向单点动态视觉设计，覆盖动态字体包装、主体追踪图形与手绘实拍融合三类技法"
+desc-en: "Use when the user wants a clear motion-design technique in a video: kinetic typography and title packaging, logo animation, talking-head caption packaging, TouchDesigner-style subject tracking boxes and topology lines, or live action blended with hand-drawn doodle animation. The user may provide images, video, a logo, or text. Not for static poster design, ordinary photo editing, full MVs, brand ad films, or ordinary videos that only need natural motion."
+desc-cn: "当用户想给视频加入明确的动态视觉技法时使用：动态字体与标题包装、Logo 动画、口播字幕包装，TouchDesigner 风格的主体追踪框与拓扑线，或真人实拍与手绘涂鸦动画融合。用户可能提供图片、视频、Logo 或文字。不用于静态海报设计、普通修图、完整 MV、品牌广告片或只需自然运动的普通视频。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official
+structured-info:
+  zh-CN:
+    summary: 根据单点创意选择动态字体、主体追踪或手绘实拍路线，输出适合继续制作的视觉方案。
+    best-for:
+      - 动态字体
+      - 主体追踪
+      - 手绘融合
+    how-to-use: 提供视觉主题、主体素材和动效目标，先确认技法路线与主要画面锚点。
+    outputs: 路线判断、视觉提案、关键帧或提示词及对应的动态设计素材。
+  en-US:
+    summary: Choose kinetic type, subject-tracking, or hand-drawn live-action treatment for a focused idea and prepare it for production.
+    best-for:
+      - Kinetic Type
+      - Subject Tracking
+      - Hand-drawn Fusion
+    how-to-use: Provide the visual theme, subject assets, and motion goal, then confirm the technique and primary visual anchors.
+    outputs: Route selection, visual direction, keyframes or prompts, and motion-design assets.

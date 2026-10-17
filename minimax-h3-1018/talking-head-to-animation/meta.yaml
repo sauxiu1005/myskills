@@ -1,0 +1,39 @@
+display-name-zh: 口播转动画讲解
+version: 1.0.0
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+complete-tags-en:
+- Creative & Experimental / Creative Generation
+complete-tags-cn:
+- 创意实验 / 创作生成
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 把口播内容转成结构清晰的线稿讲解动画，保留重点并支持多种声音和画幅输出。
+    best-for:
+    - 知识讲解动画
+    - 手绘口播视频
+    - 多画幅内容
+    how-to-use: 提供口播或文案，确认画幅、时长与声音需求，审核脚本和分镜后逐镜制作。
+    outputs: 校对后的脚本、分镜、动画成片与按需提供的字幕或画中画版本。
+  en-US:
+    summary: Turn speech content into a structured illustrated explainer while preserving key meaning and supporting multiple formats.
+    best-for:
+    - Educational explainers
+    - Illustrated talking heads
+    - Multi-format content
+    how-to-use: Provide speech media or a script, confirm framing, duration and audio needs, then approve the script and storyboard before shot production.
+    outputs: Reviewed script, storyboard, animated video and optional captioned or presenter-inset versions.
+content-locale: zh-CN
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/8982924d-ec86-444e-8e83-de5bf34f01a2.mp4
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/236ebc41-7152-4f27-b019-4d09572f9771.mp4
+summary-en: Turn speech media or scripts into clear illustrated explainers with optional original audio, subtitles, presenter insets, or BGM.
+summary-cn: 将口播视频或文案制作成清晰的线稿讲解动画，可选保留原声、字幕、真人画中画或背景音乐。
+name: talking-head-to-animation
+desc-en: For educators, explainers, and content creators, turn talking-head footage or a script into a clear illustrated explainer. Provide speech media or copy and confirm framing, duration, language, and audio needs. The workflow reviews the script, plans storyboard beats, shared anchors, on-screen text, and asset relationships, then produces shots and checks pacing and meaning before assembly. It can preserve original audio and optionally add subtitles, a presenter inset, or background music, and can adapt visual relationships from an authorized reference video. It does not replace fact checking, silently change meaning, voice, or identity, or hide missing source material.
+desc-cn: 面向教育、知识分享和内容创作者，将口播视频或文案转成清晰易懂的线稿讲解动画。用户提供口播素材或文案，确认目标画幅、时长、语言和声音需求；流程先校对脚本，再规划分镜、共享锚点、画面文字和素材关系，逐镜生成并在合成前检查内容与节奏。可按需求保留原声，添加字幕、真人画中画或背景音乐，也支持从授权参考视频提炼视觉关系。它不替代事实核验，不会未经确认改变原意、声线或人物身份，缺少必要素材时会先说明限制。
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/b9d9c5f3-1c1a-43ab-9f00-dcc36b2e69f2.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/b9d9c5f3-1c1a-43ab-9f00-dcc36b2e69f2.mp4

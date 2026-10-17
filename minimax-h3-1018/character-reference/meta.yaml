@@ -1,0 +1,38 @@
+display-name-zh: 角色参考图
+version: 0.1.0
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Creative Generation
+- Short Drama / Creative Generation
+complete-tags-cn:
+- 专业影视 / 创作生成
+- 短剧漫剧 / 创作生成
+summary-en: Create reusable character look sheets and multi-view references from descriptions or images,
+  preserving identity and covering the angles needed by later shots.
+summary-cn: 根据角色设定与已有图片生成可复用的定妆图和多视角参考，统一人物外观并补齐后续镜头所需视角。
+desc-en: Establish character appearance references for image and video creation. From descriptions or
+  existing images, confirm the aspect ratio, costume state, and required views. Generate or reuse front,
+  side, and rear full-body views and a facial close-up, checking identity and asymmetric details. Add
+  only missing views needed by downstream shots; one-off creations can reuse existing references.
+desc-cn: 为图像和视频创作建立角色外观依据。根据角色设定或已有图片，确认画幅、服装状态和所需视角，生成或复用正面、侧面、背面全身视图与面部近景，检查身份和不对称细节的一致性。仅补齐后续镜头需要的缺失视角，单次人物创作可直接使用已有参考。
+author-en: MiniMax Hub
+author-cn: MiniMax Hub
+source: official
+structured-info:
+  zh-CN:
+    summary: 根据角色设定与已有图片生成可复用的定妆图和多视角参考，统一人物外观并补齐后续镜头所需视角。
+    best-for:
+    - 角色定妆
+    - 多视角参考
+    how-to-use: 提供角色描述、已有图片与所需视角，确认画幅和服装状态后生成对应参考。
+    outputs: 角色正面、侧面、背面全身视图及面部近景参考图。
+  en-US:
+    summary: Create reusable character look sheets and multi-view references from descriptions or images,
+      preserving identity and covering the angles needed by later shots.
+    best-for:
+    - Character Look Sheets
+    - Multi-view References
+    how-to-use: Provide character descriptions, existing images, and required views, then confirm the
+      aspect ratio and costume state.
+    outputs: Front, side, and rear full-body character references plus a facial close-up.

@@ -1,0 +1,741 @@
+{
+  "version": 2,
+  "default_style": "colored-pencil-diary",
+  "description": "Twenty hand-drawn styles curated for sequential multilingual story-video illustration. Colored-pencil diary is the bundled default when the user has not selected another style; bundled references are not project-approved assets.",
+  "contact_sheet": "references/style-examples/handdrawn-style-library-contact-sheet.jpg",
+  "styles": [
+    {
+      "id": "colored-pencil-diary",
+      "order": 1,
+      "example_image": "references/style-examples/01-colored-pencil-diary.png",
+      "name_zh": "彩铅日记漫画（默认）",
+      "name_en": "Colored-pencil diary comic",
+      "aliases": [
+        "default",
+        "diary",
+        "彩铅日记",
+        "默认风格"
+      ],
+      "group": "故事涂鸦",
+      "origin": {
+        "kind": "bundled-upstream-reference",
+        "label": "Bundled default-style reference; not approved for the current project"
+      },
+      "best_for": [
+        "家庭故事",
+        "生活观察",
+        "情感叙事",
+        "医疗与纪实题材"
+      ],
+      "summary": "白底、笨拙黑色毡尖笔轮廓、低饱和彩铅乱涂、大留白与朴素手写感。",
+      "profile_file": "references/target-diary-style.txt",
+      "color_hint": "仅使用灰蓝、砖红、炭黑、暖米色、浅棕、柔黄、浅灰等低饱和彩铅色；每个色块保留明显短笔触与白色缝隙，背景大面积纯白。",
+      "avoid": "no anime or manga styling, glossy digital painting, smooth digital fills, graphite realism, watercolor wash, gradients, realistic lighting, dense scenery, paper grain or vector cleanliness",
+      "reference_images": [
+        {
+          "path": "references/style-bw.png",
+          "role": "fixed black-and-white mark-making board"
+        },
+        {
+          "path": "references/style-color.png",
+          "role": "fixed colored-pencil palette and technique board"
+        },
+        {
+          "path": "references/style-layout.png",
+          "role": "fixed full-page layout board"
+        },
+        {
+          "path": "references/style-approved.png",
+          "role": "bundled default-style finish reference; legacy filename only, not an accepted current-project anchor"
+        }
+      ],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use upright naïve black felt-tip handwriting with rounded-square strokes, even spacing and a controlled hand wobble. It should feel handwritten but remain highly legible."
+    },
+    {
+      "id": "minimal-line-explainer",
+      "order": 2,
+      "example_image": "references/style-examples/02-minimal-line-explainer.png",
+      "name_zh": "极简黑白线条讲解",
+      "name_en": "Minimal line explainer",
+      "aliases": [
+        "minimal-line",
+        "stickman",
+        "火柴人",
+        "线条讲解"
+      ],
+      "group": "线条讲解",
+      "origin": {
+        "kind": "repo-adapted",
+        "style": "1",
+        "label": "极简黑白线条讲解漫画",
+        "url": "https://github.com/threerocks/hand-drawn-styles"
+      },
+      "best_for": [
+        "知识讲解",
+        "流程",
+        "观点拆解",
+        "轻幽默故事"
+      ],
+      "summary": "米白纸上只有细黑轮廓线、火柴人、手绘箭头与极少道具，信息读取最快。",
+      "prompt_blocks": [
+        "极简黑白手绘讲解漫画，画在干净米白纸上。人物是圆圈头、点线五官和细单线四肢的火柴人，用一件小道具区分身份。",
+        "所有人物、物体与场景只用细而均匀、轻微手抖的黑色钢笔轮廓线；平面二维，无透视体积。构图像清楚的概念示意图，一页只讲当前情节，留白充足。",
+        "严禁实心黑块、剪影、排线、阴影、灰阶、色彩、厚涂、写实细节和氛围渲染。"
+      ],
+      "color_hint": "纯黑细线配米白纸，无灰阶、无彩色填充。",
+      "avoid": "no solid black fills, silhouettes, hatching, shading, volume, color, thick cartoon outlines, realism or decorative scenery",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use simple, compact black handwritten source script, like a neat technical doodle note; keep every glyph exact and readable."
+    },
+    {
+      "id": "kid-crayon",
+      "order": 3,
+      "example_image": "references/style-examples/03-kid-crayon.png",
+      "name_zh": "五岁儿童蜡笔坏画",
+      "name_en": "Kid crayon bad drawing",
+      "aliases": [
+        "crayon",
+        "kid-crayon",
+        "儿童蜡笔",
+        "坏画"
+      ],
+      "group": "儿童涂画",
+      "origin": {
+        "kind": "repo-adapted",
+        "style": "2",
+        "label": "蜡笔童涂",
+        "url": "https://github.com/threerocks/hand-drawn-styles"
+      },
+      "best_for": [
+        "亲子故事",
+        "童年回忆",
+        "轻喜剧",
+        "儿童科普"
+      ],
+      "summary": "像五岁孩子真的画坏了：比例不对、线没闭合、涂出边界，天真但不商业萌化。",
+      "prompt_blocks": [
+        "像真实五岁孩子用蜡笔画在白纸上的画，不是专业插画师模仿童趣。主体清楚可认，但比例笨拙、形状歪扭、物体可轻微漂浮。",
+        "轮廓摇晃、经常重复描线、转角冲过头且不闭合；脸部左右不齐，手脚是简单弯曲线。蜡笔颜色明亮平坦，笔触方向随机，大块漏白并多处涂出轮廓。",
+        "宁可粗糙、失衡和好笑，也不要可爱精修、对称、漂亮构图、渐变、柔顺描边或统一数字蜡笔滤镜。"
+      ],
+      "color_hint": "红、黄、蓝、绿、橙、粉等基础蜡笔色，无遮罩式平滑填充；每块颜色留出大片白纸。",
+      "avoid": "no polished children's-book art, cute commercial character design, symmetry, clean closed contours, smooth fill, gradients or realistic perspective",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use large uneven childlike source-script crayon lettering on a crooked baseline; keep the exact wording readable despite the clumsy rhythm."
+    },
+    {
+      "id": "rawkid-crayon",
+      "order": 4,
+      "example_image": "references/style-examples/04-rawkid-crayon.png",
+      "name_zh": "潦草家庭投稿蜡笔",
+      "name_en": "Raw family crayon card",
+      "aliases": [
+        "rawkid",
+        "kid-scrawl",
+        "family-crayon",
+        "潦草自画"
+      ],
+      "group": "儿童涂画",
+      "origin": {
+        "kind": "repo-adapted",
+        "style": "3.1",
+        "label": "蜡笔童涂-潦草自画版",
+        "url": "https://github.com/threerocks/hand-drawn-styles"
+      },
+      "best_for": [
+        "家庭连载",
+        "亲子投稿",
+        "温暖日常",
+        "朴素情感"
+      ],
+      "summary": "普通大人画歪线稿、孩子再粗乱涂色；人物可辨认，涂抹比默认风更散、更乱、更露白。",
+      "prompt_blocks": [
+        "明亮纯白底的家庭投稿蜡笔故事卡：普通大人先画细到中等粗的歪黑线稿，再由孩子用短蜡笔断断续续乱涂。人物保持真实年龄高矮，只轻微大头，不能做成统一萌娃模板。",
+        "脸用很小的竖椭圆点眼、短折线鼻、极短歪嘴和两团不等大的珊瑚红乱涂腮红。轮廓会抖、断、出头；同页人物的头型、肩宽和身体歪斜各不相同。",
+        "每个色块都要多次停笔、换向、交叉、重压、漏空和偶发越界；横划、竖划、斜划、回圈混在一起。严禁细密平行斜线、等距排线、均匀覆盖和统一蜡笔纹理。背景只保留当前动作必需的零到两件道具。"
+      ],
+      "color_hint": "明快但不荧光的普通蜡笔色；同一色块方向、密度与压力突然变化，大片露白，少量越界。",
+      "avoid": "no chibi giant heads, commercial picture-book polish, uniform facial templates, neat diagonal hatching, uniform coverage, photographed paper, complete room scenery or digital crayon filter",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use slightly uneven thick black handwriting like an ordinary parent wrote it, with accurate source-script glyphs and generous spacing."
+    },
+    {
+      "id": "bean-doodle-infographic",
+      "order": 5,
+      "example_image": "references/style-examples/05-bean-doodle-infographic.png",
+      "name_zh": "小豆人涂鸦信息图",
+      "name_en": "Bean doodle infographic",
+      "aliases": [
+        "bean",
+        "blob",
+        "豆人",
+        "涂鸦信息图"
+      ],
+      "group": "线条讲解",
+      "origin": {
+        "kind": "repo-adapted",
+        "style": "4",
+        "label": "小豆人黑色涂鸦信息图",
+        "url": "https://github.com/threerocks/hand-drawn-styles"
+      },
+      "best_for": [
+        "方法步骤",
+        "清单",
+        "知识卡",
+        "轻量剧情"
+      ],
+      "summary": "黑色圆豆人、白色点眼、轮廓道具与单一橙色重点，适合强信息结构。",
+      "prompt_blocks": [
+        "白底黑色马克笔涂鸦信息图。主角是同一个实心黑色圆豆人，两只白点眼、简单弯嘴和细线手脚；每一幕通过动作变化讲清当前句。",
+        "除豆人身体外，所有道具只用略歪但闭合的黑色轮廓线，内部保持白色。全画只允许一个橙色强调物，可配少量手绘弯箭头；构图极简、清晰、留白很多。",
+        "不要灰阶、阴影、纹理、复杂背景、写实人物或多种点缀色。"
+      ],
+      "color_hint": "黑白为主，只允许一个橙色重点；不使用灰阶或第二个彩色强调。",
+      "avoid": "no realistic people, multiple accent colors, shading, textured fills, busy panels, detailed scenery or polished vector iconography",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use bold compact black marker-style source-script handwriting; one orange underline or dot is allowed, but the wording must remain exact."
+    },
+    {
+      "id": "ms-paint-bad-doodle",
+      "order": 6,
+      "example_image": "references/style-examples/06-ms-paint-bad-doodle.png",
+      "name_zh": "鼠标烂涂鸦",
+      "name_en": "MS Paint bad doodle",
+      "aliases": [
+        "ms-paint",
+        "bad-doodle",
+        "ugly",
+        "烂涂鸦"
+      ],
+      "group": "故意画烂",
+      "origin": {
+        "kind": "repo-adapted",
+        "style": "5",
+        "label": "MS Paint 烂涂鸦",
+        "url": "https://github.com/threerocks/hand-drawn-styles"
+      },
+      "best_for": [
+        "反转笑点",
+        "吐槽",
+        "荒诞故事",
+        "病毒感短视频"
+      ],
+      "summary": "像用鼠标在旧画图软件里硬画：锯齿、歪线、粗糙纯色和荒谬比例。",
+      "prompt_blocks": [
+        "把当前故事画成极其笨拙、潦草、可怜兮兮的鼠标涂鸦，像在老式基础画图软件中一笔一笔硬画。",
+        "线条歪扭、抖动、断续且带明显像素锯齿；比例荒谬但动作仍一眼看懂。填色是少数粗糙纯色块，多处漏填或溢出，白底，构图随意。",
+        "整体像认真想画对却处处不对劲，越业余越好笑；不要专业感、精修、漂亮细节、抗锯齿、渐变、光影或拟真材质。"
+      ],
+      "color_hint": "少量高辨识度纯色块，硬边、锯齿、溢出，无渐变和柔化。",
+      "avoid": "no antialiasing, polished illustration, smooth curves, correct anatomy, gradients, realistic lighting, detailed texture or professional composition",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use crude mouse-drawn black source-script lettering with jagged edges and uneven sizes, while preserving every character exactly."
+    },
+    {
+      "id": "ballpoint-scribble",
+      "order": 7,
+      "example_image": "references/style-examples/07-ballpoint-scribble.png",
+      "name_zh": "圆珠笔缠绕线速写",
+      "name_en": "Ballpoint scribble sketch",
+      "aliases": [
+        "scribble",
+        "ballpoint",
+        "pen-scribble",
+        "圆珠笔"
+      ],
+      "group": "艺术速写",
+      "origin": {
+        "kind": "repo-adapted",
+        "style": "6",
+        "label": "圆珠笔单线涂鸦",
+        "url": "https://github.com/threerocks/hand-drawn-styles"
+      },
+      "best_for": [
+        "人物肖像",
+        "动物",
+        "内心独白",
+        "情绪段落"
+      ],
+      "summary": "单一黑色圆珠笔用大量自由缠绕线塑造体积，像一气呵成的艺术手稿。",
+      "prompt_blocks": [
+        "用一支黑色圆珠笔在白纸上快速画成的潦草速写。大量细线随性来回缠绕、重复和穿插，轮廓不闭合，靠线条疏密自然表现明暗与体积。",
+        "保留起稿、犹豫和回笔痕迹，动作要准确而线条要自由即兴；背景只用极少线索。纯黑墨线配白纸，不做任何平涂色块。",
+        "整体是有呼吸的现场手稿，而非工整线稿、漫画勾线、钢笔排线模板或数字素描滤镜。"
+      ],
+      "color_hint": "纯黑圆珠笔墨线与白纸，通过线的疏密表现深浅，不平涂。",
+      "avoid": "no colored fills, closed vector contours, uniform crosshatching, clean comic inking, charcoal smudge, photoreal pencil rendering or dense background",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use quick black ballpoint handwriting with light pressure variation; keep the source text fully legible and separate from the drawing."
+    },
+    {
+      "id": "real-crayon-paper",
+      "order": 8,
+      "example_image": "references/style-examples/08-real-crayon-paper.png",
+      "name_zh": "真实蜡笔纸实拍",
+      "name_en": "Real crayon paper",
+      "aliases": [
+        "real-crayon",
+        "crayon-photo",
+        "蜡笔实拍",
+        "真实纸张"
+      ],
+      "group": "儿童涂画",
+      "origin": {
+        "kind": "repo-adapted",
+        "style": "7",
+        "label": "蜡笔实拍",
+        "url": "https://github.com/threerocks/hand-drawn-styles"
+      },
+      "best_for": [
+        "儿童视角",
+        "成长记录",
+        "手工作品感",
+        "怀旧故事"
+      ],
+      "summary": "像手机拍到一张真实蜡笔画：能看到纸纹、蜡质结块、压力变化与大量未涂满区域。",
+      "prompt_blocks": [
+        "一张在明亮柔和日光下拍摄的真实儿童蜡笔画，干净白色打印纸几乎铺满画面，只见轻微纸纹与很淡的起伏，不出现桌面布景。",
+        "五岁孩子般笨拙的摇晃轮廓、错误比例和不对称脸。蜡笔重压处有蜡质结块，轻扫处只挂在纸纹凸起上；同一色块压力不稳、方向杂乱、笔画断裂，至少一半区域露出白纸，并有几处明显越界。",
+        "必须像真实纸上作品的照片，不是数字儿童插画，也不是统一蜡笔滤镜；光线明亮均匀，无暗角、灰黄偏色和戏剧阴影。"
+      ],
+      "color_hint": "明亮基础蜡笔色，压力深浅不均、蜡质结块、50% 左右露白、明显越界。",
+      "avoid": "no digital illustration, uniform crayon texture, smooth fill, polished anatomy, dark tabletop, moody shadows, paper mockup, folds dominating the image or commercial cuteness",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use uneven multicolor crayon source-script lettering, photographed on the same paper; preserve exact glyph shapes and keep them readable."
+    },
+    {
+      "id": "ink-wash",
+      "order": 9,
+      "example_image": "references/style-examples/09-ink-wash.png",
+      "name_zh": "水墨写意",
+      "name_en": "Expressive ink wash",
+      "aliases": [
+        "shuimo",
+        "ink",
+        "chinese-painting",
+        "水墨"
+      ],
+      "group": "传统手绘",
+      "origin": {
+        "kind": "repo-adapted",
+        "style": "8",
+        "label": "水墨写意",
+        "url": "https://github.com/threerocks/hand-drawn-styles"
+      },
+      "best_for": [
+        "人生感悟",
+        "传统文化",
+        "寓言",
+        "宁静叙事"
+      ],
+      "summary": "宣纸、浓淡干湿、飞白枯笔与大片留白，以少量朱红点睛。",
+      "prompt_blocks": [
+        "中国传统写意水墨画，画在明亮生宣纸上。以黑墨为主，同一画面同时出现焦、浓、重、淡、清，笔内有明显浓淡干湿变化。",
+        "用寥寥几笔抓住动作和神态，保留飞白枯笔、断笔、湿墨自然洇化与少量偶然飞溅；主体偏置，大量空白宣纸参与构图。最多用极少淡赭石或花青点染，并在角落放一枚无可读文字的小朱红印记。",
+        "不是数字灰度滤镜，不勾死板轮廓，不均匀填色，不做写实摄影、艳丽彩绘、厚涂或密集背景。"
+      ],
+      "color_hint": "黑墨浓淡干湿为主，最多淡赭石或花青点染，加一处小朱红印记。",
+      "avoid": "no uniform grayscale filter, hard closed contours, even fills, glossy gradients, photorealism, dense decorative scenery, saturated color or fake calligraphy",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use restrained upright black handwritten source script, separate from the painting; avoid pseudo-calligraphy and keep all characters exact."
+    },
+    {
+      "id": "emotional-watercolor-sketch",
+      "order": 10,
+      "example_image": "references/style-examples/10-emotional-watercolor-sketch.png",
+      "name_zh": "情绪叙事淡彩速写",
+      "name_en": "Emotional light-watercolor sketch",
+      "aliases": [
+        "emo-sketch",
+        "story-sketch",
+        "light-watercolor",
+        "淡彩速写"
+      ],
+      "group": "情感叙事",
+      "origin": {
+        "kind": "repo-adapted",
+        "style": "10",
+        "label": "情绪叙事淡彩速写",
+        "url": "https://github.com/threerocks/hand-drawn-styles"
+      },
+      "best_for": [
+        "催泪故事",
+        "人物关系",
+        "回忆",
+        "克制纪实"
+      ],
+      "summary": "靛蓝松散速写线、大留白、极淡水彩，只用一处暖橙情绪焦点。",
+      "prompt_blocks": [
+        "白色细纹水彩纸上的情绪叙事速写。人物与关键道具用松散靛蓝铅笔或墨线勾画，保留重叠起稿线、断线和轻微抖动，不追求工整闭合。",
+        "水彩上色非常轻薄、透明、边缘自然晕开，大部分画面保持白纸；全画只设一处柔和橙色情绪焦点，其余为靛蓝、灰蓝、淡肤色和纸白。构图像记忆片段，安静、克制、真诚。",
+        "不要满幅上色、鲜艳多色、商业萌化、硬黑卡通描边、写实光影、复杂室内或数字水彩滤镜。"
+      ],
+      "color_hint": "靛蓝与灰蓝为主，透明淡彩和大片纸白，全画只有一处柔和暖橙重点。",
+      "avoid": "no saturated multicolor palette, full-page wash, thick black cartoon outlines, commercial cuteness, photoreal lighting, busy scenery or uniform watercolor filter",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use quiet dark-indigo handwritten source script with a gentle diary rhythm; exact characters, no decorative calligraphy."
+    },
+    {
+      "id": "retro-gouache-concept",
+      "order": 11,
+      "example_image": "references/style-examples/11-retro-gouache-concept.png",
+      "name_zh": "中古动画水粉概念稿",
+      "name_en": "Mid-century gouache concept",
+      "aliases": [
+        "retro-concept",
+        "mid-century",
+        "gouache-concept",
+        "中古水粉"
+      ],
+      "group": "绘本水粉",
+      "origin": {
+        "kind": "repo-adapted",
+        "style": "11",
+        "label": "二维水彩风格（复古动画概念稿）",
+        "url": "https://github.com/threerocks/hand-drawn-styles"
+      },
+      "best_for": [
+        "怀旧故事",
+        "城市生活",
+        "温暖剧情",
+        "角色短片"
+      ],
+      "summary": "奶油纸底、铅笔起稿线、水粉大形、橙蓝互补与 1950 年代动画概念稿气质。",
+      "prompt_blocks": [
+        "复古二维动画的手绘水粉概念稿，画在暖奶油色纸底上。保留松散铅笔起稿线，用哑光不透明水粉概括人物、道具和背景大形，边缘能看到干刷与笔触。",
+        "构图有一个清楚焦点，形状简化而表演生动；用受控的橙蓝互补色、奶油黄、砖红和灰蓝，光线柔暖，背景像舞台布景般概括，不堆小细节。",
+        "保持旧动画美术设定稿的手工感；不要现代动漫五官、光滑数字厚涂、3D、照片写实、荧光色或细碎纹理。"
+      ],
+      "color_hint": "暖奶油底，受控橙蓝互补，辅以砖红、灰蓝；哑光不透明水粉块面与干刷边缘。",
+      "avoid": "no modern anime styling, glossy digital painting, 3D, photorealism, neon palette, hyper-detailed background, smooth airbrush everywhere or vector geometry",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use bold but slightly dry-brushed black source-script handwriting, like a title penciled onto an animation concept sheet; keep it exact."
+    },
+    {
+      "id": "sunlit-storybook",
+      "order": 12,
+      "example_image": "references/style-examples/12-sunlit-storybook.png",
+      "name_zh": "暖光童画绘本",
+      "name_en": "Sunlit storybook vis-dev",
+      "aliases": [
+        "sunlit",
+        "storybook-visdev",
+        "warm-storybook",
+        "暖光童画"
+      ],
+      "group": "绘本水粉",
+      "origin": {
+        "kind": "repo-adapted",
+        "style": "12",
+        "label": "暖光童画",
+        "url": "https://github.com/threerocks/hand-drawn-styles"
+      },
+      "best_for": [
+        "治愈故事",
+        "儿童冒险",
+        "亲情",
+        "梦境段落"
+      ],
+      "summary": "现代动画前期概念画：柔软水粉、暖边光、蓬松形状和保留白纸的未完成感。",
+      "prompt_blocks": [
+        "现代动画前期视觉开发式的暖光童画，用柔软哑光水粉和干擦笔触画在浅色纸上。角色由大而柔软的形状组成，表情清楚，头发或毛发是一团团宽软笔触并带少量飞丝。",
+        "画面以粉蓝、奶黄、柔橙和青绿形成温和互补，暖光从一侧包住角色；背景只画几块松散色斑和必要场景线索，四周保留明显白纸与未画完的概念稿气息。",
+        "不要尖锐动漫发束、塑料高光、3D、写实五官、满幅背景、硬矢量边缘或过度精修。"
+      ],
+      "color_hint": "粉蓝、奶黄、柔橙、少量青绿；暖边光、柔软水粉笔触，四周保留白纸。",
+      "avoid": "no sharp anime hair, glossy plastic highlights, 3D, realistic facial anatomy, full-bleed detailed background, vector edges or over-polished finish",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use friendly rounded black source-script handwriting with a few natural size variations, like a note on a children's concept sheet."
+    },
+    {
+      "id": "nordic-gouache-storybook",
+      "order": 13,
+      "example_image": "references/style-examples/13-nordic-gouache-storybook.png",
+      "name_zh": "北欧低饱和水粉绘本",
+      "name_en": "Nordic gouache storybook",
+      "aliases": [
+        "nordic-storybook",
+        "scandi-gouache",
+        "soft-gouache",
+        "北欧绘本"
+      ],
+      "group": "绘本水粉",
+      "origin": {
+        "kind": "repo-adapted",
+        "style": "14",
+        "label": "北欧绘本水粉",
+        "url": "https://github.com/threerocks/hand-drawn-styles"
+      },
+      "best_for": [
+        "安静日常",
+        "睡前故事",
+        "自然主题",
+        "生活方式"
+      ],
+      "summary": "全页纸纹、丹宁蓝与芥末黄、干刷水粉、小点眼人物和极简北欧留白。",
+      "prompt_blocks": [
+        "北欧儿童绘本的低饱和水粉画，画在有细腻牙口的暖白纸上。人物用简化圆钝形和很小的点眼，动作朴素自然；轮廓不必完全描黑，形状边缘由干刷水粉自然形成。",
+        "以丹宁蓝、芥末黄、砖橙、鼠尾草绿和暖灰为有限色板，颜料哑光、略有颗粒和擦白。场景只保留少数平面化家具、植物或自然物，构图安静，有大量暖白负空间。",
+        "不要高饱和、亮面数字渐变、复杂透视、动漫大眼、厚黑描边、3D 或商业矢量插画。"
+      ],
+      "color_hint": "低饱和丹宁蓝、芥末黄、砖橙、鼠尾草绿、暖灰；干刷水粉与暖白纸纹。",
+      "avoid": "no saturated palette, glossy gradients, complex perspective, anime eyes, thick black outlines, 3D, corporate vector art or decorative clutter",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use small calm charcoal-black handwritten source script with generous spacing and understated Nordic simplicity."
+    },
+    {
+      "id": "inked-storybook",
+      "order": 14,
+      "example_image": "references/style-examples/14-inked-storybook.png",
+      "name_zh": "墨线淡彩绘本",
+      "name_en": "Inked light-color storybook",
+      "aliases": [
+        "ink-storybook",
+        "sketch-storybook",
+        "墨线绘本",
+        "钢笔绘本"
+      ],
+      "group": "绘本线稿",
+      "origin": {
+        "kind": "repo-adapted",
+        "style": "17",
+        "label": "墨线绘本",
+        "url": "https://github.com/threerocks/hand-drawn-styles"
+      },
+      "best_for": [
+        "角色故事",
+        "人物头像",
+        "青春叙事",
+        "情绪对白"
+      ],
+      "summary": "自信松散墨线定形、局部排线点缀、透亮淡彩和毛刷纸边。",
+      "prompt_blocks": [
+        "富有表现力的绘本角色插画：自信而松散的墨线覆盖在干净透亮的淡彩上。线条略有粗细变化，保留少量重叠起稿线；不同区域用本地色更深的线色，而不是整图死黑。",
+        "头发顺着体积画出流畅细线和适量飞丝；排线只作为腮红、鼻梁、帽子或衣服暗部的稀疏点缀，绝不能铺满色块。背景是一块低细节水彩刷痕，四周留出平整暖奶油纸边并带粗糙毛刷边界。",
+        "上色保持明亮、轻薄、平滑，不做灰扑扑彩铅填色、满页排线、乱麻线、厚重油画或照片写实。"
+      ],
+      "color_hint": "每图选择 2–4 个协调淡彩；线色随本地色变化，排线仅作局部点缀，背景为单一水彩刷痕。",
+      "avoid": "no grainy colored-pencil fill, hatching across whole color blocks, chaotic scribble hair, thick oil paint, photorealism, full-bleed detailed scenery or pure vector linework",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use confident sketchbook-style dark-sepia source-script handwriting, with slight line-weight variation and exact legibility."
+    },
+    {
+      "id": "warm-flat-storybook",
+      "order": 15,
+      "example_image": "references/style-examples/15-warm-flat-storybook.png",
+      "name_zh": "暖色几何扁平绘本",
+      "name_en": "Warm flat storybook",
+      "aliases": [
+        "warm-flat",
+        "flat-storybook",
+        "geometric-storybook",
+        "扁平绘本"
+      ],
+      "group": "绘本扁平",
+      "origin": {
+        "kind": "repo-adapted",
+        "style": "18",
+        "label": "暖色扁平绘本",
+        "url": "https://github.com/threerocks/hand-drawn-styles"
+      },
+      "best_for": [
+        "关系故事",
+        "品牌叙事",
+        "轻科普",
+        "温暖群像"
+      ],
+      "summary": "大块圆润几何色形、近乎无外轮廓、蓝橙限定色板与约七成暖白留白。",
+      "prompt_blocks": [
+        "当代暖色扁平绘本，用少量大而圆润的几何色块构成人物和道具。形状主要靠色彩相接，不画连续外轮廓；只在五官、手指和少量发丝处使用极细深藏青线。",
+        "人物不是 Q 版：成人可有长颈、细长肢体、窄椭圆脸或宽胶囊躯干，动作弧线柔软；阴影只允许每个大色块一块更深的同色色形，不做渐变。主体集中在中下部，约七成暖白留白。",
+        "严格使用深藏青、雾蓝、珊瑚橙、金橙、暖桃肤色和暖白；不要企业矢量小人、圆脸萌娃、厚描边、3D、光泽、复杂背景或额外色相。"
+      ],
+      "color_hint": "严格限定深藏青、雾蓝、珊瑚橙、金橙、暖桃和暖白；大块平涂，每块至多一个硬边同色阴影。",
+      "avoid": "no corporate vector people, chibi round faces, thick outlines, 3D, glossy gradients, complex scenery, painterly brush texture or extra hues",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use simple dark-navy handwritten source script with broad friendly spacing; no typeset or corporate infographic feel."
+    },
+    {
+      "id": "naive-marker-notes",
+      "order": 16,
+      "example_image": "references/style-examples/16-naive-marker-notes.png",
+      "name_zh": "稚拙马克笔笔记",
+      "name_en": "Naive marker notes",
+      "aliases": [
+        "naive",
+        "marker-notes",
+        "笔记涂鸦",
+        "稚拙设计"
+      ],
+      "group": "网络流行",
+      "origin": {
+        "kind": "web-inspired",
+        "label": "Naive Design / handcrafted doodles",
+        "urls": [
+          "https://www.adobe.com/express/learn/blog/microtrend-naive-design",
+          "https://www.adobe.com/express/learn/blog/design-trends-2025"
+        ]
+      },
+      "best_for": [
+        "社交媒体故事",
+        "观点表达",
+        "年轻化品牌",
+        "轻松科普"
+      ],
+      "summary": "像随手记在笔记页：歪字、粗马克笔符号、笑脸、箭头和少量荧光重点，重个性轻精修。",
+      "prompt_blocks": [
+        "稚拙但有设计控制的马克笔笔记页，像一个有想法的人随手在白纸上记录故事。轮廓、边框和小图标故意略歪，人物由简短粗线和符号化五官构成。",
+        "在主画面周围加入极少量与当前句直接相关的笑脸、星号、箭头、下划线或圈注，但不得抢过叙事主体。使用黑色粗马克笔配一到两种明亮荧光笔强调色，布局松散却仍一眼可读。",
+        "保留不对齐、大小跳变和手写错误感，但不能乱码；不要专业矢量图标、整齐网格、库存人物、复杂贴纸海洋或过度装饰。"
+      ],
+      "color_hint": "黑色粗马克笔为主，只用一到两种荧光笔色做圈注、下划线或小面积重点。",
+      "avoid": "no polished vector icon set, strict grid, stock characters, decorative sticker overload, typeset fonts, glossy gradients or photorealism",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use bold uneven black marker source-script handwriting with one fluorescent underline or circle; keep the copy exact and easy to scan."
+    },
+    {
+      "id": "zine-riso-collage",
+      "order": 17,
+      "example_image": "references/style-examples/17-zine-riso-collage.png",
+      "name_zh": "Zine 孔版拼贴",
+      "name_en": "Zine risograph collage",
+      "aliases": [
+        "zine",
+        "riso",
+        "scrapbook",
+        "孔版拼贴"
+      ],
+      "group": "网络流行",
+      "origin": {
+        "kind": "web-inspired",
+        "label": "Notes App Chic / Zinegeist / handcrafted collage",
+        "urls": [
+          "https://www.canva.com/newsroom/news/design-trends-2026/",
+          "https://www.adobe.com/express/learn/blog/design-trends-2025"
+        ]
+      },
+      "best_for": [
+        "成长回忆",
+        "旅行故事",
+        "情绪混剪",
+        "文化与音乐题材"
+      ],
+      "summary": "手撕纸边、复印颗粒、孔版双色套印偏移与手写涂鸦组成的 DIY 小志页。",
+      "prompt_blocks": [
+        "DIY 独立小志式手工拼贴：主体像被剪下或手撕后贴在暖白纸上，搭配少量手绘墨线、胶带、纸片和复印纹理。所有拼贴元素都服务当前情节，不做无意义素材堆积。",
+        "采用两到三色孔版印刷观感，墨色轻微套印偏移、边缘不齐、局部网点和纸纤维可见；可混合黑白复印人物与一两块高饱和专色。构图有层次但保留呼吸区。",
+        "不要精致数码剪贴簿、真实品牌标识、可读报纸正文、过多贴纸、光滑渐变、3D 阴影或照片级场景。"
+      ],
+      "color_hint": "黑色复印墨配两种孔版专色，允许套印偏移、网点、手撕纸边和少量胶带。",
+      "avoid": "no polished digital scrapbook, real logos, readable newspaper body text, sticker overload, smooth gradients, 3D drop shadows or photoreal environment",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use cut-and-paste zine-style source-script handwriting in black, with an optional single-color highlight block; exact wording only."
+    },
+    {
+      "id": "organic-contour-doodle",
+      "order": 18,
+      "example_image": "references/style-examples/18-organic-contour-doodle.png",
+      "name_zh": "有机轮廓品牌涂鸦",
+      "name_en": "Organic contour doodle",
+      "aliases": [
+        "organic-doodle",
+        "contour",
+        "brand-doodle",
+        "有机涂鸦"
+      ],
+      "group": "网络流行",
+      "origin": {
+        "kind": "web-inspired",
+        "label": "Doodled Details / Flow and Form",
+        "urls": [
+          "https://www.behance.net/blog/visual-trends-2023",
+          "https://www.canva.com/newsroom/news/design-trends-2024/"
+        ]
+      },
+      "best_for": [
+        "品牌故事",
+        "轻生活",
+        "咖啡餐饮",
+        "社交观点"
+      ],
+      "summary": "自由单线轮廓、流动有机形、成熟单色涂鸦与一处大胆色块，亲切但不幼儿化。",
+      "prompt_blocks": [
+        "成熟而亲切的有机轮廓涂鸦。人物、植物和道具用自由连续的黑色手绘线概括，线条时而交叠、断开或走出轮廓；搭配少量流动的圆润有机色形。",
+        "构图简约、轻盈、有节奏，主体轮廓一眼可读，周围只散落少数与情节有关的小符号。以暖白底、黑线和一个大胆主色为核心，最多再加一个辅助色。",
+        "整体像成熟品牌请独立插画师现场画的线稿，不是儿童画、企业矢量人物、可爱贴纸包或密集花纹。"
+      ],
+      "color_hint": "暖白底、黑色自由轮廓线、一个大胆主色，最多一个辅助色；色块为圆润有机形。",
+      "avoid": "no childish crayon look, corporate vector characters, cute sticker pack, dense patterns, strict geometry, realistic shading or multicolor clutter",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use relaxed black handwritten source script with a confident continuous-line rhythm and one broad color accent; exact copy only."
+    },
+    {
+      "id": "whiteboard-explainer",
+      "order": 19,
+      "example_image": "references/style-examples/19-whiteboard-explainer.png",
+      "name_zh": "白板讲解动画",
+      "name_en": "Whiteboard explainer",
+      "aliases": [
+        "whiteboard",
+        "explainer",
+        "白板",
+        "手绘讲解"
+      ],
+      "group": "视频经典",
+      "origin": {
+        "kind": "web-curated",
+        "label": "widely used hand-drawn explainer-video grammar"
+      },
+      "best_for": [
+        "教程",
+        "商业解释",
+        "时间线",
+        "因果关系"
+      ],
+      "summary": "白板上逐笔画出的黑色线稿、箭头、框选与少量蓝红重点，特别适合擦写式动画。",
+      "prompt_blocks": [
+        "干净白板上的手绘讲解图，像讲师刚用白板笔逐笔画完。人物和物体由中等粗、轻微手抖的黑色干擦笔轮廓组成，结构简洁，动作和因果关系优先。",
+        "只使用少量箭头、圈选、时间线或框线来组织当前句，保留大片干净白板。允许蓝色和红色各一处重点，笔画起止处可见轻微墨量变化，但不做真实反光或教室背景。",
+        "不要多格漫画边框、厚重阴影、连续色块填充、复杂插画、企业图标库、伪文字或密集注释。"
+      ],
+      "color_hint": "黑色白板笔为主，只允许极少蓝色与红色重点；大面积保持白板空白。",
+      "avoid": "no panel comic frames, heavy shadows, filled color masses, detailed illustration, corporate icon library, pseudo-text, dense annotations or classroom photography",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use clear medium-thick black whiteboard-marker source-script handwriting; optional blue or red underline, exact wording and no extra labels."
+    },
+    {
+      "id": "linocut-editorial",
+      "order": 20,
+      "example_image": "references/style-examples/20-linocut-editorial.png",
+      "name_zh": "粗粝木刻社论插画",
+      "name_en": "Rough linocut editorial",
+      "aliases": [
+        "linocut",
+        "woodcut",
+        "editorial-print",
+        "木刻"
+      ],
+      "group": "版画手作",
+      "origin": {
+        "kind": "web-curated",
+        "label": "classic handmade editorial print language"
+      },
+      "best_for": [
+        "社会议题",
+        "历史故事",
+        "寓言",
+        "有力量的观点"
+      ],
+      "summary": "粗黑刻线、刀痕留白、有限套色与高对比剪影，画面力量感最强。",
+      "prompt_blocks": [
+        "手工油毡版或木刻感的社论插画。主体由粗重黑色形块和刀刻出的白色沟槽建立，轮廓有不规则缺口，明暗通过方向明确但不机械的刻线与大片黑白对比完成。",
+        "使用暖白纤维纸底、黑墨和一块暗砖红或深蓝套色；允许轻微套印错位、墨色浓淡不均和边缘毛糙。构图大胆、符号化，一个强焦点，背景压缩成少数平面形。",
+        "不要照片写实、细腻铅笔、平滑矢量边、均匀数字噪点、彩虹配色、渐变光影或过度细碎排线。"
+      ],
+      "color_hint": "暖白纸、黑墨与一块暗砖红或深蓝套色；高对比、刀痕露白、轻微套印错位。",
+      "avoid": "no photorealism, delicate pencil rendering, smooth vector edges, uniform digital noise, rainbow palette, gradients, ornate fake seal script or overly fine hatching",
+      "reference_images": [],
+      "text_layer_style": "Separate editable text layer only; never include this instruction in image generation. Use the detected source script, verified font coverage, correct shaping and direction, and preserve the exact source text. Visual treatment: Use bold carved-looking black source-script handwriting with rough edges; keep every glyph exact and avoid ornate seal-script imitation."
+    }
+  ]
+}

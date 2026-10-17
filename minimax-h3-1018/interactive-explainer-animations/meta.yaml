@@ -1,0 +1,36 @@
+display-name-zh: 原理交互演示动画
+version: 1.0.0
+tag-en: Education
+tag-cn: 教育
+summary-en: Turn machine, product and system principles into interactive diagrams and animations with 3D breakdowns, section views and linked controls, delivering offline pages and demonstration videos.
+summary-cn: 将机器、产品和系统原理转化为可操作的图解与动画，支持三维拆解、剖切和参数联动，交付离线页面与演示视频。
+desc-en: Explain how products, machines, algorithms and systems work through detailed isometric diagrams and interactive 3D scenes. Research dimensions, parts and teardown dependencies from real sources; distinguish verified facts from schematic geometry. Link controls, motion, labels and readouts to one state model. Support SVG illustrations, orbitable Three.js scenes, exploded assemblies and section views. Reuse the scene for captioned MP4 demonstrations. Choose one output language for HTML and video. Deliver offline HTML, editable source, licences, citations and actual validation evidence. SVG output is available for the SVG branch.
+desc-cn: 以精细等轴测图解和可交互三维场景讲清产品、机器、算法与系统的工作原理。从真实来源查证尺寸、零件及拆解依赖，明确区分可靠事实与示意模型；让控件、机构运动、标签和读数由同一状态模型驱动。支持 SVG 图解、自由旋转、分总成爆炸拆解与剖切，并复用场景制作带字幕的 MP4 演示动画。可选择中文、英文或其他语言，统一 HTML 与视频内容。交付离线 HTML、可编辑源码、许可证、来源及实际验证记录；SVG 分支同时提供静态 SVG。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 将机器、产品与系统原理做成可探索的交互图解和动画，让结构、运动与参数变化在同一场景中清晰呈现。
+    best-for:
+    - 机器原理
+    - 产品拆解
+    - 交互科普
+    how-to-use: 提供主题、关键参数及交互要求，确认输出语言和页面或视频形式后制作。
+    outputs: 离线交互页面、可编辑源码、来源与验证记录，以及按需制作的演示视频。
+  en-US:
+    summary: Make machine, product and system principles explorable through interactive diagrams and animation, showing structure, motion and parameter changes within one coherent scene.
+    best-for:
+    - Machine Principles
+    - Product Breakdowns
+    - Interactive Explainers
+    how-to-use: Provide a topic, parameters and interactions, then confirm output language and page or video deliverables.
+    outputs: Offline interactive pages, editable source, provenance and verification records, plus requested demonstration videos.
+complete-tags-en:
+- Education / Creative Generation
+complete-tags-cn:
+- 教育 / 创作生成
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/645b2647-6240-4f4a-a7e5-3cea4180b668.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/645b2647-6240-4f4a-a7e5-3cea4180b668.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/22edf1e1-f2a5-4e04-8050-ac9ca4553684.mp4

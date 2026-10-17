@@ -1,0 +1,24 @@
+{
+  "name": "ecommerce-visual-copywriting-skill",
+  "owner": {
+    "name": "feichanggege",
+    "url": "https://github.com/feichanggege"
+  },
+  "metadata": {
+    "description": "E-commerce visual planning, storyboard, copy, evidence review, localization, and image-prompt workflow."
+  },
+  "plugins": [
+    {
+      "name": "ecommerce-visual-creator",
+      "description": "电商视觉策划与执行 v3：支持主图、详情页、Amazon Listing/A+、跨境本地化、证据账本、Reference Fidelity、设计师交接、生图 Prompt 与合规审查。",
+      "version": "3.0.0",
+      "author": {
+        "name": "feichanggege",
+        "url": "https://github.com/feichanggege"
+      },
+      "source": "./",
+      "category": "marketing",
+      "homepage": "https://github.com/feichanggege/ecommerce-visual-copywriting-skill"
+    }
+  ]
+}

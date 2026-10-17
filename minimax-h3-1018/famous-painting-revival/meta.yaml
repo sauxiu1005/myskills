@@ -1,0 +1,37 @@
+display-name-zh: 名画复活剧情短片
+version: 1.0.0
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Creative Generation
+complete-tags-cn:
+- 专业影视 / 创作生成
+summary-en: Turn a painting title or reference image into an immersive camera journey or a multi-shot story, with movement and action converging into the artwork’s composition before a final freeze.
+summary-cn: 从画名或参考图出发，通过沉浸式运镜或多镜头故事演绎，制作由行动自然汇聚为画作构图、最终定格成画的短片。
+desc-en: For art content creators, this Skill turns a painting title or reference image into a short film with purposeful action and storytelling. It first checks the work’s background and separates historical facts from creative interpretation. Choose an immersive journey into the painted world or a multi-shot story leading up to its depicted moment. Prepare essential character and scene references, then plan performance, camera movement, sound, and shots. After approval, generate and inspect the film as action converges into the painting’s composition and freezes. Research, reference assets, scripts, and prompts can also be delivered separately. It is not intended for simple micro-animation such as blinking or fluttering fabric.
+desc-cn: 面向艺术内容创作者，将名画名称或参考图转化为有动作、有故事的短片。先核实作品背景，区分史实与创作补全，再选择沉浸式穿行入画，或通过多镜头演绎画中瞬间发生前的故事。围绕原画准备必要的人物与场景参考，设计表演、运镜、声音和分镜，经确认后生成并检查成片，让行动自然收束为画作构图，最后定格呈现。也可单独交付背景研究、参考资产、剧本或提示词，不适用于仅眨眼、衣摆飘动等简单微动效。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 将名画中的人物与场景转化为沉浸式运镜或画前故事，通过动作自然汇聚为原作构图并定格呈现。
+    best-for:
+    - 艺术短片
+    - 名画故事
+    - 沉浸运镜
+    how-to-use: 提供画名或参考图，选择入画运镜或画前故事，确认方案与素材后制作。
+    outputs: 作品背景资料、人物场景参考、分镜提示词与经授权制作的短片。
+  en-US:
+    summary: Bring painted subjects and settings to life through immersive camera travel or a lead-up story that converges into the artwork composition.
+    best-for:
+    - Art Films
+    - Painting Stories
+    - Immersive Camera
+    how-to-use: Provide a painting title or image, choose a route, and approve the production plan and assets.
+    outputs: Artwork research, character and scene references, storyboard prompts, and authorized films.
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/eec8662f-ceca-45e6-8d2f-40ae665ee3cc.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/eec8662f-ceca-45e6-8d2f-40ae665ee3cc.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/ed095142-4fab-465e-887a-9468debda414.mp4
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/6d639415-b12d-4845-bc4e-994ca825a45b.mp4

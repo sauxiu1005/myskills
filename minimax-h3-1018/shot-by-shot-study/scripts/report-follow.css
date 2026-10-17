@@ -1,0 +1,16 @@
+/* Keep video and a separately scrollable shot table visible together. */
+#overview{display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.45fr);gap:14px;align-items:start}
+#overview .report-player{grid-column:1;grid-row:1;display:flex;flex-direction:column;position:sticky;top:12px;margin:0;min-width:0}
+#overview .player-media,#overview .player-info{width:100%;min-width:0}
+#overview #report-video{width:100%;height:auto;max-height:43vh;object-fit:contain;background:#111}
+#overview #library{grid-column:2;grid-row:1;min-width:0;margin:0}
+#overview .timeline-panel{grid-column:1/-1;grid-row:2;margin:0}
+#cards{max-height:65vh;min-height:180px;overflow:auto;overscroll-behavior:contain;position:relative;scroll-behavior:auto}
+#cards.list .shot-card{min-width:720px}
+#library .library-header{flex-wrap:wrap;gap:10px}
+#library .library-tools{flex-wrap:wrap;gap:10px}
+#library .list-head{display:none}
+.report-follow-control{display:inline-flex;align-items:center;gap:5px;font-size:12px;white-space:nowrap;cursor:pointer}
+.report-follow-control input{accent-color:#52713a}
+@media(max-width:1000px){#overview{grid-template-columns:1fr}#overview .report-player{grid-column:1;grid-row:1;position:static}#overview #library{grid-column:1;grid-row:2}#overview .timeline-panel{grid-column:1;grid-row:3}#cards{max-height:50vh}#overview #report-video{max-height:32vh}}
+@media print{#overview{display:block}#cards{max-height:none;overflow:visible}.report-follow-control{display:none}}

@@ -1,0 +1,14 @@
+# 可选；记录实际可控设置，不需要校准审批或参数全填。
+schema_version: 8
+style_id: GH-01
+source_reference: assets/style-reference.png
+master_manifest: assets/style-master.yaml
+fixed_prompt_source: references/style-bible.md
+image_tool: null # 用户选择优先
+image_tool_choice_basis: default # 或用户选择依据
+selected_model: null
+style_reference_used: null
+fixed_parameters: {}
+output_settings: {}
+video_reference_materials: [] # 实际 CH/SC/必要道具素材与视频输入用途
+known_limitations: []

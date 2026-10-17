@@ -1,0 +1,36 @@
+display-name-zh: 苹果发布会风格宠物短片
+version: 1.0.0
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Creative Generation
+complete-tags-cn:
+- 商业广告 / 创作生成
+summary-en: Turn pet photos into five outfits and a 28-second launch film with seamless backgrounds, horizontal-gradient typography, separately approved audio-free clips, and user-selected BGM added only after visual acceptance.
+summary-cn: 根据宠物照片生成五款造型和两段无音轨短片，统一无缝背景与横向渐变文字，画面验收后合成指定配乐。
+desc-en: Designed for pet owners and creators making playful launch films, this skill turns photographs, a confirmed name, and a breed into a minimalist presentation. It confirms image and video resolutions separately, approves five outfits and copy, then produces sequential fifteen-second and thirteen-second clips with no audio streams. A suspended utility-jacket pocket, fan-like duplication, lateral close-ups, pair sniffing, and symmetric curious head tilts share a seamless white-to-light-gray environment and horizontal-gradient typography. The actual first endpoint anchors the second clip, with review after each result and assembly. Deliverables include the outfit sheet, audio-free clips, and a twenty-eight-second landscape film. User-designated BGM is added only after visual acceptance; silence remains optional. It excludes official Apple advertising and slide decks.
+desc-cn: 面向希望为宠物制作趣味发布会的主人与创作者，将宠物照片、名字和确认品种转化为极简科技展示。先分别确认图片与视频分辨率，生成五款造型并确认文案，再制作十五秒与十三秒无音轨片段，以真实末帧接续、逐段审核。统一白至浅灰无缝背景、横向渐变文字，呈现工装贴袋、折扇分身、双宠嗅闻与对称好奇歪头。交付造型图、静音片段和二十八秒横屏成片，画面验收后合成用户指定配乐，也可保持静音。不用于官方苹果广告或幻灯片，不保证首次生成完全无缝。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 将宠物照片转化为五款造型与极简发布会短片，逐段确认画面后按用户选择添加配乐。
+    best-for:
+    - 宠物短片
+    - 趣味发布会
+    - 科技风展示
+    how-to-use: 上传宠物照片并确认名字和品种，选择造型与清晰度，审核片段后决定配乐。
+    outputs: 五款宠物造型图、静音视频片段及可选配乐的发布会成片。
+  en-US:
+    summary: Turn pet photographs into five outfits and a minimalist launch film, adding optional music after visual approval.
+    best-for:
+    - Pet Films
+    - Playful Launches
+    - Technology Style
+    how-to-use: Upload pet photos, confirm name and breed, choose outfits and clarity, then review clips and select optional music.
+    outputs: Five outfit images, silent video clips, and a launch film with optional music.
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/c943d1c3-3773-4ab3-b72f-242adca05c3a.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/c943d1c3-3773-4ab3-b72f-242adca05c3a.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/6a17a0ac-6ce1-4a2f-87e7-4f028fadfa68.mp4

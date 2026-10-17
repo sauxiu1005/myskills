@@ -1,0 +1,37 @@
+display-name-zh: 三维质感商品广告
+version: 1.0.0
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Full Production
+complete-tags-cn:
+- 商业广告 / 成片制作
+summary-en: Approve a product-led timecoded script, then generate and review one material-led 3D-look commercial with native sound.
+summary-cn: 先确认商品主导的时间码脚本，再按材质匹配运镜、声音和画面布局，一次生成并验收三维质感广告。
+desc-en: For brands, merchants, and creators making brisk 3D-look product commercials from clear product photographs. It suits beverages and liquids, creams and cosmetics, transparent or reflective packaging, soft goods, and products with clear edges, seams, controls, or assembly details. Users provide product images and choose duration, framing, sound, verified benefits, and exact copy. The workflow identifies visible product facts, writes an approved timecoded script with material-led motion, varied camera paths, and purposeful inset or split-screen moments, then generates one complete video with native music and effects for review. It does not invent performance claims, deliver editable 3D projects, or silently split production.
+desc-cn: 面向品牌与电商创作者，将清晰商品图制作成节奏紧凑的三维质感商品广告。适合饮品液体、乳霜化妆品、透明反光包装、柔性商品及结构明确的产品。用户提供商品图，补齐时长、画幅与声音需求，可附真实卖点和文案。流程先识别可见事实，再设计材质动作、多样运镜、纯材质镜头和有信息增量的小窗，展示时间码脚本供确认；随后一次生成完整视频及同步音效。不虚构性能，不交付可编辑工程，能力受限时先说明。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 以商品事实为基础，先确认时间码脚本，再生成具有材质表现和同步声音的三维质感广告。
+    best-for:
+    - 饮品液体
+    - 乳霜化妆品
+    - 结构商品
+    how-to-use: 上传商品图，补齐时长、画幅和声音需求，确认完整脚本后生成并验收。
+    outputs: 已确认的时间码广告脚本与一条完整三维质感视频。
+  en-US:
+    summary: Use product facts to approve a timecoded script before generating a material-led 3D-look commercial with synchronized sound.
+    best-for:
+    - Beverage and liquid ads
+    - Cream and transparent packaging
+    - Structurally defined products
+    how-to-use: Upload product images, provide duration, framing and sound needs, approve the complete script, then generate and review.
+    outputs: An approved timecoded advertising script and one complete 3D-look video.
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/68d6aa23-0d06-48de-aa7c-087c5712df6c.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/68d6aa23-0d06-48de-aa7c-087c5712df6c.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/93bd4c70-5465-44f5-af1b-ef3927c4157c.mp4
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/947a5e7d-1ac0-488d-8608-2ed7c912a696.mp4

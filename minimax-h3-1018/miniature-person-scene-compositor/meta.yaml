@@ -1,0 +1,36 @@
+display-name-zh: 微缩人物场景合成
+version: 1.0.0
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+complete-tags-en:
+- Creative & Experimental / Creative Generation
+complete-tags-cn:
+- 创意实验 / 创作生成
+summary-en: Blend real-person and scene photos into photoreal miniature interactions, preserving personal features and matching perspective and lighting, with optional short clips featuring natural action and continuous scale.
+summary-cn: 将真人与场景照片融合为写实微缩互动，保留人物特征并匹配透视光影，可进一步制作动作自然、尺度连贯的互动短片。
+desc-en: For miniature photography and creative shorts, upload person and scene photos to design interactions between a reduced-size person and everyday objects. Propose standing, leaning, touching or exploring as suited to the scene, preserving appearance, clothing and accessories while matching perspective, lighting, depth of field, contact and support. Create the photographic impression of a real person inhabiting a miniature world, rather than a toy or pasted cutout. Deliver composites, creative directions or prompts alone; or, after image approval, prepare a production document with a storyboard timeline, action, camera movement and sound, then generate and inspect short clips under separate authorization, checking identity, scale and action continuity. Not for long films or layered projects.
+desc-cn: 面向微缩摄影与创意短片创作，上传真人照和场景照，即可设计人物缩小后与日常物体的互动。根据场景提出站立、倚靠、触摸或探索等方案，保留人物长相、服装与配饰，匹配透视、光影、景深和接触支撑，营造真人置身微缩世界的摄影效果，而非玩偶或贴图。支持仅交付合成图、创意方向或提示词；也可在图片确认后，编写含分镜时间轴、动作、运镜与声音的制作文档，经独立授权生成并检查短片，关注身份、尺度和动作连续性。不用于长片或分层工程。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 将真人照片与环境融合为具有真实光影和接触关系的微缩场景，并可延展为尺度连贯的互动短片。
+    best-for:
+    - 微缩摄影
+    - 场景合成
+    - 互动短片
+    how-to-use: 上传人物和场景照片，确认互动与合成效果；需要视频时再确认动作及制作方案。
+    outputs: 写实微缩合成图、互动方案与提示词，以及经授权制作的短片。
+  en-US:
+    summary: Combine person and environment photographs into miniature scenes with believable light and contact, optionally extending them into coherent interaction clips.
+    best-for:
+    - Miniature Photography
+    - Scene Compositing
+    - Interaction Clips
+    how-to-use: Upload person and scene photographs, approve the interaction and composite, then confirm a video plan if needed.
+    outputs: Miniature composites, interaction plans and prompts, and separately authorized short clips.
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/dd135352-9114-4dff-9dde-0616a5fad506.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/dd135352-9114-4dff-9dde-0616a5fad506.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/5fb1a712-af86-4492-a1fc-ac6533d9423c.mp4

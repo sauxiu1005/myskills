@@ -1,0 +1,4 @@
+interface:
+  display_name: "Multilingual Hand-drawn Story Video"
+  short_description: "从多语言故事到手绘分镜、动态片段与成片"
+  default_prompt: "使用 $multilingual-hand-drawn-story-video 将我的故事或有序图片制作成多语言手绘故事视频；识别并保留原文语言，选择覆盖完整的字体和正确排版，每个节点生成后展示并询问我是否通过，未经明确要求不要自动重生成。"

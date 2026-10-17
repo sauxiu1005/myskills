@@ -1,0 +1,40 @@
+display-name-zh: 分镜可视化
+version: 0.1.0
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Creative Generation
+- Short Drama / Creative Generation
+complete-tags-cn:
+- 专业影视 / 创作生成
+- 短剧漫剧 / 创作生成
+summary-en: Visualize a confirmed storyboard script as a multi-panel storyboard showing the whole video or as single
+  frames for key shots, after confirming format and quantity with the user.
+summary-cn: 把已确认的分镜脚本可视化，按用户选择出呈现整片全貌的多宫格故事板，或细看关键镜头的单帧画面。
+desc-en: Visualize a confirmed storyboard script before spending on video generation. Start from the storyboard,
+  generation units, character, product and scene references and the style baseline. Ask the user whether they
+  want a multi-panel storyboard, single frames or both, and how many. Storyboards cover every shot in order to
+  show the whole video; single frames are clean images for key shots that can serve as visual references.
+  Each image is planned from viewing relationship, spatial layers and sourced light. It does not create
+  concepts, design storyboards or build character and scene reference sheets.
+desc-cn: 在花费视频生成之前，把已确认的分镜脚本可视化。输入分镜脚本、生成单元、人物产品场景参考与风格基线，先询问用户需要多宫格故事板、单帧画面还是两者结合，以及图片数量；故事板按顺序覆盖全部镜头、呈现整支视频的全貌，单帧为关键镜头的干净画面，可作为视频生成的画面参考。每张画面先想清观看关系、空间层次与光色来源再出图。不负责创意、分镜设计或人物与场景设定图。
+author-en: MiniMax Hub
+author-cn: MiniMax Hub
+source: official
+structured-info:
+  zh-CN:
+    summary: 把已确认的分镜脚本可视化，按用户选择出呈现整片全貌的多宫格故事板，或细看关键镜头的单帧画面。
+    best-for:
+    - 分镜故事板
+    - 关键帧画面
+    how-to-use: 提供已确认的分镜脚本与参考，选择多宫格故事板或单帧画面及数量，确认后再生成视频。
+    outputs: 覆盖全部镜头的多宫格故事板或关键镜头单帧，并注明对应镜号。
+  en-US:
+    summary: Visualize a confirmed storyboard script as a multi-panel storyboard showing the whole video or as single
+      frames for key shots.
+    best-for:
+    - Storyboard Boards
+    - Keyframe Frames
+    how-to-use: Provide the confirmed storyboard and references, choose a multi-panel storyboard or single frames and
+      the quantity, then review before video generation.
+    outputs: Multi-panel storyboards covering every shot or single frames for key shots, each noting its shot number.

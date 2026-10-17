@@ -1,0 +1,11 @@
+# 可选；角色卡已含这些信息时无需另填。
+schema_version: 3
+character_id: null
+name_and_story_role: null
+version: 1
+main_reference_image: null
+identifying_features: null
+wardrobe_and_colors: null
+story_required_forms_or_details: []
+allowed_changes: []
+voice_if_needed: null

@@ -1,0 +1,36 @@
+display-name-zh: 多语言手绘故事视频制作
+version: 1.0.0
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+- Animation / Creative Generation
+complete-tags-cn:
+- 动画 / 创作生成
+summary-en: Turn multilingual stories or ordered images into a planned, style-consistent hand-drawn video package and, when requested, a finished video.
+summary-cn: 将多语言故事或有序图片整理为风格统一的手绘视频制作包，并按需完成成片。
+desc-en: A guided production Skill for creators who want to turn multilingual story text, ordered illustrations, or canvas assets into a hand-drawn story video. It first identifies each segment language, script direction, typography needs, delivery depth, framing, style, and audio plan; then it breaks the story into shots, locks continuity references, prepares editable text-layer rules, generates approved illustration and motion assets, and composites the result inside a safe area. Outputs include a story and shot plan, character and scene references, storyboard images, motion clips, editable text or subtitle layers, compositing notes, and a finished video when the required Design capabilities are available. It is not for standalone illustrations, live-action editing, or automatic translation without user approval.
+desc-cn: 面向希望把多语言故事文本、有序插画或画布素材制作成手绘故事视频的创作者。流程先识别各段语言、文字系统、书写方向与字体需求，确认交付层级、画幅、风格和声音方案；再拆解故事与镜头，锁定角色和场景连续性，制定独立文字层，逐节点生成并验收插画与动态片段，最后在安全区内合成。可交付故事与镜头方案、角色场景参考、分镜图、动态片段、可编辑文字或字幕层、合成说明，以及在 Design 能力可用时的最终视频。不用于单张插画、真人视频剪辑或未经确认的自动翻译。
+structured-info:
+  zh-CN:
+    summary: 将多语言故事或有序图片转化为经过规划、逐节点验收的手绘故事视频，并按需输出成片。
+    best-for:
+    - 多语言故事
+    - 手绘动画
+    - 绘本视频
+    how-to-use: 提供故事文本或有序图片，确认语言排版、画幅、风格和声音后逐镜制作。
+    outputs: 故事与镜头方案、角色场景参考、分镜图、动态片段、可编辑文字或字幕层、合成说明及最终视频。
+  en-US:
+    summary: Turn multilingual stories or ordered images into a planned, node-reviewed hand-drawn story video and deliver the finished video when requested.
+    best-for:
+    - Multilingual Stories
+    - Hand-drawn Animation
+    - Storybook Videos
+    how-to-use: Provide story text, ordered images, or canvas assets, then confirm language and typography, delivery depth, framing, style, and audio before approving shot assets and compositing the result.
+    outputs: Story and shot plan, character and scene references, storyboard images, motion clips, editable text or subtitle layers, compositing notes, and finished video.
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/8deb2ed2-be85-483d-9746-2802132e503e.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/8deb2ed2-be85-483d-9746-2802132e503e.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/a2c516f8-1698-4edf-8600-ed66909e73b3.mp4

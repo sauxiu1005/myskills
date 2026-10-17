@@ -1,0 +1,36 @@
+display-name-zh: 多机位重拍
+version: 1.0.0
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+complete-tags-en:
+- Creative & Experimental / Creative Generation
+complete-tags-cn:
+- 创意实验 / 创作生成
+summary-en: Turn a single-camera performance into a timed multicam reshoot with distinct viewpoints, approved clips, or a finished recut.
+summary-cn: 将固定机位视频改编成有明确时间和空间关系的多机位重拍，并生成确认后的片段或重剪成片。
+desc-en: Turn single-camera footage into an AI multicam reshoot by analyzing actions and spatial relationships, designing distinct viewpoints, writing timed prompts, and generating approved clips or a recut. The workflow accepts source footage and optional target examples, maps events, prop states, and layout, extracts camera language, and places side, rear, overhead, low, or object viewpoints at motivated action beats. After approval it generates each batch with native audio by default and can stop at prompt-only guidance. It is designed to broaden visual coverage of one continuous event while preserving identity, performance, spatial continuity, and meaningful action timing.
+desc-cn: 将固定机位视频改编成AI多机位重拍：分析动作与空间关系，设计不同摄影机视角，编写分时段提示词并生成确认后的片段或成片。接收原视频及可选目标案例，分析事件、动作、道具状态和空间布局，提取镜头语言，把侧面、后侧、俯拍、低位及物件视角安排到关键动作切点。确认后按批次生成，默认使用生成音频，也支持只交付提示词。适合扩展同一连续事件的视觉覆盖，同时保持身份、表演、空间连续性和动作时序。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 让同一段原始表演获得有明确时间和拍摄位置的多机位设计。
+    best-for:
+    - 分时段机位
+    - 案例反推设计
+    - 分批视频重拍
+    how-to-use: 上传原片及可选目标案例，审核完整提示词和批次映射后确认生成。
+    outputs: 机位提示词、空间覆盖与时间映射，以及按请求制作的重拍片段或成片。
+  en-US:
+    summary: Give one source performance a multicam design with explicit shot times and camera positions.
+    best-for:
+    - Timed camera prompts
+    - Source-to-target shot design
+    - Batched long-video reshoots
+    how-to-use: Upload source footage and optional target examples, review the complete prompts and batch map, then approve generation.
+    outputs: Camera prompts, spatial coverage and time mapping, plus requested reshot clips or a finished recut.
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/21928cbf-fa01-4edd-81bf-a33b1d9ee052.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/21928cbf-fa01-4edd-81bf-a33b1d9ee052.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/a2111a73-d888-47b6-865a-0d95694e4a2a.mp4
