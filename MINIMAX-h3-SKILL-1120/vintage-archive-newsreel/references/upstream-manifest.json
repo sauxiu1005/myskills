@@ -1,0 +1,242 @@
+{
+  "repository": "https://github.com/lemomo-ai/lemo-opuscar",
+  "commit": "413a6bd6d78ebd3bdd5abaec9538a26867f890df",
+  "files": [
+    {
+      "path": "DIRECTOR.md",
+      "sha256": "3b8b0c40011a0cea796bb1afe6dae0f212115b57e2aa4c9a976b1994a923d564"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "14c9ff6f14bfb2391e74fedb01c256891d2a3bba1c2acf5789901bdf77e54e33"
+    },
+    {
+      "path": "TECHNIQUE.md",
+      "sha256": "8790803f846846032cba16c11c6f1c477625460e9df74f32d1c650717ea8526b"
+    },
+    {
+      "path": "core/README.md",
+      "sha256": "c13c11532dda994b3e4c0933e8756286fa4f8b7f288cb47ba0beee26d399dbfa"
+    },
+    {
+      "path": "core/audio/INSTRUMENTS.md",
+      "sha256": "5a304e24baf6ff1252e4e0934209516c36efe8e52c65bd9a4db44373ddad1f08"
+    },
+    {
+      "path": "core/audio/pluck.py",
+      "sha256": "7c2af41c55ed18dcd46a769d08037d04d79b92b4abf3ef1db1d2e3da5ebc9a5b"
+    },
+    {
+      "path": "core/audio/sampler.py",
+      "sha256": "858c545d0ae97f144baba24ab00fe0e9b5913a86327fff4ecf6cf2ff463a5f2b"
+    },
+    {
+      "path": "core/audio/sfx.py",
+      "sha256": "d43584b58527a40bd720889bb2fb5c9d62b9868a43fbb73c68e06b1161a75689"
+    },
+    {
+      "path": "core/lib.js",
+      "sha256": "f6aafa10a156d52b066a39b9445b4d23f3261b326042a92b95bdea4ba71bac24"
+    },
+    {
+      "path": "core/render/browser.mjs",
+      "sha256": "e1709a756c8e7533e5467ca4a8891442d05f68cdc40831ab99979dd4fe731d67"
+    },
+    {
+      "path": "core/render/events.mjs",
+      "sha256": "bacef94cd9bde0100125df19566faa2bd2a9616cfa32506358537621baf63b93"
+    },
+    {
+      "path": "core/render/mux.sh",
+      "sha256": "4b61171d1a8be4fa91bc5ffc725e35af15be4fcc1b08cb849f97df6c1e17b356"
+    },
+    {
+      "path": "core/render/page.mjs",
+      "sha256": "9549c827ff93e94b1a46e4ca46d4111199a47cc6b9f0b5766b1b65d00a7f54b1"
+    },
+    {
+      "path": "core/render/readcheck.mjs",
+      "sha256": "36f273516937154b51a512e9be264d545ccd4a592b0677327835a328bb5cfc9c"
+    },
+    {
+      "path": "core/render/serve.mjs",
+      "sha256": "67960fc1f8be551d62c7d4129407f6b0ce1c7ed6238bc720d3bed396ad3f0356"
+    },
+    {
+      "path": "core/render/sheet.py",
+      "sha256": "1b24e5fed9d5a4df86171fb4e18d6b1cdc4138901efe3044125ff046724711bb"
+    },
+    {
+      "path": "core/render/slot.mjs",
+      "sha256": "eed70ee5be47d608eadfabdcb5e550ce509c32fb42a5afb9377644e7226d8ef0"
+    },
+    {
+      "path": "core/render/srt.py",
+      "sha256": "027cbf45fa03ef183da5fb8bfdda4064414639c1b023cc2cf1a8db12977bdeb3"
+    },
+    {
+      "path": "core/render/still.mjs",
+      "sha256": "b1c7688e600f12c1211c64e8ea2e70738053f327c0851af39913816ce7e864e4"
+    },
+    {
+      "path": "core/render/video.mjs",
+      "sha256": "502bfe4fd9f5e2d9ff14d5930927dc7e2b03fb55b2b3d17f201064a766bb87b3"
+    },
+    {
+      "path": "core/tts/asr_check.py",
+      "sha256": "c848b853c18ce570d72d55a346ce927bf57a0029bd0fd0258223f9c1710c29b2"
+    },
+    {
+      "path": "core/tts/tts.py",
+      "sha256": "aa63f2321c4e66471096d5d6f349fc77c6cf004ffdf9b77741509bfde7dd8a9d"
+    },
+    {
+      "path": "core/tts/tts_zh.py",
+      "sha256": "ee0196eb3c665531411be5721186e4f4f0514d1404ba439dc4a85aab31678aff"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "813ec295dae53e681217533ebc9babd2eedb170fc69a3c8b33a6df266d5248ac"
+    },
+    {
+      "path": "package.json",
+      "sha256": "6b8067aaba294772db54db7d2763300021e0d1fe97b5f108c10ae7c42aa1350d"
+    },
+    {
+      "path": "requirements-music.txt",
+      "sha256": "64deb42c911d67bfc88e4a7fe6a00dacba91b2cb996b648cf7de535b9969541d"
+    },
+    {
+      "path": "requirements-voice.txt",
+      "sha256": "e4bf2bda88b61ed789be360896c6eeb5bb2027d8a4f7414c4a10489cb311f04d"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "b7c895b82bb65f2b64342d08e28c07ed5a6d0d4d7c25c0e09a200d69ddda8d7d"
+    },
+    {
+      "path": "styles/newsreel/DEMO.md",
+      "sha256": "678b281fd99698a5a87f7f2cef1cf60bc3a992c5dcff8eb015d8978044ee7314"
+    },
+    {
+      "path": "styles/newsreel/STYLE.md",
+      "sha256": "0f82c1423d2463dfc2700b23dff9ec183f596724a4820757e189c6fa5225e600"
+    },
+    {
+      "path": "styles/newsreel/demo/.gitignore",
+      "sha256": "588590e2857118edea35f0089c14470e54a0c222cdcc6a90016613612fd5f3c5"
+    },
+    {
+      "path": "styles/newsreel/demo/CREDITS",
+      "sha256": "9bfaaf3751d42414c383c733105be5b83927d2c751bc1b7d860fffa2b6b530e3"
+    },
+    {
+      "path": "styles/newsreel/demo/FACTS.md",
+      "sha256": "24017773836122dc9282c2d3234e76305a9566548ba800a794157d75ad9fb9f4"
+    },
+    {
+      "path": "styles/newsreel/demo/SOURCES.jsonl",
+      "sha256": "2064730bae0f04a6807a03a3f9a2c1522c13c471ed3b084864d9ef7470344be2"
+    },
+    {
+      "path": "styles/newsreel/demo/SOURCES.md",
+      "sha256": "7cf7106b9f0e3adf83d70d39bd33d6cb8a2d7ad02d65e60ff686905d5d559b32"
+    },
+    {
+      "path": "styles/newsreel/demo/audio/mix.py",
+      "sha256": "407f917186ebdb03ad1febfea7794bc84271cfb5c464e0f2ab5b9bff708f9249"
+    },
+    {
+      "path": "styles/newsreel/demo/build.sh",
+      "sha256": "1dcefde732bf8b6ad7c7c94794c0d36fe2e0def32969165a2115c399066f9e75"
+    },
+    {
+      "path": "styles/newsreel/demo/events.json",
+      "sha256": "ff2ac4d833ce7c11388ef48090f51860c993b1863366a9694e42cbf7305c5453"
+    },
+    {
+      "path": "styles/newsreel/demo/fonts/OFL-Limelight.txt",
+      "sha256": "6b53fb03a50914cc382f4d025ee595c17c43f24ae870f840bc51969d3e316c7e"
+    },
+    {
+      "path": "styles/newsreel/demo/fonts/OFL-NotoSansSC.txt",
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "path": "styles/newsreel/demo/fonts/OFL-NotoSerifSC.txt",
+      "sha256": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6"
+    },
+    {
+      "path": "styles/newsreel/demo/fonts/OFL-Oswald.txt",
+      "sha256": "0fd731a904b729a4e02eaf5e8ebd06783edd9abe400e8882760160230675b652"
+    },
+    {
+      "path": "styles/newsreel/demo/index.html",
+      "sha256": "58722bd76c3607972e94c228574ef5c8407beae25ed02e0b5a2321ddae70fdea"
+    },
+    {
+      "path": "styles/newsreel/demo/stills/styleframe.jpg",
+      "sha256": "695e553937085187c58caff92261a159bdcf5b1aae357df0e544ca0aa1a528bd"
+    },
+    {
+      "path": "styles/newsreel/demo/timeline.json",
+      "sha256": "bdddcbcb2f978f40cfd4c32139fa40749d825e6fa1b0fbe95dfc3d378183abc8"
+    },
+    {
+      "path": "styles/newsreel/demo/tools/cues.py",
+      "sha256": "7513503e810aefa944e918ae528f2a64af4644b66f0ffba3bcb5d65e052ca446"
+    },
+    {
+      "path": "styles/newsreel/demo/tools/fetch_sources.py",
+      "sha256": "c5b4c1e948955e12d09d4cdcbc982c5a79d642adbfce4544e4f71454d8b3d47a"
+    },
+    {
+      "path": "styles/newsreel/demo/tools/final_asr.py",
+      "sha256": "2e674da6589e4eb13757a68dcbc73f19886e02993f50164bfca25421c3c62684"
+    },
+    {
+      "path": "styles/newsreel/demo/tools/footage.py",
+      "sha256": "9bd02b8d1493f72998eed6fadbba4b2095abda9c6f7054513fee7ac463f5e85b"
+    },
+    {
+      "path": "styles/newsreel/demo/tools/prep.py",
+      "sha256": "3776acbf898f5d43f1bd7002497da7d4ed03e1ec89580a6d793548601f96ed11"
+    },
+    {
+      "path": "styles/newsreel/demo/tools/subcheck.mjs",
+      "sha256": "f77c55cffe64ff5ac620f978b78cb600db79e28683a6bee3a742cec23a166f95"
+    },
+    {
+      "path": "styles/newsreel/demo/tools/timeline.py",
+      "sha256": "d3191d40101bf65cc9ab229beb18236ed55a7ef174abb535e804136182620d3f"
+    },
+    {
+      "path": "styles/newsreel/demo/tools/voice.py",
+      "sha256": "1b0d83917d7ae3fcfb51f809be08f5b4b40c93ffb843b2e0d4d38ba7f12355a4"
+    },
+    {
+      "path": "styles/newsreel/demo/voice/lines.json",
+      "sha256": "51cb04125cf236b28d46be7ab12181aa1b7f5dacfb6ffed43dcfdd07dc3368b0"
+    },
+    {
+      "path": "styles/newsreel/newsreel.srt",
+      "sha256": "2eb4bd01d693197894b10ee9a8b2abbda82a3c6907ed7b5c950756230a4e3109"
+    },
+    {
+      "path": "styles/newsreel/poster.jpg",
+      "sha256": "695e553937085187c58caff92261a159bdcf5b1aae357df0e544ca0aa1a528bd"
+    },
+    {
+      "path": "styles/newsreel/style.json",
+      "sha256": "d20ae96a49893f17a46b4d549bd9324d6129e76392376b6089673f72a2a2339f"
+    },
+    {
+      "path": "tools/assets.json",
+      "sha256": "a03a688203dbce22968f2a4b54dc9e19b7014051929084e2a7f6adebd2bd7240"
+    },
+    {
+      "path": "tools/fetch.sh",
+      "sha256": "05e2ca17a643bdfd49a3788afb8af0058643dceb744a477fd08efaee25c38b79"
+    }
+  ]
+}

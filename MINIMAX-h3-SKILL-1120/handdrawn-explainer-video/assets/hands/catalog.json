@@ -1,0 +1,95 @@
+{
+  "default": "pen-only",
+  "presets": [
+    {
+      "id": "navy",
+      "name": "深蓝袖马克笔",
+      "source": "navy.png",
+      "nib": [
+        94,
+        16
+      ],
+      "wrist": [
+        454,
+        552
+      ]
+    },
+    {
+      "id": "diamond-woman",
+      "name": "白皙长甲镶钻女手",
+      "source": "diamond-woman.png",
+      "nib": [
+        103,
+        23
+      ],
+      "wrist": [
+        468,
+        602
+      ],
+      "selection": "C design chosen by user; regenerated from scratch under mandatory art direction"
+    },
+    {
+      "id": "child-pencil",
+      "name": "儿童彩铅手",
+      "source": "child-pencil.png",
+      "nib": [
+        110,
+        28
+      ],
+      "wrist": [
+        446,
+        504
+      ]
+    },
+    {
+      "id": "waner-brush",
+      "name": "上官婉儿灵感毛笔",
+      "source": "waner-brush.png",
+      "nib": [
+        71,
+        7
+      ],
+      "wrist": [
+        460,
+        560
+      ]
+    },
+    {
+      "id": "teacher-pen",
+      "name": "白衬衫讲师中性笔",
+      "source": "teacher-pen.png",
+      "nib": [
+        109,
+        36
+      ],
+      "wrist": [
+        451,
+        580
+      ]
+    },
+    {
+      "id": "cardigan-fountain",
+      "name": "针织袖经典钢笔",
+      "source": "cardigan-fountain.png",
+      "nib": [
+        133,
+        101
+      ],
+      "wrist": [
+        468,
+        650
+      ]
+    },
+    {
+      "id": "pen-only",
+      "name": "仅画笔 · 无手臂",
+      "kind": "pen",
+      "source": "pen-only.png",
+      "nib": [
+        96,
+        134
+      ],
+      "scale": 0.25
+    }
+  ]
+}

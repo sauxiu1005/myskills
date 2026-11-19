@@ -1,0 +1,119 @@
+{
+  "director_id": "zhang-yimou",
+  "director_name_zh": "张艺谋",
+  "source": {
+    "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/086_ZhangYimou_张艺谋/色卡主文档.md",
+    "sha256": "7f0e2a6c1be329a24492b710366813342a7ba9d2c28b67df5dd2c6648d5d052f"
+  },
+  "color_space": "sRGB",
+  "evidence": "source_document_hex_not_frame_sampled",
+  "display": "Equal-size swatches; no fixed frame-area ratios. Accent labels retain source associations, not universal emotional meanings.",
+  "main": [
+    {
+      "id": "C01",
+      "label_zh": "中国红",
+      "hex": "#C41E3A",
+      "rgb": [
+        196,
+        30,
+        58
+      ]
+    },
+    {
+      "id": "C02",
+      "label_zh": "帝王黄",
+      "hex": "#FFD700",
+      "rgb": [
+        255,
+        215,
+        0
+      ]
+    },
+    {
+      "id": "C03",
+      "label_zh": "翠绿",
+      "hex": "#228B22",
+      "rgb": [
+        34,
+        139,
+        34
+      ]
+    },
+    {
+      "id": "C04",
+      "label_zh": "墨黑",
+      "hex": "#000000",
+      "rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "C05",
+      "label_zh": "雪白",
+      "hex": "#FFFFFF",
+      "rgb": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "id": "C06",
+      "label_zh": "土棕",
+      "hex": "#8B4513",
+      "rgb": [
+        139,
+        69,
+        19
+      ]
+    }
+  ],
+  "accent": [
+    {
+      "id": "E01",
+      "label_zh": "热情革命",
+      "hex": "#DC143C",
+      "rgb": [
+        220,
+        20,
+        60
+      ],
+      "label_kind": "source_mood_label"
+    },
+    {
+      "id": "E02",
+      "label_zh": "权力辉煌",
+      "hex": "#FFD700",
+      "rgb": [
+        255,
+        215,
+        0
+      ],
+      "label_kind": "source_mood_label"
+    },
+    {
+      "id": "E03",
+      "label_zh": "自然生命力",
+      "hex": "#228B22",
+      "rgb": [
+        34,
+        139,
+        34
+      ],
+      "label_kind": "source_mood_label"
+    },
+    {
+      "id": "E04",
+      "label_zh": "命运沉重",
+      "hex": "#000000",
+      "rgb": [
+        0,
+        0,
+        0
+      ],
+      "label_kind": "source_mood_label"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+display-name-zh: 剧本创作与改写
+version: 1.0.1
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Planning
+complete-tags-cn:
+- 专业影视 / 计划制定
+summary-en: Develop story ideas and drafts into premises, characters, structures, outlines, dialogue, and scripts, then diagnose and revise existing writing.
+summary-cn: 从故事点子或已有稿件出发，按媒介选择编剧方法，产出故事方案、人物结构、大纲、对白与剧本修订稿。
+desc-en: For creators and editors developing or revising film, television, stage, and opera writing, this skill accepts story ideas, themes, character notes, outlines, script drafts, novel material, or focused revision requests. It identifies the medium, deliverable, and fixed constraints, then consults relevant premise, structure, character, dialogue, scene, series, adaptation, or opera methods. It diagnoses concrete problems before developing or revising the text. Deliverables include concept options, character relationships, structural outlines, series bibles, dialogue pages, formatted scripts, and revision plans for creative projects. It handles written development and analysis only; it does not generate images, speech, or video.
+desc-cn: 面向需要开发或修改影视与舞台文本的创作者和编辑，接收故事点子、主题、人物设定、分场大纲、剧本草稿、小说素材或具体修改意见。先识别媒介、交付范围和必须保留的条件，再按需查阅前提、结构、人物、对白、场景、剧集、改编及戏曲方法，诊断问题并完成开发或修订。最终可交付创意方向、人物关系、结构大纲、剧集设定、对白稿、格式化剧本和修改方案，并可记录项目阶段。仅处理文字创作与分析，不生成图像、配音或视频。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/5d543f4a-ece8-4e32-ba4d-e79f6c462d29.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/5d543f4a-ece8-4e32-ba4d-e79f6c462d29.mp4
+showcase:
+- https://cdn.hailuoai.com/prod/2026-10-23-14/video/1792735487242344051-1792735487230.mp4
+structured-info:
+  zh-CN:
+    summary: 按媒介选择编剧方法，把故事点子或已有稿件推进到用户指定的开发、诊断或修订交付。
+    best-for:
+    - 影视剧本开发
+    - 文本诊断修订
+    - 舞台与戏曲
+    how-to-use: 提供点子或稿件，说明需要创意方向、大纲、正文还是修改，并列出必须保留的条件。
+    outputs: 故事方案、人物关系、结构大纲、剧集设定、对白稿、格式化剧本与修订方案。
+  en-US:
+    summary: Choose the relevant writing methods to move an idea or draft to the requested development, diagnosis, or revision deliverable.
+    best-for:
+    - Screenwriting development
+    - Draft diagnosis and revision
+    - Stage and opera
+    how-to-use: Provide an idea or draft, specify whether you need concepts, an outline, pages, or revision, and state fixed constraints.
+    outputs: Story options, character relationships, structural outlines, series bibles, dialogue pages, formatted scripts, and revision plans.

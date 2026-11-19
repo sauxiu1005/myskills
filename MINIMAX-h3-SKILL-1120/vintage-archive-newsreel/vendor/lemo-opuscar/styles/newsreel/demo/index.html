@@ -1,0 +1,791 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Knock-Knee Alert</title>
+<style>
+@font-face{font-family:Limelight;src:url(fonts/Limelight-Regular.ttf)}
+@font-face{font-family:Oswald;src:url("fonts/Oswald[wght].ttf");font-weight:200 700}
+@font-face{font-family:"Noto Sans SC";src:url(fonts/NotoSansSC-VF.ttf);font-weight:100 900}
+@font-face{font-family:"Noto Serif SC";src:url(fonts/NotoSerifSC-VF.ttf);font-weight:200 900}
+html,body{margin:0;background:#000;overflow:hidden}
+canvas{display:block}
+</style></head>
+<body><canvas id="c" width="1920" height="1080"></canvas>
+<script type="module">
+import { clamp, lerp, seg, ss, eio, eo, ei, back, hash, vnoise, TAU } from '/core/lib.js';
+
+// 1920s sound newsreel: 1.37 academy gate, full height, black sides
+const W = 1920, H = 1080, GX = 220, GW = 1480, GH = 1080, FPS = 24;
+const cv = document.getElementById('c'), X = cv.getContext('2d');
+const mk = (w, h) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const PIC = mk(GW, GH), P = PIC.getContext('2d');           // picture layer (gets the film look)
+const TMP = mk(GW, GH), T2 = TMP.getContext('2d');          // incoming scene during transitions
+const FROM = mk(GW, GH), F1 = FROM.getContext('2d');        // outgoing scene during transitions
+const AUX = mk(GW, GH), AX = AUX.getContext('2d');          // panels (split, quad)
+
+const TL = await (await fetch('timeline.json')).json();
+const VD = await (await fetch('voice/out/dur.json')).json();
+const MAP = await (await fetch('assets/us.json')).json();
+const HIT = TL.hits, SEC = Object.fromEntries(TL.secs.map(s => [s.id, s]));
+const BEAT = TL.beat, BAR = TL.bar;
+const NOSUB = new URLSearchParams(location.search).has('nosub');   // poster / stills without subtitles
+window.DUR = TL.dur;
+
+// ---------- assets ----------
+const img = src => new Promise(r => { const i = new Image(); i.onload = () => r(i); i.onerror = () => { console.error('missing ' + src); r(null); }; i.src = src; });
+const A = {};
+await Promise.all(['paper', 'book_title', 'book_p30', ...[1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => 'pp' + i)].map(async n => A[n] = await img(`assets/${n}.jpg`)));
+const CL = {};
+await Promise.all(Object.entries(TL.clips).map(async ([k, c]) => {
+  const n = Math.round(c.dur * FPS);
+  CL[k] = await Promise.all([...Array(n).keys()].map(i => img(`assets/${k}/${String(i).padStart(3, '0')}.jpg`)));
+  CL[k] = CL[k].filter(Boolean);
+}));
+for (const f of ['120px Limelight', '600 30px Oswald', '400 28px Oswald', '600 40px "Noto Sans SC"', '900 50px "Noto Serif SC"'])
+  await document.fonts.load(f, '福特登场查尔斯顿');
+
+// ---------- helpers ----------
+const frameOf = t => Math.floor(t * FPS + 1e-6);
+const clipFrame = (k, t, t0) => { const a = CL[k]; return a[clamp(frameOf(Math.max(0, t - t0)), 0, a.length - 1)]; };
+function place(c, im, s, fx, fy, ox = 0, oy = 0, w0 = GW, h0 = GH, clampEdges = true) {
+  const w = im.width * s, h = im.height * s;
+  let x = w0 / 2 + ox - fx * w, y = h0 / 2 + oy - fy * h;
+  if (clampEdges) { x = clamp(x, w0 - w, 0); y = clamp(y, h0 - h, 0); }
+  c.drawImage(im, x, y, w, h);
+}
+const cover = (im, w = GW, h = GH) => Math.max(w / im.width, h / im.height);
+function footage(c, k, t, t0, push = [1, 1.05], fx = .5, fy = .5, w = GW, h = GH) {
+  const im = clipFrame(k, t, t0), dur = CL[k].length / FPS;
+  const s = cover(im, w, h) * lerp(push[0], push[1], seg(t, t0, t0 + dur));
+  c.fillStyle = '#000'; c.fillRect(0, 0, w, h); place(c, im, s, fx, fy, 0, 0, w, h);
+}
+// grease pencil: jittered white stroke along a path, drawn up to progress u (0..1)
+function pencil(c, pts, u, wid = 7, alpha = .92) {
+  if (u <= 0 || pts.length < 2) return;
+  const n = Math.max(2, Math.floor(pts.length * clamp(u)));
+  for (const [dx, dy, a, lw] of [[0, 0, alpha, wid], [1.6, -1.2, alpha * .45, wid * .55]]) {
+    c.save(); c.strokeStyle = `rgba(250,248,240,${a})`; c.lineWidth = lw; c.lineCap = 'round'; c.lineJoin = 'round';
+    c.beginPath();
+    for (let i = 0; i < n; i++) { const [x, y] = pts[i], j = (hash(i * 1.7 + x * .01) - .5) * 1.6; i ? c.lineTo(x + dx + j, y + dy + j) : c.moveTo(x + dx, y + dy); }
+    c.stroke(); c.restore();
+  }
+}
+const ring = (cx, cy, rx, ry, rot = 0, turns = 1.12) => [...Array(64).keys()].map(i => {
+  const a = -2.2 + i / 63 * TAU * turns, r = 1 + .05 * Math.sin(i * .7);
+  return [cx + Math.cos(a + rot) * rx * r, cy + Math.sin(a + rot) * ry * r];
+});
+const lineP = (x0, y0, x1, y1, n = 24) => [...Array(n).keys()].map(i => { const u = i / (n - 1); return [lerp(x0, x1, u), lerp(y0, y1, u) + Math.sin(u * 9) * 2]; });
+
+// ---------- logo ----------
+function globe(c, cx, cy, R, rot, alpha = 1) {
+  c.save(); c.globalAlpha = alpha;
+  const g = c.createRadialGradient(cx - R * .35, cy - R * .4, R * .1, cx, cy, R);
+  g.addColorStop(0, '#f4f1ea'); g.addColorStop(.55, '#a9a49a'); g.addColorStop(1, '#34312c');
+  c.fillStyle = g; c.beginPath(); c.arc(cx, cy, R, 0, TAU); c.fill();
+  const tilt = .38, ct = Math.cos(tilt), st = Math.sin(tilt);
+  const P3 = (lat, lon) => { const x = Math.cos(lat) * Math.sin(lon + rot), y = Math.sin(lat), z = Math.cos(lat) * Math.cos(lon + rot);
+    return [cx + R * x, cy - R * (y * ct - z * st), y * st + z * ct]; };
+  c.strokeStyle = 'rgba(20,18,15,.75)'; c.lineWidth = Math.max(1.2, R * .012);
+  const line = pts => { c.beginPath(); let on = false; for (const p of pts) { if (p[2] > 0) { on ? c.lineTo(p[0], p[1]) : c.moveTo(p[0], p[1]); on = true; } else on = false; } c.stroke(); };
+  for (let k = 0; k < 12; k++) { const lon = k * TAU / 12, pts = []; for (let a = -90; a <= 90; a += 4) pts.push(P3(a * Math.PI / 180, lon)); line(pts); }
+  for (let la = -60; la <= 60; la += 30) { const pts = []; for (let a = 0; a <= 360; a += 4) pts.push(P3(la * Math.PI / 180, a * Math.PI / 180)); line(pts); }
+  c.lineWidth = Math.max(2, R * .025); c.strokeStyle = 'rgba(10,9,8,.9)'; c.beginPath(); c.arc(cx, cy, R, 0, TAU); c.stroke();
+  c.restore();
+}
+function sunburst(c, cx, cy, rot, a) {
+  c.save(); c.globalAlpha = a;
+  for (let i = 0; i < 36; i++) {
+    const a0 = rot + i * TAU / 36, a1 = a0 + TAU / 72;
+    c.fillStyle = i % 2 ? '#2a2723' : '#1b1916';
+    c.beginPath(); c.moveTo(cx, cy); c.arc(cx, cy, 1600, a0, a1); c.closePath(); c.fill();
+  }
+  c.restore();
+}
+function beams(c, t, on, base) {
+  if (on <= 0) return;
+  c.save(); c.globalCompositeOperation = 'lighter';
+  for (const side of [-1, 1]) {
+    const ox = GW / 2 + side * 640, oy = GH + 40;
+    const ang = -Math.PI / 2 - side * (.42 + .22 * Math.sin(t * 1.9 + (side > 0 ? 1.1 : 0)) + base);
+    const L = 1500, sp = .085;
+    const g = c.createLinearGradient(ox, oy, ox + Math.cos(ang) * L, oy + Math.sin(ang) * L);
+    g.addColorStop(0, `rgba(255,252,240,${.55 * on})`); g.addColorStop(.7, `rgba(255,250,235,${.16 * on})`); g.addColorStop(1, 'rgba(255,250,235,0)');
+    c.fillStyle = g; c.beginPath(); c.moveTo(ox, oy);
+    c.lineTo(ox + Math.cos(ang - sp) * L, oy + Math.sin(ang - sp) * L); c.lineTo(ox + Math.cos(ang + sp) * L, oy + Math.sin(ang + sp) * L); c.closePath(); c.fill();
+  }
+  c.restore();
+}
+function silverText(c, txt, x, y, size, font = 'Limelight', align = 'center', ls = '0px') {
+  c.font = `${size}px ${font}`; c.textAlign = align; c.textBaseline = 'middle'; c.letterSpacing = ls;
+  c.lineJoin = 'round'; c.lineWidth = size * .12; c.strokeStyle = '#0c0b0a'; c.strokeText(txt, x, y);
+  const g = c.createLinearGradient(0, y - size * .5, 0, y + size * .5);
+  g.addColorStop(0, '#ffffff'); g.addColorStop(.48, '#d9d4ca'); g.addColorStop(.52, '#9e978a'); g.addColorStop(1, '#efebe2');
+  c.fillStyle = g; c.fillText(txt, x, y);
+}
+function decoTitle(c, t0, t, big, small, y, sizeBig) {
+  const u = seg(t, t0, t0 + .5), s = lerp(2.4, 1, back(u, 1.3));
+  if (u <= 0) return;
+  c.save(); c.translate(GW / 2, y); c.scale(s, s); c.globalAlpha = clamp(u * 3);
+  silverText(c, big, 0, 0, sizeBig); c.restore();
+  const v = seg(t, t0 + .35, t0 + .65);
+  if (v > 0 && small) {
+    c.save(); c.globalAlpha = v; c.textAlign = 'center'; c.textBaseline = 'middle';
+    c.font = '900 50px "Noto Serif SC"'; c.letterSpacing = '22px';
+    c.lineWidth = 7; c.strokeStyle = '#0c0b0a'; c.strokeText(small, GW / 2 + 11, y + sizeBig * .8);
+    c.fillStyle = '#ece7dc'; c.fillText(small, GW / 2 + 11, y + sizeBig * .8);
+    c.restore();
+  }
+}
+function sceneLogo(c, t) {
+  c.fillStyle = '#121110'; c.fillRect(0, 0, GW, GH);
+  const on = t < HIT.beams_on ? 0 : clamp(1 - .6 * Math.exp(-(t - HIT.beams_on) * 9));
+  const flash = t >= HIT.beams_on ? Math.exp(-(t - HIT.beams_on) * 7) : 0;
+  sunburst(c, GW / 2, GH * .44, t * .12, on);
+  beams(c, t, on, 0);
+  globe(c, GW / 2, GH * .40, lerp(60, 200, eo(seg(t, .1, .9))), t * 1.4, clamp(on * 1.4));
+  decoTitle(c, .3, t, 'THE SPOTLIGHT NEWS', '聚光新闻', GH * .72, 104);
+  const v = seg(t, 1.1, 1.4);
+  if (v > 0) { c.save(); c.globalAlpha = v; c.font = '500 26px Oswald'; c.letterSpacing = '9px'; c.textAlign = 'center'; c.fillStyle = '#b9b2a4';
+    c.fillText('IT SPEAKS · IT SINGS · 有声新闻', GW / 2 + 4, GH * .935); c.restore(); }
+  if (flash > 0) { c.fillStyle = `rgba(255,255,250,${flash * .5})`; c.fillRect(0, 0, GW, GH); }
+}
+
+// ---------- 1. the warning: spinning newspaper ----------
+function bgDesk(c) {
+  const g = c.createRadialGradient(GW / 2, GH * .45, 100, GW / 2, GH / 2, 1000);
+  g.addColorStop(0, '#5b5751'); g.addColorStop(1, '#151413'); c.fillStyle = g; c.fillRect(0, 0, GW, GH);
+}
+const KNEE = { kick: [1395, 1290], stand: [1262, 1478] };   // Bee Jackson's knees, paper.jpg px
+function scenePaper(c, t) {
+  bgDesk(c);
+  const im = A.paper, sFit = (GW - 70) / im.width;
+  const drawAt = (s, rot, fx, fy, alpha, ox = 0, oy = 0) => {
+    c.save(); c.globalAlpha = alpha; c.translate(GW / 2 + ox, GH / 2 + oy); c.rotate(rot); c.scale(s, s);
+    c.shadowColor = 'rgba(0,0,0,.6)'; c.shadowBlur = 40 / s; c.shadowOffsetY = 14 / s;
+    c.drawImage(im, -fx * im.width, -fy * im.height); c.restore();
+  };
+  const T0 = HIT.paper_fly, TS = HIT.paper_slam;
+  if (t < TS) {
+    for (let k = 3; k >= 0; k--) {
+      const tt = t - k * .018, u = clamp((tt - T0) / (TS - T0));
+      const s = sFit * (.06 + .94 * Math.pow(u, 2.3)), rot = -Math.pow(1 - u, 1.25) * 2.5 * TAU;
+      drawAt(s, rot, .5, .5, k ? .22 : 1);
+    }
+    return;
+  }
+  const d = t - TS, jolt = Math.exp(-d * 14) * Math.sin(d * 70) * 16;
+  const push = ss(seg(t, TS + .15, HIT.paper_punch));
+  const pu = eo(seg(t, HIT.paper_punch, HIT.paper_punch + .14));
+  const tx = KNEE.kick[0] / im.width + .01, ty = 1310 / im.height;
+  const sP = sFit * 2.25;
+  const s = lerp(lerp(sFit, sFit * 1.18, push), sP, pu) * (1 + .03 * seg(t, HIT.paper_punch + .14, SEC.paper.t1));
+  const fx = lerp(lerp(.5, .45, push), tx, pu), fy = lerp(lerp(.5, .36, push), ty, pu);
+  const k2 = Math.exp(-d * 18) * .03 + (t > HIT.paper_punch ? Math.exp(-(t - HIT.paper_punch) * 20) * .03 : 0);
+  drawAt(s * (1 + k2), 0, fx, fy, 1, 0, jolt);
+  // grease pencil on the knees (the warning, literally)
+  if (t > HIT.knee_ring) {
+    const sc = s * (1 + k2), toG = ([x, y]) => [GW / 2 + (x - fx * im.width) * sc, GH / 2 + jolt + (y - fy * im.height) * sc];
+    const [ax, ay] = toG(KNEE.kick), [bx, by] = toG(KNEE.stand);
+    pencil(c, ring(ax, ay, 118, 92, .3), seg(t, HIT.knee_ring, HIT.knee_ring + .28));
+    pencil(c, lineP(ax + 120, ay - 40, ax + 260, ay - 150), seg(t, HIT.knee_ring + .6, HIT.knee_ring + .75), 7);
+    pencil(c, lineP(ax + 260, ay - 150, ax + 230, ay - 100, 8), seg(t, HIT.knee_ring + .75, HIT.knee_ring + .82), 7);
+    pencil(c, lineP(ax + 260, ay - 150, ax + 205, ay - 140, 8), seg(t, HIT.knee_ring + .82, HIT.knee_ring + .9), 7);
+  }
+}
+
+// ---------- 2. the map ----------
+const MAPLAB = {
+  newyork: { en: 'NEW YORK · 1923', zh: '纽约 · 百老汇', t: () => HIT.ny + .1, dx: -40, dy: -70, al: 'right' },
+  hollywood: { en: 'HOLLYWOOD · 1925', zh: '好莱坞', t: () => HIT.line_hollywood, dx: 30, dy: -64, al: 'left' },
+  austin: { en: 'AUSTIN · 1926', zh: '奥斯汀', t: () => HIT.line_austin, dx: 34, dy: 50, al: 'left' },
+};
+const mapBoxes = [];
+function arcPts(a, b, bend, n = 60) {
+  const mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2, dx = b[0] - a[0], dy = b[1] - a[1];
+  const cx = mx - dy * bend, cy = my + dx * bend;
+  return [...Array(n).keys()].map(i => { const u = i / (n - 1); return [(1 - u) ** 2 * a[0] + 2 * (1 - u) * u * cx + u * u * b[0], (1 - u) ** 2 * a[1] + 2 * (1 - u) * u * cy + u * u * b[1]]; });
+}
+function sceneMap(c, t) {
+  mapBoxes.length = 0;
+  // sea: dark with engraved horizontal hatching
+  c.fillStyle = '#1d1b18'; c.fillRect(0, 0, GW, GH);
+  c.strokeStyle = 'rgba(200,192,176,.10)'; c.lineWidth = 1.5;
+  for (let y = 4; y < GH; y += 9) { c.beginPath(); c.moveTo(0, y); c.lineTo(GW, y); c.stroke(); }
+  const C = MAP.cities, focus = [C.hollywood[0] + 170, C.hollywood[1] - 40];   // push towards Hollywood, kept on land
+  const z = lerp(1, 1.04, seg(t, SEC.map.t0, HIT.map_push)) * lerp(1, 1.75, ei(seg(t, HIT.map_push, SEC.map.t1 + .15)));
+  const fx = lerp(GW / 2, focus[0], ss(seg(t, HIT.map_push, SEC.map.t1)));
+  const fy = lerp(GH / 2, focus[1], ss(seg(t, HIT.map_push, SEC.map.t1)));
+  c.save(); c.translate(GW / 2, GH / 2); c.scale(z, z); c.translate(-fx, -fy);
+  // land: shadow, silver fill, state lines
+  c.save(); c.translate(6, 9); c.fillStyle = 'rgba(0,0,0,.55)';
+  for (const s of MAP.states) { c.beginPath(); s.forEach(([x, y], i) => i ? c.lineTo(x, y) : c.moveTo(x, y)); c.closePath(); c.fill(); }
+  c.restore();
+  const g = c.createLinearGradient(0, 120, 0, 980); g.addColorStop(0, '#d9d3c6'); g.addColorStop(1, '#a8a196');
+  c.fillStyle = g; c.strokeStyle = 'rgba(40,36,30,.55)'; c.lineWidth = 1.4 / z;
+  for (const s of MAP.states) { c.beginPath(); s.forEach(([x, y], i) => i ? c.lineTo(x, y) : c.moveTo(x, y)); c.closePath(); c.fill(); c.stroke(); }
+  // graticule-ish frame lines (period map feel)
+  c.strokeStyle = 'rgba(30,27,23,.35)'; c.lineWidth = 2 / z; c.strokeRect(60, 60, GW - 120, GH - 120);
+  // the spread: dotted arcs from Broadway
+  const route = (to, t0, bend) => {
+    const pts = arcPts(C.newyork, C[to], bend), u = eio(seg(t, t0 - .6, t0));
+    if (u <= 0) return;
+    const n = Math.floor(pts.length * u);
+    c.save(); c.setLineDash([10 / z, 9 / z]); c.lineWidth = 5 / z; c.strokeStyle = '#141210'; c.beginPath();
+    for (let i = 0; i < n; i++) i ? c.lineTo(...pts[i]) : c.moveTo(...pts[i]); c.stroke(); c.restore();
+    if (u < 1 && n > 1) { const [hx, hy] = pts[n - 1]; c.fillStyle = '#141210'; c.beginPath(); c.arc(hx, hy, 9 / z, 0, TAU); c.fill(); }
+  };
+  route('hollywood', HIT.line_hollywood, -.22); route('austin', HIT.line_austin, -.12);
+  // city stars + pulses
+  for (const [k, L] of Object.entries(MAPLAB)) {
+    const t0 = L.t(); if (t < t0 - .05) continue;
+    const [x, y] = C[k], u = eo(seg(t, t0 - .05, t0 + .2));
+    for (let r = 0; r < 2; r++) { const p = (t - t0 - r * .35); if (p > 0 && p < 1.2) { c.strokeStyle = `rgba(20,18,15,${.7 * (1 - p / 1.2)})`; c.lineWidth = 3 / z; c.beginPath(); c.arc(x, y, (14 + p * 60) / z, 0, TAU); c.stroke(); } }
+    c.save(); c.translate(x, y); c.scale(u / z * 1.0, u / z * 1.0); c.rotate(t * .4);
+    c.fillStyle = '#0f0e0c'; c.beginPath();
+    for (let i = 0; i < 10; i++) { const a = i * Math.PI / 5 - Math.PI / 2, r = i % 2 ? 9 : 22; c.lineTo(Math.cos(a) * r, Math.sin(a) * r); }
+    c.closePath(); c.fill(); c.strokeStyle = '#efe9dc'; c.lineWidth = 2.5; c.stroke(); c.restore();
+  }
+  c.restore();
+  // city labels (screen space, so they stay readable while the map pushes)
+  for (const [k, L] of Object.entries(MAPLAB)) {
+    const t0 = L.t(); if (t < t0) continue;
+    const a = clamp((t - t0) / .15) * (1 - seg(t, HIT.map_push + .35, HIT.map_push + .55));
+    if (a <= 0) continue;
+    const [x0, y0] = C[k], sx = GW / 2 + (x0 - fx) * z + L.dx, sy = GH / 2 + (y0 - fy) * z + L.dy;
+    c.save(); c.globalAlpha = a; c.textAlign = L.al; c.textBaseline = 'alphabetic';
+    c.font = '600 30px Oswald'; c.letterSpacing = '4px';
+    const w1 = c.measureText(L.en).width; c.font = '600 26px "Noto Sans SC"'; c.letterSpacing = '2px'; const w2 = c.measureText(L.zh).width;
+    const w = Math.max(w1, w2) + 28, bx = L.al === 'right' ? sx - w + 14 : sx - 14;
+    c.fillStyle = 'rgba(14,13,11,.86)'; c.fillRect(bx, sy - 34, w, 78);
+    c.font = '600 30px Oswald'; c.letterSpacing = '4px'; c.fillStyle = '#f3eee4'; c.fillText(L.en, sx, sy);
+    c.font = '600 26px "Noto Sans SC"'; c.letterSpacing = '2px'; c.fillStyle = '#d6cfc0'; c.fillText(L.zh, sx, sy + 34);
+    c.restore();
+    if (a >= 1) mapBoxes.push({ id: 'map-en-' + k, text: L.en, x0: GX + bx, y0: sy - 34, x1: GX + bx + w, y1: sy + 4 },
+                             { id: 'map-zh-' + k, text: L.zh, x0: GX + bx, y0: sy + 4, x1: GX + bx + w, y1: sy + 44 });
+  }
+  // the year counter: an odometer rolling 1923 -> 1926 as the dots land
+  const yr = 1923 + seg(t, HIT.ny + .4, HIT.line_hollywood) * 0 + (t > HIT.line_hollywood - .25 ? 2 * eio(seg(t, HIT.line_hollywood - .25, HIT.line_hollywood)) : 0)
+    + (t > HIT.line_austin - .25 ? eio(seg(t, HIT.line_austin - .25, HIT.line_austin)) : 0);
+  const ya = 1 - seg(t, HIT.map_push + .35, HIT.map_push + .55);
+  if (ya > 0) {
+    c.save(); c.globalAlpha = ya; const bx = GW - 330, by = 70;
+    c.fillStyle = 'rgba(12,11,10,.9)'; c.fillRect(bx, by, 260, 116); c.strokeStyle = '#d8d0bf'; c.lineWidth = 2; c.strokeRect(bx + 7, by + 7, 246, 102);
+    c.beginPath(); c.rect(bx + 10, by + 10, 240, 96); c.clip();
+    const digits = String(Math.floor(yr)), frac = yr - Math.floor(yr);
+    c.font = '84px Limelight'; c.textAlign = 'center'; c.textBaseline = 'middle';
+    for (let i = 0; i < 4; i++) {
+      const d0 = +digits[i], rolling = i === 3 && frac > 0;
+      const x = bx + 48 + i * 55, y = by + 60 - (rolling ? frac * 96 : 0);
+      c.fillStyle = '#f1ece1'; c.fillText(d0, x, y); if (rolling) c.fillText((d0 + 1) % 10, x, y + 96);
+    }
+    c.restore();
+  }
+}
+
+// ---------- 3. the lesson: Photoplay's nine steps ----------
+const CELL = (() => {   // 5 + 4 cells, 270 x 360, dealt onto a dark page
+  const out = [], w = 262, h = 349, gap = 22;
+  for (let i = 0; i < 9; i++) {
+    const row = i < 5 ? 0 : 1, col = row ? i - 5 : i, nrow = row ? 4 : 5;
+    const x0 = (GW - (nrow * w + (nrow - 1) * gap)) / 2, y0 = 178 + row * (h + 30);
+    out.push({ x: x0 + col * (w + gap), y: y0, w, h, rot: (hash(i * 3.3) - .5) * .06 });
+  }
+  return out;
+})();
+function scenePhotoGrid(c, t, zoomTo = null, z = 0) {
+  c.fillStyle = '#2a2724'; c.fillRect(0, 0, GW, GH);
+  c.fillStyle = 'rgba(255,250,240,.04)'; for (let y = 0; y < GH; y += 4) if (hash(y * .37) > .5) c.fillRect(0, y, GW, 2);
+  for (let i = 0; i < 9; i++) {
+    const T = HIT.grid0 + i * BEAT, u = eo(seg(t, T, T + .16));
+    if (u <= 0) continue;
+    const p = CELL[i], drop = (1 - u) * -60, sc = lerp(1.25, 1, u);
+    c.save(); c.translate(p.x + p.w / 2, p.y + p.h / 2 + drop); c.rotate(p.rot * (1 + (1 - u) * 3)); c.scale(sc, sc);
+    c.globalAlpha = clamp(u * 2);
+    c.shadowColor = 'rgba(0,0,0,.6)'; c.shadowBlur = 18; c.shadowOffsetY = 8;
+    c.fillStyle = '#e9e3d6'; c.fillRect(-p.w / 2 - 10, -p.h / 2 - 10, p.w + 20, p.h + 46);
+    c.shadowColor = 'transparent'; c.drawImage(A['pp' + (i + 1)], -p.w / 2, -p.h / 2, p.w, p.h);
+    c.fillStyle = '#1a1816'; c.font = '600 24px Oswald'; c.textAlign = 'center'; c.textBaseline = 'middle'; c.letterSpacing = '3px';
+    c.fillText(`STEP ${i + 1}`, 0, p.h / 2 + 18);
+    c.restore();
+  }
+}
+function sceneFlip(c, t) {
+  // the nine stills played as a flip-book on the beat: a photographed lesson becomes a dance
+  const t0 = HIT.flipbook, k = Math.floor((t - t0) / BEAT + 1e-6), i = ((k % 9) + 9) % 9;
+  const zi = eo(seg(t, t0, t0 + .18));
+  if (zi < 1) {   // zoom from the step-1 cell into full frame
+    scenePhotoGrid(c, t);
+    const p = CELL[0], s0 = p.h / GH, s = lerp(s0, 1, zi);
+    const cx = lerp(p.x + p.w / 2, GW / 2, zi), cy = lerp(p.y + p.h / 2, GH / 2, zi);
+    c.save(); c.translate(cx, cy); c.scale(s, s); drawFlipFrame(c, A.pp1, 0); c.restore();
+    return;
+  }
+  c.save(); c.translate(GW / 2, GH / 2);
+  const kick = Math.exp(-((t - t0) % BEAT) * 22);
+  c.scale(1 + kick * .02, 1 + kick * .02); drawFlipFrame(c, A['pp' + (i + 1)], i); c.restore();
+}
+function drawFlipFrame(c, im, i) {
+  c.fillStyle = '#0d0c0b'; c.fillRect(-GW / 2, -GH / 2, GW, GH);
+  const s = GH / im.height, w = im.width * s;
+  c.drawImage(im, -w / 2 + (hash(i * 7.1) - .5) * 10, -GH / 2, w, GH);
+  // soften the cell's edges into the black
+  for (const side of [-1, 1]) {
+    const x = side * w / 2, g = c.createLinearGradient(x - side * 90, 0, x + side * 10, 0);
+    g.addColorStop(0, 'rgba(13,12,11,0)'); g.addColorStop(1, 'rgba(13,12,11,1)'); c.fillStyle = g;
+    c.fillRect(side < 0 ? x - 10 : x - 90, -GH / 2, 100, GH);
+  }
+  c.fillStyle = 'rgba(240,235,224,.9)'; c.font = '600 34px Oswald'; c.textAlign = 'right'; c.letterSpacing = '4px';
+  c.fillText(`${i + 1}`, GW / 2 - 70, GH / 2 - 60);
+}
+
+// ---------- 4. the title card ----------
+function sceneCard(c, t) {
+  const t0 = SEC.card.t0;
+  c.fillStyle = '#0f0e0d'; c.fillRect(0, 0, GW, GH);
+  const z = 1 + .07 * ss(seg(t, t0, SEC.card.t1));
+  c.save(); c.translate(GW / 2, GH / 2); c.scale(z, z); c.translate(-GW / 2, -GH / 2);
+  const u = eo(seg(t, t0 + .05, t0 + .4));
+  const bx = 150, by = 150, bw = GW - 300, bh = GH - 300;
+  c.strokeStyle = '#d9d2c3'; c.lineWidth = 4;
+  const per = 2 * (bw + bh);
+  c.setLineDash([per * u, per]); c.strokeRect(bx, by, bw, bh);
+  c.lineWidth = 1.5; c.strokeRect(bx + 16, by + 16, bw - 32, bh - 32); c.setLineDash([]);
+  // corner fans
+  for (const [cx, cy, a0] of [[bx, by, 0], [bx + bw, by, Math.PI / 2], [bx + bw, by + bh, Math.PI], [bx, by + bh, -Math.PI / 2]]) {
+    for (let k = 0; k < 5; k++) {
+      c.strokeStyle = `rgba(217,210,195,${.9 * u})`; c.lineWidth = 2; c.beginPath();
+      c.arc(cx, cy, 30 + k * 16, a0, a0 + Math.PI / 2); c.stroke();
+    }
+  }
+  const v = seg(t, t0 + .1, t0 + .45);
+  if (v > 0) {
+    c.save(); c.globalAlpha = clamp(v * 2); c.translate(GW / 2, GH / 2 - 40); const s = lerp(1.6, 1, back(v, 1.2)); c.scale(s, s);
+    silverText(c, 'ENTER MR. FORD', 0, 0, 112); c.restore();
+    c.save(); c.globalAlpha = clamp(v * 2); c.textAlign = 'center'; c.textBaseline = 'middle';
+    c.font = '900 64px "Noto Serif SC"'; c.letterSpacing = '26px'; c.fillStyle = '#ece7dc'; c.fillText('福特登场', GW / 2 + 13, GH / 2 + 90); c.restore();
+  }
+  // deco rule between
+  c.fillStyle = `rgba(217,210,195,${u})`; c.fillRect(GW / 2 - 240 * u, GH / 2 + 30, 480 * u, 3);
+  // a searchlight sheen sweeps across the card twice, on the bar lines
+  for (const T of [t0 + BAR, t0 + 2 * BAR]) {
+    const k = seg(t, T, T + .55); if (k <= 0 || k >= 1) continue;
+    const x = lerp(-300, GW + 300, eio(k));
+    const g = c.createLinearGradient(x - 160, 0, x + 160, 0);
+    g.addColorStop(0, 'rgba(255,250,235,0)'); g.addColorStop(.5, 'rgba(255,250,235,.22)'); g.addColorStop(1, 'rgba(255,250,235,0)');
+    c.save(); c.globalCompositeOperation = 'lighter'; c.fillStyle = g; c.transform(1, 0, -.35, 1, 0, 0); c.fillRect(x - 160 + 200, 0, 320, GH); c.restore();
+  }
+  c.restore();
+}
+
+// ---------- 5. the Ford side ----------
+function sceneOrch(c, t) { footage(c, 'orch', t, SEC.orch.t0 - .04, [1.02, 1.08], .5, .45); }
+function sceneViolin(c, t) { footage(c, 'violin', t, SEC.violin.t0, [1.1, 1.16], .45, .45); }
+function sceneOldman(c, t) { footage(c, 'oldman', t, SEC.oldman.t0, [1.06, 1.0], .52, .5); }
+const UL = { jazz: [[424, 1172], [860, 1174]], vogue: [[383, 1222], [1036, 1225]] };   // book_p30.jpg px (hOCR)
+function sceneBook(c, t) {
+  bgDesk(c);
+  const t0 = HIT.book_slam, tp = HIT.page_turn;
+  const pageS = GH * .92 / A.book_p30.height;
+  const lay = (im, s, cx, cy, rot = 0) => { c.save(); c.translate(cx, cy); c.rotate(rot); c.shadowColor = 'rgba(0,0,0,.55)'; c.shadowBlur = 30; c.shadowOffsetY = 12;
+    c.drawImage(im, -im.width * s / 2, -im.height * s / 2, im.width * s, im.height * s); c.restore(); };
+  // camera on the page: wide -> push to the paragraph after the turn
+  const pz = ss(seg(t, tp + .15, tp + .9));
+  const zoom = lerp(1, 2.35, pz) * (1 + .02 * seg(t, tp + .9, SEC.book.t1));
+  const focus = [lerp(A.book_p30.width / 2, 700, pz), lerp(A.book_p30.height / 2, 1180, pz)];
+  const d = t - t0, jolt = Math.exp(-d * 14) * Math.sin(d * 70) * 12;
+  if (t < tp + .3) {
+    // page 30 is underneath; the title page slams down, then turns over to the left
+    c.save(); c.translate(GW / 2, GH / 2 + jolt); c.scale(zoom, zoom); c.translate(-focus[0] * pageS, -focus[1] * pageS);
+    c.drawImage(A.book_p30, 0, 0, A.book_p30.width * pageS, A.book_p30.height * pageS); c.restore();
+    const u = eo(seg(t, t0 - .12, t0)), sIn = lerp(1.5, 1, u);
+    const turn = eio(seg(t, tp, tp + .3));
+    c.save(); c.translate(GW / 2 - A.book_p30.width * pageS / 2, GH / 2 + jolt);   // spine at the page's left edge
+    const sx = Math.cos(turn * Math.PI) * sIn;
+    c.scale(Math.max(.001, Math.abs(sx)) * (sx < 0 ? -1 : 1), sIn);
+    c.shadowColor = 'rgba(0,0,0,.6)'; c.shadowBlur = 40; c.shadowOffsetX = 12;
+    c.globalAlpha = clamp(u * 3) * (sx < 0 ? .0 : 1);
+    const tw = A.book_title.width * pageS, th = A.book_title.height * pageS;
+    c.drawImage(A.book_title, 0, -th / 2, tw, th);
+    c.fillStyle = `rgba(0,0,0,${.45 * turn})`; c.fillRect(0, -th / 2, tw, th);
+    c.restore();
+  } else {
+    c.save(); c.translate(GW / 2, GH / 2); c.scale(zoom, zoom); c.translate(-focus[0] * pageS, -focus[1] * pageS);
+    c.shadowColor = 'rgba(0,0,0,.5)'; c.shadowBlur = 20;
+    c.drawImage(A.book_p30, 0, 0, A.book_p30.width * pageS, A.book_p30.height * pageS); c.shadowColor = 'transparent';
+    const toS = ([x, y]) => [x * pageS, y * pageS];
+    for (const [k, T, dur] of [['jazz', HIT.ul_jazz, .26], ['vogue', HIT.ul_vogue, .34]]) {
+      const [a, b] = UL[k].map(toS);
+      const pts = lineP(a[0], a[1] + 4, b[0], b[1] + 4, 30);
+      c.save(); c.globalCompositeOperation = 'multiply';
+      pencilDark(c, pts, seg(t, T, T + dur), 3.2 / 1); c.restore();
+    }
+    c.restore();
+  }
+}
+function pencilDark(c, pts, u, wid) {   // a soft-lead underline on the printed page
+  if (u <= 0) return;
+  const n = Math.max(2, Math.floor(pts.length * u));
+  c.strokeStyle = 'rgba(20,18,16,.85)'; c.lineWidth = wid; c.lineCap = 'round';
+  for (const off of [0, 2.2]) { c.beginPath(); for (let i = 0; i < n; i++) { const [x, y] = pts[i]; i ? c.lineTo(x, y + off + Math.sin(i * 1.3) * .6) : c.moveTo(x, y + off); } c.stroke(); }
+}
+function sceneCircle(c, t) { footage(c, 'circle', t, SEC.circle.t0, [1.0, 1.04], .5, .55); }
+
+// ---------- 6. the face-off ----------
+const SPLIT_T0 = HIT.split_in;
+function panel(c, k, t, t0, x, w, fx = .5) {
+  AX.save(); AX.setTransform(1, 0, 0, 1, 0, 0);
+  const im = clipFrame(k, t, t0), s = GH / im.height;
+  AX.fillStyle = '#000'; AX.fillRect(0, 0, GW, GH);
+  AX.drawImage(im, w / 2 - fx * im.width * s, 0, im.width * s, GH);
+  AX.restore();
+  c.drawImage(AUX, 0, 0, w, GH, x, 0, w, GH);
+}
+function sceneSplit(c, t) {
+  const u = eo(seg(t, SPLIT_T0, SPLIT_T0 + .32));
+  const half = (GW - 8) / 2;
+  c.fillStyle = '#0c0b0a'; c.fillRect(0, 0, GW, GH);
+  // left: the old-time circle keeps running from the previous shot, squeezing to the left half
+  panel(c, 'circle', t, SEC.circle.t0, 0, lerp(GW, half, u), .5);
+  // right: the Charleston slides in from the right
+  const xr = lerp(GW, half + 8, u);
+  if (xr < GW) panel(c, 'kidsR', t, SPLIT_T0, xr, GW - xr + 0, .55);
+  c.fillStyle = '#ece6da'; if (u > 0) c.fillRect(half, 0, 8 * u, GH);
+}
+// verdict: the Charleston panel pushes the old-time panel out
+function scenePav(c, t) {
+  const T = HIT.push_over, u = eio(seg(t, T, T + .26));
+  if (u < 1) {
+    const half = (GW - 8) / 2;
+    c.fillStyle = '#0c0b0a'; c.fillRect(0, 0, GW, GH);
+    const wl = lerp(half, 0, u);
+    if (wl > 1) { AX.save(); const im = clipFrame('circle', t, SEC.circle.t0), s = GH / im.height; AX.fillStyle = '#000'; AX.fillRect(0, 0, GW, GH);
+      AX.drawImage(im, half / 2 - .5 * im.width * s, 0, im.width * s, GH); AX.restore(); c.drawImage(AUX, half - wl, 0, wl, GH, 0, 0, wl, GH); }
+    const xr = lerp(half + 8, 0, u);
+    AX.save(); footage(AX, 'pav', t, T, [1.0, 1.05]); AX.restore();
+    c.drawImage(AUX, 0, 0, GW, GH, xr, 0, GW - xr, GH);
+    c.fillStyle = '#ece6da'; c.fillRect(xr - 8, 0, 8, GH);
+    return;
+  }
+  footage(c, 'pav', t, T, [1.0, 1.05], .5, .5);
+}
+function sceneTap(c, t) { footage(c, 'tap', t, HIT.cut_tap, [1.04, 1.0], .5, .55); }
+function scenePav2(c, t) { footage(c, 'pav2', t, HIT.cut_pav2, [1.06, 1.0], .5, .5); }
+function sceneTap2(c, t) { footage(c, 'tap2', t, HIT.cut_tap2, [1.0, 1.05], .45, .6); }
+function sceneSolo(c, t) { footage(c, 'solo', t, HIT.cut_solo, [1.0, 1.06], .5, .6); }
+function sceneQuad(c, t) {
+  c.fillStyle = '#0c0b0a'; c.fillRect(0, 0, GW, GH);
+  const cw = (GW - 24) / 2, ch = (GH - 24) / 2, ks = ['g1', 'g2', 'g3', 'g4'];
+  for (let i = 0; i < 4; i++) {
+    const T = HIT.quad + i * BEAT, u = eo(seg(t, T, T + .12));
+    if (u <= 0) continue;
+    const x = 8 + (i % 2) * (cw + 8), y = 8 + Math.floor(i / 2) * (ch + 8);
+    AX.save(); footage(AX, ks[i], t, HIT.quad, [1.0, 1.05]); AX.restore();
+    c.save(); c.globalAlpha = u; const s = lerp(1.08, 1, u);
+    c.translate(x + cw / 2, y + ch / 2); c.scale(s, s);
+    c.drawImage(AUX, 0, 0, GW, GH, -cw / 2, -ch / 2, cw, ch);
+    c.restore();
+  }
+}
+const KIDS_T0 = HIT.freeze - 54 / FPS;   // frame 54 (knees together) is the one that freezes
+function sceneKids(c, t) { footage(c, 'kids', t, KIDS_T0, [1.0, 1.0], .55, .55); }
+// button: the last frame of the kids holds; grease pencil on the knees
+const FREEZE_I = 54;
+function sceneButton(c, t) {
+  const im = CL.kids[Math.min(FREEZE_I, CL.kids.length - 1)];
+  const d = t - HIT.freeze, jolt = d > 0 ? Math.exp(-d * 12) * Math.sin(d * 60) * 14 : 0;
+  const s = cover(im) * lerp(1.0, 1.07, ss(seg(t, HIT.freeze, SEC.button.t1)));
+  c.fillStyle = '#000'; c.fillRect(0, 0, GW, GH);
+  const fx = .5, fy = .5; place(c, im, s, fx, fy, 0, jolt);
+  if (t > HIT.freeze + .2) {
+    const K = [[.392, .575], [.86, .66]];
+    const w = im.width * s, h = im.height * s, x0 = clamp(GW / 2 - fx * w, GW - w, 0), y0 = clamp(GH / 2 - fy * h, GH - h, 0) + jolt;
+    K.forEach(([kx, ky], j) => pencil(c, ring(x0 + kx * w, y0 + ky * h, j ? 84 : 100, j ? 84 : 76, j), seg(t, HIT.freeze + .22 + j * .22, HIT.freeze + .45 + j * .22), 8));
+  }
+}
+function sceneEndLogo(c, t) {
+  c.fillStyle = '#121110'; c.fillRect(0, 0, GW, GH);
+  sunburst(c, GW / 2, GH * .46, -t * .1, 1);
+  beams(c, t, 1, -.08);
+  globe(c, GW / 2, GH * .26, 92, t * 1.4);
+  decoTitle(c, HIT.end_hit2 - .15, t, "THAT'S THE NEWS!", '本期完', GH * .56, 118);
+}
+function sceneEndCard(c, t) {
+  const t0 = SEC.endcard.t0;
+  c.fillStyle = '#100f0e'; c.fillRect(0, 0, GW, GH);
+  const a = eo(seg(t, t0, t0 + .5));
+  c.save(); c.globalAlpha = a; c.textAlign = 'center'; c.textBaseline = 'alphabetic';
+  // deco frame
+  c.strokeStyle = 'rgba(217,210,195,.55)'; c.lineWidth = 2; c.strokeRect(120, 150, GW - 240, GH - 300); c.lineWidth = 1; c.strokeRect(134, 164, GW - 268, GH - 328);
+  // 1. title: Chinese + English on one line
+  c.font = '900 76px "Noto Serif SC"'; c.letterSpacing = '10px'; const w1 = c.measureText('膝盖警报').width;
+  c.font = '62px Limelight'; c.letterSpacing = '0px'; const w2 = c.measureText('Knock-Knee Alert').width;
+  const gap = 48, x0 = GW / 2 - (w1 + gap + w2) / 2;
+  c.textAlign = 'left'; c.textBaseline = 'alphabetic'; c.font = '900 76px "Noto Serif SC"'; c.letterSpacing = '10px'; c.fillStyle = '#efe9dd'; c.fillText('膝盖警报', x0, 382);
+  silverText(c, 'Knock-Knee Alert', x0 + w1 + gap, 356, 62, 'Limelight', 'left', '0px');
+  // 2. thin rule
+  c.fillStyle = '#b8b0a0'; const lw = 560 * eo(seg(t, t0 + .2, t0 + .6)); c.fillRect(GW / 2 - lw / 2, 440, lw, 2);
+  // 3. style name
+  c.textBaseline = 'alphabetic'; c.textAlign = 'left';
+  c.font = '500 36px "Noto Sans SC"'; c.letterSpacing = '6px'; const s1 = '1920s 新闻影片', m1 = c.measureText(s1).width;
+  c.font = '500 34px Oswald'; c.letterSpacing = '6px'; const s2 = '·  1920s NEWSREEL', m2 = c.measureText(s2).width;
+  const xs = GW / 2 - (m1 + 24 + m2) / 2;
+  c.font = '500 36px "Noto Sans SC"'; c.letterSpacing = '6px'; c.fillStyle = '#e4ddd0'; c.fillText(s1, xs, 520);
+  c.font = '500 34px Oswald'; c.letterSpacing = '6px'; c.fillText(s2, xs + m1 + 24, 519);
+  c.textAlign = 'center';
+  c.font = '600 30px Oswald'; c.letterSpacing = '5px'; c.fillStyle = '#cfc7b8'; c.fillText('LemoLab × Claude Opus 5.5', GW / 2, 600);
+  c.font = '400 21px Oswald'; c.letterSpacing = '1.5px'; c.fillStyle = '#a9a192';
+  const CR = [
+    'Archive film: U.S. National Archives, Ford Motor Company Film Collection (1924–27)',
+    'Record: “Charleston”, Golden Gate Orchestra, Edison 1925 — transfer: UC Santa Barbara Library',
+    'Print: The Austin Statesman, Mar. 5, 1926 · Photoplay, Oct. 1925 · “Good Morning”, Dearborn Publishing Co., 1926',
+    'Map data: Natural Earth · All archive material public domain · An unofficial film',
+  ];
+  CR.forEach((s, i) => c.fillText(s, GW / 2, 700 + i * 36));
+  c.restore();
+}
+
+const SCN = { logo: sceneLogo, paper: scenePaper, map: sceneMap, grid: scenePhotoGrid, flip: sceneFlip, card: sceneCard,
+  orch: sceneOrch, violin: sceneViolin, oldman: sceneOldman, book: sceneBook, circle: sceneCircle, split: sceneSplit,
+  pav: scenePav, pav2: scenePav2, tap: sceneTap, solo: sceneSolo, tap2: sceneTap2, quad: sceneQuad, kids: sceneKids, button: sceneButton,
+  endlogo: sceneEndLogo, endcard: sceneEndCard };
+const FOOTAGE = new Set(['paper', 'grid', 'flip', 'orch', 'violin', 'oldman', 'book', 'circle', 'split', 'pav', 'pav2', 'tap', 'solo', 'tap2', 'quad', 'kids', 'button']);
+
+// ---------- transitions: [time, type, before, after, from, to] ----------
+const TR = [
+  [HIT.wipe_map, 'wipe', .16, .16, 'paper', 'map'],
+  [HIT.flip_grid, 'flip', .14, .14, 'map', 'grid'],
+  [HIT.blinds_card, 'blinds', .02, .3, 'flip', 'card'],
+  [HIT.iris_orch, 'irisopen', .02, .28, 'card', 'orch'],
+  [HIT.clock_kids, 'clock', .17, .17, 'quad', 'kids'],
+  [SEC.endcard.t0, 'fade', .3, .3, 'endlogo', 'endcard'],
+];
+function secAt(t) { let id = TL.secs[0].id; for (const s of TL.secs) if (t >= s.t0) id = s.id; return id; }
+
+function composeScene(t) {
+  const id = secAt(t);
+  for (const c of [P, F1, T2]) { c.setTransform(1, 0, 0, 1, 0, 0); c.globalAlpha = 1; c.globalCompositeOperation = 'source-over'; c.fillStyle = '#000'; c.fillRect(0, 0, GW, GH); }
+  for (const [T, type, a, b, from, to] of TR) {
+    if (t >= T - a && t < T + b) {
+      const u = (t - (T - a)) / (a + b);
+      F1.save(); SCN[from](F1, Math.min(t, T - 1e-3)); F1.restore();
+      T2.save(); SCN[to](T2, Math.max(t, T)); T2.restore();
+      P.drawImage(FROM, 0, 0);
+      if (type === 'wipe') {           // hard diagonal wipe with a thin bright edge
+        const e = eio(u) * (GW + 500) - 250;
+        P.save(); P.beginPath(); P.moveTo(-10, -10); P.lineTo(e + 250, -10); P.lineTo(e - 250, GH + 10); P.lineTo(-10, GH + 10); P.closePath(); P.clip(); P.drawImage(TMP, 0, 0); P.restore();
+        P.strokeStyle = 'rgba(255,250,235,.85)'; P.lineWidth = 6; P.beginPath(); P.moveTo(e + 250, -10); P.lineTo(e - 250, GH + 10); P.stroke();
+      } else if (type === 'flip') {    // card flip on the vertical axis
+        P.fillStyle = '#000'; P.fillRect(0, 0, GW, GH);
+        const src = u < .5 ? FROM : TMP, k = Math.abs(Math.cos(u * Math.PI));
+        P.save(); P.translate(GW / 2, GH / 2); P.scale(Math.max(.002, k), 1 - .06 * (1 - k)); P.drawImage(src, -GW / 2, -GH / 2);
+        P.fillStyle = `rgba(0,0,0,${.55 * (1 - k)})`; P.fillRect(-GW / 2, -GH / 2, GW, GH); P.restore();
+      } else if (type === 'blinds') {  // venetian blinds: twelve slats turn over to the card
+        const n = 12, sh = GH / n;
+        for (let i = 0; i < n; i++) {
+          const v = clamp(eio(seg(u, i * .03, .64 + i * .03)));
+          const k = Math.abs(Math.cos(v * Math.PI)), src = v < .5 ? FROM : TMP;
+          P.fillStyle = '#000'; P.fillRect(0, i * sh, GW, sh);
+          P.save(); P.translate(0, i * sh + sh / 2); P.scale(1, Math.max(.01, k)); P.drawImage(src, 0, i * sh, GW, sh, 0, -sh / 2, GW, sh); P.restore();
+        }
+      } else if (type === 'clock') {   // radial clock wipe from 12 o'clock
+        const ang = -Math.PI / 2 + eio(u) * TAU;
+        P.save(); P.beginPath(); P.moveTo(GW / 2, GH / 2); P.arc(GW / 2, GH / 2, 1600, -Math.PI / 2, ang); P.closePath(); P.clip(); P.drawImage(TMP, 0, 0); P.restore();
+        P.strokeStyle = 'rgba(255,250,235,.8)'; P.lineWidth = 5; P.beginPath(); P.moveTo(GW / 2, GH / 2); P.lineTo(GW / 2 + Math.cos(ang) * 1600, GH / 2 + Math.sin(ang) * 1600); P.stroke();
+      } else if (type === 'irisopen') {
+        const r = eo(u) * 1000;
+        P.save(); P.beginPath(); P.arc(GW / 2, GH / 2, r, 0, TAU); P.clip(); P.drawImage(TMP, 0, 0); P.restore();
+        P.strokeStyle = 'rgba(0,0,0,.9)'; P.lineWidth = 14; P.beginPath(); P.arc(GW / 2, GH / 2, r, 0, TAU); P.stroke();
+      } else if (type === 'fade') {    // through black
+        P.fillStyle = '#000'; P.fillRect(0, 0, GW, GH);
+        P.globalAlpha = Math.abs(1 - 2 * u); P.drawImage(u < .5 ? FROM : TMP, 0, 0); P.globalAlpha = 1;
+      }
+      return { id: to, footage: FOOTAGE.has(to) || FOOTAGE.has(from) };
+    }
+  }
+  P.save(); SCN[id](P, t); P.restore();
+  const iris = (r, cy = GH * .4) => { P.save(); P.globalCompositeOperation = 'destination-in'; P.beginPath(); P.arc(GW / 2, cy, Math.max(0, r), 0, TAU); P.fill(); P.globalCompositeOperation = 'destination-over'; P.fillStyle = '#000'; P.fillRect(0, 0, GW, GH); P.restore(); };
+  if (id === 'logo' && t > HIT.logo_iris) iris(lerp(1000, 0, ei(seg(t, HIT.logo_iris, SEC.logo.t1 - .02))));
+  if (id === 'button' && t > SEC.button.t1 - .3) iris(lerp(1000, 0, ei(seg(t, SEC.button.t1 - .3, SEC.button.t1))), GH * .5);
+  if (id === 'endlogo') iris(lerp(0, 1100, eo(seg(t, SEC.endlogo.t0, SEC.endlogo.t0 + .32))), GH * .4);
+  return { id, footage: FOOTAGE.has(id) };
+}
+
+// ---------- film look (picture layer only; type stays sharp) ----------
+function filmLook(f, strength) {
+  P.save();
+  P.globalCompositeOperation = 'multiply'; P.fillStyle = '#efe7d6'; P.fillRect(0, 0, GW, GH);
+  P.globalCompositeOperation = 'screen'; P.fillStyle = '#17140f'; P.fillRect(0, 0, GW, GH);
+  P.globalCompositeOperation = 'source-over';
+  const g = P.createRadialGradient(GW / 2, GH / 2, GH * .42, GW / 2, GH / 2, GH * .95);
+  g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(1, `rgba(0,0,0,${.62 * strength + .2})`);
+  P.fillStyle = g; P.fillRect(0, 0, GW, GH);
+  if (strength > 0) {
+    for (let k = 0; k < 3; k++) {
+      const id = Math.floor((f + k * 5) / 9) * 7 + k;
+      if (hash(id * 1.3) > .55) continue;
+      const x = hash(id * 2.1) * GW + (f % 9) * (hash(id * 3.7) - .5) * 6;
+      P.fillStyle = hash(id) > .5 ? 'rgba(255,250,240,.22)' : 'rgba(0,0,0,.28)';
+      const y0 = hash(id * 5.1) * GH * .4, y1 = GH - hash(id * 6.3) * GH * .3;
+      P.fillRect(x, y0, 1 + hash(id * 8.2) * 1.6, y1 - y0);
+    }
+    const n = Math.floor(hash(f * .91) * 5);
+    for (let k = 0; k < n; k++) {
+      const s = f * 13 + k * 3.1, x = hash(s) * GW, y = hash(s + 1) * GH, r = 1 + hash(s + 2) * 4;
+      P.fillStyle = hash(s + 3) > .35 ? 'rgba(10,8,6,.55)' : 'rgba(255,252,245,.45)';
+      P.beginPath(); P.ellipse(x, y, r, r * (.4 + hash(s + 4)), hash(s + 5) * 3, 0, TAU); P.fill();
+    }
+  }
+  P.restore();
+}
+
+// ---------- type layer ----------
+const boxes = [];
+const SUB = { zh: '600 40px "Noto Sans SC"', en: '400 29px Oswald' };
+// a period "title strip" under the subtitles: a low dark band at the bottom of the gate, on every shot,
+// held through short gaps between cues so it never blinks on and off
+const SUBSPAN = (() => {
+  const iv = TL.lines.map((L, i) => { const nx = TL.lines[i + 1]; let t1 = L.t + Math.max(1.8, VD[L.id] + .6); if (nx) t1 = Math.min(t1, nx.t - .05); return [L.t, t1]; });
+  const out = [];
+  for (const [a, b] of iv) { const l = out[out.length - 1]; if (l && a - l[1] < 1.0) l[1] = Math.max(l[1], b); else out.push([a, b]); }
+  return out;
+})();
+function subBand(t) {
+  let a = 0;
+  for (const [t0, t1] of SUBSPAN) a = Math.max(a, Math.min(seg(t, t0 - .25, t0), 1 - seg(t, t1, t1 + .3)));
+  if (a <= 0) return;
+  X.save(); X.beginPath(); X.roundRect(GX, 0, GW, GH, 26); X.clip();
+  const g = X.createLinearGradient(0, H - 180, 0, H);
+  g.addColorStop(0, 'rgba(10,9,8,0)'); g.addColorStop(.25, `rgba(10,9,8,${.93 * a})`); g.addColorStop(1, `rgba(10,9,8,${.96 * a})`);
+  X.fillStyle = g; X.fillRect(GX, H - 180, GW, 180);
+  X.restore();
+}
+function subtitle(t) {
+  for (let i = 0; i < TL.lines.length; i++) {
+    const L = TL.lines[i], nx = TL.lines[i + 1];
+    let t1 = L.t + Math.max(1.8, VD[L.id] + .6); if (nx) t1 = Math.min(t1, nx.t - .05);
+    if (t < L.t - .05 || t > t1) continue;
+    const a = Math.min(seg(t, L.t - .05, L.t + .06), 1 - seg(t, t1 - .06, t1));
+    X.save(); X.globalAlpha = a; X.textAlign = 'center'; X.textBaseline = 'alphabetic'; X.lineJoin = 'round';
+    X.font = SUB.zh; X.letterSpacing = '1px'; X.lineWidth = 8; X.strokeStyle = 'rgba(8,7,6,.92)'; X.strokeText(L.zh, W / 2, H - 82);
+    X.fillStyle = '#fbf8f1'; X.fillText(L.zh, W / 2, H - 82);
+    X.font = SUB.en; X.letterSpacing = '1.5px'; X.lineWidth = 6; X.strokeText(L.en, W / 2, H - 38);
+    X.fillStyle = '#ece6da'; X.fillText(L.en, W / 2, H - 38);
+    X.restore();
+  }
+}
+window.SUBCHECK = () => {   // every cue fits on one line per language inside the gate
+  const out = [];
+  for (const L of TL.lines) { X.font = SUB.zh; X.letterSpacing = '1px'; const a = X.measureText(L.zh).width; X.font = SUB.en; X.letterSpacing = '1.5px'; const b = X.measureText(L.en).width;
+    out.push({ id: L.id, zh: Math.round(a), en: Math.round(b), ok: a < GW - 120 && b < GW - 120 }); }
+  return out;
+};
+function tagCard(x, y, en, zh, u, o, id) {
+  X.save(); X.globalAlpha = o;
+  X.font = '600 30px Oswald'; X.letterSpacing = '5px'; const w1 = X.measureText(en).width;
+  X.font = '500 26px "Noto Sans SC"'; X.letterSpacing = '3px'; const w2 = X.measureText(zh).width;
+  const w = Math.max(w1, w2, 220) + 44;
+  X.beginPath(); X.rect(x - 4, y - 8, w * u + 8, 118); X.clip();
+  X.fillStyle = 'rgba(12,11,10,.8)'; X.fillRect(x, y, w, 104);
+  X.strokeStyle = '#d8d0bf'; X.lineWidth = 2; X.strokeRect(x + 6, y + 6, w - 12, 92);
+  X.font = '600 30px Oswald'; X.letterSpacing = '5px'; X.fillStyle = '#f3eee4'; X.textBaseline = 'alphabetic'; X.fillText(en, x + 22, y + 46);
+  X.font = '500 26px "Noto Sans SC"'; X.letterSpacing = '3px'; X.fillStyle = '#d6cfc0'; X.fillText(zh, x + 22, y + 84);
+  X.restore();
+  if (u >= 1 && o >= 1) boxes.push({ id: id + '-en', text: en, x0: x, y0: y, x1: x + w, y1: y + 52 }, { id: id + '-zh', text: zh, x0: x, y0: y + 52, x1: x + w, y1: y + 104 });
+}
+function tags(t) {
+  for (const g of TL.tags) {
+    if (t < g.t0 || t > g.t1) continue;
+    tagCard(GX + 48, 56, g.en, g.zh, eo(seg(t, g.t0, g.t0 + .22)), 1 - seg(t, g.t1 - .15, g.t1), 'tag-' + g.sec);
+  }
+}
+function splitLabels(t) {
+  const t0 = HIT.split_in + .3, t1 = HIT.push_over;
+  if (t < t0 || t > t1 + .05) return;
+  const o = 1 - seg(t, t1 - .1, t1 + .05), half = (GW - 8) / 2;
+  for (const [i, en, zh, id] of [[0, 'OLD-TIME · 1927', '老式舞', 'L'], [1, 'CHARLESTON · 1924', '查尔斯顿', 'R']]) {
+    const u = eo(seg(t, t0 + i * BEAT, t0 + i * BEAT + .2));
+    const cx = GX + (i ? half + 8 + half / 2 : half / 2), y = 60;
+    X.save(); X.globalAlpha = o * u; X.textAlign = 'center';
+    X.font = '600 34px Oswald'; X.letterSpacing = '6px'; const w1 = X.measureText(en).width;
+    const w = Math.max(w1, 200) + 60;
+    X.fillStyle = 'rgba(12,11,10,.84)'; X.fillRect(cx - w / 2, y, w, 112); X.strokeStyle = '#d8d0bf'; X.lineWidth = 2; X.strokeRect(cx - w / 2 + 6, y + 6, w - 12, 100);
+    X.fillStyle = '#f3eee4'; X.textBaseline = 'alphabetic'; X.fillText(en, cx, y + 50);
+    X.font = '600 30px "Noto Sans SC"'; X.letterSpacing = '6px'; X.fillStyle = '#d6cfc0'; X.fillText(zh, cx, y + 92);
+    X.restore();
+    if (u >= 1 && o >= 1) boxes.push({ id: 'split-en-' + id, text: en, x0: cx - w / 2, y0: y, x1: cx + w / 2, y1: y + 56 }, { id: 'split-zh-' + id, text: zh, x0: cx - w / 2, y0: y + 56, x1: cx + w / 2, y1: y + 112 });
+  }
+}
+// the record: a 78 spinning in the corner while the archive recording plays
+function record(t) {
+  const t0 = HIT.needle, t1 = HIT.rec_end;
+  if (t < t0 - .35 || t > t1 + .4) return;
+  const a = Math.min(eo(seg(t, t0 - .35, t0 - .1)), 1 - seg(t, t1 + .1, t1 + .4));
+  const cx = GX + GW - 150, cy = 150, R = 96;
+  X.save(); X.globalAlpha = a;
+  X.fillStyle = 'rgba(12,11,10,.85)'; X.beginPath(); X.arc(cx, cy, R + 14, 0, TAU); X.fill();
+  const spin = t < t1 ? (t - t0) * 1.3 * TAU : 0;
+  X.save(); X.translate(cx, cy); X.rotate(spin);
+  X.fillStyle = '#0b0a09'; X.beginPath(); X.arc(0, 0, R, 0, TAU); X.fill();
+  X.strokeStyle = 'rgba(200,192,176,.18)'; X.lineWidth = 1; for (let r = 40; r < R - 2; r += 5) { X.beginPath(); X.arc(0, 0, r, 0, TAU); X.stroke(); }
+  X.fillStyle = 'rgba(255,250,240,.16)'; X.beginPath(); X.moveTo(0, 0); X.arc(0, 0, R - 3, -.3, .05); X.closePath(); X.fill();
+  X.fillStyle = '#d9d2c3'; X.beginPath(); X.arc(0, 0, 34, 0, TAU); X.fill();
+  X.fillStyle = '#1a1816'; X.beginPath(); X.arc(0, 0, 4, 0, TAU); X.fill();
+  X.font = '600 11px Oswald'; X.textAlign = 'center'; X.letterSpacing = '1px'; X.fillText('CHARLESTON', 0, -12); X.fillText('1925', 0, 20);
+  X.restore();
+  // tone arm drops at the needle hit, lifts at the end
+  const drop = eo(seg(t, t0 - .3, t0)) * (1 - eo(seg(t, t1, t1 + .2)));
+  X.save(); X.translate(cx + R + 4, cy - R + 6); X.rotate(lerp(.15, .62, drop));
+  X.fillStyle = '#cfc8b8'; X.fillRect(-5, 0, 10, R * 1.15); X.fillRect(-9, R * 1.15 - 6, 18, 22); X.restore();
+  X.restore();
+  // label under the disc
+  const g0 = t0 + .1, g1 = t0 + 3.6;
+  if (t > g0 && t < g1) {
+    const u = eo(seg(t, g0, g0 + .22)), o = 1 - seg(t, g1 - .15, g1);
+    X.save(); X.globalAlpha = o; X.textAlign = 'right';
+    X.font = '600 26px Oswald'; X.letterSpacing = '4px'; const en = '“CHARLESTON” · 1925 RECORD';
+    X.font = '500 24px "Noto Sans SC"'; X.letterSpacing = '2px'; const zh = '1925 年原版唱片';
+    X.font = '600 26px Oswald'; X.letterSpacing = '4px'; const w = Math.max(X.measureText(en).width, 200) + 36;
+    const x1 = GX + GW - 40, y = 286;
+    X.beginPath(); X.rect(x1 - w * u, y - 4, w * u + 4, 100); X.clip();
+    X.fillStyle = 'rgba(12,11,10,.84)'; X.fillRect(x1 - w, y, w, 88);
+    X.fillStyle = '#f3eee4'; X.fillText(en, x1 - 18, y + 38);
+    X.font = '500 24px "Noto Sans SC"'; X.letterSpacing = '2px'; X.fillStyle = '#d6cfc0'; X.fillText(zh, x1 - 18, y + 74);
+    X.restore();
+    if (u >= 1 && o >= 1) boxes.push({ id: 'rec-en', text: en, x0: x1 - w, y0: y, x1, y1: y + 46 }, { id: 'rec-zh', text: zh, x0: x1 - w, y0: y + 46, x1, y1: y + 88 });
+  }
+}
+
+// ---------- frame ----------
+window.render = (t) => {
+  boxes.length = 0;
+  const f = frameOf(t);
+  X.setTransform(1, 0, 0, 1, 0, 0); X.fillStyle = '#000'; X.fillRect(0, 0, W, H);
+  const sc = composeScene(t);
+  filmLook(f, sc.footage ? 1 : 0);
+  const flick = sc.footage ? 1 + (hash(f * .37) - .5) * .07 + (vnoise(t * 3) - .5) * .05 : 1 + (hash(f * .37) - .5) * .025;
+  const wx = sc.footage ? (vnoise(f * .21) - .5) * 3.2 : 0, wy = sc.footage ? (vnoise(f * .17 + 9) - .5) * 4.4 : 0;
+  X.save(); X.beginPath(); X.roundRect(GX, 0, GW, GH, 26); X.clip();
+  X.filter = `brightness(${flick.toFixed(3)})`; X.drawImage(PIC, GX + wx, wy); X.filter = 'none';
+  X.restore();
+  tags(t); splitLabels(t); record(t); if (!NOSUB) { subBand(t); subtitle(t); }
+};
+window.TEXTS = (t) => {
+  window.render(t);
+  const out = [...boxes];
+  if (SEC.map.t0 < t && t < SEC.map.t1) out.push(...mapBoxes.filter(b => b.x0 > GX && b.x1 < GX + GW));
+  const inS = id => t >= SEC[id].t0 && t < SEC[id].t1;
+  if (t > .85 && t < 3.45) out.push({ id: 'logo', text: 'THE SPOTLIGHT NEWS', x0: GX + 100, y0: 690, x1: GX + GW - 100, y1: 870 });
+  if (t > SEC.card.t0 + .5 && t < SEC.card.t1) out.push({ id: 'card-en', text: 'ENTER MR. FORD', x0: GX + 200, y0: 420, x1: GX + GW - 200, y1: 560 },
+    { id: 'card-zh', text: '福特登场', x0: GX + 400, y0: 590, x1: GX + GW - 400, y1: 670 });
+  if (t > HIT.end_hit2 + .4 && t < SEC.endcard.t0 - .3) out.push({ id: 'end-en', text: "THAT'S THE NEWS!", x0: GX + 120, y0: 540, x1: GX + GW - 120, y1: 680 },
+    { id: 'end-zh', text: '本期完', x0: GX + 500, y0: 690, x1: GX + GW - 500, y1: 760 });
+  if (t > SEC.endcard.t0 + .55) out.push({ id: 'title', text: '膝盖警报 Knock-Knee Alert', x0: GX + 120, y0: 290, x1: GX + GW - 120, y1: 400 },
+    { id: 'style', text: '1920s 新闻影片 1920s NEWSREEL', x0: GX + 200, y0: 480, x1: GX + GW - 200, y1: 535 },
+    { id: 'credit', text: 'LemoLab × Claude Opus 5.5', x0: GX + 400, y0: 565, x1: GX + GW - 400, y1: 610 });
+  return out.filter(b => b.x0 >= 0);
+};
+window.EV = [
+  ...Object.entries(HIT).map(([k, v]) => ({ t: v, type: k })),
+  ...TL.lines.map(L => ({ t: L.t, type: 'voice', id: L.id })),
+];
+window.render(0);
+window.READY = true;
+</script></body></html>

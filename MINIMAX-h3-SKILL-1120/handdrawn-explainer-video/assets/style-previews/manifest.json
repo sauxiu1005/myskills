@@ -1,0 +1,161 @@
+{
+ "purpose": "Real catalog thumbnails; id is the package display number (1-13, renumbered in 3.8.0). All styles are package-owned (library=custom): recipes in assets/custom-styles/STYLES.md, file names are <two-digit number>-<style slug>, each carries a generation style anchor, verified by assets/local-manifest.json",
+ "images": [
+  {
+   "id": "1",
+   "library": "custom",
+   "library_id": "custom-minimal-stickman",
+   "source": "assets/custom-styles/anchors/01-minimal-stickman.jpg",
+   "source_sha256": "a2e1a08512dac9bb2d7671ca04ac8a78ad819348f18ba74b12d63922d8d748aa",
+   "thumbnail": "01-minimal-stickman.jpg",
+   "thumbnail_sha256": "1ad1b606fff39ead4b976bc72172fbb02ca25257ee75232f7ca0d9f353a8f058",
+   "bytes": 73252,
+   "anchor": "assets/custom-styles/anchors/01-minimal-stickman.jpg",
+   "anchor_sha256": "a2e1a08512dac9bb2d7671ca04ac8a78ad819348f18ba74b12d63922d8d748aa"
+  },
+  {
+   "id": "2",
+   "library": "custom",
+   "library_id": "custom-black-bean-doodle",
+   "source": "assets/custom-styles/anchors/02-black-bean-doodle.jpg",
+   "source_sha256": "a704ede2364151c85d2cb0f6fcfc2f2be30bd724bdc12ec45217bed437440478",
+   "thumbnail": "02-black-bean-doodle.jpg",
+   "thumbnail_sha256": "85dfb4ac9c078038d57093fc02a72e53ac31b48f5804405860c5738fcdc7def6",
+   "bytes": 79812,
+   "anchor": "assets/custom-styles/anchors/02-black-bean-doodle.jpg",
+   "anchor_sha256": "a704ede2364151c85d2cb0f6fcfc2f2be30bd724bdc12ec45217bed437440478"
+  },
+  {
+   "id": "3",
+   "library": "custom",
+   "library_id": "custom-warm-pastel-storybook",
+   "source": "assets/custom-styles/anchors/03-warm-pastel-storybook.jpg",
+   "source_sha256": "d01fc95e8332718163e6c59faf01da9fd234da518441ceb275151d5049061059",
+   "thumbnail": "03-warm-pastel-storybook.jpg",
+   "thumbnail_sha256": "d58b7214b66002255e9007a5340ec952812485c610396653db213a4357cb470d",
+   "bytes": 106841,
+   "anchor": "assets/custom-styles/anchors/03-warm-pastel-storybook.jpg",
+   "anchor_sha256": "d01fc95e8332718163e6c59faf01da9fd234da518441ceb275151d5049061059"
+  },
+  {
+   "id": "4",
+   "library": "custom",
+   "library_id": "custom-ink-wash-bird-bamboo",
+   "source": "assets/custom-styles/anchors/04-ink-wash-bird-bamboo.jpg",
+   "source_sha256": "c28b903c153574643da993608f172eb6ee435245ff208c65d668499d95432d7a",
+   "thumbnail": "04-ink-wash-bird-bamboo.jpg",
+   "thumbnail_sha256": "8272ca12ef5cb31b543ecfe4250b0e257783f5030f32a808aff4e49319adf8c1",
+   "bytes": 89288,
+   "anchor": "assets/custom-styles/anchors/04-ink-wash-bird-bamboo.jpg",
+   "anchor_sha256": "c28b903c153574643da993608f172eb6ee435245ff208c65d668499d95432d7a"
+  },
+  {
+   "id": "5",
+   "library": "custom",
+   "library_id": "custom-retro-animation-character",
+   "source": "assets/custom-styles/anchors/05-retro-animation-character.jpg",
+   "source_sha256": "3b710a630b0ddca50119739c5fe9137f95d285dada7902fe8868089647c1e9e5",
+   "thumbnail": "05-retro-animation-character.jpg",
+   "thumbnail_sha256": "c47132173d45bfe9d609e02b11e81645799317bb085a7af0f2034a01e0ef5682",
+   "bytes": 94151,
+   "anchor": "assets/custom-styles/anchors/05-retro-animation-character.jpg",
+   "anchor_sha256": "3b710a630b0ddca50119739c5fe9137f95d285dada7902fe8868089647c1e9e5"
+  },
+  {
+   "id": "6",
+   "library": "custom",
+   "library_id": "custom-crayon-kid-doodle",
+   "source": "assets/custom-styles/anchors/06-crayon-kid-doodle.jpg",
+   "source_sha256": "adef69e0484772dd27d11bd87d6cc4aee38d0cccf56088cb80feca4f39fb72af",
+   "thumbnail": "06-crayon-kid-doodle.jpg",
+   "thumbnail_sha256": "3e1b87285e6efeed088a4605c8f6b7c846409fdc0dfcf571ed8b0ab54b8f91d1",
+   "bytes": 133813,
+   "anchor": "assets/custom-styles/anchors/06-crayon-kid-doodle.jpg",
+   "anchor_sha256": "adef69e0484772dd27d11bd87d6cc4aee38d0cccf56088cb80feca4f39fb72af"
+  },
+  {
+   "id": "7",
+   "library": "custom",
+   "library_id": "custom-retro-cozy-picturebook",
+   "source": "assets/custom-styles/anchors/07-retro-cozy-picturebook.jpg",
+   "source_sha256": "80eacc5eacfbd1080b0bfdce0ee76b0bbf2f9199d12b5d3f3cd986ccfafd70ed",
+   "thumbnail": "07-retro-cozy-picturebook.jpg",
+   "thumbnail_sha256": "afeca7b0747017079e0399b1719e260614ae975116b74eba42ada708d9d17652",
+   "bytes": 27424,
+   "anchor": "assets/custom-styles/anchors/07-retro-cozy-picturebook.jpg",
+   "anchor_sha256": "80eacc5eacfbd1080b0bfdce0ee76b0bbf2f9199d12b5d3f3cd986ccfafd70ed"
+  },
+  {
+   "id": "8",
+   "library": "custom",
+   "library_id": "custom-retro-warm-picturebook",
+   "source": "assets/custom-styles/anchors/08-retro-warm-picturebook.jpg",
+   "source_sha256": "b44ec3e8417ec0ba452898d96da315b3af93f8fea4a1b78ac8f6ba60c8680b1f",
+   "thumbnail": "08-retro-warm-picturebook.jpg",
+   "thumbnail_sha256": "548e1ffd7d9145579f071dc6c31613f349584df2eaa9f1ab232d2891a7e2106d",
+   "bytes": 47165,
+   "anchor": "assets/custom-styles/anchors/08-retro-warm-picturebook.jpg",
+   "anchor_sha256": "b44ec3e8417ec0ba452898d96da315b3af93f8fea4a1b78ac8f6ba60c8680b1f"
+  },
+  {
+   "id": "9",
+   "library": "custom",
+   "library_id": "custom-oil-pastel-kids",
+   "source": "assets/custom-styles/anchors/09-oil-pastel-kids.jpg",
+   "source_sha256": "6ac6ff0c52fff71bb63e23d220f5289b93cb1e5cfdf0ff3fbd6229d0e7c3e454",
+   "thumbnail": "09-oil-pastel-kids.jpg",
+   "thumbnail_sha256": "46767f2d52cc6bb2838e1998c706bdb2e5ef8d4da43aac8f4ab68be721f4710b",
+   "bytes": 131820,
+   "anchor": "assets/custom-styles/anchors/09-oil-pastel-kids.jpg",
+   "anchor_sha256": "6ac6ff0c52fff71bb63e23d220f5289b93cb1e5cfdf0ff3fbd6229d0e7c3e454"
+  },
+  {
+   "id": "10",
+   "library": "custom",
+   "library_id": "custom-american-cartoon-ink",
+   "source": "assets/custom-styles/anchors/10-american-cartoon-ink.jpg",
+   "source_sha256": "6a95e8d7292f80412e77a32c83e5feb45e944c5f95158005241b326329031069",
+   "thumbnail": "10-american-cartoon-ink.jpg",
+   "thumbnail_sha256": "39768351e04b1e42c45a2ced8d755eb43310e11bd939fb7f25974460e5864f99",
+   "bytes": 71691,
+   "anchor": "assets/custom-styles/anchors/10-american-cartoon-ink.jpg",
+   "anchor_sha256": "6a95e8d7292f80412e77a32c83e5feb45e944c5f95158005241b326329031069"
+  },
+  {
+   "id": "11",
+   "library": "custom",
+   "library_id": "custom-hardboiled-ink-comic",
+   "source": "assets/custom-styles/anchors/11-hardboiled-ink-comic.jpg",
+   "source_sha256": "fce32fb9fe0cc35b4bb2dd401d0aab8ac156ea61a43b07d77a9eef104b4b6be2",
+   "thumbnail": "11-hardboiled-ink-comic.jpg",
+   "thumbnail_sha256": "4b4844d0cfe9531baacbbebadec2fe7fac7da13c97220c6821812573e079c96c",
+   "bytes": 52349,
+   "anchor": "assets/custom-styles/anchors/11-hardboiled-ink-comic.jpg",
+   "anchor_sha256": "fce32fb9fe0cc35b4bb2dd401d0aab8ac156ea61a43b07d77a9eef104b4b6be2"
+  },
+  {
+   "id": "12",
+   "library": "custom",
+   "library_id": "custom-industrial-marker-sketch",
+   "source": "assets/custom-styles/anchors/12-industrial-marker-sketch.jpg",
+   "source_sha256": "1c3c5a2cc305bb27563e75df3d5064ac3e547de94763142824cbb9ec08f70f0d",
+   "thumbnail": "12-industrial-marker-sketch.jpg",
+   "thumbnail_sha256": "c2cf639dd2d05097ec7dd449c23ef1ab041afe22ee68a26dc0987cf689e5032c",
+   "bytes": 60865,
+   "anchor": "assets/custom-styles/anchors/12-industrial-marker-sketch.jpg",
+   "anchor_sha256": "1c3c5a2cc305bb27563e75df3d5064ac3e547de94763142824cbb9ec08f70f0d"
+  },
+  {
+   "id": "13",
+   "library": "custom",
+   "library_id": "custom-anime-cel-portrait",
+   "source": "assets/custom-styles/anchors/13-anime-cel-portrait.jpg",
+   "source_sha256": "149935082eb8d42bbb83de916e127ec800cbdb141a0b190f61a02e6f2dc7a887",
+   "thumbnail": "13-anime-cel-portrait.jpg",
+   "thumbnail_sha256": "85b4413ca9cd01b8392fa9b829379e98ec5a219b9ddf010772c99fee6aa2230e",
+   "bytes": 40748,
+   "anchor": "assets/custom-styles/anchors/13-anime-cel-portrait.jpg",
+   "anchor_sha256": "149935082eb8d42bbb83de916e127ec800cbdb141a0b190f61a02e6f2dc7a887"
+  }
+ ]
+}

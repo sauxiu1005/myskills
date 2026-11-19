@@ -1,0 +1,36 @@
+display-name-zh: 照片光影设计
+version: 1.0.0
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Post-production
+complete-tags-cn:
+- 专业影视 / 后期处理
+summary-en: Analyze the lighting in an uploaded photo, offer style and light-position options, then apply the selected lighting effects to generate a relit image.
+summary-cn: 分析上传照片的光线，提供风格与灯位方案，用户选定后生成新的光影效果，生成重新打光的成图。
+desc-en: For users who want to take part in decisions about improving image lighting, this skill accepts an original image and an optional lighting reference. It first examines light direction, softness, color temperature and tonal contrast, distinguishes observations from estimates, and proposes a tailored plan. Once the user selects a few options such as lighting style and direction, the skill compiles the choices into a concise English editing prompt and calls an available image model to generate the relit image. It then checks whether the subject, materials and composition have been preserved. Deliverables include the finished image, a description of the changes and options for further refinement.
+desc-cn: 面向希望参与图片光线美化决策的用户，接收原图及可选光照参考图，先观察光向、软硬、冷暖与明暗层次，区分证据和推测，再提出针对性方案。用户选择风格、灯光方向等少量选项后，技能把选择编译为一段简短英文编辑提示词，调用可用的图片模型生成重新打光的成图，并检查主体、材质和构图是否保留。交付成图、变化说明及微调入口。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 分析上传照片的光线，提供风格与灯位方案，用户选定后生成新的光影效果，生成重新打光的成图。
+    best-for:
+    - 人像产品布光
+    - 光向明暗调整
+    - 保留内容换光
+    how-to-use: 上传原图及可选光照参考，查看分析后选择风格与灯位，生成结果后按需微调。
+    outputs: 光线诊断与观察、推荐方案与选项、重新打光后的成图、变化说明与微调入口。
+  en-US:
+    summary: Analyze the lighting in an uploaded photo, offer style and light-position options, then apply the selected lighting effects to generate a relit image.
+    best-for:
+    - Portrait and Product Lighting
+    - Light Direction and Contrast
+    - Content-preserving Relighting
+    how-to-use: Upload the original and an optional lighting reference; review the analysis, choose style and light direction, then refine the generated result if needed.
+    outputs: Lighting diagnosis and observations, recommended plan with options, the relit image, change notes and refinement entry points.
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-10-21/image/1794318844572669910-1794318844553.png
+cover: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318842013756872-1794318841992.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318842013756872-1794318841992.mp4

@@ -1,0 +1,22 @@
+{
+  "meta": {"brand": "ORBIT STUDIO"},
+  "recipe": "chapter_reel",
+  "format": {"aspect": "16:9", "fps": 60, "bpm": 128, "duration": 15},
+  "style": "swiss",
+  "palette": {"preset": "mono", "dark": "#111113", "light": "#F5F5F0", "a1": "#FF4E18", "a2": "#C23BFF", "a3": "#1D4ED8"},
+  "carrier": "a1",
+  "hud": {"label": "ORBIT / MOTION SYSTEM"},
+  "audio": {"mode": "synth", "mood": "cool"},
+  "scenes": [
+    {"type": "ball_drop",     "beats": 4, "bg": "dark",  "name": "Intro",      "caption": "every motion starts here"},
+    {"type": "tracking_snap", "beats": 4, "bg": "dark",  "bg2": "a3", "name": "Kinetic", "word": "Momentum", "marquee": "type in motion"},
+    {"type": "grid_ripple",   "beats": 4, "bg": "dark",  "name": "Systems",    "word": "Systems", "label": "grid / 64px"},
+    {"type": "particle_word", "beats": 4, "bg": "dark",  "name": "Particles",  "word": "Energy"},
+    {"type": "sphere3d",      "beats": 4, "bg": "dark",  "name": "Dimension",  "word": "Depth", "label": "z-space"},
+    {"type": "data_dash",     "beats": 4, "bg": "light", "name": "Data",       "title": "weekly report",
+     "stats": [{"value": "128", "label": "projects"}, {"value": "4.9x", "label": "faster review"}, {"value": "72%", "label": "reuse rate"}],
+     "ring": "72%", "tags": ["draft", "review", "ship"]},
+    {"type": "serif_flow",    "beats": 4, "bg": "dark",  "name": "Flow",       "lines": ["Make it", "feel alive"]},
+    {"type": "decode_lockup", "beats": 4, "bg": "dark",  "name": "Outro",      "title": "Orbit", "subtitle": "motion design studio", "meta": "ORBIT.STUDIO · 2026"}
+  ]
+}

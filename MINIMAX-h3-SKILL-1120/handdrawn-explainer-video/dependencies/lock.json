@@ -1,0 +1,12 @@
+[
+  {
+    "name": "sweety-image-art-direction",
+    "source": "Bundled upstream guide snapshot",
+    "path": "dependencies/sweety-image-art-direction",
+    "required_for": "every image: hands, characters, props, scene panels, covers, variants and edits",
+    "entry_sha256": "fbbfd33d70f729011b6a6bc232851c116cd4a89ead2adea4462888a6ce26fc1a",
+    "files": 3,
+    "entry": "GUIDE.md",
+    "url": "https://github.com/threerocks/sweety-image-art-direction"
+  }
+]

@@ -1,0 +1,187 @@
+{
+  "skill": "phone-ui-demo-video",
+  "version": "1.3.1",
+  "note": "Current packaged bytes, not an upstream equivalence claim. Manifest excludes itself.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1067,
+      "sha256": "489a9bd47c4ee7c51731faff85a28e4fcc36cc5c92b8603bd039c7338269e509"
+    },
+    {
+      "path": "SKILL.cn.md",
+      "bytes": 9582,
+      "sha256": "156c4439139c5ca7c0bf3db95e5a8d152a08a30f274759ac5acbedd8569ee058"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 11233,
+      "sha256": "4e1605744aa9454e770da69be35dec474b54f6680758a6bfac0ee23c62bdfc26"
+    },
+    {
+      "path": "assets/starter/audio.mjs",
+      "bytes": 2259,
+      "sha256": "4c8884c6d36cd89e4aa7c81fc14c89936dc59e10d4b0af2dcae9397039ebb42c"
+    },
+    {
+      "path": "assets/starter/film.html",
+      "bytes": 4758,
+      "sha256": "9f0a0eb985b9fb884cb4d31294bb9af7cf1017e9939ba12447a4da2b7fee4094"
+    },
+    {
+      "path": "assets/starter/film.js",
+      "bytes": 8009,
+      "sha256": "7ea9ae0e2543b7b0d7ac643d376d4d289135392107c78e1ca943c483a2f562dc"
+    },
+    {
+      "path": "assets/starter/index.html",
+      "bytes": 1994,
+      "sha256": "df6728ac7ab622079dd60d57422748607e6bee1214bb1e088fee320536b0754e"
+    },
+    {
+      "path": "assets/starter/story.js",
+      "bytes": 1680,
+      "sha256": "e40f025771da715455e88a9634ac155fa5337ed62e04964653002bea0c28d8f2"
+    },
+    {
+      "path": "assets/starter/style.css",
+      "bytes": 9591,
+      "sha256": "9064ffc266426972e649bd3f98264fb9ed14c2f9fc78f50158821aad7b4819b3"
+    },
+    {
+      "path": "assets/upstream/examples/kexue/index.html",
+      "bytes": 12552,
+      "sha256": "759f3d703a46dd404f9c53d53501f9ceeba27d5baf097419edc891b5752c68a6"
+    },
+    {
+      "path": "assets/upstream/examples/kexue/shot-1.html",
+      "bytes": 31470,
+      "sha256": "16c32a6201b69f73384fb103e44a61cd04298244bccfe5c350a200d8fdaca94f"
+    },
+    {
+      "path": "assets/upstream/examples/kexue/shot-2.html",
+      "bytes": 41266,
+      "sha256": "3280288803c7a0b12103cee7f180428233ed0706d5e07dc4333469d347157301"
+    },
+    {
+      "path": "assets/upstream/examples/kexue/shot-3.html",
+      "bytes": 35307,
+      "sha256": "8b04d73f0b26725de45f39d1572992560e40f83e406fb595dbec6dfdb3fe6a6f"
+    },
+    {
+      "path": "assets/upstream/examples/kexue/shot-4.html",
+      "bytes": 37956,
+      "sha256": "fe7d9b89cf6136a6795c7cd8a78d2cf85b11680e5fcf3fef0eb773f07de65baa"
+    },
+    {
+      "path": "assets/upstream/examples/kexue/shot-5.html",
+      "bytes": 38145,
+      "sha256": "4c0eeaabfb0bfe689149d9f80ff8251785a587ed58e7aa78d925a08b299ede65"
+    },
+    {
+      "path": "assets/upstream/examples/kexue/shot-6.html",
+      "bytes": 42184,
+      "sha256": "973d9d0fc76c5c154453d7fa74bec1991eee9a3cd42b4c6907dde13a58b189ae"
+    },
+    {
+      "path": "assets/upstream/examples/kexue/shot-7.html",
+      "bytes": 40690,
+      "sha256": "5d3cc7b24277f58af9513aea68c029e7c726d5499b1cd3130b7e51094395fc56"
+    },
+    {
+      "path": "assets/upstream/examples/kexue/shot-8.html",
+      "bytes": 33232,
+      "sha256": "2edfed302b08e9ece19041b2248f6b30058beb250371b54b6078014b6e3ef24f"
+    },
+    {
+      "path": "assets/upstream/template.html",
+      "bytes": 29874,
+      "sha256": "ad799d767474ced077030038c6698d1d14eef71999844b5fbfc5c1cc0ce60368"
+    },
+    {
+      "path": "meta.yaml",
+      "bytes": 2952,
+      "sha256": "9b3e973bd536e17c14c4ad70708fc417a492122571400ef792f3dc69a9afdfba"
+    },
+    {
+      "path": "references/execution-handoff.md",
+      "bytes": 1769,
+      "sha256": "60f414edfe1bec665e45b6f4efb5ff81d81d51e771c377ba7e2224679183a59b"
+    },
+    {
+      "path": "references/project-delivery.md",
+      "bytes": 3257,
+      "sha256": "02d17df1079d1496862a1743be498d091ecc3fbb2dd45b645a4dd99f94f396dc"
+    },
+    {
+      "path": "references/provenance.md",
+      "bytes": 3391,
+      "sha256": "af170313afff7e955445906afdf7ae6f01f409240720b2e8cab45dbaf3d6f584"
+    },
+    {
+      "path": "references/qa.md",
+      "bytes": 2156,
+      "sha256": "10acda61516520f613dcf7d0e843c9048d20218cb96381536be74267cb76eb96"
+    },
+    {
+      "path": "references/rendering.md",
+      "bytes": 9498,
+      "sha256": "5c74e946fb07a704fb45de7e9ec4024814692c107774c36268c4cf7d55687553"
+    },
+    {
+      "path": "references/upstream/bg-captions.md",
+      "bytes": 2997,
+      "sha256": "163b4a2b2c053d6113c3a7e13f75f731681dacb235889cc816c625bac9e1cbab"
+    },
+    {
+      "path": "references/upstream/phone-stage.md",
+      "bytes": 3996,
+      "sha256": "3f344edaf0710441326569c447a3440f186628eb41393614922f659a9237f192"
+    },
+    {
+      "path": "references/upstream/player-and-navigation.md",
+      "bytes": 2955,
+      "sha256": "372cf13edadc55b4466964c0afe09a47728ce34f2a025f1d3007579e8bef7385"
+    },
+    {
+      "path": "references/upstream/system-ui-patterns.md",
+      "bytes": 5124,
+      "sha256": "da6159fea73fda05ec00620a38f210606d63447ecc8133ad2ed2e521d6d3d883"
+    },
+    {
+      "path": "references/validation-report.md",
+      "bytes": 4034,
+      "sha256": "0529d0f21611e2c10e74cd754f60b64a6964647f520dffd139739706a2362c1b"
+    },
+    {
+      "path": "scripts/frame-capture.mjs",
+      "bytes": 3440,
+      "sha256": "432f0525788d2ac0530ac2bc7465c6ad458e50d0bf9d0ff23d7eb9a9af96349a"
+    },
+    {
+      "path": "scripts/package-lock.json",
+      "bytes": 33607,
+      "sha256": "8649ecb7843584f92818805bbd435a2d454a0330439846e53452b8a58593e705"
+    },
+    {
+      "path": "scripts/package.json",
+      "bytes": 163,
+      "sha256": "2f9c5a09939aaed1875ae7c1ad5bb66bee73e0c259abbfa9da1da5ef60088e88"
+    },
+    {
+      "path": "scripts/phone-ui.mjs",
+      "bytes": 23863,
+      "sha256": "e64112491ef38f7de80520a4277d04fc1ccf5d8b39cd5bbcc0b9590f2eb20458"
+    },
+    {
+      "path": "scripts/test-regression.mjs",
+      "bytes": 8260,
+      "sha256": "8d15169e39931cf21341a1f217f26d9d61b02bf87514db51a24084f282f566dd"
+    },
+    {
+      "path": "scripts/verify-package.mjs",
+      "bytes": 1054,
+      "sha256": "b2b12734043f33c7dcd186d2aa7575eca2dcd2904b3845a45a95cb5c18e87fd8"
+    }
+  ]
+}

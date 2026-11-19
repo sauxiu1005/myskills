@@ -1,0 +1,32 @@
+{
+  "format": {"fps": 30, "duration_s": 12, "sample_rate": 48000},
+  "layout": {
+    "width": 1000, "height": 700, "world_scale": 0.004,
+    "targets": {
+      "article-card": {"rect": [400, 220, 320, 180], "panel": "content"},
+      "theme-toggle": {"rect": [880, 50, 80, 60], "panel": "header"},
+      "reading-slider": {"rect": [350, 550, 500, 40], "panel": "content"}
+    }
+  },
+  "events": [
+    {"id": "wake", "action": "角色从头像卡片剥离，体积显现并观察目标", "start_frame": 0, "end_frame": 59,
+      "audio": [{"id": "peel", "frame": 30}, {"id": "pop", "frame": 45}]},
+    {"id": "open-article", "action": "跳到文章卡，脚底接触后展开用户提供的正文", "start_frame": 60, "contact_frame": 90, "end_frame": 134,
+      "target": "article-card", "contact_uv": [560, 310],
+      "path": [[200, 180, 0], [300, 180, 180], [500, 310, 180], [560, 310, 0]],
+      "effect": {"before": "文章卡折叠", "after": "正文在原内容面板内展开", "frame": 90},
+      "audio": [{"id": "jump-whoosh", "frame": 75}, {"id": "card-contact", "frame": 90, "sync": "contact"}]},
+    {"id": "change-theme", "action": "沿导航跳至主题开关并踩下", "start_frame": 135, "contact_frame": 165, "end_frame": 209,
+      "target": "theme-toggle", "contact_uv": [920, 80],
+      "path": [[560, 310, 0], [700, 210, 200], [850, 80, 150], [920, 80, 0]],
+      "effect": {"before": "浅色主题", "after": "深色主题，正文和按钮保持可读", "frame": 165},
+      "audio": [{"id": "toggle-click", "frame": 165, "sync": "contact"}]},
+    {"id": "ride-progress", "action": "落到阅读滑块后绑定手柄，滑向文章末尾，正文滚动与阅读进度同步", "start_frame": 210, "contact_frame": 240, "end_frame": 314,
+      "target": "reading-slider", "contact_uv": [400, 570],
+      "path": [[920, 80, 0], [720, 180, 220], [450, 500, 150], [400, 570, 0]],
+      "effect": {"before": "阅读进度10%", "after": "阅读进度100%，显示文章结尾", "frame": 300},
+      "audio": [{"id": "slider-land", "frame": 240, "sync": "contact"}, {"id": "soft-scroll", "frame": 246}, {"id": "complete-chime", "frame": 300}]},
+    {"id": "finish", "action": "在内容面板右侧站稳挥手，保留文章标题与成果的阅读窗口", "start_frame": 315, "end_frame": 359,
+      "audio": [{"id": "ending-sparkle", "frame": 315}]}
+  ]
+}

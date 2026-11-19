@@ -1,0 +1,4 @@
+interface:
+  display_name: "可编辑产品动效宣传片"
+  short_description: "制作产品宣传片与功能动效，支持节奏配乐、按时间码局部修改和可编辑源码交付"
+  default_prompt: "使用 $editable-product-motion-films 为我的产品制作一支30秒动效宣传片，完成节奏分镜与配乐，把成片、可播放预览和可编辑源码交付到项目预览。"

@@ -1,0 +1,259 @@
+[
+ {
+  "file": "Cinzel-400.woff",
+  "family": "Cinzel",
+  "style": "normal",
+  "weight": "400"
+ },
+ {
+  "file": "Cinzel-700.woff",
+  "family": "Cinzel",
+  "style": "normal",
+  "weight": "700"
+ },
+ {
+  "file": "CormorantGaramond-500i.woff",
+  "family": "Cormorant Garamond",
+  "style": "italic",
+  "weight": "500"
+ },
+ {
+  "file": "CormorantGaramond-500.woff",
+  "family": "Cormorant Garamond",
+  "style": "normal",
+  "weight": "500"
+ },
+ {
+  "file": "CormorantGaramond-700.woff",
+  "family": "Cormorant Garamond",
+  "style": "normal",
+  "weight": "700"
+ },
+ {
+  "file": "EBGaramond-400i.woff",
+  "family": "EB Garamond",
+  "style": "italic",
+  "weight": "400"
+ },
+ {
+  "file": "EBGaramond-400.woff",
+  "family": "EB Garamond",
+  "style": "normal",
+  "weight": "400"
+ },
+ {
+  "file": "EBGaramond-600.woff",
+  "family": "EB Garamond",
+  "style": "normal",
+  "weight": "600"
+ },
+ {
+  "file": "IMFellEnglish-400i.woff",
+  "family": "IM Fell English",
+  "style": "italic",
+  "weight": "400"
+ },
+ {
+  "file": "IMFellEnglish-400.woff",
+  "family": "IM Fell English",
+  "style": "normal",
+  "weight": "400"
+ },
+ {
+  "file": "PlayfairDisplay-400i.woff",
+  "family": "Playfair Display",
+  "style": "italic",
+  "weight": "400"
+ },
+ {
+  "file": "PlayfairDisplay-700i.woff",
+  "family": "Playfair Display",
+  "style": "italic",
+  "weight": "700"
+ },
+ {
+  "file": "PlayfairDisplay-700.woff",
+  "family": "Playfair Display",
+  "style": "normal",
+  "weight": "700"
+ },
+ {
+  "file": "PressStart2P-400.woff",
+  "family": "Press Start 2P",
+  "style": "normal",
+  "weight": "400"
+ },
+ {
+  "file": "Poppins-600.woff",
+  "family": "Poppins",
+  "style": "normal",
+  "weight": "600"
+ },
+ {
+  "file": "Poppins-700.woff",
+  "family": "Poppins",
+  "style": "normal",
+  "weight": "700"
+ },
+ {
+  "file": "Poppins-800.woff",
+  "family": "Poppins",
+  "style": "normal",
+  "weight": "800"
+ },
+ {
+  "file": "JosefinSans-700.woff",
+  "family": "Josefin Sans",
+  "style": "normal",
+  "weight": "700"
+ },
+ {
+  "file": "Bangers-400.woff",
+  "family": "Bangers",
+  "style": "normal",
+  "weight": "400"
+ },
+ {
+  "file": "GochiHand-400.woff",
+  "family": "Gochi Hand",
+  "style": "normal",
+  "weight": "400"
+ },
+ {
+  "file": "Caveat-600.woff",
+  "family": "Caveat",
+  "style": "normal",
+  "weight": "600"
+ },
+ {
+  "file": "LilitaOne-400.woff",
+  "family": "Lilita One",
+  "style": "normal",
+  "weight": "400"
+ },
+ {
+  "file": "Exo2-800i.woff",
+  "family": "Exo 2",
+  "style": "italic",
+  "weight": "800"
+ },
+ {
+  "file": "ArchivoBlack-400.woff",
+  "family": "Archivo Black",
+  "style": "normal",
+  "weight": "400"
+ },
+ {
+  "file": "Kalam-700.woff",
+  "family": "Kalam",
+  "style": "normal",
+  "weight": "700"
+ },
+ {
+  "file": "UnifrakturMaguntia-400.woff",
+  "family": "UnifrakturMaguntia",
+  "style": "normal",
+  "weight": "400"
+ },
+ {
+  "file": "Marcellus-400.woff",
+  "family": "Marcellus",
+  "style": "normal",
+  "weight": "400"
+ },
+ {
+  "file": "Righteous-400.woff",
+  "family": "Righteous",
+  "style": "normal",
+  "weight": "400"
+ },
+ {
+  "file": "Anton-400.woff",
+  "family": "Anton",
+  "style": "normal",
+  "weight": "400"
+ },
+ {
+  "file": "AlfaSlabOne-400.woff",
+  "family": "Alfa Slab One",
+  "style": "normal",
+  "weight": "400"
+ },
+ {
+  "file": "Rye-400.woff",
+  "family": "Rye",
+  "style": "normal",
+  "weight": "400"
+ },
+ {
+  "file": "LibreBaskerville-400.woff",
+  "family": "Libre Baskerville",
+  "style": "normal",
+  "weight": "400"
+ },
+ {
+  "file": "LibreBaskerville-700.woff",
+  "family": "Libre Baskerville",
+  "style": "normal",
+  "weight": "700"
+ },
+ {
+  "file": "NotoSansSC-500.woff",
+  "family": "Noto Sans SC",
+  "style": "normal",
+  "weight": "500",
+  "note": "思源黑体（中文，GB2312）"
+ },
+ {
+  "file": "NotoSansSC-700.woff",
+  "family": "Noto Sans SC",
+  "style": "normal",
+  "weight": "700",
+  "note": "思源黑体（中文，GB2312）"
+ },
+ {
+  "file": "NotoSansSC-800.woff",
+  "family": "Noto Sans SC",
+  "style": "normal",
+  "weight": "800",
+  "note": "思源黑体（中文，GB2312）"
+ },
+ {
+  "file": "NotoSansSC-900.woff",
+  "family": "Noto Sans SC",
+  "style": "normal",
+  "weight": "900",
+  "note": "思源黑体（中文，GB2312）"
+ },
+ {
+  "file": "LXGWWenKai-500.woff",
+  "family": "LXGW WenKai",
+  "style": "normal",
+  "weight": "500",
+  "note": "霞鹜文楷（中文手写感）"
+ },
+ {
+  "file": "Inter-var.woff",
+  "family": "Inter",
+  "style": "normal",
+  "weight": "100 900"
+ },
+ {
+  "file": "RobotoCondensed-var.woff",
+  "family": "Roboto Condensed",
+  "style": "normal",
+  "weight": "100 900"
+ },
+ {
+  "file": "cmunrm.woff",
+  "family": "CMU Serif",
+  "style": "normal",
+  "weight": "400"
+ },
+ {
+  "file": "cmunti.woff",
+  "family": "CMU Serif",
+  "style": "italic",
+  "weight": "400"
+ }
+]

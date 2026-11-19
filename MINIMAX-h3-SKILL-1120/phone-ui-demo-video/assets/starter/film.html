@@ -1,0 +1,26 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>手机 UI 演示</title><link rel="icon" href="data:,"><link rel="stylesheet" href="style.css"></head>
+<body>
+<main id="stage">
+  <div id="amb"></div><div class="grid"></div>
+  <header><span id="chapter"></span><h1 id="shot-title"></h1></header>
+  <div class="caption left" id="caption-left"></div><div class="caption right" id="caption-right"></div>
+  <div id="camera"><div id="phone">
+    <div class="phone-glow"></div><i class="key volume"></i><i class="key volume second"></i><i class="key power"></i>
+    <i class="antenna top"></i><i class="antenna bottom"></i>
+    <div id="screen">
+      <div id="wall"></div>
+      <div id="status"><span>09:41</span><svg width="72" height="16" viewBox="0 0 72 16" fill="none" aria-label="信号、电池"><path d="M2 13V10M7 13V7M12 13V4M17 13V1" stroke="currentColor" stroke-width="3"/><path d="M24 5Q32 -1 40 5M27 8Q32 4 37 8M31 11h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="47" y="3" width="20" height="10" rx="3" stroke="currentColor"/><rect x="49" y="5" width="15" height="6" rx="1" fill="currentColor"/><path d="M70 6v4" stroke="currentColor" stroke-width="2"/></svg></div>
+      <section class="scene" id="lock"><div class="clock"><p>星期一 · 新的一天</p><strong>09:41</strong><small>每个问题，都有新的可能</small></div><div class="notices"><article class="notice"><div class="app-label"><i class="mini-icon"></i>轻学<span>现在</span></div><h2>今天，你想弄懂什么？</h2><p>带着一个好问题，开始探索。</p></article><article class="notice"><div class="app-label"><i class="mini-icon"></i>学习提醒<span>现在</span></div><h2>思考，可以一步一步来</h2><p>把复杂的问题，拆成清楚的小步骤。</p></article></div><div class="unlock">向上滑动，开启学习</div></section>
+      <section class="scene" id="app"><div class="home-clock">09:41<small>保持好奇，继续探索</small></div><div id="app-icon"><svg viewBox="0 0 24 24"><path d="M5 5h6v14H5zM13 5h6v14h-6z"/></svg><span>轻学</span></div><div id="app-window"><div id="app-content"><p class="eyebrow">YOUR LEARNING SPACE</p><h2>从一个问题开始</h2><p class="muted">把好奇心，变成你的学习路线。</p><div class="feature primary"><i class="mini-icon"></i><h3>拍下问题</h3><p>从你眼前的困惑出发</p></div><div class="feature"><h3>一起想一想</h3><p>用追问，找到自己的思路</p></div><div class="feature"><h3>回顾与连接</h3><p>看看知识之间的联系</p></div></div></div></section>
+      <section class="scene light" id="chat"><div class="app-header"><span>‹</span><b>一起想一想</b><span>···</span></div><p class="chat-time">今天 09:41</p><div class="bubble own">为什么影子会变长？</div><div class="bubble other">先观察：太阳的位置变低时，光线的方向有什么变化？</div><div class="bubble own">光线变得更倾斜了。</div><div class="bubble other last">很好。试着画一条光线，看看它落在地面上的位置。</div><div class="input-row">继续问一个好问题 <b>＋</b></div></section>
+      <section class="scene light" id="data"><div class="app-header"><span>‹</span><b>学习足迹</b><span>···</span></div><p class="eyebrow">A LITTLE MORE, EVERY DAY</p><h2>每一步，都看得见</h2><div class="ring-card"><svg viewBox="0 0 220 220"><circle cx="110" cy="110" r="86" class="ring-bg"/><circle cx="110" cy="110" r="86" id="ring"/></svg><div class="ring-label"><strong id="count">0</strong><span>示例学习进度 · %</span></div></div><div class="metric"><span>理解光与影</span><b>已连接</b></div><div class="metric"><span>下一步</span><b>观察与验证</b></div><p class="sample-note">演示数据，不代表实际学习效果</p></section>
+      <div id="sleep"></div><div id="glare"></div><div class="homebar"></div>
+    </div><div class="punch"></div>
+  </div></div>
+  <div id="brand-card"><p>KEEP ASKING. KEEP GROWING.</p><h2 id="brand"></h2><span id="tagline"></span></div>
+  <footer><span>轻学 / FICTIONAL PRODUCT DEMO</span><span>PHONE UI STORIES</span></footer>
+</main>
+<div id="intro"><button id="start">启动播放</button><p>连续演示 · 默认静音</p></div>
+<nav id="hud"><div id="segments"></div><div class="controls"><a href="index.html">总览</a><span id="timecode"></span><button id="prev">←</button><button id="pause">播放</button><button id="next">→</button><button id="mute">开启音效</button><button id="replay">重播</button></div></nav>
+<script src="story.js"></script><script type="module" src="film.js"></script>
+</body></html>

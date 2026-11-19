@@ -1,0 +1,186 @@
+{
+  "director_zh": "蒂姆·伯顿",
+  "director_en": "Tim Burton",
+  "schemes": [
+    {
+      "id": "B1",
+      "name_zh": "科学怪狗黑白",
+      "name_en": "Frankenweenie black and white",
+      "film": "科学怪狗 Frankenweenie (2012)",
+      "fits": "童年、怀旧、小镇怪谈或需要剪影喜剧的剧情；用户要求黑白",
+      "avoid": "剧本依赖颜色传递信息（例如红绿信号）时",
+      "light": "硬侧光与顶光、边缘光勾出剪影；影子形状清楚",
+      "contrast": "高反差但保留中灰层次",
+      "roles": {
+        "background_main": {
+          "hex": [
+            "#575858",
+            "#8E908E"
+          ],
+          "desc": "中灰墙面、天空与地面",
+          "provenance": "sampled_from_user_still",
+          "suggested_area": "建议 40–50%"
+        },
+        "shadow": {
+          "hex": [
+            "#141414",
+            "#0D0D0D"
+          ],
+          "desc": "深黑阴影与剪影",
+          "provenance": "sampled_from_user_still",
+          "suggested_area": "建议 35–45%"
+        },
+        "light_highlight": {
+          "hex": [
+            "#E8E8E6"
+          ],
+          "desc": "白色高光与边缘光",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 5–10%"
+        },
+        "accent_small": {
+          "hex": [],
+          "desc": "不设色。默认色卡与生成保持纯灰阶；只有用户明确要求局部色改编时，才在提示词中用文字说明哪一个剧本物件保留颜色，不加入色卡",
+          "provenance": "manual_suggestion"
+        },
+        "skin_protection": {
+          "hex": [],
+          "desc": "黑白中各人物原本肤色的深浅差异保留为不同灰度层次，不压成纯白或死黑，也不统一成同一灰度",
+          "provenance": "manual_suggestion"
+        }
+      },
+      "notes": "黑白方案不得套用任何彩色色卡（包括用户的紫橙绿通用卡）；B1 色卡只含灰阶。",
+      "sources": [
+        "assets/user-sources/burton/_film_stills_source.md"
+      ],
+      "stills": [
+        "assets/stills/burton/film-03-frame-03.jpg",
+        "assets/stills/burton/film-03-frame-04.jpg"
+      ],
+      "generation_card": "assets/palettes/burton/B1-card.png"
+    },
+    {
+      "id": "B2",
+      "name_zh": "剪刀手爱德华粉彩与哥特",
+      "name_en": "Edward Scissorhands pastel vs gothic",
+      "film": "剪刀手爱德华 Edward Scissorhands (1990)",
+      "fits": "两个世界对照：外来者进入整齐日常，或从日常进入阴暗角落的剧情",
+      "avoid": "只有单一空间、没有世界对照的剧情",
+      "light": "日常世界明亮平光；哥特空间硬光、冷月光与深影",
+      "contrast": "日常低反差，哥特高反差",
+      "roles": {
+        "background_main": {
+          "hex": [
+            "#A8D8C8",
+            "#E8B4C0",
+            "#A9CBE0"
+          ],
+          "desc": "日常世界：薄荷绿、粉、天蓝的过分整齐粉彩（同一镜头只选 1–2 色）",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 日常镜 50–60%"
+        },
+        "shadow": {
+          "hex": [
+            "#2A2A2E",
+            "#5E5E66"
+          ],
+          "desc": "哥特世界：炭黑与石灰色",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 哥特镜 50–60%"
+        },
+        "light_highlight": {
+          "hex": [
+            "#F4F0E6",
+            "#9FB3C8"
+          ],
+          "desc": "日常的暖白日光 / 哥特的冷月光",
+          "provenance": "manual_suggestion"
+        },
+        "accent_small": {
+          "hex": [],
+          "desc": "不额外设强调色，对比来自两个世界本身",
+          "provenance": "manual_suggestion"
+        },
+        "skin_protection": {
+          "hex": [],
+          "desc": "保留角色原本肤色与妆面设定，粉彩环境中不被染粉，哥特环境中不被染灰",
+          "provenance": "manual_suggestion"
+        }
+      },
+      "notes": "用户资料未提供本片截图与来源；色值为人工转译建议。",
+      "sources": [],
+      "stills": [],
+      "generation_card": "assets/palettes/burton/B2-card.png"
+    },
+    {
+      "id": "B3",
+      "name_zh": "阴间大法师2彩色怪诞",
+      "name_en": "Beetlejuice Beetlejuice colorful uncanny",
+      "film": "阴间大法师2 Beetlejuice Beetlejuice (2024)",
+      "fits": "夜晚小镇、超常喜剧、热闹而诡异的剧情",
+      "avoid": "写实严肃或需要黑白克制的剧情",
+      "light": "冷青夜色为底，实际光源（招牌、窗灯）给出小面积暖色或红色",
+      "contrast": "高反差，暗部深",
+      "roles": {
+        "background_main": {
+          "hex": [
+            "#133F43",
+            "#09252C"
+          ],
+          "desc": "深青绿夜色环境",
+          "provenance": "sampled_from_user_still",
+          "suggested_area": "建议 45–55%"
+        },
+        "shadow": {
+          "hex": [
+            "#050C0F",
+            "#110F11"
+          ],
+          "desc": "近黑暗部",
+          "provenance": "sampled_from_user_still",
+          "suggested_area": "建议 30–40%"
+        },
+        "light_highlight": {
+          "hex": [
+            "#3E7172",
+            "#277378"
+          ],
+          "desc": "青色环境高光与月光",
+          "provenance": "sampled_from_user_still",
+          "suggested_area": "建议 5–10%"
+        },
+        "accent_small": {
+          "hex": [
+            "#B71C1C"
+          ],
+          "desc": "只出现在招牌、灯、服装局部等真实物件上的血红小面积",
+          "provenance": "user_design_suggestion",
+          "suggested_area": "建议 ≤5%"
+        },
+        "skin_protection": {
+          "hex": [],
+          "desc": "保留角色原本肤色，冷青夜色中只影响光照方向，不整体变青",
+          "provenance": "manual_suggestion"
+        }
+      },
+      "notes": "用户的紫橙绿通用卡（#4A148C #E65100 #1A237E #1B5E20 #B71C1C #212121）不作为本方案默认色；仅血红被采用为小面积强调色。",
+      "sources": [
+        "assets/user-sources/burton/_film_stills_source.md",
+        "assets/user-sources/burton/palette.json",
+        "https://theasc.com/video/clubhouse-conversations-beetlejuice-beetlejuice/"
+      ],
+      "stills": [
+        "assets/stills/burton/film-01-frame-01.jpg"
+      ],
+      "generation_card": "assets/palettes/burton/B3-card.png"
+    }
+  ],
+  "schema_note": "颜色按角色组织：背景主色、阴影、光源高光、小面积强调色、肤色保护。肤色保护不提供色值，含义是保留每个角色原本的肤色、只受光照影响，不把不同肤色统一成某个色值。面积为建议值，不是实测。方案之间互斥，一次只用一个。",
+  "provenance_legend": {
+    "user_real_palette_unverified": "用户资料 real_palettes 中的色值；用户 JSON 的 sources 字段为空，已按片名关联其 reference_sources.md（FilmGrab）；取色方法与样本未核实，不是官方 LUT 或全片像素统计。",
+    "user_design_suggestion": "用户提供色卡中的设计建议色值（含占比/对比度描述）；无实测定义，不是官方 LUT 或全片统计。",
+    "sampled_from_user_still": "本技能用代码对用户提供的单张截图做 6 色中位切分取样得到的近似色；只代表该帧，不代表全片。",
+    "manual_suggestion": "本技能根据作品观感与制作访谈文字人工转译的建议色值，不是从影片提取。"
+  },
+  "generation_negative": "不要把色卡上的色块、文字、编号或排版画进成片；色卡只控制影调、光色和色彩角色，不决定构图、机位、人物或场景；不复制任何电影角色、服装、道具或场景。"
+}

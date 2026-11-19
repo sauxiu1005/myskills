@@ -1,0 +1,54 @@
+[
+  {
+    "id": "positive-zh-education",
+    "query": "把水循环做成适合小学生的中文科普图，用当前可用的生图模型。",
+    "should_trigger": true,
+    "expected_template": "references/slides-and-visual-docs/educational-diagram-slide.md",
+    "reason": "教学主题转图解"
+  },
+  {
+    "id": "positive-en-paper",
+    "query": "Turn this paper method section into a labelled workflow diagram using the available image tool.",
+    "should_trigger": true,
+    "expected_template": "references/academic-figures/method-pipeline-overview.md",
+    "reason": "Paper content to image"
+  },
+  {
+    "id": "negative-zh-product-edit",
+    "query": "用参考图编辑，把背景换成白色，保持产品标签和外形。",
+    "should_trigger": false,
+    "reason": "无讲解目标的商品图编辑，不属于知识图解"
+  },
+  {
+    "id": "negative-zh-summary",
+    "query": "只总结论文内容，不生成图，也不要写生图提示词。",
+    "should_trigger": false,
+    "reason": "纯文本摘要"
+  },
+  {
+    "id": "negative-en-data",
+    "query": "Plot the exact measured values in this CSV with error bars and provide editable plotting code.",
+    "should_trigger": false,
+    "reason": "Deterministic measured-data plotting"
+  },
+  {
+    "id": "negative-zh-video",
+    "query": "把这篇科普文章制作成一段有配音的视频。",
+    "should_trigger": false,
+    "reason": "视频制作，非本技能的图像任务"
+  },
+  {
+    "id": "positive-zh-lesson",
+    "query": "把这节高中生物课的细胞呼吸过程画成带标签的中文教学示意图，使用当前可用的生图能力。",
+    "should_trigger": true,
+    "expected_template": "references/slides-and-visual-docs/educational-diagram-slide.md",
+    "reason": "教学主题转图解"
+  },
+  {
+    "id": "positive-zh-diagram-edit",
+    "query": "用这张机制图做参考，把背景换成白色，所有标签、箭头和图例保持不变。",
+    "should_trigger": true,
+    "expected_template": "references/editing-workflows/background-replacement.md",
+    "reason": "知识图解的参考图编辑"
+  }
+]

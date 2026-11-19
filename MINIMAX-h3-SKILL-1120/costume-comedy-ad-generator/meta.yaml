@@ -1,0 +1,37 @@
+display-name-zh: 古装幽默剧情广告
+version: 1.0.0
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Creative Generation
+complete-tags-cn:
+- 商业广告 / 创作生成
+summary-en: Turns product photos, benefits and optional plots into costume comedy ads through timed scripts, storyboards, separate 10-second video segments and final editing.
+summary-cn: 根据商品照片、卖点与可选剧情编写脚本和分镜，按每段十秒分别生成视频，再剪辑为古装喜剧广告。
+desc-en: For creators and brands making short product commercials, turn a real benefit into the cause of a costume-comedy reversal. Provide product photos, benefits, placement context, dimensions, language and a duration of ten to thirty seconds, with an optional plot. Approve the script, character and scene assets, and storyboards, then produce ten-second segments and edit the film. Deliver the ad, timed script, approved copy, visual references and production prompts. Suitable for fictional palace, inn and marketplace stories, not historical documentaries, long dramas or unsupported efficacy claims.
+desc-cn: 面向需要商品短视频广告的创作者与品牌团队，将实际卖点变成古装喜剧反转的原因。提供商品照片、卖点、投放场景、尺寸、语言及十至三十秒时长，可附已有剧情。流程依次确认脚本、人物道具场景资产与分镜，再按每段十秒制作视频并剪辑成片。交付广告成片、定时脚本、确认文案、视觉参考和制作提示词。适合宫廷、客栈、市集等虚构场景，不做历史纪录片、长篇剧集或无依据的功效宣传。
+structured-info:
+  zh-CN:
+    summary: 将商品照片、卖点与可选剧情转化为商品推动反转的古装喜剧广告，按十秒分段制作并剪辑成片。
+    best-for:
+    - 商品广告
+    - 古装喜剧
+    - 短片推广
+    how-to-use: 上传商品照片，说明卖点、投放场景、画幅、语言和时长，逐步确认脚本与分镜。
+    outputs: 广告成片、定时脚本、确认文案、视觉参考、分镜及制作提示词。
+  en-US:
+    summary: Turn product photos, benefits and an optional plot into a product-driven costume comedy ad, generated in ten-second segments and edited into one finished film.
+    best-for:
+    - Product ads
+    - Costume comedy
+    - Short promotions
+    how-to-use: Upload product photos, specify benefits, placement, framing, language and duration, then approve the script and storyboards.
+    outputs: Finished ad, timed script, approved copy, visual references, storyboards and production prompts.
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+cover: https://cdn.hailuoai.com/pre/2026-11-11-22/video/1794408480604492347-1794408480599.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-11-22/video/1794408480604492347-1794408480599.mp4
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-11-22/video/1794408493132739878-1794408493095.mp4
+- https://cdn.hailuoai.com/pre/2026-11-11-22/video/1794408497685484554-1794408497631.mp4

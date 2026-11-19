@@ -1,0 +1,119 @@
+{
+  "director_id": "apichatpong-weerasethakul",
+  "director_name_zh": "阿彼察邦",
+  "source": {
+    "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/190_ApichatpongWeerasethakul_阿彼察邦/色卡主文档.md",
+    "sha256": "9c08e63520980a0e3dd78183bf22f11abde22826fbe56f0fadc82054368100dc"
+  },
+  "color_space": "sRGB",
+  "evidence": "source_document_hex_not_frame_sampled",
+  "display": "Equal-size swatches; no fixed frame-area ratios. Accent labels retain source associations, not universal emotional meanings.",
+  "main": [
+    {
+      "id": "C01",
+      "label_zh": "热带绿",
+      "hex": "#1B5E20",
+      "rgb": [
+        27,
+        94,
+        32
+      ]
+    },
+    {
+      "id": "C02",
+      "label_zh": "热带金",
+      "hex": "#FFD54F",
+      "rgb": [
+        255,
+        213,
+        79
+      ]
+    },
+    {
+      "id": "C03",
+      "label_zh": "木屋棕",
+      "hex": "#6D4C41",
+      "rgb": [
+        109,
+        76,
+        65
+      ]
+    },
+    {
+      "id": "C04",
+      "label_zh": "洞穴青",
+      "hex": "#006064",
+      "rgb": [
+        0,
+        96,
+        100
+      ]
+    },
+    {
+      "id": "C05",
+      "label_zh": "晨曦绿",
+      "hex": "#A5D6A7",
+      "rgb": [
+        165,
+        214,
+        167
+      ]
+    },
+    {
+      "id": "C06",
+      "label_zh": "土米",
+      "hex": "#BCAAA4",
+      "rgb": [
+        188,
+        170,
+        164
+      ]
+    }
+  ],
+  "accent": [
+    {
+      "id": "E01",
+      "label_zh": "自然神秘",
+      "hex": "#1B5E20",
+      "rgb": [
+        27,
+        94,
+        32
+      ],
+      "label_kind": "source_mood_label"
+    },
+    {
+      "id": "E02",
+      "label_zh": "记忆温暖",
+      "hex": "#FFD54F",
+      "rgb": [
+        255,
+        213,
+        79
+      ],
+      "label_kind": "source_mood_label"
+    },
+    {
+      "id": "E03",
+      "label_zh": "乡愁厚重",
+      "hex": "#6D4C41",
+      "rgb": [
+        109,
+        76,
+        65
+      ],
+      "label_kind": "source_mood_label"
+    },
+    {
+      "id": "E04",
+      "label_zh": "超自然深邃",
+      "hex": "#006064",
+      "rgb": [
+        0,
+        96,
+        100
+      ],
+      "label_kind": "source_mood_label"
+    }
+  ]
+}

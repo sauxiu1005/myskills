@@ -1,0 +1,25 @@
+[
+ {
+  "id": "l1",
+  "text": "小熊，要下雨啦！",
+  "voice": "zh-CN-XiaoyiNeural",
+  "rate": "+4%",
+  "pitch": "+12Hz",
+  "asr": "小熊，要下雨了！"
+ },
+ {
+  "id": "l2",
+  "text": "别怕，看我的！",
+  "voice": "zh-CN-YunxiaNeural",
+  "rate": "-6%",
+  "pitch": "-4Hz"
+ },
+ {
+  "id": "l3",
+  "text": "嘻嘻，一点都没湿！",
+  "voice": "zh-CN-XiaoyiNeural",
+  "rate": "-2%",
+  "pitch": "+10Hz",
+  "asr": "嘻嘻，一点都没事！"
+ }
+]

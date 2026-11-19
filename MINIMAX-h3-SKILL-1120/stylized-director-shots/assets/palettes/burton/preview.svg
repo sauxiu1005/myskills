@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1170" viewBox="0 0 1800 1170">
+<rect width="1800" height="1170" fill="#F5F2EC"/>
+<text x="40" y="70" font-size="40" font-family="PingFang SC, Hiragino Sans GB, sans-serif" fill="#141414">蒂姆·伯顿 Tim Burton · 配色方案（互斥，一次只选一个）</text>
+<text x="40" y="146" font-size="26" font-family="PingFang SC, Hiragino Sans GB, sans-serif" fill="#141414">B1 科学怪狗黑白 — 科学怪狗 Frankenweenie (2012)</text>
+<rect x="40" y="165" width="159" height="160" fill="#575858"/>
+<text x="44" y="348" font-size="18" font-family="Menlo, monospace" fill="#282828">#575858</text>
+<rect x="205" y="165" width="159" height="160" fill="#8E908E"/>
+<text x="209" y="348" font-size="18" font-family="Menlo, monospace" fill="#282828">#8E908E</text>
+<text x="40" y="378" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">背景主色 · 本技能单帧取样</text>
+<text x="40" y="402" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 40–50%</text>
+<rect x="388" y="165" width="159" height="160" fill="#141414"/>
+<text x="392" y="348" font-size="18" font-family="Menlo, monospace" fill="#282828">#141414</text>
+<rect x="553" y="165" width="159" height="160" fill="#0D0D0D"/>
+<text x="557" y="348" font-size="18" font-family="Menlo, monospace" fill="#282828">#0D0D0D</text>
+<text x="388" y="378" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">阴影 · 本技能单帧取样</text>
+<text x="388" y="402" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 35–45%</text>
+<rect x="736" y="165" width="324" height="160" fill="#E8E8E6"/>
+<text x="740" y="348" font-size="18" font-family="Menlo, monospace" fill="#282828">#E8E8E6</text>
+<text x="736" y="378" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">光源高光 · 人工建议色值</text>
+<text x="736" y="402" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 5–10%</text>
+<rect x="1084" y="165" width="324" height="160" fill="none" stroke="#969696" stroke-width="2"/>
+<text x="1094" y="250" font-size="18" font-family="PingFang SC, sans-serif" fill="#787878">不设色</text>
+<text x="1084" y="378" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">小面积强调 · 人工建议色值</text>
+<rect x="1432" y="165" width="324" height="160" fill="none" stroke="#969696" stroke-width="2"/>
+<text x="1442" y="250" font-size="18" font-family="PingFang SC, sans-serif" fill="#787878">保留原肤色</text>
+<text x="1432" y="378" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">肤色保护 · 人工建议色值</text>
+<text x="40" y="476" font-size="26" font-family="PingFang SC, Hiragino Sans GB, sans-serif" fill="#141414">B2 剪刀手爱德华粉彩与哥特 — 剪刀手爱德华 Edward Scissorhands (1990)</text>
+<rect x="40" y="495" width="104" height="160" fill="#A8D8C8"/>
+<text x="44" y="678" font-size="18" font-family="Menlo, monospace" fill="#282828">#A8D8C8</text>
+<rect x="150" y="495" width="104" height="160" fill="#E8B4C0"/>
+<text x="154" y="678" font-size="18" font-family="Menlo, monospace" fill="#282828">#E8B4C0</text>
+<rect x="260" y="495" width="104" height="160" fill="#A9CBE0"/>
+<text x="264" y="678" font-size="18" font-family="Menlo, monospace" fill="#282828">#A9CBE0</text>
+<text x="40" y="708" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">背景主色 · 人工建议色值</text>
+<text x="40" y="732" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 日常镜 50–60%</text>
+<rect x="388" y="495" width="159" height="160" fill="#2A2A2E"/>
+<text x="392" y="678" font-size="18" font-family="Menlo, monospace" fill="#282828">#2A2A2E</text>
+<rect x="553" y="495" width="159" height="160" fill="#5E5E66"/>
+<text x="557" y="678" font-size="18" font-family="Menlo, monospace" fill="#282828">#5E5E66</text>
+<text x="388" y="708" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">阴影 · 人工建议色值</text>
+<text x="388" y="732" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 哥特镜 50–60%</text>
+<rect x="736" y="495" width="159" height="160" fill="#F4F0E6"/>
+<text x="740" y="678" font-size="18" font-family="Menlo, monospace" fill="#282828">#F4F0E6</text>
+<rect x="901" y="495" width="159" height="160" fill="#9FB3C8"/>
+<text x="905" y="678" font-size="18" font-family="Menlo, monospace" fill="#282828">#9FB3C8</text>
+<text x="736" y="708" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">光源高光 · 人工建议色值</text>
+<rect x="1084" y="495" width="324" height="160" fill="none" stroke="#969696" stroke-width="2"/>
+<text x="1094" y="580" font-size="18" font-family="PingFang SC, sans-serif" fill="#787878">不设色</text>
+<text x="1084" y="708" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">小面积强调 · 人工建议色值</text>
+<rect x="1432" y="495" width="324" height="160" fill="none" stroke="#969696" stroke-width="2"/>
+<text x="1442" y="580" font-size="18" font-family="PingFang SC, sans-serif" fill="#787878">保留原肤色</text>
+<text x="1432" y="708" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">肤色保护 · 人工建议色值</text>
+<text x="40" y="806" font-size="26" font-family="PingFang SC, Hiragino Sans GB, sans-serif" fill="#141414">B3 阴间大法师2彩色怪诞 — 阴间大法师2 Beetlejuice Beetlejuice (2024)</text>
+<rect x="40" y="825" width="159" height="160" fill="#133F43"/>
+<text x="44" y="1008" font-size="18" font-family="Menlo, monospace" fill="#282828">#133F43</text>
+<rect x="205" y="825" width="159" height="160" fill="#09252C"/>
+<text x="209" y="1008" font-size="18" font-family="Menlo, monospace" fill="#282828">#09252C</text>
+<text x="40" y="1038" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">背景主色 · 本技能单帧取样</text>
+<text x="40" y="1062" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 45–55%</text>
+<rect x="388" y="825" width="159" height="160" fill="#050C0F"/>
+<text x="392" y="1008" font-size="18" font-family="Menlo, monospace" fill="#282828">#050C0F</text>
+<rect x="553" y="825" width="159" height="160" fill="#110F11"/>
+<text x="557" y="1008" font-size="18" font-family="Menlo, monospace" fill="#282828">#110F11</text>
+<text x="388" y="1038" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">阴影 · 本技能单帧取样</text>
+<text x="388" y="1062" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 30–40%</text>
+<rect x="736" y="825" width="159" height="160" fill="#3E7172"/>
+<text x="740" y="1008" font-size="18" font-family="Menlo, monospace" fill="#282828">#3E7172</text>
+<rect x="901" y="825" width="159" height="160" fill="#277378"/>
+<text x="905" y="1008" font-size="18" font-family="Menlo, monospace" fill="#282828">#277378</text>
+<text x="736" y="1038" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">光源高光 · 本技能单帧取样</text>
+<text x="736" y="1062" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 5–10%</text>
+<rect x="1084" y="825" width="324" height="160" fill="#B71C1C"/>
+<text x="1088" y="1008" font-size="18" font-family="Menlo, monospace" fill="#282828">#B71C1C</text>
+<text x="1084" y="1038" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">小面积强调 · 用户设计建议</text>
+<text x="1084" y="1062" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 ≤5%</text>
+<rect x="1432" y="825" width="324" height="160" fill="none" stroke="#969696" stroke-width="2"/>
+<text x="1442" y="910" font-size="18" font-family="PingFang SC, sans-serif" fill="#787878">保留原肤色</text>
+<text x="1432" y="1038" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">肤色保护 · 人工建议色值</text>
+<text x="40" y="1142" font-size="18" font-family="PingFang SC, sans-serif" fill="#5A5A5A">肤色保护不给色值：保留角色原本肤色。预览卡仅供人工阅读；生成时只上传无文字的 &lt;ID&gt;-card.png。面积与色值标注见 schemes.json，均非官方 LUT 或全片统计。</text>
+</svg>

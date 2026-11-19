@@ -1,0 +1,26 @@
+{
+  "title": "Whiteboard drawing (y3)",
+  "summary": "A marker writes each sentence as it is said, draws a doodle icon beside it, links icons with arrows, circles the key point and pulls back to show the whole board.",
+  "best_for": [
+    "step-by-step reasoning",
+    "why does X happen",
+    "a chain of causes",
+    "lecture-style narration"
+  ],
+  "aspect": "16:9",
+  "grammar": "y3_whiteboard",
+  "copy": {
+    "templates/blank/vendor/gsap.min.js": "vendor/gsap.min.js",
+    "templates/blank/vendor/GSAP-LICENSE.txt": "vendor/GSAP-LICENSE.txt",
+    "templates/blank/vendor/GSAP-LICENSE.html": "vendor/GSAP-LICENSE.html",
+    "runtime/clip/clip.js": "vendor/clip/clip.js",
+    "runtime/clip/cues.js": "vendor/clip/cues.js",
+    "runtime/clip/lib": "vendor/clip/lib",
+    "runtime/clip/grammars": "vendor/clip/grammars",
+    "runtime/clip/LICENSE": "vendor/clip/LICENSE",
+    "runtime/clip/NOTICE.md": "vendor/clip/NOTICE.md",
+    "fonts/LXGWWenKai-500.woff": "assets/fonts/LXGWWenKai-500.woff",
+    "fonts/OFL.txt": "assets/fonts/OFL.txt",
+    "fonts/LICENSES.md": "assets/fonts/LICENSES.md"
+  }
+}

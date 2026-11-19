@@ -1,0 +1,17 @@
+{
+  "meta": {"brand": "ASTRA STUDIO"},
+  "recipe": "page_reel",
+  "format": {"aspect": "16:9", "fps": 60, "bpm": 112, "duration": 15},
+  "style": "swiss",
+  "palette": {"preset": "mono", "dark": "#141414", "light": "#F4F4EE", "a1": "#FF5A1F", "a2": "#CDFF00", "a3": "#2B59FF"},
+  "hud": {"label": "ASTRA / PORTFOLIO"},
+  "audio": {"mode": "synth", "mood": "cool"},
+  "scenes": [
+    {"type": "split_hero",    "beats": 5, "bg": "dark", "name": "Loud",  "kicker": "page 01", "lines": ["I make", "it loud."], "object": "knot"},
+    {"type": "text_band",     "beats": 5, "bg": "a2",   "name": "Type",  "lines": ["Type", "in motion."], "band": "type in motion"},
+    {"type": "split_hero",    "beats": 5, "bg": "dark", "name": "Form",  "lines": ["Form.", "Without", "limits."], "object": "blob", "counter": {"from": "840%", "to": "872%", "label": "inflate"}},
+    {"type": "beat_jelly",    "beats": 5, "bg": "light","name": "Beat",  "lines": ["Hit", "the beat."]},
+    {"type": "stack_flip",    "beats": 4, "bg": "dark", "name": "Bold",  "words": ["Bold.", "Precise.", "Bold.", "Precise."]},
+    {"type": "object_lockup", "beats": 4, "bg": "dark", "name": "Move",  "lines": ["I move", "attention."], "cta": "Let's make it move", "meta": "ASTRA.STUDIO · 2026"}
+  ]
+}

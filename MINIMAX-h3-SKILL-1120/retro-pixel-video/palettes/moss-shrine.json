@@ -1,0 +1,129 @@
+{
+  "id": "moss-shrine",
+  "name": "苔光神社",
+  "name_en": "Moss Shrine",
+  "tier": "精致16-bit",
+  "use": "氛围循环、雨夜、森林、静谧场景",
+  "original": true,
+  "colors": [
+    {
+      "index": 0,
+      "hex": "#121a17",
+      "role": "最深/轮廓",
+      "ramp": "moss"
+    },
+    {
+      "index": 1,
+      "hex": "#22332b",
+      "role": "苔影",
+      "ramp": "moss"
+    },
+    {
+      "index": 2,
+      "hex": "#355440",
+      "role": "苔",
+      "ramp": "moss"
+    },
+    {
+      "index": 3,
+      "hex": "#5b7d4f",
+      "role": "蕨",
+      "ramp": "moss"
+    },
+    {
+      "index": 4,
+      "hex": "#93ad6a",
+      "role": "地衣",
+      "ramp": "moss"
+    },
+    {
+      "index": 5,
+      "hex": "#d6dba0",
+      "role": "淡地衣高光",
+      "ramp": "moss"
+    },
+    {
+      "index": 6,
+      "hex": "#2a3346",
+      "role": "雨夜石板",
+      "ramp": "rain"
+    },
+    {
+      "index": 7,
+      "hex": "#46597a",
+      "role": "暮蓝",
+      "ramp": "rain"
+    },
+    {
+      "index": 8,
+      "hex": "#7d97b5",
+      "role": "雾",
+      "ramp": "rain"
+    },
+    {
+      "index": 9,
+      "hex": "#c4d4e2",
+      "role": "雨滴高光",
+      "ramp": "rain"
+    },
+    {
+      "index": 10,
+      "hex": "#8c4b3a",
+      "role": "神社赭红",
+      "ramp": "lantern"
+    },
+    {
+      "index": 11,
+      "hex": "#e39a5a",
+      "role": "灯笼光",
+      "ramp": "lantern"
+    }
+  ],
+  "ramps": {
+    "moss": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "rain": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "lantern": [
+      10,
+      11
+    ]
+  },
+  "cycle_ranges": [
+    {
+      "name": "水面",
+      "indices": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "name": "灯笼闪烁",
+      "indices": [
+        10,
+        11
+      ]
+    }
+  ],
+  "fx_colors": [
+    11,
+    9
+  ],
+  "rules": {
+    "dither": "仅大面积渐变使用2×2有序抖色，运动物体不用",
+    "glow": "硬边核心+1px外圈，禁止全屏柔焦",
+    "8bit_subset": "切8-bit时每精灵取同一ramp的3色+透明"
+  }
+}

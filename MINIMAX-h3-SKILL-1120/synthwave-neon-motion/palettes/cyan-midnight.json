@@ -1,0 +1,15 @@
+{
+  "id": "cyan-midnight",
+  "name_cn": "电青午夜",
+  "use": "科技产品、数码、冷静夜行；电青主导，落日偏冷粉",
+  "sky": ["#02040E", "#071433", "#0E2458", "#24306E"],
+  "sun": ["#FFE9A8", "#FF9E8A", "#FF5FA8", "#B04BFF"],
+  "neon_primary": "#00F0FF",
+  "neon_secondary": "#B45CFF",
+  "grid": "#00E5FF",
+  "horizon_hot": "#D8FBFF",
+  "mountain_wire": ["#B45CFF", "#00F0FF"],
+  "chrome": ["#FFFFFF", "#CFF6FF", "#4E7FB8", "#0B1638", "#9EE9FF"],
+  "shadow": "#01030A",
+  "text_main": "#EFFBFF"
+}

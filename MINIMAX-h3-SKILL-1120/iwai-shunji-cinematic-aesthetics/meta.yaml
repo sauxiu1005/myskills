@@ -1,0 +1,36 @@
+display-name-zh: 岩井俊二电影美学
+version: 1.0.1
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Creative Generation
+complete-tags-cn:
+- 专业影视 / 创作生成
+summary-en: Transforms stories and references into original stills, visual series, and short films using Iwai-inspired emotional observation, natural light, and meaningful negative space.
+summary-cn: 把故事与参考素材转化为带有自然光、情绪观察和留白的原创电影画面与短片。
+desc-en: For filmmakers and visual creators seeking original Iwai Shunji-inspired imagery. Supply a theme, script, assets, references, framing and a still or video goal. The workflow identifies a visible emotional change, establishes a consistent visual bible and selects a seasonal or urban direction. It prepares a reviewable storyboard, divides longer stories into segments supported by the chosen capability, and creates reference images for approval before generating and assembling the film. Deliverables include images, short films, prompts, plans and verification notes as requested. It does not copy film frames, claim a fixed director formula, or substitute an unlabelled slideshow for missing video generation.
+desc-cn: 面向希望创作岩井俊二式情绪影像的影视与视觉创作者。提供主题、剧本、素材、画幅及图片或视频目标，先提取可见的情绪变化，统一人物、环境与光色，选择季节或都市视觉方向，再编写可审阅分镜。长故事按实际能力分段，并生成参考图供确认后制作与合成。按需求交付图片、短片、提示词、方案与验证说明，不复制电影原帧，不宣称固定导演公式，不把静帧相册冒充视频。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/83ecc06c-dd37-4d98-bd28-828371771dfc.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/83ecc06c-dd37-4d98-bd28-828371771dfc.mp4
+showcase:
+- https://cdn.hailuoai.com/prod/2026-10-23-13/video/1792734936232537197-1792734936195.mp4
+structured-info:
+  zh-CN:
+    summary: 将故事与参考转化为自然光、留白和生活细节驱动的原创电影画面，确认分镜后制作情绪短片。
+    best-for:
+    - 青春影像
+    - 情绪短片
+    - 视觉设定
+    how-to-use: 提供故事与参考，确认人物环境、视觉方向和分镜参考图后生成。
+    outputs: 原创图片、情绪短片、分镜方案、提示词与实际检查说明。
+  en-US:
+    summary: Turn stories and references into original cinematic images shaped by natural light, negative space and everyday detail, with approved storyboards guiding short films.
+    best-for:
+    - Youth Imagery
+    - Emotional Shorts
+    - Visual Development
+    how-to-use: Provide a story and references, then approve subjects, visual direction and storyboard images before generation.
+    outputs: Original images, short films, storyboards, prompts and records of completed checks.

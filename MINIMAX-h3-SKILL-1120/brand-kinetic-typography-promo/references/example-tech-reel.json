@@ -1,0 +1,21 @@
+{
+  "meta": {"brand": "KITE"},
+  "recipe": "tech_reel",
+  "format": {"aspect": "16:9", "fps": 60, "bpm": 128, "duration": 16.875},
+  "style": "hud",
+  "palette": {"preset": "mono", "dark": "#0A0A0A", "light": "#F2F0EA", "a1": "#FF3D1F", "a2": "#FFD23F", "a3": "#283CFF"},
+  "carrier": "a1",
+  "hud": {"label": "KITE / MOTION ENGINE"},
+  "audio": {"mode": "synth", "mood": "energetic"},
+  "scenes": [
+    {"type": "ball_drop",          "beats": 4, "bg": "dark",  "name": "Physics",   "caption": "squash & stretch"},
+    {"type": "select_box",         "beats": 4, "bg": "dark",  "name": "Type",      "word": "Frame"},
+    {"type": "code_glitch",        "beats": 4, "bg": "a3",    "name": "Code",      "word": "Code"},
+    {"type": "cross_ripple",       "beats": 4, "bg": "dark",  "name": "Grid",      "word": "Grid"},
+    {"type": "pillar_wave",        "beats": 4, "bg": "light", "name": "Wave",      "word": "Wave", "label": "11 × 11 pillars"},
+    {"type": "type_ribbons",       "beats": 4, "bg": "dark",  "name": "Stream",    "words": ["Kinetic", "Motion", "Rhythm"]},
+    {"type": "infinity_particles", "beats": 4, "bg": "dark",  "name": "Flow",      "word": "Flow"},
+    {"type": "grid_recap",         "beats": 4, "bg": "dark",  "name": "Recap"},
+    {"type": "dot_lockup",         "beats": 4, "bg": "dark",  "name": "Outro",     "title": "Kite", "font": "display", "subtitle": "motion engine", "meta": "KITE.DEV · 2026"}
+  ]
+}

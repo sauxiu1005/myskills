@@ -1,0 +1,119 @@
+{
+  "director_id": "jiang-wen",
+  "director_name_zh": "姜文",
+  "source": {
+    "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/123_JiangWen_姜文/色卡主文档.md",
+    "sha256": "6ead521362d998484d6179e8cbf23ad4ff46311aa7ff15dc5ecf51875d5db2d9"
+  },
+  "color_space": "sRGB",
+  "evidence": "source_document_hex_not_frame_sampled",
+  "display": "Equal-size swatches; no fixed frame-area ratios. Accent labels retain source associations, not universal emotional meanings.",
+  "main": [
+    {
+      "id": "C01",
+      "label_zh": "中国红",
+      "hex": "#C62828",
+      "rgb": [
+        198,
+        40,
+        40
+      ]
+    },
+    {
+      "id": "C02",
+      "label_zh": "黄土金",
+      "hex": "#FF8F00",
+      "rgb": [
+        255,
+        143,
+        0
+      ]
+    },
+    {
+      "id": "C03",
+      "label_zh": "大地棕",
+      "hex": "#5D4037",
+      "rgb": [
+        93,
+        64,
+        55
+      ]
+    },
+    {
+      "id": "C04",
+      "label_zh": "阳光金",
+      "hex": "#FFD54F",
+      "rgb": [
+        255,
+        213,
+        79
+      ]
+    },
+    {
+      "id": "C05",
+      "label_zh": "军绿",
+      "hex": "#2E7D32",
+      "rgb": [
+        46,
+        125,
+        50
+      ]
+    },
+    {
+      "id": "C06",
+      "label_zh": "深土棕",
+      "hex": "#3E2723",
+      "rgb": [
+        62,
+        39,
+        35
+      ]
+    }
+  ],
+  "accent": [
+    {
+      "id": "E01",
+      "label_zh": "雄性激情",
+      "hex": "#C62828",
+      "rgb": [
+        198,
+        40,
+        40
+      ],
+      "label_kind": "source_mood_label"
+    },
+    {
+      "id": "E02",
+      "label_zh": "荒诞狂欢",
+      "hex": "#FF8F00",
+      "rgb": [
+        255,
+        143,
+        0
+      ],
+      "label_kind": "source_mood_label"
+    },
+    {
+      "id": "E03",
+      "label_zh": "大地厚重",
+      "hex": "#5D4037",
+      "rgb": [
+        93,
+        64,
+        55
+      ],
+      "label_kind": "source_mood_label"
+    },
+    {
+      "id": "E04",
+      "label_zh": "阳光灿烂",
+      "hex": "#FFD54F",
+      "rgb": [
+        255,
+        213,
+        79
+      ],
+      "label_kind": "source_mood_label"
+    }
+  ]
+}

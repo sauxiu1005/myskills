@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="zh-CN" data-composition-variables='[
+  {"id":"talk","type":"string","label":"口播视频（工程内路径，如 assets/talk.mp4；留空显示占位提示）","default":"","group":"口播"},
+  {"id":"transparent","type":"boolean","label":"只导出包装层（隐藏口播视频，透明底）","default":false,"group":"口播"},
+  {"id":"videoFit","type":"enum","label":"视频填充","default":"cover","options":[{"value":"cover","label":"铺满（裁切）"},{"value":"contain","label":"完整（留边）"}],"group":"口播"},
+  {"id":"focusX","type":"number","label":"裁切焦点 X（%）","default":50,"min":0,"max":100,"step":1,"group":"口播"},
+  {"id":"focusY","type":"number","label":"裁切焦点 Y（%）","default":35,"min":0,"max":100,"step":1,"group":"口播"},
+  {"id":"backdrop","type":"color","label":"留边底色","default":"#14120f","group":"口播"},
+  {"id":"length","type":"number","label":"片长（秒，没有 om-cues 时用）","default":12,"min":1,"max":3600,"step":0.1,"group":"口播"},
+
+  {"id":"subjectX","type":"number","label":"人物中心 X（0–1，画面比例）","default":0.5,"min":0,"max":1,"step":0.01,"group":"避让"},
+  {"id":"subjectW","type":"number","label":"人物宽度（0–1）","default":0.36,"min":0,"max":1,"step":0.01,"group":"避让"},
+  {"id":"subjectTop","type":"number","label":"头顶 Y（0–1；竖屏头顶上方够空时，花字放在头顶上方）","default":0.12,"min":0,"max":1,"step":0.01,"group":"避让"},
+  {"id":"subjectBottom","type":"number","label":"脸的下沿 Y（0–1；否则花字放在脸下方）","default":0.36,"min":0,"max":1,"step":0.01,"group":"避让"},
+  {"id":"cardBottom","type":"number","label":"卡片底边 Y（0–1；0 = 自动：横屏 0.84，竖屏 0.74，下面留给字幕）","default":0,"min":0,"max":1,"step":0.01,"group":"避让"},
+  {"id":"side","type":"enum","label":"卡片放哪边（横屏）","default":"auto","options":[{"value":"auto","label":"自动避开人物"},{"value":"left","label":"左"},{"value":"right","label":"右"}],"group":"避让"},
+
+  {"id":"name","type":"string","label":"名牌 · 姓名（留空不出）","default":"林一","group":"名牌"},
+  {"id":"role","type":"string","label":"名牌 · 身份","default":"独立开发者 · 用 AI 写了 20 款产品","group":"名牌"},
+  {"id":"nameTag","type":"string","label":"名牌 · 小标","default":"主讲","group":"名牌"},
+  {"id":"nameCue","type":"string","label":"名牌 · 锚定词（说到它时出现）","default":"","group":"名牌"},
+  {"id":"nameAt","type":"number","label":"名牌 · 兜底时刻（秒）","default":0.6,"min":0,"max":3600,"step":0.1,"group":"名牌"},
+  {"id":"nameHold","type":"number","label":"名牌 · 停留（秒）","default":3.4,"min":0.5,"max":60,"step":0.1,"group":"名牌"},
+
+  {"id":"stats","type":"string","label":"数字卡（JSON：value/prefix/suffix/label/cue/at/hold）","default":"[{\"value\":20,\"suffix\":\"+\",\"label\":\"款产品，全部用 AI 写成\",\"cue\":\"二十\",\"at\":4.2}]","group":"数字卡"},
+  {"id":"statTint","type":"color","label":"数字卡底色","default":"#f6dccb","group":"数字卡"},
+
+  {"id":"keywords","type":"string","label":"花字（JSON：text/cue/at/hold）","default":"[{\"text\":\"一行代码没写\",\"cue\":\"代码\",\"at\":7.4}]","group":"花字"},
+  {"id":"highlight","type":"color","label":"花字底色","default":"#ffd24a","group":"花字"},
+
+  {"id":"chapter","type":"string","label":"章节标题（留空不出）","default":"先想清楚，再让 AI 写","group":"章节"},
+  {"id":"chapterNo","type":"string","label":"章节编号","default":"PART 01","group":"章节"},
+  {"id":"chapterCue","type":"string","label":"章节 · 锚定词","default":"","group":"章节"},
+  {"id":"chapterAt","type":"number","label":"章节 · 兜底时刻（秒）","default":9.6,"min":0,"max":3600,"step":0.1,"group":"章节"},
+  {"id":"chapterHold","type":"number","label":"章节 · 停留（秒）","default":2.4,"min":0.5,"max":60,"step":0.1,"group":"章节"},
+
+  {"id":"corner","type":"string","label":"角标（留空不出）","default":"AI 编程实录","group":"角标"},
+  {"id":"cornerPos","type":"enum","label":"角标位置","default":"auto","options":[{"value":"auto","label":"自动"},{"value":"tl","label":"左上"},{"value":"tr","label":"右上"}],"group":"角标"},
+  {"id":"cornerAt","type":"number","label":"角标出现（秒）","default":0.3,"min":0,"max":3600,"step":0.1,"group":"角标"},
+
+  {"id":"accent","type":"color","label":"强调色","default":"#d9653b","group":"配色"},
+  {"id":"ink","type":"color","label":"文字色","default":"#17140f","group":"配色"},
+  {"id":"card","type":"color","label":"名牌底色","default":"#ffffff","group":"配色"},
+
+  {"id":"lead","type":"number","label":"提前量（秒；动作在说到词时落定）","default":0.25,"min":0,"max":2,"step":0.05,"group":"节奏"},
+  {"id":"hold","type":"number","label":"数字卡/花字默认停留（秒）","default":2.8,"min":0.5,"max":30,"step":0.1,"group":"节奏"}
+]'>
+<head>
+<meta charset="utf-8">
+<title>huashu-motion · talking head</title>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/om.js"></script>
+<style id="om-fonts">
+@font-face { font-family: "Noto Sans SC"; src: url("assets/fonts/NotoSansSC-500.woff") format("woff"); font-weight: 500; font-style: normal; }
+@font-face { font-family: "Noto Sans SC"; src: url("assets/fonts/NotoSansSC-900.woff") format("woff"); font-weight: 900; font-style: normal; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-var.woff") format("woff"); font-weight: 100 900; font-style: normal; }
+</style>
+<style>
+  /* --u is one "design pixel": 1px at 1080p landscape, larger in portrait so type reads on a phone. */
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: var(--backdrop); }
+  #film { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--backdrop); color: var(--ink);
+    font-family: "Noto Sans SC", sans-serif; font-weight: 500; --u: 1px; }
+  /* Transparent export: nothing but the package layer is painted (ProRes 4444 keeps the alpha). */
+  html.om-transparent, html.om-transparent body, html.om-transparent #film { background: transparent; }
+
+  #talk { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: var(--videoFit);
+    object-position: calc(var(--focusX) * 1%) calc(var(--focusY) * 1%); }
+
+  .placeholder { position: absolute; inset: calc(48 * var(--u)); border: calc(3 * var(--u)) dashed #ffffff40; border-radius: calc(28 * var(--u));
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: calc(18 * var(--u)); color: #ffffffcc; text-align: center; }
+  .portrait .placeholder { justify-content: flex-start; padding-top: calc(170 * var(--u)); }   /* above the 花字 band */
+  .placeholder b { font-weight: 900; font-size: calc(56 * var(--u)); color: #fff; }
+  .placeholder code { font: 500 calc(26 * var(--u))/1.5 Inter, monospace; color: #ffffff99; }
+  .placeholder span { font-size: calc(26 * var(--u)); }
+
+  #pack { position: absolute; inset: 0; pointer-events: none; }
+  #pack > * { position: absolute; opacity: 0; }
+  .ln { display: block; overflow: hidden; padding: .04em 0 .16em; margin: -.04em 0 -.16em; }
+  .ln > .in { display: inline-block; }
+
+  /* Name plate: white card, big name, quiet role line. */
+  .np { display: flex; gap: calc(22 * var(--u)); background: var(--card); border-radius: calc(24 * var(--u));
+    padding: calc(24 * var(--u)) calc(40 * var(--u)) calc(26 * var(--u)) calc(26 * var(--u));
+    box-shadow: 0 calc(20 * var(--u)) calc(50 * var(--u)) #0a080640, 0 calc(2 * var(--u)) calc(6 * var(--u)) #0a08061f; }
+  .np .bar { width: calc(8 * var(--u)); border-radius: 99px; background: var(--accent); transform-origin: 50% 100%; }
+  .np .tag { font-size: calc(21 * var(--u)); letter-spacing: .2em; color: color-mix(in srgb, var(--accent) 75%, var(--ink)); line-height: 1.2; }
+  .np .nm { font-weight: 900; font-size: calc(68 * var(--u)); line-height: 1.06; letter-spacing: .02em; margin-top: calc(6 * var(--u)); white-space: nowrap; }
+  .np .rl { font-size: calc(28 * var(--u)); line-height: 1.32; color: color-mix(in srgb, var(--ink) 64%, transparent); margin-top: calc(10 * var(--u)); }
+
+  /* Number card: tinted card, label over a big count-up figure. */
+  .st { background: var(--statTint); border-radius: calc(24 * var(--u)); padding: calc(22 * var(--u)) calc(38 * var(--u)) calc(28 * var(--u));
+    box-shadow: 0 calc(20 * var(--u)) calc(50 * var(--u)) #0a080638; }
+  .st .num { font: 800 calc(132 * var(--u))/1 Inter, sans-serif; letter-spacing: -.035em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .st .num small { font-size: .5em; font-weight: 700; letter-spacing: 0; margin-left: .06em; vertical-align: .62em; }
+  .st .num .pre { font-size: .5em; font-weight: 700; margin-right: .06em; vertical-align: .62em; }
+  .st .lbl { font-size: calc(28 * var(--u)); line-height: 1.3; margin-top: calc(10 * var(--u)); }
+
+  /* Keyword 花字: highlighter block brushed in under heavy type, a little off-axis. */
+  .kw { transform-origin: 0 50%; display: flex; flex-direction: column; align-items: flex-start; gap: .1em; }
+  .kw .row { position: relative; }
+  .kw .blk { position: absolute; left: -.22em; right: -.22em; top: .2em; bottom: .02em; background: var(--highlight); border-radius: .08em; transform-origin: 0 50%; }
+  .kw .txt { position: relative; font-weight: 900; line-height: 1.16; letter-spacing: .02em; white-space: nowrap; color: var(--ink);
+    text-shadow: 0 .03em 0 #fffdf6, 0 -.03em 0 #fffdf6, .03em 0 0 #fffdf6, -.03em 0 0 #fffdf6; }
+  .kw .ch { display: inline-block; }
+
+  /* Chapter: dark card, numbered, readable over any footage. */
+  .cp { background: color-mix(in srgb, var(--ink) 90%, transparent); color: #fff; border-radius: calc(22 * var(--u)); outline: calc(1.5 * var(--u)) solid #ffffff26; outline-offset: calc(-1.5 * var(--u));
+    padding: calc(22 * var(--u)) calc(38 * var(--u)) calc(26 * var(--u)); box-shadow: 0 calc(20 * var(--u)) calc(50 * var(--u)) #00000040; }
+  .cp .no { font: 800 calc(22 * var(--u))/1 Inter, sans-serif; letter-spacing: .28em; color: var(--accent); }
+  .cp .rule { height: calc(4 * var(--u)); width: calc(96 * var(--u)); background: var(--accent); margin: calc(14 * var(--u)) 0 calc(16 * var(--u)); transform-origin: 0 50%; border-radius: 9px; }
+  .cp .tt { font-weight: 900; font-size: calc(60 * var(--u)); line-height: 1.12; white-space: nowrap; }
+
+  /* Corner badge: small pill with a live dot. */
+  .cn { display: flex; align-items: center; gap: calc(14 * var(--u)); background: #fffffff0; border-radius: 99px;
+    padding: calc(12 * var(--u)) calc(26 * var(--u)) calc(12 * var(--u)) calc(18 * var(--u)); font-size: calc(24 * var(--u)); letter-spacing: .06em;
+    box-shadow: 0 calc(10 * var(--u)) calc(28 * var(--u)) #0a080630; }
+  .cn i { width: calc(14 * var(--u)); height: calc(14 * var(--u)); border-radius: 50%; background: var(--accent); }
+</style>
+</head>
+<body>
+<!--
+  Talking-head package (口播包装). The picture is the `talk` variable (assets/talk.mp4), muted: the sound
+  is <audio id="om-voice">, which `om voice . --audio assets/talk.mp4` extracts from the same file. The package
+  layer — name plate, number cards, keyword 花字, chapter card, corner badge — sits on top.
+  Timing: each element lands on a spoken word from <script id="om-cues"> (om voice . --audio assets/talk.mp4);
+  without cues, or when the word is not found, the seconds variable is used.
+  Layout reads the root size, so the same file works at 1920x1080 and 1080x1920 (om fork --size).
+  Workflow and the transparent overlay export: skills/huashu-motion/references/talking-head.md
+-->
+<div id="film" data-composition-id="film" data-width="1920" data-height="1080">
+  <div class="placeholder" data-om-id="placeholder">
+    <b>口播视频放这里</b>
+    <code>cp 你的口播.mp4 assets/talk.mp4<br>om set talk=assets/talk.mp4 .<br>om voice . --audio assets/talk.mp4</code>
+    <span>声音和每个词的时间都从这段视频里来</span>
+  </div>
+  <video id="talk" class="clip" data-om-id="talk" data-var-src="talk" data-start="0" data-track-index="0" muted playsinline></video>
+
+  <div id="pack">
+    <div class="np" data-om-id="nameplate">
+      <div class="bar"></div>
+      <div>
+        <span class="ln tag"><span class="in" data-var-text="nameTag">主讲</span></span>
+        <span class="ln nm"><span class="in" data-var-text="name">林一</span></span>
+        <span class="ln rl"><span class="in" data-var-text="role">独立开发者 · 用 AI 写了 20 款产品</span></span>
+      </div>
+    </div>
+    <div class="cp" data-om-id="chapter">
+      <div class="no" data-var-text="chapterNo">PART 01</div>
+      <div class="rule"></div>
+      <span class="ln tt"><span class="in" data-var-text="chapter">先想清楚，再让 AI 写</span></span>
+    </div>
+    <div class="cn" data-om-id="corner"><i></i><span data-var-text="corner">AI 编程实录</span></div>
+  </div>
+</div>
+
+<script>
+  const V = OM.vars();
+  const film = document.getElementById('film');
+  const pack = document.getElementById('pack');
+  const $ = (s, root = document) => root.querySelector(s);
+  if (V.transparent) document.documentElement.classList.add('om-transparent');
+  // No talk yet: show how to add one. With a talk, the placeholder goes (and never shows in an overlay).
+  const hasTalk = !!String(V.talk || '').trim();
+  if (hasTalk || V.transparent) $('.placeholder').remove();
+  // The renderer paints video frames even when the element is hidden, so an overlay drops the element.
+  if (!hasTalk || V.transparent) $('#talk').remove();
+
+  // ---- size: the same file lays out for landscape and portrait ----------------------------------
+  const W = Number(film.dataset.width) || 1920, H = Number(film.dataset.height) || 1080;
+  const portrait = H > W;
+  const u = portrait ? (W / 1080) * 1.22 : H / 1080;          // phones get bigger type
+  film.style.setProperty('--u', u + 'px');
+  if (portrait) film.classList.add('portrait');
+
+  // ---- time: words from om-cues, seconds as the fallback ----------------------------------------
+  const words = OM.words();
+  const cuesNode = document.getElementById('om-cues');
+  const cueMeta = cuesNode ? JSON.parse(cuesNode.textContent) : null;
+  const LEN = cueMeta && cueMeta.duration ? (cueMeta.offset || 0) + cueMeta.duration : Number(V.length) || 12;
+  const norm = (s) => [...String(s).toLowerCase()].filter((c) => /[\p{L}\p{N}]/u.test(c));
+  const flat = [], owner = [];
+  words.forEach((w, i) => norm(w.word).forEach((c) => { flat.push(c); owner.push(i); }));
+  // Where a spoken phrase starts. OM.cue finds a term inside one word; the phrase search below also
+  // finds terms that the word splitter cut in two (付费|榜) and starts mid-word when the term does.
+  function phrase(term, nth = 1) {
+    const t = norm(term);
+    if (!t.length) return null;
+    let seen = 0;
+    for (let i = 0; i + t.length <= flat.length; i++) {
+      if (t.every((c, k) => flat[i + k] === c) && ++seen === nth) {
+        const w = words[owner[i]], first = owner.indexOf(owner[i]), n = norm(w.word).length;
+        return w.start + (w.end - w.start) * ((i - first) / n);
+      }
+    }
+    return null;
+  }
+  const anchors = (window.__omAnchors = []);
+  function when(id, cue, at, nth) {
+    let t = null;
+    if (cue && words.length) {
+      try { t = OM.cue(cue, nth); } catch { t = phrase(cue, nth); }
+    }
+    const fallback = Number(at) || 0;
+    anchors.push({ id, cue: cue || null, t: t != null ? t : fallback, from: t != null ? 'cue' : 'seconds' });
+    if (cue && words.length && t == null) console.warn(`talking-head: "${cue}" is not in om-cues — using ${fallback}s for ${id}`);
+    return t != null ? t : fallback;
+  }
+  const list = (json, what) => { try { const x = JSON.parse(json || '[]'); return Array.isArray(x) ? x : []; } catch { console.warn(`talking-head: ${what} is not valid JSON`); return []; } };
+
+  // ---- layout: keep the package off the speaker ------------------------------------------------
+  const mx = portrait ? 0.06 * W : 0.055 * W;                   // side margin
+  const uiRight = portrait ? 0.14 * W : 0;                       // phone apps keep icons on the right
+  const sx = Number(V.subjectX), sw = Number(V.subjectW);
+  const freeL = Math.max(0, sx - sw / 2), freeR = Math.max(0, 1 - (sx + sw / 2));
+  const cardSide = V.side === 'left' || V.side === 'right' ? V.side : freeL >= freeR - 0.01 ? 'left' : 'right';   // a tie goes lower-left
+  const other = cardSide === 'left' ? 'right' : 'left';
+  const kwSide = (other === 'left' ? freeL : freeR) >= 0.22 ? other : cardSide;
+  const sideRoom = (side) => Math.max(380 * u, (side === 'left' ? freeL : freeR) * W - mx - 24 * u);
+  const cardBottom = (1 - (Number(V.cardBottom) > 0 ? Number(V.cardBottom) : portrait ? 0.74 : 0.84)) * H;
+  // Portrait 花字: above the head when there is headroom under the status bar, else below the face.
+  const headTop = Number(V.subjectTop) * H, kwAbove = headTop - 0.12 * H >= 150 * u;
+  const kwPortrait = kwAbove ? { bottom: H - headTop + 12 * u } : { top: Math.max(Number(V.subjectBottom) * H + 40 * u, 0.26 * H) };
+  const SLOT = portrait
+    ? { card: { side: 'left', bottom: cardBottom, maxW: W - mx - uiRight },
+        kw: { center: true, ...kwPortrait, maxW: W - 2 * Math.max(mx, uiRight) } }
+    : { card: { side: cardSide, bottom: cardBottom, maxW: sideRoom(cardSide) },
+        kw: { side: kwSide, top: 0.2 * H, maxW: sideRoom(kwSide) },
+        chapter: { side: cardSide, top: 0.085 * H, maxW: sideRoom(cardSide) } };
+  const chapterSlot = portrait ? 'card' : kwSide === cardSide ? 'kw' : 'chapter';
+  function place(el, slot) {
+    const s = SLOT[slot];
+    el.style.maxWidth = s.maxW + 'px';
+    if (s.center) { el.style.left = '50%'; el.dataset.center = '1'; el.style.transformOrigin = '50% 50%'; }
+    else el.style[s.side] = mx + 'px';
+    if (s.bottom != null) el.style.bottom = s.bottom + 'px'; else el.style.top = s.top + 'px';
+    if (s.side === 'right') el.style.transformOrigin = '100% 100%';
+  }
+  // Estimated width in em (CJK ≈ 1, Latin ≈ 0.6) → font size that fits, no measuring needed.
+  const ems = (s) => [...String(s)].reduce((n, c) => n + (/[⺀-￿]/.test(c) ? 1 : c === ' ' ? 0.3 : 0.6), 0);
+  const fit = (text, base, maxW) => Math.min(base, maxW / Math.max(1, ems(text) * 1.04));
+  // Two lines of similar length, broken after punctuation or a space when one is near the middle.
+  function halves(text) {
+    const cs = [...text], mid = cs.length / 2;
+    let best = Math.round(mid);
+    for (let i = 1; i < cs.length; i++) if (/[\s，,、：:；;—→？?！!]/.test(cs[i - 1]) && Math.abs(i - mid) < Math.abs(best - mid) + 1.5) best = i;
+    return [cs.slice(0, best).join('').trim(), cs.slice(best).join('').trim()].filter(Boolean);
+  }
+  const esc = (s) => String(s).replace(/[<>&"]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' })[c]);
+
+  // ---- the moments -----------------------------------------------------------------------------
+  const lead = Number(V.lead) || 0, defHold = Number(V.hold) || 2.8;
+  const items = [];
+  if (String(V.name || '').trim()) {
+    const el = $('[data-om-id="nameplate"]');
+    $('.nm', el).style.fontSize = fit(V.name, 68 * u, SLOT.card.maxW - 110 * u) + 'px';
+    if (!String(V.nameTag || '').trim()) $('.tag', el).style.display = 'none';
+    items.push({ id: 'nameplate', el, slot: 'card', kind: 'card', t: when('nameplate', V.nameCue, V.nameAt), hold: Number(V.nameHold) || 3 });
+  }
+  list(V.stats, 'stats').forEach((s, i) => {
+    const el = document.createElement('div');
+    el.className = 'st';
+    el.dataset.omId = `stat-${i + 1}`;
+    const value = Number(s.value) || 0, decimals = (String(s.value).split('.')[1] || '').length;
+    el.innerHTML = `<div class="num">${s.prefix ? `<span class="pre">${esc(s.prefix)}</span>` : ''}<span class="v">0</span>${s.suffix ? `<small>${esc(s.suffix)}</small>` : ''}</div>`
+      + (s.label ? `<span class="ln lbl"><span class="in">${esc(s.label)}</span></span>` : '');
+    const digits = ems(String(value.toFixed(decimals)) + (s.prefix || '') + (s.suffix || '')) * 0.62;
+    $('.num', el).style.fontSize = Math.min(132 * u, (SLOT.card.maxW - 80 * u) / Math.max(1, digits)) + 'px';
+    pack.appendChild(el);
+    items.push({ id: el.dataset.omId, el, slot: 'card', kind: 'stat', value, decimals, t: when(el.dataset.omId, s.cue, s.at, s.nth), hold: Number(s.hold) || defHold });
+  });
+  list(V.keywords, 'keywords').forEach((k, i) => {
+    if (!String(k.text || '').trim()) return;
+    const el = document.createElement('div');
+    el.className = 'kw';
+    el.dataset.omId = `keyword-${i + 1}`;
+    // Big type first: a phrase that would shrink below ~70% breaks into two lines instead.
+    const base = (portrait ? 96 : 92) * u, room = SLOT.kw.maxW - 40 * u;
+    const rows = fit(k.text, base, room) >= 0.7 * base ? [String(k.text)] : halves(String(k.text));
+    el.innerHTML = rows.map((r) => `<div class="row"><div class="blk"></div><div class="txt">${[...r].map((c) => c === ' ' ? ' ' : `<span class="ch">${esc(c)}</span>`).join('')}</div></div>`).join('');
+    el.style.fontSize = Math.min(...rows.map((r) => fit(r, base, room))) + 'px';
+    if (!portrait && SLOT.kw.side === 'right') el.style.alignItems = 'flex-end';
+    if (portrait) el.style.alignItems = 'center';
+    pack.appendChild(el);
+    items.push({ id: el.dataset.omId, el, slot: 'kw', kind: 'kw', t: when(el.dataset.omId, k.cue, k.at, k.nth), hold: Number(k.hold) || defHold });
+  });
+  if (String(V.chapter || '').trim()) {
+    const el = $('[data-om-id="chapter"]');
+    $('.tt', el).style.fontSize = fit(V.chapter, 60 * u, (SLOT[chapterSlot].maxW) - 80 * u) + 'px';
+    items.push({ id: 'chapter', el, slot: chapterSlot, kind: 'chapter', t: when('chapter', V.chapterCue, V.chapterAt), hold: Number(V.chapterHold) || 2.4 });
+  }
+  for (const id of ['nameplate', 'chapter']) if (!items.some((x) => x.id === id)) $(`[data-om-id="${id}"]`).style.display = 'none';
+
+  // Moments that would start after the talk ends are dropped, so the film stays as long as the talk.
+  items.filter((x) => x.t - lead > LEN - 0.6).forEach((x) => { x.el.style.display = 'none'; console.warn(`talking-head: ${x.id} at ${x.t}s is past the end (${LEN}s)`); });
+  const live = items.filter((x) => x.t - lead <= LEN - 0.6);
+  // One thing per slot at a time: a card leaves when the next one in its slot arrives.
+  const bySlot = {};
+  live.forEach((x) => (bySlot[x.slot] = bySlot[x.slot] || []).push(x));
+  for (const group of Object.values(bySlot)) {
+    group.sort((a, b) => a.t - b.t);
+    group.forEach((x, i) => {
+      x.in = Math.max(0, x.t - lead);
+      const next = group[i + 1];
+      x.out = Math.min(x.t + x.hold, next ? next.t - lead - 0.1 : Infinity);
+      if (x.out < x.in + 0.9) x.out = x.in + 0.9;
+      place(x.el, x.slot);
+    });
+  }
+
+  // ---- motion: restrained entrances, quick clean exits ------------------------------------------
+  const tl = gsap.timeline({ paused: true, defaults: { ease: 'expo.out' } });
+  const centerX = (el) => (el.dataset.center ? -50 : 0);
+  function enter(x) {
+    const el = x.el, t = x.in, xp = centerX(el);
+    tl.addLabel(`scene:${x.id}`, t);
+    if (x.kind === 'kw') {
+      const rot = el.dataset.center ? -1.5 : x.slot === 'kw' && SLOT.kw.side === 'right' ? 1.5 : -2;
+      tl.fromTo(el, { opacity: 0, xPercent: xp, rotation: rot, scale: 0.94 }, { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(2)' }, t)
+        .fromTo(el.querySelectorAll('.blk'), { scaleX: 0 }, { scaleX: 1, duration: 0.45, stagger: 0.12 }, t + 0.04)
+        .fromTo(el.querySelectorAll('.ch'), { yPercent: 70, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.42, stagger: 0.035 }, t + 0.08);
+      return;
+    }
+    tl.fromTo(el, { opacity: 0, xPercent: xp, y: 26 * u, scale: 0.95 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.5)' }, t)
+      .fromTo(el.querySelectorAll('.ln > .in'), { yPercent: 105 }, { yPercent: 0, duration: 0.55, stagger: 0.07 }, t + 0.08);
+    if (x.kind === 'card') tl.fromTo($('.bar', el), { scaleY: 0 }, { scaleY: 1, duration: 0.5 }, t + 0.1);
+    if (x.kind === 'chapter') tl.fromTo($('.rule', el), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: 'expo.inOut' }, t + 0.12)
+      .fromTo($('.no', el), { opacity: 0, x: -12 * u }, { opacity: 1, x: 0, duration: 0.4 }, t + 0.1);
+    if (x.kind === 'stat') {
+      const num = $('.v', el), c = { v: 0 };
+      // the count lands on the spoken number
+      tl.fromTo(c, { v: 0 }, { v: x.value, duration: Math.max(0.5, x.t + 0.35 - t), ease: 'power3.out',
+        onUpdate: () => { num.textContent = c.v.toFixed(x.decimals); } }, t);
+    }
+  }
+  function leave(x) {
+    if (x.out >= LEN - 0.05) return;                            // still up when the film ends
+    tl.to(x.el, { opacity: 0, y: -10 * u, duration: 0.3, ease: 'power2.in' }, x.out - 0.3);
+  }
+  live.forEach((x) => { enter(x); leave(x); });
+
+  // Corner badge: on from cornerAt to the end.
+  const corner = $('[data-om-id="corner"]');
+  if (String(V.corner || '').trim()) {
+    const pos = V.cornerPos === 'tl' || V.cornerPos === 'tr' ? V.cornerPos : portrait ? 'tl' : (SLOT.chapter && SLOT.chapter.side === 'left' ? 'tr' : 'tl');
+    corner.style.top = (portrait ? 0.075 * H : 0.075 * H) + 'px';
+    corner.style[pos === 'tl' ? 'left' : 'right'] = mx + 'px';
+    tl.fromTo(corner, { opacity: 0, y: -12 * u }, { opacity: 1, y: 0, duration: 0.6 }, Number(V.cornerAt) || 0)
+      .fromTo($('i', corner), { scale: 0.6 }, { scale: 1, duration: 0.5, ease: 'back.out(3)' }, (Number(V.cornerAt) || 0) + 0.2);
+  } else corner.style.display = 'none';
+
+  tl.set({}, {}, LEN);                                            // the film is as long as the talk
+  window.__timelines['film'] = tl;
+</script>
+</body>
+</html>

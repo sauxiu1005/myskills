@@ -1,0 +1,37 @@
+display-name-zh: 可编辑产品动效宣传片
+version: 1.0.1
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Creative Generation
+complete-tags-cn:
+- 商业广告 / 创作生成
+summary-en: Build product information into a code-driven motion film through three direction frames, a beat storyboard and music, delivering an MP4, a standalone playable preview and editable source for launches and feature demos.
+summary-cn: 根据产品资料先出三个方向关键帧与节奏分镜，再用代码动画和配乐制作成片，交付视频、独立可播预览与可编辑源码。
+desc-en: For teams that need a product launch film, feature demo or data explainer whose every title, number and UI element stays editable. Provide product information, logo, screenshots or recordings, and optionally duration, aspect ratio, music or narration. The workflow checks local tools, locks the delivery spec, renders three genuinely different direction frames for you to choose, writes a treatment with a beat table and builds a representative segment for approval, then completes the full HTML / GSAP animation with local scoring, existing music or narration, exports the video and packages a single-file preview. You receive the MP4, a standalone playable preview, the editable source package and the treatment, and can refine any timecode or object later. It does not make live-action drama or prompt-only outputs.
+desc-cn: 面向需要产品发布片、功能演示或数据解释动画，并希望文字、数字和界面元素可随时修改的团队。用户提供产品介绍、Logo、截图或录屏，可补充时长、画幅与声音要求。流程先检查本机工具并锁定规格，渲染三个真正不同的方向关键帧供选择，写出含节拍表的创作方案并确认代表段，再用 HTML 与 GSAP 制作全片，对齐配乐或旁白，导出视频并打包单文件预览。交付成片、独立可播预览、可编辑源码包和创作方案，之后可按时间码局部修改。不用于真人剧情片，也不只输出视频提示词。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/0659c7c5-63f6-4999-9f2f-66aadaca825f.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/b85935fd-42ea-46fa-96c0-43e38015424f.mp4
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/5d13ee6d-79ea-4d6a-b5a7-b81dcd5e38cb.mp4
+structured-info:
+  zh-CN:
+    summary: 将产品资料制作成可编辑的动效宣传片与功能演示，经过方向关键帧、节奏分镜和代表段确认，交付成片、独立可播预览与源码。
+    best-for:
+    - 产品发布片
+    - UI 功能演示
+    - 数据解释动画
+    how-to-use: 提供产品介绍、Logo 与界面素材，说明时长、画幅和声音要求，先从三个方向中选择一个。
+    outputs: 宣传成片、独立可播放的动画预览、可点击打开的可编辑工程、源码包、创作方案与节拍表。
+  en-US:
+    summary: Turn product material into editable motion promos and feature demos through direction frames, a beat storyboard and segment approval, delivering the film, a standalone playable preview and source.
+    best-for:
+    - Product Launch Films
+    - UI Feature Demos
+    - Data Explainers
+    how-to-use: Provide product information, logo and UI assets with duration, aspect ratio and sound needs, then pick one of three directions.
+    outputs: Promo film, canvas-playable animation preview, a clickable editable project, source package, treatment and beat table.
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/0659c7c5-63f6-4999-9f2f-66aadaca825f.mp4

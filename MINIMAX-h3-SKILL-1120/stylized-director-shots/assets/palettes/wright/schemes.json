@@ -1,0 +1,181 @@
+{
+  "director_zh": "埃德加·赖特",
+  "director_en": "Edgar Wright",
+  "schemes": [
+    {
+      "id": "W1",
+      "name_zh": "日常动作原色强调",
+      "name_en": "Everyday action with primary accent",
+      "film": "热血警探 Hot Fuzz (2007) / 极盗车神 Baby Driver (2017) 日常段落的观感转译",
+      "fits": "日常程序动作、喜剧快剪、白天室内外的剧情",
+      "avoid": "夜景情绪或需要强烈色彩转变的剧情",
+      "light": "平实清晰的日光或室内光，让手部与物件细节可读",
+      "contrast": "中反差",
+      "roles": {
+        "background_main": {
+          "hex": [
+            "#B9B2A6",
+            "#8E877C"
+          ],
+          "desc": "生活化暖灰环境",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 55–65%"
+        },
+        "shadow": {
+          "hex": [
+            "#2B2A28"
+          ],
+          "desc": "中性深灰暗部",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 20–30%"
+        },
+        "light_highlight": {
+          "hex": [
+            "#F2EEE4"
+          ],
+          "desc": "干净日光高光",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 5–10%"
+        },
+        "accent_small": {
+          "hex": [
+            "#D62828",
+            "#F2C230",
+            "#1F5FBF"
+          ],
+          "desc": "三选一的原色强调，只给剧本中的关键物或一件服装，全片保持同一个",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 ≤5%"
+        },
+        "skin_protection": {
+          "hex": [],
+          "desc": "保留角色原本肤色，不受强调色影响",
+          "provenance": "manual_suggestion"
+        }
+      },
+      "notes": "Bill Pope 访谈未描述配色；本方案配色为人工设计建议。",
+      "sources": [
+        "https://en-gb.panavision.com/highlights/highlights-detail/bill-pope-on-the-cinematography-of-baby-driver"
+      ],
+      "stills": [],
+      "generation_card": "assets/palettes/wright/W1-card.png"
+    },
+    {
+      "id": "W2",
+      "name_zh": "Soho钠灯霓虹",
+      "name_en": "Soho sodium and neon",
+      "film": "Soho区惊魂夜 Last Night in Soho (2021) 1960s 段落",
+      "fits": "夜晚街道、回忆或幻想、情绪逐步升高的剧情",
+      "avoid": "白天日常或需要克制写实的剧情",
+      "light": "钠灯暖黄为主光，带少量绿与蓝；霓虹招牌给小面积红",
+      "contrast": "高反差，饱和度随情绪升高",
+      "roles": {
+        "background_main": {
+          "hex": [
+            "#120E14",
+            "#2A1F2E"
+          ],
+          "desc": "深夜暗紫黑街道",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 50–60%"
+        },
+        "shadow": {
+          "hex": [
+            "#050406"
+          ],
+          "desc": "近黑",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 20–30%"
+        },
+        "light_highlight": {
+          "hex": [
+            "#E89A2C",
+            "#3FA27A",
+            "#2F5FD0"
+          ],
+          "desc": "钠灯暖黄为主，绿、蓝只作少量混色",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 10–15%"
+        },
+        "accent_small": {
+          "hex": [
+            "#E0263A"
+          ],
+          "desc": "霓虹红招牌或灯，小面积",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 ≤5%"
+        },
+        "skin_protection": {
+          "hex": [],
+          "desc": "保留角色原本肤色；霓虹只染脸的一侧，另一侧肤色可读",
+          "provenance": "manual_suggestion"
+        }
+      },
+      "sources": [
+        "https://theasc.com/article/last-night-in-soho/"
+      ],
+      "stills": [],
+      "generation_card": "assets/palettes/wright/W2-card.png"
+    },
+    {
+      "id": "W3",
+      "name_zh": "Soho当代灰冷",
+      "name_en": "Soho present-day bleak gray",
+      "film": "Soho区惊魂夜 Last Night in Soho (2021) 当代段落",
+      "fits": "现实压抑、孤独、不友好的城市日常",
+      "avoid": "需要热闹或幻想色彩的剧情",
+      "light": "阴天平光，色温偏冷",
+      "contrast": "中低反差，低饱和",
+      "roles": {
+        "background_main": {
+          "hex": [
+            "#8D9196",
+            "#6E7378"
+          ],
+          "desc": "灰冷城市与室内",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 55–65%"
+        },
+        "shadow": {
+          "hex": [
+            "#2E3236"
+          ],
+          "desc": "冷深灰",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 25–30%"
+        },
+        "light_highlight": {
+          "hex": [
+            "#C9CDD1"
+          ],
+          "desc": "阴天灰白高光",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 5–10%"
+        },
+        "accent_small": {
+          "hex": [],
+          "desc": "默认不设强调色",
+          "provenance": "manual_suggestion"
+        },
+        "skin_protection": {
+          "hex": [],
+          "desc": "保留角色原本肤色，略冷但不发灰",
+          "provenance": "manual_suggestion"
+        }
+      },
+      "sources": [
+        "https://theasc.com/article/last-night-in-soho/"
+      ],
+      "stills": [],
+      "generation_card": "assets/palettes/wright/W3-card.png"
+    }
+  ],
+  "schema_note": "颜色按角色组织：背景主色、阴影、光源高光、小面积强调色、肤色保护。肤色保护不提供色值，含义是保留每个角色原本的肤色、只受光照影响，不把不同肤色统一成某个色值。面积为建议值，不是实测。方案之间互斥，一次只用一个。",
+  "provenance_legend": {
+    "user_real_palette_unverified": "用户资料 real_palettes 中的色值；用户 JSON 的 sources 字段为空，已按片名关联其 reference_sources.md（FilmGrab）；取色方法与样本未核实，不是官方 LUT 或全片像素统计。",
+    "user_design_suggestion": "用户提供色卡中的设计建议色值（含占比/对比度描述）；无实测定义，不是官方 LUT 或全片统计。",
+    "sampled_from_user_still": "本技能用代码对用户提供的单张截图做 6 色中位切分取样得到的近似色；只代表该帧，不代表全片。",
+    "manual_suggestion": "本技能根据作品观感与制作访谈文字人工转译的建议色值，不是从影片提取。"
+  },
+  "generation_negative": "不要把色卡上的色块、文字、编号或排版画进成片；色卡只控制影调、光色和色彩角色，不决定构图、机位、人物或场景；不复制任何电影角色、服装、道具或场景。"
+}

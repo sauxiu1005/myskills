@@ -1,0 +1,530 @@
+{
+ "schema": "retro-pixel-cues/1",
+ "title": "Compounding for the Young (EN 30 s)",
+ "language": "en",
+ "fps": 24,
+ "duration_frames": 720,
+ "timing_status": "measured",
+ "audio": {
+  "sample_rate": 48000,
+  "trim_start_samples": 0,
+  "offset_frames": 0,
+  "measured_by": "macOS say -v Samantha -r 175 per line, leading/trailing silence trimmed, sample counts measured; phrase onsets for e4/e6/e7 measured with silencedetect(n=-38dB,d=0.06); e1/e2/e3/e5 in-line onsets estimated by word position"
+ },
+ "canvas": {
+  "logical": [
+   640,
+   360
+  ],
+  "scale": 3,
+  "output": [
+   1920,
+   1080
+  ]
+ },
+ "cast": {
+  "lead": {
+   "name": "复利示例青年",
+   "kind": "legacy_zhou",
+   "note": "仅示例片使用；新主题必须换成按文案设计的角色"
+  }
+ },
+ "shots": [
+  {
+   "id": 1,
+   "start": 0,
+   "end": 90,
+   "view": "Rooftop at dawn"
+  },
+  {
+   "id": 2,
+   "start": 90,
+   "end": 185,
+   "view": "Snow slope, two tracks"
+  },
+  {
+   "id": 3,
+   "start": 185,
+   "end": 385,
+   "view": "Desk top-down, two jars"
+  },
+  {
+   "id": 4,
+   "start": 385,
+   "end": 469,
+   "view": "Zoom on the extra coin"
+  },
+  {
+   "id": 5,
+   "start": 469,
+   "end": 562,
+   "view": "Night desk, lamp light"
+  },
+  {
+   "id": 7,
+   "start": 562,
+   "end": 720,
+   "view": "Morning room, bookshelf & calendar"
+  }
+ ],
+ "events": [
+  {
+   "id": "s1-open",
+   "shot_id": 1,
+   "frame": 0,
+   "duration_frames": 8,
+   "semantic_trigger": "open",
+   "visual": "Dawn rooftop wide; Zhou sits on the ledge; unlit street lamps on the horizon",
+   "palette": {
+    "to": "黎明",
+    "transition_frames": 0
+   },
+   "music": {
+    "action": "start",
+    "style": "chiptune",
+    "bpm": 112,
+    "gain_db": -20
+   }
+  },
+  {
+   "id": "e1-vo",
+   "shot_id": 1,
+   "frame": 8,
+   "duration_frames": 60,
+   "semantic_trigger": "Your biggest advantage when you are young is time.",
+   "visual": "narration placed here; subtitle layer shows this line",
+   "narration": {
+    "file": "audio/vo_e1.wav",
+    "samples": 118198,
+    "gain_db": 0
+   },
+   "subtitle": {
+    "text": "Your biggest advantage when you are young is time."
+   }
+  },
+  {
+   "id": "s1-wallet",
+   "shot_id": 1,
+   "frame": 18,
+   "duration_frames": 22,
+   "semantic_trigger": "biggest advantage",
+   "visual": "Mid shot: wallet opens, a single coin drops into the palm",
+   "sfx": {
+    "name": "coin",
+    "gain_db": -12
+   }
+  },
+  {
+   "id": "s1-time",
+   "shot_id": 1,
+   "frame": 52,
+   "duration_frames": 38,
+   "semantic_trigger": "is time",
+   "visual": "Zhou raises an hourglass; first street lamp lights up",
+   "sfx": {
+    "name": "hourglass",
+    "gain_db": -10
+   },
+   "palette": {
+    "to": "黎明-路灯",
+    "transition_frames": 6,
+    "light": "lamp 1 mask"
+   }
+  },
+  {
+   "id": "s2-bricks",
+   "shot_id": 2,
+   "frame": 90,
+   "duration_frames": 20,
+   "semantic_trigger": "same amount",
+   "visual": "Top track: equal +10 bricks",
+   "sfx": {
+    "name": "bricks",
+    "gain_db": -14
+   }
+  },
+  {
+   "id": "e2-vo",
+   "shot_id": 2,
+   "frame": 96,
+   "duration_frames": 59,
+   "semantic_trigger": "Compounding means your gains start earning gains.",
+   "visual": "narration placed here; subtitle layer shows this line",
+   "narration": {
+    "file": "audio/vo_e2.wav",
+    "samples": 117380,
+    "gain_db": 0
+   },
+   "subtitle": {
+    "text": "Compounding means your gains start earning gains."
+   }
+  },
+  {
+   "id": "s2-snowball",
+   "shot_id": 2,
+   "frame": 110,
+   "duration_frames": 18,
+   "semantic_trigger": "Compounding",
+   "visual": "Bottom track: snowball rolls, layered core visible"
+  },
+  {
+   "id": "s2-wrap",
+   "shot_id": 2,
+   "frame": 128,
+   "duration_frames": 57,
+   "semantic_trigger": "gains earning gains",
+   "visual": "New snow layer wraps the whole ball incl. last round",
+   "sfx": {
+    "name": "snow",
+    "gain_db": -10
+   }
+  },
+  {
+   "id": "e3-vo",
+   "shot_id": 3,
+   "frame": 191,
+   "duration_frames": 75,
+   "semantic_trigger": "Imagine one hundred units growing ten percent per round:",
+   "visual": "narration placed here; subtitle layer shows this line",
+   "narration": {
+    "file": "audio/vo_e3.wav",
+    "samples": 149854,
+    "gain_db": 0
+   },
+   "subtitle": {
+    "text": "Imagine 100 units growing 10% per round:"
+   }
+  },
+  {
+   "id": "s3-card1",
+   "shot_id": 3,
+   "frame": 191,
+   "duration_frames": 8,
+   "semantic_trigger": "Imagine one hundred units",
+   "visual": "Card: Hypothetical example: 100 units; footer: Not a promised return"
+  },
+  {
+   "id": "s3-card2",
+   "shot_id": 3,
+   "frame": 225,
+   "duration_frames": 8,
+   "semantic_trigger": "ten percent per round",
+   "visual": "Card: +10% per round"
+  },
+  {
+   "id": "s3-card3",
+   "shot_id": 3,
+   "frame": 246,
+   "duration_frames": 8,
+   "semantic_trigger": "(card)",
+   "visual": "Card: No added contributions"
+  },
+  {
+   "id": "s3-simple",
+   "shot_id": 3,
+   "frame": 266,
+   "duration_frames": 6,
+   "semantic_trigger": "(left jar)",
+   "visual": "Left jar label Simple"
+  },
+  {
+   "id": "e4-vo",
+   "shot_id": 3,
+   "frame": 272,
+   "duration_frames": 91,
+   "semantic_trigger": "one hundred, one hundred ten, then one hundred twenty-one.",
+   "visual": "narration placed here; subtitle layer shows this line",
+   "narration": {
+    "file": "audio/vo_e4.wav",
+    "samples": 181046,
+    "gain_db": 0
+   },
+   "subtitle": {
+    "text": "100, 110, then 121."
+   }
+  },
+  {
+   "id": "s3-c100",
+   "shot_id": 3,
+   "frame": 272,
+   "duration_frames": 8,
+   "semantic_trigger": "one hundred",
+   "visual": "Right counter 100"
+  },
+  {
+   "id": "s3-compound",
+   "shot_id": 3,
+   "frame": 272,
+   "duration_frames": 8,
+   "semantic_trigger": "(right jar)",
+   "visual": "Right jar label Compound highlighted"
+  },
+  {
+   "id": "s3-s100",
+   "shot_id": 3,
+   "frame": 272,
+   "duration_frames": 8,
+   "semantic_trigger": "one hundred",
+   "visual": "Left counter 100"
+  },
+  {
+   "id": "s3-c110",
+   "shot_id": 3,
+   "frame": 294,
+   "duration_frames": 12,
+   "semantic_trigger": "one hundred ten",
+   "visual": "10 coins into the right jar: 110",
+   "sfx": {
+    "name": "coins-jar",
+    "gain_db": -12
+   }
+  },
+  {
+   "id": "s3-s110",
+   "shot_id": 3,
+   "frame": 294,
+   "duration_frames": 12,
+   "semantic_trigger": "one hundred ten",
+   "visual": "10 coins to the tray outside the left jar: 110",
+   "sfx": {
+    "name": "coins-tray",
+    "gain_db": -14
+   }
+  },
+  {
+   "id": "s3-c121",
+   "shot_id": 3,
+   "frame": 326,
+   "duration_frames": 59,
+   "semantic_trigger": "one hundred twenty-one",
+   "visual": "Right: 11 coins, the 11th glows; 121; Zhou's hand stops mid-air",
+   "sfx": {
+    "name": "coins-jar-glow",
+    "gain_db": -8
+   }
+  },
+  {
+   "id": "s3-s120",
+   "shot_id": 3,
+   "frame": 326,
+   "duration_frames": 12,
+   "semantic_trigger": "then",
+   "visual": "Left: 10 more to the tray: 120 (interest on 100 only)",
+   "sfx": {
+    "name": "coins-tray",
+    "gain_db": -14
+   }
+  },
+  {
+   "id": "e5-vo",
+   "shot_id": 4,
+   "frame": 391,
+   "duration_frames": 52,
+   "semantic_trigger": "That extra one comes from earlier gains.",
+   "visual": "narration placed here; subtitle layer shows this line",
+   "narration": {
+    "file": "audio/vo_e5.wav",
+    "samples": 103539,
+    "gain_db": 0
+   },
+   "subtitle": {
+    "text": "That extra 1 comes from earlier gains."
+   }
+  },
+  {
+   "id": "s4-zoom",
+   "shot_id": 4,
+   "frame": 391,
+   "duration_frames": 20,
+   "semantic_trigger": "That extra one",
+   "visual": "Zoom box opens from the glowing coin: The extra 1"
+  },
+  {
+   "id": "s4-interest",
+   "shot_id": 4,
+   "frame": 411,
+   "duration_frames": 58,
+   "semantic_trigger": "earlier gains",
+   "visual": "Each of round 1's 10 gain coins gives 10%, merging into the 1: 10 × 10% = 1",
+   "sfx": {
+    "name": "chimes",
+    "gain_db": -12
+   }
+  },
+  {
+   "id": "s5-lamp",
+   "shot_id": 5,
+   "frame": 469,
+   "duration_frames": 6,
+   "semantic_trigger": "lamp",
+   "visual": "Desk lamp on; local relight",
+   "palette": {
+    "to": "夜-台灯",
+    "transition_frames": 6,
+    "light": "lamp mask"
+   }
+  },
+  {
+   "id": "e6-vo",
+   "shot_id": 5,
+   "frame": 477,
+   "duration_frames": 65,
+   "semantic_trigger": "Learning works similarly, but not at a fixed rate.",
+   "visual": "narration placed here; subtitle layer shows this line",
+   "narration": {
+    "file": "audio/vo_e6.wav",
+    "samples": 129104,
+    "gain_db": 0
+   },
+   "subtitle": {
+    "text": "Learning works similarly, but not at a fixed rate."
+   }
+  },
+  {
+   "id": "s5-skill",
+   "shot_id": 5,
+   "frame": 477,
+   "duration_frames": 12,
+   "semantic_trigger": "Learning",
+   "visual": "Zhou plays a chord on the guitar"
+  },
+  {
+   "id": "s5-habit",
+   "shot_id": 5,
+   "frame": 489,
+   "duration_frames": 23,
+   "semantic_trigger": "works similarly",
+   "visual": "Wall calendar ticks day by day"
+  },
+  {
+   "id": "s5-analogy",
+   "shot_id": 5,
+   "frame": 512,
+   "duration_frames": 10,
+   "semantic_trigger": "but",
+   "visual": "Sticky note stamped Analogy",
+   "sfx": {
+    "name": "stamp",
+    "gain_db": -10
+   }
+  },
+  {
+   "id": "s5-curve",
+   "shot_id": 5,
+   "frame": 522,
+   "duration_frames": 40,
+   "semantic_trigger": "not at a fixed rate",
+   "visual": "Whiteboard: straight Fixed % line crossed out → stepped real curve with plateaus & dips"
+  },
+  {
+   "id": "s7-shelf",
+   "shot_id": 7,
+   "frame": 562,
+   "duration_frames": 12,
+   "semantic_trigger": "room",
+   "visual": "Morning room; guitar, laptop, sketchbook, sneakers on the shelf",
+   "palette": {
+    "to": "清晨",
+    "transition_frames": 0
+   }
+  },
+  {
+   "id": "e7-sub1",
+   "shot_id": 7,
+   "frame": 568,
+   "duration_frames": 26,
+   "semantic_trigger": "Pick one skill.",
+   "visual": "subtitle",
+   "subtitle": {
+    "text": "Pick one skill."
+   }
+  },
+  {
+   "id": "e7-vo",
+   "shot_id": 7,
+   "frame": 568,
+   "duration_frames": 106,
+   "semantic_trigger": "Pick one skill. Practice, review, and let each session build on the last.",
+   "visual": "narration placed here; subtitle layer shows this line",
+   "narration": {
+    "file": "audio/vo_e7.wav",
+    "samples": 211140,
+    "gain_db": 0
+   }
+  },
+  {
+   "id": "s7-pick",
+   "shot_id": 7,
+   "frame": 574,
+   "duration_frames": 20,
+   "semantic_trigger": "Pick one skill",
+   "visual": "Zhou takes only the guitar: Pick one",
+   "sfx": {
+    "name": "pick",
+    "gain_db": -12
+   }
+  },
+  {
+   "id": "e7-sub2",
+   "shot_id": 7,
+   "frame": 594,
+   "duration_frames": 80,
+   "semantic_trigger": "Practice, review...",
+   "visual": "subtitle",
+   "subtitle": {
+    "text": "Practice, review, and let each session build on the last."
+   }
+  },
+  {
+   "id": "s7-weekly",
+   "shot_id": 7,
+   "frame": 594,
+   "duration_frames": 20,
+   "semantic_trigger": "Practice",
+   "visual": "Calendar lights one square per week: 1× a week"
+  },
+  {
+   "id": "s7-review",
+   "shot_id": 7,
+   "frame": 614,
+   "duration_frames": 106,
+   "semantic_trigger": "review",
+   "visual": "Check mark; loop Practice → Review → Next",
+   "sfx": {
+    "name": "tick",
+    "gain_db": -10
+   }
+  },
+  {
+   "id": "music-end",
+   "shot_id": 7,
+   "frame": 672,
+   "duration_frames": 48,
+   "semantic_trigger": "ending",
+   "visual": "music resolves on the tonic and decays to silence",
+   "music": {
+    "action": "end",
+    "fade_frames": 48
+   }
+  },
+  {
+   "id": "s4-rounds",
+   "shot_id": 4,
+   "frame": 820,
+   "duration_frames": 40,
+   "semantic_trigger": "(unused)",
+   "visual": "not shown in this cut"
+  },
+  {
+   "id": "s4-gap",
+   "shot_id": 4,
+   "frame": 860,
+   "duration_frames": 20,
+   "semantic_trigger": "(unused)",
+   "visual": "not shown in this cut"
+  }
+ ],
+ "keyframe_events": ["s1-time", "s2-wrap", "s3-c121", "s4-interest", "s5-curve", "s7-review"],
+ "sync_report": [],
+ "note": "frame→sample: sample = frame × 2000. Shot ids reuse the scene modules of the 48.8 s Chinese cut (1,2,3,4,5,7). Palette keys are internal state names."
+}

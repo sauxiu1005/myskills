@@ -1,0 +1,17 @@
+Relight Image 1 with the lighting plan below.
+
+Image 1 is the content reference. Keep every subject, face, expression, pose, clothing, prop, printed text, material, structure, proportion, composition, framing and visual style unchanged, and change only the illumination.
+
+Lighting
+- Light 1: {{light1_desc}}
+- Light 2: {{light2_desc}}
+- Light 3: {{light3_desc}}
+
+Background
+{{background_desc}}
+
+Effects, atmosphere and texture
+{{effect_desc}}
+
+Additional user requirement (highest priority)
+{{user_intent_desc}}

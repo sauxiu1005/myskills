@@ -1,0 +1,9 @@
+{
+  "name": "phone-ui-demo-video-renderer",
+  "version": "1.3.1",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "puppeteer-core": "24.37.2"
+  }
+}

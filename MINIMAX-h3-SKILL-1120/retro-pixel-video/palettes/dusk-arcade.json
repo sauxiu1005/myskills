@@ -1,0 +1,161 @@
+{
+  "id": "dusk-arcade",
+  "name": "暮光街机",
+  "name_en": "Dusk Arcade",
+  "tier": "精致16-bit",
+  "use": "街机追逐、屋顶动作、黄昏城市",
+  "original": true,
+  "colors": [
+    {
+      "index": 0,
+      "hex": "#1a1023",
+      "role": "轮廓/最深暗部",
+      "ramp": "plum"
+    },
+    {
+      "index": 1,
+      "hex": "#3b1f4a",
+      "role": "阴影",
+      "ramp": "plum"
+    },
+    {
+      "index": 2,
+      "hex": "#6b2f63",
+      "role": "中间调",
+      "ramp": "plum"
+    },
+    {
+      "index": 3,
+      "hex": "#a8436b",
+      "role": "亮部",
+      "ramp": "warm"
+    },
+    {
+      "index": 4,
+      "hex": "#e0605a",
+      "role": "主色-珊瑚",
+      "ramp": "warm"
+    },
+    {
+      "index": 5,
+      "hex": "#f59a54",
+      "role": "橙光",
+      "ramp": "warm"
+    },
+    {
+      "index": 6,
+      "hex": "#ffd27a",
+      "role": "暖高光",
+      "ramp": "warm"
+    },
+    {
+      "index": 7,
+      "hex": "#fff4d6",
+      "role": "特效发光核心",
+      "ramp": "fx"
+    },
+    {
+      "index": 8,
+      "hex": "#24345c",
+      "role": "夜空暗",
+      "ramp": "sky"
+    },
+    {
+      "index": 9,
+      "hex": "#3f5f8f",
+      "role": "钢蓝",
+      "ramp": "sky"
+    },
+    {
+      "index": 10,
+      "hex": "#6fa3c7",
+      "role": "天空",
+      "ramp": "sky"
+    },
+    {
+      "index": 11,
+      "hex": "#b8e0e8",
+      "role": "冷高光",
+      "ramp": "sky"
+    },
+    {
+      "index": 12,
+      "hex": "#2e4a3a",
+      "role": "植物暗",
+      "ramp": "green"
+    },
+    {
+      "index": 13,
+      "hex": "#5f8a4c",
+      "role": "叶绿",
+      "ramp": "green"
+    },
+    {
+      "index": 14,
+      "hex": "#a3c26a",
+      "role": "青柠高光",
+      "ramp": "green"
+    },
+    {
+      "index": 15,
+      "hex": "#8a7a8c",
+      "role": "中性灰紫",
+      "ramp": "neutral"
+    }
+  ],
+  "ramps": {
+    "plum": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "warm": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "sky": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "green": [
+      12,
+      13,
+      14
+    ]
+  },
+  "cycle_ranges": [
+    {
+      "name": "霓虹招牌",
+      "indices": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "name": "天际线灯带",
+      "indices": [
+        9,
+        10,
+        11
+      ]
+    }
+  ],
+  "fx_colors": [
+    7,
+    6,
+    5
+  ],
+  "rules": {
+    "dither": "仅大面积渐变使用2×2有序抖色，运动物体不用",
+    "glow": "硬边核心+1px外圈，禁止全屏柔焦",
+    "8bit_subset": "切8-bit时每精灵取同一ramp的3色+透明"
+  }
+}

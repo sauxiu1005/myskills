@@ -1,0 +1,38 @@
+display-name-zh: 逐笔手绘讲解视频
+version: 1.0.1
+tag-en: Education
+tag-cn: 教育
+complete-tags-en:
+- Education / Creative Generation
+complete-tags-cn:
+- 教育 / 创作生成
+summary-en: From a topic, article, or script, it locks one continuous narration and renders a calm stroke-by-stroke hand-drawn explainer with Python and FFmpeg, delivering video, cover, captions, and script.
+summary-cn: 基于主题、文章或口播稿锁定整篇旁白，用 Python 与 FFmpeg 代码按平缓笔触逐笔渲染手绘讲解视频，交付成片、封面、字幕和口播稿。
+desc-en: For teachers and creators explaining knowledge, opinions or articles through stroke-by-stroke drawing. Supply a topic, article or script, then choose language, duration, framing, one of thirteen previewed styles, a pen or one of six realistic hand presets, and music. The workflow writes the narration and storyboard, prepares continuous speech with measured timestamps, creates illustrations and renders outlines followed by color with the bundled Python and FFmpeg pipeline. A representative segment is checked before full export. Deliver the film, cover, editable captions and script, preserving reusable narration and art during revisions. Required dependencies are checked before rendering; voice cloning and custom hand generation are outside scope.
+desc-cn: 面向把知识、观点或文章制作成逐笔手绘视频的教师与创作者。提供主题、文章或口播稿，选择语言、时长、画幅、十三种画风之一、画笔或六款真人质感手部，以及配乐方案。先写口播与分镜，准备带实测时间戳的连续旁白和插画，再用随包管线依次描线、上色，检查代表段后导出整片。交付成片、封面、可编辑字幕与脚本，修改时复用有效声音和图片。渲染前检查依赖，不提供声音克隆或自定义手部生成。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 用代码按旁白节奏平稳地逐笔画出手绘画面，把知识内容变成讲解短片。
+    best-for:
+    - 知识讲解
+    - 文章转视频
+    - 白板手绘
+    how-to-use: 提供主题、文章或口播稿，一次选好画风、手部等设置后直接制作。
+    outputs: 逐笔手绘讲解成片、封面、可编辑字幕及完整口播稿。
+  en-US:
+    summary: Code-render hand-drawn scenes in calm, steady strokes along the narration to turn knowledge into an explainer.
+    best-for:
+    - Knowledge explainers
+    - Article adaptations
+    - Whiteboard visuals
+    how-to-use: Provide a topic, article, or script; choose style, hand, and settings once, then production runs.
+    outputs: Stroke-by-stroke explainer film, cover image, editable captions and complete narration script.
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/c42a7e23-2216-4019-bf2a-444e19c392aa.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/c42a7e23-2216-4019-bf2a-444e19c392aa.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/fcbf3d33-8633-45cc-b89c-584b67517d15.mp4
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/9122217e-0d45-4cb4-b89c-afdeab9d632c.mp4
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/d75d4362-b5a2-4a0b-b2ee-94badfe8cac1.mp4

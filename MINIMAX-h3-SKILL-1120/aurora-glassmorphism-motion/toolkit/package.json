@@ -1,0 +1,15 @@
+{
+  "name": "aurora-glassmorphism-motion",
+  "private": true,
+  "description": "Code-rendered aurora / glassmorphism motion films (renderer, audio toolkit, reference demos). Derived from mg-styles-15 (MIT).",
+  "scripts": {
+    "render": "node harness/render.mjs"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/manrope": "^5.3.0",
+    "puppeteer-core": "25.12.0",
+    "simplex-noise": "4.0.3",
+    "three": "0.186.1"
+  }
+}

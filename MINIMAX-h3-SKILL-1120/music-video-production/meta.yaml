@@ -1,0 +1,32 @@
+display-name-zh: 完整MV制作
+version: 0.1.0
+tag-en: "Sound & Music / Full Production"
+tag-cn: "音频音乐 / 成片制作"
+complete-tags-en:
+  - "Sound & Music / Full Production"
+complete-tags-cn:
+  - "音频音乐 / 成片制作"
+summary-en: "Turn a song, lyrics and references into a complete multi-part music video timed to one master track, from direction to final cut"
+summary-cn: "把歌曲、歌词与参考做成以同一主音乐为时间轴的完整多段MV，从创意方向一路做到终剪成片"
+desc-en: "For creators who need a music video of any length, from a short clip to a full song. Takes a song or music brief, lyrics, performer and style references, then uses one master track as the timing authority, shapes a readable story or performance line, writes a shot-by-shot storyboard with smooth shot continuity, plans singing shots for lip sync, designs packaging with styled, animated lyric type, compiles H3 prompts per shot group, and stitches the final cut on continuous music. Includes story craft and spatial continuity knowledge, style and visual-mode references, and tested ffmpeg recipes for styled lyric subtitles, beat effects and transitions."
+desc-cn: "面向需要任意时长音乐视频（从短片到完整歌曲）的创作者，以歌曲或音乐需求、歌词、表演者与风格参考为输入，以唯一主音乐为时间权威，梳理能看懂的故事或表演线，写出镜头衔接顺畅的逐镜分镜，安排对口型的演唱镜头，设计有风格和动效的文字包装，按镜头组编译H3提示词并生成，最后以连续主音乐拼接终剪。附带剧作与空间连续性知识、风格与视觉模式参考，以及经过实测的风格化歌词字幕、卡拍特效和转场的ffmpeg做法。"
+author-en: "Official Design Team"
+author-cn: "官方设计团队"
+source: official
+structured-info:
+  zh-CN:
+    summary: 以同一首主音乐为时间权威，把歌曲、歌词和人物参考做成镜头衔接顺畅、包装丰富的多段音乐视频。
+    best-for:
+      - 完整MV
+      - 歌词视觉
+      - 剧情MV
+    how-to-use: 提供歌曲或音乐需求、歌词与人物或风格参考，说明想要的感觉和时长即可开始。
+    outputs: 歌曲与时间轴、故事节拍、角色卡、导演分镜、H3提示词与终剪成片。
+  en-US:
+    summary: Use one master track as the timing authority to turn a song, lyrics and character references into a smoothly cut multi-part music video with rich packaging.
+    best-for:
+      - Full MVs
+      - Lyric Visuals
+      - Story MVs
+    how-to-use: Provide a song or music brief, lyrics, and character or style references, then describe the feel and duration you want.
+    outputs: Song and timeline, story beats, character cards, director's storyboard, H3 prompts and the final cut.

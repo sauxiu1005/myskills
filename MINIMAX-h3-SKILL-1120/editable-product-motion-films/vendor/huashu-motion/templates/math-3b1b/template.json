@@ -1,0 +1,28 @@
+{
+  "title": "3Blue1Brown-style explainer (t1)",
+  "summary": "Black board, one idea on screen at a time: a title is written, an equation transforms into the next, a curve morphs, points are written and one gets boxed.",
+  "best_for": [
+    "how a mechanism turns into the next step",
+    "math, ML and algorithm explainers",
+    "formulas whose symbols match colours on screen"
+  ],
+  "aspect": "16:9",
+  "grammar": "t1_3b1b",
+  "copy": {
+    "templates/blank/vendor/gsap.min.js": "vendor/gsap.min.js",
+    "templates/blank/vendor/GSAP-LICENSE.txt": "vendor/GSAP-LICENSE.txt",
+    "templates/blank/vendor/GSAP-LICENSE.html": "vendor/GSAP-LICENSE.html",
+    "runtime/clip/clip.js": "vendor/clip/clip.js",
+    "runtime/clip/cues.js": "vendor/clip/cues.js",
+    "runtime/clip/lib": "vendor/clip/lib",
+    "runtime/clip/grammars": "vendor/clip/grammars",
+    "runtime/clip/LICENSE": "vendor/clip/LICENSE",
+    "runtime/clip/NOTICE.md": "vendor/clip/NOTICE.md",
+    "fonts/NotoSansSC-500.woff": "assets/fonts/NotoSansSC-500.woff",
+    "fonts/cmunrm.woff": "assets/fonts/cmunrm.woff",
+    "fonts/cmunti.woff": "assets/fonts/cmunti.woff",
+    "fonts/EBGaramond-400i.woff": "assets/fonts/EBGaramond-400i.woff",
+    "fonts/OFL.txt": "assets/fonts/OFL.txt",
+    "fonts/LICENSES.md": "assets/fonts/LICENSES.md"
+  }
+}

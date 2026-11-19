@@ -1,0 +1,26 @@
+{
+  "title": "Storytime character (y4)",
+  "summary": "A stick-bean character talks in a little room with speech bubbles, cuts to the computer screen for a punchline number, then a silent reaction close-up and a closing question mark.",
+  "best_for": [
+    "first-person stories and fails",
+    "a joke that needs a pause",
+    "I asked the AI and it... moments"
+  ],
+  "aspect": "16:9",
+  "grammar": "y4_storytime",
+  "copy": {
+    "templates/blank/vendor/gsap.min.js": "vendor/gsap.min.js",
+    "templates/blank/vendor/GSAP-LICENSE.txt": "vendor/GSAP-LICENSE.txt",
+    "templates/blank/vendor/GSAP-LICENSE.html": "vendor/GSAP-LICENSE.html",
+    "runtime/clip/clip.js": "vendor/clip/clip.js",
+    "runtime/clip/cues.js": "vendor/clip/cues.js",
+    "runtime/clip/lib": "vendor/clip/lib",
+    "runtime/clip/grammars": "vendor/clip/grammars",
+    "runtime/clip/LICENSE": "vendor/clip/LICENSE",
+    "runtime/clip/NOTICE.md": "vendor/clip/NOTICE.md",
+    "fonts/NotoSansSC-700.woff": "assets/fonts/NotoSansSC-700.woff",
+    "fonts/NotoSansSC-900.woff": "assets/fonts/NotoSansSC-900.woff",
+    "fonts/OFL.txt": "assets/fonts/OFL.txt",
+    "fonts/LICENSES.md": "assets/fonts/LICENSES.md"
+  }
+}

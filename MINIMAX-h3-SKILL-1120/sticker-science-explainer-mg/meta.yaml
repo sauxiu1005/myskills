@@ -1,0 +1,35 @@
+display-name-zh: 贴纸风科普 MG 短片
+display-name-en: Sticker Science Explainer MG
+version: 1.0.1
+tag-en: "Education"
+tag-cn: "教育"
+complete-tags-en:
+  - "Education / Creative Generation"
+complete-tags-cn:
+  - "教育 / 创作生成"
+summary-en: "Turns a topic into a sticker-style science explainer with outlined stickers, exact charts and maps in a fixed view or with camera moves, rendered from code with synthesized music, for knowledge shorts."
+summary-cn: "基于科普主题改写风格提示词，用代码渲染粗白描边贴纸、精确图表和地图，可选固定视角或运镜的贴纸风格短片并合成配乐，适用于知识区短片。"
+desc-en: "For creators who want a sticker-style knowledge explainer without AI video models. Provide a topic, key facts and numbers, the on-screen language and optional photos to stickerise. The workflow confirms aspect ratio, duration, audio and camera mode, adapts the style prompt's creative seed while keeping its signature features, and gets a timecoded beat sheet approved. A coding agent then builds a deterministic web animation with white-outlined stickers, exact charts, maps and a bold title card, synthesizes matching music with the bundled audio toolkit and renders frame by frame. Delivers an MP4 film, its source and a short production report. Best for short science, finance and product explainers; not for live action, long documentaries or AI-generated footage."
+desc-cn: "面向希望不用生视频模型、用代码做出贴纸风知识科普短片的创作者。用户提供主题、关键事实与数字、画面文字语言，可附要做成贴纸的照片。流程先确认画幅、时长、配乐和镜头方式，在保留风格特征的前提下改写提示词的创意种子，确认带时间码的节拍表，再由编码子 agent 搭建确定性网页动画，完成粗白描边贴纸、精确图表、地图和标题卡，合成配乐并逐帧渲染。最终交付 MP4 成片、源码与简短制作报告。适合短篇科学、财经和产品科普；不适合真人实拍、长纪录片或 AI 生成画面。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/05b986b9-7e48-4c3d-9913-9674079c8e13.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/05b986b9-7e48-4c3d-9913-9674079c8e13.mp4
+structured-info:
+  zh-CN:
+    summary: 把一个科普主题做成贴纸风科普短片，用贴纸拆解、精确图表和地图，以固定视角或运镜讲清一个数字背后的故事。
+    best-for:
+      - 知识区科普
+      - 财经拆解
+      - 产品科普
+    how-to-use: 提供科普主题和关键数字，可附产品照片与画面语言，先确认画幅、时长、镜头方式和节拍表。
+    outputs: 创意方案与节拍表、带配乐音效的 MP4 成片、可复现源码及制作报告。
+  en-US:
+    summary: Turn a science topic into a sticker-style explainer that tells the story behind one number with sticker breakdowns, exact charts and maps, in a fixed view or with camera moves.
+    best-for:
+      - Knowledge Explainers
+      - Finance Breakdowns
+      - Product Explainers
+    how-to-use: Provide a topic and key numbers, optionally product photos and the on-screen language, then confirm aspect ratio, duration, camera mode and the beat sheet.
+    outputs: A treatment with beat sheet, an MP4 film with music and sound effects, reproducible source and a production report.

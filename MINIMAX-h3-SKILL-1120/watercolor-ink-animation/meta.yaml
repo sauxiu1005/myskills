@@ -1,0 +1,37 @@
+display-name-zh: 水彩水墨动画
+version: 1.0.1
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+- Animation / Creative Generation
+complete-tags-cn:
+- 动画 / 创作生成
+summary-en: From a story idea or a song, write a storyboard, paint every frame in watercolour and ink with code, check it on contact sheets, and render a beat-synced MP4, sample first and full film on approval.
+summary-cn: 根据故事构想或歌曲编写分镜，用代码逐帧绘制水彩水墨画面并对拍审查，先出样片再渲染完整的水彩水墨动画成片。
+desc-en: For creators making watercolor-and-ink cartoons, music videos, lyric animations or seamless loops. Provide a story idea or lyrics, optionally adding music, an LRC timeline, characters or a visual direction. The workflow checks the soundtrack mood and measures its tempo, writes a complete storyboard with timed reading beats, and builds each shot as deterministic drawing code. It reviews contact sheets and frame sequences, renders a representative sample, and extends the approved sample into the full film. Deliver a 1080p MP4 with the selected music and an editable project. The medium supports character acting, match cuts and rhythmic motion in flat 2D; it uses no image or video generation models or real 3D camera work.
+desc-cn: 面向需要水彩水墨卡通、音乐短片、歌词动画或循环动图的创作者。提供故事或歌词，可附音乐、歌词时间轴、角色和风格方向。先检查配乐情绪与实测节拍，编写带理解节奏的完整分镜，再以确定性代码逐帧绘制，检查联系表和动作序列。先渲染代表样片，确认后扩展整片，交付带所选音乐的高清视频与可编辑工程。适合平面二维角色表演、匹配转场与卡点运动，不调用图像或视频生成模型，不制作真实三维运镜。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/71e724e4-60da-48be-bc1a-989420fc0e8b.mp4
+structured-info:
+  zh-CN:
+    summary: 把故事构想或歌曲变成代码逐帧绘制、卡点剪辑的水彩水墨动画成片。
+    best-for:
+    - 水彩水墨短片
+    - 歌词 MV
+    - 循环动图
+    how-to-use: 提供故事构想或歌词，可附歌曲和 LRC，先确认分镜和样片区间。
+    outputs: 分镜、带配乐的 1080p 样片与整片 MP4、可修改的动画工程。
+  en-US:
+    summary: Turn a story idea or a song into a beat-synced watercolor-ink animation drawn frame by frame in code.
+    best-for:
+    - Watercolor Ink Shorts
+    - Lyric Videos
+    - GIF Loops
+    how-to-use: Provide a story idea or lyrics, optionally with a song and LRC, then confirm the storyboard and sample stretch.
+    outputs: Storyboard, 1080p sample and full-film MP4s with music, and the editable animation project.
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/71e724e4-60da-48be-bc1a-989420fc0e8b.mp4
+showcase:
+- https://cdn.hailuoai.com/prod/2026-10-23-13/video/1792734994586473125-1792734994526.mp4
+- https://cdn.hailuoai.com/prod/2026-10-23-13/video/1792734997980950009-1792734997941.mp4

@@ -1,0 +1,34 @@
+display-name-zh: 液态字标动效
+version: 1.0.0
+tag-en: "Creative & Experimental"
+tag-cn: "创意实验"
+complete-tags-en:
+  - "Creative & Experimental / Creative Generation"
+complete-tags-cn:
+  - "创意实验 / 创作生成"
+summary-en: "Enter a brand name or title; drops fuse, stretch, snap and flood the frame, then grow into the wordmark one drop per letter, delivered as a 10-second liquid opener with camera moves and synced sound."
+summary-cn: "输入品牌名或主标题，经液滴融合、拉丝断裂与浸没转场，让液体一滴一字聚成字标，配合运镜与音效输出十秒液态片头。"
+desc-en: "For creators who need a liquid brand opener, product promo or transition package, this Skill turns one brand name or title into a ten-second liquid logo film. The user only provides the wordmark text and chooses whether to add a subtitle and in which language. It confirms the wordmark, then designs on one beat grid: drops landing with splash, fusion with snapping necks, an immersive wave transition and letters grown one drop each, plus a macro-open, follow, punch and slow-push camera and pitched, in-key hit sounds. Key frames are checked, the film is rendered and verified against spec. It delivers the video, a short report and independent review notes. Best for short brand names or single words; not for long copy, multi-shot stories or live action."
+desc-cn: "面向需要液态品牌片头、产品宣传或转场包装的创作者，把一个品牌名或主标题做成十秒液态字标短片。用户只需提供字标文字，并选择是否添加副标及其语言。制作时先确认字标，再按统一节拍表设计液滴落地飞溅、融合拉丝断裂、浸没式液浪转场和一滴长成一个字母的聚合，配合微距开场、跟随拉开、重击冲击与结尾慢推的镜头，以及调内落点音效；再检查关键帧、渲染并核对规格。交付视频、简短报告和独立评审建议。最适合短品牌名或单词字标，不适合长文案、多镜头剧情或真人实拍。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/fb854b3e-fcb1-406a-989b-cf172f28a0b5.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/fb854b3e-fcb1-406a-989b-cf172f28a0b5.mp4
+structured-info:
+  zh-CN:
+    summary: 将品牌名或主标题转化为液滴融合、浸没转场后一滴一字聚成的液态字标片头，并输出成片。
+    best-for:
+      - 液态品牌片头
+      - 产品宣传字标
+      - 转场包装
+    how-to-use: 输入品牌名或主标题，选择是否添加副标及其语言后开始制作。
+    outputs: 十秒液态字标视频、含节拍表与实测指标的简短报告及独立评审建议。
+  en-US:
+    summary: Turn a brand name or title into a liquid logo opener where drops fuse, flood the frame and grow into the wordmark one drop per letter.
+    best-for:
+      - Liquid Brand Openers
+      - Product Promo Wordmarks
+      - Transition Packages
+    how-to-use: Enter the brand name or title, then choose whether to add a subtitle and its language.
+    outputs: A 10-second liquid logo video, a short report with beat sheet and measurements, and independent review notes.

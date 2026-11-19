@@ -1,0 +1,15 @@
+{
+  "id": "neon-sunset",
+  "name_cn": "霓虹落日",
+  "use": "默认；经典 synthwave，片头、MV、品牌 ident",
+  "sky": ["#05030F", "#140A33", "#2D0F55", "#5A1A6E"],
+  "sun": ["#FFE36B", "#FFB03A", "#FF6A3D", "#FF2E7E"],
+  "neon_primary": "#FF2BD6",
+  "neon_secondary": "#22E4FF",
+  "grid": "#FF2BD6",
+  "horizon_hot": "#FFD1F4",
+  "mountain_wire": ["#FF2BD6", "#22E4FF"],
+  "chrome": ["#FFFFFF", "#C9D6FF", "#5B6BB0", "#1A1440", "#FF9ED8"],
+  "shadow": "#07020F",
+  "text_main": "#F4F0FF"
+}

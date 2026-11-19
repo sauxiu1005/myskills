@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 2,
+  "status": "Screenshots removed in 0.2.13 by user request; text-only provenance",
+  "bundledImageCount": 0,
+  "references": [
+    {
+      "reviewId": "W1",
+      "director": "王家卫",
+      "film": "重庆森林",
+      "title": "黄衣与绿反射",
+      "status": "image removed; historical text index only"
+    },
+    {
+      "reviewId": "W3",
+      "director": "王家卫",
+      "film": "花样年华",
+      "title": "红棕餐厅与浅绿桌面",
+      "status": "image removed; historical text index only"
+    },
+    {
+      "reviewId": "W4",
+      "director": "王家卫",
+      "film": "花样年华",
+      "title": "青绿办公室与玻璃遮挡",
+      "status": "image removed; historical text index only"
+    },
+    {
+      "reviewId": "W5",
+      "director": "王家卫",
+      "film": "重庆森林",
+      "title": "灰蓝人物与暖黄市集",
+      "status": "image removed; historical text index only"
+    },
+    {
+      "reviewId": "W6",
+      "director": "王家卫",
+      "film": "重庆森林",
+      "title": "暖黄电话角与粉红隔板",
+      "status": "image removed; historical text index only"
+    },
+    {
+      "reviewId": "Z1",
+      "director": "张艺谋",
+      "film": "英雄",
+      "title": "蓝水与红叶",
+      "status": "image removed; historical text index only"
+    },
+    {
+      "reviewId": "Z2",
+      "director": "张艺谋",
+      "film": "英雄",
+      "title": "金黄树林与红衣",
+      "status": "image removed; historical text index only"
+    },
+    {
+      "reviewId": "Z3",
+      "director": "张艺谋",
+      "film": "英雄",
+      "title": "青绿纱幔空间",
+      "status": "image removed; historical text index only"
+    },
+    {
+      "reviewId": "J1",
+      "director": "贾樟柯",
+      "film": "山河故人",
+      "title": "冷街巷中的红色生活物件",
+      "status": "image removed; historical text index only"
+    },
+    {
+      "reviewId": "J2",
+      "director": "贾樟柯",
+      "film": "山河故人",
+      "title": "冷暗环境里的局部火光",
+      "status": "image removed; historical text index only"
+    },
+    {
+      "reviewId": "J3",
+      "director": "贾樟柯",
+      "film": "山河故人",
+      "title": "浅草场与米黄车",
+      "status": "image removed; historical text index only"
+    }
+  ]
+}

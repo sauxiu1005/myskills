@@ -1,0 +1,20 @@
+{
+  "meta": {"brand": "FLOWPAY 记账"},
+  "format": {"aspect": "16:9", "fps": 60, "bpm": 124, "duration": 15},
+  "style": "swiss",
+  "palette": {"preset": "mono", "dark": "#101418", "light": "#F3F1EA", "a1": "#FF6B3D", "a2": "#B9F542", "a3": "#4B5BFF"},
+  "carrier": "a3",
+  "hud": {"mode": "reel", "label": "FLOWPAY / 个人财务"},
+  "audio": {"mode": "synth", "mood": "bright"},
+  "scenes": [
+    {"type": "ball_drop",    "beats": 4, "bg": "dark",  "name": "开账", "caption": "每一笔 都有去处"},
+    {"type": "beat_word",    "beats": 4, "name": "主张", "words": ["看得见", "管得住"], "bgs": ["a3", "a2"], "line": "a2"},
+    {"type": "fluid_blob",   "beats": 4, "bg": "light", "name": "流动", "word": "现金流", "label": "收入 / 支出 自动归类", "colors": ["a3", "a1", "a2"]},
+    {"type": "ui_cards",     "beats": 6, "bg": "light", "name": "看板",
+     "growth": {"label": "本月结余（示意）", "from": "+12%", "to": "+36%"}, "ring": {"label": "预算", "from": "20%", "to": "68%"},
+     "controls_label": "自动记账", "cta": "开始 ▶", "bars_label": "每周支出", "gauge": {"label": "储蓄进度", "value": 0.6}},
+    {"type": "text_ring",    "beats": 4, "bg": "dark",  "name": "全场景", "words": ["餐饮", "出行", "订阅", "储蓄"], "label": "FLOWPAY"},
+    {"type": "arc_lockup",   "beats": 9, "bg": "dark", "name": "FlowPay", "transition": "scan_glitch", "title": "FlowPay",
+     "lines": ["让钱流向你在意的地方", "flowpay.app · 2026"]}
+  ]
+}

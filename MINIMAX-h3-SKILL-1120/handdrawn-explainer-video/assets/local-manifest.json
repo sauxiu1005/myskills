@@ -1,0 +1,109 @@
+{
+ "purpose": "Package-owned media that is bundled locally and not hosted; validated by size and SHA-256",
+ "files": {
+  "assets/custom-styles/anchors/01-minimal-stickman.jpg": {
+   "bytes": 279060,
+   "sha256": "a2e1a08512dac9bb2d7671ca04ac8a78ad819348f18ba74b12d63922d8d748aa"
+  },
+  "assets/style-previews/01-minimal-stickman.jpg": {
+   "bytes": 73252,
+   "sha256": "1ad1b606fff39ead4b976bc72172fbb02ca25257ee75232f7ca0d9f353a8f058"
+  },
+  "assets/custom-styles/anchors/02-black-bean-doodle.jpg": {
+   "bytes": 378985,
+   "sha256": "a704ede2364151c85d2cb0f6fcfc2f2be30bd724bdc12ec45217bed437440478"
+  },
+  "assets/style-previews/02-black-bean-doodle.jpg": {
+   "bytes": 79812,
+   "sha256": "85dfb4ac9c078038d57093fc02a72e53ac31b48f5804405860c5738fcdc7def6"
+  },
+  "assets/custom-styles/anchors/03-warm-pastel-storybook.jpg": {
+   "bytes": 670946,
+   "sha256": "d01fc95e8332718163e6c59faf01da9fd234da518441ceb275151d5049061059"
+  },
+  "assets/style-previews/03-warm-pastel-storybook.jpg": {
+   "bytes": 106841,
+   "sha256": "d58b7214b66002255e9007a5340ec952812485c610396653db213a4357cb470d"
+  },
+  "assets/custom-styles/anchors/04-ink-wash-bird-bamboo.jpg": {
+   "bytes": 389930,
+   "sha256": "c28b903c153574643da993608f172eb6ee435245ff208c65d668499d95432d7a"
+  },
+  "assets/style-previews/04-ink-wash-bird-bamboo.jpg": {
+   "bytes": 89288,
+   "sha256": "8272ca12ef5cb31b543ecfe4250b0e257783f5030f32a808aff4e49319adf8c1"
+  },
+  "assets/custom-styles/anchors/05-retro-animation-character.jpg": {
+   "bytes": 563462,
+   "sha256": "3b710a630b0ddca50119739c5fe9137f95d285dada7902fe8868089647c1e9e5"
+  },
+  "assets/style-previews/05-retro-animation-character.jpg": {
+   "bytes": 94151,
+   "sha256": "c47132173d45bfe9d609e02b11e81645799317bb085a7af0f2034a01e0ef5682"
+  },
+  "assets/custom-styles/anchors/06-crayon-kid-doodle.jpg": {
+   "bytes": 794879,
+   "sha256": "adef69e0484772dd27d11bd87d6cc4aee38d0cccf56088cb80feca4f39fb72af"
+  },
+  "assets/style-previews/06-crayon-kid-doodle.jpg": {
+   "bytes": 133813,
+   "sha256": "3e1b87285e6efeed088a4605c8f6b7c846409fdc0dfcf571ed8b0ab54b8f91d1"
+  },
+  "assets/custom-styles/anchors/07-retro-cozy-picturebook.jpg": {
+   "bytes": 273063,
+   "sha256": "80eacc5eacfbd1080b0bfdce0ee76b0bbf2f9199d12b5d3f3cd986ccfafd70ed"
+  },
+  "assets/style-previews/07-retro-cozy-picturebook.jpg": {
+   "bytes": 27424,
+   "sha256": "afeca7b0747017079e0399b1719e260614ae975116b74eba42ada708d9d17652"
+  },
+  "assets/custom-styles/anchors/08-retro-warm-picturebook.jpg": {
+   "bytes": 289397,
+   "sha256": "b44ec3e8417ec0ba452898d96da315b3af93f8fea4a1b78ac8f6ba60c8680b1f"
+  },
+  "assets/style-previews/08-retro-warm-picturebook.jpg": {
+   "bytes": 47165,
+   "sha256": "548e1ffd7d9145579f071dc6c31613f349584df2eaa9f1ab232d2891a7e2106d"
+  },
+  "assets/custom-styles/anchors/09-oil-pastel-kids.jpg": {
+   "bytes": 678896,
+   "sha256": "6ac6ff0c52fff71bb63e23d220f5289b93cb1e5cfdf0ff3fbd6229d0e7c3e454"
+  },
+  "assets/style-previews/09-oil-pastel-kids.jpg": {
+   "bytes": 131820,
+   "sha256": "46767f2d52cc6bb2838e1998c706bdb2e5ef8d4da43aac8f4ab68be721f4710b"
+  },
+  "assets/custom-styles/anchors/10-american-cartoon-ink.jpg": {
+   "bytes": 463263,
+   "sha256": "6a95e8d7292f80412e77a32c83e5feb45e944c5f95158005241b326329031069"
+  },
+  "assets/style-previews/10-american-cartoon-ink.jpg": {
+   "bytes": 71691,
+   "sha256": "39768351e04b1e42c45a2ced8d755eb43310e11bd939fb7f25974460e5864f99"
+  },
+  "assets/custom-styles/anchors/11-hardboiled-ink-comic.jpg": {
+   "bytes": 313731,
+   "sha256": "fce32fb9fe0cc35b4bb2dd401d0aab8ac156ea61a43b07d77a9eef104b4b6be2"
+  },
+  "assets/style-previews/11-hardboiled-ink-comic.jpg": {
+   "bytes": 52349,
+   "sha256": "4b4844d0cfe9531baacbbebadec2fe7fac7da13c97220c6821812573e079c96c"
+  },
+  "assets/custom-styles/anchors/12-industrial-marker-sketch.jpg": {
+   "bytes": 439097,
+   "sha256": "1c3c5a2cc305bb27563e75df3d5064ac3e547de94763142824cbb9ec08f70f0d"
+  },
+  "assets/style-previews/12-industrial-marker-sketch.jpg": {
+   "bytes": 60865,
+   "sha256": "c2cf639dd2d05097ec7dd449c23ef1ab041afe22ee68a26dc0987cf689e5032c"
+  },
+  "assets/custom-styles/anchors/13-anime-cel-portrait.jpg": {
+   "bytes": 318128,
+   "sha256": "149935082eb8d42bbb83de916e127ec800cbdb141a0b190f61a02e6f2dc7a887"
+  },
+  "assets/style-previews/13-anime-cel-portrait.jpg": {
+   "bytes": 40748,
+   "sha256": "85b4413ca9cd01b8392fa9b829379e98ec5a219b9ddf010772c99fee6aa2230e"
+  }
+ }
+}

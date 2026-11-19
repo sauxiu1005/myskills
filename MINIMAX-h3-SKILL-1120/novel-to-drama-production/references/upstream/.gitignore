@@ -1,0 +1,37 @@
+.DS_Store
+node_modules/
+*.log
+
+# skill 的运行产物（用户在自己的输出目录里生成的）
+/report.html
+/*-cast.json
+/*-cast.md
+/images/
+/outline-report.html
+/*-outline.json
+/*-outline.md
+/art-report.html
+/*-art.json
+/*-art.md
+/script-report.html
+/*-script.json
+/*-script.md
+/storyboard-report.html
+/*-storyboard.json
+/*-storyboard.md
+/staging-report.html
+/staging.json
+/staging.md
+/*-staging.json
+/*-staging.md
+
+# 注意：skills/*/examples/ 下的样例必须提交——它们同时是自测夹具。
+# 上面几条都用 / 开头限定在仓库根，不会误伤 examples。
+
+.playwright-mcp/
+
+# 门失败累积日志（用户在自己的输出目录里生成的）
+.gates.jsonl
+
+# 各 skill 的本机配置（character-refs 的出图模型选择等），每台机器不同
+skills/*/config.local.json

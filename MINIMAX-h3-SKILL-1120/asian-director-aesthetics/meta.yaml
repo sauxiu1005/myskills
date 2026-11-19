@@ -1,0 +1,36 @@
+display-name-zh: 亚洲导演风格美学
+version: 1.0.0
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Creative Generation
+complete-tags-cn:
+- 专业影视 / 创作生成
+summary-en: Create images and finished videos in the styles of Asian directors from original characters, settings and ideas, covering 28 directors’ color, lighting, composition and camera language, with visual concepts, storyboards and prompt design.
+summary-cn: 基于原创人物、场景与创意，制作亚洲导演风格的图像与视频成片，覆盖28位导演的色彩、光影、构图与镜头语言，提供视觉方案、分镜及提示词设计。
+desc-en: For creators making director-styled images or videos from original characters, settings and ideas. Provide content details or reference materials, name a director and a specific film, or first compare different styles for the same scene. Covering 28 renowned Asian directors, the Skill translates color, lighting, composition, character styling and camera language into visual plans, palette designs, storyboards and prompts, delivering images or finished videos on request. References can separately constrain character identity, scene layout, color and light. Video production includes key-visual approval when needed, followed by review of action, camera movement and sound plans. Preserve original content rather than copying film scenes or reducing a director’s style to a filter.
+desc-cn: 面向希望将原创人物、场景与创意制作成导演风格化图像或视频的创作者。提供内容设定或参考素材，指定导演与具体作品，或先比较同一场景的不同风格。技能覆盖28位知名亚洲导演，将色彩、光影、构图、人物造型与镜头语言落实为视觉方案、配色设计、分镜和提示词，并按需交付图像或视频成片。参考素材可分别约束人物身份、场景布局与色光；视频制作按需确认主视觉，再审阅动作、运镜与声音方案。保留原创内容，不照搬原片，不将导演风格简化为滤镜。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 为原创场景选择合适的导演作品分支，形成视觉方案与提示词，并按需制作图像及视频成片。
+    best-for:
+    - 视觉开发
+    - 风格比较
+    - 分镜设计
+    how-to-use: 提供主体、场景与参考素材，说明交付类型，可指定导演作品、画幅和时长。
+    outputs: 视觉方案、导演色卡、分镜及提示词，按需交付图像与视频成片。
+  en-US:
+    summary: Select a director's work-specific branch for an original scene, develop visual plans and prompts, and create images and finished videos on request.
+    best-for:
+    - Live-Action and Animation Development
+    - Same-Scene Director Comparisons
+    - Palette and Storyboard Design
+    how-to-use: Provide a subject, scene, or references and state the deliverable; optionally specify director, work, medium, aspect ratio, and duration. Reuse suitable approved assets.
+    outputs: Director and work-branch notes, visual plans, palettes, shot tables, image or video prompts, and images and finished videos produced on request.
+cover: https://cdn.hailuoai.com/pre/2026-11-11-22/video/1794408464402941099-1794408464374.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-11-22/video/1794408464402941099-1794408464374.mp4
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-11-22/video/1794408463040483955-1794408463016.mp4

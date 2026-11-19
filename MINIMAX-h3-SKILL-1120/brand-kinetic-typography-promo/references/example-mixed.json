@@ -1,0 +1,21 @@
+{
+  "meta": {"brand": "PULSE 智能手表"},
+  "format": {"aspect": "16:9", "fps": 60, "bpm": 128, "duration": 15},
+  "style": "swiss",
+  "palette": {"preset": "mono", "dark": "#0E1116", "light": "#F2F1EC", "a1": "#FF3B5C", "a2": "#7AE7C7", "a3": "#2B59FF"},
+  "carrier": "a1",
+  "hud": {"mode": "chapter", "label": "PULSE / 健康监测"},
+  "audio": {"mode": "synth", "mood": "cool"},
+  "scenes": [
+    {"type": "ball_drop",     "beats": 4, "bg": "dark",  "name": "心跳", "caption": "每一次心跳 都被听见"},
+    {"type": "snap_type",     "beats": 4, "bg": "light", "name": "主张", "lines": ["读懂", "你的身体"], "kicker": "PULSE · 2026"},
+    {"type": "particle_word", "beats": 4, "bg": "dark",  "name": "心率", "word": "心率", "label": "24h 连续监测", "from": "a1", "to": "a2"},
+    {"type": "grid_ripple",   "beats": 4, "bg": "dark",  "name": "睡眠", "word": "睡眠分期", "label": "REM / 深睡 / 浅睡"},
+    {"type": "data_dash",     "beats": 4, "bg": "light", "name": "数据", "title": "本周健康报告（示意）",
+     "stats": [{"value": "62", "label": "静息心率 bpm"}, {"value": "7.5h", "label": "平均睡眠"}, {"value": "98%", "label": "血氧"}],
+     "ring": "86%", "tags": ["心率", "睡眠", "血氧"]},
+    {"type": "point_ring",    "beats": 4, "bg": "dark",  "name": "专注", "word": "专注", "label": "压力指数实时提醒"},
+    {"type": "text_ring",     "beats": 4, "bg": "light", "name": "全天", "words": ["心率", "睡眠", "血氧", "压力"], "label": "PULSE"},
+    {"type": "decode_lockup", "beats": 4, "bg": "dark",  "name": "收尾", "title": "Pulse", "subtitle": "听见身体的声音", "meta": "PULSE WATCH · 2026", "cta": "预约体验"}
+  ]
+}

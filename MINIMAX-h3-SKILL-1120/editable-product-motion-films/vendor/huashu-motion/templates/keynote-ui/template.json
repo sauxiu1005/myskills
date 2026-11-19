@@ -1,0 +1,28 @@
+{
+  "title": "Keynote launch UI (t2)",
+  "summary": "Dark glowing backdrop, one thing per screen: a title floats out of blur, glass cards spring in, a screenshot gets a highlight box, a big number counts up.",
+  "best_for": [
+    "product and feature launches",
+    "release notes and specs",
+    "a tutorial step with a screenshot",
+    "one headline number"
+  ],
+  "aspect": "16:9",
+  "grammar": "t2_keynote_ui",
+  "copy": {
+    "templates/blank/vendor/gsap.min.js": "vendor/gsap.min.js",
+    "templates/blank/vendor/GSAP-LICENSE.txt": "vendor/GSAP-LICENSE.txt",
+    "templates/blank/vendor/GSAP-LICENSE.html": "vendor/GSAP-LICENSE.html",
+    "runtime/clip/clip.js": "vendor/clip/clip.js",
+    "runtime/clip/cues.js": "vendor/clip/cues.js",
+    "runtime/clip/lib": "vendor/clip/lib",
+    "runtime/clip/grammars": "vendor/clip/grammars",
+    "runtime/clip/LICENSE": "vendor/clip/LICENSE",
+    "runtime/clip/NOTICE.md": "vendor/clip/NOTICE.md",
+    "fonts/NotoSansSC-500.woff": "assets/fonts/NotoSansSC-500.woff",
+    "fonts/NotoSansSC-700.woff": "assets/fonts/NotoSansSC-700.woff",
+    "fonts/Inter-var.woff": "assets/fonts/Inter-var.woff",
+    "fonts/OFL.txt": "assets/fonts/OFL.txt",
+    "fonts/LICENSES.md": "assets/fonts/LICENSES.md"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Finance chart (t3)",
+  "summary": "Economist-style data chart: layout, then axes, then the data grows, then one annotation. Bars, line or K-line from a JSON series.",
+  "best_for": [
+    "revenue, growth and share figures",
+    "a trend with one turning point",
+    "numbers viewers will screenshot and check"
+  ],
+  "aspect": "16:9",
+  "grammar": "t3_finance_chart",
+  "copy": {
+    "templates/blank/vendor/gsap.min.js": "vendor/gsap.min.js",
+    "templates/blank/vendor/GSAP-LICENSE.txt": "vendor/GSAP-LICENSE.txt",
+    "templates/blank/vendor/GSAP-LICENSE.html": "vendor/GSAP-LICENSE.html",
+    "runtime/clip/clip.js": "vendor/clip/clip.js",
+    "runtime/clip/cues.js": "vendor/clip/cues.js",
+    "runtime/clip/lib": "vendor/clip/lib",
+    "runtime/clip/grammars": "vendor/clip/grammars",
+    "runtime/clip/LICENSE": "vendor/clip/LICENSE",
+    "runtime/clip/NOTICE.md": "vendor/clip/NOTICE.md",
+    "fonts/NotoSansSC-500.woff": "assets/fonts/NotoSansSC-500.woff",
+    "fonts/NotoSansSC-700.woff": "assets/fonts/NotoSansSC-700.woff",
+    "fonts/RobotoCondensed-var.woff": "assets/fonts/RobotoCondensed-var.woff",
+    "fonts/OFL.txt": "assets/fonts/OFL.txt",
+    "fonts/LICENSES.md": "assets/fonts/LICENSES.md"
+  }
+}

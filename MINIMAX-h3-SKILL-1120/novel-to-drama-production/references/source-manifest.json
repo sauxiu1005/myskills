@@ -1,0 +1,681 @@
+{
+  "repository": "https://github.com/eternityspring/shuohao-skills",
+  "commit": "5612d2a0bd5f19d978c3ee19d1e42840335e3b4b",
+  "retrieved": "2026-10-29",
+  "files": [
+    {
+      "source": ".gitattributes",
+      "bundled": "references/upstream/.gitattributes",
+      "sha256": "7b9be0b69a7a6513fc7470c2b5cffd2c988b34ddcca48dd049ca97a22d9b8fee"
+    },
+    {
+      "source": ".gitignore",
+      "bundled": "references/upstream/.gitignore",
+      "sha256": "06aaf16af9c7d39a8cfc437437cf56c2e601b05ac4832081ad88c64ebc6a7334"
+    },
+    {
+      "source": "AGENTS.md",
+      "bundled": "references/upstream/AGENTS.md",
+      "sha256": "508c9d4b622d26e499839560aa944dd3f1ca4a1f2750a9b5c992b07d0ea54d82"
+    },
+    {
+      "source": "CHANGELOG.md",
+      "bundled": "references/upstream/CHANGELOG.md",
+      "sha256": "f0e11954dd39306016a590a625ff0d7706d015b1ce190898f496e462efd9b3b5"
+    },
+    {
+      "source": "LICENSE",
+      "bundled": "references/upstream/LICENSE",
+      "sha256": "b1d2870f1a00e4d7f56576e5f0870cba109e041f8af66866cf5b499478e654e7"
+    },
+    {
+      "source": "NOTICE",
+      "bundled": "references/upstream/NOTICE",
+      "sha256": "4a439a29366f485f5ef493a804a4c77a23b41d31eaf97eb66b921e5484bc597d"
+    },
+    {
+      "source": "README.md",
+      "bundled": "references/upstream/README.md",
+      "sha256": "2d970bc3e73f8dfbc5911abfae0810e88c19530490f4548acec4571d44ce6be5"
+    },
+    {
+      "source": "README.zh.md",
+      "bundled": "references/upstream/README.zh.md",
+      "sha256": "f2f380beb34ee1b0ce615e64699516b5ba880a352905a200bb12b41bc734c50c"
+    },
+    {
+      "source": "assets/apimart-logo.png",
+      "bundled": "references/upstream/assets/apimart-logo.png",
+      "sha256": "ea9ad2cb070a8f83ba094a0a385b3c9941f6bb944cf12153c2815e34d8854879"
+    },
+    {
+      "source": "assets/pipeline-en.svg",
+      "bundled": "references/upstream/assets/pipeline-en.svg",
+      "sha256": "e90bd0c12263ba274619a5c849c9bd8f24a2e993e5dcadd039525af938e4dc50"
+    },
+    {
+      "source": "assets/pipeline-en.webp",
+      "bundled": "references/upstream/assets/pipeline-en.webp",
+      "sha256": "9329785e5a9cabda6ac3808d54ce6711b047401a39552b7de5c20569ca31b519"
+    },
+    {
+      "source": "assets/pipeline.svg",
+      "bundled": "references/upstream/assets/pipeline.svg",
+      "sha256": "04fc607c2d21f79305f3824dca8485138de2025becdb44888d31a0071fd5cf61"
+    },
+    {
+      "source": "assets/pipeline.webp",
+      "bundled": "references/upstream/assets/pipeline.webp",
+      "sha256": "43238dc67747f3a077e009c9beda2b0d92d7ef26db54a4977d4d92e630e6c695"
+    },
+    {
+      "source": "assets/reelbench-first-screen-en.png",
+      "bundled": "references/upstream/assets/reelbench-first-screen-en.png",
+      "sha256": "7380eff61e496e4c34cdfb46c893adc27b8a77781c6670dae8c4ce706eeeaa55"
+    },
+    {
+      "source": "assets/reelbench-first-screen.png",
+      "bundled": "references/upstream/assets/reelbench-first-screen.png",
+      "sha256": "c366d7cada66cc128f315816c60f699a208a07b2c2d8b9b4935b8a7ce4345437"
+    },
+    {
+      "source": "assets/wechat.png",
+      "bundled": "references/upstream/assets/wechat.png",
+      "sha256": "82ee557c8c53fa4e1642065471423a48d49c7ba5861bab2fb48b0bf96d67586b"
+    },
+    {
+      "source": "docs/superpowers/plans/2026-08-21-shot-recipes-repository-migration.md",
+      "bundled": "references/upstream/docs/superpowers/plans/2026-08-21-shot-recipes-repository-migration.md",
+      "sha256": "9114ec759b56583f6550ddb476a89045585faf4a5527192c8ac91585947d88f6",
+      "upstream_sha256": "7bd68bf8a0c7a6d83ec4bdb1b5596121b7cdf7ca8dc4d70df31bd9c9945d2cee",
+      "market_change": "Whitespace-only normalization for git diff --check"
+    },
+    {
+      "source": "docs/superpowers/specs/2026-08-21-shot-recipes-repository-migration-design.md",
+      "bundled": "references/upstream/docs/superpowers/specs/2026-08-21-shot-recipes-repository-migration-design.md",
+      "sha256": "6a186cc1cb58259da8843cbee66e99d6201fc35ba631deb1ae22216e1aaab487"
+    },
+    {
+      "source": "scripts/install.sh",
+      "bundled": "references/upstream/scripts/install.sh",
+      "sha256": "b5fb5ff19effd8a8cc1484b17b8fca44240592cec84414b136958ea43693b44e"
+    },
+    {
+      "source": "scripts/report-selftest.mjs",
+      "bundled": "references/upstream/scripts/report-selftest.mjs",
+      "sha256": "2b2e0b4b7ece3533edbda5ce40f1d21ec758feb5892d3be775b3bd7de9441b7c"
+    },
+    {
+      "source": "scripts/report.mjs",
+      "bundled": "references/upstream/scripts/report.mjs",
+      "sha256": "30a1bf139bcbce40b8c0f2ea8c864e9316d429a74fb715e70506de8ae833754c"
+    },
+    {
+      "source": "skills/character-refs/README.en.md",
+      "bundled": "references/upstream/skills/character-refs/README.en.md",
+      "sha256": "f498dafea88f15985f39c30c0dd0fbeae13d499398270fbcb48e3fbb0f7cb0a2"
+    },
+    {
+      "source": "skills/character-refs/README.md",
+      "bundled": "references/upstream/skills/character-refs/README.md",
+      "sha256": "24ce799a45aa53139f3ca9cb3cb10b2c1a95650dd7e4acced106656e3f4f51a4"
+    },
+    {
+      "source": "skills/character-refs/SKILL.md",
+      "bundled": "references/upstream/skills/character-refs/MODULE.md",
+      "sha256": "16f39d589dbf727b90ef5d218447e1de5469bbd892e0b1a025340c5e050bc448"
+    },
+    {
+      "source": "skills/character-refs/assets/report.webp",
+      "bundled": "references/upstream/skills/character-refs/assets/report.webp",
+      "sha256": "e3e182fe1ea572c49f64d5aa8c8564d765f647cd4b71a538df6a2acef83d68fe"
+    },
+    {
+      "source": "skills/character-refs/examples/阿禾-intake.json",
+      "bundled": "references/upstream/skills/character-refs/examples/阿禾-intake.json",
+      "sha256": "90ff88cb9c2284cfcbd6d74053b0fc43cfea68b5eec5996d54a967a19675a261"
+    },
+    {
+      "source": "skills/character-refs/examples/阿禾-描述.txt",
+      "bundled": "references/upstream/skills/character-refs/examples/阿禾-描述.txt",
+      "sha256": "7503845220c47aa33632e972908b62465fc634301c080436867aa89f0a88e24a"
+    },
+    {
+      "source": "skills/character-refs/references/intake.md",
+      "bundled": "references/upstream/skills/character-refs/references/intake.md",
+      "sha256": "e7bcc2ed0251cbd065ea2ebe6a166d951d97edc3125360dd9aa8ac4f948b1aff"
+    },
+    {
+      "source": "skills/character-refs/references/models.md",
+      "bundled": "references/upstream/skills/character-refs/references/models.md",
+      "sha256": "9e4e304289f5c38762c2a2fccaa17aba10d599b4ddd86995e26afe9c55c4627a"
+    },
+    {
+      "source": "skills/character-refs/references/prompting.md",
+      "bundled": "references/upstream/skills/character-refs/references/prompting.md",
+      "sha256": "be4572cb6a23552376eee10fdb1a4e7705d54a8fe5a602855786dfa279f08839"
+    },
+    {
+      "source": "skills/character-refs/references/schema.md",
+      "bundled": "references/upstream/skills/character-refs/references/schema.md",
+      "sha256": "a37e8ad68ce5e36468869f95dc06d3c18d2f024da3ada085690e9ee963cadd28"
+    },
+    {
+      "source": "skills/character-refs/scripts/character-refs.mjs",
+      "bundled": "references/upstream/skills/character-refs/scripts/character-refs.mjs",
+      "sha256": "4495edd64ec7aeffda10245006e1452bcb01c689502a39f58ae4d53065b68ef3"
+    },
+    {
+      "source": "skills/character-refs/scripts/core.mjs",
+      "bundled": "references/upstream/skills/character-refs/scripts/core.mjs",
+      "sha256": "8b0fdaff2c60c49c3a754349c44269c2b6dbf54f3cfe8ff439168d321e1d7da1"
+    },
+    {
+      "source": "skills/character-refs/scripts/i18n.mjs",
+      "bundled": "references/upstream/skills/character-refs/scripts/i18n.mjs",
+      "sha256": "d31a8cde66a87c1362786a8d24099747386e255fb85f2de69a516b145bf1214c"
+    },
+    {
+      "source": "skills/character-refs/scripts/looks.mjs",
+      "bundled": "references/upstream/skills/character-refs/scripts/looks.mjs",
+      "sha256": "4c41c118515c7556dc6d75bfcafbec56c1af5c19502069278943114d9475e6fa"
+    },
+    {
+      "source": "skills/character-refs/scripts/models.mjs",
+      "bundled": "references/upstream/skills/character-refs/scripts/models.mjs",
+      "sha256": "fa88569c235a31b3e3592e8ad7b8a8826b75211852725b241588893e342b1b82"
+    },
+    {
+      "source": "skills/character-refs/scripts/png.mjs",
+      "bundled": "references/upstream/skills/character-refs/scripts/png.mjs",
+      "sha256": "1388144a5194775406533cd7ca23471d0b3b76f590f56494148932beb62d577d"
+    },
+    {
+      "source": "skills/character-refs/scripts/selftest.mjs",
+      "bundled": "references/upstream/skills/character-refs/scripts/selftest.mjs",
+      "sha256": "65d62e93afa82022fbd465985e9678f46d8ce27818c4284f241e95fbda424d7b"
+    },
+    {
+      "source": "skills/novel-art/README.en.md",
+      "bundled": "references/upstream/skills/novel-art/README.en.md",
+      "sha256": "5c7f8c8d12fd0c2eb7aed6e13a65cf807595520d732970bb7cb390292119d9ca"
+    },
+    {
+      "source": "skills/novel-art/README.md",
+      "bundled": "references/upstream/skills/novel-art/README.md",
+      "sha256": "c6f2def36f42f4379d34c91558ac04a9485696f73940267b9d2caf81e462993a"
+    },
+    {
+      "source": "skills/novel-art/SKILL.md",
+      "bundled": "references/upstream/skills/novel-art/MODULE.md",
+      "sha256": "688116bcb868ad68f0bfbe5d029f1d65b2f1ce2918b98734f653cea0216a1377"
+    },
+    {
+      "source": "skills/novel-art/assets/report.webp",
+      "bundled": "references/upstream/skills/novel-art/assets/report.webp",
+      "sha256": "16cd1d0f3ff3fe097a25982ee7f1d6edc3910c0d47ffd174a87563545909b72c"
+    },
+    {
+      "source": "skills/novel-art/examples/渡口-art.json",
+      "bundled": "references/upstream/skills/novel-art/examples/渡口-art.json",
+      "sha256": "5fda31a22043fda47c78a4a04eaa20289b46325a76d502fb36454f849c084500"
+    },
+    {
+      "source": "skills/novel-art/references/prop-pass.md",
+      "bundled": "references/upstream/skills/novel-art/references/prop-pass.md",
+      "sha256": "20f9e6593be435b1cec84f86c120d5d1bb6505f6b9ab21448c4afeaf1208f18d"
+    },
+    {
+      "source": "skills/novel-art/references/report-style.md",
+      "bundled": "references/upstream/skills/novel-art/references/report-style.md",
+      "sha256": "291c83df686938afe1b9f802ce9bde2ffb2166d7f04e25ae6f099bc8d6bef472"
+    },
+    {
+      "source": "skills/novel-art/references/scene-pass.md",
+      "bundled": "references/upstream/skills/novel-art/references/scene-pass.md",
+      "sha256": "93de7cfb1c9cc720b3ee5507ac9d30a1fd0dec15a0192424ed9a57a0edd166d7"
+    },
+    {
+      "source": "skills/novel-art/references/schema.md",
+      "bundled": "references/upstream/skills/novel-art/references/schema.md",
+      "sha256": "92573bc6fae465ac82a01a1d7fc2b3e15cce8a8a19c37a76ca0ff82a3222da09"
+    },
+    {
+      "source": "skills/novel-art/references/sheet.md",
+      "bundled": "references/upstream/skills/novel-art/references/sheet.md",
+      "sha256": "a3caff5173a15af62ad73d11c08bd479d1f624481793708d880775114a9a1ed4"
+    },
+    {
+      "source": "skills/novel-art/references/test-fixtures/upstream/README.md",
+      "bundled": "references/upstream/skills/novel-art/references/test-fixtures/upstream/README.md",
+      "sha256": "7884fe8ad4c72294e93ba9aa2f809a2a7e0ca7f4707e141257c60969fffcd932"
+    },
+    {
+      "source": "skills/novel-art/references/test-fixtures/upstream/渡口-cast.json",
+      "bundled": "references/upstream/skills/novel-art/references/test-fixtures/upstream/渡口-cast.json",
+      "sha256": "80634f02bee6f20af3923bd897c705ee7056a936d78c4189fdfa7eea070df8a2"
+    },
+    {
+      "source": "skills/novel-art/references/test-fixtures/upstream/渡口-outline.json",
+      "bundled": "references/upstream/skills/novel-art/references/test-fixtures/upstream/渡口-outline.json",
+      "sha256": "cd257e64909c7ceaef7701b826c3801870abd3c0ded37591ef5825e71627e5c0"
+    },
+    {
+      "source": "skills/novel-art/scripts/novel-art.mjs",
+      "bundled": "references/upstream/skills/novel-art/scripts/novel-art.mjs",
+      "sha256": "44f59466a6e9bf7b064a91b45a93dab89db70f4e139b2f0f53b9a670365c0c26"
+    },
+    {
+      "source": "skills/novel-art/scripts/selftest.mjs",
+      "bundled": "references/upstream/skills/novel-art/scripts/selftest.mjs",
+      "sha256": "53f25e754560ab8f64ab356387cd7ebd392464fcfdab8dc2d86ab6dc4a2d2bda"
+    },
+    {
+      "source": "skills/novel-characters/README.en.md",
+      "bundled": "references/upstream/skills/novel-characters/README.en.md",
+      "sha256": "04e7a91bebf0de2348b23feadabd93bc64c7473e182323e48adb8d5b89a9c70e"
+    },
+    {
+      "source": "skills/novel-characters/README.md",
+      "bundled": "references/upstream/skills/novel-characters/README.md",
+      "sha256": "c54c07df746d1038dae173689cc37ef16db4a2d3cf7044e174ac177a9c3f8276"
+    },
+    {
+      "source": "skills/novel-characters/SKILL.md",
+      "bundled": "references/upstream/skills/novel-characters/MODULE.md",
+      "sha256": "cda2bc652a24548a68f4ae632f47380b7d275134769a9495feb7891b0ed5ab44"
+    },
+    {
+      "source": "skills/novel-characters/assets/report.webp",
+      "bundled": "references/upstream/skills/novel-characters/assets/report.webp",
+      "sha256": "2f989189dba3d645148ba40577dbb47833cc1d1748f795b143bd888639786bbb"
+    },
+    {
+      "source": "skills/novel-characters/assets/sheet.jpg",
+      "bundled": "references/upstream/skills/novel-characters/assets/sheet.jpg",
+      "sha256": "9a693cc8c274f5b143d40cb221a486d21f6d7295f45539878595545b96a57707"
+    },
+    {
+      "source": "skills/novel-characters/examples/渡口-cast.json",
+      "bundled": "references/upstream/skills/novel-characters/examples/渡口-cast.json",
+      "sha256": "80634f02bee6f20af3923bd897c705ee7056a936d78c4189fdfa7eea070df8a2"
+    },
+    {
+      "source": "skills/novel-characters/examples/渡口-cast.md",
+      "bundled": "references/upstream/skills/novel-characters/examples/渡口-cast.md",
+      "sha256": "72f146d70f67b5505a88bfa16193b820512472a2711051fc08033ae5bcc3dfd4",
+      "upstream_sha256": "f4c16d4d71b8f760fc904bd4d6ff66ca597aaa510cc4d88e342d6eed9120ce73",
+      "market_change": "Whitespace-only normalization for git diff --check"
+    },
+    {
+      "source": "skills/novel-characters/examples/渡口.txt",
+      "bundled": "references/upstream/skills/novel-characters/examples/渡口.txt",
+      "sha256": "faa58b6088c49578005591040b44746cf5348e52cb5237850c4f5f07d5168730"
+    },
+    {
+      "source": "skills/novel-characters/references/profile-pass.md",
+      "bundled": "references/upstream/skills/novel-characters/references/profile-pass.md",
+      "sha256": "25350002e6543de3ea565c73a4d2ad650e3c71405ec1bd27cf961f93792bb0ff"
+    },
+    {
+      "source": "skills/novel-characters/references/report-style.md",
+      "bundled": "references/upstream/skills/novel-characters/references/report-style.md",
+      "sha256": "c550951b591152bc490ecb3af587ce2d3fea9663847b34648316ee437f0ce14e"
+    },
+    {
+      "source": "skills/novel-characters/references/roster-pass.md",
+      "bundled": "references/upstream/skills/novel-characters/references/roster-pass.md",
+      "sha256": "c2f9716f4bcb0b3c39038da9526ed60cda3af48119320561e7fe4944f1dc0bd8"
+    },
+    {
+      "source": "skills/novel-characters/references/schema.md",
+      "bundled": "references/upstream/skills/novel-characters/references/schema.md",
+      "sha256": "f6c62bbe5f424f10cc52ca2e9c1d2c162b5bcefd7eebea67f1c1b88a28c1e4de"
+    },
+    {
+      "source": "skills/novel-characters/references/sheet.md",
+      "bundled": "references/upstream/skills/novel-characters/references/sheet.md",
+      "sha256": "a9a6175a660f1e3f59f499b792c7b5422cf10d4bcb566985461e5d9d192c7972"
+    },
+    {
+      "source": "skills/novel-characters/references/test-fixtures/upstream/README.md",
+      "bundled": "references/upstream/skills/novel-characters/references/test-fixtures/upstream/README.md",
+      "sha256": "48b8752828313c7d40225cde7fdee7fd6f2b30f9686071d05983cc25e9e80fb8"
+    },
+    {
+      "source": "skills/novel-characters/references/test-fixtures/upstream/渡口-outline.json",
+      "bundled": "references/upstream/skills/novel-characters/references/test-fixtures/upstream/渡口-outline.json",
+      "sha256": "cd257e64909c7ceaef7701b826c3801870abd3c0ded37591ef5825e71627e5c0"
+    },
+    {
+      "source": "skills/novel-characters/scripts/novel-characters.mjs",
+      "bundled": "references/upstream/skills/novel-characters/scripts/novel-characters.mjs",
+      "sha256": "09906b43b706cd0b48df5e1cbfc61b6ef098fc9c486bdf323b1e31eefb633f22"
+    },
+    {
+      "source": "skills/novel-characters/scripts/selftest.mjs",
+      "bundled": "references/upstream/skills/novel-characters/scripts/selftest.mjs",
+      "sha256": "4c91ff2829efc2d3ebea383a83adea164c29c5fcd185a16dc7566e61bee10f7f"
+    },
+    {
+      "source": "skills/novel-outline/README.en.md",
+      "bundled": "references/upstream/skills/novel-outline/README.en.md",
+      "sha256": "12f46f6dc5e8da43ed218e88b683ab07b5b37301f31f7ff4ae36c047cd780809"
+    },
+    {
+      "source": "skills/novel-outline/README.md",
+      "bundled": "references/upstream/skills/novel-outline/README.md",
+      "sha256": "0a353c120287be4b3c64c644abdbbcfe02d6fd756ebcc73bb47dc42b7366ac1c"
+    },
+    {
+      "source": "skills/novel-outline/SKILL.md",
+      "bundled": "references/upstream/skills/novel-outline/MODULE.md",
+      "sha256": "055e2fb2ad76462635cc82fe78a68ab65f613e68cd8b88a9570c9880ff522427"
+    },
+    {
+      "source": "skills/novel-outline/assets/report.webp",
+      "bundled": "references/upstream/skills/novel-outline/assets/report.webp",
+      "sha256": "232f96ad45838dfd71717c14f06dc1410b3ff94e13a5d2e16d0027097f53ef37"
+    },
+    {
+      "source": "skills/novel-outline/examples/渡口-outline.json",
+      "bundled": "references/upstream/skills/novel-outline/examples/渡口-outline.json",
+      "sha256": "cd257e64909c7ceaef7701b826c3801870abd3c0ded37591ef5825e71627e5c0"
+    },
+    {
+      "source": "skills/novel-outline/references/episode-pass.md",
+      "bundled": "references/upstream/skills/novel-outline/references/episode-pass.md",
+      "sha256": "33b2a3f75e1a0cf1c5ce48d41b7097988c4c65fb5745bd90189a517bcf26936a"
+    },
+    {
+      "source": "skills/novel-outline/references/outline-pass.md",
+      "bundled": "references/upstream/skills/novel-outline/references/outline-pass.md",
+      "sha256": "9ca4c4a5b98eb2eb6e366549fbd0709387fbb7e679b49da8cef08dba9b8f3a71"
+    },
+    {
+      "source": "skills/novel-outline/references/report-style.md",
+      "bundled": "references/upstream/skills/novel-outline/references/report-style.md",
+      "sha256": "f491d22ee8ec32441fa5c8af360fee44e331ef5f8c2febcebf4c6fbf8d7e2549"
+    },
+    {
+      "source": "skills/novel-outline/references/schema.md",
+      "bundled": "references/upstream/skills/novel-outline/references/schema.md",
+      "sha256": "3411cab8074f304870f58421ccd11c98237e6b5c84ceb9647d9d43397635ea53"
+    },
+    {
+      "source": "skills/novel-outline/references/volume-pass.md",
+      "bundled": "references/upstream/skills/novel-outline/references/volume-pass.md",
+      "sha256": "35eb510c39fc9e5c9c83a47114854a4f306cc6dd2ea21e8747570d5e557ddef8"
+    },
+    {
+      "source": "skills/novel-outline/scripts/novel-outline.mjs",
+      "bundled": "references/upstream/skills/novel-outline/scripts/novel-outline.mjs",
+      "sha256": "33f1469123333b98b5e56f4b81cd64df80b58e1878e0cf7212b585f6e8ac8597"
+    },
+    {
+      "source": "skills/novel-outline/scripts/selftest.mjs",
+      "bundled": "references/upstream/skills/novel-outline/scripts/selftest.mjs",
+      "sha256": "b900b1d0aff7d3af922f5b59805b3de6f9f01e8c8b6db506e5201b8580fee633"
+    },
+    {
+      "source": "skills/novel-script/README.en.md",
+      "bundled": "references/upstream/skills/novel-script/README.en.md",
+      "sha256": "c60af84e9c2253a20d7f6cd4d2cf9ac0b22a4ef2f5302916c063f107ecd33b08"
+    },
+    {
+      "source": "skills/novel-script/README.md",
+      "bundled": "references/upstream/skills/novel-script/README.md",
+      "sha256": "76c1c96a1f0506f6eeddb121d38ab3481cacca6ac9ec56257a1fa94de7f898dd"
+    },
+    {
+      "source": "skills/novel-script/SKILL.md",
+      "bundled": "references/upstream/skills/novel-script/MODULE.md",
+      "sha256": "689e28a0824dafad65eec3b0948fd9ffa12e369d74a2e07eeeb946ada711da58"
+    },
+    {
+      "source": "skills/novel-script/assets/report.webp",
+      "bundled": "references/upstream/skills/novel-script/assets/report.webp",
+      "sha256": "ea0f7dde8e8b4a662f9420892ced730475541647276051b00341ebbfc37aabc5"
+    },
+    {
+      "source": "skills/novel-script/examples/渡口-script.json",
+      "bundled": "references/upstream/skills/novel-script/examples/渡口-script.json",
+      "sha256": "74dd50ba759f86644ca92e150f75b3a4fbddf8708106782f4ff6adcfebc95417"
+    },
+    {
+      "source": "skills/novel-script/references/report-style.md",
+      "bundled": "references/upstream/skills/novel-script/references/report-style.md",
+      "sha256": "582818c595f23fca69de4a4224200413cb761828563461961dfefdd2eb6e1a01"
+    },
+    {
+      "source": "skills/novel-script/references/schema.md",
+      "bundled": "references/upstream/skills/novel-script/references/schema.md",
+      "sha256": "610e4131dae47fc534ec5b075d68351abe6982890c44fedfb296d39c3fadf4aa"
+    },
+    {
+      "source": "skills/novel-script/references/script-pass.md",
+      "bundled": "references/upstream/skills/novel-script/references/script-pass.md",
+      "sha256": "825aea57b0118dc3ef1b470bf5a7db7f0f94b7dccfa1135549bac5abbe85dfc0"
+    },
+    {
+      "source": "skills/novel-script/references/test-fixtures/upstream/README.md",
+      "bundled": "references/upstream/skills/novel-script/references/test-fixtures/upstream/README.md",
+      "sha256": "65cf65af9d9729537609edff54041fa859c04d2d1b05469debfe92c5dda8d3af"
+    },
+    {
+      "source": "skills/novel-script/references/test-fixtures/upstream/渡口-art.json",
+      "bundled": "references/upstream/skills/novel-script/references/test-fixtures/upstream/渡口-art.json",
+      "sha256": "5fda31a22043fda47c78a4a04eaa20289b46325a76d502fb36454f849c084500"
+    },
+    {
+      "source": "skills/novel-script/references/test-fixtures/upstream/渡口-cast.json",
+      "bundled": "references/upstream/skills/novel-script/references/test-fixtures/upstream/渡口-cast.json",
+      "sha256": "80634f02bee6f20af3923bd897c705ee7056a936d78c4189fdfa7eea070df8a2"
+    },
+    {
+      "source": "skills/novel-script/references/test-fixtures/upstream/渡口-outline.json",
+      "bundled": "references/upstream/skills/novel-script/references/test-fixtures/upstream/渡口-outline.json",
+      "sha256": "cd257e64909c7ceaef7701b826c3801870abd3c0ded37591ef5825e71627e5c0"
+    },
+    {
+      "source": "skills/novel-script/scripts/novel-script.mjs",
+      "bundled": "references/upstream/skills/novel-script/scripts/novel-script.mjs",
+      "sha256": "833511f3dcc01373687f12065cb8c843e505958fb344d015535ffb4c928bc7bc"
+    },
+    {
+      "source": "skills/novel-script/scripts/selftest.mjs",
+      "bundled": "references/upstream/skills/novel-script/scripts/selftest.mjs",
+      "sha256": "736acb4f7ce324820fdcc8d9d2fdf6423de536276905b4bbbd4e1555492adb42"
+    },
+    {
+      "source": "skills/novel-staging/README.en.md",
+      "bundled": "references/upstream/skills/novel-staging/README.en.md",
+      "sha256": "8065705e32e66e51731f9ac635fea69d85e484a9e30be0e602f995a6e5c0d936"
+    },
+    {
+      "source": "skills/novel-staging/README.md",
+      "bundled": "references/upstream/skills/novel-staging/README.md",
+      "sha256": "965c2e7fa23c915fb4e7d231d67f08b5313f906c195011c8a5dcb5ecabab191b"
+    },
+    {
+      "source": "skills/novel-staging/SKILL.md",
+      "bundled": "references/upstream/skills/novel-staging/MODULE.md",
+      "sha256": "0afc3ade75ee6b01323eec1c274c24a4df15c1fdb75e3209018dad1efc658288"
+    },
+    {
+      "source": "skills/novel-staging/assets/report-en.jpg",
+      "bundled": "references/upstream/skills/novel-staging/assets/report-en.jpg",
+      "sha256": "54ab336e544b06666e43129666a95d7feddf4f48a1007305a4cb973b4735b3b9"
+    },
+    {
+      "source": "skills/novel-staging/assets/report.webp",
+      "bundled": "references/upstream/skills/novel-staging/assets/report.webp",
+      "sha256": "e47010cbb250926f8f723c90e6e6b395ad0e8328b7ac659f2778e3ff50051224"
+    },
+    {
+      "source": "skills/novel-staging/examples/渡口-staging.json",
+      "bundled": "references/upstream/skills/novel-staging/examples/渡口-staging.json",
+      "sha256": "59d25795a0afd79d935926fe784576df3227d9776e1e3611796b8e95bceb7909"
+    },
+    {
+      "source": "skills/novel-staging/references/read-pass.md",
+      "bundled": "references/upstream/skills/novel-staging/references/read-pass.md",
+      "sha256": "ddb78130430767bcf349fd6ba7844e49bd1939f91897990e295ef1eaee11ffc9"
+    },
+    {
+      "source": "skills/novel-staging/references/report-style.md",
+      "bundled": "references/upstream/skills/novel-staging/references/report-style.md",
+      "sha256": "066761817723a3bd5ed714b97f727a0804ed3d27c2bae4fbdcec43963b2819fd"
+    },
+    {
+      "source": "skills/novel-staging/references/schema.md",
+      "bundled": "references/upstream/skills/novel-staging/references/schema.md",
+      "sha256": "877c91f6642d9cb3a04b8101b3a4071557918135ca84d40a3dcba53d91f0458a"
+    },
+    {
+      "source": "skills/novel-staging/references/staging-pass.md",
+      "bundled": "references/upstream/skills/novel-staging/references/staging-pass.md",
+      "sha256": "87ca1b968070ece8a66b15db8d2edfd404f33165511d2a9a09426ce025b6b2f4"
+    },
+    {
+      "source": "skills/novel-staging/references/test-fixtures/upstream/README.md",
+      "bundled": "references/upstream/skills/novel-staging/references/test-fixtures/upstream/README.md",
+      "sha256": "8e031ee63dd3c048b5b2c64f962dbba0034346e5360d92e031c9e4d597a8ffd4"
+    },
+    {
+      "source": "skills/novel-staging/references/test-fixtures/upstream/渡口-art.json",
+      "bundled": "references/upstream/skills/novel-staging/references/test-fixtures/upstream/渡口-art.json",
+      "sha256": "5fda31a22043fda47c78a4a04eaa20289b46325a76d502fb36454f849c084500"
+    },
+    {
+      "source": "skills/novel-staging/references/test-fixtures/upstream/渡口-outline.json",
+      "bundled": "references/upstream/skills/novel-staging/references/test-fixtures/upstream/渡口-outline.json",
+      "sha256": "cd257e64909c7ceaef7701b826c3801870abd3c0ded37591ef5825e71627e5c0"
+    },
+    {
+      "source": "skills/novel-staging/references/test-fixtures/upstream/渡口-script.json",
+      "bundled": "references/upstream/skills/novel-staging/references/test-fixtures/upstream/渡口-script.json",
+      "sha256": "74dd50ba759f86644ca92e150f75b3a4fbddf8708106782f4ff6adcfebc95417"
+    },
+    {
+      "source": "skills/novel-staging/scripts/novel-staging.mjs",
+      "bundled": "references/upstream/skills/novel-staging/scripts/novel-staging.mjs",
+      "sha256": "9b3214510b438bc13535e9a42a5b7a41e7cd90f4ea6b27201b234c7eee46b2e3"
+    },
+    {
+      "source": "skills/novel-staging/scripts/selftest.mjs",
+      "bundled": "references/upstream/skills/novel-staging/scripts/selftest.mjs",
+      "sha256": "502ff4609e860742f357f8072c8fe1e9d4633fe9b115c273049429b83a0652af"
+    },
+    {
+      "source": "skills/novel-storyboard/README.en.md",
+      "bundled": "references/upstream/skills/novel-storyboard/README.en.md",
+      "sha256": "b15648de1b0d6f5aa20a0b4aaf798bf32079846da596d59c2392fc0269631e7f"
+    },
+    {
+      "source": "skills/novel-storyboard/README.md",
+      "bundled": "references/upstream/skills/novel-storyboard/README.md",
+      "sha256": "ad517e44977ae15206f2717e44b3832c01c0a078c7dead71cb7021db90a1abd5"
+    },
+    {
+      "source": "skills/novel-storyboard/SKILL.md",
+      "bundled": "references/upstream/skills/novel-storyboard/MODULE.md",
+      "sha256": "2af3bb17fa9719976fe9f2486ba09f26bdc4397aa45f13a18884408e2a7fe857"
+    },
+    {
+      "source": "skills/novel-storyboard/assets/report.webp",
+      "bundled": "references/upstream/skills/novel-storyboard/assets/report.webp",
+      "sha256": "4a0cc55de66ba058ca7525c6685da718a0a42b0215e5bd7ee235bfeddac2c953"
+    },
+    {
+      "source": "skills/novel-storyboard/examples/渡口-storyboard.json",
+      "bundled": "references/upstream/skills/novel-storyboard/examples/渡口-storyboard.json",
+      "sha256": "1b44780043415096d4366556006af2243636658f090565c5e8b27a251494ca11"
+    },
+    {
+      "source": "skills/novel-storyboard/references/frame.md",
+      "bundled": "references/upstream/skills/novel-storyboard/references/frame.md",
+      "sha256": "8932f811350fd816d95206db2bccefe8450ad3a65216cba6bf822f7f73a93790"
+    },
+    {
+      "source": "skills/novel-storyboard/references/h3-prompt.md",
+      "bundled": "references/upstream/skills/novel-storyboard/references/h3-prompt.md",
+      "sha256": "a8764ab72b76c13563d053d86f40ace30357e197a5738e4a22811f6a9a30702e"
+    },
+    {
+      "source": "skills/novel-storyboard/references/report-style.md",
+      "bundled": "references/upstream/skills/novel-storyboard/references/report-style.md",
+      "sha256": "75bf9bbf5d0385a6e7e2db33a12e3446c674fa6d61ef984c347f195c15095cc6"
+    },
+    {
+      "source": "skills/novel-storyboard/references/schema.md",
+      "bundled": "references/upstream/skills/novel-storyboard/references/schema.md",
+      "sha256": "7eff862c9cae2f0be00a5d6f45393994754148bcc91970cddbc69dca6ff4fbd9"
+    },
+    {
+      "source": "skills/novel-storyboard/references/seedance-prompt.md",
+      "bundled": "references/upstream/skills/novel-storyboard/references/seedance-prompt.md",
+      "sha256": "d5d44809846d8d96ace57c22f83f47681c2206e84076aa4c80aab5ba955a723a"
+    },
+    {
+      "source": "skills/novel-storyboard/references/shot-writing.md",
+      "bundled": "references/upstream/skills/novel-storyboard/references/shot-writing.md",
+      "sha256": "501fea6f027b356a0e314b9ef7b0b6ab896287c2b754eeeeac5c59548511fd0c"
+    },
+    {
+      "source": "skills/novel-storyboard/references/storyboard-pass.md",
+      "bundled": "references/upstream/skills/novel-storyboard/references/storyboard-pass.md",
+      "sha256": "909e66aca5b5f1a4a8f96b3bbc45cc162346fddbe16f2892dac85ce155f4e6d8"
+    },
+    {
+      "source": "skills/novel-storyboard/references/test-fixtures/shot-recipes/hands-tell.md",
+      "bundled": "references/upstream/skills/novel-storyboard/references/test-fixtures/shot-recipes/hands-tell.md",
+      "sha256": "eeb572a1c21e31759e8d0bcdaab40bc05d9c3a7bb01c6d0984e4deff49f8eee6"
+    },
+    {
+      "source": "skills/novel-storyboard/references/test-fixtures/shot-recipes/insert-beat.md",
+      "bundled": "references/upstream/skills/novel-storyboard/references/test-fixtures/shot-recipes/insert-beat.md",
+      "sha256": "dc4f79e50568092988858295e4bfdaa1cc763a29857d1dc82604297f3bcbcd53"
+    },
+    {
+      "source": "skills/novel-storyboard/references/test-fixtures/shot-recipes/ots-shot-reverse.md",
+      "bundled": "references/upstream/skills/novel-storyboard/references/test-fixtures/shot-recipes/ots-shot-reverse.md",
+      "sha256": "090939b70e2c856926f2d417e69a1a0b34bd5c94781783b6355d8ab73f408885"
+    },
+    {
+      "source": "skills/novel-storyboard/references/test-fixtures/upstream/README.md",
+      "bundled": "references/upstream/skills/novel-storyboard/references/test-fixtures/upstream/README.md",
+      "sha256": "de6ca9a7fcfb9b779bf851602a9584489cf5403a4fa04f623c66ce175fa9f679"
+    },
+    {
+      "source": "skills/novel-storyboard/references/test-fixtures/upstream/渡口-art.json",
+      "bundled": "references/upstream/skills/novel-storyboard/references/test-fixtures/upstream/渡口-art.json",
+      "sha256": "5fda31a22043fda47c78a4a04eaa20289b46325a76d502fb36454f849c084500"
+    },
+    {
+      "source": "skills/novel-storyboard/references/test-fixtures/upstream/渡口-cast.json",
+      "bundled": "references/upstream/skills/novel-storyboard/references/test-fixtures/upstream/渡口-cast.json",
+      "sha256": "80634f02bee6f20af3923bd897c705ee7056a936d78c4189fdfa7eea070df8a2"
+    },
+    {
+      "source": "skills/novel-storyboard/references/test-fixtures/upstream/渡口-outline.json",
+      "bundled": "references/upstream/skills/novel-storyboard/references/test-fixtures/upstream/渡口-outline.json",
+      "sha256": "cd257e64909c7ceaef7701b826c3801870abd3c0ded37591ef5825e71627e5c0"
+    },
+    {
+      "source": "skills/novel-storyboard/references/test-fixtures/upstream/渡口-script.json",
+      "bundled": "references/upstream/skills/novel-storyboard/references/test-fixtures/upstream/渡口-script.json",
+      "sha256": "74dd50ba759f86644ca92e150f75b3a4fbddf8708106782f4ff6adcfebc95417"
+    },
+    {
+      "source": "skills/novel-storyboard/scripts/novel-storyboard.mjs",
+      "bundled": "references/upstream/skills/novel-storyboard/scripts/novel-storyboard.mjs",
+      "sha256": "89ca281f9d9768b90d8a89f70e26365eb0872a7984ef304858692e7c4780e379"
+    },
+    {
+      "source": "skills/novel-storyboard/scripts/selftest.mjs",
+      "bundled": "references/upstream/skills/novel-storyboard/scripts/selftest.mjs",
+      "sha256": "c5f901e8bb2ff5f3ed4de32996245fcd51b70e28ff29131c97c8a86154d08d3e"
+    }
+  ]
+}

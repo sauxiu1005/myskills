@@ -1,0 +1,38 @@
+display-name-zh: 瑞士动态排版短片
+version: 1.0.0
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Creative Generation
+complete-tags-cn:
+- 商业广告 / 创作生成
+summary-en: Turns a topic, brand facts or copy into a grid-based system with one rule-breaking exception, then code-renders a beat-snapped 10–60-second film with synthesised score, print foley, voice-over and in-layout subtitles.
+summary-cn: 把主题或品牌文案转化为一套网格系统与一个打破规则的例外，代码逐帧渲染出卡拍吸附的 10–60 秒短片，配合成配乐、印刷拟音与版式内字幕。
+desc-en: For brands, event and exhibition teams, designers and educators who want motion in the Swiss International Typographic Style rather than template animation. You give a topic or story, brand name, verbatim copy, a brand colour or references, and choose 10–60 seconds, 16:9, 1:1 or 9:16, and a voice language or none. The skill writes a treatment built on one system plus one exception, defines what the grid means, sets one signal colour and one typeface family, and plans a beat sheet. It generates narration, previews key frames for approval, then code-renders every frame with score and foley sharing the picture's data. You get a 24 fps MP4 at −14 LUFS, an SRT, a contact sheet and font credits. It does not do live action, lyric kinetic type or charts.
+desc-cn: 适用于品牌识别演绎、活动预告、产品规格发布和设计教学，想要瑞士国际主义排版而非模板动画的场景。你提供主题或故事、品牌名、需原样出现的文案、品牌色或参考图，并选择 10–60 秒时长、画幅和旁白语言。技能先写“一套系统加一个例外”的方案，确定网格的含义、唯一信号色与单一字体家族，排出节拍表；再生成旁白、渲染关键帧样张请你确认，最后用代码逐帧渲染画面，配以与画面共享数据的程序配乐和印刷拟音。交付 24 帧、−14 LUFS 的 MP4、SRT 字幕、联系表与字体授权清单。不做真人实拍、歌词快闪或数据图表片。
+structured-info:
+  zh-CN:
+    summary: 把主题、品牌或活动信息排成一套瑞士国际主义模块网格，让文字与图形卡拍吸附、只留一个打破网格的例外，输出代码渲染的动态排版短片。
+    best-for:
+    - 活动展览预告
+    - 品牌产品宣传
+    - 动态海报
+    how-to-use: 提供主题、品牌名、原样文案与参考，选择十至六十秒时长、画幅和旁白语言后开始。
+    outputs: 创意方案与节拍表、关键帧联系表、带配乐与拟音的动态排版成片、字幕（有旁白时）与字体授权清单。
+  en-US:
+    summary: Turn a topic, brand, or event into a Swiss International Style modular grid where type and graphics snap to the beat and one element breaks the grid, delivered as a code-rendered motion typography film.
+    best-for:
+    - Event & Exhibition Teasers
+    - Brand & Product Promos
+    - Motion Posters
+    how-to-use: Provide a topic, brand name, exact copy and references; choose a 10–60-second length, framing and narration language to start.
+    outputs: Treatment and beat sheet, key-frame contact sheet, finished motion typography film with score and foley, subtitles (when narrated), and a font credits list.
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+cover: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318792256942352-1794318792246.mp4
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318794279092475-1794318794270.mp4
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318796208402905-1794318796190.mp4
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318796034206671-1794318796025.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318792256942352-1794318792246.mp4

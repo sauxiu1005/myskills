@@ -1,0 +1,149 @@
+{
+  "repository": "https://github.com/Sac-Y/match-cut",
+  "commit": "b51c98f5c795b046ceb1c69396368dbabd88d5d9",
+  "local_version": "1.4.0",
+  "platform": "Design",
+  "files": [
+    {
+      "path": "LICENSE",
+      "upstream_sha256": "7b94c1360d4a4d2925f09ee801a8913c20770564d1bd263b1bdb07075d6b6bf5",
+      "packaged_sha256": "7b94c1360d4a4d2925f09ee801a8913c20770564d1bd263b1bdb07075d6b6bf5",
+      "modified": false
+    },
+    {
+      "path": "SKILL.md",
+      "upstream_sha256": "7698c367de96feee8138127924c7b97d711eed9ac2699b1738c0a2de82d3eb57",
+      "packaged_sha256": "850851f724c2c92087440dd1f02bc96db04b5637e0bc189352f172ed8c076fa1",
+      "modified": true
+    },
+    {
+      "path": "examples/big-mac/README.md",
+      "upstream_sha256": "7b9f19703a4e9ef062aaed502ad5780e94c3891313576d92229200b4424ea41b",
+      "packaged_sha256": "7b9f19703a4e9ef062aaed502ad5780e94c3891313576d92229200b4424ea41b",
+      "modified": false
+    },
+    {
+      "path": "examples/big-mac/montage.json",
+      "upstream_sha256": "98f2c716f3eb9705685dd7b09c83ec90fbebb73ecc22b50eb22a3abaac572d8a",
+      "packaged_sha256": "98f2c716f3eb9705685dd7b09c83ec90fbebb73ecc22b50eb22a3abaac572d8a",
+      "modified": false
+    },
+    {
+      "path": "examples/big-mac/preview.mp4",
+      "upstream_sha256": "776b34616226228d4541691184a9acc4144b74741a4dc15d07fb149e0f8bfcea",
+      "packaged_sha256": "776b34616226228d4541691184a9acc4144b74741a4dc15d07fb149e0f8bfcea",
+      "modified": false
+    },
+    {
+      "path": "examples/iphone-duo/README.md",
+      "upstream_sha256": "425e2dc49846b1da8b249049bb5a34bcf723abb4f51efdd94c2e7c30d8e92c05",
+      "packaged_sha256": "425e2dc49846b1da8b249049bb5a34bcf723abb4f51efdd94c2e7c30d8e92c05",
+      "modified": false
+    },
+    {
+      "path": "examples/iphone-duo/montage.json",
+      "upstream_sha256": "31845a07dc00a4af35188d4e7816c362b940987daaeb22d5142b4e64627592df",
+      "packaged_sha256": "31845a07dc00a4af35188d4e7816c362b940987daaeb22d5142b4e64627592df",
+      "modified": false
+    },
+    {
+      "path": "examples/iphone-duo/preview.mp4",
+      "upstream_sha256": "3bf2049c8dc7cadcfd4e8b128219c0ab5ebfff1556e9a267908f396011b131b6",
+      "packaged_sha256": "3bf2049c8dc7cadcfd4e8b128219c0ab5ebfff1556e9a267908f396011b131b6",
+      "modified": false
+    },
+    {
+      "path": "examples/template.json",
+      "upstream_sha256": "bc3b0e199516159e1c43bb342c944be5d571f2048e38c7ba502c8633ca4ffc1e",
+      "packaged_sha256": "bc3b0e199516159e1c43bb342c944be5d571f2048e38c7ba502c8633ca4ffc1e",
+      "modified": false
+    },
+    {
+      "path": "references/almakan.md",
+      "upstream_sha256": "0dc703892b4079d97485912dfa213b00bc093a43464069216889b62e7e18bf6e",
+      "packaged_sha256": "0dc703892b4079d97485912dfa213b00bc093a43464069216889b62e7e18bf6e",
+      "modified": false
+    },
+    {
+      "path": "references/generation.md",
+      "upstream_sha256": "298823debb1bac60d8c742c23fa3ba1ab0976e027fda8ab5e321ffcadfe95290",
+      "packaged_sha256": "ce11f36e46b9890d2637a7e2dc477ae80a0c21c95a29a4162606733411116746",
+      "modified": true
+    },
+    {
+      "path": "references/planning.md",
+      "upstream_sha256": "25ee2ac4209a6993967cabbf13bb29457260c6822ce4ff290e51c792c78f29cb",
+      "packaged_sha256": "cc69d482929c028d9c1dbd7bbe048a56d4dfb23c301d781d46a8456ab906cb5b",
+      "modified": true
+    },
+    {
+      "path": "references/post.md",
+      "upstream_sha256": "a4aef9afae819ce31466b9c875d708d56d7ac0fa5a426955d644b6e6e45f4595",
+      "packaged_sha256": "3b56263f971b4c47c18e83627f62f1727bbad0e76a2462509d2ad2a52fae6989",
+      "modified": true
+    },
+    {
+      "path": "references/review.md",
+      "upstream_sha256": "05744d5d8e0642432c0ea139d64ed333d0f72f4d51fd13e9974b86f9ce3d8eb9",
+      "packaged_sha256": "3499b50937ed49d246fd66fe3f76ad9d887de3004e5902317f5b51e3dcc68a7a",
+      "modified": true
+    },
+    {
+      "path": "scripts/align.py",
+      "upstream_sha256": "308e5f0ea316a3bb9b001d1566374da8377692eb4510dff46ef197bdec067060",
+      "packaged_sha256": "308e5f0ea316a3bb9b001d1566374da8377692eb4510dff46ef197bdec067060",
+      "modified": false
+    },
+    {
+      "path": "scripts/assemble.py",
+      "upstream_sha256": "570d1fe3bed3a2a0bf1fa4a466d6a7a413912e10c15270fc0a6a50038d974e45",
+      "packaged_sha256": "570d1fe3bed3a2a0bf1fa4a466d6a7a413912e10c15270fc0a6a50038d974e45",
+      "modified": false
+    },
+    {
+      "path": "scripts/common.py",
+      "upstream_sha256": "ad7f184d55d816f86c2200426ed3cdfabddcfa833f3eb4d9d45affc1b4716c4d",
+      "packaged_sha256": "ad7f184d55d816f86c2200426ed3cdfabddcfa833f3eb4d9d45affc1b4716c4d",
+      "modified": false
+    },
+    {
+      "path": "scripts/mix.py",
+      "upstream_sha256": "0044e1dd4061e08e7d70bb1a770cea396223f3ea8ea918d355acd0af6dfc08f7",
+      "packaged_sha256": "0044e1dd4061e08e7d70bb1a770cea396223f3ea8ea918d355acd0af6dfc08f7",
+      "modified": false
+    },
+    {
+      "path": "scripts/music.py",
+      "upstream_sha256": "7fc67b26f4ea785292a95e61fcaf0dba2791be5bd72a6801ba8b319f6913cf09",
+      "packaged_sha256": "7fc67b26f4ea785292a95e61fcaf0dba2791be5bd72a6801ba8b319f6913cf09",
+      "modified": false
+    },
+    {
+      "path": "scripts/qc.py",
+      "upstream_sha256": "1cdb02da4c2c27cb29a8a430b44e670639125c12502685a4a399bc71afe7b88a",
+      "packaged_sha256": "1cdb02da4c2c27cb29a8a430b44e670639125c12502685a4a399bc71afe7b88a",
+      "modified": false
+    },
+    {
+      "path": "scripts/render.py",
+      "upstream_sha256": "8386d404a5429404eecfd84693a3e1809ba355441dfc484d3bb4a84822b4f3ab",
+      "packaged_sha256": "8386d404a5429404eecfd84693a3e1809ba355441dfc484d3bb4a84822b4f3ab",
+      "modified": false
+    },
+    {
+      "path": "scripts/requirements.txt",
+      "upstream_sha256": "21eaf00316784041b287e00da5dff32ac0c62b3e715713eece8cfab661e660cd",
+      "packaged_sha256": "21eaf00316784041b287e00da5dff32ac0c62b3e715713eece8cfab661e660cd",
+      "modified": false
+    },
+    {
+      "path": "scripts/undot.py",
+      "upstream_sha256": "b23fb3fb737cf0e3905e9ef9142087f41df31adeb0391e52fcfd43a9ab2df4a5",
+      "packaged_sha256": "b23fb3fb737cf0e3905e9ef9142087f41df31adeb0391e52fcfd43a9ab2df4a5",
+      "modified": false
+    }
+  ],
+  "local_additions": [
+    "SKILL.cn.md"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 3,
+  "name": null,
+  "platform": "Design",
+  "project_id": null,
+  "brief": {
+    "product": null,
+    "selling_point": null,
+    "audience": null,
+    "language": null,
+    "duration_seconds": 20
+  },
+  "work_mode": null,
+  "budget": {
+    "cap": null,
+    "unit": null,
+    "evidence": null
+  },
+  "generation_choices": {
+    "image": {
+      "quality": null,
+      "model_id": null,
+      "source_size": null,
+      "status": "awaiting_choice"
+    },
+    "video": {
+      "quality": null,
+      "model_id": null,
+      "source_size": null,
+      "status": "awaiting_choice"
+    },
+    "video_size": {
+      "aspect_ratio": null,
+      "export_size": null,
+      "adaptation": null,
+      "status": "awaiting_choice"
+    }
+  },
+  "qa": {
+    "stills": "pending",
+    "motion": "pending",
+    "cuts": "pending",
+    "audio": "pending",
+    "file_decode": "pending",
+    "canvas_node": "pending",
+    "canvas_playback": "pending",
+    "source_package": "pending",
+    "experience_mapping": "pending",
+    "gesture_handoff": "pending",
+    "visual_motif": "pending",
+    "rhythm_readability": "pending",
+    "live_action_realism": "pending"
+  },
+  "delivery": {
+    "asset_id": null,
+    "node_id": null,
+    "url": null,
+    "version": null
+  },
+  "relay_plan": "relay-plan.json",
+  "look_plan": "look-plan.json"
+}

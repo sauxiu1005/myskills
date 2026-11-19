@@ -1,0 +1,7 @@
+《下雨啦》第三方素材与授权
+
+- 字体：ZCOOL KuaiLe（站酷快乐体），SIL Open Font License 1.1，Copyright 2018 The ZCOOL KuaiLe Project Authors，来源 Google Fonts（经 jsDelivr 下载），授权文本见 fonts/OFL.txt
+- 配音：Microsoft Edge 在线神经语音 zh-CN-XiaoyiNeural（小兔）、zh-CN-YunxiaNeural（小熊），通过 edge-tts（GPL-3.0 工具）生成
+- 台词校对：faster-whisper（MIT）+ Whisper small 模型（MIT），经 hf-mirror.com 下载
+- 画面引擎：gl.js、crayon.js、rig.js 复制自 Lemo-Opuscar 风格库 crayon-book 演示代码，按该库 LICENSE 使用
+- 配乐与音效：全部为本项目用代码合成的原创内容，没有使用采样库

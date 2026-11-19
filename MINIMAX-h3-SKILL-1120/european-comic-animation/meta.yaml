@@ -1,0 +1,36 @@
+display-name-zh: 欧式漫画风动画
+version: 1.0.0
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+- Animation / Creative Generation
+complete-tags-cn:
+- 动画 / 创作生成
+summary-en: Turn scripts or ideas into animated shorts, shaping characters with searching lines, retraced strokes and loose gouache, and telling stories through simple actions and expressions.
+summary-cn: 从剧本或灵感出发，以探形线、复笔和疏松水粉塑造角色，通过简洁动作与表情演绎故事，完成动画短片。
+desc-en: This skill helps creators turn scripts or early ideas into complete two-dimensional hand-drawn comic animation across varied settings and genres. Supply an existing script, an idea, or a request for a new story, plus any approved character references or music. It first develops an executable animation script and waits for explicit approval, then confirms framing, exact export dimensions, duration and music through a structured dialog. Production establishes consistent identity anchors, plans complete causal events, generates footage, checks motion and continuity, edits and mixes the film. Deliverables include the playable animation, approved script, references and revision records. It does not assume a fixed cast, location, event list or permission for unlimited paid retakes.
+desc-cn: 面向希望把剧本或想法做成完整二维手绘漫画动画的创作者，支持不同题材、角色与场景。用户可提供现成剧本、简要创意、认可形象或已有音乐。流程先整理可执行剧本并等待明确通过，再以结构化对话确认画幅、最终尺寸、总时长和配乐选择，随后建立身份参考、生成完整事件、检查动作因果与镜头连续性，完成剪辑混音。交付可播放成片、批准剧本、参考依据和局部修改记录。不预设演员或事件，不把策划稿当成片，也不无限追加收费重生成。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 从剧本或灵感出发，以探形线、复笔和疏松水粉塑造角色，通过简洁动作与表情演绎故事，完成动画短片。
+    best-for:
+    - 手绘漫画短片
+    - 剧本转动画
+    - 角色动作叙事
+    how-to-use: 提供剧本或想法，先确认剧本，再在对话框中确认画幅、尺寸、时长及配乐。
+    outputs: 完整动画成片、批准剧本、角色与风格参考、分镜及剪辑验证记录。
+  en-US:
+    summary: Turn scripts or ideas into animated shorts, shaping characters with searching lines, retraced strokes and loose gouache, and telling stories through simple actions and expressions.
+    best-for:
+    - Hand-drawn shorts
+    - Script to animation
+    - Character storytelling
+    how-to-use: Provide a script or idea, approve the script, then confirm framing, size, duration and music in a dialog.
+    outputs: Finished animation, approved script, identity and style references, shot plan and edit validation records.
+cover: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318816093543705-1794318816083.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318816093543705-1794318816083.mp4
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318825925764033-1794318825866.mp4

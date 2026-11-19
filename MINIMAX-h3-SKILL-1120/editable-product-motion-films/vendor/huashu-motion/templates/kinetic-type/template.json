@@ -1,0 +1,28 @@
+{
+  "title": "Kinetic typography (y5)",
+  "summary": "Words are the actors: one page per beat, the key word slams in, a colour band wipes to the next page, a progress track counts the list and a highlighter hits the punch word.",
+  "best_for": [
+    "lists and stages (3 reasons, 3 steps)",
+    "chapter cards and openers",
+    "a one-line takeaway",
+    "a single number"
+  ],
+  "aspect": "16:9",
+  "grammar": "y5_kinetic_type",
+  "copy": {
+    "templates/blank/vendor/gsap.min.js": "vendor/gsap.min.js",
+    "templates/blank/vendor/GSAP-LICENSE.txt": "vendor/GSAP-LICENSE.txt",
+    "templates/blank/vendor/GSAP-LICENSE.html": "vendor/GSAP-LICENSE.html",
+    "runtime/clip/clip.js": "vendor/clip/clip.js",
+    "runtime/clip/cues.js": "vendor/clip/cues.js",
+    "runtime/clip/lib": "vendor/clip/lib",
+    "runtime/clip/grammars": "vendor/clip/grammars",
+    "runtime/clip/LICENSE": "vendor/clip/LICENSE",
+    "runtime/clip/NOTICE.md": "vendor/clip/NOTICE.md",
+    "fonts/NotoSansSC-900.woff": "assets/fonts/NotoSansSC-900.woff",
+    "fonts/NotoSansSC-800.woff": "assets/fonts/NotoSansSC-800.woff",
+    "fonts/NotoSansSC-700.woff": "assets/fonts/NotoSansSC-700.woff",
+    "fonts/OFL.txt": "assets/fonts/OFL.txt",
+    "fonts/LICENSES.md": "assets/fonts/LICENSES.md"
+  }
+}

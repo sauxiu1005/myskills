@@ -1,0 +1,38 @@
+display-name-zh: 图片画风转换
+version: 1.0.0
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+- Animation / Creative Generation
+complete-tags-cn:
+- 动画 / 创作生成
+summary-en: Restyle one image into nine curated looks with H3 Image, redesigning characters and scenery together while keeping the story, with custom blends and targeted revisions.
+summary-cn: 把一张图片再创作为九种画风，人物与环境一同重设计并保留叙事关系，支持自定义混合与定向修正。
+desc-en: For creators restyling an existing image. Provide the source and choose one of nine curated styles or a custom direction. Extract subject count, action and story relationships, then redesign characters and environment together instead of applying a filter. Appearance may change by default; face preservation or faithful reproduction requires an explicit request. Deliver full-size images at the agreed aspect ratio and reusable prompts, with optional style comparisons and one targeted correction round. This does not produce video transitions, 3D projects or game world saves.
+desc-cn: 面向希望改变图片画风的创作者。提供原图并选择九种精选画风或自定义方向，先提取人物数量、动作与叙事关系，再共同重设计人物和环境，避免仅加滤镜。默认允许改变外形，明确要求时保脸或严格还原。交付保持约定比例的完整图片和可复用提示词，按需提供多风格对照与一轮定向修正。不制作视频转场、三维工程或游戏世界存档。
+structured-info:
+  zh-CN:
+    summary: 把一张图片再创作为九种精选画风的成图，人物与环境一同重设计并保留原有叙事关系。
+    best-for:
+    - 照片换画风
+    - 场景重绘
+    - 风格对照
+    how-to-use: 上传或选中图片并选择画风；默认人物与环境一起重设计，需要保脸或严格还原时再说明。
+    outputs: 完整成图、原尺寸图片文件、可复用提示词与多风格对照。
+  en-US:
+    summary: Recreate one image in nine curated styles, redesigning characters and environment while keeping the original story relationships.
+    best-for:
+    - Photo and character restyling
+    - Pet, product and scene remixing
+    - Style comparison and posters
+    how-to-use: Upload or select an image and pick a style; characters and environment are redesigned together, with face preservation or faithful reproduction on request.
+    outputs: Finished images, full-size image files, reusable prompts and style comparisons.
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+cover: https://cdn.hailuoai.com/pre/2026-11-11-22/video/1794408493830239463-1794408493807.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-11-22/video/1794408493830239463-1794408493807.mp4
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-11-22/image/1794408498533675960-1794408498520.png
+- https://cdn.hailuoai.com/pre/2026-11-11-22/image/1794408499770927647-1794408499753.png
+- https://cdn.hailuoai.com/pre/2026-11-11-22/image/1794408501314324283-1794408501301.png

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN" data-composition-variables='[
+  {"id":"title","type":"string","label":"标题（先问后演）","default":"梯度下降：每一步都往坡下走","group":"文字"},
+  {"id":"eq1","type":"string","label":"公式 1（单个字母自动斜体）","default":"L(θ)","group":"公式"},
+  {"id":"eq2","type":"string","label":"公式 2（从公式 1 变形过来：同名符号移到新位置）","default":"θ ← θ − η∇L","group":"公式"},
+  {"id":"mathColors","type":"string","label":"符号配色（JSON：符号 → manim 色名或 #hex；颜色＝概念）","default":"{\"L\":\"BLUE_C\",\"θ\":\"YELLOW\",\"η\":\"GREEN_C\"}","group":"公式"},
+  {"id":"point1","type":"string","label":"要点 1（清空就不出现）","default":"算出当前位置的坡度 ∇L","group":"文字"},
+  {"id":"point2","type":"string","label":"要点 2（清空就不出现）","default":"沿反方向走一小步，步长是 η","group":"文字"},
+  {"id":"highlightIndex","type":"number","label":"最后框住第几条要点（从 0 数；-1 不框）","default":1,"min":-1,"max":9,"step":1,"group":"文字"},
+  {"id":"curve1Label","type":"string","label":"曲线 1 标签","default":"损失 L(θ)","group":"曲线"},
+  {"id":"curve1","type":"string","label":"曲线 1 数据（JSON：等距的 y 值数组）","default":"[9, 5.8, 3.4, 1.8, 1.0, 0.8, 1.0, 1.8, 3.4, 5.8, 9]","group":"曲线"},
+  {"id":"curve1Color","type":"color","label":"曲线 1 颜色","default":"#2dcff4","group":"曲线"},
+  {"id":"curve2Label","type":"string","label":"曲线 2 标签（从曲线 1 形变过来）","default":"训练中的损失","group":"曲线"},
+  {"id":"curve2","type":"string","label":"曲线 2 数据（JSON：等距的 y 值数组）","default":"[9, 6.2, 4.4, 3.2, 2.4, 1.9, 1.55, 1.3, 1.15, 1.05, 1.0]","group":"曲线"},
+  {"id":"curve2Color","type":"color","label":"曲线 2 颜色","default":"#2fddb2","group":"曲线"},
+  {"id":"duration","type":"number","label":"片长（秒；有配音时至少到配音结束）","default":10,"min":2,"max":120,"step":0.5,"group":"节奏"},
+  {"id":"pace","type":"number","label":"节奏倍率（1 原速；真片常用 2–3，3b1b 一个动画后要停约 1 秒）","default":1,"min":0.5,"max":4,"step":0.1,"group":"节奏"}
+]'>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>huashu-motion · 3b1b 式讲解</title>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/om.js"></script>
+<style>
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
+  #film { position: relative; width: 100%; height: 100%; overflow: hidden; background: #000; }
+  #c { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<!--
+  3Blue1Brown 式讲解（t1）：纯黑底，一次只放正在讲的那一个东西；字和公式都是 Write，上一个概念 Transform 成下一个。颜色＝概念名。
+  The whole film is the spec below, drawn on the canvas by vendor/clip (grammar: t1_3b1b, from huashu-art-motion, MIT).
+  - Variables fill the "{{…}}" placeholders. Timing and structure live in the cues: `at` is the second the thing first
+    shows; `word` anchors it to that word of the narration once `om voice` has run (skills/huashu-motion/references/grammars.md).
+  - An equation cue keeps hand-spaced `tokens` while its text equals `tokensFor`; edit the variable and the tokens are rebuilt
+    from the text (single letters italic, words upright, the symbol colours from mathColors).
+  - Pickable regions (0-based like the spec): title · equation · curve · point-<i>.
+  - Scenes (one label per beat): title → equation-1 → curve-1 → equation-2 → point-1 → point-2 → curve-2 → highlight-1.
+-->
+<div id="film" data-composition-id="film" data-start="0" data-width="1920" data-height="1080">
+  <!-- lang="en" on the canvas: symbols the fonts lack (−, ←, ∇) fall back to the same Latin system face as upstream; all Chinese is in the bundled fonts -->
+  <canvas id="c" lang="en" width="1920" height="1080" data-om-id="board" data-layout-allow-overflow></canvas>
+</div>
+
+<script type="application/json" id="clip-spec">
+{
+  "grammar": "t1_3b1b",
+  "duration": "{{duration}}",
+  "pace": "{{pace}}",
+  "fps": 30,
+  "cues": [
+    { "at": 0.0, "kind": "title", "text": "{{title}}" },
+    { "at": 1.2, "kind": "equation", "word": "损失", "text": "{{eq1}}", "data": { "tokensFor": "L(θ)", "tokens": [
+      { "s": "L", "it": true, "col": "BLUE_C" }, { "s": "(", "gap": 4 }, { "s": "θ", "it": true, "col": "YELLOW", "gap": 4 }, { "s": ")" } ] } },
+    { "at": 2.0, "kind": "line", "word": "曲线", "text": "{{curve1Label}}", "data": { "values": "{{curve1|json}}", "color": "{{curve1Color}}" } },
+    { "at": 3.6, "kind": "equation", "word": "更新", "text": "{{eq2}}", "data": { "tokensFor": "θ ← θ − η∇L", "tokens": [
+      { "s": "θ", "it": true, "col": "YELLOW" }, { "s": "←", "gap": 18 }, { "s": "θ", "it": true, "col": "YELLOW", "gap": 14 },
+      { "s": "−", "gap": 14 }, { "s": "η", "it": true, "col": "GREEN_C", "gap": 8 }, { "s": "∇", "gap": 4 }, { "s": "L", "it": true, "col": "BLUE_C" } ] } },
+    { "at": 4.6, "kind": "point", "word": "坡度", "text": "{{point1}}" },
+    { "at": 5.8, "kind": "point", "word": "反方向", "text": "{{point2}}" },
+    { "at": 7.0, "kind": "line", "word": "训练", "text": "{{curve2Label}}", "data": { "values": "{{curve2|json}}", "color": "{{curve2Color}}" } },
+    { "at": 8.4, "kind": "highlight", "word": "一小步", "data": { "index": "{{highlightIndex}}" } }
+  ]
+}
+</script>
+
+<script src="vendor/clip/lib/util.js"></script>
+<script src="vendor/clip/lib/paint.js"></script>
+<script src="vendor/clip/lib/kit.js"></script>
+<script src="vendor/clip/lib/motion.js"></script>
+<script src="vendor/clip/lib/camera.js"></script>
+<script src="vendor/clip/lib/diagram.js"></script>
+<script src="vendor/clip/lib/typo.js"></script>
+<script src="vendor/clip/lib/chart.js"></script>
+<script src="vendor/clip/lib/ui.js"></script>
+<script src="vendor/clip/lib/collage.js"></script>
+<script src="vendor/clip/lib/toon.js"></script>
+<script src="vendor/clip/cues.js"></script>
+<script src="vendor/clip/clip.js"></script>
+<script src="vendor/clip/grammars/t1_3b1b.js"></script>
+<script>
+  // Text → equation tokens: single letters italic, letter runs (softmax) upright, a little air around operators.
+  const OPS = /^[←→⇒=≈≠<>≤≥+−×÷·-]$/;
+  function mathTokens(text, colors) {
+    const parts = (String(text).match(/[A-Za-z]{2,}|\S/gu) || []).flatMap((s) => (s.length > 1 && !/[a-z]/.test(s) ? [...s] : [s]));
+    const toks = parts.map((s) => ({ s, it: /^[a-zA-Zα-ωΑ-Ω]$/.test(s) && s !== '∇', ...(colors[s] ? { col: colors[s] } : {}) }));
+    toks.forEach((tk, i) => { if (OPS.test(tk.s)) { tk.gap = 14; if (i) toks[i - 1].gap = 14; } });
+    return toks;
+  }
+
+  const tl = gsap.timeline({ paused: true });
+  CLIP.mount({
+    id: 'film',
+    tl,
+    apply(spec, V) {
+      const colors = CLIP.json(V.mathColors, {}, 'mathColors') || {};
+      for (const q of spec.cues) {
+        if (q.kind === 'equation') {
+          if (!q.data || q.text !== q.data.tokensFor) q.data = { tokens: mathTokens(q.text, colors) };
+          else q.data.tokens = q.data.tokens.map((tk) => (colors[tk.s] ? { ...tk, col: colors[tk.s] } : tk));
+        }
+        if (q.kind === 'line' && !Array.isArray(q.data.values)) CLIP.problem('曲线数据要是数字数组，如 [9, 5, 3, 2]');
+      }
+      const points = spec.cues.filter((q) => q.kind === 'point').length;
+      for (const q of spec.cues) if (q.kind === 'highlight' && q.data.index >= points) CLIP.problem(`highlightIndex ${q.data.index} 超出了要点数（${points} 条）`);
+      spec.cues = spec.cues.filter((q) => !(q.kind === 'equation' && !String(q.text || '').trim()) && !(q.kind === 'highlight' && !(q.data.index >= 0 && q.data.index < points)));
+      return spec;
+    },
+  });
+  window.__timelines['film'] = tl;
+</script>
+</body>
+</html>

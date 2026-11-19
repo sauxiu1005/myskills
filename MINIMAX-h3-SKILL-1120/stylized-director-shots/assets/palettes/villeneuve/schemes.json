@@ -1,0 +1,190 @@
+{
+  "director_zh": "丹尼斯·维伦纽瓦",
+  "director_en": "Denis Villeneuve",
+  "schemes": [
+    {
+      "id": "V1",
+      "name_zh": "降临雾灰",
+      "name_en": "Arrival mist gray",
+      "film": "降临 Arrival (2016)",
+      "fits": "等待、接触未知、悲伤或沉思；阴天、雾、室内冷光的剧情",
+      "avoid": "需要暖色情绪释放或强烈色彩事件的剧情",
+      "light": "阴天大面积漫射光或雾中逆光，几乎无硬阴影；高光不过曝",
+      "contrast": "中低反差，靠明度层次而非彩度区分",
+      "roles": {
+        "background_main": {
+          "hex": [
+            "#96A29C",
+            "#747F7F"
+          ],
+          "desc": "雾、天空、墙面等大面积环境的灰绿雾灰",
+          "provenance": "user_real_palette_unverified",
+          "suggested_area": "建议 50–60%"
+        },
+        "shadow": {
+          "hex": [
+            "#283637",
+            "#0E1D20"
+          ],
+          "desc": "深青灰暗部与舱体/剪影",
+          "provenance": "user_real_palette_unverified",
+          "suggested_area": "建议 25–35%"
+        },
+        "light_highlight": {
+          "hex": [
+            "#A8B5AB"
+          ],
+          "desc": "雾中柔和的冷白高光",
+          "provenance": "user_real_palette_unverified",
+          "suggested_area": "建议 5–10%"
+        },
+        "accent_small": {
+          "hex": [],
+          "desc": "默认不设强调色；剧本有关键物时用明度（更亮或更暗）而非饱和色突出",
+          "provenance": "manual_suggestion"
+        },
+        "skin_protection": {
+          "hex": [],
+          "desc": "保留角色原本肤色，不被环境青灰染偏；面部留足中间调",
+          "provenance": "manual_suggestion"
+        }
+      },
+      "cross_check": "与本技能对 assets/stills/villeneuve/film-03-frame-03.jpg 的取样（#8B9896 #28353A #A2B1AB 等）方向一致",
+      "sources": [
+        "assets/user-sources/villeneuve/palette.json",
+        "assets/user-sources/villeneuve/reference_sources.md",
+        "https://theasc.com/article/arrival-cinematography-bradford-young/"
+      ],
+      "stills": [
+        "assets/stills/villeneuve/film-03-frame-03.jpg"
+      ],
+      "generation_card": "assets/palettes/villeneuve/V1-card.png"
+    },
+    {
+      "id": "V2",
+      "name_zh": "沙丘2沙金",
+      "name_en": "Dune Part Two sand gold",
+      "film": "沙丘2 Dune: Part Two (2024)",
+      "fits": "烈日、荒原、命运或宣誓感的剧情；室外强自然光",
+      "avoid": "阴冷、雨雾或城市夜景剧情",
+      "light": "强自然顶光或侧逆光，沙尘让远处变淡；阴影浓但有层次",
+      "contrast": "中高反差，高光克制",
+      "roles": {
+        "background_main": {
+          "hex": [
+            "#C7C0B5",
+            "#835B3C"
+          ],
+          "desc": "被尘雾冲淡的浅沙色天空/地面，与深一些的赭褐沙丘",
+          "provenance": "user_real_palette_unverified",
+          "suggested_area": "建议 50–60%"
+        },
+        "shadow": {
+          "hex": [
+            "#392C26",
+            "#1C1513"
+          ],
+          "desc": "暖褐近黑的阴影与岩石",
+          "provenance": "user_real_palette_unverified",
+          "suggested_area": "建议 25–30%"
+        },
+        "light_highlight": {
+          "hex": [
+            "#D4AC6E"
+          ],
+          "desc": "沙漠金色阳光高光",
+          "provenance": "user_design_suggestion",
+          "suggested_area": "建议 5–10%"
+        },
+        "accent_small": {
+          "hex": [
+            "#E67E22"
+          ],
+          "desc": "只用于剧本中真实存在的火光、落日或灯；无此光源时不出现",
+          "provenance": "user_design_suggestion",
+          "suggested_area": "建议 ≤3%"
+        },
+        "skin_protection": {
+          "hex": [],
+          "desc": "保留角色原本肤色，阳光只影响明暗与高光，不把肤色整体染成沙金或橙色",
+          "provenance": "manual_suggestion"
+        }
+      },
+      "cross_check": "与本技能对 assets/stills/villeneuve/film-04-frame-04.jpg 的取样（#D1C7BD #29221D #886A51 等）方向一致",
+      "sources": [
+        "assets/user-sources/villeneuve/palette.json",
+        "assets/user-sources/villeneuve/reference_sources.md",
+        "https://theasc.com/article/expanding-view-dune-part-two/"
+      ],
+      "stills": [
+        "assets/stills/villeneuve/film-04-frame-04.jpg"
+      ],
+      "generation_card": "assets/palettes/villeneuve/V2-card.png"
+    },
+    {
+      "id": "V3",
+      "name_zh": "宿敌黄雾",
+      "name_en": "Enemy yellow haze",
+      "film": "宿敌 Enemy (2013)",
+      "fits": "城市、室内、身份不安或心理压迫的剧情",
+      "avoid": "开阔自然景观、需要干净空气感的剧情",
+      "light": "雾霾般浑浊的弥散光，暗部偏黄绿黑",
+      "contrast": "中反差，暗部大面积下沉",
+      "roles": {
+        "background_main": {
+          "hex": [
+            "#8A7447",
+            "#5A582D"
+          ],
+          "desc": "浑浊的土黄与橄榄黄环境",
+          "provenance": "user_real_palette_unverified",
+          "suggested_area": "建议 45–55%"
+        },
+        "shadow": {
+          "hex": [
+            "#2D2711",
+            "#070908"
+          ],
+          "desc": "黄绿黑暗部",
+          "provenance": "user_real_palette_unverified",
+          "suggested_area": "建议 30–40%"
+        },
+        "light_highlight": {
+          "hex": [
+            "#B3AE81"
+          ],
+          "desc": "雾霾中发闷的黄灰高光",
+          "provenance": "user_real_palette_unverified",
+          "suggested_area": "建议 5–10%"
+        },
+        "accent_small": {
+          "hex": [],
+          "desc": "默认不设强调色",
+          "provenance": "manual_suggestion"
+        },
+        "skin_protection": {
+          "hex": [],
+          "desc": "保留角色原本肤色，不被黄雾染成蜡黄",
+          "provenance": "manual_suggestion"
+        }
+      },
+      "cross_check": "与本技能对 assets/stills/villeneuve/film-02-frame-01.jpg 的取样（#846C42 #16170C #937A4D 等）方向一致",
+      "sources": [
+        "assets/user-sources/villeneuve/palette.json",
+        "assets/user-sources/villeneuve/reference_sources.md"
+      ],
+      "stills": [
+        "assets/stills/villeneuve/film-02-frame-01.jpg"
+      ],
+      "generation_card": "assets/palettes/villeneuve/V3-card.png"
+    }
+  ],
+  "schema_note": "颜色按角色组织：背景主色、阴影、光源高光、小面积强调色、肤色保护。肤色保护不提供色值，含义是保留每个角色原本的肤色、只受光照影响，不把不同肤色统一成某个色值。面积为建议值，不是实测。方案之间互斥，一次只用一个。",
+  "provenance_legend": {
+    "user_real_palette_unverified": "用户资料 real_palettes 中的色值；用户 JSON 的 sources 字段为空，已按片名关联其 reference_sources.md（FilmGrab）；取色方法与样本未核实，不是官方 LUT 或全片像素统计。",
+    "user_design_suggestion": "用户提供色卡中的设计建议色值（含占比/对比度描述）；无实测定义，不是官方 LUT 或全片统计。",
+    "sampled_from_user_still": "本技能用代码对用户提供的单张截图做 6 色中位切分取样得到的近似色；只代表该帧，不代表全片。",
+    "manual_suggestion": "本技能根据作品观感与制作访谈文字人工转译的建议色值，不是从影片提取。"
+  },
+  "generation_negative": "不要把色卡上的色块、文字、编号或排版画进成片；色卡只控制影调、光色和色彩角色，不决定构图、机位、人物或场景；不复制任何电影角色、服装、道具或场景。"
+}

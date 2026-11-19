@@ -1,0 +1,463 @@
+{
+  "director": {
+    "id": "005",
+    "name_en": "Denis Villeneuve",
+    "name_zh": "丹尼斯·维伦纽瓦",
+    "category": "01_黑色悬疑与冷调惊悚",
+    "nationality": "加拿大",
+    "active_years": "1994-至今",
+    "era": "1994-至今"
+  },
+  "palette": {
+    "primary": [
+      {
+        "code": "C01",
+        "hex": "#6B6658",
+        "name_zh": "尘土灰褐",
+        "name_en": "Dusty Gray Brown",
+        "ratio": 0.38,
+        "rgb": [
+          107,
+          102,
+          88
+        ],
+        "hsl": [
+          44,
+          10,
+          38
+        ]
+      },
+      {
+        "code": "C02",
+        "hex": "#2C363F",
+        "name_zh": "铁灰蓝黑",
+        "name_en": "Iron Gray Blue Black",
+        "ratio": 0.2,
+        "rgb": [
+          44,
+          54,
+          63
+        ],
+        "hsl": [
+          208,
+          18,
+          21
+        ]
+      },
+      {
+        "code": "C03",
+        "hex": "#C89B5A",
+        "name_zh": "尘土橙黄",
+        "name_en": "Dusty Orange Yellow",
+        "ratio": 0.15,
+        "rgb": [
+          200,
+          155,
+          90
+        ],
+        "hsl": [
+          35,
+          50,
+          57
+        ]
+      },
+      {
+        "code": "C04",
+        "hex": "#8FA0A8",
+        "name_zh": "雾霾灰蓝",
+        "name_en": "Haze Gray Blue",
+        "ratio": 0.1,
+        "rgb": [
+          143,
+          160,
+          168
+        ],
+        "hsl": [
+          199,
+          13,
+          61
+        ]
+      },
+      {
+        "code": "C05",
+        "hex": "#4A5240",
+        "name_zh": "军绿橄榄",
+        "name_en": "Military Olive Green",
+        "ratio": 0.09,
+        "rgb": [
+          74,
+          82,
+          64
+        ],
+        "hsl": [
+          87,
+          12,
+          29
+        ]
+      },
+      {
+        "code": "C06",
+        "hex": "#D9C7A7",
+        "name_zh": "沙漠肤",
+        "name_en": "Desert Skin Tone",
+        "ratio": 0.08,
+        "rgb": [
+          217,
+          199,
+          167
+        ],
+        "hsl": [
+          38,
+          40,
+          75
+        ]
+      }
+    ],
+    "emotional": [
+      {
+        "code": "E01",
+        "hex": "#E67E22",
+        "name_zh": "落日橙",
+        "name_en": "Sunset Orange",
+        "emotion": "启示、临界时刻、新世界的开始",
+        "rgb": [
+          230,
+          126,
+          34
+        ],
+        "hsl": [
+          28,
+          80,
+          52
+        ]
+      },
+      {
+        "code": "E02",
+        "hex": "#34495E",
+        "name_zh": "深渊灰蓝",
+        "name_en": "Abyss Gray Blue",
+        "emotion": "未知、敬畏、人类的渺小",
+        "rgb": [
+          52,
+          73,
+          94
+        ],
+        "hsl": [
+          210,
+          29,
+          29
+        ]
+      },
+      {
+        "code": "E03",
+        "hex": "#D4AC6E",
+        "name_zh": "沙漠金",
+        "name_en": "Desert Gold",
+        "emotion": "神性、超越、时间的永恒",
+        "rgb": [
+          212,
+          172,
+          110
+        ],
+        "hsl": [
+          36,
+          54,
+          63
+        ]
+      },
+      {
+        "code": "E04",
+        "hex": "#17202A",
+        "name_zh": "虚空黑",
+        "name_en": "Void Black",
+        "emotion": "虚无、死亡、宇宙的沉默",
+        "rgb": [
+          23,
+          32,
+          42
+        ],
+        "hsl": [
+          212,
+          29,
+          13
+        ]
+      }
+    ]
+  },
+  "lighting": {
+    "key_light": "柔和侧逆光，自然光源为主，尺度感强",
+    "highlight_tint": "尘土橙黄（沙漠落日/火星光）",
+    "shadow_tint": "铁灰蓝偏冷（雾霾/阴影/宇宙）",
+    "contrast_ratio": "中高对比（60-75%），柔和过渡",
+    "overall_tone": "冷暖平衡，55%冷灰蓝 + 45%暖橙黄"
+  },
+  "composition_keywords": [
+    "巨大尺度构图",
+    "对称几何",
+    "低角度仰拍巨物",
+    "广角远景",
+    "剪影轮廓",
+    "雾霾大气透视",
+    "极简构图",
+    "空间压迫",
+    "人物渺小化",
+    "缓慢推轨"
+  ],
+  "color_keywords": [
+    "雾霾灰橙",
+    "沙漠尘土色调",
+    "冷黄调",
+    "低饱和处理",
+    "大气透视",
+    "剪影光效",
+    "金属冷灰",
+    "橙色落日",
+    "蓝色阴翳",
+    "沙粒质感"
+  ],
+  "mood_keywords": [
+    "存在主义敬畏",
+    "宇宙尺度",
+    "时间的重量",
+    "未知的恐惧",
+    "伦理困境",
+    "宿命感",
+    "孤独",
+    "启示录感",
+    "静默的庄严",
+    "人类的渺小"
+  ],
+  "real_palettes": [
+    {
+      "title_zh": "焦土之城",
+      "title_en": "Incendies",
+      "year": 2010,
+      "palette": [
+        {
+          "hex": "#B4AB9C",
+          "ratio": 15.8,
+          "luminance": 0.4123,
+          "saturation": 0.1333
+        },
+        {
+          "hex": "#1C2816",
+          "ratio": 12.8,
+          "luminance": 0.0182,
+          "saturation": 0.45
+        },
+        {
+          "hex": "#707064",
+          "ratio": 12.7,
+          "luminance": 0.1595,
+          "saturation": 0.1071
+        },
+        {
+          "hex": "#B6A389",
+          "ratio": 12.1,
+          "luminance": 0.3795,
+          "saturation": 0.2473
+        },
+        {
+          "hex": "#080808",
+          "ratio": 12.0,
+          "luminance": 0.0024,
+          "saturation": 0.0
+        },
+        {
+          "hex": "#43453A",
+          "ratio": 11.8,
+          "luminance": 0.0576,
+          "saturation": 0.1594
+        },
+        {
+          "hex": "#5C5E55",
+          "ratio": 11.6,
+          "luminance": 0.1094,
+          "saturation": 0.0957
+        },
+        {
+          "hex": "#CEBAA1",
+          "ratio": 11.2,
+          "luminance": 0.5081,
+          "saturation": 0.2184
+        }
+      ],
+      "sources": []
+    },
+    {
+      "title_zh": "宿敌",
+      "title_en": "Enemy",
+      "year": 2013,
+      "palette": [
+        {
+          "hex": "#070908",
+          "ratio": 15.8,
+          "luminance": 0.0026,
+          "saturation": 0.2222
+        },
+        {
+          "hex": "#8A7447",
+          "ratio": 14.8,
+          "luminance": 0.1835,
+          "saturation": 0.4855
+        },
+        {
+          "hex": "#5A582D",
+          "ratio": 14.2,
+          "luminance": 0.0934,
+          "saturation": 0.5
+        },
+        {
+          "hex": "#B3AE81",
+          "ratio": 13.2,
+          "luminance": 0.4144,
+          "saturation": 0.2793
+        },
+        {
+          "hex": "#2D2711",
+          "ratio": 11.3,
+          "luminance": 0.0205,
+          "saturation": 0.6222
+        },
+        {
+          "hex": "#423E1F",
+          "ratio": 11.1,
+          "luminance": 0.047,
+          "saturation": 0.5303
+        },
+        {
+          "hex": "#16160B",
+          "ratio": 10.1,
+          "luminance": 0.0077,
+          "saturation": 0.5
+        },
+        {
+          "hex": "#6B551E",
+          "ratio": 9.5,
+          "luminance": 0.0972,
+          "saturation": 0.7196
+        }
+      ],
+      "sources": []
+    },
+    {
+      "title_zh": "降临",
+      "title_en": "Arrival",
+      "year": 2016,
+      "palette": [
+        {
+          "hex": "#36372B",
+          "ratio": 17.1,
+          "luminance": 0.0369,
+          "saturation": 0.2182
+        },
+        {
+          "hex": "#283637",
+          "ratio": 14.0,
+          "luminance": 0.0337,
+          "saturation": 0.2727
+        },
+        {
+          "hex": "#96A29C",
+          "ratio": 13.5,
+          "luminance": 0.3472,
+          "saturation": 0.0741
+        },
+        {
+          "hex": "#060A09",
+          "ratio": 13.4,
+          "luminance": 0.0028,
+          "saturation": 0.4
+        },
+        {
+          "hex": "#485558",
+          "ratio": 12.7,
+          "luminance": 0.0858,
+          "saturation": 0.1818
+        },
+        {
+          "hex": "#747F7F",
+          "ratio": 10.8,
+          "luminance": 0.2042,
+          "saturation": 0.0866
+        },
+        {
+          "hex": "#A8B5AB",
+          "ratio": 9.4,
+          "luminance": 0.4431,
+          "saturation": 0.0718
+        },
+        {
+          "hex": "#0E1D20",
+          "ratio": 9.1,
+          "luminance": 0.0108,
+          "saturation": 0.5625
+        }
+      ],
+      "sources": []
+    },
+    {
+      "title_zh": "沙丘2",
+      "title_en": "Dune: Part 2",
+      "year": 2024,
+      "palette": [
+        {
+          "hex": "#C7C0B5",
+          "ratio": 18.0,
+          "luminance": 0.5318,
+          "saturation": 0.0905
+        },
+        {
+          "hex": "#1C1513",
+          "ratio": 16.3,
+          "luminance": 0.0083,
+          "saturation": 0.3214
+        },
+        {
+          "hex": "#835B3C",
+          "ratio": 13.7,
+          "luminance": 0.1263,
+          "saturation": 0.542
+        },
+        {
+          "hex": "#392C26",
+          "ratio": 11.7,
+          "luminance": 0.0281,
+          "saturation": 0.3333
+        },
+        {
+          "hex": "#553F31",
+          "ratio": 11.6,
+          "luminance": 0.0571,
+          "saturation": 0.4235
+        },
+        {
+          "hex": "#6D4931",
+          "ratio": 11.0,
+          "luminance": 0.0824,
+          "saturation": 0.5505
+        },
+        {
+          "hex": "#272422",
+          "ratio": 9.0,
+          "luminance": 0.0181,
+          "saturation": 0.1282
+        },
+        {
+          "hex": "#6D5240",
+          "ratio": 8.7,
+          "luminance": 0.0966,
+          "saturation": 0.4128
+        }
+      ],
+      "sources": []
+    }
+  ],
+  "style_profile": {
+    "definition": "沙金、巨构灰和深青蓝用单一主色控制宏大科幻世界。",
+    "lighting": "强自然顶光、体积雾、建筑反射光；肤色保持可读，不让环境偏色吞没面部层次。",
+    "framing": "巨构大全景、缓慢推进、中心尺度对比；先交代颜色承载的空间，再进入人物与关键物件。",
+    "grading": "每场单主色，低饱和，高光克制；高光、中间调和阴影分别处理，局部强调色不污染全画面。",
+    "avoid": "青橙全局、杂色未来城、快切失去尺度、无动机环绕和随机变焦、用统一滤镜替代色彩比例、光源和材质。"
+  }
+}

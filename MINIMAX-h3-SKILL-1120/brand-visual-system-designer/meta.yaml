@@ -1,0 +1,37 @@
+display-name-zh: 品牌视觉系统设计
+version: 1.0.0
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Creative Generation
+complete-tags-cn:
+- 商业广告 / 创作生成
+summary-en: Turn briefs, existing assets and references into a consistent visual identity, application designs and brand guidelines with editable Illustrator masters.
+summary-cn: 从文字、现有资产与参考出发，建立统一视觉系统、应用设计及品牌手册，交付可编辑母版。
+desc-en: For brand teams and designers creating or extending a visual identity, this workflow accepts text briefs, existing brand assets, reference brands or mixed materials. It develops positioning and aesthetic directions, explores or preserves logos, defines typography and color, and extends approved assets into symbols, patterns and practical applications. Stage approvals keep decisions traceable while Adobe Illustrator produces editable logo, graphic and manual masters after their respective designs are approved. Deliverables include application artwork, scoped concept imagery, organized source resources and a proofread reading PDF. Best for systematic brand creation and upgrades, not isolated retouching, trademark legal clearance or manufacturing guarantees. Native source delivery requires an available, authorized Illustrator installation.
+desc-cn: 面向创建或延展品牌视觉系统的团队与设计协作者，支持文字简报、现有品牌资产、参考品牌及混合材料。先明确定位与审美方向，再探索或承接标志，建立字体、色彩、图形及应用规则，通过阶段确认保持一致。标志、辅助图形与手册定稿后，分别使用 Illustrator 制作可编辑母版，并整理资源、授权依据与校对后的阅读版 PDF。适合品牌创建、升级及系统性 VI，不代替商标法律检索或量产打样；原生源文件交付依赖可用且获授权的软件。
+structured-info:
+  zh-CN:
+    summary: 从文字、现有品牌资产或参考出发，分阶段建立定位、Logo、字体、色彩、图形与 VI 应用，并以 Illustrator 交付可编辑母版与品牌手册。
+    best-for:
+    - 新品牌创建
+    - 品牌升级延展
+    - 品牌手册制作
+    how-to-use: 提供品牌名称、业务与受众，可附已有标志和参考，说明交付范围并逐阶段确认。
+    outputs: 品牌简报、Logo 与可编辑 .ai 母版、字体与色彩规范、图标与辅助图形、VI 应用与效果图、品牌手册 .ai 与阅读版 PDF。
+  en-US:
+    summary: Build positioning, logo, typography, color, graphics and VI applications stage by stage from briefs, existing assets or references, delivering editable Illustrator masters and brand guidelines.
+    best-for:
+    - New Brand Creation
+    - Rebrands & VI Extensions
+    - Brand Guidelines
+    how-to-use: Provide the brand name, business and audience, optionally with existing logos and references; specify deliverables and approve each stage.
+    outputs: Brand brief, logo with editable .ai master, type and color specifications, icons and supporting graphics, VI applications and mockups, and a guidelines .ai with reading PDF.
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318756086229274-1794318756030.mp4
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318755720502206-1794318755671.mp4
+cover: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318754934628264-1794318754916.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318754934628264-1794318754916.mp4

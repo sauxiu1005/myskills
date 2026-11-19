@@ -1,0 +1,28 @@
+display-name-zh: 风格化导演镜头
+version: 1.0.0
+tag-en: "Professional Film"
+tag-cn: "专业影视"
+complete-tags-en:
+  - "Professional Film / Intent Brainstorming"
+complete-tags-cn:
+  - "专业影视 / 意图脑爆"
+summary-en: "From a script or one-line story, it plans shots with a chosen director's camera, editing and sound rules, locks the look with dedicated color cards, and produces a shot list, prompts and a short film."
+summary-cn: "从剧本或一句故事出发，按所选导演的运镜、剪辑与声音规则拆镜，并用专属色卡锁定影调，产出镜头表、提示词与短片。"
+desc-en: "For creators, directors and storyboard artists who want an existing story executed in one director's audiovisual language without rewriting it. The user provides a script, storyboard, outline or action line, then picks aspect ratio, duration and resolution. The Skill lets the user choose Burton, Villeneuve, Snyder or Edgar Wright, or name another director whose stills it analyzes into new color cards; locks dialogue, characters and causality; picks one color scheme and maps each beat to composition, camera start and end points, cuts and sound; and uploads the text-free color card as the first reference on every generation. It delivers a shot list with prompts and, on request, an edited film. It does not mix directors, change the plot, or pass still-image zooms off as camera moves."
+desc-cn: "面向创作者、导演与分镜师，用一位导演的视听语言执行已有剧情，不改写故事。用户提供剧本、分镜、梗概或一句动作，并在询问框中选定画幅、时长与分辨率。流程：先从伯顿、维伦纽瓦、施奈德、赖特中选导演，或输入其他导演，由剧照分析风格并取色生成色卡；再锁定台词、角色与因果；然后选一套配色方案，把每个节拍落实为构图、运镜起终点、切点与声音；生成时把无文字色卡作为第一张参考图。交付镜头表与提示词，按需生成并剪辑成片。不混搭导演，不改剧情，不把静帧缩放冒充运镜。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/07a36304-2dc6-4c68-8c45-0d6310407fcf.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/07a36304-2dc6-4c68-8c45-0d6310407fcf.mp4
+structured-info:
+  zh-CN:
+    summary: "把你的故事交给一位导演来拍，运镜、剪辑、声音都按其风格设计，专属色卡锁定影调。"
+    best-for: [导演风格片, 色卡生成, 镜头提示词]
+    how-to-use: "提供剧本或一句故事，选择导演、画幅、时长与分辨率，先审核方案再生成。"
+    outputs: "所选配色方案与色卡、含运镜、切点与声音的镜头表和提示词，以及按需生成的成片。"
+  en-US:
+    summary: "Have your story shot by one director's style, with camera, editing and sound designed to match and dedicated color cards locking the look."
+    best-for: [Director-style shorts, Color-card-referenced generation, Shot lists with prompts]
+    how-to-use: "Send a script or one-line story, pick a director (or name another), then set aspect ratio, duration and resolution; review the plan before generating the film."
+    outputs: "The chosen color scheme and card, a shot list with camera, cuts, sound and prompts, plus a generated film on request."

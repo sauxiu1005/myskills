@@ -1,0 +1,119 @@
+{
+  "director_id": "stanley-kwan",
+  "director_name_zh": "关锦鹏",
+  "source": {
+    "path": "第3期_SKILL_动画柔光东方_141-200/09_浪漫柔光与复古色调/165_StanleyKwan_关锦鹏/色卡主文档.md",
+    "sha256": "ad5489b950e3580b838c44f4798171dce640e99157f6a88b752bb9b51ffcc0cf"
+  },
+  "color_space": "sRGB",
+  "evidence": "source_document_hex_not_frame_sampled",
+  "display": "Equal-size swatches; no fixed frame-area ratios. Accent labels retain source associations, not universal emotional meanings.",
+  "main": [
+    {
+      "id": "C01",
+      "label_zh": "胭脂红",
+      "hex": "#C62828",
+      "rgb": [
+        198,
+        40,
+        40
+      ]
+    },
+    {
+      "id": "C02",
+      "label_zh": "怀旧黄",
+      "hex": "#FFCC80",
+      "rgb": [
+        255,
+        204,
+        128
+      ]
+    },
+    {
+      "id": "C03",
+      "label_zh": "老香港棕",
+      "hex": "#5D4037",
+      "rgb": [
+        93,
+        64,
+        55
+      ]
+    },
+    {
+      "id": "C04",
+      "label_zh": "岁月棕",
+      "hex": "#8D6E63",
+      "rgb": [
+        141,
+        110,
+        99
+      ]
+    },
+    {
+      "id": "C05",
+      "label_zh": "胭脂粉",
+      "hex": "#FFAB91",
+      "rgb": [
+        255,
+        171,
+        145
+      ]
+    },
+    {
+      "id": "C06",
+      "label_zh": "深棕",
+      "hex": "#3E2723",
+      "rgb": [
+        62,
+        39,
+        35
+      ]
+    }
+  ],
+  "accent": [
+    {
+      "id": "E01",
+      "label_zh": "情欲燃烧",
+      "hex": "#C62828",
+      "rgb": [
+        198,
+        40,
+        40
+      ],
+      "label_kind": "source_mood_label"
+    },
+    {
+      "id": "E02",
+      "label_zh": "怀旧追忆",
+      "hex": "#FFCC80",
+      "rgb": [
+        255,
+        204,
+        128
+      ],
+      "label_kind": "source_mood_label"
+    },
+    {
+      "id": "E03",
+      "label_zh": "岁月沧桑",
+      "hex": "#5D4037",
+      "rgb": [
+        93,
+        64,
+        55
+      ],
+      "label_kind": "source_mood_label"
+    },
+    {
+      "id": "E04",
+      "label_zh": "温柔女性",
+      "hex": "#FFAB91",
+      "rgb": [
+        255,
+        171,
+        145
+      ],
+      "label_kind": "source_mood_label"
+    }
+  ]
+}

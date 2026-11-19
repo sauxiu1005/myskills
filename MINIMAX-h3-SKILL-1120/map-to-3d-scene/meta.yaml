@@ -1,0 +1,36 @@
+display-name-zh: 地图转3D场景
+version: "1.0.1"
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+complete-tags-en:
+- Creative & Experimental / Creative Generation
+complete-tags-cn:
+- 创意实验 / 创作生成
+summary-en: Generate a realistic 3D game scene image from an uploaded 2D map, preserving major terrain and spatial relationships and including a compact orientation map.
+summary-cn: 根据上传的二维地图，保留主要地貌与空间关系，生成带简洁方位小地图的写实3D游戏场景图。
+desc-en: "Create realistic game scene images for environment concept design, map visualization, and worldbuilding from a 2D map with a location arrow. Upload the original map and choose a resolution. Read terrain, roads, waterways, and the camera marker, then generate the environment and upper-left minimap together. The default first-person view uses an eye height of approximately 1.7 meters and a 70-degree field of view. Check the main scene for navigation graphics, text annotations, and legends. If present, perform one automatic cleanup and compare before and after within that scope. Deliver one 16:9 image, retaining versions. Outputs are visual concepts, not editable 3D models or survey-grade reconstructions; exact geographic correspondence is not guaranteed."
+desc-cn: "面向游戏环境概念设计、地图场景化展示与世界观探索，将带定位箭头的二维地图转为写实游戏场景图。上传原图并选择分辨率后，读取地形、道路、水系及箭头机位，默认以约1.7米眼高、70°视野的第一人称视角，一次生成含左上角小地图的完整画面。生成后限定检查主场景中的箭头、文字注解和图例，有残留则自动清除一次，前后对照复核后交付16:9图片并保留版本。不提供可编辑三维模型或测绘级重建，也不保证精确地理对应。"
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 把地图中的地理布局呈现为有体积、材质和光照的游戏环境画面。
+    best-for:
+    - 地图场景化
+    - 游戏环境概念
+    - 世界观探索
+    how-to-use: 上传带定位箭头的地图并选择分辨率，一次生成完整画面，必要时清除残留并复核。
+    outputs: 带左上角方位小地图的写实游戏场景图，默认横版16:9。
+  en-US:
+    summary: Visualize map geography as a game environment with volume, materials, and lighting.
+    best-for:
+    - Map Visualization
+    - Environment Concepts
+    - Worldbuilding
+    how-to-use: Upload a map with a location arrow and choose resolution; generate the complete image in one pass, then remove residual overlays if needed and recheck.
+    outputs: A realistic game scene image with an upper-left orientation map, landscape 16:9 by default.
+cover: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318848786380559-1794318848776.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318848786380559-1794318848776.mp4
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-10-21/image/1794318853230077648-1794318853212.png

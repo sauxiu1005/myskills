@@ -1,0 +1,28 @@
+{
+  "lightTypes": {
+    "spotlight": [
+      "Direct Light",
+      "Bright illumination with clear contrast between light and shadow (Avoid high color saturation). Highlights are intense but controlled, and shadows have clear and defined edges, emphasizing the subject and its contours. "
+    ],
+    "rectarealight": [
+      "Soft Light",
+      "Bright illumination with smooth transitions between light and shadow. Highlights are moderate, and shadows are soft with gently blended edges."
+    ],
+    "directionallight": [
+      "Ambient Skylight",
+      "Broad, even illumination from a consistent direction. It lifts the overall brightness and establishes the main light direction. Shadows remain clean and slightly firm, without appearing harsh. "
+    ]
+  },
+  "backgrounds": {
+    "default": "",
+    "black": "Replace the original background with a neutral black seamless studio backdrop, while keeping all foreground subjects, composition, and proportions unchanged. Pay attention to the studio texture, light and shadow.",
+    "white": "Replace the original background with a neutral white seamless studio backdrop, while keeping all foreground subjects, composition, and proportions unchanged. Pay attention to the studio texture, light and shadow."
+  },
+  "effects": {
+    "Tyndall": "丁达尔效应,空气中悬浮的尘埃颗粒,雾气感,高光溢出,梦幻朦胧,轮廓光边缘",
+    "Blinds": "画面中的强光呈现百叶窗栅格的光影,电影感",
+    "Caustic Refraction": "焦散,水面波光光线折射,涟漪反射光效果,高对比度硬光,斑驳且清晰的光斑纹理,梦幻光感,伴随棱镜色散的彩虹光晕",
+    "Chiaroscuro Drama": "硬光,高对比度,低调摄影,明暗对照法,戏剧性阴影,电影质感,强调面部立体感",
+    "Realistic Diffuse": "柔和漫射光,自然光,低对比度,电影感,平光,现实主义风格,冷色调,灰白色,低饱和度,阴天散射光"
+  }
+}

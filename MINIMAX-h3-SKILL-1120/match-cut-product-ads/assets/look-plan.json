@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "record_type": "production_notes_not_api",
+  "intent": null,
+  "reference_evidence": [],
+  "identity_reference": null,
+  "product_reference": null,
+  "global_look": {
+    "palette": null,
+    "skin_rendering": null,
+    "material_separation": null,
+    "grading_limits": null
+  },
+  "shots": [
+    {
+      "shot_id": null,
+      "relay_id": null,
+      "person_and_task": null,
+      "gaze_and_reaction": null,
+      "light": {
+        "key_source": null,
+        "direction": null,
+        "softness": null,
+        "shadow_side": null,
+        "background_level": null,
+        "practical_or_secondary": null,
+        "motivated_change": null
+      },
+      "space": {
+        "foreground": null,
+        "subject": null,
+        "background_distance": null
+      },
+      "camera": {
+        "shot_size": null,
+        "height_and_perspective": null,
+        "focal_length_intent_not_measured": null,
+        "focus_target": null,
+        "movement_and_reason": null
+      },
+      "material_cues": [],
+      "action_phases": [],
+      "continuity_lock": [],
+      "still_prompt": null,
+      "video_prompt": null,
+      "actual_asset_id": null,
+      "source_fps": null,
+      "selected_interval": null,
+      "review": {
+        "identity_and_skin": {
+          "status": "pending",
+          "evidence": null
+        },
+        "lighting": {
+          "status": "pending",
+          "evidence": null
+        },
+        "materials_and_space": {
+          "status": "pending",
+          "evidence": null
+        },
+        "performance_and_contact": {
+          "status": "pending",
+          "evidence": null
+        },
+        "camera_and_temporal_stability": {
+          "status": "pending",
+          "evidence": null
+        }
+      },
+      "retry": {
+        "failure": null,
+        "single_primary_change": null,
+        "result": null
+      }
+    }
+  ]
+}

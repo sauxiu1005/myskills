@@ -1,0 +1,37 @@
+display-name-zh: APP 界面流程动效
+version: 1.0.0
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Creative Generation
+complete-tags-cn:
+- 商业广告 / 创作生成
+summary-en: For app and website launches and feature introductions, verifies real flows from screenshots, URLs or reference videos and creates loopable minimalist motion.
+summary-cn: 适合 APP 与网站的产品发布和功能介绍，基于截图、网址或参考视频核验真实流程，制作可循环的极简动效。
+desc-en: For teams presenting real app, website or SaaS features, accepts screenshots, operation recordings, reference videos, URLs or product names, plus format, duration and music requirements. It first verifies features, copy and interaction feedback against user materials and official sources, recording evidence and gaps. After confirming brand-faithful or minimalist redrawing, it plans beats, codes seamless interface morphs and synchronizes motion to rhythm. Deliverables include an MP4, editable source, feature verification table and timeline; analysis or planning alone is also supported. It does not invent product capabilities or bypass login restrictions, and is not for live-action ads or ordinary web development. Access to real sites depends on available browsing capabilities and user permissions.
+desc-cn: 适合需要展示真实 APP、网站或 SaaS 功能的团队。可上传截图、操作录屏、参考视频，提供网址或产品名称，补充画幅、时长和音乐。先从用户素材与官方资料核验功能、文案和操作反馈，记录来源，再确认品牌还原或极简重绘方向，规划逐拍时间表，用代码绘制连续变形的界面并对齐节奏。交付 MP4、可编辑源码、功能核验表和时间表，也可只做分析或方案。不编造产品功能、不绕过登录权限，不用于真人广告或普通网页开发。
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/fb2d3b73-f981-468f-8287-7a429772f2d8.mp4
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 将有来源依据的产品功能转成界面连续变形、光标驱动的宣传动效，兼顾品牌识别与清晰演示。
+    best-for:
+    - APP 功能展示
+    - 网站与 SaaS 演示
+    - 产品发布短片
+    how-to-use: 提供产品截图、网址或录屏，核验功能并确认视觉方向与节奏后制作。
+    outputs: MP4 成片、可编辑源码、功能核验表、逐拍时间表与执行记录。
+  en-US:
+    summary: Turns source-backed product features into cursor-driven promotional motion with seamless interface morphs, balancing brand recognition and clear demonstrations.
+    best-for:
+    - App Feature Showcases
+    - Website and SaaS Demos
+    - Product Launch Shorts
+    how-to-use: Upload screenshots, operation recordings or reference videos, or provide a URL or product name; align verified features and visual direction before approving the timeline.
+    outputs: An MP4, editable source, feature verification table, beat-by-beat timeline and execution log.
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/fb2d3b73-f981-468f-8287-7a429772f2d8.mp4
+showcase:
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/05c001a5-80d4-4093-a0d7-48626bd9a7a2.mp4
+- https://cdn.hailuoai.com/hailuo-video-web/public_assets/4f840649-9c39-4867-97ca-2c8f22058935.mp4

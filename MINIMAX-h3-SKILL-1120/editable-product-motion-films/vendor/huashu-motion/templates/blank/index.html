@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN" data-composition-variables='[
+  {"id":"kicker","type":"string","label":"眉题","default":"HUASHU-MOTION"},
+  {"id":"title","type":"string","label":"标题","default":"一句话，变成会动的画面"},
+  {"id":"subtitle","type":"string","label":"副标题","default":"对着画面指一下，就能改"},
+  {"id":"stat","type":"number","label":"数字","default":100,"min":0,"max":9999,"step":1},
+  {"id":"statLabel","type":"string","label":"数字说明","default":"% 由代码生成，随时可改"},
+  {"id":"accent","type":"color","label":"强调色","default":"#d9480f"},
+  {"id":"paper","type":"color","label":"底色","default":"#f3eee4"},
+  {"id":"ink","type":"color","label":"文字色","default":"#1d1b18"},
+  {"id":"endHold","type":"number","label":"结尾停留（秒）","default":1.6,"min":0,"max":10,"step":0.1,"group":"节奏"}
+]'>
+<head>
+<meta charset="utf-8">
+<title>huashu-motion · blank</title>
+<script src="vendor/gsap.min.js"></script>
+<style id="om-fonts">
+@font-face { font-family: "Noto Sans SC"; src: url("assets/fonts/NotoSansSC-500.woff") format("woff"); font-weight: 500; font-style: normal; }
+@font-face { font-family: "Noto Sans SC"; src: url("assets/fonts/NotoSansSC-900.woff") format("woff"); font-weight: 900; font-style: normal; }
+</style>
+<style>
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+  #film { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--paper); color: var(--ink); font-family: "Noto Sans SC", sans-serif; font-weight: 500; }
+  .grain { position: absolute; inset: 0; opacity: .5; background:
+      radial-gradient(1200px 700px at 20% 10%, #ffffff80, transparent 60%),
+      radial-gradient(900px 600px at 90% 100%, #00000010, transparent 60%); }
+  .kicker { position: absolute; left: 160px; top: 300px; font-size: 26px; letter-spacing: 10px; color: var(--accent); }
+  .title { position: absolute; margin: 0; left: 150px; top: 350px; width: 1620px; font-size: 128px; line-height: 1.12; letter-spacing: -4px; font-weight: 900; }
+  .title .ch { display: inline-block; }
+  .title .mask { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 10px; }
+  .rule { position: absolute; left: 160px; top: 528px; width: 1100px; height: 10px; background: var(--accent); transform-origin: 0 50%; }
+  .subtitle { position: absolute; left: 160px; top: 580px; font-size: 44px; opacity: .72; }
+  .stat { position: absolute; left: 160px; top: 300px; display: flex; align-items: baseline; gap: 36px; }
+  .stat .num { font-size: 360px; line-height: 1; letter-spacing: -14px; font-weight: 900; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .stat .lbl { font-size: 64px; }
+  .end span { display: block; }
+  .end { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 56px; letter-spacing: 4px; }
+  .end b { color: var(--accent); font-weight: 500; }
+</style>
+</head>
+<body>
+<!--
+  huashu-motion contract (all optional, all plain HTML + GSAP):
+  1. Editable values are composition variables on <html>. The studio inspector edits their defaults.
+  2. data-om-id names things people can point at; comments arrive with the id under the pointer.
+  3. Timeline labels "scene:<id>" become the studio's scene strip.
+  No data-duration on the root: the film is as long as the timeline, so timing variables (endHold) can change it.
+-->
+<div id="film" data-composition-id="film" data-width="1920" data-height="1080">
+  <div class="grain"></div>
+
+  <section id="s-title">
+    <div class="kicker" data-om-id="kicker" data-var-text="kicker">HUASHU-MOTION</div>
+    <h1 class="title" data-om-id="title" data-om-var="title"></h1>
+    <div class="rule" data-om-id="rule"></div>
+    <div class="subtitle" data-om-id="subtitle" data-var-text="subtitle">对着画面指一下，就能改</div>
+  </section>
+
+  <section id="s-stat" class="stat" data-om-id="stat">
+    <span class="num" id="num">0</span>
+    <span class="lbl" data-var-text="statLabel">% 由代码生成，随时可改</span>
+  </section>
+
+  <section id="s-end" class="end" data-om-id="end"><span>made with <b>huashu-motion</b></span></section>
+</div>
+
+<script>
+  const V = OM.vars();
+  const esc = (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;' })[c] || c;
+  const title = document.querySelector('.title');
+  // Each character sits in its own mask so it can rise into place; spaces keep their width.
+  title.innerHTML = [...V.title].map((c) => c === ' ' ? ' ' : `<span class="mask"><span class="ch">${esc(c)}</span></span>`).join('');
+
+  const tl = gsap.timeline({ paused: true, defaults: { ease: 'power3.out' } });
+
+  tl.addLabel('scene:title', 0)
+    .fromTo('.kicker', { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: .6 }, .15)
+    .fromTo('.title .ch', { yPercent: 110 }, { yPercent: 0, duration: .9, stagger: .045, ease: 'expo.out' }, .25)
+    .fromTo('.rule', { scaleX: 0 }, { scaleX: 1, duration: .9, ease: 'expo.inOut' }, .9)
+    .fromTo('.subtitle', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .7 }, 1.25)
+    .to('#s-title', { opacity: 0, y: -40, duration: .5, ease: 'power2.in' }, 3.1);
+
+  const counter = { v: 0 };
+  tl.addLabel('scene:stat', 3.4)
+    .fromTo('#s-stat', { opacity: 0 }, { opacity: 1, duration: .3 }, 3.4)
+    .fromTo('.stat .lbl', { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: .6 }, 3.7)
+    .fromTo(counter, { v: 0 }, { v: V.stat, duration: 1.3, ease: 'expo.out',
+        onUpdate: () => { document.getElementById('num').textContent = Math.round(counter.v); } }, 3.4)
+    .to('#s-stat', { opacity: 0, scale: .96, duration: .45, ease: 'power2.in' }, 5.8);
+
+  tl.addLabel('scene:end', 6.3)
+    .fromTo('.end span', { opacity: 0, y: 24, scale: .96 }, { opacity: 1, y: 0, scale: 1, duration: 1.1, ease: 'expo.out' }, 6.3)
+    .to({}, { duration: V.endHold }); // the closing hold; the film ends when the timeline does
+
+  window.__timelines['film'] = tl;
+</script>
+</body>
+</html>

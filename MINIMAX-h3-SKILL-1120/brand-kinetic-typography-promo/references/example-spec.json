@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "brand": "NOVA 声境"
+  },
+  "format": {
+    "aspect": "16:9",
+    "fps": 60,
+    "bpm": 120,
+    "duration": 16
+  },
+  "style": "punch",
+  "palette": {
+    "preset": "cyber"
+  },
+  "hud": {
+    "enabled": true,
+    "label": "NOVA / 2026 新品发布"
+  },
+  "audio": {
+    "mode": "synth",
+    "mood": "energetic"
+  },
+  "assets": {
+    "product": "assets/product.png",
+    "logo": "assets/logo.png"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "beats": 3,
+      "bg": "dark",
+      "name": "开场",
+      "line1": "安静",
+      "line2": "是一种力量"
+    },
+    {
+      "type": "kinetic_words",
+      "beats": 4,
+      "bg": "a1",
+      "name": "卖点",
+      "words": [
+        "主动降噪",
+        "空间音频",
+        "40h 续航"
+      ]
+    },
+    {
+      "type": "product_hero",
+      "beats": 4,
+      "bg": "dark",
+      "name": "产品",
+      "image": "product",
+      "title": "NOVA Pods",
+      "callouts": [
+        "-48dB 深度降噪",
+        "仅 4.2g 单耳",
+        "IP57 防水防汗"
+      ]
+    },
+    {
+      "type": "stat",
+      "beats": 4,
+      "bg": "light",
+      "name": "数据",
+      "value": "98%",
+      "label": "环境噪音被过滤",
+      "kicker": "实验室测试"
+    },
+    {
+      "type": "shape_morph",
+      "beats": 4,
+      "bg": "dark",
+      "name": "场景",
+      "labels": [
+        "通勤",
+        "办公",
+        "运动",
+        "睡眠"
+      ]
+    },
+    {
+      "type": "rapid_cuts",
+      "beats": 4,
+      "name": "节奏",
+      "words": [
+        "听",
+        "见",
+        "更",
+        "多",
+        "LOUD",
+        "CLEAR",
+        "PURE",
+        "NOVA"
+      ]
+    },
+    {
+      "type": "dot_field",
+      "beats": 4,
+      "bg": "a2",
+      "name": "沉浸",
+      "words": [
+        "沉浸",
+        "无界"
+      ]
+    },
+    {
+      "type": "outline_echo",
+      "beats": 2,
+      "bg": "dark",
+      "name": "纵深",
+      "word": "DEEP"
+    },
+    {
+      "type": "end_card",
+      "beats": 3,
+      "bg": "dark",
+      "name": "收尾",
+      "logo": "logo",
+      "title": "NOVA 声境",
+      "subtitle": "10月20日 全渠道开售",
+      "cta": "立即预约"
+    }
+  ]
+}

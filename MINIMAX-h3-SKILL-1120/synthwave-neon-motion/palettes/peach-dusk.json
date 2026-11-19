@@ -1,0 +1,15 @@
+{
+  "id": "peach-dusk",
+  "name_cn": "蜜桃余晖",
+  "use": "美妆、生活方式、温暖情绪；橙粉主导，电青点缀",
+  "sky": ["#0E0618", "#2A0E3A", "#561A55", "#8E2F5E"],
+  "sun": ["#FFF0A0", "#FFC26B", "#FF8A4C", "#FF4F7A"],
+  "neon_primary": "#FF5FA2",
+  "neon_secondary": "#5CF2FF",
+  "grid": "#FF7AB8",
+  "horizon_hot": "#FFE4D6",
+  "mountain_wire": ["#FF5FA2", "#FFB36B"],
+  "chrome": ["#FFFFFF", "#FFE0EC", "#B0688E", "#2A1030", "#FFC59E"],
+  "shadow": "#0A0410",
+  "text_main": "#FFF5F0"
+}

@@ -1,0 +1,119 @@
+{
+  "director_id": "park-chan-wook",
+  "director_name_zh": "朴赞郁",
+  "source": {
+    "path": "第1期_SKILL_冷调与大地_001-080/01_黑色悬疑与冷调惊悚/017_ParkChan-wook_朴赞郁/色卡主文档.md",
+    "sha256": "1fd49a7e8587c0e6229443ff1316d4ceca9a2be4a7c3b121c51feb75606b02c9"
+  },
+  "color_space": "sRGB",
+  "evidence": "source_document_hex_not_frame_sampled",
+  "display": "Equal-size swatches; no fixed frame-area ratios. Accent labels retain source associations, not universal emotional meanings.",
+  "main": [
+    {
+      "id": "C01",
+      "label_zh": "深翡绿黑",
+      "hex": "#0E2A24",
+      "rgb": [
+        14,
+        42,
+        36
+      ]
+    },
+    {
+      "id": "C02",
+      "label_zh": "深紫丝绒",
+      "hex": "#3E1F5B",
+      "rgb": [
+        62,
+        31,
+        91
+      ]
+    },
+    {
+      "id": "C03",
+      "label_zh": "华丽金",
+      "hex": "#C9A227",
+      "rgb": [
+        201,
+        162,
+        39
+      ]
+    },
+    {
+      "id": "C04",
+      "label_zh": "深红丝绒",
+      "hex": "#7B241C",
+      "rgb": [
+        123,
+        36,
+        28
+      ]
+    },
+    {
+      "id": "C05",
+      "label_zh": "孔雀蓝绿",
+      "hex": "#1F4E5F",
+      "rgb": [
+        31,
+        78,
+        95
+      ]
+    },
+    {
+      "id": "C06",
+      "label_zh": "金瓷肤",
+      "hex": "#F7DC6F",
+      "rgb": [
+        247,
+        220,
+        111
+      ]
+    }
+  ],
+  "accent": [
+    {
+      "id": "E01",
+      "label_zh": "高贵紫",
+      "hex": "#9B59B6",
+      "rgb": [
+        155,
+        89,
+        182
+      ],
+      "label_kind": "source_color_name"
+    },
+    {
+      "id": "E02",
+      "label_zh": "复仇红",
+      "hex": "#E74C3C",
+      "rgb": [
+        231,
+        76,
+        60
+      ],
+      "label_kind": "source_color_name"
+    },
+    {
+      "id": "E03",
+      "label_zh": "翡翠绿",
+      "hex": "#1ABC9C",
+      "rgb": [
+        26,
+        188,
+        156
+      ],
+      "label_kind": "source_color_name"
+    },
+    {
+      "id": "E04",
+      "label_zh": "皇家金",
+      "hex": "#F1C40F",
+      "rgb": [
+        241,
+        196,
+        15
+      ],
+      "label_kind": "source_color_name"
+    }
+  ]
+}

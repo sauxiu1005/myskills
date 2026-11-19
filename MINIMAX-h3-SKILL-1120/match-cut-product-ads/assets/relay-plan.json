@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "purpose": "Internal planning and review record; not a Design API or render.py configuration",
+  "core_experience": null,
+  "product_claims": [],
+  "visual_motif": {
+    "element": null,
+    "meaning": null,
+    "invariants": [],
+    "appearances": [],
+    "product_payoff": null
+  },
+  "rhythm_sections": [],
+  "pairs": [
+    {
+      "id": null,
+      "outgoing_shot": null,
+      "incoming_shot": null,
+      "real_world_action": null,
+      "product_action_or_experience": null,
+      "claim_kind": null,
+      "claim_evidence": [],
+      "shared_visual_or_gesture": null,
+      "visible_result": null,
+      "selling_point_link": null,
+      "cut_mode": null,
+      "planned": {
+        "primary_anchor": null,
+        "outgoing": {"xy_percent": null, "object_height_percent": null, "gesture": null, "contact_target": null, "phase": null, "direction": null, "velocity_percent_per_second": null},
+        "incoming": {"xy_percent": null, "object_height_percent": null, "gesture": null, "contact_target": null, "phase": null, "direction": null, "velocity_percent_per_second": null}
+      },
+      "actual": {
+        "generation_method": null,
+        "input_asset_ids": [],
+        "outgoing": {"source_asset_id": null, "source_fps": null, "cut_frame": null, "time_seconds": null, "xy_percent": null, "phase": null, "velocity_percent_per_second": null},
+        "incoming": {"source_asset_id": null, "source_fps": null, "cut_frame": null, "time_seconds": null, "xy_percent": null, "phase": null, "velocity_percent_per_second": null},
+        "evidence_files": []
+      },
+      "review": {
+        "experience_link": "pending",
+        "product_claim": "pending",
+        "anchor_alignment": "pending",
+        "contact_and_motion": "pending",
+        "normal_speed_readability": "pending",
+        "notes": [],
+        "next_action": null
+      }
+    }
+  ]
+}

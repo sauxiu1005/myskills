@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="840" viewBox="0 0 1800 840">
+<rect width="1800" height="840" fill="#F5F2EC"/>
+<text x="40" y="70" font-size="40" font-family="PingFang SC, Hiragino Sans GB, sans-serif" fill="#141414">扎克·施奈德 Zack Snyder · 配色方案（互斥，一次只选一个）</text>
+<text x="40" y="146" font-size="26" font-family="PingFang SC, Hiragino Sans GB, sans-serif" fill="#141414">S1 300日景暖铜红 — 300勇士 300 (2006)</text>
+<rect x="40" y="165" width="159" height="160" fill="#8C6A44"/>
+<text x="44" y="348" font-size="18" font-family="Menlo, monospace" fill="#282828">#8C6A44</text>
+<rect x="205" y="165" width="159" height="160" fill="#B08A5A"/>
+<text x="209" y="348" font-size="18" font-family="Menlo, monospace" fill="#282828">#B08A5A</text>
+<text x="40" y="378" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">背景主色 · 人工建议色值</text>
+<text x="40" y="402" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 45–55%</text>
+<rect x="388" y="165" width="324" height="160" fill="#1A1410"/>
+<text x="392" y="348" font-size="18" font-family="Menlo, monospace" fill="#282828">#1A1410</text>
+<text x="388" y="378" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">阴影 · 人工建议色值</text>
+<text x="388" y="402" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 30–40%</text>
+<rect x="736" y="165" width="324" height="160" fill="#E8B565"/>
+<text x="740" y="348" font-size="18" font-family="Menlo, monospace" fill="#282828">#E8B565</text>
+<text x="736" y="378" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">光源高光 · 人工建议色值</text>
+<text x="736" y="402" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 5–10%</text>
+<rect x="1084" y="165" width="324" height="160" fill="#9E1B16"/>
+<text x="1088" y="348" font-size="18" font-family="Menlo, monospace" fill="#282828">#9E1B16</text>
+<text x="1084" y="378" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">小面积强调 · 人工建议色值</text>
+<text x="1084" y="402" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 ≤8%</text>
+<rect x="1432" y="165" width="324" height="160" fill="none" stroke="#969696" stroke-width="2"/>
+<text x="1442" y="250" font-size="18" font-family="PingFang SC, sans-serif" fill="#787878">保留原肤色</text>
+<text x="1432" y="378" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">肤色保护 · 人工建议色值</text>
+<text x="40" y="476" font-size="26" font-family="PingFang SC, Hiragino Sans GB, sans-serif" fill="#141414">S2 300夜景冷钢蓝 — 300勇士 300 (2006)</text>
+<rect x="40" y="495" width="159" height="160" fill="#3E4E5C"/>
+<text x="44" y="678" font-size="18" font-family="Menlo, monospace" fill="#282828">#3E4E5C</text>
+<rect x="205" y="495" width="159" height="160" fill="#56687A"/>
+<text x="209" y="678" font-size="18" font-family="Menlo, monospace" fill="#282828">#56687A</text>
+<text x="40" y="708" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">背景主色 · 人工建议色值</text>
+<text x="40" y="732" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 45–55%</text>
+<rect x="388" y="495" width="324" height="160" fill="#0B1016"/>
+<text x="392" y="678" font-size="18" font-family="Menlo, monospace" fill="#282828">#0B1016</text>
+<text x="388" y="708" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">阴影 · 人工建议色值</text>
+<text x="388" y="732" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 35–45%</text>
+<rect x="736" y="495" width="324" height="160" fill="#A9BCCB"/>
+<text x="740" y="678" font-size="18" font-family="Menlo, monospace" fill="#282828">#A9BCCB</text>
+<text x="736" y="708" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">光源高光 · 人工建议色值</text>
+<text x="736" y="732" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 5–10%</text>
+<rect x="1084" y="495" width="324" height="160" fill="#6E1A18"/>
+<text x="1088" y="678" font-size="18" font-family="Menlo, monospace" fill="#282828">#6E1A18</text>
+<text x="1084" y="708" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">小面积强调 · 人工建议色值</text>
+<text x="1084" y="732" font-size="18" font-family="PingFang SC, sans-serif" fill="#6E6E6E">面积建议 ≤5%</text>
+<rect x="1432" y="495" width="324" height="160" fill="none" stroke="#969696" stroke-width="2"/>
+<text x="1442" y="580" font-size="18" font-family="PingFang SC, sans-serif" fill="#787878">保留原肤色</text>
+<text x="1432" y="708" font-size="18" font-family="PingFang SC, sans-serif" fill="#464646">肤色保护 · 人工建议色值</text>
+<text x="40" y="812" font-size="18" font-family="PingFang SC, sans-serif" fill="#5A5A5A">肤色保护不给色值：保留角色原本肤色。预览卡仅供人工阅读；生成时只上传无文字的 &lt;ID&gt;-card.png。面积与色值标注见 schemes.json，均非官方 LUT 或全片统计。</text>
+</svg>

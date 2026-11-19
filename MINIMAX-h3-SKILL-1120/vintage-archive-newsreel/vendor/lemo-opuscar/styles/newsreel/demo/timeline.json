@@ -1,0 +1,369 @@
+{
+ "bpm": 200,
+ "beat": 0.3,
+ "bar": 1.2,
+ "dur": 54.6,
+ "secs": [
+  {
+   "id": "logo",
+   "t0": 0.0,
+   "t1": 3.6,
+   "bar0": 0
+  },
+  {
+   "id": "paper",
+   "t0": 3.6,
+   "t1": 8.4,
+   "bar0": 3
+  },
+  {
+   "id": "map",
+   "t0": 8.4,
+   "t1": 13.2,
+   "bar0": 7
+  },
+  {
+   "id": "grid",
+   "t0": 13.2,
+   "t1": 15.9,
+   "bar0": 11
+  },
+  {
+   "id": "flip",
+   "t0": 15.9,
+   "t1": 18.0,
+   "bar0": 13.25
+  },
+  {
+   "id": "card",
+   "t0": 18.0,
+   "t1": 21.0,
+   "bar0": 15
+  },
+  {
+   "id": "orch",
+   "t0": 21.0,
+   "t1": 22.2,
+   "bar0": 17.5
+  },
+  {
+   "id": "violin",
+   "t0": 22.2,
+   "t1": 22.8,
+   "bar0": 18.5
+  },
+  {
+   "id": "oldman",
+   "t0": 22.8,
+   "t1": 24.0,
+   "bar0": 19
+  },
+  {
+   "id": "book",
+   "t0": 24.0,
+   "t1": 27.0,
+   "bar0": 20
+  },
+  {
+   "id": "circle",
+   "t0": 27.0,
+   "t1": 28.2,
+   "bar0": 22.5
+  },
+  {
+   "id": "split",
+   "t0": 28.2,
+   "t1": 32.4,
+   "bar0": 23.5
+  },
+  {
+   "id": "pav",
+   "t0": 32.4,
+   "t1": 34.68,
+   "bar0": 27
+  },
+  {
+   "id": "pav2",
+   "t0": 34.68,
+   "t1": 35.88,
+   "bar0": 29
+  },
+  {
+   "id": "tap",
+   "t0": 35.88,
+   "t1": 37.08,
+   "bar0": 30
+  },
+  {
+   "id": "solo",
+   "t0": 37.08,
+   "t1": 38.28,
+   "bar0": 31
+  },
+  {
+   "id": "tap2",
+   "t0": 38.28,
+   "t1": 39.48,
+   "bar0": 32
+  },
+  {
+   "id": "quad",
+   "t0": 39.48,
+   "t1": 41.88,
+   "bar0": 33
+  },
+  {
+   "id": "kids",
+   "t0": 41.88,
+   "t1": 44.4,
+   "bar0": 35
+  },
+  {
+   "id": "button",
+   "t0": 44.4,
+   "t1": 46.8,
+   "bar0": 37
+  },
+  {
+   "id": "endlogo",
+   "t0": 46.8,
+   "t1": 50.4,
+   "bar0": 39
+  },
+  {
+   "id": "endcard",
+   "t0": 50.4,
+   "t1": 54.6,
+   "bar0": 42
+  }
+ ],
+ "hits": {
+  "beams_on": 0.15,
+  "logo_iris": 3.0,
+  "paper_fly": 3.6,
+  "paper_slam": 4.8,
+  "paper_punch": 7.2,
+  "knee_ring": 7.5,
+  "wipe_map": 8.4,
+  "ny": 8.55,
+  "line_hollywood": 10.2,
+  "line_austin": 10.55,
+  "map_push": 12.7,
+  "flip_grid": 13.2,
+  "grid0": 13.2,
+  "flipbook": 15.9,
+  "blinds_card": 18.0,
+  "stop_card": 18.0,
+  "iris_orch": 21.0,
+  "cut_violin": 22.2,
+  "cut_oldman": 22.8,
+  "book_slam": 24.0,
+  "page_turn": 24.6,
+  "ul_jazz": 25.87,
+  "ul_vogue": 26.9,
+  "cut_circle": 27.0,
+  "split_in": 28.2,
+  "needle": 32.4,
+  "push_over": 32.4,
+  "cut_pav2": 34.68,
+  "cut_tap": 35.88,
+  "cut_solo": 37.080000000000005,
+  "cut_tap2": 38.28,
+  "quad": 39.480000000000004,
+  "clock_kids": 41.88,
+  "rec_end": 44.4,
+  "freeze": 44.4,
+  "iris_end": 46.8,
+  "end_hit1": 46.8,
+  "end_hit2": 47.25,
+  "endcard": 50.4
+ },
+ "lines": [
+  {
+   "id": "L1",
+   "t": 4.95,
+   "zh": "警告！查尔斯顿舞会把我们跳成 X 型腿、内八字！",
+   "en": "Warning! The Charleston will make us knock-kneed and pigeon-toed!"
+  },
+  {
+   "id": "L2",
+   "t": 8.7,
+   "zh": "1923 年从百老汇起步，三年后风靡全国！",
+   "en": "It kicked off on Broadway in 1923. Three years on, it's the rage!"
+  },
+  {
+   "id": "L3",
+   "t": 13.5,
+   "zh": "好莱坞明星贝西·洛夫来教你：九步就会！",
+   "en": "Hollywood star Bessie Love will teach you, in nine easy steps!"
+  },
+  {
+   "id": "L4",
+   "t": 18.05,
+   "zh": "可在迪尔伯恩，亨利·福特另有主意！",
+   "en": "But in Dearborn, Henry Ford has other ideas!"
+  },
+  {
+   "id": "L5",
+   "t": 21.45,
+   "zh": "福特开的药方？他年轻时跳的老式舞！",
+   "en": "Mister Ford's cure? The old-time dances of his youth!"
+  },
+  {
+   "id": "L6",
+   "t": 25.03,
+   "zh": "他的书上说：带爵士味的新舞到处失宠！",
+   "en": "His book says the jazzy new dances are losing vogue everywhere!"
+  },
+  {
+   "id": "L7",
+   "t": 28.87,
+   "zh": "老式舞还是查尔斯顿？去福特工人的野餐会问问！",
+   "en": "Old-time or Charleston? Let's ask the Ford workers' picnic!"
+  },
+  {
+   "id": "L8",
+   "t": 42.15,
+   "zh": "连小孩都在跳查尔斯顿！",
+   "en": "Even the youngsters are doing the Charleston!"
+  },
+  {
+   "id": "L9",
+   "t": 44.95,
+   "zh": "X 型腿？谁在乎！",
+   "en": "Knock-kneed? Who cares!"
+  },
+  {
+   "id": "L10",
+   "t": 47.35,
+   "zh": "本期新闻到此结束！",
+   "en": "That's the news!"
+  }
+ ],
+ "tags": [
+  {
+   "sec": "paper",
+   "t0": 5.0,
+   "t1": 8.3,
+   "en": "AUSTIN · MARCH 5, 1926",
+   "zh": "奥斯汀的报纸"
+  },
+  {
+   "sec": "grid",
+   "t0": 13.4,
+   "t1": 17.85,
+   "en": "PHOTOPLAY · OCT. 1925",
+   "zh": "好莱坞影迷杂志"
+  },
+  {
+   "sec": "ford",
+   "t0": 21.02,
+   "t1": 24.02,
+   "en": "FORD FILMS 1925–26",
+   "zh": "福特影片"
+  },
+  {
+   "sec": "book",
+   "t0": 24.05,
+   "t1": 27.1,
+   "en": "GOOD MORNING · 1926",
+   "zh": "福特出的书"
+  },
+  {
+   "sec": "picnic",
+   "t0": 32.6,
+   "t1": 36.2,
+   "en": "FORD WORKERS’ PICNIC · 1924",
+   "zh": "福特员工野餐会"
+  }
+ ],
+ "clips": {
+  "orch": {
+   "src": "ford_orchestra.mp4",
+   "ss": 7.2,
+   "dur": 1.7
+  },
+  "violin": {
+   "src": "ford_orchestra.mp4",
+   "ss": 27.4,
+   "dur": 1.0,
+   "lo": 1.5,
+   "hi": 99.7,
+   "gamma": 0.85
+  },
+  "oldman": {
+   "src": "ford_mandancing.mp4",
+   "ss": 35.0,
+   "dur": 1.7,
+   "lo": 1.0,
+   "hi": 99.8,
+   "gamma": 0.8
+  },
+  "circle": {
+   "src": "ford_botsford.mp4",
+   "ss": 160.0,
+   "dur": 6.0
+  },
+  "kidsR": {
+   "src": "ford1924.mp4",
+   "ss": 259.0,
+   "dur": 4.6
+  },
+  "pav": {
+   "src": "ford1924.mp4",
+   "ss": 44.0,
+   "dur": 2.8
+  },
+  "tap": {
+   "src": "ford1924.mp4",
+   "ss": 216.8,
+   "dur": 1.6
+  },
+  "solo": {
+   "src": "ford1924.mp4",
+   "ss": 224.0,
+   "dur": 1.6
+  },
+  "pav2": {
+   "src": "ford1924.mp4",
+   "ss": 49.6,
+   "dur": 1.6
+  },
+  "tap2": {
+   "src": "ford1924.mp4",
+   "ss": 220.4,
+   "dur": 1.6
+  },
+  "g1": {
+   "src": "ford1924.mp4",
+   "ss": 38.6,
+   "dur": 2.8
+  },
+  "g2": {
+   "src": "ford1924.mp4",
+   "ss": 48.0,
+   "dur": 2.8
+  },
+  "g3": {
+   "src": "ford1924.mp4",
+   "ss": 229.5,
+   "dur": 2.8
+  },
+  "g4": {
+   "src": "ford1924.mp4",
+   "ss": 234.0,
+   "dur": 2.8
+  },
+  "kids": {
+   "src": "ford1924.mp4",
+   "ss": 255.6,
+   "dur": 2.9
+  }
+ },
+ "record": {
+  "src_end": 245.95,
+  "src_t0": 233.4,
+  "src_bpm": 197.9,
+  "film_end": 44.4
+ }
+}

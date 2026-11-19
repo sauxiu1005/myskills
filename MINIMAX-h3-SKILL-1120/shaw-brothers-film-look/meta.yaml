@@ -1,0 +1,36 @@
+display-name-zh: 邵氏电影画面质感
+version: 1.0.0
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Creative Generation
+complete-tags-cn:
+- 专业影视 / 创作生成
+summary-en: Turns ideas or scripts into 1960s studio-style images or shorts through nine genre prompts, locked assets, storyboards, video, and necessary finishing, with sound and optional music governed by the approved plan.
+summary-cn: 把创意或剧本转为六十年代片厂风格图片或短片，经资产、分镜与视频完成必要后期，声音与可选配乐遵循确认方案。
+desc-en: For creators seeking images or short films with the studio texture of 1960s Hong Kong cinema. Users provide character, setting, action and mood descriptions, references, or an existing script. The Skill matches nine genres, applies film-texture prompts, locks scene and character assets, builds turnarounds and storyboards for approval, then produces video using available capabilities. Required finishing covers single and multiple shots, including duration trimming and approved sound supplementation. Silence and no-score requests govern every stage; music and covers are optional agreed deliverables. It supplies the applicable assets, storyboards, clips, final result and exact prompts. Essential references cannot be discarded without approval, and retries require authorization. It does not write scripts, edit long films or copy original frames.
+desc-cn: 面向希望图片或短片呈现六十年代香港片厂质感的创作者。用户提供人物、场景、动作与情绪描述、参考图或已有剧本。流程匹配九类片种，确定场景和人物资产，制作三视图与分镜，确认后生成视频。单镜头与多镜头均按需裁切、补音；静音和不要配乐要求贯穿全程，配乐与封面按约定制作。交付适用的资产、分镜、片段、成片与完整提示词。必需参考不擅自舍弃，重试须获授权。不写剧本、不做长片剪辑、不复制原片画面。
+structured-info:
+  zh-CN:
+    summary: 把创意或剧本转化为六十年代邵氏片厂质感的图片或多镜头短片，保留人物与场景的一致性。
+    best-for:
+    - 复古港片画面
+    - 邵氏风格短片
+    - 武侠歌舞片段
+    how-to-use: 描述人物、场景与情绪，或上传剧本、点名邵氏片名，说明要图片还是视频及时长后开始。
+    outputs: 按约定交付资产图、三视图、分镜、片段、成片与提示词，附已确认的声音及封面。
+  en-US:
+    summary: Turn ideas or scripts into images or multi-shot shorts with a 1960s Shaw Brothers studio look, preserving character and setting consistency.
+    best-for:
+    - Retro Hong Kong Film Looks
+    - Shaw-Style Short Films
+    - Wuxia & Musical Scenes
+    how-to-use: Describe characters, setting, and mood, or upload a script or name a Shaw title, then say whether you want images or video and how long.
+    outputs: Applicable asset cards and images, turnarounds, storyboards, clips, final result and exact prompts; audio assets and covers only as agreed.
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+cover: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318830908890107-1794318830893.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318830908890107-1794318830893.mp4
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318839525761958-1794318839498.mp4

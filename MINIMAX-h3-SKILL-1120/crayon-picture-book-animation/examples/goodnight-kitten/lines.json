@@ -1,0 +1,5 @@
+[
+ {"id": "l1", "text": "天黑了，我有点怕……", "voice": "zh-CN-XiaoyiNeural", "rate": "-12%", "pitch": "+10Hz"},
+ {"id": "l2", "text": "别怕，我陪你。", "voice": "zh-CN-YunxiaNeural", "rate": "-12%", "pitch": "-4Hz"},
+ {"id": "l3", "text": "嗯……晚安。", "voice": "zh-CN-XiaoyiNeural", "rate": "-20%", "pitch": "+6Hz"}
+]

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN" data-composition-variables='[
+  {"id":"line1","type":"string","label":"第 1 句口播原文（定张嘴时长 ≈6.5 字/秒；气泡短句清空时气泡显示它）","default":"我第一次让 AI 帮我写代码，","group":"第 1 句"},
+  {"id":"bubble1","type":"string","label":"第 1 句气泡里的短句（≤12 字；清空就显示口播原文）","default":"AI，帮我写个网站！","group":"第 1 句"},
+  {"id":"line1Pose","type":"enum","label":"第 1 句姿势","default":"talk","options":[{"value":"talk","label":"说话"},{"value":"point","label":"指"},{"value":"shrug","label":"摊手"},{"value":"type","label":"打字"}],"group":"第 1 句"},
+  {"id":"typed","type":"string","label":"插入镜头：他在电脑上打的那一行","default":"帮我做个网站","group":"电脑屏幕"},
+  {"id":"bigText","type":"string","label":"插入镜头：砸出来的大字","default":"3000行","group":"电脑屏幕"},
+  {"id":"count","type":"number","label":"右上角计数器停在","default":3000,"min":0,"step":1,"group":"电脑屏幕"},
+  {"id":"unit","type":"string","label":"计数器单位","default":"行","group":"电脑屏幕"},
+  {"id":"app","type":"string","label":"窗口标题","default":"AI助手","group":"电脑屏幕"},
+  {"id":"hit","type":"number","label":"大字砸出的时刻（秒；有配音时跟 hitWord 走）","default":3.5,"min":0,"max":120,"step":0.05,"group":"电脑屏幕"},
+  {"id":"line2","type":"string","label":"第 2 句（反应特写之后说）","default":"这些……贴哪儿？","group":"第 2 句"},
+  {"id":"line2Pose","type":"enum","label":"第 2 句姿势","default":"point","options":[{"value":"talk","label":"说话"},{"value":"point","label":"指"},{"value":"shrug","label":"摊手"},{"value":"type","label":"打字"}],"group":"第 2 句"},
+  {"id":"mark","type":"string","label":"最后弹出的符号（清空不弹）","default":"？","group":"第 2 句"},
+  {"id":"duration","type":"number","label":"片长（秒；有配音时至少到配音结束；包袱后至少留 0.9 秒）","default":8.5,"min":2,"max":120,"step":0.5,"group":"节奏"},
+  {"id":"pace","type":"number","label":"节奏倍率（1 原速）","default":1,"min":0.5,"max":4,"step":0.1,"group":"节奏"}
+]'>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>huashu-motion · 故事型角色</title>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/om.js"></script>
+<style>
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #DCE9EC; }
+  #film { position: relative; width: 100%; height: 100%; overflow: hidden; background: #DCE9EC; }
+  #c { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<!--
+  故事型简笔角色（y4，storytime）：豆子角色在小房间里对镜头讲，姿势快切后定住；笑点靠插入镜头（电脑屏幕＋砸出的大字）和一言不发的反应特写。
+  The whole film is the spec below, drawn on the canvas by vendor/clip (grammar: y4_storytime, from huashu-art-motion, MIT).
+  - Variables fill the "{{…}}" placeholders. Timing and structure live in the cues: `at` is the second the thing first
+    shows; `word` anchors it to that word of the narration once `om voice` has run; the insert's slam follows data.hitWord
+    (skills/huashu-motion/references/grammars.md). The reaction close-up needs silence: anchor it after the punch word.
+  - Pickable regions (0-based like the spec): character · computer · line-<i> (bubble of the i-th point) · mark ·
+    screen · typed · big-text · counter.
+  - Scenes: talk-1 → screen-1 → react-1 → talk-2 → punchline-1.
+-->
+<div id="film" data-composition-id="film" data-start="0" data-width="1920" data-height="1080">
+  <!-- lang="en" on the canvas: symbols the fonts lack fall back to the same Latin system face as upstream; all Chinese is in the bundled fonts -->
+  <canvas id="c" lang="en" width="1920" height="1080" data-om-id="room" data-layout-allow-overflow></canvas>
+</div>
+
+<script type="application/json" id="clip-spec">
+{
+  "grammar": "y4_storytime",
+  "duration": "{{duration}}",
+  "pace": "{{pace}}",
+  "fps": 30,
+  "cues": [
+    { "at": 0.1, "kind": "point", "word": "第一次", "text": "{{line1}}", "sub": "{{bubble1}}", "data": { "pose": "{{line1Pose}}" } },
+    { "at": 2.0, "kind": "insert", "word": "网站", "text": "{{bigText}}", "sub": "{{typed}}", "data": { "hit": "{{hit}}", "hitWord": "3000", "count": "{{count}}", "unit": "{{unit}}", "app": "{{app}}" } },
+    { "at": 4.6, "kind": "react", "word": "3000", "edge": "end", "offset": 0.6 },
+    { "at": 5.9, "kind": "point", "word": "这些", "text": "{{line2}}", "data": { "pose": "{{line2Pose}}" } },
+    { "at": 7.2, "kind": "highlight", "word": "贴哪儿", "edge": "end", "data": { "mark": "{{mark}}" } }
+  ]
+}
+</script>
+
+<script src="vendor/clip/lib/util.js"></script>
+<script src="vendor/clip/lib/paint.js"></script>
+<script src="vendor/clip/lib/kit.js"></script>
+<script src="vendor/clip/lib/motion.js"></script>
+<script src="vendor/clip/lib/camera.js"></script>
+<script src="vendor/clip/lib/diagram.js"></script>
+<script src="vendor/clip/lib/typo.js"></script>
+<script src="vendor/clip/lib/chart.js"></script>
+<script src="vendor/clip/lib/ui.js"></script>
+<script src="vendor/clip/lib/collage.js"></script>
+<script src="vendor/clip/lib/toon.js"></script>
+<script src="vendor/clip/cues.js"></script>
+<script src="vendor/clip/clip.js"></script>
+<script src="vendor/clip/grammars/y4_storytime.js"></script>
+<script>
+  const tl = gsap.timeline({ paused: true });
+  CLIP.mount({
+    id: 'film',
+    tl,
+    apply(spec) {
+      for (const q of spec.cues) {
+        if (q.sub === '') delete q.sub;                                  // no short bubble text → the bubble shows the line itself
+        if (q.kind === 'insert' && !q.data.unit) delete q.data.unit;
+      }
+      spec.cues = spec.cues.filter((q) => q.kind !== 'highlight' || String(q.data.mark || '').trim());
+      return spec;
+    },
+  });
+  window.__timelines['film'] = tl;
+</script>
+</body>
+</html>

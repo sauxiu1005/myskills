@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN" data-composition-variables='[
+  {"id":"title","type":"string","label":"标题","default":"AI 为什么会一本正经地胡说","group":"文字"},
+  {"id":"point1","type":"string","label":"要点 1（清空就不写）","default":"它读过海量的文字","group":"第 1 步"},
+  {"id":"draw1Text","type":"string","label":"图标 1 下的说明（清空就不画这个图标）","default":"海量文本","group":"第 1 步"},
+  {"id":"draw1Icon","type":"enum","label":"图标 1","default":"stack","options":[{"value":"person"},{"value":"cat"},{"value":"network"},{"value":"doc"},{"value":"chat"},{"value":"bulb"},{"value":"check"},{"value":"cross"},{"value":"screen"},{"value":"stack"},{"value":"gear"},{"value":"target"},{"value":"clock"},{"value":"chart"}],"group":"第 1 步"},
+  {"id":"point2","type":"string","label":"要点 2（清空就不写）","default":"学会的是下一个词最像什么","group":"第 2 步"},
+  {"id":"draw2Text","type":"string","label":"图标 2 下的说明（清空就不画这个图标）","default":"猜下一个词","group":"第 2 步"},
+  {"id":"draw2Icon","type":"enum","label":"图标 2","default":"network","options":[{"value":"person"},{"value":"cat"},{"value":"network"},{"value":"doc"},{"value":"chat"},{"value":"bulb"},{"value":"check"},{"value":"cross"},{"value":"screen"},{"value":"stack"},{"value":"gear"},{"value":"target"},{"value":"clock"},{"value":"chart"}],"group":"第 2 步"},
+  {"id":"point3","type":"string","label":"要点 3（清空就不写）","default":"没人教过它说「不知道」","group":"第 3 步"},
+  {"id":"draw3Text","type":"string","label":"图标 3 下的说明（清空就不画这个图标）","default":"照样作答","group":"第 3 步"},
+  {"id":"draw3Icon","type":"enum","label":"图标 3","default":"chat","options":[{"value":"person"},{"value":"cat"},{"value":"network"},{"value":"doc"},{"value":"chat"},{"value":"bulb"},{"value":"check"},{"value":"cross"},{"value":"screen"},{"value":"stack"},{"value":"gear"},{"value":"target"},{"value":"clock"},{"value":"chart"}],"group":"第 3 步"},
+  {"id":"highlightIndex","type":"number","label":"最后圈住第几条要点（从 0 数；-1 不圈）","default":2,"min":-1,"max":9,"step":1,"group":"重点"},
+  {"id":"highlightStyle","type":"enum","label":"圈法","default":"circle","options":[{"value":"circle","label":"橙圈圈住"},{"value":"underline","label":"橙线划在下面"}],"group":"重点"},
+  {"id":"accent","type":"color","label":"强调色（项目符号、箭头、圈）","default":"#EF7226","group":"重点"},
+  {"id":"duration","type":"number","label":"片长（秒；有配音时至少到配音结束）","default":10,"min":2,"max":120,"step":0.5,"group":"节奏"},
+  {"id":"pace","type":"number","label":"节奏倍率（1 原速；真片每块板常停 6 秒左右，常用 2–2.5）","default":1,"min":0.5,"max":4,"step":0.1,"group":"节奏"}
+]'>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>huashu-motion · 白板手绘</title>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/om.js"></script>
+<style>
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #FBFBFB; }
+  #film { position: relative; width: 100%; height: 100%; overflow: hidden; background: #FBFBFB; }
+  #c { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<!--
+  白板手绘（y3，RSA 型）：说一句写一句、讲到东西就画出来。一支马克笔写字、画图标、画箭头、圈重点，相机跟着往下走，最后拉远看全图。
+  The whole film is the spec below, drawn on the canvas by vendor/clip (grammar: y3_whiteboard, from huashu-art-motion, MIT).
+  - Variables fill the "{{…}}" placeholders. Timing and structure live in the cues: `at` is the second the first stroke
+    lands; `word` anchors it to that word of the narration once `om voice` has run — whiteboard writing looks right about
+    0.5 s after the phrase starts, so the cues carry "offset": 0.5 (skills/huashu-motion/references/grammars.md).
+  - Writing speed adapts: a line always finishes before the next cue starts.
+  - Pickable regions (0-based like the spec): title · point-<i> · draw-<i> (icon + caption) · image-<i>.
+  - Scenes: title → point-1 → draw-1 → point-2 → draw-2 → point-3 → draw-3 → circle-1.
+-->
+<div id="film" data-composition-id="film" data-start="0" data-width="1920" data-height="1080">
+  <!-- lang="en" on the canvas: symbols the fonts lack fall back to the same Latin system face as upstream; all Chinese is in the bundled fonts -->
+  <canvas id="c" lang="en" width="1920" height="1080" data-om-id="board" data-layout-allow-overflow></canvas>
+</div>
+
+<script type="application/json" id="clip-spec">
+{
+  "grammar": "y3_whiteboard",
+  "duration": "{{duration}}",
+  "pace": "{{pace}}",
+  "fps": 30,
+  "data": { "accent": "{{accent}}" },
+  "cues": [
+    { "at": 0.0, "kind": "title", "text": "{{title}}" },
+    { "at": 1.9, "kind": "point", "word": "海量", "offset": 0.5, "text": "{{point1}}" },
+    { "at": 2.8, "kind": "draw", "word": "文字", "offset": 0.5, "text": "{{draw1Text}}", "data": { "icon": "{{draw1Icon}}" } },
+    { "at": 3.9, "kind": "point", "word": "学会", "offset": 0.5, "text": "{{point2}}" },
+    { "at": 4.9, "kind": "draw", "word": "下一个词", "offset": 0.5, "text": "{{draw2Text}}", "data": { "icon": "{{draw2Icon}}" } },
+    { "at": 6.0, "kind": "point", "word": "没人教", "offset": 0.5, "text": "{{point3}}" },
+    { "at": 6.9, "kind": "draw", "word": "不知道", "offset": 0.5, "text": "{{draw3Text}}", "data": { "icon": "{{draw3Icon}}" } },
+    { "at": 8.0, "kind": "highlight", "word": "照样", "data": { "index": "{{highlightIndex}}", "style": "{{highlightStyle}}" } }
+  ]
+}
+</script>
+
+<script src="vendor/clip/lib/util.js"></script>
+<script src="vendor/clip/lib/paint.js"></script>
+<script src="vendor/clip/lib/kit.js"></script>
+<script src="vendor/clip/lib/motion.js"></script>
+<script src="vendor/clip/lib/camera.js"></script>
+<script src="vendor/clip/lib/diagram.js"></script>
+<script src="vendor/clip/lib/typo.js"></script>
+<script src="vendor/clip/lib/chart.js"></script>
+<script src="vendor/clip/lib/ui.js"></script>
+<script src="vendor/clip/lib/collage.js"></script>
+<script src="vendor/clip/lib/toon.js"></script>
+<script src="vendor/clip/cues.js"></script>
+<script src="vendor/clip/clip.js"></script>
+<script src="vendor/clip/grammars/y3_whiteboard.js"></script>
+<script>
+  const tl = gsap.timeline({ paused: true });
+  CLIP.mount({
+    id: 'film',
+    tl,
+    apply(spec) {
+      const points = spec.cues.filter((q) => q.kind === 'point').length;
+      for (const q of spec.cues) if (q.kind === 'highlight') {
+        if (q.data.style !== 'underline') delete q.data.style;
+        if (q.data.index >= points) CLIP.problem(`highlightIndex ${q.data.index} 超出了要点数（${points} 条）`);
+      }
+      spec.cues = spec.cues.filter((q) => q.kind !== 'highlight' || (q.data.index >= 0 && q.data.index < points));
+      return spec;
+    },
+  });
+  window.__timelines['film'] = tl;
+</script>
+</body>
+</html>

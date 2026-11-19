@@ -1,0 +1,334 @@
+{
+  "schema": "retro-pixel-cues/1",
+  "title": "文案驱动·面包店",
+  "fps": 24,
+  "duration_frames": 480,
+  "timing_status": "planned",
+  "audio": null,
+  "storyboard": "copy-driven-bakery.storyboard.json",
+  "shots": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 96
+    },
+    {
+      "id": 2,
+      "start": 96,
+      "end": 192
+    },
+    {
+      "id": 3,
+      "start": 192,
+      "end": 312
+    },
+    {
+      "id": 4,
+      "start": 312,
+      "end": 420
+    },
+    {
+      "id": 5,
+      "start": 420,
+      "end": 480
+    }
+  ],
+  "events": [
+    {
+      "id": "s1-open",
+      "shot_id": 1,
+      "frame": 0,
+      "duration_frames": 24,
+      "semantic_trigger": "开场·冷清",
+      "visual": "清晨小店正面，满架面包，街上无人",
+      "palette": {
+        "to": "清晨-冷",
+        "transition_frames": 0
+      },
+      "music": {
+        "action": "start",
+        "name": "轻木琴与拨弦器乐（非芯片音乐）"
+      }
+    },
+    {
+      "id": "s1-sub",
+      "shot_id": 1,
+      "frame": 6,
+      "duration_frames": 84,
+      "semantic_trigger": "第一年，我每天只卖出三个面包。",
+      "visual": "字幕层出现",
+      "subtitle": {
+        "text": "第一年，我每天只卖出三个面包。"
+      }
+    },
+    {
+      "id": "s1-buy",
+      "shot_id": 1,
+      "frame": 30,
+      "duration_frames": 18,
+      "semantic_trigger": "卖出三个面包",
+      "visual": "一位顾客走进门，拿走三个面包",
+      "sfx": {
+        "name": "门铃",
+        "gain_db": -8
+      }
+    },
+    {
+      "id": "s1-count",
+      "shot_id": 1,
+      "frame": 48,
+      "duration_frames": 12,
+      "semantic_trigger": "只有三个",
+      "visual": "计数「3」弹出并停住",
+      "sfx": {
+        "name": "轻计数音",
+        "gain_db": -12
+      }
+    },
+    {
+      "id": "s1-dusk",
+      "shot_id": 1,
+      "frame": 60,
+      "duration_frames": 18,
+      "semantic_trigger": "一天过去",
+      "visual": "色槽映射 清晨→黄昏→夜 三步，路灯亮起",
+      "palette": {
+        "to": "夜",
+        "transition_frames": 18,
+        "steps": 3
+      }
+    },
+    {
+      "id": "s1-sigh",
+      "shot_id": 1,
+      "frame": 78,
+      "duration_frames": 18,
+      "semantic_trigger": "艰难（情绪停顿）",
+      "visual": "阿禾低头叹气，停 12 帧"
+    },
+    {
+      "id": "s2-lamp",
+      "shot_id": 2,
+      "frame": 96,
+      "duration_frames": 8,
+      "semantic_trigger": "夜里记录",
+      "visual": "台灯亮起，局部重照明只在灯光圈内",
+      "palette": {
+        "to": "夜-台灯",
+        "transition_frames": 8,
+        "light": "台灯 mask"
+      }
+    },
+    {
+      "id": "s2-sub",
+      "shot_id": 2,
+      "frame": 100,
+      "duration_frames": 84,
+      "semantic_trigger": "后来，我把每一次失败都记在本子上。",
+      "visual": "字幕层出现",
+      "subtitle": {
+        "text": "后来，我把每一次失败都记在本子上。"
+      }
+    },
+    {
+      "id": "s2-dissolve",
+      "shot_id": 2,
+      "frame": 130,
+      "duration_frames": 16,
+      "semantic_trigger": "失败→笔记",
+      "visual": "焦面包像素溶解进页面成为草图",
+      "sfx": {
+        "name": "铅笔沙沙",
+        "gain_db": -14
+      }
+    },
+    {
+      "id": "s2-note",
+      "shot_id": 2,
+      "frame": 150,
+      "duration_frames": 30,
+      "semantic_trigger": "记下来了",
+      "visual": "页面多一行草图与批注，手停顿后继续写"
+    },
+    {
+      "id": "s3-day",
+      "shot_id": 3,
+      "frame": 192,
+      "duration_frames": 6,
+      "semantic_trigger": "回到白天小店",
+      "visual": "同机位回归，色槽映射回白天",
+      "palette": {
+        "to": "白天-暖",
+        "transition_frames": 6
+      }
+    },
+    {
+      "id": "s3-sub",
+      "shot_id": 3,
+      "frame": 196,
+      "duration_frames": 100,
+      "semantic_trigger": "本子越写越厚，门口的队也越排越长。",
+      "visual": "字幕层出现",
+      "subtitle": {
+        "text": "本子越写越厚，门口的队也越排越长。"
+      }
+    },
+    {
+      "id": "s3-stack-1",
+      "shot_id": 3,
+      "frame": 204,
+      "duration_frames": 10,
+      "semantic_trigger": "越写越厚 ↔ 越排越长",
+      "visual": "柜台本子 +1，门外队伍 +2 人（同帧），本子共 2 本",
+      "sfx": {
+        "name": "本子落下",
+        "gain_db": -10
+      }
+    },
+    {
+      "id": "s3-stack-2",
+      "shot_id": 3,
+      "frame": 222,
+      "duration_frames": 10,
+      "semantic_trigger": "越写越厚 ↔ 越排越长",
+      "visual": "柜台本子 +1，门外队伍 +2 人（同帧），本子共 3 本"
+    },
+    {
+      "id": "s3-stack-3",
+      "shot_id": 3,
+      "frame": 240,
+      "duration_frames": 10,
+      "semantic_trigger": "越写越厚 ↔ 越排越长",
+      "visual": "柜台本子 +1，门外队伍 +2 人（同帧），本子共 4 本",
+      "sfx": {
+        "name": "本子落下",
+        "gain_db": -10
+      }
+    },
+    {
+      "id": "s3-stack-4",
+      "shot_id": 3,
+      "frame": 258,
+      "duration_frames": 10,
+      "semantic_trigger": "越写越厚 ↔ 越排越长",
+      "visual": "柜台本子 +1，门外队伍 +2 人（同帧），本子共 5 本"
+    },
+    {
+      "id": "s3-stack-5",
+      "shot_id": 3,
+      "frame": 276,
+      "duration_frames": 10,
+      "semantic_trigger": "越写越厚 ↔ 越排越长",
+      "visual": "柜台本子 +1，门外队伍 +2 人（同帧），本子共 6 本",
+      "sfx": {
+        "name": "本子落下",
+        "gain_db": -10
+      }
+    },
+    {
+      "id": "s3-look",
+      "shot_id": 3,
+      "frame": 288,
+      "duration_frames": 24,
+      "semantic_trigger": "因果被看见",
+      "visual": "阿禾抬头看门外，惊喜，停顿"
+    },
+    {
+      "id": "s4-sub",
+      "shot_id": 4,
+      "frame": 316,
+      "duration_frames": 96,
+      "semantic_trigger": "现在，整条街的早晨都闻起来像我的店。",
+      "visual": "字幕层出现",
+      "subtitle": {
+        "text": "现在，整条街的早晨都闻起来像我的店。"
+      }
+    },
+    {
+      "id": "s4-scent",
+      "shot_id": 4,
+      "frame": 320,
+      "duration_frames": 30,
+      "semantic_trigger": "香味",
+      "visual": "门口飘出暖色像素气流（调色板循环）"
+    },
+    {
+      "id": "s4-pullback",
+      "shot_id": 4,
+      "frame": 340,
+      "duration_frames": 24,
+      "semantic_trigger": "整条街（尺度揭示）",
+      "visual": "整数裁切跳变后拉为街道俯视全景，气流分支流向各楼"
+    },
+    {
+      "id": "s4-windows",
+      "shot_id": 4,
+      "frame": 368,
+      "duration_frames": 36,
+      "semantic_trigger": "影响到每一家",
+      "visual": "窗户依次打开，居民探头嗅闻、微笑",
+      "sfx": {
+        "name": "开窗与鸟鸣",
+        "gain_db": -12
+      }
+    },
+    {
+      "id": "s4-hearts",
+      "shot_id": 4,
+      "frame": 396,
+      "duration_frames": 24,
+      "semantic_trigger": "情绪回报",
+      "visual": "居民头顶出现爱心反馈"
+    },
+    {
+      "id": "s5-last",
+      "shot_id": 5,
+      "frame": 424,
+      "duration_frames": 16,
+      "semantic_trigger": "回扣：卖完了",
+      "visual": "同机位橱窗，最后一个面包被买走",
+      "sfx": {
+        "name": "门铃",
+        "gain_db": -8
+      }
+    },
+    {
+      "id": "s5-sign",
+      "shot_id": 5,
+      "frame": 444,
+      "duration_frames": 12,
+      "semantic_trigger": "明天见",
+      "visual": "阿禾翻牌「明天见」（字牌文字后期排版）"
+    },
+    {
+      "id": "s5-hold",
+      "shot_id": 5,
+      "frame": 456,
+      "duration_frames": 24,
+      "semantic_trigger": "收束",
+      "visual": "阿禾微笑停顿，音乐收尾",
+      "music": {
+        "action": "end",
+        "fade_frames": 24
+      }
+    }
+  ],
+  "sync_report": [
+    {
+      "event_id": "s1-buy",
+      "target_frame": 30,
+      "status": "not_measured"
+    },
+    {
+      "event_id": "s3-stack-1",
+      "target_frame": 204,
+      "status": "not_measured"
+    },
+    {
+      "event_id": "s5-last",
+      "target_frame": 424,
+      "status": "not_measured"
+    }
+  ],
+  "note": "无音轨，时间为拟定；未做声画同步。"
+}

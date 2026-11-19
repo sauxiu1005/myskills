@@ -1,0 +1,125 @@
+{
+ "glock": [
+  {
+   "file": "glock/glock_loud_C5_01.flac",
+   "name": "glock_loud_C5_01",
+   "dur": 5.0,
+   "peak": 0.06599,
+   "rms": 0.003335,
+   "ch": 2,
+   "name_midi": 72,
+   "detected_midi": 84.087,
+   "midi": 84.04,
+   "midi_orig": 84.087
+  },
+  {
+   "file": "glock/glock_loud_G#6_01.flac",
+   "name": "glock_loud_G#6_01",
+   "dur": 2.913,
+   "peak": 0.06234,
+   "rms": 0.005844,
+   "ch": 2,
+   "name_midi": 92,
+   "detected_midi": 104.187,
+   "midi": 104.157,
+   "midi_orig": 104.187
+  },
+  {
+   "file": "glock/glock_loud_G5_01.flac",
+   "name": "glock_loud_G5_01",
+   "dur": 4.539,
+   "peak": 0.06694,
+   "rms": 0.003648,
+   "ch": 2,
+   "name_midi": 79,
+   "detected_midi": 91.087,
+   "midi": 91.117,
+   "midi_orig": 91.087
+  },
+  {
+   "file": "glock/glock_medium_C5_01.flac",
+   "name": "glock_medium_C5_01",
+   "dur": 5.0,
+   "peak": 0.04759,
+   "rms": 0.002361,
+   "ch": 2,
+   "name_midi": 72,
+   "detected_midi": 84.087,
+   "midi": 84.054,
+   "midi_orig": 84.087
+  },
+  {
+   "file": "glock/glock_medium_C6_01.flac",
+   "name": "glock_medium_C6_01",
+   "dur": 3.931,
+   "peak": 0.04731,
+   "rms": 0.001833,
+   "ch": 2,
+   "name_midi": 84,
+   "detected_midi": 96.187,
+   "midi": 96.154,
+   "midi_orig": 96.187
+  },
+  {
+   "file": "glock/glock_medium_C7_01.flac",
+   "name": "glock_medium_C7_01",
+   "dur": 1.393,
+   "peak": 0.04742,
+   "rms": 0.001778,
+   "ch": 2,
+   "name_midi": 96,
+   "detected_midi": 96.287,
+   "midi": 108.241,
+   "midi_orig": 108.0
+  },
+  {
+   "file": "glock/glock_medium_G4_01.flac",
+   "name": "glock_medium_G4_01",
+   "dur": 5.0,
+   "peak": 0.04881,
+   "rms": 0.002011,
+   "ch": 2,
+   "name_midi": 67,
+   "detected_midi": 79.087,
+   "midi": 79.12,
+   "midi_orig": 79.087
+  },
+  {
+   "file": "glock/glock_medium_G5_01.flac",
+   "name": "glock_medium_G5_01",
+   "dur": 4.247,
+   "peak": 0.04434,
+   "rms": 0.002023,
+   "ch": 2,
+   "name_midi": 79,
+   "detected_midi": 91.087,
+   "midi": 91.118,
+   "midi_orig": 91.087
+  },
+  {
+   "file": "glock/glock_medium_G6_01.flac",
+   "name": "glock_medium_G6_01",
+   "dur": 3.405,
+   "peak": 0.04932,
+   "rms": 0.002453,
+   "ch": 2,
+   "name_midi": 91,
+   "detected_midi": 103.187,
+   "midi": 103.157,
+   "midi_orig": 103.187
+  }
+ ],
+ "wineglass": [
+  {
+   "file": "wineglass/glass1_D#4_Fast_1_main.flac",
+   "name": "glass1_D#4_Fast_1_main",
+   "dur": 7.0,
+   "peak": 0.09828,
+   "rms": 0.022233,
+   "ch": 2,
+   "name_midi": 63,
+   "detected_midi": 75.287,
+   "midi": 75.287
+  }
+ ]
+}

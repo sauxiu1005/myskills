@@ -1,0 +1,39 @@
+name: novel-to-drama-production
+display-name-en: Novel-to-Drama Production
+display-name-zh: 小说改编与短剧制作
+version: 1.0.0
+tag-en: Short Drama
+tag-cn: 短剧漫剧
+complete-tags-en:
+- Short Drama / Creative Generation
+complete-tags-cn:
+- 短剧漫剧 / 创作生成
+summary-en: Adapts a novel or script into outlines, characters, art, scripts, blocking and storyboards, then produces shot videos, voiceover, edit, mix and subtitles to deliver a reviewed, playable short-drama episode.
+summary-cn: 先将小说或剧本改编为大纲、角色、美术、剧本、站位与分镜，再制作逐镜视频、配音、剪辑混音和字幕，交付经验收的可播放短剧成片。
+desc-en: For creators turning novels or existing scripts into finished AI short dramas. Provide source text, a script, compatible stage JSON or a character brief, plus genre, episode count and episode length. The workflow first adapts the story with source evidence into an outline, character profiles, scene and prop designs, timed episode scripts, opening blocking and storyboards; it then generates reference images and shot videos, records dialogue, narration and system lines, edits, mixes, adds subtitles and system panels, renders and reviews the film. It delivers a playable video, subtitles, an editable timeline, media manifests and stage reports grouped on the canvas. Any single stage can be created, checked or revised. It relies on available generation tools and does not ship its own model or media engine.
+desc-cn: 面向把小说或已有剧本做成 AI 短剧成片的创作者。用户提供小说正文、剧本、兼容的阶段 JSON 或角色描述，并给出题材、集数与单集时长；流程先依据原文证据完成改编大纲、人物设定、场景道具、带节拍时长的分集剧本、开场站位与分镜，再生成参考图和逐镜视频，补录对白、旁白与系统台词，完成剪辑、混音、字幕和系统面板，渲染后做视听验收。最终交付可播放成片、字幕、可编辑时间线、素材清单及分类上画布的阶段报告，也可单独创作或修改任一阶段；依赖平台现有生成能力，不自带模型与媒体引擎。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 先把小说改编为大纲、角色、剧本与分镜，再完成逐镜视频、配音、剪辑和字幕，交付短剧成片。
+    best-for:
+    - 小说改编短剧
+    - 短剧成片制作
+    - 分集剧本分镜
+    how-to-use: 提供小说正文或已有剧本，确认题材、集数、单集时长和视频清晰度，也可只指定某一阶段。
+    outputs: 改编大纲、角色美术设定、剧本站位分镜、逐镜视频、可播放成片、字幕与阶段报告。
+  en-US:
+    summary: Adapt a novel into outlines, characters, scripts and storyboards, then produce shot videos, voiceover, edit and subtitles into a finished short drama.
+    best-for:
+    - Novel-to-Drama Adaptation
+    - Short Drama Production
+    - Episode Scripts & Storyboards
+    how-to-use: Provide the novel text or an existing script, confirm genre, episode count, episode length and video resolution, or name a single stage.
+    outputs: Adaptation outline, character and art designs, scripts, blocking, storyboards, shot videos, a playable episode, subtitles and stage reports.
+cover: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318813028989599-1794318813017.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318813028989599-1794318813017.mp4
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318826340696184-1794318826170.mp4
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318827443305756-1794318827116.mp4

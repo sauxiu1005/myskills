@@ -1,0 +1,18 @@
+{
+  "meta": {"brand": "ECHO 音乐"},
+  "format": {"aspect": "16:9", "fps": 60, "bpm": 120, "duration": 15},
+  "style": "swiss",
+  "palette": {"preset": "mono", "dark": "#121212", "light": "#F4F2EC", "a1": "#FF4D3D", "a2": "#B8FF3D", "a3": "#3D5BFF"},
+  "carrier": "a1",
+  "hud": {"mode": "pages", "label": "ECHO / 新版本上线"},
+  "audio": {"mode": "synth", "mood": "energetic"},
+  "scenes": [
+    {"type": "ball_drop",     "beats": 3, "bg": "dark",  "name": "节拍", "caption": "跟着节拍走"},
+    {"type": "split_hero",    "beats": 4, "bg": "dark",  "name": "主张", "kicker": "ECHO 6.0", "lines": ["让每首歌", "更大声。"], "object": "loop"},
+    {"type": "type_ribbons",  "beats": 4, "bg": "dark",  "name": "曲库", "words": ["流行", "说唱", "电子", "爵士"]},
+    {"type": "beat_jelly",    "beats": 4, "bg": "light", "name": "律动", "lines": ["空间音频", "随拍跳动"], "label": "Hi-Fi / 无损"},
+    {"type": "stack_flip",    "beats": 4, "bg": "dark",  "name": "心情", "words": ["燃", "静", "嗨", "爱"], "per": 0.5},
+    {"type": "grid_recap",    "beats": 4, "bg": "dark",  "name": "回顾"},
+    {"type": "object_lockup", "beats": 7, "bg": "dark",  "name": "收尾", "lines": ["ECHO", "听见更多。"], "cta": "立即更新", "meta": "ECHO MUSIC · 2026"}
+  ]
+}

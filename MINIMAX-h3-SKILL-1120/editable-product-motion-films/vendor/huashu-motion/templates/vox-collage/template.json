@@ -1,0 +1,26 @@
+{
+  "title": "Vox-style collage desk (y2)",
+  "summary": "Screenshots and note cards are taped onto a paper desk and tied with red string; a highlighter and a red circle mark the line that matters while the camera follows.",
+  "best_for": [
+    "arguments built on real screenshots, documents or clippings",
+    "news and history explainers",
+    "look at this line / this number"
+  ],
+  "aspect": "16:9",
+  "grammar": "y2_vox",
+  "copy": {
+    "templates/blank/vendor/gsap.min.js": "vendor/gsap.min.js",
+    "templates/blank/vendor/GSAP-LICENSE.txt": "vendor/GSAP-LICENSE.txt",
+    "templates/blank/vendor/GSAP-LICENSE.html": "vendor/GSAP-LICENSE.html",
+    "runtime/clip/clip.js": "vendor/clip/clip.js",
+    "runtime/clip/cues.js": "vendor/clip/cues.js",
+    "runtime/clip/lib": "vendor/clip/lib",
+    "runtime/clip/grammars": "vendor/clip/grammars",
+    "runtime/clip/LICENSE": "vendor/clip/LICENSE",
+    "runtime/clip/NOTICE.md": "vendor/clip/NOTICE.md",
+    "fonts/NotoSansSC-800.woff": "assets/fonts/NotoSansSC-800.woff",
+    "fonts/NotoSansSC-700.woff": "assets/fonts/NotoSansSC-700.woff",
+    "fonts/OFL.txt": "assets/fonts/OFL.txt",
+    "fonts/LICENSES.md": "assets/fonts/LICENSES.md"
+  }
+}

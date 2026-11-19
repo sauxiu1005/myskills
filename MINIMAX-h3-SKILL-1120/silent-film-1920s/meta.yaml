@@ -1,0 +1,36 @@
+display-name-zh: 1920年代默片风格短片
+version: 1.0.0
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Creative Generation
+complete-tags-cn:
+- 专业影视 / 创作生成
+summary-en: From a topic, script, product or footage, plan one legible causal chain, intertitles and a piano cue sheet, then build an ink-and-silver projected short with a 4:3 gate and iris transitions.
+summary-cn: 从题材、剧本、产品或实拍出发，规划一条清楚的因果链、插字卡和钢琴 cue sheet，制作带片门与 iris 转场的版画银灰放映感短片。
+desc-en: 'For creators wanting an original short that plays like a projected 1920s one-reel silent film: comedy, brand newsreel, explainer, melodrama or redrawn footage. The user gives a topic, script, product or footage plus length, frame and intertitle language. The skill writes a treatment built on one causal chain seen in a locked wide shot, three to five intertitles and a mood-section cue sheet; develops engraved-ink, silver-wash style frames and silhouette sheets; produces shots by generation, code or footage redraw; then applies a print pass that samples motion at 16-18 fps while grain changes every 24 fps frame, adds iris and a 4:3 gate, and lays an original piano score. It delivers the film, treatment, shot list and subtitles. It does not copy real films, the Tramp look or published music.'
+desc-cn: 面向想做原创“1920年代单本默片放映感”短片的创作者，适合喜剧、品牌新闻片、科普和实拍重绘。用户提供题材、剧本、产品或实拍素材，以及时长、画幅和插字卡语言。流程先写以一条静态宽镜头因果链为核心的故事处理、三到五张插字卡和按情绪段落的 cue sheet，再开发版画银灰风格帧与剪影标识表，按生成、代码或实拍重绘路线制作镜头，最后做冲印处理：动作按 16–18 fps 采样而颗粒逐帧变化，加入 iris 与 4:3 片门，并配原创钢琴。交付成片、故事处理、镜头表与字幕。不复刻真实影片、流浪汉造型或已发表音乐。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 把任意题材做成原创的1920年代默片放映感短片，版画银灰画面配插字卡、iris 和钢琴叙事。
+    best-for:
+    - 默片喜剧
+    - 品牌复古短片
+    - 实拍重绘
+    how-to-use: 提供题材、剧本、产品或实拍素材，先确认时长、画幅、插字卡语言和制作路线。
+    outputs: 故事处理与 cue sheet、风格帧、镜头表、成片视频与插字卡字幕。
+  en-US:
+    summary: Turn any topic into an original projected 1920s silent short with ink-and-silver pictures, intertitles, iris transitions and piano storytelling.
+    best-for:
+    - Silent Comedy
+    - Retro Brand Shorts
+    - Footage Redraw
+    how-to-use: Provide a topic, script, product or footage, then confirm length, frame, intertitle language and production route.
+    outputs: Treatment and cue sheet, style frames, shot list, finished film and intertitle subtitles.
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318792291745916-1794318792236.mp4
+cover: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318789396620141-1794318789387.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318789396620141-1794318789387.mp4

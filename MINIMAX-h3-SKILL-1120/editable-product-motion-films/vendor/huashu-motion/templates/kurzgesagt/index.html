@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN" data-composition-variables='[
+  {"id":"title","type":"string","label":"标题（顶部逐字上浮，第一次推近时淡出）","default":"一个大模型里面有什么？","group":"第一层"},
+  {"id":"center","type":"string","label":"中心星球的名字","default":"大模型","group":"第一层"},
+  {"id":"point1","type":"string","label":"卫星 1（清空就不出现）","default":"几千亿个参数","group":"第一层"},
+  {"id":"point2","type":"string","label":"卫星 2（清空就不出现）","default":"几十层网络","group":"第一层"},
+  {"id":"point3","type":"string","label":"卫星 3（清空就不出现）","default":"一张词表","group":"第一层"},
+  {"id":"diveIndex","type":"number","label":"钻进第几颗卫星（从 0 数）","default":1,"min":0,"max":9,"step":1,"group":"钻进去"},
+  {"id":"dive","type":"string","label":"钻进去后新中心的名字","default":"其中一层","group":"钻进去"},
+  {"id":"point4","type":"string","label":"里层卫星 1（清空就不出现）","default":"注意力","group":"钻进去"},
+  {"id":"point5","type":"string","label":"里层卫星 2（清空就不出现）","default":"前馈网络","group":"钻进去"},
+  {"id":"highlightIndex","type":"number","label":"最后推近里层第几颗（从 0 数；-1 不推近）","default":0,"min":-1,"max":9,"step":1,"group":"钻进去"},
+  {"id":"flow","type":"boolean","label":"卫星串成一条链（讲先后顺序时打开）","default":false,"group":"画面"},
+  {"id":"planetColor","type":"color","label":"中心星球颜色","default":"#F48301","group":"画面"},
+  {"id":"duration","type":"number","label":"片长（秒；有配音时至少到配音结束）","default":10,"min":2,"max":120,"step":0.5,"group":"节奏"},
+  {"id":"pace","type":"number","label":"节奏倍率（1 原速；真片约 7–9 秒一镜，常用 2–3）","default":1,"min":0.5,"max":4,"step":0.1,"group":"节奏"}
+]'>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>huashu-motion · Kurzgesagt 扁平科普</title>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/om.js"></script>
+<style>
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #05020F; }
+  #film { position: relative; width: 100%; height: 100%; overflow: hidden; background: #05020F; }
+  #c { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<!--
+  Kurzgesagt 式扁平科普（y1）：深靛紫夜空里一颗发光的星球＝要讲的概念，每个要点是一颗卫星节点；enter 让相机钻进一颗卫星，
+  推到它的颜色填满整屏，再从同色的新星球里拉出来——「里面是什么」。画面永远在轻轻动。
+  The whole film is the spec below, drawn on the canvas by vendor/clip (grammar: y1_kurzgesagt, from huashu-art-motion, MIT).
+  - Variables fill the "{{…}}" placeholders. Timing and structure live in the cues: `at` is the second the thing first
+    shows; `word` anchors it to that word of the narration once `om voice` has run (skills/huashu-motion/references/grammars.md).
+  - Points after an `enter` belong to the new layer; write their `at` after enter.at + 1.6 (the dive takes 1.6 s).
+  - Pickable regions (0-based like the spec): title · planet (the centre of the layer on screen) · point-<i> (node + label).
+  - Scenes: title → layer-1 → dive-1 → layer-2 → focus-1.
+-->
+<div id="film" data-composition-id="film" data-start="0" data-width="1920" data-height="1080">
+  <!-- lang="en" on the canvas: symbols the fonts lack fall back to the same Latin system face as upstream; all Chinese is in the bundled fonts -->
+  <canvas id="c" lang="en" width="1920" height="1080" data-om-id="sky" data-layout-allow-overflow></canvas>
+</div>
+
+<script type="application/json" id="clip-spec">
+{
+  "grammar": "y1_kurzgesagt",
+  "duration": "{{duration}}",
+  "pace": "{{pace}}",
+  "fps": 30,
+  "data": { "center": "{{center}}", "flow": "{{flow}}", "planetColor": "{{planetColor}}" },
+  "cues": [
+    { "at": 0.0, "kind": "title", "text": "{{title}}" },
+    { "at": 1.4, "kind": "point", "word": "参数", "text": "{{point1}}" },
+    { "at": 2.3, "kind": "point", "word": "网络", "text": "{{point2}}" },
+    { "at": 3.2, "kind": "point", "word": "词表", "text": "{{point3}}" },
+    { "at": 4.2, "kind": "enter", "word": "其中一层", "text": "{{dive}}", "data": { "index": "{{diveIndex}}" } },
+    { "at": 6.2, "kind": "point", "word": "注意力", "text": "{{point4}}" },
+    { "at": 7.0, "kind": "point", "word": "前馈", "text": "{{point5}}" },
+    { "at": 8.0, "kind": "highlight", "word": "最关键", "data": { "index": "{{highlightIndex}}" } }
+  ]
+}
+</script>
+
+<script src="vendor/clip/lib/util.js"></script>
+<script src="vendor/clip/lib/paint.js"></script>
+<script src="vendor/clip/lib/kit.js"></script>
+<script src="vendor/clip/lib/motion.js"></script>
+<script src="vendor/clip/lib/camera.js"></script>
+<script src="vendor/clip/lib/diagram.js"></script>
+<script src="vendor/clip/lib/typo.js"></script>
+<script src="vendor/clip/lib/chart.js"></script>
+<script src="vendor/clip/lib/ui.js"></script>
+<script src="vendor/clip/lib/collage.js"></script>
+<script src="vendor/clip/lib/toon.js"></script>
+<script src="vendor/clip/cues.js"></script>
+<script src="vendor/clip/clip.js"></script>
+<script src="vendor/clip/grammars/y1_kurzgesagt.js"></script>
+<script>
+  const tl = gsap.timeline({ paused: true });
+  CLIP.mount({
+    id: 'film',
+    tl,
+    apply(spec) {
+      // indexes count the points of one layer; keep them inside that layer
+      const enterAt = (spec.cues.find((q) => q.kind === 'enter') || {}).at ?? Infinity;
+      const outer = spec.cues.filter((q) => q.kind === 'point' && q.at < enterAt).length, inner = spec.cues.filter((q) => q.kind === 'point' && q.at > enterAt).length;
+      for (const q of spec.cues) {
+        if (q.kind === 'enter' && !(q.data.index >= 0 && q.data.index < outer)) { CLIP.problem(`diveIndex 要在 0–${outer - 1} 之间`); q.data.index = Math.max(0, outer - 1); }
+        if (q.kind === 'highlight' && q.data.index >= inner) CLIP.problem(`highlightIndex 超出了里层卫星数（${inner} 颗）`);
+      }
+      spec.cues = spec.cues.filter((q) => q.kind !== 'highlight' || (q.data.index >= 0 && q.data.index < inner));
+      return spec;
+    },
+  });
+  window.__timelines['film'] = tl;
+</script>
+</body>
+</html>

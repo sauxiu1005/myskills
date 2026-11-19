@@ -1,0 +1,37 @@
+display-name-zh: 玻璃拟态动效
+version: 1.0.0
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+summary-en: Turns a brand, product, website or app into a short code-rendered aurora and glassmorphism film with frosted UI cards, a refracting liquid-glass lens and synthesized music, for tech launches and brand openers.
+summary-cn: 基于品牌、产品、网站或 App，用代码渲染极光玻璃拟态短片，透镜真实折射界面文字并配乐，适用于科技发布与品牌开场。
+desc-en: A motion-design workflow for tech brands and creators who want the slow, translucent Liquid Glass look without AI video models. Provide a brand or product idea, optional copy, UI language, palette or logo; the workflow can also invent a fictional brand. It writes a treatment with UI copy, a timecoded beat sheet and palette for approval. A coding agent then builds a WebGL project where a liquid-glass lens truly bends the cards and text, and first renders a key visual and keyframes for approval. Then it adds motion and synthesized music, renders, encodes against banding and runs an independent review. It delivers an MP4 and a production report. Best for product, website and app launches or brand openers; not for long films, live action or dense fast-cut content.
+desc-cn: 面向想要「慢、透、高级」液态玻璃质感、又不用生视频模型的科技品牌与创作者。用户提供品牌或产品构想，可附文案、界面语言、配色或 Logo，也可让流程虚构品牌。流程先出含界面文案、节拍表和配色的创意方案供确认；再由编码子 agent 搭建 WebGL 工程，先渲染主视觉与关键帧供确认，让透镜真正折射卡片和文字；确认后加动画与合成配乐，逐帧渲染、防色带编码并独立评审。交付 MP4 成片与制作报告。适合产品、网站与 App 发布及品牌开场；不适合长片、实拍或快节奏信息密集内容。
+complete-tags-en:
+- Creative & Experimental / Creative Generation
+complete-tags-cn:
+- 创意实验 / 创作生成
+structured-info:
+  zh-CN:
+    summary: 用代码把品牌、产品、网站或App做成极光玻璃拟态短片，透镜真实折射界面文字。
+    best-for:
+    - 产品发布
+    - 科技品牌开场
+    - 玻璃拟态动效
+    how-to-use: 提供品牌或产品构想、界面语言和配色倾向，确认创意方案及主视觉关键帧后渲染成片。
+    outputs: 创意方案、主视觉与关键帧、带配乐的MP4成片、制作报告及独立评审结果。
+  en-US:
+    summary: Code-render a brand, product, website or app into an aurora glassmorphism film whose lens truly refracts UI text.
+    best-for:
+    - Product Launches
+    - Tech Brand Openers
+    - Glassmorphism Motion
+    how-to-use: Provide a brand or product idea, UI copy language and palette preference, then approve the treatment and the key visual and keyframes before the film is rendered.
+    outputs: A treatment, a key visual and keyframes, an MP4 film with music, a production report and an independent review.
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318768373858509-1794318768334.mp4
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318780410499788-1794318780382.mp4
+cover: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318757398370890-1794318757387.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318757398370890-1794318757387.mp4

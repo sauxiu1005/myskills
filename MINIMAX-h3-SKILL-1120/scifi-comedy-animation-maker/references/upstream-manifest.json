@@ -1,0 +1,282 @@
+{
+  "repository": "https://github.com/lemomo-ai/lemo-opuscar",
+  "commit": "f17136060781a0068a7951245a3aa7835a7230de",
+  "retrieved": "2026-10-29",
+  "files": [
+    {
+      "path": "DIRECTOR.md",
+      "bytes": 11356,
+      "sha256": "3b8b0c40011a0cea796bb1afe6dae0f212115b57e2aa4c9a976b1994a923d564"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1064,
+      "sha256": "14c9ff6f14bfb2391e74fedb01c256891d2a3bba1c2acf5789901bdf77e54e33"
+    },
+    {
+      "path": "TECHNIQUE.md",
+      "bytes": 13424,
+      "sha256": "179b4e166d630a3cdd02da8bf42769f903aa4a1dad1314bd310c22a951cfb4c2"
+    },
+    {
+      "path": "core/README.md",
+      "bytes": 7630,
+      "sha256": "a05b47dbd23e835cffbdc35ed5dc2e09872c7b3f32d575be1bf2a80d2c8c5f7d"
+    },
+    {
+      "path": "core/audio/pluck.py",
+      "bytes": 14833,
+      "sha256": "7c2af41c55ed18dcd46a769d08037d04d79b92b4abf3ef1db1d2e3da5ebc9a5b"
+    },
+    {
+      "path": "core/audio/sfx.py",
+      "bytes": 5759,
+      "sha256": "d43584b58527a40bd720889bb2fb5c9d62b9868a43fbb73c68e06b1161a75689"
+    },
+    {
+      "path": "core/lib.js",
+      "bytes": 2782,
+      "sha256": "f6aafa10a156d52b066a39b9445b4d23f3261b326042a92b95bdea4ba71bac24"
+    },
+    {
+      "path": "core/render/browser.mjs",
+      "bytes": 1758,
+      "sha256": "e1709a756c8e7533e5467ca4a8891442d05f68cdc40831ab99979dd4fe731d67"
+    },
+    {
+      "path": "core/render/events.mjs",
+      "bytes": 1063,
+      "sha256": "bacef94cd9bde0100125df19566faa2bd2a9616cfa32506358537621baf63b93"
+    },
+    {
+      "path": "core/render/mux.sh",
+      "bytes": 8458,
+      "sha256": "4b61171d1a8be4fa91bc5ffc725e35af15be4fcc1b08cb849f97df6c1e17b356"
+    },
+    {
+      "path": "core/render/page.mjs",
+      "bytes": 4968,
+      "sha256": "9549c827ff93e94b1a46e4ca46d4111199a47cc6b9f0b5766b1b65d00a7f54b1"
+    },
+    {
+      "path": "core/render/readcheck.mjs",
+      "bytes": 4726,
+      "sha256": "36f273516937154b51a512e9be264d545ccd4a592b0677327835a328bb5cfc9c"
+    },
+    {
+      "path": "core/render/serve.mjs",
+      "bytes": 3133,
+      "sha256": "67960fc1f8be551d62c7d4129407f6b0ce1c7ed6238bc720d3bed396ad3f0356"
+    },
+    {
+      "path": "core/render/sheet.py",
+      "bytes": 864,
+      "sha256": "1b24e5fed9d5a4df86171fb4e18d6b1cdc4138901efe3044125ff046724711bb"
+    },
+    {
+      "path": "core/render/slot.mjs",
+      "bytes": 7040,
+      "sha256": "eed70ee5be47d608eadfabdcb5e550ce509c32fb42a5afb9377644e7226d8ef0"
+    },
+    {
+      "path": "core/render/srt.py",
+      "bytes": 1197,
+      "sha256": "027cbf45fa03ef183da5fb8bfdda4064414639c1b023cc2cf1a8db12977bdeb3"
+    },
+    {
+      "path": "core/render/still.mjs",
+      "bytes": 1867,
+      "sha256": "b1c7688e600f12c1211c64e8ea2e70738053f327c0851af39913816ce7e864e4"
+    },
+    {
+      "path": "core/render/video.mjs",
+      "bytes": 7128,
+      "sha256": "502bfe4fd9f5e2d9ff14d5930927dc7e2b03fb55b2b3d17f201064a766bb87b3"
+    },
+    {
+      "path": "core/tts/asr_check.py",
+      "bytes": 15037,
+      "sha256": "e3f2a8391f22847f4145a11b82afd5a337105ad845d38f148bd750bcccecd2e5"
+    },
+    {
+      "path": "core/tts/tts.py",
+      "bytes": 4686,
+      "sha256": "aa63f2321c4e66471096d5d6f349fc77c6cf004ffdf9b77741509bfde7dd8a9d"
+    },
+    {
+      "path": "core/tts/tts_zh.py",
+      "bytes": 7319,
+      "sha256": "ee0196eb3c665531411be5721186e4f4f0514d1404ba439dc4a85aab31678aff"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 1063,
+      "sha256": "813ec295dae53e681217533ebc9babd2eedb170fc69a3c8b33a6df266d5248ac"
+    },
+    {
+      "path": "package.json",
+      "bytes": 363,
+      "sha256": "6b8067aaba294772db54db7d2763300021e0d1fe97b5f108c10ae7c42aa1350d"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "bytes": 109,
+      "sha256": "10d385ba3b8990da57a37cea1591f1556288f3dc639fda80c54bac9e0eca9a12"
+    },
+    {
+      "path": "requirements-music.txt",
+      "bytes": 230,
+      "sha256": "64deb42c911d67bfc88e4a7fe6a00dacba91b2cb996b648cf7de535b9969541d"
+    },
+    {
+      "path": "requirements-voice.txt",
+      "bytes": 357,
+      "sha256": "e4bf2bda88b61ed789be360896c6eeb5bb2027d8a4f7414c4a10489cb311f04d"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 293,
+      "sha256": "8e8c4b23849ee101b8f880d816daef46caf3c3dd96b67785088a31b9a3fa0434"
+    },
+    {
+      "path": "styles/scifi-toon/DEMO.md",
+      "bytes": 8028,
+      "sha256": "ab784c9371d07e7718109d79e4137dc90df2c3335df7379a5104e2b182ad770f"
+    },
+    {
+      "path": "styles/scifi-toon/STYLE.md",
+      "bytes": 12755,
+      "sha256": "9a720a57ce50dc554e9237e698a979cdf7311527e6e6a0dad803278dfe8ad2ce"
+    },
+    {
+      "path": "styles/scifi-toon/demo/CREDITS",
+      "bytes": 870,
+      "sha256": "00b38d98d0d1a09514a70c9d46690f25c2bb8708e32b9aa9abb79c8268c9af83"
+    },
+    {
+      "path": "styles/scifi-toon/demo/asr.py",
+      "bytes": 1410,
+      "sha256": "d1414ce0ba7f4a1c68e3a390fa534da1f40aae29f4764ced0501020e9e40ba58"
+    },
+    {
+      "path": "styles/scifi-toon/demo/build.sh",
+      "bytes": 1155,
+      "sha256": "10fc65622c2c790683af6cfb05ba3e29505c496a30ada56ec344d9ec9fa0ca28"
+    },
+    {
+      "path": "styles/scifi-toon/demo/chars.js",
+      "bytes": 19699,
+      "sha256": "63a36fa3dd8ee999d37029b0c9e0c05ad79b41fb4b9801920b58f02415587b52"
+    },
+    {
+      "path": "styles/scifi-toon/demo/events.json",
+      "bytes": 3987,
+      "sha256": "e314ace688c2728fae724be950bc88f3156d61f3af8457e142ac2826c4fb93e5"
+    },
+    {
+      "path": "styles/scifi-toon/demo/fonts/fonts.css",
+      "bytes": 540,
+      "sha256": "b6a121ec3612dbc26685d0980f8da40c74640b8a189cfffc72cc7537be9908f8"
+    },
+    {
+      "path": "styles/scifi-toon/demo/index.html",
+      "bytes": 336,
+      "sha256": "c551af8b70b0606d51c5d7eb5679cc5d63bb98b5e9ba190b539ccd853a43f902"
+    },
+    {
+      "path": "styles/scifi-toon/demo/levels.py",
+      "bytes": 741,
+      "sha256": "79003f3568b6a0bb50f650c691ca1ab5427c9ae09146d9bb976c6ad0dd34604d"
+    },
+    {
+      "path": "styles/scifi-toon/demo/lines.json",
+      "bytes": 2344,
+      "sha256": "8ae558a8cbea94db3ea1df10c6adb35439143ef0996e2a6ff8039417211b5f04"
+    },
+    {
+      "path": "styles/scifi-toon/demo/main.js",
+      "bytes": 32084,
+      "sha256": "ad8a8614448a72d4ee77f9905b9b7dd135476c68a2474f7f5c0c8be1ffbaf50d"
+    },
+    {
+      "path": "styles/scifi-toon/demo/mix.py",
+      "bytes": 11784,
+      "sha256": "f26191af931e5a69afca9a58a7983d4d51ead9a03bc9ecded4b4926424da7758"
+    },
+    {
+      "path": "styles/scifi-toon/demo/music/score.py",
+      "bytes": 23873,
+      "sha256": "ec86a7befe51d5b553df59b4dc71841776da880196b23c5eacd6f55c0485d4d8"
+    },
+    {
+      "path": "styles/scifi-toon/demo/sheet.sh",
+      "bytes": 690,
+      "sha256": "0bf3d3a996d9c5c2fb141ac8c8cd5f547c38f8ed91255ad1678946d61dbeb334"
+    },
+    {
+      "path": "styles/scifi-toon/demo/srt.mjs",
+      "bytes": 1012,
+      "sha256": "382aa6c0bf28972f3ab5eb83a41f63ed7302347792680fd6ebcf1a13efdd7fca"
+    },
+    {
+      "path": "styles/scifi-toon/demo/stills/styleframe.jpg",
+      "bytes": 242892,
+      "sha256": "55ace3a388625174376c925cf25ecf9a9ab1532c20b3ec90fe58558aba566a8d"
+    },
+    {
+      "path": "styles/scifi-toon/demo/story.js",
+      "bytes": 4224,
+      "sha256": "a429eef0090a4a460aafb33fa4f72931bd6b317cd97c456560b8e4c3f3f62ffa"
+    },
+    {
+      "path": "styles/scifi-toon/demo/strip.sh",
+      "bytes": 672,
+      "sha256": "7c152f2c1f3ef7e9b46f055c55333759b7e58c4cb01e18df797b56b5e6c23a46"
+    },
+    {
+      "path": "styles/scifi-toon/demo/toon.js",
+      "bytes": 8916,
+      "sha256": "4c8cfceebb33427d2535ce12b18b0cd58144ac341c2a74b35adfd0f99572da88"
+    },
+    {
+      "path": "styles/scifi-toon/demo/voice.py",
+      "bytes": 2687,
+      "sha256": "fd198fcfbbd43820b551c0c4e31c7b8d80786b3a36625fe018753961af75ca94"
+    },
+    {
+      "path": "styles/scifi-toon/demo/voices/dur.json",
+      "bytes": 235,
+      "sha256": "d51656b4dc824105cb82808de1fa3c413065f1b8ac5f46c0cb474181bb078353"
+    },
+    {
+      "path": "styles/scifi-toon/demo/voices/lips.json",
+      "bytes": 6296,
+      "sha256": "f391c630965a3ebda726354be09eabd1a5238cefb6bf43ef88c831e53a8a741e"
+    },
+    {
+      "path": "styles/scifi-toon/demo/voices/words.json",
+      "bytes": 1580,
+      "sha256": "a527ad02cbb4c1954ef007a5225a306ec270926cb73421c1ce2b815dfd043e59"
+    },
+    {
+      "path": "styles/scifi-toon/demo/worlds.js",
+      "bytes": 26186,
+      "sha256": "727fe2304187afdc7627c9a301751a918fed035d7341489a527000bdbf4a5655"
+    },
+    {
+      "path": "styles/scifi-toon/poster.jpg",
+      "bytes": 288803,
+      "sha256": "f52e5a4d08c608bfa4ea1c80873fbf72ff1f8fe82753b526e17906636690d20b"
+    },
+    {
+      "path": "styles/scifi-toon/scifi-toon.srt",
+      "bytes": 1028,
+      "sha256": "4e166c6db4f26bb51336a1ae9fa639dc7d51977195fa4926b8bd35e420a53a7b"
+    },
+    {
+      "path": "styles/scifi-toon/style.json",
+      "bytes": 502,
+      "sha256": "e8920bbceae36c8811e88f15ccb0cf8b04158c4b93d008320b2c4643d272cbf9"
+    }
+  ]
+}

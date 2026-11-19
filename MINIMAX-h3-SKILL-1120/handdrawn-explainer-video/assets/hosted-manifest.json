@@ -1,0 +1,47 @@
+{
+  "version": "1.2.3",
+  "files": {
+    "assets/hands/cardigan-fountain.png": {
+      "url": "https://github.com/threerocks/sweety-handdraw-video/releases/download/v1.2/assets--hands--cardigan-fountain.png",
+      "bytes": 991217,
+      "sha256": "795e40adba8aa5f35f8c28cc8a1e65efde53000be027e14c9b7ebc0d2910d110",
+      "release_asset": "assets--hands--cardigan-fountain.png"
+    },
+    "assets/hands/child-pencil.png": {
+      "url": "https://github.com/threerocks/sweety-handdraw-video/releases/download/v1.2/assets--hands--child-pencil.png",
+      "bytes": 1055249,
+      "sha256": "84f6c2b60a5d3c2e2d80a2c98731791f8d033a1334507d05968a781e0cbb1b91",
+      "release_asset": "assets--hands--child-pencil.png"
+    },
+    "assets/hands/diamond-woman.png": {
+      "url": "https://github.com/threerocks/sweety-handdraw-video/releases/download/v1.2/assets--hands--diamond-woman.png",
+      "bytes": 828890,
+      "sha256": "8713dbb120a87dc98f2bfea2404b8418e452a24ce81d432168579d1ccca0e672",
+      "release_asset": "assets--hands--diamond-woman.png"
+    },
+    "assets/hands/navy.png": {
+      "url": "https://github.com/threerocks/sweety-handdraw-video/releases/download/v1.2/assets--hands--navy.png",
+      "bytes": 1035863,
+      "sha256": "8be7a4ba993a3e668fdad5fbc7e76cd617d44e851c7da82dc2ffc29d3760fa0d",
+      "release_asset": "assets--hands--navy.png"
+    },
+    "assets/hands/pen-only.png": {
+      "url": "https://github.com/threerocks/sweety-handdraw-video/releases/download/v1.2/assets--hands--pen-only.png",
+      "bytes": 419130,
+      "sha256": "40778ebb877bbf0c5eaa57d18e7a279d3d7837e6b4a604286a7d9c45199e42a3",
+      "release_asset": "assets--hands--pen-only.png"
+    },
+    "assets/hands/teacher-pen.png": {
+      "url": "https://github.com/threerocks/sweety-handdraw-video/releases/download/v1.2/assets--hands--teacher-pen.png",
+      "bytes": 957378,
+      "sha256": "2c035a0c900589f8650fed9fe6b863773e4496a3c1bb389dcb7dc35501bd1dd5",
+      "release_asset": "assets--hands--teacher-pen.png"
+    },
+    "assets/hands/waner-brush.png": {
+      "url": "https://github.com/threerocks/sweety-handdraw-video/releases/download/v1.2/assets--hands--waner-brush.png",
+      "bytes": 1070391,
+      "sha256": "3f9028c0a5dc41aa3a503b1f59059d12c0ffc7571f9aa9df24f23ac876578fb2",
+      "release_asset": "assets--hands--waner-brush.png"
+    }
+  }
+}

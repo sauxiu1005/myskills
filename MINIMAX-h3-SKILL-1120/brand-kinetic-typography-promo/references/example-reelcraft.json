@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "brand": "MiniMax Design"
+  },
+  "format": {
+    "aspect": "16:9",
+    "fps": 60,
+    "bpm": 120,
+    "duration": 8
+  },
+  "style": "punch",
+  "palette": {
+    "preset": "mono",
+    "dark": "#0B0B0E",
+    "light": "#F3F2FA",
+    "a1": "#6757E7",
+    "a2": "#BBBBFE",
+    "a3": "#3D3268"
+  },
+  "carrier": "a1",
+  "fonts": {
+    "display": "Outfit",
+    "mono": "Menlo"
+  },
+  "frame_shape": "icon",
+  "hud": {
+    "enabled": true,
+    "mode": "frame",
+    "label": "MINIMAX DESIGN  /  KINETIC TYPE SHOWCASE"
+  },
+  "audio": {
+    "mode": "synth",
+    "mood": "energetic"
+  },
+  "scenes": [
+    {
+      "type": "line_split",
+      "beats": 2.5,
+      "bg": "dark",
+      "name": "INTRO",
+      "top": "I HAVE AN",
+      "bottom": "IDEA.",
+      "accent": "a2"
+    },
+    {
+      "type": "marquee_swap",
+      "beats": 3,
+      "bg": "a2",
+      "name": "KINETIC TYPE",
+      "words": [
+        "PROMPT",
+        "PIXELS",
+        "MEANING"
+      ],
+      "accent": "a1",
+      "transition": "iris",
+      "iris_at": [
+        0.84,
+        0.54
+      ]
+    },
+    {
+      "type": "orbit_morph",
+      "beats": 2.5,
+      "bg": "dark",
+      "name": "SHAPE",
+      "shapes": [
+        "icon",
+        "circle",
+        "diamond"
+      ],
+      "colors": [
+        "a1",
+        "a2",
+        "light"
+      ],
+      "transition": "blinds"
+    },
+    {
+      "type": "style_cuts",
+      "beats": 4,
+      "bg": "a1",
+      "name": "TYPE STYLES",
+      "words": [
+        "TEXT",
+        "IMAGE",
+        "VIDEO",
+        "MUSIC",
+        "AGENT",
+        "CANVAS",
+        "CREATE",
+        "REAL."
+      ],
+      "styles": [
+        "type",
+        "scale",
+        "blur",
+        "squash",
+        "glitch",
+        "select",
+        "stretch",
+        "overshoot"
+      ],
+      "bgs": [
+        "a1",
+        "light",
+        "dark",
+        "a2",
+        "a3",
+        "light",
+        "a1",
+        "dark"
+      ]
+    },
+    {
+      "type": "converge_lockup",
+      "beats": 4,
+      "bg": "light",
+      "name": "FIN",
+      "logo_width": 0.6,
+      "tagline": "Your AI creative studio",
+      "meta": "DESIGN.MINIMAX.CN",
+      "title": "BRAND"
+    }
+  ],
+  "fx": {
+    "shake": 24,
+    "rgb": 12,
+    "grain": 7,
+    "vig": 0.35
+  }
+}

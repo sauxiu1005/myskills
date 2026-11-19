@@ -1,0 +1,119 @@
+{
+  "director_id": "mamoru-oshii",
+  "director_name_zh": "押井守",
+  "source": {
+    "path": "第1期_SKILL_冷调与大地_001-080/02_霓虹黑色与赛博未来/028_MamoruOshii_押井守/色卡主文档.md",
+    "sha256": "7e1e065ce4f1d4543d472746ce87dc2bbe412ef5677ae28bbdbd94ad1ab9ef69"
+  },
+  "color_space": "sRGB",
+  "evidence": "source_document_hex_not_frame_sampled",
+  "display": "Equal-size swatches; no fixed frame-area ratios. Accent labels retain source associations, not universal emotional meanings.",
+  "main": [
+    {
+      "id": "C01",
+      "label_zh": "赛博深黑",
+      "hex": "#0D1117",
+      "rgb": [
+        13,
+        17,
+        23
+      ]
+    },
+    {
+      "id": "C02",
+      "label_zh": "雨城灰蓝",
+      "hex": "#37474F",
+      "rgb": [
+        55,
+        71,
+        79
+      ]
+    },
+    {
+      "id": "C03",
+      "label_zh": "数据绿",
+      "hex": "#00C853",
+      "rgb": [
+        0,
+        200,
+        83
+      ]
+    },
+    {
+      "id": "C04",
+      "label_zh": "霓虹青",
+      "hex": "#00E5FF",
+      "rgb": [
+        0,
+        229,
+        255
+      ]
+    },
+    {
+      "id": "C05",
+      "label_zh": "暖肤黄",
+      "hex": "#F0D9B5",
+      "rgb": [
+        240,
+        217,
+        181
+      ]
+    },
+    {
+      "id": "C06",
+      "label_zh": "机械灰",
+      "hex": "#607D8B",
+      "rgb": [
+        96,
+        125,
+        139
+      ]
+    }
+  ],
+  "accent": [
+    {
+      "id": "E01",
+      "label_zh": "警报红",
+      "hex": "#FF1744",
+      "rgb": [
+        255,
+        23,
+        68
+      ],
+      "label_kind": "source_color_name"
+    },
+    {
+      "id": "E02",
+      "label_zh": "数据荧光绿",
+      "hex": "#76FF03",
+      "rgb": [
+        118,
+        255,
+        3
+      ],
+      "label_kind": "source_color_name"
+    },
+    {
+      "id": "E03",
+      "label_zh": "哲学紫灰",
+      "hex": "#5C6BC0",
+      "rgb": [
+        92,
+        107,
+        192
+      ],
+      "label_kind": "source_color_name"
+    },
+    {
+      "id": "E04",
+      "label_zh": "夕照金",
+      "hex": "#FFD54F",
+      "rgb": [
+        255,
+        213,
+        79
+      ],
+      "label_kind": "source_color_name"
+    }
+  ]
+}

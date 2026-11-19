@@ -1,0 +1,36 @@
+display-name-zh: 电影级场景设计
+version: 1.0.0
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Creative Generation
+complete-tags-cn:
+- 专业影视 / 创作生成
+summary-en: Turn briefs or reference images into original cinematic environments, readable game spaces, and reusable image prompts through spatial, material, and lighting design.
+summary-cn: 从文字设定或参考图出发，结合空间动线、材质与光线设计，产出原创电影场景、游戏环境概念图或绘图提示词。
+desc-en: Designed for film concept artists and game environment creators, this skill develops original spaces with photographic credibility and readable spatial relationships. Supply a written setting, reference image, existing layout, or gameplay constraints. It establishes the intended viewpoint, organizes foreground and background, traces required routes, explains scale and structural support, and places material wear and lighting according to environmental causes. Deliverables include spatial design plans, complete image prompts, generated concepts, or reference-based revisions that preserve approved geometry. It supports realistic sets, imaginative environments, and gameplay-oriented spaces, but does not provide construction drawings, structural certification, production-ready game levels, or complete video production.
+desc-cn: 面向电影概念设计与游戏环境创作者，从文字设定、参考图片、已有布局或玩法约束出发，将抽象场景转化为具有真实质感且空间关系可读的原创环境。先确定用途与机位，再梳理前中后景、必要动线、尺度和承重方式，结合气候与使用痕迹安排材质细节，最后组织光线与视觉焦点。可交付空间方案、完整绘图提示词、场景概念图或保留指定几何关系的改图，适合写实布景、幻想环境与探索关卡，不提供施工图、结构安全认证或完整视频制作。
+structured-info:
+  zh-CN:
+    summary: 从文字设定或参考图出发，通过空间、材质与光线设计，形成原创电影环境、游戏场景概念图或可复用提示词。
+    best-for:
+    - 电影环境概念
+    - 游戏场景设计
+    - 保留布局改图
+    how-to-use: 提供场景设定、参考或布局，说明用途、画幅及保留范围，确认交付方案、提示词或图像。
+    outputs: 空间设计方案、完整绘图提示词、环境概念图或参考图修改结果。
+  en-US:
+    summary: Turn briefs or references into original cinematic environments, game-space concepts or reusable prompts through spatial, material and lighting design.
+    best-for:
+    - Film Environment Concepts
+    - Game Environment Design
+    - Layout-preserving Edits
+    how-to-use: Provide a setting, reference or layout; specify purpose, framing and geometry to preserve, then agree on plans, prompts or images.
+    outputs: Spatial design plans, complete image prompts, environment concepts or reference-based image edits.
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318849347831018-1794318849324.mp4
+cover: https://cdn.hailuoai.com/pre/2026-11-10-22/video/1794319333644394475-1794319333630.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-10-22/video/1794319333644394475-1794319333630.mp4

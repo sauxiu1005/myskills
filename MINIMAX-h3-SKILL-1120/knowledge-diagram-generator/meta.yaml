@@ -1,0 +1,36 @@
+display-name-zh: 知识图解生成器
+version: 1.0.0
+tag-en: Education
+tag-cn: 教育
+complete-tags-en:
+- Education / Creative Generation
+complete-tags-cn:
+- 教育 / 创作生成
+summary-en: Turns papers, lesson topics or reference images into accurately labelled teaching diagrams, mechanism charts and infographics by checking facts and applying layout templates, for classrooms and science communication.
+summary-cn: 从论文、教学主题或参考图出发，核实事实并套用版式模板，生成标签准确的教学示意图、机制图与信息图，适用于课堂与科普。
+desc-en: For teachers, science communicators and researchers, this skill turns knowledge content into accurate, readable images. Users provide a paper, lesson topic, brief or reference image, plus the audience, label language and aspect ratio. The skill confirms the available image capabilities, extracts facts and relationships from the source, selects a layout from 93 templates and fixes every on-image label, then generates or edits the image and checks it against the facts. Deliverables are the finished image, with an optional prompt, caption and source note. It excels at teaching diagrams, paper method figures and mechanism charts; it does not fabricate evidence, replace measured-data plotting, output vector files or produce video.
+desc-cn: 面向教师、科普作者与研究者，把知识内容转成准确易读的图像。用户提供论文、教学主题、简报或参考图，并说明受众、文字语言与画幅。技能先确认可用的图像能力，从来源提取事实与关系，在93个模板中选取版式并写定图上文字，再生成或编辑图片、对照事实核查。交付成品图，按需附提示词、图注与来源说明。擅长教学示意图、论文方法图与机制图；不虚构证据，不替代测量数据绘图，不出矢量文件，不做视频。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 把论文、教学主题或参考图组织成阅读顺序清晰、标签准确的知识图解，支持生成和编辑。
+    best-for:
+    - 教学科普
+    - 论文机制图
+    - 参考图编辑
+    how-to-use: 提供论文、主题或参考图，说明受众与上图语言；可要求直接出图或仅输出提示词。
+    outputs: 图像、可复用提示词（按需）、科学图注与来源说明。
+  en-US:
+    summary: Organize source material into clearly ordered, accurately labelled visual explanations, generated or edited directly.
+    best-for:
+    - Educational explainers
+    - Paper workflows and mechanisms
+    - Reference image edits
+    how-to-use: Provide a paper, topic or image, plus audience and label language; request an image or a prompt only.
+    outputs: Images, reusable prompts on request, and captions with source notes for scientific diagrams.
+cover: https://cdn.hailuoai.com/pre/2026-11-11-22/video/1794408466588040367-1794408466578.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-11-22/video/1794408466588040367-1794408466578.mp4
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-11-22/image/1794408468575726566-1794408468569.png

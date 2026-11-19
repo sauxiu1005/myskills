@@ -1,0 +1,62 @@
+{
+  "levels": {
+    "subtle": {
+      "name_cn": "克制",
+      "bloom": 0.3,
+      "glow_wide": 0.25,
+      "grid_brightness": 0.55,
+      "scanlines": 0.0,
+      "rgb_split_px": 0,
+      "vhs_noise": 0.0,
+      "glitch_hits": 0,
+      "vignette": 0.25,
+      "film": {
+        "grain": "low",
+        "lift": 0.02,
+        "halation": 0.3,
+        "weave": false,
+        "video_fx": []
+      }
+    },
+    "standard": {
+      "name_cn": "标准",
+      "bloom": 0.55,
+      "glow_wide": 0.45,
+      "grid_brightness": 0.8,
+      "scanlines": 0.0,
+      "rgb_split_px": 0,
+      "vhs_noise": 0.0,
+      "glitch_hits": 0,
+      "vignette": 0.35,
+      "film": {
+        "grain": "standard",
+        "lift": 0.035,
+        "halation": 0.6,
+        "weave": false,
+        "video_fx": []
+      }
+    },
+    "full": {
+      "name_cn": "浓郁",
+      "bloom": 0.8,
+      "glow_wide": 0.65,
+      "grid_brightness": 1.0,
+      "scanlines": 0.12,
+      "rgb_split_px": 2,
+      "vhs_noise": 0.08,
+      "glitch_hits": 3,
+      "vignette": 0.45,
+      "film": {
+        "grain": "strong",
+        "lift": 0.04,
+        "halation": 0.8,
+        "weave": true,
+        "video_fx": [
+          "chroma_1px_or_tracking_transition"
+        ]
+      }
+    }
+  },
+  "notes": "数值为代码渲染器的相对强度(0-1)和像素值；AI 生成时转写为文字描述（弱/中/强）。任何强度下文字区域都需保持可读。",
+  "film_notes": "film 为胶片层（颗粒/暗部轻抬/halation/weave），与 scanlines/rgb_split/vhs_noise 等视频层分开。grain 档位：off/low/standard/strong ≈ 0–255 振幅 0/5/8/12（见 references/film-texture.md）。standard 的扫描线默认改为 0：扫描线是视频伪影，不是胶片。清洁产品图可降为 low 或 off。"
+}

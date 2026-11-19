@@ -1,0 +1,40 @@
+name: match-cut-product-ads
+display-name-zh: 匹配转场产品广告
+display-name-en: Match-Cut Product Ads
+version: 1.0.0
+content-locale: zh-CN
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Creative Generation
+complete-tags-cn:
+- 商业广告 / 创作生成
+summary-en: Turns product facts and one core benefit into shape and motion relays across scenes, then stills, clips, a beat-cut edit, accurate typography and a mixed soundtrack, delivered as a versioned canvas film.
+summary-cn: 从产品信息和核心卖点出发，设计跨场景的形状与动作接力，完成定帧、视频、卡点剪辑和混音，在画布交付分版本的成片。
+desc-en: For brands and creators who want a product ad whose scenes hand one shape, framing or motion to the next. Provide a product image or link, the product name and a core benefit, plus any duration, format, language or style preferences. The workflow researches official facts, plans relay pairs that link a real-world action to the product experience, builds stills and clips with Design's available models or code compositing, cuts on measured music beats, adds accurate text and logo, mixes to about -14 LUFS, and imports each version as a new canvas node with records written back. It delivers the film, storyboard, prompts, configs, scripts and QA notes. Best for match-cut launches, hero shots and targeted revisions; it does not invent product claims or handle narrative films without a product.
+desc-cn: 面向需要让场景以形状、构图或动作接力衔接的产品广告。用户提供产品图或链接、产品名称和一个核心卖点，可补充时长、画幅、语言和风格。流程先核对官方信息，设计连接现实动作与产品体验的接力分镜，用 Design 可用模型或代码合成制作定帧与视频，按实测节拍剪辑，后期叠加文字与标志并混音，每个版本作为新画布节点导入。交付成片、分镜、提示词、剪辑配置、脚本和质检记录。适合匹配转场新品片、产品主镜头和定向修改，不编造产品功能，也不用于没有产品的剧情片。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318811682727404-1794318811641.mp4
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318811024063085-1794318810980.mp4
+structured-info:
+  zh-CN:
+    summary: 围绕产品卖点设计形状、构图与动作接力，让场景转场自然连贯，完成从创意分镜到有声产品广告的制作。
+    best-for:
+    - 匹配转场广告
+    - 跨场景接力
+    - 产品展示改片
+    how-to-use: 提供产品信息、核心卖点和参考，确定时长、画幅与风格，按已确认方案制作成片。
+    outputs: 成片视频、分镜与提示词、关键帧和素材、剪辑配置与脚本、制作及质检记录。
+  en-US:
+    summary: Create product ads with shape, composition and action match cuts, from creative storyboards and consistent assets to timed edits, typography, music and sound mixing.
+    best-for:
+    - Match-cut Product Ads
+    - Action Relays Across Scenes
+    - Product Showcases and Revisions
+    how-to-use: Provide product details, a core benefit and references; agree on duration, framing and style, then produce the film under the approved plan.
+    outputs: Finished video, storyboards, prompts, keyframes, assets, edit configurations, scripts and production records.
+cover: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318798531506432-1794318798518.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318798531506432-1794318798518.mp4

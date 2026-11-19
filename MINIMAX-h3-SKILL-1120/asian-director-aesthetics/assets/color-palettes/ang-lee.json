@@ -1,0 +1,119 @@
+{
+  "director_id": "ang-lee",
+  "director_name_zh": "李安",
+  "source": {
+    "path": "第1期_SKILL_冷调与大地_001-080/03_大地暖调与自然光诗意/045_AngLee_李安/色卡主文档.md",
+    "sha256": "7a5f0ff5a4124f7a9ebf4ac60cdef942d5567d72e7d8c9ec1f39ec42a3bd10ec"
+  },
+  "color_space": "sRGB",
+  "evidence": "source_document_hex_not_frame_sampled",
+  "display": "Equal-size swatches; no fixed frame-area ratios. Accent labels retain source associations, not universal emotional meanings.",
+  "main": [
+    {
+      "id": "C01",
+      "label_zh": "温润玉黄",
+      "hex": "#C2A676",
+      "rgb": [
+        194,
+        166,
+        118
+      ]
+    },
+    {
+      "id": "C02",
+      "label_zh": "竹林青灰",
+      "hex": "#5A6B4A",
+      "rgb": [
+        90,
+        107,
+        74
+      ]
+    },
+    {
+      "id": "C03",
+      "label_zh": "大地赭棕",
+      "hex": "#8B7355",
+      "rgb": [
+        139,
+        115,
+        85
+      ]
+    },
+    {
+      "id": "C04",
+      "label_zh": "暖沙米白",
+      "hex": "#E8D5B7",
+      "rgb": [
+        232,
+        213,
+        183
+      ]
+    },
+    {
+      "id": "C05",
+      "label_zh": "深松绿",
+      "hex": "#3D4F3F",
+      "rgb": [
+        61,
+        79,
+        63
+      ]
+    },
+    {
+      "id": "C06",
+      "label_zh": "暖阳橙",
+      "hex": "#D68C45",
+      "rgb": [
+        214,
+        140,
+        69
+      ]
+    }
+  ],
+  "accent": [
+    {
+      "id": "E01",
+      "label_zh": "翡翠青",
+      "hex": "#98D8C8",
+      "rgb": [
+        152,
+        216,
+        200
+      ],
+      "label_kind": "source_color_name"
+    },
+    {
+      "id": "E02",
+      "label_zh": "夕阳橙",
+      "hex": "#F4A460",
+      "rgb": [
+        244,
+        164,
+        96
+      ],
+      "label_kind": "source_color_name"
+    },
+    {
+      "id": "E03",
+      "label_zh": "深海蓝",
+      "hex": "#1E3A5F",
+      "rgb": [
+        30,
+        58,
+        95
+      ],
+      "label_kind": "source_color_name"
+    },
+    {
+      "id": "E04",
+      "label_zh": "暖棕茶",
+      "hex": "#DEB887",
+      "rgb": [
+        222,
+        184,
+        135
+      ],
+      "label_kind": "source_color_name"
+    }
+  ]
+}

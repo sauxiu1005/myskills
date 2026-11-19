@@ -1,0 +1,34 @@
+display-name-zh: 综艺花字视频制作
+version: 1.0.0
+tag-en: "Animation"
+tag-cn: "动画"
+complete-tags-en:
+  - "Animation / Post-production"
+complete-tags-cn:
+  - "动画 / 后期处理"
+summary-en: "Turns your footage, photos or brief into a 10-second variety-show caption film with elastic stroked type, burst and sweat marks, synced sound effects and a ratio you choose."
+summary-cn: "根据用户素材或描述，经过节拍规划、花字设计、动效与音效卡点，产出可选画幅的 10 秒综艺花字短片。"
+desc-en: "For creators who want the classic Chinese variety-show caption look (综艺花字) on pet vlogs, daily vlogs, interviews or comedy remixes. You provide photos or footage plus your own story, show or brand name, caption copy and palette, then choose one of five frame ratios: 1:1, 16:9, 9:16, 3:4 or 4:3. The workflow runs nine steps: brief and ratio, emotional arc, a single cue sheet shared by picture and sound, a three-layer caption system with key frames, elastic per-character motion, music and sound effects, full render, loudness mastering with compliance checks, and an honest delivery report. It delivers a 10-second 30 fps MP4 at −14 LUFS with a report and credits. It does not make plain subtitles, long edits or videos without captions."
+desc-cn: "面向想给萌宠、日常 vlog、访谈或搞笑二创加上经典综艺花字包装的创作者。用户提供照片或视频素材，并自述故事、节目或品牌名、花字文案与配色，再从 1:1、16:9、9:16、3:4、4:3 五种画幅中选择一种。流程分九步：需求与画幅确认、情绪弧线、画面与声音共用的唯一提示表、三层描边花字系统与关键帧、逐字弹性动效、配乐与音效、全分辨率渲染、响度母带与合规检查、诚实的交付报告。最终交付一支 10 秒、30 帧、−14 LUFS 的 MP4 成片，附制作报告与授权说明。不适用于普通字幕压制、长视频剪辑或没有花字设计的视频。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/37161a2a-246f-4f32-9e8e-694c52fcdd39.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/37161a2a-246f-4f32-9e8e-694c52fcdd39.mp4
+structured-info:
+  zh-CN:
+    summary: 为萌宠、日常、访谈或搞笑素材设计节奏明确的综艺花字动画，并完成音效卡点与成片导出。
+    best-for:
+      - 综艺花字
+      - 萌宠日常
+      - 访谈搞笑
+    how-to-use: 提供照片或视频、文案与配色，确认画幅和节奏后审核关键帧再导出。
+    outputs: 十秒综艺花字 MP4、制作报告与授权说明。
+  en-US:
+    summary: Turn pet, daily, interview or comedy footage into a rhythmic variety-show caption animation with synced sound and a finished export.
+    best-for:
+      - Variety Captions
+      - Pet Daily Vlogs
+      - Interview Comedy
+    how-to-use: Provide footage, copy and colours, confirm framing and rhythm, then review keyframes before export.
+    outputs: A ten-second variety-caption MP4, production report and credits.

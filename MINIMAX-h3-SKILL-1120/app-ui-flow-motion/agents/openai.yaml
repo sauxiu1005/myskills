@@ -1,0 +1,4 @@
+interface:
+  display_name: APP 界面流程动效
+  short_description: 适合 APP 与网站的产品发布和功能介绍，基于截图、网址或参考视频核验真实流程，制作可循环的极简动效。
+  default_prompt: 使用 $app-ui-flow-motion，根据我提供的截图、网址、操作录屏、参考视频或产品名称，先核验功能，再制作极简界面流程动效。

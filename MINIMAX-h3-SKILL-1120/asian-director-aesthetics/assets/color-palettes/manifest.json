@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "color_space": "sRGB",
+  "source_package": "导演视觉风格色卡_SKILL",
+  "status": "Source-document design anchors; not verified film-frame samples",
+  "directors": [
+    {
+      "id": "wong-kar-wai",
+      "name_zh": "王家卫",
+      "json": "wong-kar-wai.json",
+      "png": "wong-kar-wai.png",
+      "svg": "wong-kar-wai.svg",
+      "source": {
+        "path": "第1期_SKILL_冷调与大地_001-080/02_霓虹黑色与赛博未来/022_WongKar-wai_王家卫/色卡主文档.md",
+        "sha256": "60eed8ec87cf7ffc1a67e89a887f247bac310b562cbd15df118aec8205d007ca"
+      }
+    },
+    {
+      "id": "ang-lee",
+      "name_zh": "李安",
+      "json": "ang-lee.json",
+      "png": "ang-lee.png",
+      "svg": "ang-lee.svg",
+      "source": {
+        "path": "第1期_SKILL_冷调与大地_001-080/03_大地暖调与自然光诗意/045_AngLee_李安/色卡主文档.md",
+        "sha256": "7a5f0ff5a4124f7a9ebf4ac60cdef942d5567d72e7d8c9ec1f39ec42a3bd10ec"
+      }
+    },
+    {
+      "id": "tsui-hark",
+      "name_zh": "徐克",
+      "json": "tsui-hark.json",
+      "png": "tsui-hark.png",
+      "svg": "tsui-hark.svg",
+      "source": {
+        "path": "第1期_SKILL_冷调与大地_001-080/03_大地暖调与自然光诗意/055_Tsui Hark_徐克/色卡主文档.md",
+        "sha256": "a9d1ce883085bcde6987401a0ef9c69547ef718648fe6ef8e81341d5d43ad28c"
+      }
+    },
+    {
+      "id": "tsai-ming-liang",
+      "name_zh": "蔡明亮",
+      "json": "tsai-ming-liang.json",
+      "png": "tsai-ming-liang.png",
+      "svg": "tsai-ming-liang.svg",
+      "source": {
+        "path": "第1期_SKILL_冷调与大地_001-080/04_极简冷构与静观长镜/065_TsaiMing-liang_蔡明亮/色卡主文档.md",
+        "sha256": "0719f4437fca4bf3ef799e9679dae261099887e53fdc745841311a486f30c4fd"
+      }
+    },
+    {
+      "id": "jia-zhangke",
+      "name_zh": "贾樟柯",
+      "json": "jia-zhangke.json",
+      "png": "jia-zhangke.png",
+      "svg": "jia-zhangke.svg",
+      "source": {
+        "path": "第1期_SKILL_冷调与大地_001-080/04_极简冷构与静观长镜/073_JiaZhangke_贾樟柯/色卡主文档.md",
+        "sha256": "a62673bb1fb35b066690fdc478b9eda04500915f425f11a81c54ae16997cd458"
+      }
+    },
+    {
+      "id": "zhang-yimou",
+      "name_zh": "张艺谋",
+      "json": "zhang-yimou.json",
+      "png": "zhang-yimou.png",
+      "svg": "zhang-yimou.svg",
+      "source": {
+        "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/086_ZhangYimou_张艺谋/色卡主文档.md",
+        "sha256": "7f0e2a6c1be329a24492b710366813342a7ba9d2c28b67df5dd2c6648d5d052f"
+      }
+    },
+    {
+      "id": "chen-kaige",
+      "name_zh": "陈凯歌",
+      "json": "chen-kaige.json",
+      "png": "chen-kaige.png",
+      "svg": "chen-kaige.svg",
+      "source": {
+        "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/096_ChenKaige_陈凯歌/色卡主文档.md",
+        "sha256": "0edce61396504c1d3e92ef91e539f1e258a9beb13969c402bc5ae3af967ae235"
+      }
+    },
+    {
+      "id": "hou-hsiao-hsien",
+      "name_zh": "侯孝贤",
+      "json": "hou-hsiao-hsien.json",
+      "png": "hou-hsiao-hsien.png",
+      "svg": "hou-hsiao-hsien.svg",
+      "source": {
+        "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/099_HouHsiao-hsien_侯孝贤/色卡主文档.md",
+        "sha256": "bdd7d9dc1edbe5f13cd0995e20fbd85eebb38230f9b4006f8ca4bbc9b09e3f82"
+      }
+    },
+    {
+      "id": "bi-gan",
+      "name_zh": "毕赣",
+      "json": "bi-gan.json",
+      "png": "bi-gan.png",
+      "svg": "bi-gan.svg",
+      "source": {
+        "path": "第2期_SKILL_浓彩与梦幻_081-140/06_超现实梦幻与心理畸变/117_BiGan_毕赣/色卡主文档.md",
+        "sha256": "83c8f54c1f133adcee936fdb966b5d6907e6a5db8e4a121aa89663e163a30057"
+      }
+    },
+    {
+      "id": "john-woo",
+      "name_zh": "吴宇森",
+      "json": "john-woo.json",
+      "png": "john-woo.png",
+      "svg": "john-woo.svg",
+      "source": {
+        "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/122_JohnWoo_吴宇森/色卡主文档.md",
+        "sha256": "f164d4991663c86f0acd7fa23e0790bcb7656b0fe1340ad67d967b39f915b4fe"
+      }
+    },
+    {
+      "id": "jiang-wen",
+      "name_zh": "姜文",
+      "json": "jiang-wen.json",
+      "png": "jiang-wen.png",
+      "svg": "jiang-wen.svg",
+      "source": {
+        "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/123_JiangWen_姜文/色卡主文档.md",
+        "sha256": "6ead521362d998484d6179e8cbf23ad4ff46311aa7ff15dc5ecf51875d5db2d9"
+      }
+    },
+    {
+      "id": "stanley-kwan",
+      "name_zh": "关锦鹏",
+      "json": "stanley-kwan.json",
+      "png": "stanley-kwan.png",
+      "svg": "stanley-kwan.svg",
+      "source": {
+        "path": "第3期_SKILL_动画柔光东方_141-200/09_浪漫柔光与复古色调/165_StanleyKwan_关锦鹏/色卡主文档.md",
+        "sha256": "ad5489b950e3580b838c44f4798171dce640e99157f6a88b752bb9b51ffcc0cf"
+      }
+    },
+    {
+      "id": "edward-yang",
+      "name_zh": "杨德昌",
+      "json": "edward-yang.json",
+      "png": "edward-yang.png",
+      "svg": "edward-yang.svg",
+      "source": {
+        "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/186_EdwardYang_杨德昌/色卡主文档.md",
+        "sha256": "ce7c35d5ccebe8ba4026e3233752b83f6747b16e02772d242a460292e57107cc"
+      }
+    },
+    {
+      "id": "ann-hui",
+      "name_zh": "许鞍华",
+      "json": "ann-hui.json",
+      "png": "ann-hui.png",
+      "svg": "ann-hui.svg",
+      "source": {
+        "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/187_AnnHui_许鞍华/色卡主文档.md",
+        "sha256": "9d60d07133ae6b6d4a6bf64c7fcf9e5ba020de04f66386b603b4b90fe881ce13"
+      }
+    },
+    {
+      "id": "akira-kurosawa",
+      "name_zh": "黑泽明",
+      "json": "akira-kurosawa.json",
+      "png": "akira-kurosawa.png",
+      "svg": "akira-kurosawa.svg",
+      "source": {
+        "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/124_AkiraKurosawa_黑泽明/色卡主文档.md",
+        "sha256": "e23a8da4a7c559bea0f901cf4673ec4236f4d469fcb5f4fc332d4533a9cb1a37"
+      }
+    },
+    {
+      "id": "yasujiro-ozu",
+      "name_zh": "小津安二郎",
+      "json": "yasujiro-ozu.json",
+      "png": "yasujiro-ozu.png",
+      "svg": "yasujiro-ozu.svg",
+      "source": {
+        "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/181_YasujiroOzu_小津安二郎/色卡主文档.md",
+        "sha256": "2f9b323e320cd0f55dcdb4c4cf5b2ea82a6742fe2beda635362ccf4c4f80e502"
+      }
+    },
+    {
+      "id": "takeshi-kitano",
+      "name_zh": "北野武",
+      "json": "takeshi-kitano.json",
+      "png": "takeshi-kitano.png",
+      "svg": "takeshi-kitano.svg",
+      "source": {
+        "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/184_TakeshiKitano_北野武/色卡主文档.md",
+        "sha256": "36f7a549d0cf2608cc7aa74dfd3bfa13418d4447da6cc46a5bc3d51760596b50"
+      }
+    },
+    {
+      "id": "shunji-iwai",
+      "name_zh": "岩井俊二",
+      "json": "shunji-iwai.json",
+      "png": "shunji-iwai.png",
+      "svg": "shunji-iwai.svg",
+      "source": {
+        "path": "第3期_SKILL_动画柔光东方_141-200/09_浪漫柔光与复古色调/164_ShunjiIwai_岩井俊二/色卡主文档.md",
+        "sha256": "55c5bae5d0034319e014528058c539bb61a3da2dcb650bc9b8b79a09ef3afc33"
+      }
+    },
+    {
+      "id": "park-chan-wook",
+      "name_zh": "朴赞郁",
+      "json": "park-chan-wook.json",
+      "png": "park-chan-wook.png",
+      "svg": "park-chan-wook.svg",
+      "source": {
+        "path": "第1期_SKILL_冷调与大地_001-080/01_黑色悬疑与冷调惊悚/017_ParkChan-wook_朴赞郁/色卡主文档.md",
+        "sha256": "1fd49a7e8587c0e6229443ff1316d4ceca9a2be4a7c3b121c51feb75606b02c9"
+      }
+    },
+    {
+      "id": "bong-joon-ho",
+      "name_zh": "奉俊昊",
+      "json": "bong-joon-ho.json",
+      "png": "bong-joon-ho.png",
+      "svg": "bong-joon-ho.svg",
+      "source": {
+        "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/139_BongJoon-ho_奉俊昊/色卡主文档.md",
+        "sha256": "73014fcdbffe96f2582d8e48d768171e76182999579b8effe40e631b1046e22a"
+      }
+    },
+    {
+      "id": "apichatpong-weerasethakul",
+      "name_zh": "阿彼察邦",
+      "json": "apichatpong-weerasethakul.json",
+      "png": "apichatpong-weerasethakul.png",
+      "svg": "apichatpong-weerasethakul.svg",
+      "source": {
+        "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/190_ApichatpongWeerasethakul_阿彼察邦/色卡主文档.md",
+        "sha256": "9c08e63520980a0e3dd78183bf22f11abde22826fbe56f0fadc82054368100dc"
+      }
+    },
+    {
+      "id": "tran-anh-hung",
+      "name_zh": "陈英雄",
+      "json": "tran-anh-hung.json",
+      "png": "tran-anh-hung.png",
+      "svg": "tran-anh-hung.svg",
+      "source": {
+        "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/191_TranAnhHung_陈英雄/色卡主文档.md",
+        "sha256": "3c56661f0493527e517cf53eda01a34ecdca0c56412f63405d2a76ebb4f932cd"
+      }
+    },
+    {
+      "id": "abbas-kiarostami",
+      "name_zh": "阿巴斯·基亚罗斯塔米",
+      "json": "abbas-kiarostami.json",
+      "png": "abbas-kiarostami.png",
+      "svg": "abbas-kiarostami.svg",
+      "source": {
+        "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/194_AbbasKiarostami_阿巴斯·基亚罗斯塔米/色卡主文档.md",
+        "sha256": "ddedd4110e78c54b8c01bdda0f4bc67895441241da6bf5e82dc29ecb04526026"
+      }
+    },
+    {
+      "id": "hayao-miyazaki",
+      "name_zh": "宫崎骏",
+      "json": "hayao-miyazaki.json",
+      "png": "hayao-miyazaki.png",
+      "svg": "hayao-miyazaki.svg",
+      "source": {
+        "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/126_HayaoMiyazaki_宫崎骏/色卡主文档.md",
+        "sha256": "46143449d7f3bb1191c89386b7c9c2905a0379d84d7b21faf14405f2b052a5e1"
+      }
+    },
+    {
+      "id": "satoshi-kon",
+      "name_zh": "今敏",
+      "json": "satoshi-kon.json",
+      "png": "satoshi-kon.png",
+      "svg": "satoshi-kon.svg",
+      "source": {
+        "path": "第3期_SKILL_动画柔光东方_141-200/08_动画奇幻与异想视觉/141_SatoshiKon_今敏/色卡主文档.md",
+        "sha256": "1a83f62fc121326d02007e1737f81b17938394503b4c3b83fd5677fa1be73ee8"
+      }
+    },
+    {
+      "id": "makoto-shinkai",
+      "name_zh": "新海诚",
+      "json": "makoto-shinkai.json",
+      "png": "makoto-shinkai.png",
+      "svg": "makoto-shinkai.svg",
+      "source": {
+        "path": "第3期_SKILL_动画柔光东方_141-200/08_动画奇幻与异想视觉/144_MakotoShinkai_新海诚/色卡主文档.md",
+        "sha256": "fb727aad8efb4b38b00f98aec4fdb57447b825a0a9b4ddcac89204c2ee03570e"
+      }
+    },
+    {
+      "id": "mamoru-oshii",
+      "name_zh": "押井守",
+      "json": "mamoru-oshii.json",
+      "png": "mamoru-oshii.png",
+      "svg": "mamoru-oshii.svg",
+      "source": {
+        "path": "第1期_SKILL_冷调与大地_001-080/02_霓虹黑色与赛博未来/028_MamoruOshii_押井守/色卡主文档.md",
+        "sha256": "7e1e065ce4f1d4543d472746ce87dc2bbe412ef5677ae28bbdbd94ad1ab9ef69"
+      }
+    },
+    {
+      "id": "masaaki-yuasa",
+      "name_zh": "汤浅政明",
+      "json": "masaaki-yuasa.json",
+      "png": "masaaki-yuasa.png",
+      "svg": "masaaki-yuasa.svg",
+      "source": {
+        "path": "第3期_SKILL_动画柔光东方_141-200/08_动画奇幻与异想视觉/145_MasaakiYuasa_汤浅政明/色卡主文档.md",
+        "sha256": "30df68b159c2892eea0e33c1c4fb589a72a2ebff9e049a32874709280135e914"
+      }
+    }
+  ]
+}

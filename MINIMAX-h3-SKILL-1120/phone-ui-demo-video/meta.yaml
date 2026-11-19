@@ -1,0 +1,38 @@
+name: phone-ui-demo-video
+display-name-en: Phone UI Demo Video
+display-name-zh: 手机界面演示视频
+version: 1.0.0
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Creative Generation
+complete-tags-cn:
+- 商业广告 / 创作生成
+summary-en: Turn product features, copy or screenshots into phone UI demo videos, delivering synchronized sound, editable source, an animation preview and storyboards.
+summary-cn: 将产品功能、文案或界面截图制作成手机界面演示视频，交付同步音效成片、可编辑源码、动画预览与分镜。
+desc-en: For teams creating app demos, phone screen-recording style promotions or interface explainers. Supply a topic, feature copy or screenshots and specify duration, framing and sound. The workflow settles specifications and storyboards, rebuilds notifications, chats, settings and data displays as editable web animation, synthesizes system sounds and exports video. Receive the film, single-file preview, source package, keyframes and storyboard, with revisions by timecode. It does not operate real phone accounts or produce live-action footage.
+desc-cn: 面向需要应用演示、手机录屏风格宣传片或界面知识讲解的团队。提供主题、功能文案或截图，补充时长、画幅和声音要求。流程确定规格与分镜，将通知、聊天、设置和数据展示重建为可编辑网页动画，合成系统音效并导出视频。交付成片、单文件预览、源码包、关键帧与分镜，可按时间码修改。不操作真实手机账号，也不制作真人实拍。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-11-22/video/1794408481045453873-1794408480967.mp4
+structured-info:
+  zh-CN:
+    summary: 将产品功能、文案或界面截图制作成手机界面演示视频，交付同步音效成片、可编辑源码、动画预览与分镜。
+    best-for:
+    - 应用演示
+    - 产品宣传
+    - 界面讲解
+    how-to-use: 提供主题、功能文案或参考截图，说明时长、画幅与声音要求，并确认分镜。
+    outputs: 手机界面演示成片、动画预览、可编辑源码包、关键帧与分镜。
+  en-US:
+    summary: Turn product features, copy or screenshots into phone UI demo videos, delivering synchronized sound, editable source, an animation preview and storyboards.
+    best-for:
+    - App demos
+    - Product promotions
+    - Interface explainers
+    how-to-use: Provide a topic, feature copy or screenshots, specify duration, framing and sound, and confirm the storyboard.
+    outputs: MP4 film, single-file animation preview, editable HTML/CSS/JS source package, keyframes and storyboard.
+cover: https://cdn.hailuoai.com/pre/2026-11-11-22/video/1794408462487756438-1794408462467.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-11-22/video/1794408462487756438-1794408462467.mp4

@@ -1,0 +1,34 @@
+display-name-zh: ASCII海洋工作室
+version: 1.0.1
+tag-en: "Creative & Experimental"
+tag-cn: "创意实验"
+complete-tags-en:
+  - "Creative & Experimental / Creative Generation"
+complete-tags-cn:
+  - "创意实验 / 创作生成"
+summary-en: "Turns sea creature names or photos into ASCII characters and builds an interactive, feedable ocean webpage in black and white."
+summary-cn: "将海洋生物名称或照片转为 ASCII 字符角色，生成可投喂、可交互的黑白海洋网页。"
+desc-en: "Designed for creators who want to present sea creatures as ASCII art. The user provides at least three sea creatures as names or photos and may choose one as a giant visitor. The workflow converts photos into shaded ASCII characters, draws silhouettes for named species, assigns each a swimming or pulsing motion, then builds the page in one command and checks it automatically. It delivers an offline interactive ocean webpage with free swimming, click feeding, a hover magnifier and visitor avoidance, black-and-white by default with three color themes. It is not intended for general ASCII image creation."
+desc-cn: "面向希望以 ASCII 字符呈现海洋生物的创作者。用户提供至少三种海洋生物的名称或照片，可指定一种作为巨型访客。流程依次完成照片抠图与字符化、为仅有名称的生物绘制轮廓、分配游动或脉动方式，并一键构建网页、自动检查。交付可离线打开的交互海洋网页，支持自由游动、点击投喂、悬停放大与访客避让，默认黑白，可切换三套彩色主题。不适用于通用 ASCII 图像制作。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/06ad4393-5f66-42f5-89c5-8fa9f4e41720.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/06ad4393-5f66-42f5-89c5-8fa9f4e41720.mp4
+structured-info:
+  zh-CN:
+    summary: 将海洋生物名称或照片转为 ASCII 字符角色，生成可投喂、可交互的黑白海洋网页。
+    best-for:
+      - 字符角色
+      - 交互网页
+      - 黑白字符艺术
+    how-to-use: 说出至少三种海洋生物，或直接上传它们的照片，可再指定一种作为巨型访客。
+    outputs: 默认黑白、可切换彩色主题的离线交互海洋网页，以及每种生物的字符预览。
+  en-US:
+    summary: Turns sea creature names or photos into ASCII characters and builds an interactive, feedable ocean webpage in black and white.
+    best-for:
+      - Photo to Character
+      - Interactive Web
+      - Black-and-White ASCII Art
+    how-to-use: Name at least three sea creatures or upload their photos, and optionally pick one as the giant visitor.
+    outputs: An offline interactive ocean webpage, black-and-white by default with color themes, plus an ASCII preview of each creature.

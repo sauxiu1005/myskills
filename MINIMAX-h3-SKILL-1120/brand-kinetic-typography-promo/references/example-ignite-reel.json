@@ -1,0 +1,21 @@
+{
+  "meta": {"brand": "NOVA MOTION"},
+  "recipe": "ignite_reel",
+  "format": {"aspect": "16:9", "fps": 60, "bpm": 120, "duration": 15},
+  "style": "swiss",
+  "palette": {"preset": "mono", "dark": "#0D0D11", "light": "#ECECEC", "a1": "#FF3B4E", "a2": "#C6FF00", "a3": "#3A4DFE"},
+  "hud": {"label": "NOVA - MOTION REEL '26"},
+  "audio": {"mode": "synth", "mood": "cool"},
+  "scenes": [
+    {"type": "comet_burst",  "beats": 4, "bg": "dark",  "name": "Ignition", "caption": "motion design reel - 2026"},
+    {"type": "beat_word",    "beats": 4, "name": "Kinetic type", "words": ["I make", "move"], "bgs": ["a1", "a2"], "line": "a2"},
+    {"type": "color_matrix", "beats": 4, "bg": "dark",  "name": "Shape / matrix"},
+    {"type": "fluid_blob",   "beats": 4, "bg": "light", "name": "Fluid dynamics", "word": "Fluid", "colors": ["a3", "a1", "a2"]},
+    {"type": "sphere_burst", "beats": 4, "bg": "dark",  "name": "Depth / particles", "count": 1400},
+    {"type": "ui_cards",     "beats": 4, "bg": "light", "name": "Interface motion",
+     "growth": {"label": "Growth / Q3", "from": "+135%", "to": "+248%"}, "ring": {"label": "Status", "from": "30%", "to": "87%"},
+     "gauge": {"label": "Level", "value": 0.72}},
+    {"type": "arc_lockup",   "beats": 6, "bg": "dark",  "name": "Nova", "transition": "scan_glitch", "title": "Nova",
+     "lines": ["motion designer - showreel", "available for new work"]}
+  ]
+}

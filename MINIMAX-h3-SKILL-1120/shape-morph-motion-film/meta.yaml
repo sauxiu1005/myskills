@@ -1,0 +1,34 @@
+display-name-zh: 形变动画短片
+version: 1.0.1
+tag-en: "Animation"
+tag-cn: "动画"
+complete-tags-en:
+  - "Animation / Creative Generation"
+complete-tags-cn:
+  - "动画 / 创作生成"
+summary-en: "Turns your brief or uploaded material into a 5–20-second shape-morph motion film, with an icon chain built through intermediate shapes, colour-field wipes, beat-locked sound, and the aspect ratio and length you choose."
+summary-cn: "根据你的描述或上传素材，把一组图标串成丝滑的形变链，配合色场转场和卡点音效，按所选画幅与时长输出 5–20 秒动效短片。"
+desc-en: "For brands, product launches and designers who want a keynote-grade shape-morphing film instead of a template slideshow. You describe the story, brand name, copy and palette, or upload a logo, icons or references, then pick 1:1, 16:9, 9:16, 3:4 or 4:3 and a length of 5, 10, 15 or 20 seconds. The skill writes a treatment and a frame-accurate cue sheet, builds a design system, aligns paths so no morph knots, routes every A-to-B through a circle or capsule with squash, stretch and rotation, and checks key-frame stills with you before motion. It then synthesises beat-locked music and renders deterministically. You get a 30 fps MP4 mastered to -14 LUFS, a key-frame contact sheet, credits and a self-critique. It does not do live action, character acting or footage editing."
+desc-cn: "适用于品牌发布、产品亮点和设计师作品集，想要苹果发布会级的形变动画而不是模板轮播的场景。你可以用文字描述故事、品牌名、文案和配色，也可以上传 Logo、图标或参考图，再选择画幅（1:1、16:9、9:16、3:4、4:3）和时长（5、10、15、20 秒）。技能会先写创意方案和逐帧节拍表并搭建设计系统，再做路径对齐防止打结，让每次形变经过圆形或胶囊中介并叠加挤压拉伸与旋转。关键帧静帧先请你确认，然后制作动作、合成卡点配乐并确定性渲染。最终交付 30 帧、响度 −14 LUFS 的 MP4，附关键帧联系表、授权清单和自评。不做真人实拍、角色表演或素材剪辑。"
+structured-info:
+  zh-CN:
+    summary: 把品牌、产品或活动信息转化为图标连续丝滑互变的发布会级形变动画，并输出卡点成片。
+    best-for:
+      - 品牌标志动效
+      - 产品宣传
+      - 图形叙事
+    how-to-use: 描述故事、品牌名、文案和配色，或上传 Logo、产品图等素材，再选择画幅与时长（5/10/15/20 秒）后开始。
+    outputs: 创意方案与节拍表、关键帧联系表、卡点配乐的形变动画成片与授权清单。
+  en-US:
+    summary: Turn brand, product, or event information into a keynote-grade shape-morph film where icons flow seamlessly into one another, delivered as a beat-locked finished video.
+    best-for:
+      - Logo Animation
+      - Product & Event Promos
+      - Visual Storytelling
+    how-to-use: Describe the story, brand name, copy, and palette, or upload a logo or product images, then choose the aspect ratio and length (5/10/15/20 s) to begin.
+    outputs: Treatment and cue sheet, key-frame contact sheet, finished beat-synced morph film, and a credits list.
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/61b70bb4-f811-432e-9bfb-175c3591ca1e.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/61b70bb4-f811-432e-9bfb-175c3591ca1e.mp4

@@ -1,0 +1,39 @@
+name: scifi-comedy-animation-maker
+display-name-zh: 科幻喜剧动画制作
+display-name-en: Sci-Fi Comedy Animation Maker
+version: 1.0.0
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+- Animation / Creative Generation
+complete-tags-cn:
+- 动画 / 创作生成
+summary-en: Turn an idea or script into a code-drawn sci-fi comedy animated short with voice-driven mouths, score, subtitles, and editable source.
+summary-cn: 将创意或剧本制作成代码绘制的科幻喜剧动画短片，含声音驱动口型、配乐字幕与可编辑源码。
+desc-en: For creators making original sci-fi sitcoms, two-character dialogue or parallel-world shorts, this workflow accepts an idea or script and optional characters, language, duration and aspect ratio. It develops the story and treatment, creates character sheets and style frames, then draws thick-line, flat-color animation in code. Recorded dialogue drives mouth movements while a shared timeline coordinates picture, voices, music, sound effects and subtitles. After rendering, it checks the finished picture and sound. Deliverables include the playable video, cover, subtitles, treatment, credits and editable source with a build script. It supports new shorts and revisions, not image-to-video, 3D or live action; production depends on available rendering and audio tools.
+desc-cn: 面向需要原创科幻情景喜剧、双人对白或平行世界短片的创作者，用户可提供创意或剧本，并指定角色、语言、时长与画幅。流程先编写故事与导演方案，制作角色设定和风格帧，再以代码绘制抖动粗线、平涂上色的动画，让逐句录音驱动口型，统一编排画面、配音、配乐、音效和字幕，渲染后检查音画。交付成片、封面、字幕、导演方案、来源清单、可编辑源码与构建脚本。支持新作和修改，不用于图生视频、三维或真人实拍；制作依赖可用的渲染和声音工具。
+cover: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318796654974007-1794318796644.mp4
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+content-locale: en-US
+structured-info:
+  zh-CN:
+    summary: 将创意或剧本制作成代码绘制的科幻喜剧动画短片，含原创角色表演、声音口型、配乐字幕和可编辑源码。
+    best-for:
+    - 科幻情景喜剧
+    - 双主角对白
+    - 代码绘制动画
+    how-to-use: 提供创意或剧本，可指定角色、语言、时长与画幅后开始制作。
+    outputs: 成片视频、封面、字幕、导演方案、角色设定与风格帧、可编辑源码和质量检查记录。
+  en-US:
+    summary: Turn an idea or script into a code-drawn sci-fi comedy animated short with original character acting, voice-driven mouths, score, subtitles, and editable source.
+    best-for:
+    - Sci-Fi Sitcom
+    - Two-hander Dialogue
+    - Code-drawn Animation
+    how-to-use: Provide an idea or script, optionally set characters, language, duration, and aspect ratio, then start production.
+    outputs: Finished video, cover, subtitles, treatment, character sheets and style frames, editable source, and QA records.
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318801799043293-1794318801677.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318796654974007-1794318796644.mp4

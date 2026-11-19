@@ -1,0 +1,16 @@
+{
+  "meta": {"brand": "MiniMax Design"},
+  "format": {"aspect": "16:9", "fps": 60, "bpm": 112, "duration": 15},
+  "style": "swiss",
+  "palette": {"preset": "mono", "dark": "#0C0C10", "light": "#F2F0EB", "a1": "#FF5B3A", "a2": "#8A6CFF", "a3": "#38D6E8"},
+  "carrier": "a1",
+  "hud": {"enabled": false},
+  "audio": {"mode": "synth", "mood": "cool"},
+  "scenes": [
+    {"type": "prompt_type",  "beats": 5, "bg": "dark", "name": "想法", "text": "我有一个想法", "kicker": "PROMPT"},
+    {"type": "frame_trace",  "beats": 5, "bg": "dark", "name": "成形", "caption": "从一句话开始", "meta_left": "CANVAS · 16:9", "meta_right": "1920 × 1080"},
+    {"type": "media_morph",  "beats": 6, "bg": "dark", "name": "媒介", "labels": ["文字", "图像", "视频", "声音"], "meta_left": "CANVAS · 16:9", "meta_right": "1920 × 1080"},
+    {"type": "canvas_zoom",  "beats": 5, "bg": "dark", "name": "画布", "caption": "一张画布，共同创作", "you": "你", "ai": "AI"},
+    {"type": "caret_lockup", "beats": 7, "bg": "dark", "name": "落版", "title": "MiniMax Design", "tagline": "让想法，成为作品", "meta": "文字 · 图像 · 视频 · 声音"}
+  ]
+}

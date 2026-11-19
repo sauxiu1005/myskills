@@ -1,0 +1,163 @@
+{
+  "id": "neon-harbor",
+  "name": "霓虹港湾",
+  "name_en": "Neon Harbor",
+  "tier": "现代像素",
+  "use": "像素产品广告、科技霓虹、夜港",
+  "original": true,
+  "colors": [
+    {
+      "index": 0,
+      "hex": "#0b0f1a",
+      "role": "虚空/轮廓",
+      "ramp": "navy"
+    },
+    {
+      "index": 1,
+      "hex": "#162238",
+      "role": "深海蓝",
+      "ramp": "navy"
+    },
+    {
+      "index": 2,
+      "hex": "#24405e",
+      "role": "港湾蓝",
+      "ramp": "navy"
+    },
+    {
+      "index": 3,
+      "hex": "#2f6f86",
+      "role": "暗青",
+      "ramp": "teal"
+    },
+    {
+      "index": 4,
+      "hex": "#36b3b0",
+      "role": "青",
+      "ramp": "teal"
+    },
+    {
+      "index": 5,
+      "hex": "#8ff0dc",
+      "role": "薄荷发光",
+      "ramp": "teal"
+    },
+    {
+      "index": 6,
+      "hex": "#f4fbff",
+      "role": "特效发光核心",
+      "ramp": "fx"
+    },
+    {
+      "index": 7,
+      "hex": "#c9d3e0",
+      "role": "浅灰高光",
+      "ramp": "metal"
+    },
+    {
+      "index": 8,
+      "hex": "#7a869c",
+      "role": "中灰",
+      "ramp": "metal"
+    },
+    {
+      "index": 9,
+      "hex": "#3d4457",
+      "role": "石板灰",
+      "ramp": "metal"
+    },
+    {
+      "index": 10,
+      "hex": "#5a1f4f",
+      "role": "暗品红",
+      "ramp": "magenta"
+    },
+    {
+      "index": 11,
+      "hex": "#b0307a",
+      "role": "品红",
+      "ramp": "magenta"
+    },
+    {
+      "index": 12,
+      "hex": "#ff5ca8",
+      "role": "霓虹粉",
+      "ramp": "magenta"
+    },
+    {
+      "index": 13,
+      "hex": "#ffb36b",
+      "role": "琥珀",
+      "ramp": "accent"
+    },
+    {
+      "index": 14,
+      "hex": "#ffe066",
+      "role": "信号黄",
+      "ramp": "accent"
+    },
+    {
+      "index": 15,
+      "hex": "#7c4dff",
+      "role": "紫罗兰",
+      "ramp": "accent"
+    }
+  ],
+  "ramps": {
+    "navy": [
+      0,
+      1,
+      2
+    ],
+    "teal": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "metal": [
+      9,
+      8,
+      7,
+      6
+    ],
+    "magenta": [
+      10,
+      11,
+      12
+    ],
+    "accent": [
+      13,
+      14
+    ]
+  },
+  "cycle_ranges": [
+    {
+      "name": "青色光带",
+      "indices": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "品红霓虹",
+      "indices": [
+        10,
+        11,
+        12
+      ]
+    }
+  ],
+  "fx_colors": [
+    6,
+    5,
+    12
+  ],
+  "rules": {
+    "dither": "仅大面积渐变使用2×2有序抖色，运动物体不用",
+    "glow": "硬边核心+1px外圈，禁止全屏柔焦",
+    "8bit_subset": "切8-bit时每精灵取同一ramp的3色+透明"
+  }
+}

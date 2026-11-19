@@ -1,0 +1,525 @@
+{
+ "id": "iso-meadow",
+ "name": "河畔草甸",
+ "name_en": "Iso Meadow",
+ "tier": "密集高细节",
+ "use": "等距 2:1 游戏场景（tile 32×16，960×540 逻辑画布）",
+ "original": true,
+ "colors": [
+  {
+   "index": 0,
+   "hex": "#1a1420",
+   "role": "描边",
+   "ramp": "ink"
+  },
+  {
+   "index": 1,
+   "hex": "#3a2e3a",
+   "role": "次级描边/深影",
+   "ramp": "ink"
+  },
+  {
+   "index": 2,
+   "hex": "#2f5a2a",
+   "role": "草地最暗",
+   "ramp": "grass"
+  },
+  {
+   "index": 3,
+   "hex": "#3f7a32",
+   "role": "草地暗",
+   "ramp": "grass"
+  },
+  {
+   "index": 4,
+   "hex": "#5a9a3a",
+   "role": "草地",
+   "ramp": "grass"
+  },
+  {
+   "index": 5,
+   "hex": "#7fbb48",
+   "role": "草地亮",
+   "ramp": "grass"
+  },
+  {
+   "index": 6,
+   "hex": "#a8d65e",
+   "role": "草尖",
+   "ramp": "grass"
+  },
+  {
+   "index": 7,
+   "hex": "#d2ec8a",
+   "role": "草尖高光",
+   "ramp": "grass"
+  },
+  {
+   "index": 8,
+   "hex": "#5e3e2a",
+   "role": "土路暗",
+   "ramp": "dirt"
+  },
+  {
+   "index": 9,
+   "hex": "#7f5636",
+   "role": "土路",
+   "ramp": "dirt"
+  },
+  {
+   "index": 10,
+   "hex": "#a5744a",
+   "role": "土路亮",
+   "ramp": "dirt"
+  },
+  {
+   "index": 11,
+   "hex": "#c99c68",
+   "role": "碎石路",
+   "ramp": "dirt"
+  },
+  {
+   "index": 12,
+   "hex": "#e3c48e",
+   "role": "碎石亮",
+   "ramp": "dirt"
+  },
+  {
+   "index": 13,
+   "hex": "#1d3f6e",
+   "role": "深水",
+   "ramp": "water"
+  },
+  {
+   "index": 14,
+   "hex": "#2a5f96",
+   "role": "水暗",
+   "ramp": "water"
+  },
+  {
+   "index": 15,
+   "hex": "#3c84bb",
+   "role": "水",
+   "ramp": "water"
+  },
+  {
+   "index": 16,
+   "hex": "#63aed6",
+   "role": "水亮",
+   "ramp": "water"
+  },
+  {
+   "index": 17,
+   "hex": "#9ad6ea",
+   "role": "水面高光",
+   "ramp": "water"
+  },
+  {
+   "index": 18,
+   "hex": "#e0f6fa",
+   "role": "水花",
+   "ramp": "water"
+  },
+  {
+   "index": 19,
+   "hex": "#3e2416",
+   "role": "木材最暗",
+   "ramp": "wood"
+  },
+  {
+   "index": 20,
+   "hex": "#5c3820",
+   "role": "木材暗",
+   "ramp": "wood"
+  },
+  {
+   "index": 21,
+   "hex": "#80522e",
+   "role": "木材",
+   "ramp": "wood"
+  },
+  {
+   "index": 22,
+   "hex": "#a8713f",
+   "role": "木材亮",
+   "ramp": "wood"
+  },
+  {
+   "index": 23,
+   "hex": "#cf9a5c",
+   "role": "木纹高光",
+   "ramp": "wood"
+  },
+  {
+   "index": 24,
+   "hex": "#5a1f28",
+   "role": "瓦片最暗",
+   "ramp": "roof"
+  },
+  {
+   "index": 25,
+   "hex": "#86303a",
+   "role": "瓦片暗",
+   "ramp": "roof"
+  },
+  {
+   "index": 26,
+   "hex": "#b04a45",
+   "role": "瓦片",
+   "ramp": "roof"
+  },
+  {
+   "index": 27,
+   "hex": "#d8705a",
+   "role": "瓦片亮",
+   "ramp": "roof"
+  },
+  {
+   "index": 28,
+   "hex": "#f0a07a",
+   "role": "瓦片高光",
+   "ramp": "roof"
+  },
+  {
+   "index": 29,
+   "hex": "#3d3d4a",
+   "role": "石材最暗",
+   "ramp": "stone"
+  },
+  {
+   "index": 30,
+   "hex": "#5c5c6b",
+   "role": "石材暗",
+   "ramp": "stone"
+  },
+  {
+   "index": 31,
+   "hex": "#80808c",
+   "role": "石材",
+   "ramp": "stone"
+  },
+  {
+   "index": 32,
+   "hex": "#a6a5ad",
+   "role": "石材亮",
+   "ramp": "stone"
+  },
+  {
+   "index": 33,
+   "hex": "#cdcbcc",
+   "role": "石材高光",
+   "ramp": "stone"
+  },
+  {
+   "index": 34,
+   "hex": "#8a6a1e",
+   "role": "麦秆暗",
+   "ramp": "crop"
+  },
+  {
+   "index": 35,
+   "hex": "#c49a2c",
+   "role": "麦穗",
+   "ramp": "crop"
+  },
+  {
+   "index": 36,
+   "hex": "#e8c84a",
+   "role": "麦穗亮",
+   "ramp": "crop"
+  },
+  {
+   "index": 37,
+   "hex": "#f7e89a",
+   "role": "麦芒高光",
+   "ramp": "crop"
+  },
+  {
+   "index": 38,
+   "hex": "#d8661c",
+   "role": "南瓜/胡萝卜",
+   "ramp": "crop"
+  },
+  {
+   "index": 39,
+   "hex": "#f29a3a",
+   "role": "南瓜亮",
+   "ramp": "crop"
+  },
+  {
+   "index": 40,
+   "hex": "#4e8f5a",
+   "role": "菜叶",
+   "ramp": "crop"
+  },
+  {
+   "index": 41,
+   "hex": "#8fcf8a",
+   "role": "菜叶亮",
+   "ramp": "crop"
+  },
+  {
+   "index": 42,
+   "hex": "#6e3e2c",
+   "role": "皮肤暗",
+   "ramp": "skin"
+  },
+  {
+   "index": 43,
+   "hex": "#b06f4c",
+   "role": "皮肤中",
+   "ramp": "skin"
+  },
+  {
+   "index": 44,
+   "hex": "#e3a47a",
+   "role": "皮肤",
+   "ramp": "skin"
+  },
+  {
+   "index": 45,
+   "hex": "#f6cfa6",
+   "role": "皮肤亮",
+   "ramp": "skin"
+  },
+  {
+   "index": 46,
+   "hex": "#2d3f73",
+   "role": "布料蓝暗",
+   "ramp": "cloth"
+  },
+  {
+   "index": 47,
+   "hex": "#4566a8",
+   "role": "布料蓝",
+   "ramp": "cloth"
+  },
+  {
+   "index": 48,
+   "hex": "#7aa0d8",
+   "role": "布料蓝亮",
+   "ramp": "cloth"
+  },
+  {
+   "index": 49,
+   "hex": "#8c2f3f",
+   "role": "布料红暗",
+   "ramp": "cloth"
+  },
+  {
+   "index": 50,
+   "hex": "#c84b55",
+   "role": "布料红",
+   "ramp": "cloth"
+  },
+  {
+   "index": 51,
+   "hex": "#e9e1cf",
+   "role": "围裙",
+   "ramp": "cloth"
+  },
+  {
+   "index": 52,
+   "hex": "#b9ad96",
+   "role": "围裙阴影",
+   "ramp": "cloth"
+  },
+  {
+   "index": 53,
+   "hex": "#e8508a",
+   "role": "花-粉",
+   "ramp": "flower"
+  },
+  {
+   "index": 54,
+   "hex": "#f6e05a",
+   "role": "花-黄",
+   "ramp": "flower"
+  },
+  {
+   "index": 55,
+   "hex": "#9a6ad6",
+   "role": "花-紫",
+   "ramp": "flower"
+  },
+  {
+   "index": 56,
+   "hex": "#1f1b2e",
+   "role": "UI 面板",
+   "ramp": "ui"
+  },
+  {
+   "index": 57,
+   "hex": "#3b3555",
+   "role": "UI 面板亮",
+   "ramp": "ui"
+  },
+  {
+   "index": 58,
+   "hex": "#fff6dc",
+   "role": "UI 文字",
+   "ramp": "ui"
+  },
+  {
+   "index": 59,
+   "hex": "#ffd44a",
+   "role": "金币",
+   "ramp": "ui"
+  },
+  {
+   "index": 60,
+   "hex": "#b8862a",
+   "role": "金币暗",
+   "ramp": "ui"
+  },
+  {
+   "index": 61,
+   "hex": "#ffb347",
+   "role": "灯火",
+   "ramp": "light"
+  },
+  {
+   "index": 62,
+   "hex": "#2b2a5c",
+   "role": "夜色",
+   "ramp": "light"
+  },
+  {
+   "index": 63,
+   "hex": "#5a4d9a",
+   "role": "黄昏紫",
+   "ramp": "light"
+  }
+ ],
+ "ramps": {
+  "ink": [
+   0,
+   1
+  ],
+  "grass": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "dirt": [
+   8,
+   9,
+   10,
+   11,
+   12
+  ],
+  "water": [
+   13,
+   14,
+   15,
+   16,
+   17,
+   18
+  ],
+  "wood": [
+   19,
+   20,
+   21,
+   22,
+   23
+  ],
+  "roof": [
+   24,
+   25,
+   26,
+   27,
+   28
+  ],
+  "stone": [
+   29,
+   30,
+   31,
+   32,
+   33
+  ],
+  "crop": [
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41
+  ],
+  "skin": [
+   42,
+   43,
+   44,
+   45
+  ],
+  "cloth": [
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52
+  ],
+  "flower": [
+   53,
+   54,
+   55
+  ],
+  "ui": [
+   56,
+   57,
+   58,
+   59,
+   60
+  ],
+  "light": [
+   61,
+   62,
+   63
+  ]
+ },
+ "cycle_ranges": [
+  {
+   "name": "water_shimmer",
+   "indices": [
+    15,
+    16,
+    17,
+    18
+   ]
+  },
+  {
+   "name": "lamp_flicker",
+   "indices": [
+    61,
+    59,
+    39
+   ]
+  },
+  {
+   "name": "day_night",
+   "indices": [
+    62,
+    63
+   ]
+  }
+ ],
+ "fx_colors": [
+  61,
+  59,
+  18,
+  7
+ ],
+ "rules": {
+  "projection": "等距 2:1，tile 32×16",
+  "light": "光源左上，阴影右下（1 号或同色系暗色）",
+  "outline": "物体外轮廓 0/1，内部用同色系明暗",
+  "sorting": "按底部 y 排序遮挡",
+  "glow": "硬边核心+1px 外圈"
+ }
+}

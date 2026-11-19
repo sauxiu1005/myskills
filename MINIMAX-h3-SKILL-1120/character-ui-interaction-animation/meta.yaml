@@ -1,0 +1,34 @@
+display-name-zh: 角色与界面互动动画
+version: 1.0.0
+tag-en: "Commercial Ad"
+tag-cn: "商业广告"
+complete-tags-en:
+  - "Commercial Ad / Creative Generation"
+complete-tags-cn:
+  - "商业广告 / 创作生成"
+summary-en: "Turns a character image and an interface screenshot into a 3D short where the character leaps across panels, presses buttons and drags controls with live UI feedback, synced sound and an editable Blender project."
+summary-cn: "根据角色形象与界面截图，制作角色跨面板跳跃、按压拖拽控件并触发界面反馈的三维动画，同步声音并交付可编辑 Blender 工程。"
+desc-en: "For creators who want a character to physically interact with a blog, social page, app, website or AE, PR and CAD style workspace. Provide a character image or model, interface screenshots or a recording, and the result the character should achieve. The workflow analyzes the assets, rebuilds the interface in code as thin low-relief panels and controls, plans every action on one shared timeline with contact points and UI before and after states, animates jumps, presses and drags in Blender with a follow camera, then syncs music and sound effects to the contacts. It delivers an MP4 with sound, an editable .blend, a complete project ZIP with dependencies, UI source, sound stems and QA records. It does not operate real accounts or replace ordinary screen recordings."
+desc-cn: "面向希望让角色与博客、社交主页、App、网页或 AE、PR、CAD 等软件界面发生实体互动的创作者。用户提供角色图片或已有模型、界面截图或录屏，以及希望角色完成的结果。流程先分析素材，用代码重建界面并拆分为薄浮雕面板与控件，在统一时间线上规划每个动作的接触点和界面前后状态，再用 Blender 制作出屏、跨面板跳跃、按压与拖拽及跟拍运镜，并让配乐和音效与接触同步。最终交付带声 MP4、可修改建模的 Blender 工程、含完整依赖的工程包、界面源码、声音分轨与验收记录。不用于操作真实账号，也不替代普通录屏。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/564280b7-e15a-4063-b2fe-5f5804dddba2.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/564280b7-e15a-4063-b2fe-5f5804dddba2.mp4
+structured-info:
+  zh-CN:
+    summary: 根据角色形象和界面截图，制作角色穿梭界面、按压拖拽控件并触发反馈的三维互动动画，交付成片与可编辑工程。
+    best-for:
+      - 界面角色互动
+      - 产品创意宣传
+      - 趣味短片
+    how-to-use: 上传角色形象和界面截图，说明希望角色完成的操作、时长与画幅；也可指定通用软件工作区。
+    outputs: 带声 MP4、可修改建模的 Blender 工程、含完整依赖的工程包、界面源码、动作时间线、声音分轨与验收记录。
+  en-US:
+    summary: Turn a character image and interface screenshot into a 3D interaction short where the character crosses panels and presses or drags controls with feedback, delivered with an editable project.
+    best-for:
+      - Software UI Character Interaction
+      - Product and App Promos
+      - Personal Page Fun Shorts
+    how-to-use: Upload the character image and interface screenshots, describe the operations the character should perform, plus duration and aspect ratio; a generic software workspace can also be requested.
+    outputs: MP4 with sound, an editable Blender project, a complete project package with dependencies, UI source, action timeline, sound stems and QA records.

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#10171c"/>
+<g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<text x="64" y="90" font-size="46" fill="#e8edf0">侯孝贤 · 视觉设计色卡</text>
+<text x="64" y="134" font-size="22" fill="#9aaeb8">HOU HSIAO HSIEN  /  SOURCE PALETTE</text>
+<text x="64" y="205" font-size="24" fill="#e8edf0">主色板 / MAIN · 06</text>
+<rect x="64" y="235" width="232" height="160" fill="#5F7D6B" stroke="#66717a" stroke-width="1"/>
+<text x="64" y="431" font-size="22" fill="#e8edf0">C01  青绿山水</text>
+<text x="64" y="464" font-size="22" fill="#aebec7">#5F7D6B</text>
+<rect x="312" y="235" width="232" height="160" fill="#8B7355" stroke="#66717a" stroke-width="1"/>
+<text x="312" y="431" font-size="22" fill="#e8edf0">C02  旧木棕</text>
+<text x="312" y="464" font-size="22" fill="#aebec7">#8B7355</text>
+<rect x="560" y="235" width="232" height="160" fill="#A89F8A" stroke="#66717a" stroke-width="1"/>
+<text x="560" y="431" font-size="22" fill="#e8edf0">C03  灰米白</text>
+<text x="560" y="464" font-size="22" fill="#aebec7">#A89F8A</text>
+<rect x="808" y="235" width="232" height="160" fill="#4A5D52" stroke="#66717a" stroke-width="1"/>
+<text x="808" y="431" font-size="22" fill="#e8edf0">C04  深青绿</text>
+<text x="808" y="464" font-size="22" fill="#aebec7">#4A5D52</text>
+<rect x="1056" y="235" width="232" height="160" fill="#CD853F" stroke="#66717a" stroke-width="1"/>
+<text x="1056" y="431" font-size="22" fill="#e8edf0">C05  琥珀棕</text>
+<text x="1056" y="464" font-size="22" fill="#aebec7">#CD853F</text>
+<rect x="1304" y="235" width="232" height="160" fill="#2C3A32" stroke="#66717a" stroke-width="1"/>
+<text x="1304" y="431" font-size="22" fill="#e8edf0">C06  暗松绿</text>
+<text x="1304" y="464" font-size="22" fill="#aebec7">#2C3A32</text>
+<text x="64" y="535" font-size="24" fill="#e8edf0">情绪参考色 / ACCENT · 04</text>
+<rect x="64" y="565" width="356" height="110" fill="#5F7D6B" stroke="#66717a" stroke-width="1"/>
+<text x="64" y="711" font-size="22" fill="#e8edf0">E01  诗意宁静</text>
+<text x="64" y="744" font-size="22" fill="#aebec7">#5F7D6B</text>
+<rect x="436" y="565" width="356" height="110" fill="#8B7355" stroke="#66717a" stroke-width="1"/>
+<text x="436" y="711" font-size="22" fill="#e8edf0">E02  历史记忆</text>
+<text x="436" y="744" font-size="22" fill="#aebec7">#8B7355</text>
+<rect x="808" y="565" width="356" height="110" fill="#A89F8A" stroke="#66717a" stroke-width="1"/>
+<text x="808" y="711" font-size="22" fill="#e8edf0">E03  留白含蓄</text>
+<text x="808" y="744" font-size="22" fill="#aebec7">#A89F8A</text>
+<rect x="1180" y="565" width="356" height="110" fill="#2C3A32" stroke="#66717a" stroke-width="1"/>
+<text x="1180" y="711" font-size="22" fill="#e8edf0">E04  深沉内敛</text>
+<text x="1180" y="744" font-size="22" fill="#aebec7">#2C3A32</text>
+<text x="64" y="815" font-size="23" fill="#aebec7">据原资料 HEX 绘制 · sRGB · 等宽展示，不代表画面占比</text>
+<text x="64" y="852" font-size="23" fill="#aebec7">设计参考，非原片实测色值；具体作品分支与用户参考图优先。</text>
+</g></svg>

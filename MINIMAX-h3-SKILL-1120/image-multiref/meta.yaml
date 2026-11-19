@@ -1,0 +1,37 @@
+display-name-zh: 多图参考合成
+version: 1.0.0
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+complete-tags-en:
+- Creative & Experimental / Creative Generation
+complete-tags-cn:
+- 创意实验 / 创作生成
+summary-en: Combine selected content from multiple images into a new picture, starting with the user’s goal and offering material-specific ideas only when needed, then deliver for user review.
+summary-cn: 从用户目标出发，将多张图片中的指定内容组合成新画面，没想法时按素材推荐玩法，交付后由用户审阅。
+desc-en: For users who want to combine content from multiple images, including try-on, scene changes, group composites, reference-led designs and page layouts. Start with the user’s goal or invite images and an idea. When images arrive without a goal, inspect them before suggesting two or three suitable outcomes. Internally assign reference roles, preserve key details and determine framing without making users learn technical terminology. Explain reference limits only when relevant to a real choice. Deliver the finished image with concise preservation notes for user review, and make further changes with authorization. Not for text-only generation, single-image edits or video.
+desc-cn: 适合希望用多张图片组合新画面的用户，支持换装、换场景、人物同框、商品合成、参考设计和版面创作。先理解用户想做什么；只提供图片时先看图，再确认组合方向；没有想法时按素材推荐两三个可行方向，让用户决定成品的用途与表达。助手内部整理参考用途、保留细节与画幅，不要求用户学习编号和绑定术语，张数限制只在影响选择时说明。交付成图与简短说明，由用户审阅后决定修改。不做纯文生图、单图编辑或视频。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 从用户目标出发，组合多张图片中的指定内容；没想法时先看图，再推荐合适的组合方向。
+    best-for:
+    - 人物换装
+    - 商品合成
+    - 拼贴版面
+    how-to-use: 发来想用的图片，告诉我想保留或改变什么；还没想法也可以，先看图再推荐合适的玩法。
+    outputs: 合成图片与关键保留点说明，交由用户审阅。
+  en-US:
+    summary: Start from the user's goal and combine selected image content; suggest suitable directions after inspecting the materials.
+    best-for:
+    - Try-on
+    - Product composites
+    - Collage layouts
+    how-to-use: Send the images and tell us what to keep or change. If unsure, receive matching ideas after the images are inspected.
+    outputs: The finished image and concise preservation notes for user review.
+cover: https://cdn.hailuoai.com/pre/2026-11-11-22/video/1794408469300549726-1794408469284.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-11-22/video/1794408469300549726-1794408469284.mp4
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-11-22/image/1794408473231942312-1794408473223.png
+- https://cdn.hailuoai.com/pre/2026-11-11-22/image/1794408476280535769-1794408476269.png

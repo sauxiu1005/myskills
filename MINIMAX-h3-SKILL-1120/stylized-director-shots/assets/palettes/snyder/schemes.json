@@ -1,0 +1,124 @@
+{
+  "director_zh": "扎克·施奈德",
+  "director_en": "Zack Snyder",
+  "schemes": [
+    {
+      "id": "S1",
+      "name_zh": "300日景暖铜红",
+      "name_en": "300 daylight warm bronze and red",
+      "film": "300勇士 300 (2006)",
+      "fits": "出征、对峙、宣誓、正午或黄昏室外的剧情",
+      "avoid": "夜景、室内柔光、需要自然低反差的剧情",
+      "light": "顶光为底，强逆光形成金色边缘；高光削顶、暗部压实",
+      "contrast": "高反差、偏单色、去饱和",
+      "roles": {
+        "background_main": {
+          "hex": [
+            "#8C6A44",
+            "#B08A5A"
+          ],
+          "desc": "去饱和的铜褐天空与地面",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 45–55%"
+        },
+        "shadow": {
+          "hex": [
+            "#1A1410"
+          ],
+          "desc": "压实的暖近黑暗部",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 30–40%"
+        },
+        "light_highlight": {
+          "hex": [
+            "#E8B565"
+          ],
+          "desc": "金色逆光边缘与削顶高光",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 5–10%"
+        },
+        "accent_small": {
+          "hex": [
+            "#9E1B16"
+          ],
+          "desc": "只给剧本中已有的红色物件（如披风、旗、布）；随剧情推进可逐渐变暗变旧",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 ≤8%"
+        },
+        "skin_protection": {
+          "hex": [],
+          "desc": "保留角色原本肤色，铜色只来自光照与调色倾向；保留眼神光与面部结构",
+          "provenance": "manual_suggestion"
+        }
+      },
+      "sources": [
+        "https://theasc.com/article/few-against-many-300/"
+      ],
+      "stills": [],
+      "generation_card": "assets/palettes/snyder/S1-card.png"
+    },
+    {
+      "id": "S2",
+      "name_zh": "300夜景冷钢蓝",
+      "name_en": "300 night cool steel blue",
+      "film": "300勇士 300 (2006)",
+      "fits": "夜晚、告别、等待、战前寂静的剧情",
+      "avoid": "烈日或需要暖色力量感的剧情",
+      "light": "柔和冷色高光，逆光颜色比整体更冷",
+      "contrast": "高反差，暗部更深",
+      "roles": {
+        "background_main": {
+          "hex": [
+            "#3E4E5C",
+            "#56687A"
+          ],
+          "desc": "钢蓝灰夜色",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 45–55%"
+        },
+        "shadow": {
+          "hex": [
+            "#0B1016"
+          ],
+          "desc": "冷近黑",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 35–45%"
+        },
+        "light_highlight": {
+          "hex": [
+            "#A9BCCB"
+          ],
+          "desc": "柔和冷白高光",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 5–10%"
+        },
+        "accent_small": {
+          "hex": [
+            "#6E1A18"
+          ],
+          "desc": "红色物件在夜色中降为暗红",
+          "provenance": "manual_suggestion",
+          "suggested_area": "建议 ≤5%"
+        },
+        "skin_protection": {
+          "hex": [],
+          "desc": "保留角色原本肤色，冷光下仍有血色，不发青",
+          "provenance": "manual_suggestion"
+        }
+      },
+      "sources": [
+        "https://theasc.com/article/few-against-many-300/"
+      ],
+      "stills": [],
+      "generation_card": "assets/palettes/snyder/S2-card.png"
+    }
+  ],
+  "schema_note": "颜色按角色组织：背景主色、阴影、光源高光、小面积强调色、肤色保护。肤色保护不提供色值，含义是保留每个角色原本的肤色、只受光照影响，不把不同肤色统一成某个色值。面积为建议值，不是实测。方案之间互斥，一次只用一个。",
+  "provenance_legend": {
+    "user_real_palette_unverified": "用户资料 real_palettes 中的色值；用户 JSON 的 sources 字段为空，已按片名关联其 reference_sources.md（FilmGrab）；取色方法与样本未核实，不是官方 LUT 或全片像素统计。",
+    "user_design_suggestion": "用户提供色卡中的设计建议色值（含占比/对比度描述）；无实测定义，不是官方 LUT 或全片统计。",
+    "sampled_from_user_still": "本技能用代码对用户提供的单张截图做 6 色中位切分取样得到的近似色；只代表该帧，不代表全片。",
+    "manual_suggestion": "本技能根据作品观感与制作访谈文字人工转译的建议色值，不是从影片提取。"
+  },
+  "generation_negative": "不要把色卡上的色块、文字、编号或排版画进成片；色卡只控制影调、光色和色彩角色，不决定构图、机位、人物或场景；不复制任何电影角色、服装、道具或场景。"
+}

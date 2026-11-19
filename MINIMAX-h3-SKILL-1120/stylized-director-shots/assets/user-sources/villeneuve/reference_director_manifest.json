@@ -1,0 +1,153 @@
+{
+  "director": {
+    "zh": "丹尼斯·维伦纽瓦",
+    "en": "Denis Villeneuve"
+  },
+  "style_profile": {
+    "definition": "沙金、巨构灰和深青蓝用单一主色控制宏大科幻世界。",
+    "lighting": "强自然顶光、体积雾、建筑反射光；肤色保持可读，不让环境偏色吞没面部层次。",
+    "framing": "巨构大全景、缓慢推进、中心尺度对比；先交代颜色承载的空间，再进入人物与关键物件。",
+    "grading": "每场单主色，低饱和，高光克制；高光、中间调和阴影分别处理，局部强调色不污染全画面。",
+    "avoid": [
+      "青橙全局",
+      "杂色未来城",
+      "快切失去尺度",
+      "无动机环绕和随机变焦",
+      "用统一滤镜替代色彩比例、光源和材质。"
+    ]
+  },
+  "films": [
+    {
+      "title_zh": "焦土之城",
+      "title_en": "Incendies",
+      "year": 2010,
+      "frames": [
+        "D:\\雷龙飞\\2026.6.25精准控制分镜【公开版】\\codex-prompt\\outputs\\director-palettes\\batch-99\\cards\\D080-丹尼斯·维伦纽瓦·电影色调常用色卡\\source-frames\\film-01\\frame-01.jpg",
+        "D:\\雷龙飞\\2026.6.25精准控制分镜【公开版】\\codex-prompt\\outputs\\director-palettes\\batch-99\\cards\\D080-丹尼斯·维伦纽瓦·电影色调常用色卡\\source-frames\\film-01\\frame-02.jpg",
+        "D:\\雷龙飞\\2026.6.25精准控制分镜【公开版】\\codex-prompt\\outputs\\director-palettes\\batch-99\\cards\\D080-丹尼斯·维伦纽瓦·电影色调常用色卡\\source-frames\\film-01\\frame-03.jpg",
+        "D:\\雷龙飞\\2026.6.25精准控制分镜【公开版】\\codex-prompt\\outputs\\director-palettes\\batch-99\\cards\\D080-丹尼斯·维伦纽瓦·电影色调常用色卡\\source-frames\\film-01\\frame-04.jpg"
+      ],
+      "sources": [
+        {
+          "label": "FilmGrab 真实电影截图图库",
+          "url": "https://film-grab.com/2020/09/24/incendies/"
+        },
+        {
+          "label": "截图 01",
+          "url": "https://film-grab.com/wp-content/uploads/photo-gallery/Incendies_001.jpg?bwg=1600070184"
+        },
+        {
+          "label": "截图 02",
+          "url": "https://film-grab.com/wp-content/uploads/photo-gallery/Incendies_018.jpg?bwg=1600070184"
+        },
+        {
+          "label": "截图 03",
+          "url": "https://film-grab.com/wp-content/uploads/photo-gallery/Incendies_036.jpg?bwg=1600070184"
+        },
+        {
+          "label": "截图 04",
+          "url": "https://film-grab.com/wp-content/uploads/photo-gallery/Incendies_053.jpg?bwg=1600070185"
+        }
+      ]
+    },
+    {
+      "title_zh": "宿敌",
+      "title_en": "Enemy",
+      "year": 2013,
+      "frames": [
+        "D:\\雷龙飞\\2026.6.25精准控制分镜【公开版】\\codex-prompt\\outputs\\director-palettes\\batch-99\\cards\\D080-丹尼斯·维伦纽瓦·电影色调常用色卡\\source-frames\\film-02\\frame-01.jpg",
+        "D:\\雷龙飞\\2026.6.25精准控制分镜【公开版】\\codex-prompt\\outputs\\director-palettes\\batch-99\\cards\\D080-丹尼斯·维伦纽瓦·电影色调常用色卡\\source-frames\\film-02\\frame-02.jpg",
+        "D:\\雷龙飞\\2026.6.25精准控制分镜【公开版】\\codex-prompt\\outputs\\director-palettes\\batch-99\\cards\\D080-丹尼斯·维伦纽瓦·电影色调常用色卡\\source-frames\\film-02\\frame-03.jpg",
+        "D:\\雷龙飞\\2026.6.25精准控制分镜【公开版】\\codex-prompt\\outputs\\director-palettes\\batch-99\\cards\\D080-丹尼斯·维伦纽瓦·电影色调常用色卡\\source-frames\\film-02\\frame-04.jpg"
+      ],
+      "sources": [
+        {
+          "label": "FilmGrab 真实电影截图图库",
+          "url": "https://film-grab.com/2015/06/24/enemy/"
+        },
+        {
+          "label": "截图 01",
+          "url": "https://film-grab.com/wp-content/uploads/photo-gallery/01 (346).jpg?bwg=1547215094"
+        },
+        {
+          "label": "截图 02",
+          "url": "https://film-grab.com/wp-content/uploads/photo-gallery/22 (353).jpg?bwg=1547215094"
+        },
+        {
+          "label": "截图 03",
+          "url": "https://film-grab.com/wp-content/uploads/photo-gallery/44 (345).jpg?bwg=1547215093"
+        },
+        {
+          "label": "截图 04",
+          "url": "https://film-grab.com/wp-content/uploads/photo-gallery/65 (236).jpg?bwg=1547215093"
+        }
+      ]
+    },
+    {
+      "title_zh": "降临",
+      "title_en": "Arrival",
+      "year": 2016,
+      "frames": [
+        "D:\\雷龙飞\\2026.6.25精准控制分镜【公开版】\\codex-prompt\\outputs\\director-palettes\\batch-99\\cards\\D080-丹尼斯·维伦纽瓦·电影色调常用色卡\\source-frames\\film-03\\frame-01.jpg",
+        "D:\\雷龙飞\\2026.6.25精准控制分镜【公开版】\\codex-prompt\\outputs\\director-palettes\\batch-99\\cards\\D080-丹尼斯·维伦纽瓦·电影色调常用色卡\\source-frames\\film-03\\frame-02.jpg",
+        "D:\\雷龙飞\\2026.6.25精准控制分镜【公开版】\\codex-prompt\\outputs\\director-palettes\\batch-99\\cards\\D080-丹尼斯·维伦纽瓦·电影色调常用色卡\\source-frames\\film-03\\frame-03.jpg",
+        "D:\\雷龙飞\\2026.6.25精准控制分镜【公开版】\\codex-prompt\\outputs\\director-palettes\\batch-99\\cards\\D080-丹尼斯·维伦纽瓦·电影色调常用色卡\\source-frames\\film-03\\frame-04.jpg"
+      ],
+      "sources": [
+        {
+          "label": "FilmGrab 真实电影截图图库",
+          "url": "https://film-grab.com/2019/06/28/arrival/"
+        },
+        {
+          "label": "截图 01",
+          "url": "https://film-grab.com/wp-content/uploads/photo-gallery/arrival001.jpg?bwg=1551281539"
+        },
+        {
+          "label": "截图 02",
+          "url": "https://film-grab.com/wp-content/uploads/photo-gallery/arrival022.jpg?bwg=1551281539"
+        },
+        {
+          "label": "截图 03",
+          "url": "https://film-grab.com/wp-content/uploads/photo-gallery/arrival044.jpg?bwg=1551281538"
+        },
+        {
+          "label": "截图 04",
+          "url": "https://film-grab.com/wp-content/uploads/photo-gallery/arrival065.jpg?bwg=1551281538"
+        }
+      ]
+    },
+    {
+      "title_zh": "沙丘2",
+      "title_en": "Dune: Part 2",
+      "year": 2024,
+      "frames": [
+        "D:\\雷龙飞\\2026.6.25精准控制分镜【公开版】\\codex-prompt\\outputs\\director-palettes\\batch-99\\cards\\D080-丹尼斯·维伦纽瓦·电影色调常用色卡\\source-frames\\film-04\\frame-01.jpg",
+        "D:\\雷龙飞\\2026.6.25精准控制分镜【公开版】\\codex-prompt\\outputs\\director-palettes\\batch-99\\cards\\D080-丹尼斯·维伦纽瓦·电影色调常用色卡\\source-frames\\film-04\\frame-02.jpg",
+        "D:\\雷龙飞\\2026.6.25精准控制分镜【公开版】\\codex-prompt\\outputs\\director-palettes\\batch-99\\cards\\D080-丹尼斯·维伦纽瓦·电影色调常用色卡\\source-frames\\film-04\\frame-03.jpg",
+        "D:\\雷龙飞\\2026.6.25精准控制分镜【公开版】\\codex-prompt\\outputs\\director-palettes\\batch-99\\cards\\D080-丹尼斯·维伦纽瓦·电影色调常用色卡\\source-frames\\film-04\\frame-04.jpg"
+      ],
+      "sources": [
+        {
+          "label": "FilmGrab 真实电影截图图库",
+          "url": "https://film-grab.com/2024/04/08/dune-part-2/"
+        },
+        {
+          "label": "截图 01",
+          "url": "https://film-grab.com/wp-content/uploads/photo-gallery/Dune_Part_2_01.jpg?bwg=1712570147"
+        },
+        {
+          "label": "截图 02",
+          "url": "https://film-grab.com/wp-content/uploads/photo-gallery/Dune_Part_2_22.jpg?bwg=1712570147"
+        },
+        {
+          "label": "截图 03",
+          "url": "https://film-grab.com/wp-content/uploads/photo-gallery/Dune_Part_2_44.jpg?bwg=1712570145"
+        },
+        {
+          "label": "截图 04",
+          "url": "https://film-grab.com/wp-content/uploads/photo-gallery/Dune_Part_2_65.jpg?bwg=1712570145"
+        }
+      ]
+    }
+  ]
+}

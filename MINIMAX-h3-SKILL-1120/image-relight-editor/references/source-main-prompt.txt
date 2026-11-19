@@ -1,0 +1,67 @@
+You will receive:
+- Image 1: Content reference — the original image to be relit. Foreground composition, subjects, structure, proportions, materials, and visual style must be fully preserved.
+- Image 2: Lighting behavior reference only — used solely to understand highlight position, shadow softness, color temperature, and falloff characteristics. Do not transfer any content from Image 2.
+- Structured lighting data (Text below)
+- Background setup (Text below)
+- Overall effects, atmosphere and texture (Text below)
+- Optional user intent feedback (Text below)
+
+Task
+
+Step 1 — Analyze Image 1
+Briefly describe:
+- Scene content (subjects, objects, environment)
+- Visual style (realistic / cinematic / studio / illustration / stylized / etc.)
+- Material and surface properties of main objects: surface type, reflectivity, specular behavior, texture
+- Overall rendering feel (photographic, CG, painterly, HDR, soft, dramatic, etc.)
+- Whether volumetric beams or visible light rays already exist
+
+Step 2 — Reconstruct New Lighting
+Using the Light Setup above and the sphere highlights/shadows in Image 2, describe each light source:
+- Horizontal position (front / back / left / right relative to subject)
+- Vertical angle and relative height
+- Direction and first-contact surface on the subject
+- Hardness / softness (derived from light type)
+- Color, intensity, and falloff behavior
+- Specular highlight position logic
+All spatial reasoning must be physically coherent.
+
+Step 3 — Predict Relighting Result on Image 1
+Based on surface orientation, material properties, light setup, background setup, effects, AND any user intent feedback, determine:
+- Background appearance
+- Highlight placement on the subject
+- Color shift and contrast change
+- Cast shadow direction, length, and softness
+- Volumetric beams — include only if consistent with the original atmosphere or explicitly specified in Overall Effects
+- Overall mood and texture
+- Avoid high saturation and overly vivid colors, keeping the overall color balance neutral and natural.
+No invented elements.
+
+Step 4 — Generate Final NanoBananaPro Prompt
+Write a concise English prompt to relight Image 1. Requirements:
+The prompt must clearly assume two input images:
+- Image 1 = content reference (must be fully preserved)
+- Image 2 = lighting behavior reference (used ONLY to replicate lighting characteristics)
+Requirements:
+- Describe the new background only if Background Setup explicitly specifies a change.
+- Overall Effects may only shift the background's color tone and atmosphere — never add or remove any objects or elements from the background.
+- Use 'relight' or 're-render' to indicate that only illumination is being changed.
+- Do not mention negative prompts (such as do not, don't xxx).
+- Keep the prompt short and precise.
+- **If user intent feedback is provided below, it has the HIGHEST priority — strictly incorporate the user's specific requirement into the final prompt.**
+
+Input Variables
+Light Setup:
+{{light1_desc}}
+{{light2_desc}}
+{{light3_desc}}
+Background Setup:
+{{background_desc}}
+Overall Effects & Atmosphere:
+{{effect_desc}}
+Additional User Requirement (重试反馈):
+{{user_intent_desc}}
+(说明:若该段非空,表示用户对前一次生成结果有具体补充诉求,严格遵守此要求,优先级高于上方所有字段。若为空请忽略此段。)
+
+Output Format
+Return a strict JSON object with fields: thinkingProcess, imageAnalysis, lightingAnalysis, nbpPrompt, other. Field nbpPrompt is the final NanoBananaPro prompt in English.

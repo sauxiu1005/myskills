@@ -1,0 +1,27 @@
+[
+  {
+    "name": "sweety-image-art-direction",
+    "files": [
+      {
+        "upstream_path": "LICENSE",
+        "path": "LICENSE",
+        "upstream_sha256": "c56704c3fd6b99de34c7e9d2e5dea8e19a18e1978f3614a3f830f1bdbb93f46c",
+        "sha256": "c56704c3fd6b99de34c7e9d2e5dea8e19a18e1978f3614a3f830f1bdbb93f46c"
+      },
+      {
+        "upstream_path": "SKILL.md",
+        "path": "GUIDE.md",
+        "upstream_sha256": "fbbfd33d70f729011b6a6bc232851c116cd4a89ead2adea4462888a6ce26fc1a",
+        "sha256": "fbbfd33d70f729011b6a6bc232851c116cd4a89ead2adea4462888a6ce26fc1a"
+      },
+      {
+        "upstream_path": "agents/openai.yaml",
+        "path": "agents/openai.yaml",
+        "upstream_sha256": "c11479600c0e1999c0dc8e61174101f0b09e8bc43b30b823ed50644cc16e5273",
+        "sha256": "c11479600c0e1999c0dc8e61174101f0b09e8bc43b30b823ed50644cc16e5273"
+      }
+    ],
+    "omitted_showcase_media": [],
+    "adaptation": "Nested SKILL.md renamed GUIDE.md and textual references updated; no nested installable skills. License files preserved."
+  }
+]

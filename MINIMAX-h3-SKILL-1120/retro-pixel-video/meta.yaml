@@ -1,0 +1,34 @@
+display-name-zh: 复古像素风视频
+version: 1.0.0
+tag-en: "Animation"
+tag-cn: "动画"
+complete-tags-en:
+  - "Animation / Creative Generation"
+complete-tags-cn:
+  - "动画 / 创作生成"
+summary-en: "Split copy, lyrics or narration into semantic beats with a readable scene change on each, match a reference art style through a sample-first check, and output high-detail pixel videos, game cutscenes or assets."
+summary-cn: "把文案、歌词或旁白拆成语义节拍并逐拍设计场景变化，参照画风先出样片对照，再做高细节像素叙事视频、游戏过场或素材。"
+desc-en: "For creators who want word-driven pixel-art storytelling: copy-to-picture shorts, lyric MVs, narrated explainers, motion covers, game cutscenes and game-production support. The user provides copy, lyrics, narration, a topic or game idea, optionally with audio, characters or an art reference. The skill splits the text into semantic beats, gives each a scene, metaphor and start-action-result change, and writes a setup-to-payoff micro-story first when there is no copy. With a reference it shows a direction key frame or short sample beside it, then produces through grid-true code render, reference-guided AI video or a hybrid driven by one shared cue sheet. It delivers the video, editable project or asset sheets. Prompts cannot guarantee exact pixels or frame counts, and a video is never presented as a playable game."
+desc-cn: "面向用文字驱动像素叙事的创作者，适合文案配画、歌词MV、讲解、动态封面、游戏过场与素材。用户给文案、歌词、旁白、主题或游戏构想，可附音频、角色或画风参考。Skill先拆语义节拍并设计每拍场景、隐喻与起止变化，无文案先写起承转合小故事；有参考先出方向关键帧对照，再走代码渲染、AI参考视频或混合路线，以同一事件表驱动画面字幕声音。交付视频、工程或资产表。提示词不保证像素与帧数精确，视频不当作游戏。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/8a21ac35-2c17-4da2-94cc-4358d773f171.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/8a21ac35-2c17-4da2-94cc-4358d773f171.mp4
+structured-info:
+  zh-CN:
+    summary: 把文案、歌词或旁白按语义节拍转成有场景变化与视觉隐喻的高细节像素叙事视频。
+    best-for:
+      - 文案叙事
+      - 歌词MV
+      - 游戏素材
+    how-to-use: 提供文案、歌词或旁白，可附音频、角色或画风参考；有参考时先确认样片再出全片。
+    outputs: 语义节拍表、风格圣经与分镜、参考对照样片、共用事件表、像素视频成片及可编辑工程。
+  en-US:
+    summary: Turn copy, lyrics or narration into high-detail pixel storytelling with a scene change and visual metaphor on every beat.
+    best-for:
+      - Copy-to-Picture & Narration
+      - Lyric MVs & Explainers
+      - Game Scenes & Assets
+    how-to-use: Provide copy, lyrics or narration, optionally with audio, characters or an art reference; with a reference, approve a sample before the full film.
+    outputs: Semantic beat table, style bible and storyboard, a reference comparison sample, a shared cue sheet, the finished pixel video and an editable project.

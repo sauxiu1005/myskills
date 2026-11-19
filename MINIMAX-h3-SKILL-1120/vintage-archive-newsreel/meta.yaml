@@ -1,0 +1,35 @@
+display-name-zh: 复古档案新闻片
+display-name-en: Vintage Archive Newsreel
+version: 1.0.0
+tag-en: "Education"
+tag-cn: "教育"
+complete-tags-en:
+  - "Education / Creative Generation"
+complete-tags-cn:
+  - "教育 / 创作生成"
+summary-en: "Cut verified archive film, newspaper scans and period records into a 1920s sound newsreel with a measured announcer, original hot jazz, code rendering and canvas delivery."
+summary-cn: "用核验许可的真实档案影片、报刊和唱片，制作1920年代风格有声新闻短片：导演方案、实测播报、原创热爵士、银灰胶片渲染，并检查字幕、声画同步与响度。"
+desc-en: "A Design-native port of the lemo-opuscar 1920s newsreel style for history stories, era trends and anniversary features told as an early sound newsreel. Provide a topic, any archive footage, photos, papers or recordings you own, plus language, length and whether you want a storyboard review. The Skill verifies real material and licences first, writes its own treatment, proves the look with code style frames on real footage, records and measures narration, composes original hot jazz and foley, edits everything on one timeline, renders frame by frame with platform runtimes and runs reading, sync, decode and loudness QA. It delivers the film, poster, subtitles, sources, facts and an editable project. It never fakes archive material with generated images or video and is not a silent-film or filter style."
+desc-cn: "面向历史故事、时代风潮与纪念专题，把主题做成早期有声新闻片。用户提供主题、自有档案或录音，及语言、时长和是否审核故事板。流程先核验真实素材与许可并记录事实来源，写独立导演方案，用真实素材渲染代码风格帧，实测配音，创作原创热爵士与音效，统一时间轴剪辑，复用平台运行时逐帧渲染并做阅读、声画、解码与响度检查。交付成片、海报、字幕、来源事实和可编辑工程；彩色真实片统一暖银灰。不用生成内容伪造档案，不做默片或复古滤镜。"
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/9cff93d4-e9e4-49c0-92e5-48a4f3306a9f.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/9cff93d4-e9e4-49c0-92e5-48a4f3306a9f.mp4
+structured-info:
+  zh-CN:
+    summary: 真实档案与许可核验、独立导演方案、银灰胶片包装、实测播报与原创热爵士、逐帧渲染与画布交付。
+    best-for:
+      - 历史故事
+      - 档案新闻
+      - 周年专题
+    how-to-use: 提供主题或档案素材，可补充播报语言、时长、画幅和是否先审核故事板。
+    outputs: 新闻短片、海报、字幕、导演方案、来源与事实记录、可编辑工程和QA报告。
+  en-US:
+    summary: Verified archive research, an original treatment, silver film packaging, measured narration, original hot jazz, frame rendering and canvas delivery.
+    best-for:
+      - History stories and development timelines
+      - Era trends and archive news
+      - Anniversary features
+    how-to-use: Give a topic or archive material, plus narration language, length, frame and whether to review a storyboard first.
+    outputs: Newsreel film, poster, subtitles, treatment, source and fact records, editable project and QA report.

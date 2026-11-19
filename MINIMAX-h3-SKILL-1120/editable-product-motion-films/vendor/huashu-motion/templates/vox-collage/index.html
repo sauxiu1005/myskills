@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN" data-composition-variables='[
+  {"id":"title","type":"string","label":"标题条（黑底白字，打字出现）","default":"这两张图都是代码画的","group":"文字"},
+  {"id":"image1","type":"string","label":"图 1 路径（截图 / 剪报放进 assets/，相对 index.html）","default":"assets/kline.png","group":"素材"},
+  {"id":"image1Label","type":"string","label":"图 1 下方标签（虚构数据写明示意）","default":"t3 财经图表：日 K 线（示意数据）","group":"素材"},
+  {"id":"highlightRect","type":"string","label":"图 1 上要划的一块（JSON [x, y, 宽, 高]，相对图片 0–1；清空不划）","default":"[0.74, 0.22, 0.22, 0.11]","group":"素材"},
+  {"id":"note","type":"string","label":"索引卡（横线卡片，打字；清空就不出现）","default":"收盘价在最后一根 K 线长出时落定","group":"文字"},
+  {"id":"image2","type":"string","label":"图 2 路径（清空就不出现）","default":"assets/revenue-portrait.png","group":"素材"},
+  {"id":"image2Label","type":"string","label":"图 2 下方标签","default":"同一种图表，竖屏换一套排版","group":"素材"},
+  {"id":"halftone","type":"boolean","label":"图片转灰度网点（像报纸印刷）","default":false,"group":"素材"},
+  {"id":"accent","type":"color","label":"红线、红圈的颜色","default":"#b8433f","group":"颜色"},
+  {"id":"duration","type":"number","label":"片长（秒；有配音时至少到配音结束）","default":9,"min":2,"max":120,"step":0.5,"group":"节奏"},
+  {"id":"pace","type":"number","label":"节奏倍率（1 原速；一张卡常停 3–7 秒）","default":1,"min":0.5,"max":4,"step":0.1,"group":"节奏"}
+]'>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>huashu-motion · Vox 拼贴桌面</title>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/om.js"></script>
+<style>
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #e4ddcf; }
+  #film { position: relative; width: 100%; height: 100%; overflow: hidden; background: #e4ddcf; }
+  #c { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<!--
+  Vox 式拼贴（y2）：一张大桌面＝世界，素材按出场顺序摆上去、红线连起来；相机平滑追过去，桌上的东西按 12fps「一拍二」步进。
+  The whole film is the spec below, drawn on the canvas by vendor/clip (grammar: y2_vox, from huashu-art-motion, MIT).
+  - Variables fill the "{{…}}" placeholders. Timing and structure live in the cues: `at` is the second the thing first
+    shows; `word` anchors it to that word of the narration once `om voice` has run (skills/huashu-motion/references/grammars.md).
+  - Real screenshots stay as they are (contain, never cropped). Put your own files in assets/ and point image1 / image2 at them.
+  - Pickable regions (0-based like the spec): title · image-<i> · note-<i> · highlight-<i>.
+  - Scenes: title → image-1 → highlight-1 → note-1 → image-2.
+-->
+<div id="film" data-composition-id="film" data-start="0" data-width="1920" data-height="1080">
+  <!-- lang="en" on the canvas: symbols the fonts lack fall back to the same Latin system face as upstream; all Chinese is in the bundled fonts -->
+  <canvas id="c" lang="en" width="1920" height="1080" data-om-id="desk" data-layout-allow-overflow></canvas>
+</div>
+
+<script type="application/json" id="clip-spec">
+{
+  "grammar": "y2_vox",
+  "duration": "{{duration}}",
+  "pace": "{{pace}}",
+  "fps": 30,
+  "data": { "accent": "{{accent}}" },
+  "cues": [
+    { "at": 0.0, "kind": "title", "text": "{{title}}" },
+    { "at": 1.6, "kind": "image", "word": "K线", "image": "{{image1}}", "text": "{{image1Label}}", "data": { "halftone": "{{halftone}}" } },
+    { "at": 3.4, "kind": "highlight", "word": "收盘价", "data": { "rect": "{{highlightRect|json}}" } },
+    { "at": 5.6, "kind": "point", "word": "落定", "text": "{{note}}" },
+    { "at": 7.0, "kind": "image", "word": "竖屏", "image": "{{image2}}", "text": "{{image2Label}}", "data": { "halftone": "{{halftone}}" } }
+  ]
+}
+</script>
+
+<script src="vendor/clip/lib/util.js"></script>
+<script src="vendor/clip/lib/paint.js"></script>
+<script src="vendor/clip/lib/kit.js"></script>
+<script src="vendor/clip/lib/motion.js"></script>
+<script src="vendor/clip/lib/camera.js"></script>
+<script src="vendor/clip/lib/diagram.js"></script>
+<script src="vendor/clip/lib/typo.js"></script>
+<script src="vendor/clip/lib/chart.js"></script>
+<script src="vendor/clip/lib/ui.js"></script>
+<script src="vendor/clip/lib/collage.js"></script>
+<script src="vendor/clip/lib/toon.js"></script>
+<script src="vendor/clip/cues.js"></script>
+<script src="vendor/clip/clip.js"></script>
+<script src="vendor/clip/grammars/y2_vox.js"></script>
+<script>
+  const tl = gsap.timeline({ paused: true });
+  CLIP.mount({
+    id: 'film',
+    tl,
+    apply(spec) {
+      // an image cue without a path is not on the desk; a highlight needs the image before it and a rect
+      spec.cues = spec.cues.filter((q) => q.kind !== 'image' || String(q.image || '').trim());
+      spec.cues = spec.cues.filter((q, i) => q.kind !== 'highlight' || (Array.isArray(q.data && q.data.rect) && q.data.rect.length === 4 && spec.cues.slice(0, i).some((z) => z.kind === 'image')));
+      return spec;
+    },
+  });
+  window.__timelines['film'] = tl;
+</script>
+</body>
+</html>

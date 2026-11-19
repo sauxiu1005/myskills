@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN" data-composition-variables='[
+  {"id":"title","type":"string","label":"标题（写结论：涨到 / 涨了要分清）","default":"示例公司：五个财年营收涨到原来的 7.8 倍","group":"文字"},
+  {"id":"unit","type":"string","label":"副标题：指标与单位","default":"年营收，十亿元","group":"文字"},
+  {"id":"source","type":"string","label":"来源（左下）","default":"来源：示意数据，公司与数字均为虚构","group":"文字"},
+  {"id":"badge","type":"string","label":"右下角标（虚构数据写「示意数据」，真实数据清空）","default":"示意数据","group":"文字"},
+  {"id":"series","type":"string","label":"数据（JSON 数组：[{\"label\":\"FY2021\",\"value\":16.68}, …]；K 线每项写 o/h/l/c）","default":"[{\"label\":\"FY2021\",\"value\":16.68},{\"label\":\"FY2022\",\"value\":26.91},{\"label\":\"FY2023\",\"value\":26.97},{\"label\":\"FY2024\",\"value\":60.92},{\"label\":\"FY2025\",\"value\":130.5}]","group":"数据"},
+  {"id":"chart","type":"enum","label":"图表类型","default":"bar","options":[{"value":"bar","label":"柱状图"},{"value":"line","label":"折线图"},{"value":"candle","label":"K 线"}],"group":"数据"},
+  {"id":"decimals","type":"number","label":"数值保留几位小数","default":1,"min":0,"max":4,"step":1,"group":"数据"},
+  {"id":"prefix","type":"string","label":"数值前缀（如 ¥）","default":"","group":"数据"},
+  {"id":"suffix","type":"string","label":"数值后缀（如 %）","default":"","group":"数据"},
+  {"id":"highlightIndex","type":"number","label":"标注第几项（从 0 数；-1 不标注）","default":4,"min":-1,"max":99,"step":1,"group":"标注"},
+  {"id":"highlightText","type":"string","label":"标注大字","default":"7.8 倍","group":"标注"},
+  {"id":"highlightSub","type":"string","label":"标注小字（算式或口径）","default":"130.5 ÷ 16.7","group":"标注"},
+  {"id":"mainColor","type":"color","label":"主色（柱状图：被标注的那根）","default":"#006BA2","group":"颜色"},
+  {"id":"dimColor","type":"color","label":"其余柱子的颜色","default":"#C6D2D8","group":"颜色"},
+  {"id":"duration","type":"number","label":"片长（秒；有配音时至少到配音结束）","default":7,"min":2,"max":120,"step":0.5,"group":"节奏"},
+  {"id":"pace","type":"number","label":"节奏倍率（1 原速；1.5 = 每一拍的时间点都乘 1.5）","default":1,"min":0.5,"max":3,"step":0.1,"group":"节奏"}
+]'>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>huashu-motion · 财经图表</title>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/om.js"></script>
+<style>
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #fff; }
+  #film { position: relative; width: 100%; height: 100%; overflow: hidden; background: #fff; }
+  #c { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<!--
+  财经图表（t3，经济学人式）：版式先出 → 坐标系 → 数据长出 → 只标一件事。数值永远诚实，动画只决定怎么出现。
+  The whole film is the spec below, drawn on the canvas by vendor/clip (grammar: t3_finance_chart, from huashu-art-motion, MIT).
+  - Variables fill the "{{…}}" placeholders in the spec. Timing and structure live in the cues: `at` is the second
+    the thing first shows; `word` anchors it to that word of the narration once `om voice` has run (see
+    skills/huashu-motion/references/grammars.md).
+  - Pickable regions (ids follow the spec's 0-based indexes): title · unit · source · badge · bar-<i> (series[i];
+    point-<i> for a line, candle-<i> for K 线) · highlight · number-<k>.
+  - Scenes (one label per beat): title → chart-1 → highlight-1.
+  - Fictional data keeps the 示意数据 badge in every frame; real data gets a real source and no badge.
+-->
+<div id="film" data-composition-id="film" data-start="0" data-width="1920" data-height="1080">
+  <!-- lang="en" on the canvas: symbols the fonts lack (−, ←, ∇) fall back to the same Latin system face as upstream; all Chinese is in the bundled fonts -->
+  <canvas id="c" lang="en" width="1920" height="1080" data-om-id="chart" data-layout-allow-overflow></canvas>
+</div>
+
+<script type="application/json" id="clip-spec">
+{
+  "grammar": "t3_finance_chart",
+  "duration": "{{duration}}",
+  "pace": "{{pace}}",
+  "fps": 30,
+  "data": {
+    "title": "{{title}}",
+    "unit": "{{unit}}",
+    "source": "{{source}}",
+    "badge": "{{badge}}",
+    "chart": "{{chart}}",
+    "series": "{{series|json}}",
+    "decimals": "{{decimals}}",
+    "prefix": "{{prefix}}",
+    "suffix": "{{suffix}}",
+    "highlight": { "index": "{{highlightIndex}}", "text": "{{highlightText}}", "sub": "{{highlightSub}}" },
+    "colors": { "main": "{{mainColor}}", "dim": "{{dimColor}}" }
+  },
+  "cues": [
+    { "at": 0.0, "kind": "title" },
+    { "at": 1.2, "kind": "bar", "word": "营收" },
+    { "at": 4.4, "kind": "highlight", "word": "7.8" }
+  ]
+}
+</script>
+
+<script src="vendor/clip/lib/util.js"></script>
+<script src="vendor/clip/lib/paint.js"></script>
+<script src="vendor/clip/lib/kit.js"></script>
+<script src="vendor/clip/lib/motion.js"></script>
+<script src="vendor/clip/lib/camera.js"></script>
+<script src="vendor/clip/lib/diagram.js"></script>
+<script src="vendor/clip/lib/typo.js"></script>
+<script src="vendor/clip/lib/chart.js"></script>
+<script src="vendor/clip/lib/ui.js"></script>
+<script src="vendor/clip/lib/collage.js"></script>
+<script src="vendor/clip/lib/toon.js"></script>
+<script src="vendor/clip/cues.js"></script>
+<script src="vendor/clip/clip.js"></script>
+<script src="vendor/clip/grammars/t3_finance_chart.js"></script>
+<script>
+  const tl = gsap.timeline({ paused: true });
+  CLIP.mount({
+    id: 'film',
+    tl,
+    apply(spec) {
+      const d = spec.data, kind = d.chart || 'bar';
+      // the data cue draws the chart type the variable asks for
+      for (const q of spec.cues) if (['bar', 'line', 'candle'].includes(q.kind)) q.kind = kind;
+      if (!d.badge) delete d.badge;
+      if (d.highlight.index >= (d.series || []).length) CLIP.problem(`highlightIndex ${d.highlight.index} 超出了数据项数（${(d.series || []).length} 项）`);
+      if (!(d.highlight.index >= 0 && d.highlight.index < (d.series || []).length)) { delete d.highlight; spec.cues = spec.cues.filter((q) => q.kind !== 'highlight'); }
+      // a line / K-line keeps its own red unless the main color was changed
+      if (kind !== 'bar' && d.colors.main.toLowerCase() === '#006ba2') delete d.colors.main;
+      if (!Array.isArray(d.series) || !d.series.length) CLIP.problem('series 要是一个非空数组');
+      if (kind === 'candle' && d.series.some((r) => r.h == null)) CLIP.problem('K 线的 series 每项要有 o / h / l / c');
+      return spec;
+    },
+  });
+  window.__timelines['film'] = tl;
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+{
+  "repository": "https://github.com/Vincentwei1021/mg-styles-15",
+  "branch": "main",
+  "retrieved_on": "2026-10-28",
+  "commit": null,
+  "note": "Read-only reference snapshot; fonts, npm dependencies, shared audio library and samples are not bundled.",
+  "files": {
+    "LICENSE": {
+      "sha256": "7f03fee9299a401615e13e2c636ead0394f47395da4f816ae60b35ed2d91a932",
+      "bytes": 1071
+    },
+    "assets/fonts/README.md": {
+      "sha256": "2ee6b1929b6b5149af6d05417fda70e129eba8259df803bc9c6b056b66e48d18",
+      "bytes": 4014
+    },
+    "assets/fonts/fonts.css": {
+      "sha256": "ad85d8a11ed288ad7eaa8f6412948d4ee532a6d9e3b9a23b9ddf071402fe16d3",
+      "bytes": 9135
+    },
+    "demos/03-isometric/audio.py": {
+      "sha256": "d3444c0ecce99c2526906ef27f29d5733d6f74a6dc78e223521efdcab36661eb",
+      "bytes": 14263
+    },
+    "demos/03-isometric/cues.json": {
+      "sha256": "5619858ffdb9ef0e8110d53a90dc24418602b41bd7708c698e9828d9e9dda6e9",
+      "bytes": 1240
+    },
+    "demos/03-isometric/index.html": {
+      "sha256": "7b19eedbf79e452180c5641fa7ea459382a6c5adc644999ee66b80828530b4f6",
+      "bytes": 1019
+    },
+    "demos/03-isometric/js/anim.js": {
+      "sha256": "244b83e8090cf49d3d6d803390fcace7b442dc61363e37b61736b00a4800f5ed",
+      "bytes": 3953
+    },
+    "demos/03-isometric/js/main.js": {
+      "sha256": "ddbffbe057b88a0cda98932ba793ddbe26be6ac37c99fe7fa63e165cc4750d5a",
+      "bytes": 13582
+    },
+    "demos/03-isometric/js/night5.js": {
+      "sha256": "53bdffdf92ae8c883bf81e020d123bbe913eb0c68014762a8c14f451b94efa53",
+      "bytes": 11868
+    },
+    "demos/03-isometric/js/render.js": {
+      "sha256": "646086cbe389bab4b0c168b5bf5a7d0a628aee8568ec3996fbf6addfe60950d0",
+      "bytes": 9205
+    },
+    "demos/03-isometric/js/title.js": {
+      "sha256": "b9fb0e4dbf8b7f054ab263c22f85c55e6a45d865fe0287ec6985b0ddc4d88a52",
+      "bytes": 8529
+    },
+    "demos/03-isometric/js/title5.js": {
+      "sha256": "5725ab88eb188b54701343836cd00b475b4dc640b4ae5573699788e7219a4c79",
+      "bytes": 16517
+    },
+    "demos/03-isometric/js/ui.js": {
+      "sha256": "e915b89d461b840e10c986948e32667bb2dd263f2c5bf120db8654aa3f9d2f9d",
+      "bytes": 9547
+    },
+    "demos/03-isometric/js/world.js": {
+      "sha256": "7542ccf4bae1436da30594ef8ce62ce8f2f4fb13a833dce77cff70f06aac3da6",
+      "bytes": 80534
+    },
+    "harness/preview.html": {
+      "sha256": "1252d456a9c4da9a32a65bf6a27ac0ce4b96d274c3bf14428c243c55fd5861e2",
+      "bytes": 4403
+    },
+    "harness/render.mjs": {
+      "sha256": "cdab5828c8dc6ef81a6e295dd4c3b8ec85a7c4aa6fa695266eff02a6b849933f",
+      "bytes": 16899
+    },
+    "package.json": {
+      "sha256": "c359a063b2d32438ff122661518abdfd29ff3d862a61471cfc5fa289b9adcc01",
+      "bytes": 386
+    },
+    "prompts/03-isometric.md": {
+      "sha256": "5ace3ffa0d9e4a4a701ae442c102762fcd922229003d675a48f4aa5eb54011e2",
+      "bytes": 7969
+    },
+    "requirements.txt": {
+      "sha256": "71c2e1aabb551d51adba101dfa2f80f31cde6186589ec4a711804d590c41c5e1",
+      "bytes": 399
+    },
+    "rubric.md": {
+      "sha256": "1cb93025d54407317c15005ad58bd47389baa9532f4ed359161247fb0def375a",
+      "bytes": 3676
+    },
+    "template.md": {
+      "sha256": "258709df6bfe71a53a1f9e05d6a130dece77751e667e096ed91d9809aaa24370",
+      "bytes": 1945
+    }
+  }
+}

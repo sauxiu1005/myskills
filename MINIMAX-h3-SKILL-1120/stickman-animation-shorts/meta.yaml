@@ -1,0 +1,34 @@
+display-name-zh: 火柴人动画短片
+version: 1.0.0
+tag-en: "Animation"
+tag-cn: "动画"
+complete-tags-en:
+  - "Animation / Creative Generation"
+complete-tags-cn:
+  - "动画 / 创作生成"
+summary-en: "Turns copy or topics into approved stickman short films with consistent characters, keyframes and edits, confirming narration language, subtitles and music before video production."
+summary-cn: "将文案或话题制作成人物一致的火柴人短片，先确认提案与关键帧，以及旁白语言、字幕和配乐，再生成视频并合成。"
+desc-en: "This Skill helps creators turn copy, notes, articles or topics into stickman explainers and story shorts. Provide source material, aspect ratio, duration and a choice among five independent visual styles. Before video production, explicitly confirm whether narration, subtitles and music are wanted, including spoken and subtitle languages and musical direction. Review the director’s proposal, approve reusable character references, then approve shot keyframes. MiniMax H3 generates the approved segments by default; after clip review, the workflow assembles the film and adds only authorized subtitles and music. Deliverables include the final video and reusable production assets, or a prompt package when requested."
+desc-cn: "面向知识讲解、观点表达与故事短片创作者，将文案、笔记、文章或话题制作成火柴人视频。用户提供素材、画幅和时长，并从五种独立画风中选择；生成前明确确认旁白是否需要及语言、字幕是否需要及语言形式、配乐是否需要及方向。流程依次确认导演提案、角色参考与镜头关键帧，默认使用 MiniMax H3 分段生成，片段审阅后拼接并添加获批字幕和配乐。交付成片及可复用素材，也支持仅提示词。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/b1ab9096-c4d0-4294-86d5-6cfae903d1c0.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/b1ab9096-c4d0-4294-86d5-6cfae903d1c0.mp4
+structured-info:
+  zh-CN:
+    summary: 将文案或话题变成角色一致、节奏清晰的火柴人动画短片，并在制作前确认旁白、字幕和配乐。
+    best-for:
+      - 火柴人短片
+      - 知识讲解
+      - 故事动画
+    how-to-use: 提供文案或话题，确认画幅、时长、旁白、字幕与配乐，再审核关键帧。
+    outputs: 火柴人视频、角色参考、关键帧与可复用制作素材。
+  en-US:
+    summary: Turn copy or a topic into a consistent-character stickman short, confirming narration, subtitles and music before production.
+    best-for:
+      - Stickman Shorts
+      - Knowledge Explainers
+      - Story Animation
+    how-to-use: Provide copy or a topic, confirm framing, duration, narration, subtitles and music, then review keyframes.
+    outputs: Stickman video, character references, keyframes and reusable production assets.

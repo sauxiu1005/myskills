@@ -1,0 +1,3 @@
+Standard 'no charge' license: https://gsap.com/standard-license.
+Source: https://registry.npmjs.org/gsap/-/gsap-3.14.2.tgz
+Full terms: GSAP-LICENSE.html

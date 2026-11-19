@@ -1,0 +1,36 @@
+display-name-zh: 复古霓虹动态影像
+version: 1.0.0
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+- Animation / Creative Generation
+complete-tags-cn:
+- 动画 / 创作生成
+summary-en: Turns a theme, copy, story or assets into 80s synthwave stills, motion and camera moves built from neon grids, striped suns, chrome and rim light, for products, objects, spaces and brand idents.
+summary-cn: 把主题、文案、故事或素材拆成节拍与镜头表，做成透视网格、条纹落日与铬金属构成的复古霓虹画面、动态和运镜。
+desc-en: 'For creators who want the 80s synthwave look as a built world rather than a purple filter: indigo night, magenta-cyan neon, striped sun, perspective grid, chrome and rim light. The user gives a theme, copy, story or product and logo assets. The skill keeps the user''s story and wording, splits it into semantic beats, renders code style frames, writes a shot table with motion and camera libraries, adds per-frame film grain kept separate from VHS effects, draws and animates scenes, objects and props in code, expresses people through objects and light instead of drawing them, uses AI image or video only on explicit request, and verifies. It delivers stills or video, prompts, shot table and an integer-frame cue sheet. Prompts cannot guarantee exact pixels, timing or text.'
+desc-cn: 面向想要80年代合成器浪潮风格的创作者，强调搭建世界而非滤镜：深靛蓝夜空、洋红电青霓虹、条纹落日、透视网格、铬高光与边缘光。用户提供主题、文案、故事或产品、Logo素材。Skill保留用户剧情与原文，先拆语义节拍，再用代码渲染风格帧，按动效库与运镜库写镜头表与事件表，默认加逐帧胶片颗粒并与VHS分开，默认以代码绘制场景、物件与道具，人物用物件与光表达而不直接画，仅在用户明确要求时才用AI生图或视频，最后验证。交付静帧或视频、提示词、镜头表与事件表。生成结果不保证像素与文字精确。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+cover: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318783593016530-1794318783575.mp4
+structured-info:
+  zh-CN:
+    summary: 把主题、文案或素材做成有网格、落日、铬金属和明确运镜的80s复古霓虹画面与动态。
+    best-for:
+    - 产品品牌片头
+    - 夜行空间场景
+    - 无缝循环背景
+    how-to-use: 提供主题、文案或故事，可附产品、Logo素材；可选时长、画幅、色板（3套）和风格强度。
+    outputs: 节拍与镜头表、风格帧、整数帧事件表、无人物镜头规格、低保真配乐及成片源码。
+  en-US:
+    summary: Turn a theme, copy or assets into 80s retro-neon stills and motion with grids, striped suns, chrome and deliberate camera moves.
+    best-for:
+    - Product Ads & Brand Idents
+    - Night Rides & Spaces
+    - Seamless Loops
+    how-to-use: Provide a theme, copy or story, optionally with product or logo assets, and choose length, aspect, one of three palettes and intensity.
+    outputs: Beat and shot tables, style frames, integer-frame cues, no-people shot specifications, a lo-fi soundtrack, and finished stills or video with source code.
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318786492823873-1794318786454.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318783593016530-1794318783575.mp4

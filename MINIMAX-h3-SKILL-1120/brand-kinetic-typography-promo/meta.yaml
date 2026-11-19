@@ -1,0 +1,37 @@
+display-name-zh: 品牌动态字体宣传片
+version: 1.0.1
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Creative Generation
+complete-tags-cn:
+- 商业广告 / 创作生成
+summary-en: From a brand, theme, selling points or product details, it plans the copy and scenes, lets users choose palette and motion style, and renders a beat-synced kinetic-typography brand promo with Python and FFmpeg.
+summary-cn: 基于品牌、主题、卖点或产品信息规划文案与场景，可选配色和动效风格，用 Python 与 FFmpeg 代码渲染以动态字体为主、转场卡点的品牌宣传片。
+desc-en: For marketers and creators making kinetic-typography promos without generated video. Provide a brand or theme, selling points and product facts, optionally adding a logo, images, colors or music. The workflow organizes message hierarchy, recommends motion styles and palettes, and prepares a beat-based scene plan for approval. Storyboard stills receive a second approval before scoring and rendering with the bundled Python, Skia and FFmpeg engine. Animated type, shape changes and beat-synced transitions produce a 10–30 second film in the chosen landscape, portrait, square or 4:5 format. Deliver the video, editable JSON specification and storyboard. It is not intended for live action, character acting or long narrative films.
+desc-cn: 面向需要动态字体宣传片的市场人员与创作者。提供品牌、主题、卖点和产品事实，可附标志、产品图、品牌色与音乐。先梳理信息层级，推荐动效和色板，编写节拍场景方案供确认，再以分镜静帧二次确认，准备配乐并用随包引擎渲染。以动态文字、图形变形与卡点转场制作十至三十秒宣传片，支持横竖屏、方形和四比五。交付视频、可编辑规格与分镜，不用于真人实拍、角色表演或长篇叙事。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 把品牌卖点和产品信息变成卡点动态图形宣传片，用代码逐帧渲染，可反复修改。
+    best-for:
+    - 新品发布
+    - 品牌预热
+    - 动态字体
+    how-to-use: 提供品牌、卖点和产品信息，可附 Logo 与产品图，选择动效风格、配色、画幅和配乐。
+    outputs: 动效成片、分镜静帧、可编辑规格文件。
+  en-US:
+    summary: Turn brand selling points and product details into a beat-synced motion-graphics promo, code-rendered frame by frame and easy to revise.
+    best-for:
+    - Product launches
+    - Brand teasers
+    - Kinetic typography
+    how-to-use: Provide brand, selling points and product details with optional logo and product images, then choose motion style, palette, format and music.
+    outputs: Motion-graphics film, Storyboard stills, Editable spec file.
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/a1ca58e0-bc5b-4692-85fb-1bc0e81e876a.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/a1ca58e0-bc5b-4692-85fb-1bc0e81e876a.mp4
+showcase:
+- https://cdn.hailuoai.com/prod/2026-10-23-13/video/1792734836017567645-1792734836003.mp4
+- https://cdn.hailuoai.com/prod/2026-10-23-13/video/1792734837896082842-1792734837876.mp4

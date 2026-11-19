@@ -1,0 +1,4 @@
+interface:
+  display_name: 拼贴表演音乐 MV
+  short_description: 结合人物演唱、半身动作与平面拼贴，制作节拍同步的音乐 MV 并交付可编辑工程
+  default_prompt: 使用 $collage-performance-mv 将我的音乐、角色和风格参考制作成音乐 MV：以半身动作和面部演唱特写为主，穿插节拍拼贴与动态歌词，保留原混音，交付低噪点成片与可编辑工程，由我查看确认。

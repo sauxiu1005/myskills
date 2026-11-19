@@ -1,0 +1,37 @@
+display-name-zh: 原创角色设定图
+display-name-en: Original Character Sheet
+version: 1.0.0
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+- Animation / Creative Generation
+complete-tags-cn:
+- 动画 / 创作生成
+summary-en: Expands a one-line idea or style reference into an original character setting and prompts, generates solo, duo, team or action sheets, and derives faithful turnarounds from a confirmed solo master.
+summary-cn: 把一句创意或风格参考展开为原创角色设定与提示词，生成单人、搭档、群像或动作设定图，并由确认的单人母版派生保真三视图。
+desc-en: For creators, game and animation teams who need original characters with clear silhouettes, believable materials and visible personality. Provide a one-line idea, optionally with style references or an existing character image. The skill picks one of six art directions and a layout, builds a short setting covering identity, left/right asymmetry, costume layers, gear mounts and structure, then writes submit-ready prompts in a collectible 3D statue look. After confirmation it generates the sheet; for turnarounds it first confirms a solo master, then derives front, right-side and back views that keep the master's face and materials. Delivers setting documents, final prompts and images for review. Best for character concepts and turnarounds; not for 3D modeling, rigging or animation.
+desc-cn: 面向需要原创角色的创作者和游戏、动画团队，解决角色轮廓模糊、材质单薄、多视图不一致的问题。用户提供一句创意，可附风格参考或已有角色图。流程从六个美术方向中选定风格与版式，建立涵盖身份、身体左右、服装层级、装备挂点与结构的简短设定，写出收藏级三维质感的提示词；确认后生成单人、搭档、群像或动作设定图，三视图则先确认单人母版，再派生保留其脸部与材质的正面、右侧面、背面图。交付设定文档、提示词和待审阅成图。不负责三维建模、绑定或动画。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 把一句创意展开为原创角色设定图，并由单人母版派生保留脸部与材质的三视图。
+    best-for:
+    - 原创角色设计
+    - 角色三视图
+    - 收藏级质感
+    how-to-use: 提供角色创意或风格参考，确认风格、版式和画幅；三视图先确认单人母版。
+    outputs: 角色设定文档、可直接提交的提示词、角色设定图与母版派生三视图。
+  en-US:
+    summary: Expand a one-line idea into an original character sheet and derive turnarounds that keep the solo master's face and materials.
+    best-for:
+    - Original Character Design
+    - Character Turnarounds
+    - Collectible Look
+    how-to-use: Provide a one-line character idea or style reference, confirm the style direction, layout and aspect ratio, and confirm a solo master before turnarounds.
+    outputs: Character setting documents, submit-ready prompts, character sheets and master-derived turnarounds.
+showcase:
+- https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318842290384835-1794318842256.mp4
+cover: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318837572750398-1794318837549.mp4
+cover-en: https://cdn.hailuoai.com/pre/2026-11-10-21/video/1794318837572750398-1794318837549.mp4

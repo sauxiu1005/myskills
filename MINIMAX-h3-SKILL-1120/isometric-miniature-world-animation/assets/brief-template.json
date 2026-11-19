@@ -1,0 +1,73 @@
+{
+  "schema_note": "Local creative brief; not a Design API request. Replace illustrative values with the user's choices.",
+  "title": "作品名（不自动上屏）",
+  "idea": "用户创意",
+  "audience": "目标观众",
+  "core_message": "观众需要理解的一件事",
+  "scene_type": "city",
+  "output": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "duration": 10
+  },
+  "style": {
+    "projection": "true-isometric",
+    "palette": [],
+    "lighting": "soft-studio",
+    "seed": 7,
+    "environment": {
+      "mode": "reference-day-pastel",
+      "background_stages": {
+        "growth": [
+          "#EDE9F9",
+          "#E0DBF5",
+          "#D5CEF0"
+        ],
+        "active": [
+          "#E4D8FF",
+          "#C5B2FC",
+          "#A58CF0"
+        ]
+      },
+      "elements": [
+        "rounded-white-clouds-outside-subject",
+        "subtle-isometric-floor-dots",
+        "light-layered-base",
+        "soft-island-shadow"
+      ],
+      "palette_roles": {
+        "base": "#FBFAFF",
+        "vegetation": "#94DFBD",
+        "water": "#8CC6FF",
+        "buildings": [
+          "#FFC4AC",
+          "#A8D2FF",
+          "#D9D1FA",
+          "#FFE6A1"
+        ],
+        "accent": "#FF9E86",
+        "ink": "#2C2960"
+      },
+      "user_overrides": []
+    }
+  },
+  "text": {
+    "mode": "none",
+    "language": "zh-CN",
+    "items": []
+  },
+  "audio": {
+    "mode": "music-sfx",
+    "voiceover": false,
+    "source": null
+  },
+  "assets": [],
+  "facts": [],
+  "constraints": [],
+  "delivery": {
+    "video": true,
+    "editable_source": true,
+    "design_canvas": true
+  }
+}

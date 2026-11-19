@@ -1,0 +1,46 @@
+1920s Newsreel — "Knock-Knee Alert" (library demo)
+Every third-party asset in the film, with its source and licence. An unofficial film made from real
+archive material; no newsreel company, studio or brand is imitated ("THE SPOTLIGHT NEWS" is invented).
+
+ARCHIVE FILM (U.S. National Archives, Ford Motor Company Film Collection; Internet Archive FedFlix copies,
+720x480 transfers; graded, cropped to 1.37, upscaled 2.31x with hqdn3d -> lanczos -> unsharp, film grain added)
+Rights: Ford Motor Company transferred all rights to the National Archives on 28 Nov 1962; NARA (Prologue,
+Winter 2014): "these films are now owned by the American people and are copyright- and royalty-free".
+- FC-4158 "Second Annual Picnic and Outing Given by Employees of Ford Motor Company" (1924)
+  https://archive.org/details/fc-fc-4158  — pavilion dancing, tap dancing, kids doing the Charleston
+- FC-2275(a) "Small Orchestra Playing" (1926)  https://archive.org/details/fc-fc-2275a-b
+- FC-2307(a) "Man Dancing" (1925)  https://archive.org/details/fc-fc-2307a-b
+- FC-2292(c) "Dancing at Botsford Inn" (1927)  https://archive.org/details/fc-fc-2292a-c
+
+PRINT (all US publications before 1931: public domain in the US)
+- The Austin Statesman, Friday, March 5, 1926, page 6 (top fold only), scan on Wikimedia Commons (PD-US-expired)
+  https://commons.wikimedia.org/wiki/File:Austin_American_Statesman_1926-03-05_(page_6).jpg
+- Photoplay, October 1925, "Bessie Love – Charleston step 1–9", nine photographs on Wikimedia Commons (PD-US-expired)
+  https://commons.wikimedia.org/wiki/File:Photoplay_1925-10_-_Bessie_Love_-_Charleston_step_1.jpg (… step_9.jpg)
+- "Good Morning": After a Sleep of Twenty-five Years, Old-fashioned Dancing is Being Revived by Mr. and Mrs.
+  Henry Ford, Dearborn Publishing Company, 1926 — title page and page 30; scan: Internet Archive
+  https://archive.org/details/goodmorning0000unse
+  Changes to all print: converted to greyscale, levels; pencil marks added on screen are the film's own.
+
+RECORDING
+- "Charleston" (James P. Johnson / Cecil Mack, 1923), Golden Gate Orchestra [California Ramblers],
+  Edison Diamond Disc 51542, matrix 10292, recorded 2 April 1925; transfer: UC Santa Barbara Library,
+  https://archive.org/details/edison-51542_01_10292
+  Public domain in the US: the composition (1923) since 2019; the sound recording (published 1925) since
+  1 January 2026 under the Music Modernization Act (pre-1947 recordings: 100 years after publication).
+  Used: the last ~12.9 s (last chorus and ending), sped up 1.06% to sit on the film's 200 BPM grid.
+
+MAP
+- Natural Earth, 1:110m admin-1 states and provinces (public domain), https://www.naturalearthdata.com
+  Projected (Albers) and drawn in code.
+
+FONTS (SIL Open Font License 1.1; licence texts in fonts/)
+- Limelight (Nicole Fally / Sorkin Type), Oswald (Vernon Adams et al.), Noto Sans SC and Noto Serif SC (Adobe / Google).
+
+VOICE
+- Kokoro-82M (kokoro-onnx, Apache 2.0), a blend of the voices am_liam (0.6) and bm_george (0.4).
+
+MUSIC AND SOUND
+- Original score and foley written for this film (core/audio/sampler.py, pluck.py, sfx.py).
+- Samples (CC0): FreePats project (freepats.zenvoid.org), VS Chamber Orchestra: Community Edition (Versilian
+  Studios), Versilian Community Sample Library (Versilian Studios). Banjo: physical model (core/audio/pluck.py).

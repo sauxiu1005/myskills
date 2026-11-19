@@ -1,0 +1,14 @@
+{
+  "title": "Talking head",
+  "summary": "口播包装: a talking-head video (assets/talk.mp4) with a name plate, count-up number cards, keyword 花字, a chapter card and a corner badge, each landing on a spoken word. Lays out for 16:9 and 9:16, keeps off the speaker, and exports the package alone as transparent ProRes 4444.",
+  "best_for": ["talking-head / 口播 videos", "interview and vlog packaging", "name plates and lower thirds", "transparent overlays for 剪映 / Premiere / Final Cut", "vertical 9:16 shorts"],
+  "aspect": "16:9 or 9:16",
+  "copy": {
+    "templates/blank/vendor": "vendor",
+    "fonts/NotoSansSC-500.woff": "assets/fonts/NotoSansSC-500.woff",
+    "fonts/NotoSansSC-900.woff": "assets/fonts/NotoSansSC-900.woff",
+    "fonts/Inter-var.woff": "assets/fonts/Inter-var.woff",
+    "fonts/OFL.txt": "assets/fonts/OFL.txt",
+    "fonts/LICENSES.md": "assets/fonts/LICENSES.md"
+  }
+}

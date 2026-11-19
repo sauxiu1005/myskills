@@ -1,0 +1,523 @@
+{
+  "source_root": "导演视觉风格色卡_SKILL",
+  "purpose": "来源文件追溯，不代表全部内容已核实",
+  "files": [
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/02_霓虹黑色与赛博未来/022_WongKar-wai_王家卫/色卡主文档.md",
+      "sha256": "60eed8ec87cf7ffc1a67e89a887f247bac310b562cbd15df118aec8205d007ca",
+      "bytes": 5999
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/02_霓虹黑色与赛博未来/022_WongKar-wai_王家卫/assets/color_palettes/palette.json",
+      "sha256": "72c67c2e1b2a61eefdae68d9a058888e1f0f0bb99ad50f969a6ea64e883edc0d",
+      "bytes": 10353
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/02_霓虹黑色与赛博未来/022_WongKar-wai_王家卫/prompts/conversational_prompts.md",
+      "sha256": "ce132b36b96b9b84356e86d5c76e4798df3360ba066a86e41228c7c15f93d9e7",
+      "bytes": 5667
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/02_霓虹黑色与赛博未来/022_WongKar-wai_王家卫/prompts/midjourney_prompts.md",
+      "sha256": "8b7c97182eee3a4754c17dca90eb304ce5a0713580f51569740e947ebde3f1dc",
+      "bytes": 1672
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/02_霓虹黑色与赛博未来/022_WongKar-wai_王家卫/prompts/stable_diffusion_prompts.md",
+      "sha256": "f91395a97476b7ca5832b2f17f990b7d864394e488f13207bbfbf3ec38c38454",
+      "bytes": 1072
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/02_霓虹黑色与赛博未来/022_WongKar-wai_王家卫/prompts/video_prompts.md",
+      "sha256": "70264777a7bed494461ec93bc8a032f3ea16df3570c8c44edbfff5c57b655b6a",
+      "bytes": 16214
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/03_大地暖调与自然光诗意/045_AngLee_李安/色卡主文档.md",
+      "sha256": "7a5f0ff5a4124f7a9ebf4ac60cdef942d5567d72e7d8c9ec1f39ec42a3bd10ec",
+      "bytes": 6466
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/03_大地暖调与自然光诗意/045_AngLee_李安/assets/color_palettes/palette.json",
+      "sha256": "00e343b9033b7ca7e0e664af2c882971d79c02bd17a21a350185116b1611fe1a",
+      "bytes": 10518
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/03_大地暖调与自然光诗意/045_AngLee_李安/prompts/conversational_prompts.md",
+      "sha256": "42f68375fa549b1845fe93b763826eb00b03b32bd4a63a25dfe2cbd47c08c0c8",
+      "bytes": 5793
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/03_大地暖调与自然光诗意/045_AngLee_李安/prompts/midjourney_prompts.md",
+      "sha256": "9b700df642c74e84446ee226c801c9282a6493b9fe4569b497a8df0955d5c9cd",
+      "bytes": 1845
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/03_大地暖调与自然光诗意/045_AngLee_李安/prompts/stable_diffusion_prompts.md",
+      "sha256": "7dab7cc6a036a89e46f151c450311a5a6130576bc15deb137daa1bdb4b5eabce",
+      "bytes": 1405
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/03_大地暖调与自然光诗意/045_AngLee_李安/prompts/video_prompts.md",
+      "sha256": "01f2f44a94647615fb32a7dd5055ee786971451ff7c192588288ed1e2c2a0c13",
+      "bytes": 17079
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/03_大地暖调与自然光诗意/055_Tsui Hark_徐克/色卡主文档.md",
+      "sha256": "a9d1ce883085bcde6987401a0ef9c69547ef718648fe6ef8e81341d5d43ad28c",
+      "bytes": 5858
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/03_大地暖调与自然光诗意/055_Tsui Hark_徐克/assets/color_palettes/palette.json",
+      "sha256": "221d8f06a4a501047298f6dccda053ca912fd49cc8e276d33a98393c97e4d61a",
+      "bytes": 10333
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/03_大地暖调与自然光诗意/055_Tsui Hark_徐克/prompts/conversational_prompts.md",
+      "sha256": "b0192885927e9ce89b6eb6d4ef5b3e12948152684626b8458907cd0def17b458",
+      "bytes": 5745
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/03_大地暖调与自然光诗意/055_Tsui Hark_徐克/prompts/midjourney_prompts.md",
+      "sha256": "87d3018cb32288abd9f7ab3424542aadbb71c00e57caeabe08c70cd8e3bf45f0",
+      "bytes": 1765
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/03_大地暖调与自然光诗意/055_Tsui Hark_徐克/prompts/stable_diffusion_prompts.md",
+      "sha256": "24b428d3bdda7f6d12c33902075a2ae35dd5643cd15431dbab65e64193b53f1b",
+      "bytes": 1070
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/03_大地暖调与自然光诗意/055_Tsui Hark_徐克/prompts/video_prompts.md",
+      "sha256": "a6c6c003de1ffc050f66755af8f3ed04dc42046fba16f8f77d8249cc26f2162e",
+      "bytes": 16567
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/04_极简冷构与静观长镜/065_TsaiMing-liang_蔡明亮/色卡主文档.md",
+      "sha256": "0719f4437fca4bf3ef799e9679dae261099887e53fdc745841311a486f30c4fd",
+      "bytes": 4631
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/04_极简冷构与静观长镜/065_TsaiMing-liang_蔡明亮/assets/color_palettes/palette.json",
+      "sha256": "211fa72e9e92b597f60ff9089d1e6399e61cb3a1aab3a4d0965162984de0ceee",
+      "bytes": 8205
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/04_极简冷构与静观长镜/065_TsaiMing-liang_蔡明亮/prompts/conversational_prompts.md",
+      "sha256": "fbc44e6085361417c910ed6c9d6808623ed15781b5b223a4a4c4d0f94021d2b1",
+      "bytes": 4708
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/04_极简冷构与静观长镜/065_TsaiMing-liang_蔡明亮/prompts/midjourney_prompts.md",
+      "sha256": "e6811e9d9c006658065d9b767d6c4dfd3ea796c711272a0bfcee6c53805d9210",
+      "bytes": 1904
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/04_极简冷构与静观长镜/065_TsaiMing-liang_蔡明亮/prompts/stable_diffusion_prompts.md",
+      "sha256": "30806909dca0e5eadf8812bef8efb484440b8690ae85fcfd29867151bf19a130",
+      "bytes": 1381
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/04_极简冷构与静观长镜/065_TsaiMing-liang_蔡明亮/prompts/video_prompts.md",
+      "sha256": "e66c43dc8c6c6b5845d548ab3a7839343d8fcaee5c428bf7792b51b98cb5ff76",
+      "bytes": 14875
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/04_极简冷构与静观长镜/073_JiaZhangke_贾樟柯/色卡主文档.md",
+      "sha256": "a62673bb1fb35b066690fdc478b9eda04500915f425f11a81c54ae16997cd458",
+      "bytes": 4618
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/04_极简冷构与静观长镜/073_JiaZhangke_贾樟柯/assets/color_palettes/palette.json",
+      "sha256": "25938796d671e202e0fed1573e9f4086bf706544f54af9c168ba1b3fd0886626",
+      "bytes": 8195
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/04_极简冷构与静观长镜/073_JiaZhangke_贾樟柯/prompts/conversational_prompts.md",
+      "sha256": "a13a7c661570657f5c32512697908c33b9243dbb5bdaf384120396d5611c71b8",
+      "bytes": 4702
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/04_极简冷构与静观长镜/073_JiaZhangke_贾樟柯/prompts/midjourney_prompts.md",
+      "sha256": "471895f2f0cf56ff2cb7d320379a95aa1da26d5b84a7b324bb111b456a253598",
+      "bytes": 1906
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/04_极简冷构与静观长镜/073_JiaZhangke_贾樟柯/prompts/stable_diffusion_prompts.md",
+      "sha256": "00ee2c31960db454c0e0ee87da595ba1d2674d7890bec21de39d10b1c550fcf0",
+      "bytes": 1391
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/04_极简冷构与静观长镜/073_JiaZhangke_贾樟柯/prompts/video_prompts.md",
+      "sha256": "318bce7d57c5c5eab093d2e1205045825b16f53b3b984182f65fa21d18e4c1a6",
+      "bytes": 14888
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/086_ZhangYimou_张艺谋/色卡主文档.md",
+      "sha256": "7f0e2a6c1be329a24492b710366813342a7ba9d2c28b67df5dd2c6648d5d052f",
+      "bytes": 4487
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/086_ZhangYimou_张艺谋/assets/color_palettes/palette.json",
+      "sha256": "6cbd7173b02ef573b3cd1d5cb8085d2aa86875a9498a2127e97e8d94bdc3cc38",
+      "bytes": 8491
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/086_ZhangYimou_张艺谋/prompts/conversational_prompts.md",
+      "sha256": "6ded6b69d1ea095525909fd929adc83ff7f6d23ec3c1fd836c15338318ba46d9",
+      "bytes": 4696
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/086_ZhangYimou_张艺谋/prompts/midjourney_prompts.md",
+      "sha256": "a1625d6e7d55538ae66cd69e7d150ce01c496d2831c4617520c31103515b8200",
+      "bytes": 1880
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/086_ZhangYimou_张艺谋/prompts/stable_diffusion_prompts.md",
+      "sha256": "f387a88a12315093afd6085841ea0cc9324208170876c811d5acd7843cb2c3fd",
+      "bytes": 1399
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/086_ZhangYimou_张艺谋/prompts/video_prompts.md",
+      "sha256": "82ba181d160b05b6be0cd6078320cad0b7166050862faf9c900f13d7346a32d8",
+      "bytes": 14882
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/096_ChenKaige_陈凯歌/色卡主文档.md",
+      "sha256": "0edce61396504c1d3e92ef91e539f1e258a9beb13969c402bc5ae3af967ae235",
+      "bytes": 4488
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/096_ChenKaige_陈凯歌/assets/color_palettes/palette.json",
+      "sha256": "eeb67e226f9fae4a9190d759c3a418ed66b2a4d4782efb030908d440814b80b3",
+      "bytes": 8154
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/096_ChenKaige_陈凯歌/prompts/conversational_prompts.md",
+      "sha256": "974325329f0880b7ff903d68e708110632d9b8b8cb036b091dc5679a3723c863",
+      "bytes": 4675
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/096_ChenKaige_陈凯歌/prompts/midjourney_prompts.md",
+      "sha256": "fa034f775cb284a9b813dcdd2ff7e9752c2a09917b36ade2d768175ac95a2b34",
+      "bytes": 1849
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/096_ChenKaige_陈凯歌/prompts/stable_diffusion_prompts.md",
+      "sha256": "bcd91b15983dbb4ae6b9293d091280831d4f4106ff60bee71483db9fff27ec1b",
+      "bytes": 1382
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/096_ChenKaige_陈凯歌/prompts/video_prompts.md",
+      "sha256": "90b3cb6e4e1b6a72cc737018770924d63950d405fcb30b86b7fcd822ceda7d18",
+      "bytes": 14778
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/099_HouHsiao-hsien_侯孝贤/色卡主文档.md",
+      "sha256": "bdd7d9dc1edbe5f13cd0995e20fbd85eebb38230f9b4006f8ca4bbc9b09e3f82",
+      "bytes": 4593
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/099_HouHsiao-hsien_侯孝贤/assets/color_palettes/palette.json",
+      "sha256": "8a208454695c0932b9d415292adf37a33a4aacc464cc47de592ac77972e674f8",
+      "bytes": 8931
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/099_HouHsiao-hsien_侯孝贤/prompts/conversational_prompts.md",
+      "sha256": "38a821e9d631f7edd5b1d198102a9b967bf3f9ce02260e27a351a7fdbf47ac78",
+      "bytes": 4744
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/099_HouHsiao-hsien_侯孝贤/prompts/midjourney_prompts.md",
+      "sha256": "3e03d32ee1d1361cdb9025965b61a8af9412d88f4e05df528347bb7b8c3d7b9f",
+      "bytes": 1899
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/099_HouHsiao-hsien_侯孝贤/prompts/stable_diffusion_prompts.md",
+      "sha256": "8bf7f4caa6d62e824e92e666ec34e29d9544425629e9318456a67dbd9044cc79",
+      "bytes": 1401
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/05_巴洛克华丽与浓墨重彩/099_HouHsiao-hsien_侯孝贤/prompts/video_prompts.md",
+      "sha256": "b7d6367d89dfe3fd23d8746626f17cd8b59b31d70eb3d3afd8c67efa95286dba",
+      "bytes": 14932
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/06_超现实梦幻与心理畸变/117_BiGan_毕赣/色卡主文档.md",
+      "sha256": "83c8f54c1f133adcee936fdb966b5d6907e6a5db8e4a121aa89663e163a30057",
+      "bytes": 4490
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/06_超现实梦幻与心理畸变/117_BiGan_毕赣/assets/color_palettes/palette.json",
+      "sha256": "1ed6409112cb4d8d0ba4dedf74f9ff6e53cdcacb70c88189ba21544b37ea574d",
+      "bytes": 4681
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/06_超现实梦幻与心理畸变/117_BiGan_毕赣/prompts/conversational_prompts.md",
+      "sha256": "bfe8dec1b12f9ab1e5363e758030ccf1d7f85f1e528fbdeb2c4e976ddb01ade3",
+      "bytes": 4817
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/06_超现实梦幻与心理畸变/117_BiGan_毕赣/prompts/midjourney_prompts.md",
+      "sha256": "2a12bec2440629b8eda6eeb514ab6a39635289ae19772fec89f94a3f08ee1695",
+      "bytes": 1183
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/06_超现实梦幻与心理畸变/117_BiGan_毕赣/prompts/stable_diffusion_prompts.md",
+      "sha256": "79f5836c63771df470b4b9cb3e007fd94d699f215833bdf0aed0f09b7e32fb6b",
+      "bytes": 1100
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/06_超现实梦幻与心理畸变/117_BiGan_毕赣/prompts/video_prompts.md",
+      "sha256": "0348491a0b00bf8cf560ec5044f2eeccf9f0003e8b1ede26181d4ca1051785b8",
+      "bytes": 14380
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/122_JohnWoo_吴宇森/色卡主文档.md",
+      "sha256": "f164d4991663c86f0acd7fa23e0790bcb7656b0fe1340ad67d967b39f915b4fe",
+      "bytes": 4414
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/122_JohnWoo_吴宇森/assets/color_palettes/palette.json",
+      "sha256": "87553ef95cea96716de028e3864cead87fc92a2d9970a0a21f2488bc44b3ffb5",
+      "bytes": 4686
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/122_JohnWoo_吴宇森/prompts/conversational_prompts.md",
+      "sha256": "2e3696b96ea71f0a434933916b730efd1ac982272cd754d85da649f0c51f2e24",
+      "bytes": 4804
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/122_JohnWoo_吴宇森/prompts/midjourney_prompts.md",
+      "sha256": "dada135b0ed20d8ff91404493c5e5427b759bf6ec3dccb8bb1fce759ca526894",
+      "bytes": 1173
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/122_JohnWoo_吴宇森/prompts/stable_diffusion_prompts.md",
+      "sha256": "b4993b804cfc315bff37c13c1b5bd74f4795bb5acf64e5a6c52633764554a06c",
+      "bytes": 1095
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/122_JohnWoo_吴宇森/prompts/video_prompts.md",
+      "sha256": "f4457dbfabc7cbf1f71f51ad1b81573bce6a020be0d8b251cf5fd3b094f8a709",
+      "bytes": 14254
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/123_JiangWen_姜文/色卡主文档.md",
+      "sha256": "6ead521362d998484d6179e8cbf23ad4ff46311aa7ff15dc5ecf51875d5db2d9",
+      "bytes": 4490
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/123_JiangWen_姜文/assets/color_palettes/palette.json",
+      "sha256": "d1209e049e42158c903ebf9cbf3dbc1c73fd32101935e23d7d7c710d341ce665",
+      "bytes": 4697
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/123_JiangWen_姜文/prompts/conversational_prompts.md",
+      "sha256": "ce5174c72f8836f3f280318bbea331fc57375206810c87bae82101e09293164f",
+      "bytes": 4859
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/123_JiangWen_姜文/prompts/midjourney_prompts.md",
+      "sha256": "0a57bf6e428ed603295edd1620f0e272da49c9569bce7376ab807d4679ea5c78",
+      "bytes": 1198
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/123_JiangWen_姜文/prompts/stable_diffusion_prompts.md",
+      "sha256": "5f9ca4bed02f57c271ebd820106aa5a48db806390d92536b6f09540729261aef",
+      "bytes": 1115
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/123_JiangWen_姜文/prompts/video_prompts.md",
+      "sha256": "04b473d73972928fc8410d2b1f13082fba0ed0617a728c6f0517f5ad58712377",
+      "bytes": 14478
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/09_浪漫柔光与复古色调/165_StanleyKwan_关锦鹏/色卡主文档.md",
+      "sha256": "ad5489b950e3580b838c44f4798171dce640e99157f6a88b752bb9b51ffcc0cf",
+      "bytes": 4410
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/09_浪漫柔光与复古色调/165_StanleyKwan_关锦鹏/assets/color_palettes/palette.json",
+      "sha256": "cbaad57ba3459c1ecf2e8863a9d570a33233a61dda8dca70d271b67296af4d4e",
+      "bytes": 4698
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/09_浪漫柔光与复古色调/165_StanleyKwan_关锦鹏/prompts/conversational_prompts.md",
+      "sha256": "7c40c36a938c3d41acb076fbe5aab03ee6748ee96413b640c3107357d8dfdb3d",
+      "bytes": 4834
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/09_浪漫柔光与复古色调/165_StanleyKwan_关锦鹏/prompts/midjourney_prompts.md",
+      "sha256": "a8ea5574c440e3d158d863131b89bc5efaadcfb52199d8a92e7fc1b60aa6f38f",
+      "bytes": 1183
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/09_浪漫柔光与复古色调/165_StanleyKwan_关锦鹏/prompts/stable_diffusion_prompts.md",
+      "sha256": "cbb6a3aa72d2442e705e1c477a99c44f54bf07baf2dd605d66dbd193c5ffbd5f",
+      "bytes": 1100
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/09_浪漫柔光与复古色调/165_StanleyKwan_关锦鹏/prompts/video_prompts.md",
+      "sha256": "eee172c8d5ee2ff7c955962b881fbaa7fde2d841703639aa11060af13d8c61cc",
+      "bytes": 14348
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/186_EdwardYang_杨德昌/色卡主文档.md",
+      "sha256": "ce7c35d5ccebe8ba4026e3233752b83f6747b16e02772d242a460292e57107cc",
+      "bytes": 4507
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/186_EdwardYang_杨德昌/assets/color_palettes/palette.json",
+      "sha256": "13635267d5f7f2521fb99a6108834c4141e72c6cf5ffbe14a38c75555dc9bc3c",
+      "bytes": 4783
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/186_EdwardYang_杨德昌/prompts/conversational_prompts.md",
+      "sha256": "d07f2071c3dffb6605402ceca3935541ca34f6f6bc0ff6098e9f9824d719a9d1",
+      "bytes": 4863
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/186_EdwardYang_杨德昌/prompts/midjourney_prompts.md",
+      "sha256": "9e415e07a8112f1420c4babdc03b31743d2ffa3e1a2f3112920d1f03a10eb8d5",
+      "bytes": 1200
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/186_EdwardYang_杨德昌/prompts/stable_diffusion_prompts.md",
+      "sha256": "863f1cf55a014c2fbb4e3e72d6b593ecb1d8f9d42feb1190500af225b9a3201d",
+      "bytes": 1110
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/186_EdwardYang_杨德昌/prompts/video_prompts.md",
+      "sha256": "4f974026f439f304b5eb95cda66c88e364ed5853285b339d4f32dfb1ff6b28b0",
+      "bytes": 14447
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/187_AnnHui_许鞍华/色卡主文档.md",
+      "sha256": "9d60d07133ae6b6d4a6bf64c7fcf9e5ba020de04f66386b603b4b90fe881ce13",
+      "bytes": 4475
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/187_AnnHui_许鞍华/assets/color_palettes/palette.json",
+      "sha256": "fcf6f4e5ba041cc8a7e55ab667a1d627a34b5753ef9a8371c5a21f805d60f9e7",
+      "bytes": 4718
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/187_AnnHui_许鞍华/prompts/conversational_prompts.md",
+      "sha256": "972b37d974623e448dfe936d00da8dede6ead9e3fcb4c6b90618b837152414ca",
+      "bytes": 4837
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/187_AnnHui_许鞍华/prompts/midjourney_prompts.md",
+      "sha256": "98959431f45d654f87e0d85bf411b1188d7d5f2c73b2d984d552a6a8b77c51fe",
+      "bytes": 1187
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/187_AnnHui_许鞍华/prompts/stable_diffusion_prompts.md",
+      "sha256": "86f051fe57af8010b74a3e3efbcb2ab8a06ed947e15891e3e66f9f0bb1d25ef9",
+      "bytes": 1102
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/187_AnnHui_许鞍华/prompts/video_prompts.md",
+      "sha256": "2535a19564d74df5e12ffe1422ad4a9c6246de73db0b2f27d2f3f6b375ca1b63",
+      "bytes": 14374
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/124_AkiraKurosawa_黑泽明/色卡主文档.md",
+      "sha256": "e23a8da4a7c559bea0f901cf4673ec4236f4d469fcb5f4fc332d4533a9cb1a37",
+      "bytes": 4397
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/181_YasujiroOzu_小津安二郎/色卡主文档.md",
+      "sha256": "2f9b323e320cd0f55dcdb4c4cf5b2ea82a6742fe2beda635362ccf4c4f80e502",
+      "bytes": 4548
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/184_TakeshiKitano_北野武/色卡主文档.md",
+      "sha256": "36f7a549d0cf2608cc7aa74dfd3bfa13418d4447da6cc46a5bc3d51760596b50",
+      "bytes": 4390
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/09_浪漫柔光与复古色调/164_ShunjiIwai_岩井俊二/色卡主文档.md",
+      "sha256": "55c5bae5d0034319e014528058c539bb61a3da2dcb650bc9b8b79a09ef3afc33",
+      "bytes": 4368
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/01_黑色悬疑与冷调惊悚/017_ParkChan-wook_朴赞郁/色卡主文档.md",
+      "sha256": "1fd49a7e8587c0e6229443ff1316d4ceca9a2be4a7c3b121c51feb75606b02c9",
+      "bytes": 7430
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/139_BongJoon-ho_奉俊昊/色卡主文档.md",
+      "sha256": "73014fcdbffe96f2582d8e48d768171e76182999579b8effe40e631b1046e22a",
+      "bytes": 4549
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/190_ApichatpongWeerasethakul_阿彼察邦/色卡主文档.md",
+      "sha256": "9c08e63520980a0e3dd78183bf22f11abde22826fbe56f0fadc82054368100dc",
+      "bytes": 4525
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/191_TranAnhHung_陈英雄/色卡主文档.md",
+      "sha256": "3c56661f0493527e517cf53eda01a34ecdca0c56412f63405d2a76ebb4f932cd",
+      "bytes": 4452
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/10_东方美学与留白意境/194_AbbasKiarostami_阿巴斯·基亚罗斯塔米/色卡主文档.md",
+      "sha256": "ddedd4110e78c54b8c01bdda0f4bc67895441241da6bf5e82dc29ecb04526026",
+      "bytes": 4530
+    },
+    {
+      "path": "第2期_SKILL_浓彩与梦幻_081-140/07_动作史诗与高饱和色彩/126_HayaoMiyazaki_宫崎骏/色卡主文档.md",
+      "sha256": "46143449d7f3bb1191c89386b7c9c2905a0379d84d7b21faf14405f2b052a5e1",
+      "bytes": 4455
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/08_动画奇幻与异想视觉/141_SatoshiKon_今敏/色卡主文档.md",
+      "sha256": "1a83f62fc121326d02007e1737f81b17938394503b4c3b83fd5677fa1be73ee8",
+      "bytes": 4472
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/08_动画奇幻与异想视觉/144_MakotoShinkai_新海诚/色卡主文档.md",
+      "sha256": "fb727aad8efb4b38b00f98aec4fdb57447b825a0a9b4ddcac89204c2ee03570e",
+      "bytes": 4424
+    },
+    {
+      "path": "第1期_SKILL_冷调与大地_001-080/02_霓虹黑色与赛博未来/028_MamoruOshii_押井守/色卡主文档.md",
+      "sha256": "7e1e065ce4f1d4543d472746ce87dc2bbe412ef5677ae28bbdbd94ad1ab9ef69",
+      "bytes": 7695
+    },
+    {
+      "path": "第3期_SKILL_动画柔光东方_141-200/08_动画奇幻与异想视觉/145_MasaakiYuasa_汤浅政明/色卡主文档.md",
+      "sha256": "30df68b159c2892eea0e33c1c4fb589a72a2ebff9e049a32874709280135e914",
+      "bytes": 4510
+    }
+  ],
+  "asian_extension": {
+    "date": "2026-11-05",
+    "added_directors": [
+      "黑泽明",
+      "小津安二郎",
+      "北野武",
+      "岩井俊二",
+      "朴赞郁",
+      "奉俊昊",
+      "阿彼察邦",
+      "陈英雄",
+      "阿巴斯·基亚罗斯塔米",
+      "宫崎骏",
+      "今敏",
+      "新海诚",
+      "押井守",
+      "汤浅政明"
+    ],
+    "verification": "原包主文档已读；色值未逐帧验证；未生成媒体"
+  },
+  "merge_record": {
+    "date": "2026-11-05",
+    "installed_version": "0.1.6",
+    "attachment_version": "0.2.0",
+    "merged_version": "0.2.1",
+    "verification": "附件中的原包路径及校验值为继承记录，本次未取得底层原包重新核验；本次仅逐文件比对所附扩展包与已安装版本。保留三份用户场景研究及完整视频提示词确认流程。"
+  }
+}

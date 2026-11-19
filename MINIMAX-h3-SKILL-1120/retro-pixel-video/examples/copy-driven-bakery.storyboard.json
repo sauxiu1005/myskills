@@ -1,0 +1,48 @@
+{
+  "title": "文案驱动·面包店",
+  "fps": 24,
+  "total_frames": 480,
+  "timing": "拟定（无音频）",
+  "canvas": {
+    "logical": [
+      640,
+      360
+    ],
+    "scale": 3,
+    "output": [
+      1920,
+      1080
+    ]
+  },
+  "shots": [
+    {
+      "id": 1,
+      "frames": 96,
+      "viewpoint": "小店正面中景",
+      "narration": "第一年，我每天只卖出三个面包。"
+    },
+    {
+      "id": 2,
+      "frames": 96,
+      "viewpoint": "台灯俯视特写",
+      "narration": "后来，我把每一次失败都记在本子上。"
+    },
+    {
+      "id": 3,
+      "frames": 120,
+      "viewpoint": "小店正面中景（同机位）",
+      "narration": "本子越写越厚，门口的队也越排越长。"
+    },
+    {
+      "id": 4,
+      "frames": 108,
+      "viewpoint": "中景→街道俯视全景",
+      "narration": "现在，整条街的早晨都闻起来像我的店。"
+    },
+    {
+      "id": 5,
+      "frames": 60,
+      "viewpoint": "小店正面中景（回扣）"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+display-name-zh: 蜡笔儿童绘本动画
+version: 1.0.0
+tag-en: "Education"
+tag-cn: "教育"
+complete-tags-en:
+  - "Education / Creative Generation"
+complete-tags-cn:
+  - "教育 / 创作生成"
+summary-en: "Turn a story idea or topic into a code-rendered crayon picture-book short with treatment, model sheet, voices, score, subtitles, MP4 and editable source."
+summary-cn: "根据故事构想或主题，用代码渲染蜡笔儿童绘本风动画短片，交付方案、角色设定、配音配乐、字幕、MP4与源码。"
+desc-en: "For creators of bedtime stories, picture-book shorts and gentle kids' learning clips who want a hand-drawn wax-crayon look rendered deterministically in code rather than generated video. Provide a story idea or topic and confirm duration, aspect ratio, language, number of lines and subtitles. The workflow writes a treatment with three candidate structures, draws a model sheet and key frames for approval, then produces TTS voices checked line by line with speech recognition, a synthesised music-box score, material foley, a timed mix and a frame-by-frame render. Outputs include the MP4, SRT subtitles, treatment, poster, credits and a one-command rebuild script. Best for short, warm, character-led stories; not for AI text-to-video, live action, routine trimming or format conversion."
+desc-cn: "面向睡前故事、绘本短片和儿童知识短片的创作者，用代码而非生成式视频渲染蜡笔手绘质感。用户提供故事构想或主题，确认时长、画幅、语言、台词数和字幕。流程先写含三个结构候选的方案，绘制角色设定页和关键帧供确认，再生成配音并用语音识别逐句核对，合成八音盒配乐与拟音，混音后逐帧渲染。交付MP4、SRT字幕、方案、封面、授权说明和一键重建脚本。适合短小温暖的角色故事，不用于AI文生视频、真人实拍或普通剪辑。"
+author-en: "MiniMax Design"
+author-cn: "MiniMax Design"
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/9c091515-df08-4f90-acd1-a20ec9844316.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/9c091515-df08-4f90-acd1-a20ec9844316.mp4
+structured-info:
+  zh-CN:
+    summary: 把故事构想变成蜡笔手绘质感的儿童绘本动画，带配音、配乐和字幕。
+    best-for:
+      - 睡前故事短片
+      - 儿童绘本动画
+      - 儿童科普
+    how-to-use: 说出故事构想或主题，确认时长、画幅、台词与字幕后，先看方案和角色设定页，确认后出成片。
+    outputs: MP4成片、SRT字幕、制作方案、角色设定联系表、封面、授权说明和可一键重建的源码。
+  en-US:
+    summary: Turns a story idea into a wax-crayon picture-book animation with voices, music and subtitles.
+    best-for:
+      - Bedtime Story Shorts
+      - Picture-book Animation
+      - Gentle Kids' Learning Clips
+    how-to-use: Describe a story idea or topic, confirm duration, aspect ratio, lines and subtitles, review the treatment and model sheet, then get the finished film.
+    outputs: MP4 film, SRT subtitles, treatment, model-sheet contact sheet, poster, credits and one-command rebuildable source.

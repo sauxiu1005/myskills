@@ -1,0 +1,229 @@
+{
+  "director": {
+    "id": "115",
+    "name_en": "TimBurton",
+    "name_zh": "蒂姆·伯顿",
+    "category": "06_超现实梦幻与心理畸变",
+    "nationality": "美国",
+    "active_years": "1958-",
+    "era": "1958-"
+  },
+  "palette": {
+    "primary": [
+      {
+        "code": "C01",
+        "hex": "#4A148C",
+        "name_zh": "哥特紫",
+        "name_en": "Gothic Purple",
+        "ratio": 0.2,
+        "rgb": [
+          74,
+          20,
+          140
+        ],
+        "hsl": [
+          267,
+          75,
+          31
+        ]
+      },
+      {
+        "code": "C02",
+        "hex": "#E65100",
+        "name_zh": "南瓜橙",
+        "name_en": "Pumpkin Orange",
+        "ratio": 0.18,
+        "rgb": [
+          230,
+          81,
+          0
+        ],
+        "hsl": [
+          21,
+          100,
+          45
+        ]
+      },
+      {
+        "code": "C03",
+        "hex": "#1A237E",
+        "name_zh": "午夜蓝",
+        "name_en": "Midnight Blue",
+        "ratio": 0.16,
+        "rgb": [
+          26,
+          35,
+          126
+        ],
+        "hsl": [
+          235,
+          66,
+          30
+        ]
+      },
+      {
+        "code": "C04",
+        "hex": "#1B5E20",
+        "name_zh": "毒物绿",
+        "name_en": "Poison Green",
+        "ratio": 0.14,
+        "rgb": [
+          27,
+          94,
+          32
+        ],
+        "hsl": [
+          124,
+          55,
+          24
+        ]
+      },
+      {
+        "code": "C05",
+        "hex": "#B71C1C",
+        "name_zh": "血红",
+        "name_en": "Blood Red",
+        "ratio": 0.14,
+        "rgb": [
+          183,
+          28,
+          28
+        ],
+        "hsl": [
+          0,
+          73,
+          41
+        ]
+      },
+      {
+        "code": "C06",
+        "hex": "#212121",
+        "name_zh": "炭黑",
+        "name_en": "Charcoal Black",
+        "ratio": 0.18,
+        "rgb": [
+          33,
+          33,
+          33
+        ],
+        "hsl": [
+          0,
+          0,
+          13
+        ]
+      }
+    ],
+    "emotional": [
+      {
+        "code": "E01",
+        "hex": "#4A148C",
+        "name_zh": "怪诞幻想",
+        "name_en": "怪诞幻想",
+        "emotion": "怪诞幻想",
+        "rgb": [
+          74,
+          20,
+          140
+        ],
+        "hsl": [
+          267,
+          75,
+          31
+        ]
+      },
+      {
+        "code": "E02",
+        "hex": "#E65100",
+        "name_zh": "万圣节庆",
+        "name_en": "万圣节庆",
+        "emotion": "万圣节庆",
+        "rgb": [
+          230,
+          81,
+          0
+        ],
+        "hsl": [
+          21,
+          100,
+          45
+        ]
+      },
+      {
+        "code": "E03",
+        "hex": "#1A237E",
+        "name_zh": "孤独忧郁",
+        "name_en": "孤独忧郁",
+        "emotion": "孤独忧郁",
+        "rgb": [
+          26,
+          35,
+          126
+        ],
+        "hsl": [
+          235,
+          66,
+          30
+        ]
+      },
+      {
+        "code": "E04",
+        "hex": "#1B5E20",
+        "name_zh": "诡异生机",
+        "name_en": "诡异生机",
+        "emotion": "诡异生机",
+        "rgb": [
+          27,
+          94,
+          32
+        ],
+        "hsl": [
+          124,
+          55,
+          24
+        ]
+      }
+    ]
+  },
+  "lighting": {
+    "key_light": "高对比阴影",
+    "highlight_tint": "彩色色光",
+    "highlight_bias": "彩色色光",
+    "shadow_tint": "月光冷蓝",
+    "shadow_bias": "月光冷蓝",
+    "contrast": "高对比",
+    "contrast_ratio": "高对比",
+    "overall_tone": "暖调"
+  },
+  "composition_keywords": [
+    "哥特建筑",
+    "歪扭世界",
+    "孤独主角",
+    "万圣节意象",
+    "条纹螺旋",
+    "手绘感"
+  ],
+  "color_keywords": [
+    "哥特紫黑",
+    "南瓜橙",
+    "万圣节色",
+    "暗童话色",
+    "紫绿撞色",
+    "怪诞色彩"
+  ],
+  "mood_keywords": [
+    "哥特童话",
+    "孤独怪才",
+    "万圣节美学",
+    "黑色幽默",
+    "童年幻想",
+    "边缘人物"
+  ],
+  "real_palettes": [],
+  "style_profile": {
+    "definition": "蒂姆·伯顿的视觉风格：高对比阴影，哥特紫黑, 南瓜橙, 万圣节色。",
+    "lighting": "高对比阴影，彩色色光，月光冷蓝",
+    "framing": "哥特建筑、歪扭世界、孤独主角。",
+    "grading": "整体色调暖调，对比度高对比。",
+    "avoid": "避免平光、避免色彩混乱、避免构图松散。"
+  }
+}

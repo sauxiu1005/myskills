@@ -1,0 +1,19 @@
+{
+  "meta": {"brand": "LUMEN"},
+  "recipe": "dot_reel",
+  "format": {"aspect": "16:9", "fps": 60, "bpm": 128, "duration": 15},
+  "style": "swiss",
+  "palette": {"preset": "mono", "dark": "#141413", "light": "#F0EEE6", "a1": "#E8603C", "a2": "#F2C14E", "a3": "#2F5BEA"},
+  "carrier": "a1",
+  "audio": {"mode": "synth", "mood": "energetic"},
+  "scenes": [
+    {"type": "dot_split",   "beats": 4, "bg": "light", "name": "圆点开场", "kicker": "LUMEN / 2026", "caption": "one idea"},
+    {"type": "snap_type",   "beats": 4, "bg": "dark",  "name": "急刹标题", "lines": ["Think", "in motion"], "kicker": "01 — 理念"},
+    {"type": "shape_spin",  "beats": 4, "bg": "light", "name": "形变自旋", "label": "shape · rhythm · flow"},
+    {"type": "grid_wave3d", "beats": 4, "bg": "dark",  "name": "点阵波浪", "word": "Rhythm", "label": "128 BPM grid"},
+    {"type": "point_ring",  "beats": 4, "bg": "dark",  "name": "点云圆环", "word": "Focus", "label": "everything converges"},
+    {"type": "ribbon_loop", "beats": 4, "bg": "a2",    "name": "条纹打结", "word": "Connect", "label": "tie it together"},
+    {"type": "text_ring",   "beats": 4, "bg": "light", "name": "文字卷环", "words": ["Write", "Sketch", "Plan"], "label": "LUMEN"},
+    {"type": "dot_lockup",  "beats": 4, "bg": "light", "name": "圆点收尾", "title": "Lumen", "subtitle": "Notes that move", "meta": "LUMEN.APP · 2026", "cta": "Try it free"}
+  ]
+}

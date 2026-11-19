@@ -1,0 +1,34 @@
+display-name-zh: 等轴微缩世界动画
+version: 1.0.0
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+  - Creative & Experimental / Creative Generation
+complete-tags-cn:
+  - 创意实验 / 创作生成
+summary-en: Turns ideas or user material into 30-degree isometric miniature-world animations with causal motion, titles and synced sound, delivering video plus editable source.
+summary-cn: 将创意或素材制作成 30° 等轴微缩世界动画，编排因果动作、标题与同步音效，交付成片与可编辑源码。
+desc-en: Made for creators who need isometric miniature-world promos, workflow demonstrations or feature explainers. Provide a one-line idea, exact on-screen copy and optional brand or visual material, and choose the scene, palette, duration, frame size and sound. The skill writes a brief, treatment and shared cue table, builds a true 30-degree orthographic world in code, animates growth and causal mechanical workflows, lays out multilingual titles, and moves the camera by panning and zooming only. It checks real keyframes and a motion preview, renders every frame, then syncs original music and sound effects. Deliverables are an MP4, editable source with dependency notes, brief, cue table, licenses and a QA report. It does not make perspective live-action films, playable games or AI-generated video.
+desc-cn: 面向需要等轴微缩场景宣传片、流程演示或功能解释的创作者。用户提供一句创意、准确文案及可选品牌或视觉素材，可自定义场景、配色、时长、画幅与声音。技能先整理简报、分镜说明与共享事件表，再用代码以真 30° 正交投影搭建微缩世界，实现物体生长、因果连贯的机械与流程动作、多语言标题排版，镜头只做平移和缩放；检查真实关键帧和动作预览后逐帧渲染，同步配乐与音效。交付 MP4、可编辑源码与依赖说明、简报、事件表、素材许可和验收报告。不用于透视写实影片、可玩游戏或 AI 生成视频。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/af22407f-b89d-4971-bae8-f942ce8dad81.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/af22407f-b89d-4971-bae8-f942ce8dad81.mp4
+structured-info:
+  zh-CN:
+    summary: 将创意或素材制作成镜头连贯、动作有因果的 30° 等轴微缩世界动画，并交付成片与可编辑源码。
+    best-for:
+      - 微缩宣传片
+      - 流程演示
+      - 产品功能解释
+    how-to-use: 提供创意、准确文案和可选素材，再选择场景、配色、时长、画幅与声音即可开始。
+    outputs: 等轴动画 MP4、可编辑源码与依赖说明、简报、事件表、许可记录与验收报告。
+  en-US:
+    summary: Turn ideas or material into a 30-degree isometric miniature-world animation with causal motion, delivered as video plus editable source.
+    best-for:
+      - Isometric Promos
+      - Mechanical Workflow Demos
+      - Feature Explainers
+    how-to-use: Provide an idea, exact copy and optional material, then choose scene, palette, duration, framing and sound to begin.
+    outputs: Isometric MP4, editable source with dependency notes, brief, cue table, license records and QA report.

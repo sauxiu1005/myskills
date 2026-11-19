@@ -1,0 +1,37 @@
+display-name-zh: 深度引导动画生成
+version: 1.0.1
+tag-en: Professional Film
+tag-cn: 专业影视
+complete-tags-en:
+- Professional Film / Post-production
+complete-tags-cn:
+- 专业影视 / 后期处理
+summary-en: Turn ideas or existing footage into animated shorts using live-action previz to establish performance, a full depth video to guide motion, and one approved frame to define the look.
+summary-cn: 从创意或已有视频出发，以真人预演确定表演和运镜，再用完整深度视频与确认首帧生成动画短片。
+desc-en: For creators turning action ideas or existing footage into animated shorts with consistent performance and camera movement. Provide the content, duration, and framing, or upload a video. Review live-action-style previz and choose whether to process depth. The full depth video captures spatial relationships, occlusion, and motion. Then choose the final character and animation style, optionally provide identity and style references, and approve one opening frame for the entire film. Use that frame to establish appearance and depth to guide movement, then restore approved audio. Deliverables include previz, full depth video, the approved frame, and the animated film. This workflow supports acting and camera previews, not frame-exact copying, skeletal reconstruction, or layered editing projects.
+desc-cn: 面向把创意或已有视频转成动画短片的创作者。提供视频内容、时长和比例，或上传已有视频；先审阅真人风格预演，再决定是否继续深度处理。深度视频记录空间远近、遮挡与运动变化。之后选择最终人物和动画风格，也可上传人物图与风格图，制作整片唯一的目标风格首帧。确认后，以首帧定义人物和视觉，以深度引导动作与运镜，生成动画并按方案接回原声。交付预演、深度、首帧与成片；不保证逐帧复制，不提供骨骼重建或分层工程。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+structured-info:
+  zh-CN:
+    summary: 用完整深度视频引导动作与运镜，以一张确认的风格首帧将真人预演转译为动画短片。
+    best-for:
+    - 角色表演
+    - 镜头预演
+    - 视频转动画
+    how-to-use: 提供内容或视频，确认预演与深度处理，再选人物画风并确认首帧。
+    outputs: 真人风格预演、完整深度视频、唯一目标风格首帧及含获批声音的动画成片；也可只保留预演。
+  en-US:
+    summary: Translate live-action previz into animated shorts with full depth guidance for motion and one approved frame for the visual style.
+    best-for:
+    - Character Performance
+    - Camera Previews
+    - Video Stylization
+    how-to-use: Provide an idea or footage, approve previz and depth processing, then choose the look and confirm one style frame.
+    outputs: Live-action previz, full depth video, one target-style frame, and an animated film with approved audio; previz-only delivery is also available.
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/32ce4a7c-1fd2-4cdb-8f58-c1c17657f871.mp4
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/32ce4a7c-1fd2-4cdb-8f58-c1c17657f871.mp4
+showcase:
+- https://cdn.hailuoai.com/prod/2026-10-23-13/video/1792734632984524711-1792734632971.mp4
+- https://cdn.hailuoai.com/prod/2026-10-23-13/video/1792734888132555283-1792734888098.mp4

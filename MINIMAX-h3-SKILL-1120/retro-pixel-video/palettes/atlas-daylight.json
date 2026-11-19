@@ -1,0 +1,428 @@
+{
+ "id": "atlas-daylight",
+ "name": "图解日光",
+ "name_en": "Atlas Daylight",
+ "tier": "高细节现代像素",
+ "use": "知识讲解 / 科普剖面图（640×360 及以上逻辑画布）",
+ "original": true,
+ "colors": [
+  {
+   "index": 0,
+   "hex": "#12141c",
+   "role": "描边/最深阴影",
+   "ramp": "ink"
+  },
+  {
+   "index": 1,
+   "hex": "#2a2e3d",
+   "role": "次级描边/深灰",
+   "ramp": "ink"
+  },
+  {
+   "index": 2,
+   "hex": "#3a73c0",
+   "role": "天顶蓝",
+   "ramp": "sky"
+  },
+  {
+   "index": 3,
+   "hex": "#5490d8",
+   "role": "高空蓝",
+   "ramp": "sky"
+  },
+  {
+   "index": 4,
+   "hex": "#78b0ea",
+   "role": "中空蓝",
+   "ramp": "sky"
+  },
+  {
+   "index": 5,
+   "hex": "#a2cff5",
+   "role": "低空蓝",
+   "ramp": "sky"
+  },
+  {
+   "index": 6,
+   "hex": "#d0ebfb",
+   "role": "地平线薄雾",
+   "ramp": "sky"
+  },
+  {
+   "index": 7,
+   "hex": "#ffffff",
+   "role": "云亮面/雪亮面",
+   "ramp": "cloud"
+  },
+  {
+   "index": 8,
+   "hex": "#e1e9f1",
+   "role": "云中间调/雪",
+   "ramp": "cloud"
+  },
+  {
+   "index": 9,
+   "hex": "#b5c3d2",
+   "role": "云阴影/雪阴影",
+   "ramp": "cloud"
+  },
+  {
+   "index": 10,
+   "hex": "#8292a7",
+   "role": "雨云/远山雾",
+   "ramp": "cloud"
+  },
+  {
+   "index": 11,
+   "hex": "#5a677d",
+   "role": "雨云底部",
+   "ramp": "cloud"
+  },
+  {
+   "index": 12,
+   "hex": "#0b335e",
+   "role": "深海",
+   "ramp": "ocean"
+  },
+  {
+   "index": 13,
+   "hex": "#12558a",
+   "role": "海水暗部",
+   "ramp": "ocean"
+  },
+  {
+   "index": 14,
+   "hex": "#1c76ad",
+   "role": "海水中间调",
+   "ramp": "ocean"
+  },
+  {
+   "index": 15,
+   "hex": "#3399c6",
+   "role": "浅海/河水",
+   "ramp": "ocean"
+  },
+  {
+   "index": 16,
+   "hex": "#66c3dc",
+   "role": "浪面高光",
+   "ramp": "ocean"
+  },
+  {
+   "index": 17,
+   "hex": "#b0ebf1",
+   "role": "浪花/泡沫",
+   "ramp": "ocean"
+  },
+  {
+   "index": 18,
+   "hex": "#f3e2a6",
+   "role": "沙滩亮面",
+   "ramp": "sand"
+  },
+  {
+   "index": 19,
+   "hex": "#d8bb78",
+   "role": "沙滩",
+   "ramp": "sand"
+  },
+  {
+   "index": 20,
+   "hex": "#a98a4f",
+   "role": "湿沙/沉积",
+   "ramp": "sand"
+  },
+  {
+   "index": 21,
+   "hex": "#8b5b37",
+   "role": "表土",
+   "ramp": "soil"
+  },
+  {
+   "index": 22,
+   "hex": "#6a4027",
+   "role": "心土",
+   "ramp": "soil"
+  },
+  {
+   "index": 23,
+   "hex": "#48291b",
+   "role": "深层土/根系",
+   "ramp": "soil"
+  },
+  {
+   "index": 24,
+   "hex": "#a59c94",
+   "role": "岩层亮面",
+   "ramp": "rock"
+  },
+  {
+   "index": 25,
+   "hex": "#7e7670",
+   "role": "岩层",
+   "ramp": "rock"
+  },
+  {
+   "index": 26,
+   "hex": "#59524f",
+   "role": "岩层暗部",
+   "ramp": "rock"
+  },
+  {
+   "index": 27,
+   "hex": "#393436",
+   "role": "岩缝",
+   "ramp": "rock"
+  },
+  {
+   "index": 28,
+   "hex": "#2b5c9c",
+   "role": "含水层",
+   "ramp": "aquifer"
+  },
+  {
+   "index": 29,
+   "hex": "#4b8bd0",
+   "role": "含水层砾石",
+   "ramp": "aquifer"
+  },
+  {
+   "index": 30,
+   "hex": "#8cc0ec",
+   "role": "地下水滴",
+   "ramp": "aquifer"
+  },
+  {
+   "index": 31,
+   "hex": "#1b4428",
+   "role": "林荫暗部",
+   "ramp": "vegetation"
+  },
+  {
+   "index": 32,
+   "hex": "#2a6534",
+   "role": "叶簇暗",
+   "ramp": "vegetation"
+  },
+  {
+   "index": 33,
+   "hex": "#458c3b",
+   "role": "叶簇/草地",
+   "ramp": "vegetation"
+  },
+  {
+   "index": 34,
+   "hex": "#74b247",
+   "role": "叶簇亮",
+   "ramp": "vegetation"
+  },
+  {
+   "index": 35,
+   "hex": "#b0d66a",
+   "role": "叶尖高光",
+   "ramp": "vegetation"
+  },
+  {
+   "index": 36,
+   "hex": "#4f2e1f",
+   "role": "深木/树干暗",
+   "ramp": "wood_tile"
+  },
+  {
+   "index": 37,
+   "hex": "#85542f",
+   "role": "木材",
+   "ramp": "wood_tile"
+  },
+  {
+   "index": 38,
+   "hex": "#bb8150",
+   "role": "木材亮面",
+   "ramp": "wood_tile"
+  },
+  {
+   "index": 39,
+   "hex": "#ecdcbc",
+   "role": "灰泥墙",
+   "ramp": "wood_tile"
+  },
+  {
+   "index": 40,
+   "hex": "#8e3428",
+   "role": "瓦片暗",
+   "ramp": "wood_tile"
+  },
+  {
+   "index": 41,
+   "hex": "#c64f37",
+   "role": "瓦片",
+   "ramp": "wood_tile"
+  },
+  {
+   "index": 42,
+   "hex": "#ea875a",
+   "role": "瓦片高光",
+   "ramp": "wood_tile"
+  },
+  {
+   "index": 43,
+   "hex": "#fff2c9",
+   "role": "切面切割线",
+   "ramp": "cut"
+  },
+  {
+   "index": 44,
+   "hex": "#fffaee",
+   "role": "标签底",
+   "ramp": "ui"
+  },
+  {
+   "index": 45,
+   "hex": "#ff7a2c",
+   "role": "强调/指示线",
+   "ramp": "ui"
+  },
+  {
+   "index": 46,
+   "hex": "#ffd23c",
+   "role": "强调2/太阳外圈",
+   "ramp": "ui"
+  },
+  {
+   "index": 47,
+   "hex": "#fff4a8",
+   "role": "太阳核心/特效核心",
+   "ramp": "fx"
+  },
+  {
+   "index": 48,
+   "hex": "#24324d",
+   "role": "UI 面板",
+   "ramp": "ui"
+  },
+  {
+   "index": 49,
+   "hex": "#6fd8f0",
+   "role": "水汽特效",
+   "ramp": "fx"
+  }
+ ],
+ "ramps": {
+  "ink": [
+   0,
+   1
+  ],
+  "sky": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "cloud": [
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "ocean": [
+   12,
+   13,
+   14,
+   15,
+   16,
+   17
+  ],
+  "sand": [
+   18,
+   19,
+   20
+  ],
+  "soil": [
+   21,
+   22,
+   23
+  ],
+  "rock": [
+   24,
+   25,
+   26,
+   27
+  ],
+  "aquifer": [
+   28,
+   29,
+   30
+  ],
+  "vegetation": [
+   31,
+   32,
+   33,
+   34,
+   35
+  ],
+  "wood_tile": [
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42
+  ],
+  "cut": [
+   43
+  ],
+  "ui": [
+   44,
+   45,
+   46,
+   48
+  ],
+  "fx": [
+   47,
+   49
+  ]
+ },
+ "cycle_ranges": [
+  {
+   "name": "ocean_wave",
+   "indices": [
+    14,
+    15,
+    16,
+    17
+   ]
+  },
+  {
+   "name": "river_flow",
+   "indices": [
+    15,
+    16,
+    17,
+    16
+   ]
+  },
+  {
+   "name": "sun_glint",
+   "indices": [
+    46,
+    47
+   ]
+  }
+ ],
+ "fx_colors": [
+  47,
+  46,
+  45,
+  49
+ ],
+ "rules": {
+  "outline": "0/1 描边，彩色物体可用同色系最暗色",
+  "cut_face": "切面统一 43 切割线 + 0 号 1px 边",
+  "glow": "硬边核心(47/7)+1px 外圈(46/49)",
+  "labels": "标签底 44 + 文字 0 + 指示线 45",
+  "dither": "天空/水体渐变用 8×8 有序抖色"
+ }
+}

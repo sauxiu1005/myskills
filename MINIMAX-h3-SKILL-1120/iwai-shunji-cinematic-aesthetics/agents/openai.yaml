@@ -1,0 +1,6 @@
+interface:
+  display_name: "岩井俊二电影美学"
+  short_description: "以自然光、细腻情绪和记忆感，创作图片、系列画面与电影短片"
+  default_prompt: "请使用 $iwai-shunji-cinematic-aesthetics，根据我的主题或参考图制作图片或视频，并保持人物、光线和场景一致。"
+policy:
+  allow_implicit_invocation: true

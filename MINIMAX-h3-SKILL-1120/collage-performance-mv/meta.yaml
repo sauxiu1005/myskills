@@ -1,0 +1,37 @@
+display-name-zh: 拼贴表演音乐 MV
+version: 1.0.1
+tag-en: Sound & Music
+tag-cn: 音频音乐
+complete-tags-en:
+- Sound & Music / Creative Generation
+complete-tags-cn:
+- 音频音乐 / 创作生成
+summary-en: Turn a creative prompt, music and character references into a music video that blends lead-singer performance with flat collage graphics and beat-synced kinetic lyrics.
+summary-cn: 将创意提示、音乐与角色参考制作成主唱演唱表演与平面拼贴、节拍动态歌词相结合的音乐 MV。
+desc-en: For musicians, creators and K-pop or character fans who want a music video where a lead singer performs inside flat collage design. Users provide a required creative prompt plus music, visual and character references, or generate missing ones in-platform. The workflow locks and analyzes the music, builds a project moodboard and multi-view character sheet, plans which vocal sections appear as lead video, drives lip-synced half-body and close-up performances with the original mix, then composites cutouts, paper textures and kinetic lyrics in code with characters always on top. It delivers a clean, low-noise MP4 in the project, production boards and an editable project, with the user approving each video batch. Not for static slideshows or single character images.
+desc-cn: 面向音乐人、视频创作者和 K-pop 或角色爱好者，用于制作主唱在平面拼贴设计中演唱表演的音乐 MV。用户需提供创意提示，并上传音乐、视觉与角色参考，缺少时可在平台内生成。流程先锁定并分析音乐，制作本次情绪板与多视图角色卡，规划哪些唱段以主唱视频出镜，用原混音驱动半身与特写的演唱口型，再以代码合成人物贴图、纸纹拼贴和动态歌词，并保证人物始终在最上层。最终交付低噪点成片、制作板与可编辑工程，视频由用户查看确认。不适用于静态幻灯片或单张角色图。
+author-en: MiniMax Design
+author-cn: MiniMax Design
+source: official-featured
+cover: https://cdn.hailuoai.com/hailuo-video-web/public_assets/789c8440-d39b-44ee-933d-45e978d41f3b.mp4
+structured-info:
+  zh-CN:
+    summary: 将创意、音乐与角色参考制作成主唱表演与平面拼贴结合的节拍同步音乐 MV，并输出成片。
+    best-for:
+    - 音乐MV
+    - K-pop表演
+    - 拼贴动态歌词
+    how-to-use: 提供创意提示、音乐与风格和角色参考，确认是否需要伴舞及人物视频清晰度。
+    outputs: 情绪板、角色卡、出镜分镜、演唱表演片段及可编辑工程与 MV 成片。
+  en-US:
+    summary: Turn a prompt, music and character references into a beat-synced music video that blends lead performance with flat collage.
+    best-for:
+    - Music Videos
+    - K-pop Performance
+    - Collage Kinetic Lyrics
+    how-to-use: Provide a creative prompt, music, and style and character references, then confirm backup dancers and video resolution.
+    outputs: Moodboard, character sheet, shot plan, singing performance clips, editable project, and finished MV.
+cover-en: https://cdn.hailuoai.com/hailuo-video-web/public_assets/789c8440-d39b-44ee-933d-45e978d41f3b.mp4
+showcase:
+- https://cdn.hailuoai.com/prod/2026-10-23-13/video/1792734877697413072-1792734877624.mp4
+- https://cdn.hailuoai.com/prod/2026-10-23-13/video/1792735022087872288-1792735021982.mp4
